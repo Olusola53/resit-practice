@@ -53,6 +53,132 @@ table{display:block;overflow-x:auto}
 <header><h1>MBBS III Resit · Exam Practice</h1><div id="timer" hidden></div></header>
 <main id="app"></main>
 <script>
+// O&G · Flashcards · Ectopic pregnancy.
+// The supplied slide deck has NO ectopic lecture; cards are standard teaching shaped by the past-paper questions.
+// src names a slide page only where the deck mentions the point. extra:true is used for items the deck never touches.
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "og-cards-ectopic",
+  subject: "O&G",
+  type: "cards",
+  title: "O&G Flashcards · Ectopic pregnancy",
+  cards: [
+    { topic: "Basics", src: "Standard teaching",
+      q: "Define ectopic pregnancy and give its incidence.",
+      a: "Implantation of the fertilised ovum outside the endometrial lining of the uterine cavity. About 1–2% of pregnancies (roughly 1 in 80–100).",
+      connect: "Essay opener. Ectopic is the leading cause of first-trimester maternal death, so it is always on the differential of a woman of reproductive age with pain, bleeding or collapse.", extra: true },
+    { topic: "Basics", src: "Standard teaching",
+      q: "List the sites of ectopic pregnancy with their approximate frequency.",
+      a: "Tubal over 95%: ampulla about 70%, isthmus about 12%, fimbria about 11%, interstitial (cornual) 2–4%. Rare: ovarian, cervical, abdominal, caesarean-scar, broad-ligament.",
+      connect: "Site decides when it presents: isthmic ruptures at 6–8 weeks, ampullary 8–12, interstitial 12–16 (and bleeds the most).", extra: true },
+    { topic: "Basics", src: "p.931 (ovarian ectopic)",
+      q: "How is an ovarian ectopic pregnancy recognised?",
+      a: "Spiegelberg criteria: the tube on that side is intact and separate; the gestational sac lies in the normal position of the ovary; the sac is connected to the uterus by the ovarian ligament; ovarian tissue is present in the wall of the sac.",
+      connect: "These four points are listed on your benign ovarian tumours slide among the non-neoplastic ovarian lesions, so it can come as a picture or viva question." },
+    { topic: "Risk factors", src: "Standard teaching",
+      q: "List 10 predisposing factors for ectopic pregnancy (asked as 'List 10' in past papers).",
+      a: "1 Previous ectopic. 2 Previous tubal surgery or failed sterilisation. 3 PID/salpingitis (chlamydia, gonorrhoea). 4 IUCD in situ. 5 Assisted reproduction (IVF). 6 Ovulation induction (clomiphene). 7 Endometriosis. 8 Progestogen-only pill or emergency contraception failure. 9 Smoking. 10 Age over 35. Also: previous pelvic or abdominal surgery, congenital tubal anomalies, in-utero DES exposure, infertility.",
+      connect: "Group them to remember: damaged tube (infection, surgery, endometriosis), slow transport (progestogens, smoking), and artificial conception (IVF, ovulation induction)." },
+    { topic: "Risk factors", src: "p.628, 767, 528",
+      q: "Which infections and obstetric events lead to ectopic pregnancy in our environment?",
+      a: "Pelvic inflammatory disease: chlamydia (commonest, 80% asymptomatic in women) and gonococcus; also post-abortal and puerperal sepsis. The slides list ectopic pregnancy as a complication of reproductive tract infection and of unsafe abortion.",
+      connect: "Same tubal damage that causes tubal infertility. Prevention is the same: treat STIs early with partner notification, safe abortion and delivery." },
+    { topic: "Risk factors", src: "Standard teaching",
+      q: "A woman conceives with an IUCD in place. What is the chance the pregnancy is ectopic?",
+      a: "The IUCD lowers the overall risk of pregnancy and of ectopic pregnancy compared with using no contraception, but of the pregnancies that do occur with an IUCD in situ, a higher proportion are ectopic. Progestogen-only pill failures behave the same way.",
+      connect: "Past MCQ pattern: 'if a pregnancy occurs in an IUCD user, the risk of it being ectopic is higher than in women not using contraception' (true, read it carefully).", extra: true },
+    { topic: "Pathology", src: "Standard teaching",
+      q: "What are the possible fates of a tubal ectopic pregnancy? (asked as 'Fate of tubal ectopic pregnancy')",
+      a: "1 Tubal rupture (isthmic, early). 2 Tubal abortion (ampullary): expelled through the fimbrial end into the peritoneal cavity. 3 Spontaneous resolution (reabsorption). 4 Tubal mole. 5 Secondary abdominal pregnancy (rare). 6 Lithopedion (rare).",
+      connect: "Rupture and tubal abortion cause the haemoperitoneum. Resolution explains why expectant management is possible when hCG is low and falling.", extra: true },
+    { topic: "Presentation", src: "Standard teaching",
+      q: "Give the symptoms of ectopic pregnancy (past papers: 'list 3 symptoms').",
+      a: "Amenorrhoea of 6–8 weeks, lower abdominal pain (often unilateral, colicky then constant) and vaginal bleeding (scanty, dark or brown). Also: shoulder-tip pain, dizziness or syncope, urge to defecate, early pregnancy symptoms.",
+      connect: "Pain usually comes before the bleeding (the reverse of abortion). A woman can present with only one of the three, so keep the diagnosis in mind.", extra: true },
+    { topic: "Presentation", src: "Standard teaching",
+      q: "What are the symptoms and signs of RUPTURED ectopic pregnancy?",
+      a: "Sudden severe lower abdominal pain, collapse or fainting, shoulder-tip pain, pallor, tachycardia, hypotension and shock; abdominal tenderness, guarding and rebound; distension; cervical excitation (chandelier sign), bulging tender pouch of Douglas.",
+      connect: "Shock out of proportion to the vaginal bleeding is the clue, because the blood is inside the abdomen. Treat as an emergency: resuscitate and operate.", extra: true },
+    { topic: "Presentation", src: "Standard teaching",
+      q: "What do you find on bimanual examination in an unruptured ectopic?",
+      a: "A uterus smaller than dates, a closed cervix, cervical motion tenderness, a tender adnexal fullness or mass, and tenderness in one fornix. Do it gently: rough examination can rupture the tube.",
+      connect: "Compare incomplete abortion (open os, uterus matches dates) and PID (fever, discharge, bilateral tenderness).", extra: true },
+    { topic: "Presentation", src: "Standard teaching",
+      q: "How do you distinguish ectopic pregnancy from threatened abortion? (past paper)",
+      a: "Ectopic: pain first, bleeding scanty and dark, uterus smaller than dates, cervical excitation, adnexal mass, no intrauterine sac on scan. Threatened abortion: bleeding first and fresh red, pain minimal or cramping after, uterus matches dates, closed os, intrauterine sac with fetal echo.",
+      connect: "Threatened abortion slide (p.509–510) says explicitly that ectopic must be ruled out; a scan separates them." },
+    { topic: "Presentation", src: "Standard teaching",
+      q: "Give the differential diagnosis of acute lower abdominal pain with a positive pregnancy test (acutely disturbed ectopic).",
+      a: "Threatened or incomplete abortion, ruptured or haemorrhagic corpus luteum cyst, torsion or rupture of an ovarian cyst, PID or tubo-ovarian abscess, acute appendicitis, urinary tract infection or ureteric colic, degenerating fibroid.",
+      connect: "Appendicitis and PID are the two that sit closest to ectopic, so a pregnancy test is routine in every woman of reproductive age with abdominal pain.", extra: true },
+    { topic: "Diagnosis", src: "Standard teaching",
+      q: "Does a negative pregnancy test exclude ectopic pregnancy? What about an intrauterine sac on scan?",
+      a: "A negative test makes it very unlikely (sensitive urine tests detect hCG above about 25 IU/L; hCG is detectable even in a concentrated urine sample), but a serum hCG settles it. An intrauterine sac makes ectopic unlikely, but a pseudosac or coexisting (heterotopic) pregnancy can occur. Heterotopic is rare spontaneously but much commoner after IVF.",
+      connect: "Past paper true/false stems: 'negative pregnancy test excludes ectopic' is false; 'an intrauterine sac strongly excludes ectopic' is true as a rule, with the heterotopic exception.", extra: true },
+    { topic: "Diagnosis", src: "Standard teaching",
+      q: "How is serum hCG used in diagnosis?",
+      a: "In a normal early intrauterine pregnancy it roughly doubles every 48 hours (rises by at least 66%). In ectopic it rises slowly or plateaus (but about 20% rise normally). Discriminatory zone: above about 1,500 IU/L a normal intrauterine sac should be visible on transvaginal scan; if not, suspect ectopic.",
+      connect: "The slow-rise rule only helps once the pregnancy is stable and small. A woman with signs of rupture goes to theatre, not to repeat hCG.", extra: true },
+    { topic: "Diagnosis", src: "Standard teaching",
+      q: "What does transvaginal ultrasound show in ectopic pregnancy?",
+      a: "Empty uterus (± thickened endometrium or a pseudosac), an adnexal mass with a 'tubal ring' (bagel sign), free fluid or blood in the pouch of Douglas (and Morison's pouch if large). Most specific sign: a live extrauterine embryo (cardiac activity outside the uterus).",
+      connect: "Past paper: 'the most specific sign is an extrauterine live embryo' (true). Ultrasound with hCG is the usual diagnostic route; laparoscopy confirms.", extra: true },
+    { topic: "Diagnosis", src: "p.1132, 1133",
+      q: "What is the role of laparoscopy and culdocentesis?",
+      a: "Laparoscopy is the traditional diagnostic standard and also allows treatment (listed in the slides as both a diagnostic indication, 'suspected ectopic pregnancy', and a therapeutic one, 'treatment of ectopic pregnancy'). Culdocentesis: needle through the posterior fornix; non-clotting dark blood means haemoperitoneum. Rarely used now.",
+      connect: "Culdocentesis is the one to remember for viva or picture-test instruments: a long needle with syringe through the posterior vaginal fornix." },
+    { topic: "Management", src: "Standard teaching",
+      q: "Outline the management of a ruptured ectopic pregnancy.",
+      a: "Call for help; two large-bore IV cannulae; blood for group and crossmatch (O negative if urgent), FBC; fluids and oxygen; consent; immediate laparotomy (or laparoscopy if stable and skilled) with salpingectomy; give anti-D if Rh negative; monitor and counsel.",
+      connect: "Resuscitate while preparing for theatre. Surgery stops the bleeding, so it must not wait for the blood pressure to be fixed.", extra: true },
+    { topic: "Management", src: "Standard teaching",
+      q: "What are the management options for a stable, unruptured ectopic pregnancy?",
+      a: "1 Expectant (asymptomatic, hCG low and falling, no mass). 2 Medical: methotrexate. 3 Surgical, preferably laparoscopic: salpingectomy or salpingotomy. Choice depends on symptoms, hCG, mass size, fetal cardiac activity, fertility wishes and reliability of follow-up.",
+      connect: "Past essay: 'Modern treatment of ectopic pregnancy', 'Update diagnosis and management'. Structure the answer around these three branches." },
+    { topic: "Management", src: "p.542",
+      q: "Give the criteria for methotrexate treatment and the regimen.",
+      a: "Haemodynamically stable, unruptured, mass under about 3.5 cm, hCG below about 5,000 IU/L (best below 1,500), no fetal cardiac activity, normal liver and renal function and blood count, reliable for follow-up, not breastfeeding. Single dose 50 mg/m² IM (day 1); check hCG on day 4 and 7 (should fall by more than 15%), then weekly until negative. Avoid NSAIDs, folic acid, alcohol and sun; no pregnancy for 3 months.",
+      connect: "Methotrexate is a folate antagonist that kills fast-dividing trophoblast, which is why folic acid is avoided. It also appears in the slides' list of drugs for induced abortion (p.542).", extra: true },
+    { topic: "Management", src: "Standard teaching",
+      q: "Name the medical treatments for ectopic pregnancy (past paper: '3 medical treatments').",
+      a: "Methotrexate (systemic IM, the standard; or local injection), potassium chloride (local injection under scan, for cervical or heterotopic pregnancy), mifepristone (little proven value), also actinomycin D, hyperosmolar glucose and prostaglandins (largely historical).",
+      connect: "If the question asks for 3, write methotrexate, potassium chloride and mifepristone. Past T/F: 'mifepristone has no value in the slow-leaking ectopic' and 'KCl can be used'.", extra: true },
+    { topic: "Management", src: "Standard teaching",
+      q: "Compare salpingectomy and salpingotomy.",
+      a: "Salpingectomy: remove the tube; preferred when the other tube is healthy (lower risk of persistent trophoblast and repeat ectopic), and in rupture, uncontrolled bleeding or a damaged tube. Salpingotomy (salpingostomy): open the tube and remove the products, leaving the tube; used when the other tube is absent or damaged and fertility is wanted. About 5–15% have persistent trophoblast, so follow hCG and give methotrexate if it plateaus.",
+      connect: "Past MCQ: 'salpingectomy is the only option for surgical management' (false). Either can be done by laparoscopy.", extra: true },
+    { topic: "Management", src: "Standard teaching",
+      q: "How are interstitial (cornual) and cervical ectopic pregnancies managed?",
+      a: "Cornual: methotrexate if early and stable, or laparoscopic cornual resection or cornuostomy; hysterectomy if rupture is catastrophic. Cervical: methotrexate (systemic or local), local KCl, uterine artery embolisation, avoid curettage before treatment; hysterectomy if bleeding is uncontrolled.",
+      connect: "Both carry the highest case-fatality rate. Past T/F: 'the case-fatality rate in cervical ectopic is higher than in the ampullary type' (true).", extra: true },
+    { topic: "Management", src: "p.514",
+      q: "What extra step applies to a Rhesus-negative woman?",
+      a: "Give anti-D immunoglobulin after any ectopic pregnancy (surgical or medical), as for abortion.",
+      connect: "The slides list anti-D in the management of incomplete abortion (p.514). Same principle for every bleeding event in early pregnancy." },
+    { topic: "Complications", src: "Standard teaching",
+      q: "What are the immediate and long-term implications of ectopic pregnancy? (essay 2013.3)",
+      a: "Immediate: haemorrhage and shock, death, need for emergency surgery and transfusion, loss of the pregnancy, anti-D need. Long-term: loss of a tube, tubal infertility, recurrence (about 10–15%), chronic pelvic pain and adhesions, psychological grief and marital strain, subsequent intrauterine pregnancy about 60%.",
+      connect: "Add the public-health point: ectopic is a leading cause of first-trimester death, and delay in presentation is common in Nigeria. A full answer also mentions prevention (treat STIs, avoid unsafe abortion).", extra: true },
+    { topic: "Complications", src: "p.1347",
+      q: "How do HIV and heterotopic pregnancy relate to ectopic pregnancy?",
+      a: "The slides report that, in some African studies, HIV is linked with lower pregnancy rates, more pregnancy losses and higher rates of ectopic pregnancy. Heterotopic pregnancy (intrauterine plus ectopic together) is rare naturally and commoner after assisted reproduction.",
+      connect: "Another route by which genital infection leads to tubal damage and ectopic pregnancy." },
+    { topic: "Complications", src: "p.1491",
+      q: "Can a malignancy follow an ectopic pregnancy?",
+      a: "Yes, rarely. Choriocarcinoma may arise after an ectopic pregnancy (as well as after a mole, abortion or normal birth), though over 50% of cases follow a hydatidiform mole.",
+      connect: "Why follow-up hCG matters after treatment: a persistently raised level needs further evaluation." },
+    { topic: "Cases", src: "Standard teaching",
+      q: "A 26-year-old has 7 weeks of amenorrhoea, lower abdominal pain and spotting. She faints in the clinic: pulse 128, BP 80/50. What do you do?",
+      a: "Treat as a ruptured ectopic until proven otherwise: call for help, IV access with fluids and blood, crossmatch, oxygen, a quick pregnancy test and bedside scan if it does not delay, then immediate surgery (laparotomy or laparoscopy) with salpingectomy; anti-D if Rh negative.",
+      connect: "Do not send her for a scan or for hCG trending when she is shocked.", extra: true },
+    { topic: "Cases", src: "Standard teaching",
+      q: "A stable woman with 6 weeks of amenorrhoea has mild lower abdominal pain, hCG 1,200 IU/L, a 2 cm adnexal mass and no fetal heart. Management?",
+      a: "Methotrexate 50 mg/m² IM if reliable follow-up and normal liver and renal function, with hCG on day 4 and 7 then weekly (expectant management is an option if hCG is low and falling and she is asymptomatic). Surgery if pain worsens, rupture is suspected or hCG rises.",
+      connect: "Counsel her about warning signs (worsening pain, dizziness) and about avoiding pregnancy for 3 months.", extra: true }
+  ]
+}]);
+
+</script>
+<script>
 // O&G · Flashcards · Endometriosis — slides p.755–764 of "O and G 1 Merged.pdf"
 // extra:true = standard teaching that is NOT on the slides (kept few, clearly labelled).
 window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
@@ -328,6 +454,91 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// O&G · Essays · Ectopic pregnancy. Both prompts are real past questions.
+// The supplied slide deck has no ectopic lecture; points are standard teaching. x:true = also beyond what a typical lecture covers.
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "og-essay-ectopic",
+  subject: "O&G",
+  type: "essay",
+  title: "O&G Essays · Ectopic pregnancy (2 past questions)",
+  essays: [
+    {
+      kind: "Long essay (20 marks)", marks: 20, topic: "Ectopic pregnancy", src: "past paper 2013.3 · standard teaching",
+      prompt: "Ectopic gestation is a gynaecological condition with immediate and long-term implications; discuss.",
+      tip: "The word 'implications' is the whole question. Give a short definition, then split the answer in two halves with headings: immediate (diagnosis, emergency management, risks to life) and long-term (fertility, recurrence, psychosocial, prevention). Candidates who only describe diagnosis and treatment lose half the marks.",
+      sections: [
+        { h: "Introduction", pts: [
+          { t: "Definition: implantation of a fertilised ovum outside the endometrial cavity of the uterus; incidence about 1–2% of pregnancies." },
+          { t: "Over 95% are tubal (ampulla about 70%, isthmus, fimbria, interstitial); rarer sites are ovarian, cervical, abdominal and caesarean-scar." },
+          { t: "Leading cause of first-trimester maternal death, so it is an emergency with both immediate and lasting consequences." }
+        ]},
+        { h: "Aetiology and risk factors", pts: [
+          { t: "Tubal damage: previous ectopic pregnancy, pelvic inflammatory disease (chlamydia, gonococcus, post-abortal or puerperal sepsis), previous tubal surgery or failed sterilisation, endometriosis, congenital anomalies." },
+          { t: "Altered tubal transport: progestogen-only pill, emergency contraception failure, IUCD in situ (pregnancy that occurs is more likely ectopic), smoking." },
+          { t: "Assisted reproduction and ovulation induction; age over 35; in-utero DES exposure." },
+          { t: "In Nigeria the commonest cause is infection (salpingitis), so incidence follows its prevalence." }
+        ]},
+        { h: "Immediate implications: presentation and diagnosis", pts: [
+          { t: "Symptoms: amenorrhoea of 6–8 weeks, lower abdominal pain (before bleeding), scanty dark vaginal bleeding; shoulder-tip pain and fainting if ruptured." },
+          { t: "Signs: pallor, tachycardia, hypotension; abdominal tenderness and guarding; cervical excitation; adnexal mass; uterus smaller than dates." },
+          { t: "Fate of a tubal ectopic: rupture, tubal abortion, spontaneous resolution, tubal mole, secondary abdominal pregnancy." },
+          { t: "Investigations: pregnancy test (urine hCG positive in most), serum hCG (slow rise; discriminatory level about 1,500 IU/L), transvaginal ultrasound (empty uterus, adnexal mass, free fluid, extrauterine embryo), FBC and group and crossmatch." },
+          { t: "Laparoscopy is the diagnostic standard and allows treatment; culdocentesis (non-clotting blood) is of historical interest." },
+          { t: "Differential diagnosis: threatened or incomplete abortion, ruptured corpus luteum cyst, ovarian cyst accident, PID, appendicitis, UTI or ureteric colic." }
+        ]},
+        { h: "Immediate implications: management", pts: [
+          { t: "Ruptured or unstable: resuscitate (two IV lines, fluids, blood, oxygen) and operate immediately: laparotomy or laparoscopy with salpingectomy." },
+          { t: "Stable and unruptured: expectant (hCG low and falling), medical or surgical, chosen by symptoms, hCG, mass size, fetal cardiac activity and follow-up." },
+          { t: "Medical: methotrexate 50 mg/m² IM if stable, unruptured, mass under about 3.5 cm, hCG below about 5,000, no cardiac activity; follow hCG on day 4 and 7 and weekly." },
+          { t: "Surgical (laparoscopic preferred): salpingectomy if the other tube is normal; salpingotomy if the other tube is damaged and fertility is wanted, followed by hCG to detect persistent trophoblast." },
+          { t: "Give anti-D to Rh-negative women; counsel and obtain consent." },
+          { t: "Complications of the condition and its treatment: haemorrhage, shock, death, blood transfusion, persistent trophoblast, infection, anaesthetic risks." }
+        ]},
+        { h: "Long-term implications", pts: [
+          { t: "Fertility: loss of a tube; reduced fecundity and tubal infertility; subsequent intrauterine pregnancy about 60%; IVF may be needed." },
+          { t: "Recurrence: about 10–15% after one ectopic, higher after two; early scan and hCG in every future pregnancy." },
+          { t: "Chronic pelvic pain from adhesions and underlying PID." },
+          { t: "Psychological and social: grief, anxiety, marital strain, stigma; counselling for the couple." },
+          { t: "Contraceptive advice and timing of the next pregnancy (avoid for 3 months after methotrexate); preconception counselling." }
+        ]},
+        { h: "Prevention", pts: [
+          { t: "Prompt treatment of STIs and PID with partner notification; condom use; avoid unsafe abortion and ensure safe delivery." },
+          { t: "Early booking and early pregnancy scan in women at risk; awareness of danger signs so women present before rupture." }
+        ]}
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Ectopic pregnancy · medical management", src: "past papers 2k17-2k2.84, cohort-n.158 · standard teaching",
+      prompt: "Write short notes on the medical management of ectopic gestation.",
+      tip: "Give a principle sentence first (it works by killing trophoblast without surgery), then the selection criteria, regimen, monitoring and the contraindications. Examiners like the numbers (3.5 cm, 5,000, 50 mg/m², day 4 and 7), so learn them.",
+      sections: [
+        { h: "Principle and drugs", pts: [
+          { t: "Aim: to destroy trophoblast with drugs, avoiding surgery and preserving the tube." },
+          { t: "Methotrexate is the drug of choice: a folate antagonist that kills rapidly dividing trophoblast, given IM or by local injection." },
+          { t: "Others: potassium chloride (local injection for cervical or heterotopic pregnancy), mifepristone (little proven value), actinomycin D, hyperosmolar glucose." }
+        ]},
+        { h: "Selection", pts: [
+          { t: "Haemodynamically stable, unruptured, minimal pain; gestational mass under about 3.5 cm; hCG below about 5,000 IU/L (best below 1,500); no fetal cardiac activity." },
+          { t: "Normal liver and renal function and blood count; reliable and able to return for follow-up." },
+          { t: "Contraindications: rupture or instability, intrauterine pregnancy, breastfeeding, immunodeficiency, peptic ulcer, hepatic, renal or haematological disease, methotrexate allergy." }
+        ]},
+        { h: "Regimen and follow-up", pts: [
+          { t: "Single dose 50 mg/m² IM on day 1 (multiple-dose regimens use folinic acid rescue)." },
+          { t: "Serum hCG on day 4 and day 7: expect a fall of more than 15%; repeat the dose if not; then weekly until negative." },
+          { t: "Counsel on warning signs (worsening pain, dizziness, collapse) since rupture can still occur; avoid NSAIDs, folic acid, alcohol, sun exposure." },
+          { t: "Contraception for at least 3 months after treatment; give anti-D if Rh negative." }
+        ]},
+        { h: "Advantages and failure", pts: [
+          { t: "Avoids anaesthesia and surgery and preserves the tube, with comparable later fertility in suitable women.", x: true },
+          { t: "Failure (rising hCG, increasing pain, rupture) needs surgery; about 10–15% of cases fail." }
+        ]}
+      ]
+    }
+  ]
+}]);
+
+</script>
+<script>
 // O&G · Essays · Infertility. Each point = one mark-worthy idea; the page lets you tick what you covered.
 // x:true = standard teaching beyond the slides (useful, but check against your own notes).
 window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
@@ -554,6 +765,91 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// O&G · Single-best-option MCQ · Ectopic pregnancy.
+// NOTE: the supplied slide deck has NO ectopic lecture. Content is standard teaching (RCOG/Ten Teachers level),
+// aimed at the patterns in the past papers. src shows the slide page only where the deck actually mentions the point.
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "og-mcq-ectopic",
+  subject: "O&G",
+  type: "mcq",
+  title: "O&G MCQ · Ectopic pregnancy (14 single best option)",
+  negativeMarking: false,
+  questions: [
+    { topic: "Basics", src: "Standard teaching",
+      stem: "The most common site of ectopic pregnancy is the:",
+      options: ["Isthmus of the fallopian tube", "Ampulla of the fallopian tube", "Fimbrial end of the tube", "Ovary", "Cervix"],
+      answer: 1,
+      explain: "About 70% are in the ampulla, then the isthmus (about 12%) and the fimbrial end (about 11%); interstitial (cornual), ovarian, cervical, abdominal and caesarean-scar sites are rare. Over 95% are tubal. Site predicts timing: isthmic ones rupture earliest (6–8 weeks), ampullary later (8–12), interstitial latest (12–16) but bleed the most." },
+    { topic: "Risk factors", src: "Standard teaching",
+      stem: "Which is the strongest single risk factor for ectopic pregnancy?",
+      options: ["Age over 35", "Smoking", "Previous ectopic pregnancy", "Use of the combined pill", "Previous caesarean section"],
+      answer: 2,
+      explain: "A previous ectopic pregnancy carries the highest risk (recurrence about 10–15%, and higher after two). Other factors: previous tubal surgery or failed sterilisation, PID, IUCD in situ, assisted reproduction and ovulation induction, endometriosis, smoking. Past papers ask for a list of ten predisposing factors, so learn the full list on the flashcards." },
+    { topic: "Risk factors", src: "p.628, 767",
+      stem: "In Nigeria, the commonest underlying cause of ectopic pregnancy is:",
+      options: ["Congenital tubal anomaly", "Previous pelvic infection damaging the tubes", "Progestogen-only pill", "Uterine fibroids", "In utero exposure to diethylstilboestrol"],
+      answer: 1,
+      explain: "Pelvic inflammatory disease (chlamydia, gonococcus, post-abortal and puerperal sepsis) damages the tubal lining and cilia, so the embryo is delayed in the tube. The slides list ectopic pregnancy as a complication of reproductive tract infection (p.767) and of unsafe abortion (p.528). It is the same tubal damage that causes infertility, and the incidence of ectopic follows the prevalence of salpingitis." },
+    { topic: "Presentation", src: "Standard teaching",
+      stem: "The classic presentation of ectopic pregnancy is:",
+      options: ["Painless fresh vaginal bleeding with a large-for-dates uterus", "Amenorrhoea, lower abdominal pain and vaginal bleeding", "Fever, offensive discharge and cervical excitation", "Severe headache and visual disturbance", "Painless bleeding after 28 weeks"],
+      answer: 1,
+      explain: "A woman of reproductive age with 6–8 weeks of amenorrhoea, unilateral lower abdominal pain and scanty dark (brown) vaginal bleeding is an ectopic until proven otherwise. Remember that a woman can present with only one of the three, or with collapse. Option A is molar pregnancy; C is septic abortion or PID." },
+    { topic: "Presentation", src: "Standard teaching",
+      stem: "A woman has pain that comes BEFORE the vaginal bleeding, the bleeding is scanty and dark, and the uterus is smaller than dates. This pattern favours:",
+      options: ["Threatened abortion", "Incomplete abortion", "Ectopic pregnancy", "Hydatidiform mole", "Placenta praevia"],
+      answer: 2,
+      explain: "A classic differential-diagnosis question (asked as 'differential diagnosis between threatened abortion and ectopic pregnancy'). In abortion the bleeding comes first, is bright and heavier, and the uterus matches dates; pain follows as cramps. In ectopic the pain comes first, bleeding is scanty and dark, and the uterus is smaller than dates with cervical excitation. The slides note that ectopic must be ruled out in threatened abortion (p.510)." },
+    { topic: "Presentation", src: "Standard teaching",
+      stem: "Shoulder-tip pain in a woman with a ruptured ectopic pregnancy is caused by:",
+      options: ["Referred pain from the ovary", "Blood irritating the diaphragm", "Ureteric colic", "Peritonitis from infection", "Uterine contractions"],
+      answer: 1,
+      explain: "Blood in the peritoneal cavity tracks up to the diaphragm and irritates the phrenic nerve (C3–5), which refers pain to the shoulder tip. With it: pallor, tachycardia, hypotension, guarding and cervical excitation (the 'chandelier sign')." },
+    { topic: "Diagnosis", src: "Standard teaching",
+      stem: "A woman with 7 weeks of amenorrhoea has a positive pregnancy test, a serum hCG of 4,000 IU/L and no intrauterine gestational sac on transvaginal scan. The most likely diagnosis is:",
+      options: ["Normal early intrauterine pregnancy", "Ectopic pregnancy", "Complete abortion in a woman who never bled", "Hydatidiform mole", "Physiological hCG variation"],
+      answer: 1,
+      explain: "Above the discriminatory zone (about 1,500 IU/L on a transvaginal scan) a normal intrauterine sac should be visible, so its absence points to ectopic. Below that level a normal early pregnancy may be invisible, so you repeat hCG after 48 hours. The most specific scan sign is a live extrauterine embryo. A negative urine test does not exclude it, and a sac in the uterus makes it unlikely but a pseudosac or heterotopic pregnancy can still occur." },
+    { topic: "Diagnosis", src: "Standard teaching",
+      stem: "In early pregnancy, serum β-hCG in a normal intrauterine pregnancy:",
+      options: ["Falls slightly in the first 8 weeks", "Roughly doubles every 48 hours (rises by at least 66%)", "Is identical in ectopic and normal pregnancies", "Is always above 5,000 IU/L at 6 weeks", "Is not detectable in urine"],
+      answer: 1,
+      explain: "In ectopic pregnancy hCG rises more slowly than normal or plateaus, so serial levels 48 hours apart help; a slow rise is suspicious but about one in five ectopics rise normally. A past paper stem says 'hCG doubles every 48 hours in ectopic pregnancy', which is false: that is the normal intrauterine pattern. Urinary hCG is detectable in a concentrated sample (true in ectopic as well)." },
+    { topic: "Diagnosis", src: "p.1132",
+      stem: "Which investigation is the diagnostic gold standard, and also allows treatment, in ectopic pregnancy?",
+      options: ["Transabdominal ultrasound", "Serum progesterone", "Laparoscopy", "Culdocentesis", "Hysterosalpingography"],
+      answer: 2,
+      explain: "Laparoscopy is the traditional standard and is listed in the slides as both a diagnostic indication (suspected ectopic, p.1132) and a therapeutic one (treatment of ectopic, p.1133). Today transvaginal scan plus hCG usually makes the diagnosis first. Culdocentesis (non-clotting blood from the pouch of Douglas) is rarely used now. HSG is contraindicated in pregnancy." },
+    { topic: "Management", src: "Standard teaching",
+      stem: "A woman with a ruptured ectopic pregnancy is pale with a pulse of 130/min and a blood pressure of 70/40 mmHg. The most appropriate management is:",
+      options: ["Methotrexate 50 mg/m² IM", "Expectant management with serial hCG", "Resuscitation and immediate surgery", "Misoprostol", "Repeat ultrasound in 48 hours"],
+      answer: 2,
+      explain: "A shocked woman needs resuscitation and surgery at the same time: two large-bore cannulae, crossmatched blood (O negative if urgent), oxygen, and laparotomy (or laparoscopy if skilled and stable enough) with salpingectomy. Do not delay surgery to complete the resuscitation, because the bleeding is the problem. Give anti-D if Rh negative." },
+    { topic: "Management", src: "p.542",
+      stem: "Which woman is most suitable for medical management with methotrexate?",
+      options: ["Haemodynamically unstable with a ruptured tube", "Stable, 2.5 cm unruptured mass, hCG 1,800 IU/L, no fetal cardiac activity", "Stable, 5 cm mass with fetal cardiac activity", "Breastfeeding, stable, hCG 2,000 IU/L", "Stable with a coexisting live intrauterine pregnancy"],
+      answer: 1,
+      explain: "Criteria: haemodynamically stable, unruptured, mass under about 3.5 cm, hCG below about 5,000 (best below 1,500), no fetal cardiac activity, normal liver and renal function, reliable follow-up. Single dose 50 mg/m² IM, with hCG on day 4 and 7 (expect a fall of more than 15%). Avoid NSAIDs, folic acid and alcohol, and advise contraception for 3 months. Mifepristone has no proven value; KCl is injected locally (cervical or heterotopic). Methotrexate also appears in the slide list of drugs for induced abortion (p.542)." },
+    { topic: "Management", src: "Standard teaching",
+      stem: "A 29-year-old with one tube already removed for a previous ectopic has a stable unruptured tubal ectopic in the remaining tube and wishes to conceive. The best surgical option is:",
+      options: ["Salpingectomy", "Salpingotomy (salpingostomy) with follow-up hCG", "Hysterectomy", "Bilateral oophorectomy", "Tubal ligation"],
+      answer: 1,
+      explain: "When the other tube is absent or damaged and she wants fertility, conserve the tube with salpingotomy. Risks: persistent trophoblast (5–15%), so follow hCG until negative and give methotrexate if it persists. When the other tube is normal, salpingectomy is preferred, since repeat ectopic and persistent trophoblast are less likely. Laparoscopy is the route if she is stable." },
+    { topic: "Management", src: "Standard teaching",
+      stem: "A Rhesus-negative woman has surgery for an ectopic pregnancy. She should receive:",
+      options: ["Nothing, as Rhesus disease only follows full-term delivery", "Anti-D immunoglobulin", "Methotrexate", "Prophylactic aspirin", "Oral progesterone"],
+      answer: 1,
+      explain: "Give anti-D to every Rh-negative woman after an ectopic pregnancy, as for abortion (the incomplete-abortion management in the slides includes anti-D, p.514). Fetal red cells in the maternal circulation can sensitise her, and the harm shows up in her next pregnancy." },
+    { topic: "Complications", src: "Standard teaching",
+      stem: "Which site of ectopic pregnancy carries the highest case-fatality rate?",
+      options: ["Ampullary", "Isthmic", "Fimbrial", "Interstitial (cornual) and cervical", "Ovarian"],
+      answer: 3,
+      explain: "Interstitial (cornual) and cervical pregnancies have a higher case-fatality rate than the common ampullary site. A cornual pregnancy lies in the muscular uterine wall so it ruptures later (12–16 weeks) with torrential bleeding; a cervical pregnancy bleeds massively if curetted and may end in hysterectomy. Past papers: 'case fatality in cervical ectopic is higher than in the ampullary type' is true." }
+  ]
+}]);
+
+</script>
+<script>
 // O&G · Single-best-option MCQ · Infertility — slides p.609–665 of "O and G 1 Merged.pdf"
 // answer = index into options (0 = A). No negative marking (O&G format).
 window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
@@ -669,6 +965,8 @@ function ask(msg,yes){
   document.body.appendChild(o);$("#ask-n").onclick=()=>o.remove();$("#ask-y").onclick=()=>{o.remove();yes()};
 }
 
+const srcOf=s=>/^p\./.test(s)?"O&G slides "+esc(s):esc(s);
+
 function home(){
   clearInterval(tick); timerEl.hidden=true; S=null;
   const hist=load();
@@ -731,7 +1029,7 @@ function render(){
   const {b,idx}=S, q=b.questions[idx], practice=S.mode==="practice";
   app.innerHTML=`<div class="card"><div class="meta">Question ${idx+1} of ${b.questions.length} · ${esc(q.topic)}</div>
    <div class="stem">${qView(idx)}</div>
-   ${S.checked[idx]?`<div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: O&G slides ${esc(q.src)}</div>`:""}
+   ${S.checked[idx]?`<div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: ${srcOf(q.src)}</div>`:""}
    <div class="row"><button id="prev" ${idx?"":"disabled"}>Back</button>
    ${practice&&!S.checked[idx]?`<button class="primary" id="check">Check</button>`:""}
    ${idx<b.questions.length-1?`<button class="primary" id="next">Next</button>`:`<button class="primary" id="fin">Finish</button>`}</div>
@@ -768,7 +1066,7 @@ function results(first){
    S.b.questions.map((q,i)=>`<div class="card"><div class="meta">Q${i+1} · ${esc(q.topic)}</div><div class="stem">${
      q.stem.split(/\{(\d+)\}/).map((p,k)=>{ if(k%2===0)return esc(p); const n=+p-1,key=i+"-"+n; const auto=isCorrect(S.ans[i][n],q.blanks[n]); const ok=S.over[key]!==undefined?S.over[key]:auto;
        return `<span class="gapres ${ok?"ok":"bad"}">${esc(S.ans[i][n]||"—")}${auto?"":` <small>→ ${esc(q.blanks[n][0])}</small>`}</span>${auto?"":`<label class="toggle"><input type="checkbox" data-ov="${key}" ${ok?"checked":""}> I was right</label>`}`}).join("")
-   }</div><div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: O&G slides ${esc(q.src)}</div></div>`).join("");
+   }</div><div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: ${srcOf(q.src)}</div></div>`).join("");
   $("#home").onclick=home; $("#retry").onclick=()=>start(banks.indexOf(S.b),S.mode);
   app.querySelectorAll("[data-ov]").forEach(c=>c.onchange=()=>{S.over[c.dataset.ov]=c.checked; const y=scrollY; results(false); scrollTo(0,y)});
   scrollTo(0,0);
@@ -789,7 +1087,7 @@ function mcqRender(){
    <div style="margin-top:12px">${perm[idx].map((o,pos)=>{const sel=S.pick[idx]===pos,right=o===q.answer;
      const st=shown?(right?"background:var(--okbg);border-color:var(--ok)":(sel?"background:var(--badbg);border-color:var(--bad)":"")):(sel?"background:color-mix(in srgb,var(--accent) 15%,var(--card));border-color:var(--accent)":"");
      return `<button class="opt" data-pos="${pos}" style="display:block;width:100%;text-align:left;margin:6px 0;${st}" ${shown?"disabled":""}><b>${L[pos]}.</b> ${esc(q.options[o])}</button>`}).join("")}</div>
-   ${shown?`<div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: O&G slides ${esc(q.src)}</div>`:""}
+   ${shown?`<div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: ${srcOf(q.src)}</div>`:""}
    <div class="row"><button id="prev" ${idx?"":"disabled"}>Back</button>
    ${S.mode==="practice"&&!shown?`<button class="primary" id="check" ${S.pick[idx]===null?"disabled":""}>Check</button>`:""}
    ${idx<b.questions.length-1?`<button class="primary" id="next">Next</button>`:`<button class="primary" id="fin">Finish</button>`}</div>
@@ -817,7 +1115,7 @@ function mcqFinish(){
      return `<div class="card"><div class="meta">Q${i+1} · ${esc(q.topic)} · <b style="color:var(--${ok?"ok":"bad"})">${ok?"correct":(p===null?"not answered":"wrong")}</b></div>
      <div class="stem" style="line-height:1.5">${esc(q.stem)}</div>
      <p>Your answer: <b>${p===null?"—":L[p]+". "+esc(q.options[perm[i][p]])}</b><br>Correct: <b>${L[correctPos]}. ${esc(q.options[q.answer])}</b></p>
-     <div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: O&G slides ${esc(q.src)}</div></div>`}).join("");
+     <div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: ${srcOf(q.src)}</div></div>`}).join("");
   $("#home").onclick=home;$("#retry").onclick=()=>mcqStart(banks.indexOf(b),S.mode);scrollTo(0,0);
 }
 
