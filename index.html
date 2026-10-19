@@ -1,0 +1,910 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Resit Exam Practice</title><meta name="description" content="MBBS III resit practice: O&G fill-in-the-gap, MCQs, flashcards and self-marked essays."></head><body><style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#1b1f24;--mute:#5d6672;--line:#dde1e6;--accent:#1f6feb;--ok:#18794e;--okbg:#e6f6ee;--bad:#b42318;--badbg:#fdecea;--scrim:rgba(20,24,30,.45)
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12151a;--card:#1b2027;--ink:#e8ebef;--mute:#9aa4b0;--line:#2c333c;--accent:#5b9bff;--ok:#4cc38a;--okbg:#14301f;--bad:#ff7b72;--badbg:#3a1a18;--scrim:rgba(0,0,0,.6);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12151a;--card:#1b2027;--ink:#e8ebef;--mute:#9aa4b0;--line:#2c333c;--accent:#5b9bff;--ok:#4cc38a;--okbg:#14301f;--bad:#ff7b72;--badbg:#3a1a18;--scrim:rgba(0,0,0,.6);color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,system-ui,Segoe UI,sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line);background:var(--card);position:sticky;top:0;z-index:5}
+h1{font-size:17px;margin:0}
+#timer{font-variant-numeric:tabular-nums;font-weight:600}
+main{max-width:760px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;margin-bottom:14px}
+.meta{color:var(--mute);font-size:13px;margin-bottom:8px}
+.stem{font-size:18px;line-height:2.1}
+input.gap{font:inherit;width:9em;padding:2px 8px;border:0;border-bottom:2px solid var(--accent);background:transparent;color:var(--ink);text-align:center;outline:none}
+input.gap:focus{background:color-mix(in srgb,var(--accent) 10%,transparent)}
+button{font:inherit;padding:9px 16px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+button:disabled{opacity:.4;cursor:default}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.dots{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.dot{width:30px;height:30px;padding:0;font-size:13px;border-radius:6px}
+.dot.done{background:color-mix(in srgb,var(--accent) 22%,var(--card))}
+.dot.cur{outline:2px solid var(--accent)}
+.score{font-size:34px;font-weight:700}
+.gapres{display:inline-block;border-radius:6px;padding:0 8px;margin:0 2px;font-weight:600}
+.gapres.ok{background:var(--okbg);color:var(--ok)}
+.gapres.bad{background:var(--badbg);color:var(--bad)}
+.gapres small{font-weight:400;opacity:.85}
+.explain{border-left:3px solid var(--accent);padding:4px 12px;margin-top:10px;color:var(--ink)}
+.src{color:var(--mute);font-size:13px;margin-top:6px}
+.bar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin:4px 0 10px}
+.bar>i{display:block;height:100%;background:var(--accent)}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:6px 4px;border-bottom:1px solid var(--line);text-align:left}
+label.toggle{font-size:13px;color:var(--mute);cursor:pointer}
+header{top:env(safe-area-inset-top,0px)}
+.modal{position:fixed;inset:0;background:var(--scrim);display:flex;align-items:center;justify-content:center;padding:16px;z-index:20}
+.sheet{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;max-width:420px;width:100%}
+button{min-height:42px}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+main,.card,.stem,.explain{min-width:0;overflow-wrap:anywhere}
+table{display:block;overflow-x:auto}
+@media (max-width:520px){
+  main{padding:12px 16px}
+  .stem{font-size:17px;line-height:2}
+  input.gap{width:7.5em}
+  .row button{flex:1 1 auto}
+  .dot{width:36px;height:36px}
+}
+.opt:disabled{opacity:1;color:var(--ink)}
+
+</style>
+<header><h1>MBBS III Resit · Exam Practice</h1><div id="timer" hidden></div></header>
+<main id="app"></main>
+<script>
+// O&G · Flashcards · Endometriosis — slides p.755–764 of "O and G 1 Merged.pdf"
+// extra:true = standard teaching that is NOT on the slides (kept few, clearly labelled).
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "og-cards-endometriosis",
+  subject: "O&G",
+  type: "cards",
+  title: "O&G Flashcards · Endometriosis",
+  cards: [
+    { topic: "Definition", src: "p.755",
+      q: "Define endometriosis.",
+      a: "Endometrial tissue occurring aberrantly (outside the uterine cavity) in various tissues.",
+      connect: "Compare adenomyosis: endometrial tissue INSIDE the myometrium. Endometriosis is OUTSIDE the uterus altogether." },
+    { topic: "Definition", src: "p.755",
+      q: "What must be demonstrated to make the diagnosis histologically?",
+      a: "Endometrial GLANDS and STROMA outside the uterine cavity.",
+      connect: "Two things, glands + stroma. Tissue that only looks like endometrium is not enough." },
+    { topic: "Epidemiology", src: "p.756",
+      q: "Give the prevalence of endometriosis (a) among menstruating women and (b) among infertile patients.",
+      a: "(a) 7–10% of all menstruating women. (b) 35–50% of infertile patients.",
+      connect: "The jump from 7–10% to 35–50% is why infertility work-up always asks about endometriosis. The true incidence is unknown because many cases are missed." },
+    { topic: "Epidemiology", src: "p.756",
+      q: "Peak age of incidence, and the parity association?",
+      a: "30–40 years; low parity.",
+      connect: "Same age band as symptomatic fibroids (30–40), so the two sit together on the differential for a woman in her thirties with pelvic pain and menstrual problems. Low parity means more menstrual cycles, more exposure to retrograde flow." },
+    { topic: "Epidemiology", src: "p.756",
+      q: "Name the three most common sites.",
+      a: "Ovary, uterosacral ligament, pouch of Douglas.",
+      connect: "All sit in the dependent pelvis, where retrograde menstrual blood would pool. That is why theory 1 (retrograde menstruation) fits the distribution." },
+    { topic: "Aetiology", src: "p.757",
+      q: "List the three theories of aetiology.",
+      a: "1. Retrograde menstruation. 2. Transformation (metaplasia) of coelomic epithelium. 3. Lymphatic or vascular spread.",
+      connect: "Match the theory to the clue. Pelvic peritoneum and ovary disease → retrograde menstruation. Rare distant sites (lung, umbilicus, scars) → lymphatic or vascular spread. Disease in someone with no menstruation → coelomic metaplasia." },
+    { topic: "Presentation", src: "p.758",
+      q: "What proportion of cases are asymptomatic, and what determines the symptoms in the rest?",
+      a: "About 50% are asymptomatic. Symptoms depend on the SITE of the deposits.",
+      connect: "Severity of symptoms does not track the amount of disease. A woman can have extensive disease and few symptoms, or the reverse." },
+    { topic: "Presentation", src: "p.758 (symptom box)",
+      q: "List the symptoms of endometriosis from the slide.",
+      a: "Dysmenorrhoea · pelvic pain · lower abdominal or back pain · dyspareunia · dyschezia (pain on defecation) · loin pain · pain on micturition · pain on exercise.",
+      connect: "Read the symptom as the organ involved: dyschezia → bowel/rectovaginal area, pain on micturition → bladder, loin pain → ureter, dyspareunia → pouch of Douglas/uterosacral ligaments. Infertility is the other big presentation." },
+    { topic: "Presentation", src: "p.758 (site → symptom)",
+      q: "Which site gives (a) dyschezia, (b) pain on micturition, (c) loin pain?",
+      a: "(a) Bowel / rectovaginal region. (b) Bladder. (c) Ureter (ureteric involvement, risking obstruction).",
+      connect: "This is the site-based reasoning the slide is hinting at with 'symptoms will depend on site'. It is the logic examiners use for case questions.", extra: true },
+    { topic: "Diagnosis", src: "p.759",
+      q: "What is the definitive way to diagnose endometriosis?",
+      a: "Visualisation at laparoscopy (with histology confirming glands and stroma).",
+      connect: "Not ultrasound, not examination, not a blood test. Scans only suggest it (e.g. an ovarian cyst). Laparoscopy lets you see, biopsy and treat in the same sitting." },
+    { topic: "Diagnosis", src: "p.759",
+      q: "Name the three appearances of endometriosis the slide lists.",
+      a: "Mass, 'powder burn' appearance, chocolate-coloured cyst.",
+      connect: "Powder burn = small dark brown or blue-black peritoneal spots. Chocolate cyst = ovarian endometrioma." },
+    { topic: "Diagnosis", src: "p.760–761",
+      q: "Describe the peritoneal lesions seen at laparoscopy (slide figure).",
+      a: "Blue-black lesions, white plaques, clear vesicles and newly formed blood vessels.",
+      connect: "Appearance varies with the age of the lesion, so a 'normal-looking' peritoneum with subtle clear or white lesions does not exclude disease." },
+    { topic: "Diagnosis", src: "p.760",
+      q: "What is an endometrioma and why is it called a 'chocolate cyst'?",
+      a: "An endometriotic cyst of the ovary. It bleeds slowly into itself over months, so it fills with old dark-brown 'chocolate' fluid.",
+      connect: "The slide's case: a left-sided cyst with worsening pain, a small rupture leaking chocolate fluid into the abdomen. Rupture = acute pain. Surgery removed the cyst and saved the normal ovarian tissue." },
+    { topic: "Diagnosis", src: "p.762",
+      q: "What does the 'mild adhesions' picture show, and why does that matter for fertility?",
+      a: "Endometriotic deposits with scarring (adhesions) in the pelvis.",
+      connect: "Adhesions can distort the tubes and ovaries and impair egg pick-up. This is one way endometriosis causes infertility. Tubal damage is also how pelvic infection causes infertility (see the infertility notes), so tubal factor is the common thread.", extra: true },
+    { topic: "Medical treatment", src: "p.763 (table)",
+      q: "List the six drug groups in the slide's medical-treatment table.",
+      a: "1. NSAIDs. 2. Progestogens. 3. Synthetic androgens (danazol, gestrinone). 4. Combined oestrogens and progestogens. 5. GnRH analogues. 6. GnRH analogues + HRT (add-back).",
+      connect: "Two ideas run through all of them. NSAIDs treat PAIN. Everything else suppresses the ovarian cycle so the deposits stop cycling and shrink." },
+    { topic: "Medical treatment", src: "p.763",
+      q: "NSAIDs for endometriosis: examples and main side-effect?",
+      a: "Diclofenac, ibuprofen, mefenamic acid. Side-effect: gastric irritation.",
+      connect: "Same mefenamic acid used for DUB (prostaglandin synthetase inhibitor, 500 mg tds). Prostaglandins drive both dysmenorrhoea and heavy bleeding." },
+    { topic: "Medical treatment", src: "p.763",
+      q: "Progestogens for endometriosis: examples and side-effects?",
+      a: "Dydrogesterone, medroxyprogesterone acetate, norethisterone. Side-effects: bloating, fluid retention, breast tenderness, nausea.",
+      connect: "Norethisterone and medroxyprogesterone are the same drugs used in DUB, now used to stop cycling and decidualise the endometrial deposits." },
+    { topic: "Medical treatment", src: "p.763",
+      q: "Danazol and gestrinone: what are they and what are their side-effects?",
+      a: "Synthetic androgens. Side-effects: seborrhoea, acne, weight gain, muscle cramps and menopausal symptoms (the slide excludes osteoporosis).",
+      connect: "Androgenic side-effects (acne, oily skin, weight gain) are the clue. Danazol also appeared in the DUB drug list, and androgen effects are why women dislike it." },
+    { topic: "Medical treatment", src: "p.763",
+      q: "GnRH analogues: examples, side-effects, and how are the side-effects reduced?",
+      a: "Buserelin, goserelin, leuprorelin, nafarelin, triptorelin. Cause menopausal symptoms (including osteoporosis). Reduced by add-back HRT (continuous or sequential) or tibolone.",
+      connect: "GnRH analogues switch off the pituitary, so the woman becomes oestrogen-deficient: hot flushes, vaginal dryness, bone loss. Hence add-back HRT. Same drug class as in the DUB and fibroid slides.",
+    },
+    { topic: "Medical treatment", src: "p.763",
+      q: "A woman on a GnRH analogue complains of hot flushes. What is the cause, and what do you add?",
+      a: "Drug-induced oestrogen deficiency (a pseudo-menopause). Add HRT (add-back) or tibolone.",
+      connect: "Add-back therapy lets treatment continue and protects bone without bringing back the disease." },
+    { topic: "Surgical treatment", src: "p.764",
+      q: "What are the conservative surgical options?",
+      a: "Excision of lesions and neurectomy.",
+      connect: "Conservative = keep the uterus. Choose it for younger women who want children or want to keep their fertility." },
+    { topic: "Surgical treatment", src: "p.764",
+      q: "What is the radical surgical option?",
+      a: "Total abdominal hysterectomy (TAH), with excision of bladder and bowel disease.",
+      connect: "For severe disease and completed family. Compare DUB and fibroids, where hysterectomy is also reserved for completed family and failed medical treatment." },
+    { topic: "Cases", src: "p.756–759",
+      q: "A 32-year-old nulligravida has painful periods, painful intercourse and has not conceived after 2 years. Most likely diagnosis, and how do you confirm it?",
+      a: "Endometriosis. Confirm by laparoscopy (visualisation ± biopsy showing glands and stroma).",
+      connect: "Nullipara + 30–40 years + infertility + dysmenorrhoea/dyspareunia is the textbook pattern. Fibroids would more often cause heavy periods and a mass; PID would cause fever and discharge." },
+    { topic: "Cases", src: "p.760",
+      q: "Laparoscopy shows an enlarged ovary leaking dark brown fluid. What is the lesion and the treatment?",
+      a: "An endometrioma (chocolate cyst). Excise the cyst while conserving normal ovarian tissue (conservative surgery).",
+      connect: "Picture-test pattern. The slide image shows exactly this: a white enlarged ovary with a pointing arrow at the leaking spot." },
+    { topic: "Cases", src: "p.756, 764",
+      q: "Which treatment suits (a) a 24-year-old wanting pregnancy soon with a small ovarian endometrioma, (b) a 46-year-old with severe disease and a completed family?",
+      a: "(a) Conservative: excision of the lesion (laparoscopic) ± medical suppression. (b) Radical: TAH with excision of bladder or bowel disease.",
+      connect: "Treatment follows the patient's goals: fertility wish decides conservative versus radical." },
+    { topic: "Extra", src: "standard teaching, not on slides",
+      q: "Which aetiological theory is attributed to Sampson, and which to Meyer?",
+      a: "Sampson: retrograde menstruation. Meyer: coelomic metaplasia.",
+      connect: "Handy for viva. Both appear on the slide as theories, just without names.", extra: true },
+    { topic: "Extra", src: "standard teaching, not on slides",
+      q: "Is CA-125 diagnostic for endometriosis?",
+      a: "No. It may be raised, but it is non-specific (also raised in ovarian cancer, fibroids, PID, menstruation). Diagnosis stays laparoscopic.",
+      connect: "A raised CA-125 with a pelvic mass sends you to think about ovarian cancer, so don't read it in isolation.", extra: true }
+  ]
+}]);
+
+</script>
+<script>
+// O&G · Flashcards · Infertility — slides p.609–665 of "O and G 1 Merged.pdf"
+// extra:true = standard teaching NOT on the slides.
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "og-cards-infertility",
+  subject: "O&G",
+  type: "cards",
+  title: "O&G Flashcards · Infertility",
+  cards: [
+    { topic: "Basics", src: "p.611",
+      q: "Define infertility, primary infertility, secondary infertility and unexplained infertility.",
+      a: "Infertility: failure to conceive after 1 year of regular unprotected intercourse. Primary: never conceived. Secondary: has conceived before. Unexplained: all standard investigations are normal.",
+      connect: "Secondary infertility in Nigeria is usually tubal damage from a previous pregnancy event (abortion, puerperal sepsis) or an STI. Unexplained is a diagnosis of exclusion." },
+    { topic: "Basics", src: "p.612",
+      q: "Distinguish sterility, infertility, subfertility, fecundity and fecundability.",
+      a: "Sterility: absolute incapacity to reproduce. Infertility: 1 year without conception, whatever the cause. Subfertility: relative reduction in fertility of a group or community. Fecundity: ability to achieve a live birth within one cycle. Fecundability: the probability of pregnancy each month (20–25%, about 0.22).",
+      connect: "Fecundity of 0.15–0.18 per month adds up to roughly 90% cumulative pregnancy in a year, which is why 12 months is the cut-off." },
+    { topic: "Basics", src: "p.611, 614",
+      q: "How common is infertility worldwide and in sub-Saharan Africa, and which type predominates?",
+      a: "10–15% of couples worldwide; 11–20% in sub-Saharan Africa. Primary is commoner worldwide, but SSA is the exception: about 52% of infertile couples there have secondary infertility.",
+      connect: "Secondary-predominant infertility points to infection after pregnancy or an STI as the main driver. This is the epidemiology answer for essays." },
+    { topic: "Basics", src: "p.611, 616",
+      q: "What is the single most important prognostic factor, and what happens to fertility with age?",
+      a: "Age of the female partner. Fertility is halved at 35 and falls sharply after 37. Investigate women over 35 after 6 months, not 12.",
+      connect: "Age drives the oocyte chromosomal abnormalities that cause age-related decline (p.627), and why 'fast-track' management is needed over 35." },
+    { topic: "Causes", src: "p.620",
+      q: "Which causes of female infertility are most common in Africa versus the Western world?",
+      a: "Africa: tubal infertility. Western world: male factor or ovulation disorders.",
+      connect: "Tubal = infection = preventable. That is the programmatic message: control RTIs, prevent post-abortion and puerperal infection." },
+    { topic: "Causes", src: "p.621",
+      q: "Classify the causes of female infertility.",
+      a: "Total ovarian failure · tubal dysfunction · disorders of implantation · disorders of ovulation (hypothalamic, pituitary, ovarian, thyroid and adrenal, chromosomal).",
+      connect: "Mnemonic path of an egg: made (ovary), released (ovulation), carried (tube), planted (implantation)." },
+    { topic: "Causes", src: "p.622",
+      q: "What are premature ovarian failure and resistant ovary syndrome?",
+      a: "Premature ovarian failure: ovaries stop functioning early (menses cease), linked to autoimmune disease and may be hereditary. Resistant ovary syndrome: primordial follicles fail to mature because of a lack of (or antibodies to) gonadotrophin receptors. Irregular ovulation is commoner than total ovarian failure.",
+      connect: "Both have high FSH and LH with low oestradiol. The amenorrhoea slides define premature ovarian failure as before age 40 (this infertility slide says 40 or over)." },
+    { topic: "Causes", src: "p.623, 624",
+      q: "How do hypothalamic and pituitary disorders cause anovulation?",
+      a: "Hypothalamic: abnormal GnRH release (stress, weight loss, drugs), often reversible. Pituitary: micro- or macroadenomas raise prolactin, causing amenorrhoea and anovulation. Prolactin above 1000 iu/L suggests an adenoma, so get MRI of the pituitary fossa.",
+      connect: "Low FSH/LH (below 5 u/L) = hypothalamic. High prolactin = pituitary. Treat with pulsatile GnRH or gonadotrophins (hypothalamic) and dopamine agonists (hyperprolactinaemia)." },
+    { topic: "Causes", src: "p.625",
+      q: "Describe PCOS as a cause of infertility.",
+      a: "Commonest cause of anovulatory infertility. Oligomenorrhoea, obesity, hirsutism, raised LH with altered LH:FSH ratio, raised androgens. More common in Asian women. USS: enlarged ovary with 10 or more peripheral small cysts, thickened stroma and increased stromal blood flow.",
+      connect: "LH:FSH above 2:1 on days 1–3 is the lab clue. First treatment clomiphene; if resistant, gonadotrophins or laparoscopic ovarian drilling. OHSS risk is higher in PCOS." },
+    { topic: "Causes", src: "p.626",
+      q: "What is a luteinised unruptured follicle (LUF)?",
+      a: "The dominant follicle luteinises but does not rupture, so no egg is released. Causes: prostaglandin synthetase inhibitors, endometriosis. Diagnosed by USS or laparoscopy.",
+      connect: "Why it matters: progesterone may be normal (the trap in the mid-luteal progesterone test). Treatment is hCG as an ovulation trigger." },
+    { topic: "Causes", src: "p.627",
+      q: "Which thyroid, adrenal and chromosomal conditions cause infertility?",
+      a: "Hypo- and hyperthyroidism; Cushing's syndrome; congenital adrenal hyperplasia; Turner syndrome and other sex-chromosome abnormalities (absent or defective X); age-related oocyte chromosomal errors.",
+      connect: "Hence examination looks for exophthalmos, goitre, webbed neck and low hairline." },
+    { topic: "Causes", src: "p.628",
+      q: "How does the tube cause infertility, and what are the causes?",
+      a: "Impaired oocyte pick-up (peritubal adhesions, damaged fimbriae) or damaged tubal epithelium. Causes: PID (the major one; chlamydia commonest, then gonococci), endometriosis, peritonitis after appendicitis, sepsis after pelvic or abdominal surgery.",
+      connect: "Adhesions link endometriosis, appendicitis, surgery and PID. It also explains ectopic pregnancy risk after tubal damage." },
+    { topic: "Causes", src: "p.629",
+      q: "What causes failed implantation, and which lifestyle factors affect fertility?",
+      a: "Luteal insufficiency (low progesterone) and a submucous fibroid distorting the cavity. Smoking, alcohol, drugs, psychological and environmental factors.",
+      connect: "Submucous fibroid is the same lesion causing menorrhagia, so the fibroid card pairs with this one. HSG shows it as a filling defect." },
+    { topic: "Male factor", src: "p.631–633",
+      q: "Summarise normal spermatogenesis and its hormonal control.",
+      a: "FSH acts on Sertoli cells; LH acts on Leydig cells, which make androgens. Spermiogenesis takes about 74 days. Sertoli cells secrete inhibin, which gives negative feedback on pituitary FSH. Genes for spermatogenesis are on the Y chromosome.",
+      connect: "Sertoli = granulosa equivalent; Leydig = theca equivalent. That is why FSH is raised in testicular failure, since inhibin is low." },
+    { topic: "Male factor", src: "p.634",
+      q: "List causes of impaired spermatogenesis.",
+      a: "Raised scrotal temperature (undescended testes, varicocoele, hot baths, tight underwear), Y-chromosome microdeletions, drugs (psychotropics, anti-epileptics, antihypertensives, antibiotics, chemotherapy).",
+      connect: "About 25% of men with abnormal semen have a varicocoele, but benefit from ligation is unproven." },
+    { topic: "Male factor", src: "p.635, 636",
+      q: "Causes of impaired sperm transport and of ejaculatory dysfunction?",
+      a: "Transport: epididymal malformation or inflammatory obstruction, absent or enlarged vas, immotile cilia syndrome, vasectomy. Ejaculatory (1–2% of male infertility): anejaculation, premature ejaculation, retrograde ejaculation, drugs, diabetes, multiple sclerosis. Anti-sperm antibodies (IgG/IgA) also impair function.",
+      connect: "Diabetes appears in many pelvic questions. Retrograde ejaculation = sperm in post-ejaculate urine." },
+    { topic: "Evaluation", src: "p.637–639",
+      q: "What does the infertility history cover, and which clues does examination look for?",
+      a: "Type and duration, previous pregnancies and outcomes, prior treatment, menstrual pattern, coital frequency, STIs, surgical contraception, lifestyle (alcohol, tobacco, drugs), occupation, family history, medications. Examination: BMI, exophthalmos, thyroid, webbed neck, low-set ears, galactorrhoea, abdominal and pelvic masses, adnexal or cul-de-sac nodularity. Examine both partners.",
+      connect: "Adnexal and cul-de-sac nodularity = endometriosis. Galactorrhoea = prolactin. Always take a confidential STI and previous-pregnancy history from both partners." },
+    { topic: "Evaluation", src: "p.640",
+      q: "What are the psychological issues in infertility?",
+      a: "Stress at every stage. Anxiety during work-up, but depression is the most common reaction to failed treatment. Risks: marital breakdown, domestic violence. Counselling at the start, when indicated, and at the end of unsuccessful treatment or after a loss. Donor gamete couples need counselling.",
+      connect: "Essay marks come from covering psychosocial issues: stigma, blame on the woman, and both partners participating." },
+    { topic: "Investigations", src: "p.641",
+      q: "What hormone tests are done and when?",
+      a: "Early follicular (days 1–3): FSH and LH (LH:FSH ratio of 2:1 or more = PCOS). In irregular menses add thyroid function, prolactin and androgen profile. Mid-luteal progesterone above 30 nmol/L = ovulation.",
+      connect: "Timing is part of the answer: always state the cycle day when naming a hormone test." },
+    { topic: "Investigations", src: "p.642",
+      q: "What does ultrasound add, and when is it done?",
+      a: "Detailed USS on days 10–12 establishes follicular and endometrial maturity, and identifies polycystic ovaries and uterine abnormalities. Serial USS tracks follicles.",
+      connect: "Follicles reach 20–26 mm at the LH surge, so tracking tells you when ovulation is due and confirms rupture." },
+    { topic: "Investigations", src: "p.643",
+      q: "Describe the hysterosalpingogram: purpose, timing and findings.",
+      a: "Radio-opaque dye through the cervix under X-ray to assess uterine cavity and tubal patency. Done in the first 10 days of the cycle (avoids irradiating an early embryo). Free spill = patent. Loculated spill = adhesions. Club-shaped dilated tube = hydrosalpinx. Filling defect = submucous fibroid, polyp or adhesions. Further tests: laparoscopy and dye test, hystero-contrast sonography.",
+      connect: "A recurring short-note question in past papers, so learn this card cold." },
+    { topic: "Investigations", src: "p.644, 645",
+      q: "State the WHO 2010 semen reference values and the terms for abnormalities.",
+      a: "Volume 1.5 ml; liquefaction within 30 min; concentration 15 million/ml; progressive motility 32% (total motility 40%); 4% normal forms; WBC under 1 million/ml. Aspermia: no ejaculate. Azoospermia: no sperm. Oligo-, astheno-, terato-zoospermia: low count, poor motility, abnormal shape.",
+      connect: "Motility, morphology and agglutination predict fertilising ability better than sperm count. Abstain 2–3 days and repeat if abnormal. Oligo- or azoospermia: check gonadotrophins, testosterone and prolactin." },
+    { topic: "Investigations", src: "p.646",
+      q: "Outline the timing of the infertility work-up across a cycle.",
+      a: "Day 3: FSH, oestradiol, antral follicle count. Days 7–11: HSG or follicular tracking. Days 10–18: urinary LH testing. Day 21 (or 1 week after the LH surge): progesterone, laparoscopy with chromotubation. Days 25–28: endometrial biopsy. Any day: semen analysis. Month 2: review results and plan treatment. Barrier contraception is advised in the testing cycle.",
+      connect: "This is the structure of a good answer to 'evaluate an infertile couple': both partners, in parallel, within about two cycles." },
+    { topic: "Management", src: "p.647",
+      q: "What programmatic strategies apply to treating infertility in developing countries?",
+      a: "Evaluate men as well as women; sensitive counselling to avoid inappropriate treatment and multiple clinic shopping; advise on timing of intercourse, smoking and alcohol; help couples cope with the social and psychological burden; consider non-medical options such as adoption.",
+      connect: "Counselling is a recurring theme throughout the slides: early advice on adoption and gamete donation where indicated." },
+    { topic: "Management", src: "p.648",
+      q: "Which factors affect the conception rate, and what predicts a poor outcome?",
+      a: "Age of the woman (decline after 35), baseline FSH, prior conception, associated sperm dysfunction. Baseline FSH above 10 u/L = poor prognosis. Fast-track women over 35.",
+      connect: "High baseline FSH reflects low ovarian reserve, which means fewer and poorer oocytes." },
+    { topic: "Management", src: "p.649–651",
+      q: "Describe clomiphene citrate therapy.",
+      a: "Non-steroidal with oestrogenic and anti-oestrogenic effects. Blocks oestradiol receptors, raising FSH. 50 mg daily on days 2–6, increase to 150 mg if no response, maximum 6 ovulatory cycles. Tamoxifen 20–40 mg days 2–6 is similar. hCG 5,000 IU trigger if there is an unruptured luteinised follicle. Check semen first, monitor by USS, warn about multiple pregnancy and OHSS.",
+      connect: "Clomiphene is first-line for anovulation (PCOS). Always analyse the semen before starting treatment." },
+    { topic: "Management", src: "p.651",
+      q: "Clomiphene-resistant PCOS: what are the options?",
+      a: "Gonadotrophins (FSH subcutaneous, or hMG IM which combines FSH and LH), with hCG trigger. Withhold hCG if more than 3 follicles are mature. Multiple gestation about 20%. Laparoscopic ovarian drilling (laser or diathermy) in selected cases.",
+      connect: "Drilling avoids the multiple pregnancy and OHSS risk of gonadotrophins, but it is surgery." },
+    { topic: "Management", src: "p.652, 653",
+      q: "What is OHSS? Give its pathophysiology, features and risk groups.",
+      a: "Iatrogenic, life-threatening complication of ovarian stimulation (up to 5% of stimulated cycles; severe in 0.5–2% of IVF cycles). hCG is necessary. VEGF from luteinised granulosa cells causes capillary leak: ovarian cystic enlargement, ascites, abdominal distension, intravascular volume depletion and haemoconcentration. Higher risk in PCOS.",
+      connect: "Think of it as third-spacing. Haemoconcentration brings the thrombosis risk, and the fluid shift explains why management is fluids and monitoring." },
+    { topic: "Management", src: "p.654",
+      q: "Treatment of hyperprolactinaemic and hypothalamic anovulation?",
+      a: "Hyperprolactinaemia: dopamine agonists. Bromocriptine (ergot, GI upset); cabergoline and quinagolide (D2 agonists, longer half-life). Hypothalamic anovulation (LH and FSH below 5 u/L, oestrogen low): pulsatile GnRH or gonadotrophins; MRI to exclude tumours.",
+      connect: "Match drug to defect: high prolactin → dopamine agonist; low gonadotrophins → give gonadotrophins or GnRH; PCOS → clomiphene first." },
+    { topic: "Management", src: "p.655",
+      q: "What is IUI with superovulation, and when is it used?",
+      a: "Prepared sperm are injected into the uterine fundus around ovulation, with ovarian stimulation to ensure at least one mature follicle. Indications: sub-optimal sperm motility and unexplained infertility. Better than no treatment in unexplained infertility.",
+      connect: "Shortens the sperm's journey. It needs at least one patent tube." },
+    { topic: "Management", src: "p.656, 657",
+      q: "Tubal disease: when is surgery indicated and what operations exist?",
+      a: "Tubal damage is graded 1–4; surgery only for grades 1 and 2 (least damaged). Salpingo-ovariolysis (adhesions), fimbrioplasty, salpingoneostomy (new tubal opening), and reversal of sterilisation (good results). Outcome depends on surgeon, facilities and the extent of damage; poor if the woman is older or there is male factor. IVF-ET is the only chance when tubes can't be opened.",
+      connect: "As ART improves, tubal surgery is used less. Reversal of sterilisation works because damage is limited and fertility has been proven." },
+    { topic: "Management", src: "p.658, 659",
+      q: "How is male infertility treated?",
+      a: "Quality of sperm matters more than count. Hormonal treatment only works in hypogonadotrophic hypogonadism. IUI with stimulation helps poor motility. Varicocoele ligation: benefit unconfirmed. Systemic steroids for anti-sperm antibodies: conflicting evidence. ART gives the best results. Azoospermia: sperm aspiration (TESA, PESA, MESA) then ICSI.",
+      connect: "ART list: IVF, DI, GIFT, ZIFT, SUZI, ICSI. ICSI injects a single sperm directly into an egg." },
+    { topic: "Management", src: "p.660, 661",
+      q: "List the steps of an IVF-ET cycle and its complications.",
+      a: "Consultation and tests → pituitary down-regulation → ovarian stimulation → hCG trigger → oocyte collection → semen preparation → insemination → fertilisation and cleavage → embryo transfer (± cryopreservation) → luteal support. Complications: OHSS, multiple gestation, possibly ovarian tumours and early menopause long-term.",
+      connect: "Down-regulation is with GnRH analogues, the same drug class that treats endometriosis and fibroids." },
+    { topic: "Prevention", src: "p.663–665",
+      q: "How can the burden of infertility be reduced at population level?",
+      a: "Control reproductive tract infections (education, condoms, prompt treatment with partner notification, access to RTI services). Prevent post-partum and post-abortion infection (safe delivery, family planning, safe abortion). Control endemic disease (schistosomiasis, TB). Challenge beliefs that blame the woman alone. Early STD treatment. Basic infertility services. Don't delay parenthood.",
+      connect: "This is the public-health half of 'epidemiology and prevention of infertility in Nigeria', an essay asked in past papers (1991, 2007)." },
+    { topic: "Extra", src: "standard teaching, not on slides",
+      q: "How does Chlamydia cause infertility without the woman ever noticing?",
+      a: "About 80% of women are asymptomatic. Silent ascending infection scars the tubes, so the first sign of the disease may be infertility or ectopic pregnancy.",
+      connect: "The slides give the 80% figure (p.777) separately. A young woman with a past chlamydia infection and normal semen and cycles in the partner is a classic past-question stem (tubal/peritoneal factor).", extra: true }
+  ]
+}]);
+
+</script>
+<script>
+// O&G · Essays · Infertility. Each point = one mark-worthy idea; the page lets you tick what you covered.
+// x:true = standard teaching beyond the slides (useful, but check against your own notes).
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "og-essay-infertility",
+  subject: "O&G",
+  type: "essay",
+  title: "O&G Essays · Infertility (2 scenarios)",
+  essays: [
+    {
+      kind: "Long essay (20 marks)", marks: 20, topic: "Infertility", src: "slides p.611–665; past paper 2011.22",
+      prompt: "A 22-year-old trader, para 1+0, presents with a 3-year history of infertility. Discuss your management of this patient.",
+      tip: "Open with the diagnosis (secondary infertility), then follow a fixed order: history, examination, investigations, treatment, counselling. The question says 'your management', so examiners want a plan in sequence, not a list of causes. Always involve the husband.",
+      sections: [
+        { h: "Introduction", pts: [
+          { t: "Diagnosis: SECONDARY infertility, inability to conceive after 12 months of regular unprotected intercourse in a woman who has conceived before." },
+          { t: "Three years is well beyond the 1-year threshold; she is young (22), so age is favourable, and the cause is likely to be found." },
+          { t: "In sub-Saharan Africa about half of infertile couples have secondary infertility; the commonest cause is tubal damage from infection (puerperal sepsis, post-abortal sepsis, STIs)." },
+          { t: "Infertility is a problem of the couple, so I would see both partners together, in a private and sensitive setting." }
+        ]},
+        { h: "History (both partners)", pts: [
+          { t: "Details of the previous pregnancy: outcome (1+0 = one delivery, no abortion), place and mode of delivery, complications such as PPH, retained placenta or manual removal, puerperal sepsis, fever, offensive lochia." },
+          { t: "Whether the child is by the same partner; duration of infertility and frequency and timing of intercourse; sexual dysfunction." },
+          { t: "Menstrual history: regularity and cycle length (ovulation), dysmenorrhoea, menorrhagia, amenorrhoea after delivery or curettage (Asherman's syndrome)." },
+          { t: "Symptoms of pelvic infection: lower abdominal pain, abnormal discharge, dyspareunia; previous STIs or PID in either partner; IUCD use; previous abdominal or pelvic surgery, appendicitis, TB." },
+          { t: "Contraceptive history and previous infertility evaluation or treatment (including herbal and spiritual treatments, which delay presentation)." },
+          { t: "Systemic and endocrine symptoms: thyroid disease, galactorrhoea, hirsutism, weight change; drugs, alcohol, smoking." },
+          { t: "Male partner: previous fertility, previous semen analysis, mumps, STIs, urethral discharge, scrotal swelling or surgery, erectile or ejaculatory problems, occupation, heat exposure, drugs." }
+        ]},
+        { h: "Examination", pts: [
+          { t: "General: height, weight and BMI; thyroid enlargement, exophthalmos; galactorrhoea; hirsutism and acne; features of Turner syndrome (webbed neck, low hairline)." },
+          { t: "Abdomen: scars, masses, tenderness." },
+          { t: "Speculum and bimanual: cervicitis, discharge, uterine size and position (fixed retroverted uterus), adnexal tenderness or masses, nodularity in the pouch of Douglas (endometriosis)." },
+          { t: "Male partner: testicular size and position, varicocoele, vas deferens, penile abnormalities, examined by a urologist." }
+        ]},
+        { h: "Investigations", pts: [
+          { t: "Aim: assess the hypothalamo-pituitary-ovarian axis, transport of gametes and implantation. Arrange both partners' tests in the same 1–2 cycles." },
+          { t: "Semen analysis first (simple, cheap): abstain 2–3 days, repeat if abnormal. WHO 2010: volume 1.5 ml, concentration 15 million/ml, progressive motility 32%, 4% normal forms; liquefaction within 30 minutes." },
+          { t: "Ovulation: mid-luteal (day 21) serum progesterone above 30 nmol/L; early follicular (days 1–3) FSH and LH (LH:FSH 2:1 or more suggests PCOS); prolactin, thyroid function and androgens if menses are irregular." },
+          { t: "Ultrasound on days 10–12 for follicular and endometrial maturity, polycystic ovaries and uterine abnormalities; serial scans to track follicles." },
+          { t: "Tubal patency: hysterosalpingography in the first 10 days of the cycle (avoids irradiating an embryo): free spill = patent; loculated spill = adhesions; club-shaped tube = hydrosalpinx; filling defect = fibroid, polyp or adhesions." },
+          { t: "Laparoscopy with dye test (chromotubation) if HSG is abnormal or the cause is unclear; allows adhesiolysis at the same time. Hysteroscopy for intrauterine adhesions." },
+          { t: "Screen for infection: high vaginal and endocervical swabs, chlamydia testing, HIV and VDRL for both partners." },
+          { t: "Endometrial biopsy days 25–28 (luteal phase) if luteal insufficiency is suspected." }
+        ]},
+        { h: "Treatment (guided by the cause)", pts: [
+          { t: "General: counsel both partners; advise on timing of intercourse (around the fertile window), stop smoking and alcohol, reduce weight; treat infections in both partners." },
+          { t: "Tubal factor (most likely): surgery only for grades 1 and 2 (salpingo-ovariolysis, fimbrioplasty, salpingoneostomy); outcome depends on the surgeon and extent of damage. For severe damage or hydrosalpinx, IVF-ET is the only option." },
+          { t: "Anovulation: PCOS → clomiphene 50 mg days 2–6 (up to 150 mg, maximum 6 cycles) with USS monitoring; resistant → gonadotrophins ± hCG, or laparoscopic ovarian drilling. Hyperprolactinaemia → bromocriptine or cabergoline." },
+          { t: "Uterine factor: hysteroscopic adhesiolysis for Asherman's syndrome; myomectomy for a submucous fibroid.", x: true },
+          { t: "Male factor: treat infection, correct modifiable factors; IUI with ovarian stimulation for poor motility; sperm aspiration plus ICSI for azoospermia; donor insemination where appropriate." },
+          { t: "Unexplained infertility: IUI with superovulation (better than no treatment); IVF if that fails." },
+          { t: "Warn about complications of treatment: multiple pregnancy (about 20% with gonadotrophins), OHSS, and ectopic pregnancy after tubal damage or surgery." }
+        ]},
+        { h: "Counselling and prevention", pts: [
+          { t: "Counselling is essential: infertility causes depression, anxiety, marital strain and stigma; blame is often placed on the woman, so involve the husband and counsel against 'clinic shopping'." },
+          { t: "Discuss realistic prognosis (age of the woman is the main determinant; fertility declines after 35) and give early advice about adoption or gamete donation if indicated." },
+          { t: "Prevention: treat STIs promptly with partner notification, condom use, prevent post-abortal and puerperal sepsis through safe delivery and access to safe abortion and family planning." }
+        ]}
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Infertility · PCOS", src: "slides p.625, 641–654",
+      prompt: "A 27-year-old nulliparous woman, married for 4 years, presents with infertility, cycles every 3–4 months, a BMI of 34 and facial hair. Outline how you would diagnose and treat her.",
+      tip: "Name the diagnosis early (PCOS), then show you have excluded the look-alikes. Examiners reward the order: hormones on a named cycle day, then ovulation induction step by step, then the two complications (multiple pregnancy and OHSS). Don't forget the husband's semen analysis and a tubal test before you start treatment.",
+      sections: [
+        { h: "Diagnosis", pts: [
+          { t: "Most likely polycystic ovarian syndrome, the commonest cause of anovulatory infertility: oligomenorrhoea, obesity, hirsutism, raised LH and androgens." },
+          { t: "Exclude other causes of anovulation: hyperprolactinaemia, thyroid disease, congenital adrenal hyperplasia and Cushing's syndrome (and pregnancy)." },
+          { t: "Investigations: FSH and LH on days 1–3 (LH:FSH 2:1 or more), prolactin, thyroid function, androgen profile (testosterone, DHEAS); USS shows enlarged ovaries with 10 or more peripheral cysts, thickened stroma and increased stromal blood flow." },
+          { t: "Confirm anovulation: mid-luteal progesterone (below 30 nmol/L) or serial ultrasound." },
+          { t: "Before treatment: semen analysis for the husband and an HSG to confirm patent tubes and a normal cavity." }
+        ]},
+        { h: "Treatment", pts: [
+          { t: "Counsel and advise weight loss and lifestyle change, which can restore ovulation by itself.", x: true },
+          { t: "First line: clomiphene citrate 50 mg daily on days 2–6, increased to 150 mg if no response; maximum 6 ovulatory cycles; monitor with USS; hCG trigger (5,000 IU) if a follicle luteinises without rupturing." },
+          { t: "Clomiphene-resistant: FSH or hMG gonadotrophin injections with hCG trigger; withhold hCG if more than 3 mature follicles." },
+          { t: "Alternative: laparoscopic ovarian drilling (laser or diathermy) in selected resistant cases; IVF if all fail." },
+          { t: "Metformin may be added in insulin resistance.", x: true }
+        ]},
+        { h: "Complications and counselling", pts: [
+          { t: "Multiple pregnancy (about 20% with gonadotrophins), with the possibility of fetal reduction." },
+          { t: "OHSS: iatrogenic, can be life-threatening; hCG needed; VEGF-mediated ascites, ovarian enlargement and haemoconcentration; PCOS patients are at higher risk." },
+          { t: "Long-term: increased risk of endometrial hyperplasia, diabetes and cardiovascular disease, so follow up even after pregnancy.", x: true }
+        ]}
+      ]
+    }
+  ]
+}]);
+
+</script>
+<script>
+// O&G · Fill-in-the-gap · Set 01 — drawn from the O&G slide deck ("O and G 1 Merged.pdf")
+// Format: stem uses {1} {2}… as gaps. blanks[i] = list of accepted answers for gap i+1.
+// `src` = slide page in the merged PDF. `explain` = the connection to carry into the exam.
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "og-fillgap-01",
+  subject: "O&G",
+  type: "fillgap",
+  title: "O&G Fill-in-the-gap · Set 01",
+  negativeMarking: false,
+  questions: [
+    {
+      topic: "Menstrual disorders", src: "p.92, 94",
+      stem: "Normal menstrual blood loss is {1} to {2} ml. Menorrhagia is loss of more than {3} ml, with a normal or prolonged duration.",
+      blanks: [["30"], ["80"], ["80"]],
+      explain: "Menorrhagia is defined by VOLUME (>80 ml), not by days. If the cycle is also shortened (e.g. 8/20) it becomes polymenorrhagia, and the slide ties that to PID. Fibroids (submucous), polyps and adenomyosis are the uterine causes."
+    },
+    {
+      topic: "Menstrual disorders", src: "p.91, 95, 97, 98",
+      stem: "A normal cycle is 21–35 days. A cycle shorter than {1} days with normal flow is polymenorrhoea; longer than {2} days is oligomenorrhoea. Irregular, acyclical, prolonged bleeding from uterine pathology is called {3}.",
+      blanks: [["21"], ["35"], ["metrorrhagia"]],
+      explain: "Poly/oligo describe the INTERVAL (frequency); menorrhagia describes the AMOUNT; metrorrhagia describes bleeding with NO cycle at all. Polymenorrhoea and oligomenorrhoea are usually ovulatory/hormonal; metrorrhagia points to a structural lesion, so think fibroid, polyp, cancer."
+    },
+    {
+      topic: "Dysfunctional uterine bleeding", src: "p.101, 109, 119",
+      stem: "Adolescent DUB is {1} in nature because of immaturity of the hypothalamo-pituitary-ovarian axis. Endometrial curettage is mandatory in women over {2} years and is avoided in {3} DUB.",
+      blanks: [["anovulatory", "anovulation"], ["40", "forty"], ["adolescent", "adolescents"]],
+      explain: "Both ends of reproductive life (adolescent and perimenopausal) are anovulatory. The difference is what you do: adolescent = reassure, hormones, avoid invasive tests; over 40 = biopsy first to exclude endometrial hyperplasia or cancer."
+    },
+    {
+      topic: "Dysfunctional uterine bleeding", src: "p.113, 114",
+      stem: "To arrest acute DUB bleeding, norethisterone {1} mg is given three times daily for {2} days. Tranexamic acid, an antifibrinolytic, should be avoided in women with a history of {3}.",
+      blanks: [["5"], ["10", "ten"], ["thromboembolism", "thrombosis", "venous thromboembolism", "vte", "dvt", "thromboembolic disease"]],
+      explain: "Norethisterone doses by purpose: stop bleeding 5 mg tds x10 days; anovulatory DUB days 15–25; ovulatory DUB days 5–25. Tranexamic acid works by blocking fibrinolysis, so the danger is clotting, which is why previous VTE rules it out."
+    },
+    {
+      topic: "Abortion", src: "p.497, 498",
+      stem: "In Nigeria the age of viability is {1} weeks, corresponding to a weight of about 1,000 g. The WHO defines abortion as expulsion of a fetus weighing less than {2} g.",
+      blanks: [["28", "twenty eight", "twenty-eight"], ["500", "five hundred"]],
+      explain: "Viability is the cut-off between abortion and preterm birth. Nigeria 28 weeks, USA 24 weeks, WHO 20–24 weeks. The same 28-week cut-off is used for parity: in 'para x+y', x counts deliveries after 28 weeks and y counts losses before it."
+    },
+    {
+      topic: "Abortion", src: "p.500, 503, 504",
+      stem: "Spontaneous abortion complicates about {1}% of clinical pregnancies, and 80% occur before {2} weeks. In first-trimester losses about 50–60% of fetuses have chromosomal abnormalities, and the most common type is autosomal {3}.",
+      blanks: [["15", "fifteen"], ["12", "twelve"], ["trisomy", "trisomies"]],
+      explain: "Early losses are mostly the fetus's fault (chromosomes); later losses are mostly the mother's (cervical incompetence, uterine anomalies, infection). Chromosomal causes fall from ~50% in the first trimester to 20–30% in the second and 5–10% in the third."
+    },
+    {
+      topic: "Abortion", src: "p.509, 511",
+      stem: "In threatened abortion the cervix remains {1}. It becomes inevitable abortion when there is increasing bleeding, abdominal cramps radiating to the back, and {2} of the cervix.",
+      blanks: [["closed", "shut"], ["dilatation", "dilation", "dilatation of the cervix", "opening"]],
+      explain: "The cervical os is the dividing line. Closed + viable fetal echo = threatened (about half go on to abort). Dilated = inevitable. Dilated with some tissue passed = incomplete. Always rule out ectopic pregnancy first."
+    },
+    {
+      topic: "Abortion", src: "p.514, 515, 520",
+      stem: "Incomplete abortion is best evacuated by {1} (MVA) using a {2} syringe. {3} gammaglobulin is given to Rh(D)-negative women.",
+      blanks: [["manual vacuum aspiration", "mva", "vacuum aspiration"], ["karman", "karmans", "karman's"], ["anti-d", "anti d", "antid", "anti-d immunoglobulin"]],
+      explain: "MVA is preferred because it carries fewer post-evacuation complications, is cheaper (reusable equipment) and can be done in small clinics. Dilatation and curettage is 'not recommended'. Rhesus-negative = anti-D, as in every bleeding event in pregnancy."
+    },
+    {
+      topic: "Abortion", src: "p.522, 524",
+      stem: "Septic abortion usually follows {1} abortion. A septic uterus is soft and easier to {2}, so antibiotics are given for at least {3} hours before evacuation.",
+      blanks: [["incomplete"], ["perforate", "perforation"], ["6", "six"]],
+      explain: "Septic = incomplete abortion plus infection (fever, rigors, odorous discharge). Order of work: resuscitate, triple-regimen antibiotics covering aerobes and anaerobes, oxytocics, then evacuate. Tetanus prophylaxis and contraceptive counselling follow. Evacuating a septic uterus too early risks bacteraemia and perforation."
+    },
+    {
+      topic: "Abortion", src: "p.529, 531, 532",
+      stem: "Missed abortion is retention of a dead conceptus behind a {1} cervical os. {2} is more commonly associated with it than with other types of abortion. Up to 12 weeks use MVA; beyond 12 weeks induce with {3} followed by oxytocin.",
+      blanks: [["closed", "shut"], ["coagulopathy", "coagulation failure", "coagulation defect", "dic", "disseminated intravascular coagulation"], ["prostaglandins", "prostaglandin", "misoprostol"]],
+      explain: "A dead fetus held for weeks releases thromboplastin, so check clotting time and platelets BEFORE evacuating. Symptoms of pregnancy regress, the uterus is smaller than dates, and the pregnancy test turns negative. A blighted ovum is a missed abortion with an empty gestational sac."
+    },
+    {
+      topic: "Abortion", src: "p.533, 558, 562",
+      stem: "Recurrent abortion is {1} or more consecutive losses before viability. The most common cause in sub-Saharan Africa is cervical {2}, treated by cerclage (McDonald or {3} suture) between 14 and 18 weeks.",
+      blanks: [["3", "three"], ["incompetence", "incompetent"], ["shirodkar"]],
+      explain: "Cervical incompetence = painless dilatation with recurrent MID-trimester losses (membranes rupture painlessly). Compare uterine anomalies and fibroids, which also cause second-trimester losses, and antiphospholipid syndrome (treated with low-dose aspirin plus heparin). The cerclage suture is removed at 38 weeks."
+    },
+    {
+      topic: "Amenorrhoea", src: "p.574, 575",
+      stem: "Primary amenorrhoea is no menses by age {1} years without secondary sexual characteristics, or by age {2} years with them. Secondary amenorrhoea is cessation of menses for more than {3} months in a woman who previously menstruated.",
+      blanks: [["14", "fourteen"], ["16", "sixteen"], ["6", "six"]],
+      explain: "Always exclude pregnancy first in any secondary amenorrhoea. Physiological amenorrhoea: pre-puberty, pregnancy, lactation, menopause. Secondary amenorrhoea can also be defined as the equivalent of 3 cycles in a woman with oligomenorrhoea."
+    },
+    {
+      topic: "Amenorrhoea", src: "p.578, 592, 594",
+      stem: "In PCOS the LH:FSH ratio is raised, greater than {1}:1. Hyperprolactinaemia is treated with {2} agonists such as bromocriptine or cabergoline. In androgen insensitivity the uterus is absent but circulating {3} is normal.",
+      blanks: [["2", "3", "2-3", "two", "three"], ["dopamine", "dopaminergic"], ["testosterone"]],
+      explain: "Pattern for the hormone question: high FSH/LH = ovarian failure (Turner, premature failure, resistant ovary); low FSH/LH = pituitary/hypothalamic failure; high LH:FSH = PCOS; high prolactin = adenoma (get MRI/CT of the pituitary). Androgen insensitivity: 46XY, blind vagina, no uterus, normal testosterone, receptor defect."
+    },
+    {
+      topic: "Anaemia in pregnancy", src: "p.963, 964, 984",
+      stem: "WHO defines anaemia in pregnancy as haemoglobin below {1} g/dl and haematocrit below 33%. Many Nigerian hospitals use {2} g/dl as the practical cut-off. The commonest type worldwide is {3} deficiency anaemia.",
+      blanks: [["11", "eleven"], ["10", "ten"], ["iron", "iron deficiency"]],
+      explain: "The WHO line (11) is for screening; the local working line (10 g/dl, PCV 30%) comes from work showing fetal harm only below it. Severity: severe is Hb below 6.8 / PCV below 19%. Causes in the tropics are multifactorial: iron, folate, malaria, hookworm, haemoglobinopathies and blood loss."
+    },
+    {
+      topic: "Anaemia in pregnancy", src: "p.971, 985, 992",
+      stem: "In pregnancy plasma volume expands by 46–55% while red cell mass expands by only 18–25%, giving physiological {1}. Each fetus requires about {2} mg of iron. Iron absorption is enhanced by {3} acid.",
+      blanks: [["haemodilution", "hemodilution", "dilution", "anaemia", "anemia", "physiological anaemia"], ["500", "five hundred"], ["ascorbic", "vitamin c"]],
+      explain: "Plasma outgrows red cells, so Hb drops, most noticeably in the second trimester. That is why the cut-off is 10.5 g/dl in the second trimester (CDC). Inhibitors of iron absorption: phytates, tannates, tea and coffee, calcium, herbal drinks. Enhancers: ascorbic acid, gastric acidity, protein."
+    },
+    {
+      topic: "Fibroids", src: "p.730, 741, 744, 745",
+      stem: "Uterine fibroids are the most common uterine tumour. The commonest secondary change is {1} degeneration, and sarcomatous change into leiomyosarcoma occurs in about {2}%. Diagnosis is mainly {3}.",
+      blanks: [["hyaline"], ["0.5", ".5", "half", "less than 1", "<1"], ["clinical", "clinically"]],
+      explain: "Most fibroids are asymptomatic; when symptomatic the leading symptom is menorrhagia (submucous). Warning signs of sarcoma: postmenopausal growth or bleeding, rapid growth, a fibroid that turns soft, tender or fixed. Pregnancy of 20+ weeks and OCP use are protective; Black women have 2–3 times the risk."
+    },
+    {
+      topic: "Postpartum haemorrhage", src: "p.1397, 1403, 1410",
+      stem: "PPH is blood loss of more than {1} ml after vaginal delivery, or more than {2} ml after caesarean section. The commonest cause is uterine {3}, accounting for about 80%.",
+      blanks: [["500", "five hundred"], ["1000", "1,000", "one thousand", "1 litre", "1l"], ["atony", "atonicity"]],
+      explain: "Primary PPH is within 24 hours; secondary is from 24 hours to 6 weeks. Remember the 4Ts: Tone (80%), Trauma, Tissue, Thrombin. First actions: call for help, rub up the uterus, IV access, and oxytocin infusion as first-line oxytocic. Prevent with active management of the third stage."
+    },
+    {
+      topic: "Oxytocics", src: "p.175–178",
+      stem: "Syntometrine combines oxytocin and {1}. Ergometrine takes 6–7 minutes to act IM and is contraindicated in women with {2} or heart disease. Oxytocin acts within about {3} minutes when given IM.",
+      blanks: [["ergometrine", "ergometrin", "ergot"], ["hypertension", "high blood pressure", "pre-eclampsia", "htn"], ["2.5", "2 5", "two and a half", "3", "2-3"]],
+      explain: "Pick the drug from the patient: hypertensive or cardiac patient = oxytocin, NEVER ergometrine or syntometrine. Ergometrine gives sustained tonic contraction (2–4 hours) but raises BP and causes vomiting. Oxytocin is fast and side-effect free but not heat stable. Misoprostol is the PGE1 analogue for when injectables are unavailable."
+    },
+    {
+      topic: "Infertility", src: "p.611, 616, 620, 625",
+      stem: "Infertility is failure to conceive after {1} year of regular unprotected intercourse; in women over {2} years investigation starts after 6 months. In Africa most infertile women have {3} infertility, while the commonest cause of anovulatory infertility is PCOS.",
+      blanks: [["1", "one", "12 months", "twelve months"], ["35", "thirty five", "thirty-five"], ["tubal", "tubal factor", "tubal disease"]],
+      explain: "The single most important prognostic factor is the age of the female partner (fertility halves at 35 and drops sharply after 37). The tubal link: pelvic infection (PID, post-abortal and puerperal sepsis) damages the tubes, which ties together the abortion, STI and infertility questions."
+    },
+    {
+      topic: "Endometriosis", src: "p.755, 756, 759",
+      stem: "Endometriosis is the presence of endometrial glands and stroma outside the uterus. Definitive diagnosis is by {1}. The commonest site is the {2}, and the typical lesion there is a {3} coloured cyst.",
+      blanks: [["laparoscopy", "laparoscopic visualisation", "laparoscopic visualization"], ["ovary", "ovaries"], ["chocolate", "chocolate-coloured", "brown"]],
+      explain: "The slide lists the ovary, uterosacral ligament and pouch of Douglas as the commonest sites. 35–50% of infertile women have it, and it is linked to low parity. Leading theory: retrograde menstruation. The ovarian lesion is also called an endometrioma."
+    }
+  ]
+}]);
+
+</script>
+<script>
+// O&G · Single-best-option MCQ · Infertility — slides p.609–665 of "O and G 1 Merged.pdf"
+// answer = index into options (0 = A). No negative marking (O&G format).
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "og-mcq-infertility",
+  subject: "O&G",
+  type: "mcq",
+  title: "O&G MCQ · Infertility (15 single best option)",
+  negativeMarking: false,
+  questions: [
+    { topic: "Basics", src: "p.611",
+      stem: "Which single factor is the most important determinant of prognosis in an infertile couple?",
+      options: ["Duration of infertility", "Age of the female partner", "Sperm concentration", "Body mass index of the woman", "Previous use of contraception"],
+      answer: 1,
+      explain: "The slide states it directly: the single most important prognostic factor is the age of the woman. Fertility is halved at 35 and falls sharply after 37, so age also decides how fast you investigate." },
+    { topic: "Basics", src: "p.616",
+      stem: "A 38-year-old woman has been trying to conceive for 6 months without success. The most appropriate step is to:",
+      options: ["Reassure and review after 12 months of trying", "Begin investigation now", "Start clomiphene empirically", "Refer straight for IVF", "Perform diagnostic laparoscopy"],
+      answer: 1,
+      explain: "Most couples are investigated after 1 year, but in women over 35 you start after 6 months and fast-track management. Clomiphene without confirming anovulation is wrong; IVF and laparoscopy come after the basic work-up." },
+    { topic: "Causes", src: "p.620",
+      stem: "In Africa, the most common cause of infertility in women is:",
+      options: ["Anovulation from PCOS", "Tubal damage", "Hyperprolactinaemia", "Submucous fibroid", "Cervical mucus hostility"],
+      answer: 1,
+      explain: "In Africa most infertile women have tubal infertility; in the Western world it is male factor or ovulation disorders. Cause is pelvic infection (chlamydia, gonococcus, post-abortal and puerperal sepsis), which is why infertility prevention starts with STI control and safe abortion and delivery." },
+    { topic: "Causes", src: "p.625",
+      stem: "The commonest cause of anovulatory infertility is:",
+      options: ["Premature ovarian failure", "Hypothyroidism", "Polycystic ovarian syndrome", "Hyperprolactinaemia", "Turner syndrome"],
+      answer: 2,
+      explain: "PCOS: oligomenorrhoea, obesity, hirsutism, raised LH and an altered LH:FSH ratio (above 2:1), with enlarged ovaries showing 10 or more peripheral small cysts. Don't confuse 'commonest cause of anovulation' with 'commonest cause of infertility in Africa' (tubal)." },
+    { topic: "Causes", src: "p.628",
+      stem: "Which is the most common organism responsible for tubal damage leading to infertility?",
+      options: ["Neisseria gonorrhoeae", "Chlamydia trachomatis", "Trichomonas vaginalis", "Candida albicans", "Treponema pallidum"],
+      answer: 1,
+      explain: "PID is the major cause of tubal infertility, and chlamydia is the most common agent. It is 80% asymptomatic in women, so it damages tubes silently. Endometriosis, peritonitis after appendicitis and pelvic surgery cause tubal infertility through adhesions." },
+    { topic: "Investigations", src: "p.642",
+      stem: "A mid-luteal serum progesterone level above which value in a woman with regular cycles usually indicates that ovulation has occurred?",
+      options: ["3 nmol/L", "10 nmol/L", "15 nmol/L", "30 nmol/L", "60 nmol/L"],
+      answer: 3,
+      explain: "Above 30 nmol/L in the mid-luteal phase. Caution from the slide: a luteinised unruptured follicle (LUF) can still give a normal progesterone, so a normal level doesn't prove the egg was released. Diagnose LUF by ultrasound or laparoscopy." },
+    { topic: "Investigations", src: "p.641",
+      stem: "On days 1–3 of the cycle an LH:FSH ratio of 2:1 or more suggests:",
+      options: ["Premature ovarian failure", "Hypogonadotrophic hypogonadism", "Polycystic ovarian syndrome", "Pituitary adenoma", "Resistant ovary syndrome"],
+      answer: 2,
+      explain: "Early follicular FSH and LH are essential. High FSH and LH = ovarian failure or resistant ovary. Low FSH and LH = hypothalamic or pituitary failure. LH:FSH of 2:1 or more = PCOS. Prolactin is checked in women with irregular menses." },
+    { topic: "Investigations", src: "p.643",
+      stem: "Hysterosalpingography is performed in the first 10 days of the cycle mainly to:",
+      options: ["Coincide with ovulation", "Avoid exposing an early embryo to ionising radiation", "Reduce the pain of the procedure", "Maximise tubal spasm", "Allow endometrial biopsy at the same time"],
+      answer: 1,
+      explain: "HSG uses X-rays, and an embryo from this cycle could already exist if you test late. It is done in the first 10 days (after bleeding stops, before ovulation). Same timing logic applies to any radiological test in a woman who might be pregnant." },
+    { topic: "Investigations", src: "p.643",
+      stem: "On hysterosalpingography, a loculated spill of contrast indicates:",
+      options: ["Normal tubal patency", "Hydrosalpinx", "Peritubal adhesions", "Submucous fibroid", "Intrauterine adhesions"],
+      answer: 2,
+      explain: "Free spill = patent tubes. Loculated spill = tubal (peritubal) adhesions. Club-shaped dilated tube = hydrosalpinx. Filling defect in the cavity = submucous fibroid, polyp or intrauterine adhesions. This table is a favourite picture-test item." },
+    { topic: "Investigations", src: "p.645",
+      stem: "In semen analysis, the term azoospermia means:",
+      options: ["No ejaculate", "No spermatozoa in the ejaculate", "Fewer than 15 million sperm/ml", "Less than 40% progressive motility", "Less than 4% normal forms"],
+      answer: 1,
+      explain: "Aspermia = no ejaculate. Azoospermia = no sperm in the ejaculate. Oligozoospermia = low concentration (below 15 million/ml). Asthenozoospermia = poor motility (below 40% progressive). Teratozoospermia = abnormal morphology (below 4% normal forms). WHO 2010: volume 1.5 ml, liquefaction within 30 minutes." },
+    { topic: "Male factor", src: "p.634",
+      stem: "Which of the following impairs spermatogenesis by raising scrotal temperature?",
+      options: ["Vasectomy", "Varicocoele", "Retrograde ejaculation", "Anti-sperm antibodies", "Epididymal obstruction"],
+      answer: 1,
+      explain: "Testes sit about 1°C below core temperature. Undescended testes, varicocoele, hot baths and tight underwear raise it. Vasectomy and epididymal obstruction impair transport, not production. About 25% of men with abnormal semen have a varicocoele, but ligation has not been shown to improve fertility." },
+    { topic: "Treatment", src: "p.650",
+      stem: "Clomiphene citrate induces ovulation by:",
+      options: ["Directly stimulating the ovary like FSH", "Blocking oestrogen receptors so that FSH release rises through reduced negative feedback", "Lowering prolactin", "Suppressing pituitary GnRH receptors", "Increasing androgen production"],
+      answer: 1,
+      explain: "It blocks oestradiol receptors, the hypothalamus senses low oestrogen, and FSH rises, which stimulates follicles. Usual start is 50 mg daily from day 2 to 6, rising to 150 mg if no response, for a maximum of 6 ovulatory cycles. Tamoxifen (20–40 mg, days 2–6) works the same way." },
+    { topic: "Treatment", src: "p.651",
+      stem: "A woman with PCOS fails to ovulate on clomiphene. The next appropriate step is:",
+      options: ["Bromocriptine", "Gonadotrophin therapy or laparoscopic ovarian drilling", "Danazol", "Tubal surgery", "Combined oral contraceptive pills"],
+      answer: 1,
+      explain: "Clomiphene-resistant PCOS: FSH or hMG injections (hCG trigger; withhold hCG if more than 3 mature follicles), or laparoscopic ovarian drilling in selected cases. Counsel about multiple pregnancy (about 20%) and OHSS. Bromocriptine is for high prolactin, the pill and danazol would suppress ovulation." },
+    { topic: "Treatment", src: "p.653",
+      stem: "Which of the following is necessary for ovarian hyperstimulation syndrome to develop?",
+      options: ["Bromocriptine", "hCG (endogenous or exogenous)", "Metformin", "Tamoxifen", "Cabergoline"],
+      answer: 1,
+      explain: "hCG is necessary; VEGF from luteinised granulosa cells then causes capillary leak: ovarian enlargement, ascites, intravascular volume depletion and haemoconcentration. Risk is higher in women with PCOS. It is life-threatening and complicates up to 5% of stimulated cycles." },
+    { topic: "Treatment", src: "p.654",
+      stem: "A woman with anovulation has a prolactin level above 1000 iu/L. The most appropriate next investigation is:",
+      options: ["Laparoscopy and dye test", "MRI of the pituitary fossa", "Hysterosalpingography", "Endometrial biopsy", "Karyotype"],
+      answer: 1,
+      explain: "A modest rise can be stress-related. Above 1000 iu/L suggests an adenoma and needs MRI of the pituitary fossa. Treatment of hyperprolactinaemic anovulation is a dopamine agonist: bromocriptine (GI upset), or the longer-acting cabergoline and quinagolide (D2 agonists)." }
+  ]
+}]);
+
+</script>
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s), app=$("#app"), timerEl=$("#timer");
+const banks=window.QUESTION_BANKS||[];
+const KEY="mbIII-resit-history-v1";
+const load=()=>{try{return JSON.parse(localStorage.getItem(KEY))||[]}catch(e){return[]}};
+const save=h=>{try{localStorage.setItem(KEY,JSON.stringify(h))}catch(e){}};
+let S=null, tick=null;
+
+const norm=s=>String(s||"").toLowerCase().replace(/[’']/g,"").replace(/[^a-z0-9.%\- ]/g," ").replace(/\s+/g," ").trim();
+const squash=s=>norm(s).replace(/[ \-]/g,"");
+function lev(a,b){const m=a.length,n=b.length;if(!m)return n;if(!n)return m;let p=Array.from({length:n+1},(_,i)=>i);for(let i=1;i<=m;i++){let c=[i];for(let j=1;j<=n;j++)c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));p=c}return p[n]}
+function isCorrect(given,accepted){
+  const g=squash(given); if(!g) return false;
+  return accepted.some(a=>{const x=squash(a); if(g===x) return true;
+    return x.length>=7 && /[a-z]/.test(x) && lev(g,x)<=Math.floor(x.length/6);});
+}
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmt=ms=>{const s=Math.max(0,Math.round(ms/1000));return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0")};
+
+function ask(msg,yes){
+  const o=document.createElement("div");o.className="modal";
+  o.innerHTML=`<div class="sheet"><p>${esc(msg)}</p><div class="row"><button class="primary" id="ask-y">Yes</button><button id="ask-n">Cancel</button></div></div>`;
+  document.body.appendChild(o);$("#ask-n").onclick=()=>o.remove();$("#ask-y").onclick=()=>{o.remove();yes()};
+}
+
+function home(){
+  clearInterval(tick); timerEl.hidden=true; S=null;
+  const hist=load();
+  app.innerHTML=`<div class="card"><h2 style="margin-top:0">Choose a paper</h2>`+
+   banks.map(bankRow).join("")+`</div>`+
+   weakCard(hist)+histCard(hist);
+  app.querySelectorAll("[data-start]").forEach(b=>b.onclick=()=>start(+b.dataset.start,b.dataset.mode));
+  app.querySelectorAll("[data-mcq]").forEach(b=>b.onclick=()=>mcqStart(+b.dataset.mcq,b.dataset.mode));
+  app.querySelectorAll("[data-essay]").forEach(b=>b.onclick=()=>essayStart(+b.dataset.essay,+b.dataset.k));
+  app.querySelectorAll("[data-cards]").forEach(b=>b.onclick=()=>startCards(+b.dataset.cards,b.dataset.all==="1"));
+  const rs=$("#reset"); if(rs) rs.onclick=()=>ask("Clear all saved results?",()=>{save([]);home()});
+}
+
+function bankRow(b,i){
+  if(b.type==="cards") return `<div style="margin:12px 0"><b>${esc(b.title)}</b>
+     <div class="meta">${b.cards.length} cards · ${cardsMastered(b)} mastered</div>
+     <button class="primary" data-cards="${i}" data-all="0">Study (weakest first)</button>
+     <button data-cards="${i}" data-all="1">All cards, shuffled</button></div>`;
+  if(b.type==="mcq") return `<div style="margin:12px 0"><b>${esc(b.title)}</b>
+     <div class="meta">${b.questions.length} questions · ${b.negativeMarking?"negative marking":"no negative marking"} · options reshuffled each attempt</div>
+     <button class="primary" data-mcq="${i}" data-mode="exam">Start timed exam</button>
+     <button data-mcq="${i}" data-mode="practice">Practice (check as you go)</button></div>`;
+  if(b.type==="essay") return `<div style="margin:12px 0"><b>${esc(b.title)}</b>
+     ${b.essays.map((e,k)=>`<div class="meta" style="margin-top:6px">${esc(e.kind)} · ${esc(e.prompt.slice(0,90))}…</div><button class="primary" data-essay="${i}" data-k="${k}">Write &amp; self-mark</button>`).join("")}</div>`;
+  return `<div style="margin:12px 0"><b>${esc(b.title)}</b>
+     <div class="meta">${b.questions.length} questions · ${b.questions.reduce((n,q)=>n+q.blanks.length,0)} gaps · ${b.negativeMarking?"negative marking":"no negative marking"}</div>
+     <button class="primary" data-start="${i}" data-mode="exam">Start timed exam</button>
+     <button data-start="${i}" data-mode="practice">Practice (check as you go)</button></div>`;
+}
+function weakCard(h){
+  const t={}; h.forEach(r=>r.topics&&Object.entries(r.topics).forEach(([k,v])=>{t[k]=t[k]||[0,0];t[k][0]+=v[0];t[k][1]+=v[1]}));
+  const rows=Object.entries(t).map(([k,v])=>[k,v[0]/v[1],v[0],v[1]]).sort((a,b)=>a[1]-b[1]);
+  if(!rows.length) return "";
+  return `<div class="card"><h3 style="margin-top:0">Weak points (all attempts)</h3>`+rows.map(r=>`<div>${esc(r[0])} <span class="meta">${r[2]}/${r[3]} gaps</span><div class="bar"><i style="width:${Math.round(r[1]*100)}%"></i></div></div>`).join("")+`</div>`;
+}
+function histCard(h){
+  if(!h.length) return "";
+  return `<div class="card"><h3 style="margin-top:0">History</h3><table><tr><th>Date</th><th>Paper</th><th>Score</th></tr>`+
+   h.slice(-10).reverse().map(r=>`<tr><td>${new Date(r.date).toLocaleDateString()}</td><td>${esc(r.title)}${r.mode==="practice"?" (practice)":""}</td><td>${r.got}/${r.max} (${Math.round(100*r.got/r.max)}%)</td></tr>`).join("")+
+   `</table><div class="row"><button id="reset">Clear history</button></div></div>`;
+}
+
+function start(i,mode){
+  const b=banks[i];
+  S={b,mode,idx:0,ans:b.questions.map(q=>q.blanks.map(()=>"")),checked:b.questions.map(()=>false),start:Date.now(),limit:b.questions.length*60000};
+  if(mode==="exam"){timerEl.hidden=false;tick=setInterval(()=>{const left=S.limit-(Date.now()-S.start);timerEl.textContent=fmt(left);if(left<=0){clearInterval(tick);finish()}},500)}
+  else timerEl.hidden=true;
+  render();
+}
+function qView(i){
+  const q=S.b.questions[i];
+  const parts=q.stem.split(/\{(\d+)\}/);
+  let html="";
+  parts.forEach((p,k)=>{ if(k%2===0) html+=esc(p); else { const n=+p-1; const checked=S.checked[i];
+    if(checked){const ok=isCorrect(S.ans[i][n],q.blanks[n]); html+=`<span class="gapres ${ok?"ok":"bad"}">${esc(S.ans[i][n]||"—")}${ok?"":` <small>→ ${esc(q.blanks[n][0])}</small>`}</span>`}
+    else html+=`<input class="gap" data-n="${n}" value="${esc(S.ans[i][n])}" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="gap ${n+1}">`;}});
+  return html;
+}
+function render(){
+  const {b,idx}=S, q=b.questions[idx], practice=S.mode==="practice";
+  app.innerHTML=`<div class="card"><div class="meta">Question ${idx+1} of ${b.questions.length} · ${esc(q.topic)}</div>
+   <div class="stem">${qView(idx)}</div>
+   ${S.checked[idx]?`<div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: O&G slides ${esc(q.src)}</div>`:""}
+   <div class="row"><button id="prev" ${idx?"":"disabled"}>Back</button>
+   ${practice&&!S.checked[idx]?`<button class="primary" id="check">Check</button>`:""}
+   ${idx<b.questions.length-1?`<button class="primary" id="next">Next</button>`:`<button class="primary" id="fin">Finish</button>`}</div>
+   <div class="dots">${b.questions.map((_,k)=>`<button class="dot ${k===idx?"cur":""} ${S.ans[k].some(Boolean)?"done":""}" data-go="${k}">${k+1}</button>`).join("")}</div></div>`;
+  app.querySelectorAll("input.gap").forEach((el,k)=>{el.oninput=()=>S.ans[idx][+el.dataset.n]=el.value;
+    el.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();const all=[...app.querySelectorAll("input.gap")];(all[k+1]||$("#check")||$("#next")||$("#fin"))?.focus?.()}}});
+  const f=app.querySelector("input.gap"); if(f) f.focus();
+  $("#prev").onclick=()=>{S.idx--;render()};
+  if($("#next")) $("#next").onclick=()=>{S.idx++;render()};
+  if($("#check")) $("#check").onclick=()=>{S.checked[idx]=true;render()};
+  if($("#fin")) $("#fin").onclick=()=>{ if(S.mode==="exam"){const un=S.ans.filter(a=>!a.some(Boolean)).length; if(un){ask(un+" question(s) unanswered. Submit anyway?",finish);return}} finish()};
+  app.querySelectorAll("[data-go]").forEach(d=>d.onclick=()=>{S.idx=+d.dataset.go;render()});
+}
+function finish(){
+  clearInterval(tick); timerEl.hidden=true;
+  S.over={}; // manual overrides "mark correct": key "q-n"
+  results(true);
+}
+function score(){
+  let got=0,max=0; const topics={};
+  S.b.questions.forEach((q,i)=>q.blanks.forEach((acc,n)=>{max++; const ok=S.over[i+"-"+n]!==undefined?S.over[i+"-"+n]:isCorrect(S.ans[i][n],acc); if(ok){got++}
+    const t=topics[q.topic]=topics[q.topic]||[0,0]; t[1]++; if(ok)t[0]++;}));
+  return {got,max,topics};
+}
+function results(first){
+  const sc=score(), pct=Math.round(100*sc.got/sc.max);
+  if(first){const h=load();h.push({date:Date.now(),title:S.b.title,mode:S.mode,got:sc.got,max:sc.max,topics:sc.topics});save(h);S.saved=h.length-1}
+  else{const h=load(); if(h[S.saved]){Object.assign(h[S.saved],{got:sc.got,topics:sc.topics});save(h)}}
+  const weak=Object.entries(sc.topics).filter(([_,v])=>v[0]<v[1]).sort((a,b)=>a[1][0]/a[1][1]-b[1][0]/b[1][1]);
+  app.innerHTML=`<div class="card"><div class="meta">${esc(S.b.title)} · ${S.mode==="exam"?"time used "+fmt(Date.now()-S.start):"practice"}</div>
+   <div class="score">${sc.got} / ${sc.max} <span style="font-size:18px;color:var(--mute)">(${pct}%)</span></div>
+   ${weak.length?`<p><b>Revise first:</b> ${weak.map(([k,v])=>`${esc(k)} (${v[0]}/${v[1]})`).join(" · ")}</p>`:`<p>Clean sweep.</p>`}
+   <div class="row"><button class="primary" id="home">Back to papers</button><button id="retry">Retake</button></div></div>`+
+   S.b.questions.map((q,i)=>`<div class="card"><div class="meta">Q${i+1} · ${esc(q.topic)}</div><div class="stem">${
+     q.stem.split(/\{(\d+)\}/).map((p,k)=>{ if(k%2===0)return esc(p); const n=+p-1,key=i+"-"+n; const auto=isCorrect(S.ans[i][n],q.blanks[n]); const ok=S.over[key]!==undefined?S.over[key]:auto;
+       return `<span class="gapres ${ok?"ok":"bad"}">${esc(S.ans[i][n]||"—")}${auto?"":` <small>→ ${esc(q.blanks[n][0])}</small>`}</span>${auto?"":`<label class="toggle"><input type="checkbox" data-ov="${key}" ${ok?"checked":""}> I was right</label>`}`}).join("")
+   }</div><div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: O&G slides ${esc(q.src)}</div></div>`).join("");
+  $("#home").onclick=home; $("#retry").onclick=()=>start(banks.indexOf(S.b),S.mode);
+  app.querySelectorAll("[data-ov]").forEach(c=>c.onchange=()=>{S.over[c.dataset.ov]=c.checked; const y=scrollY; results(false); scrollTo(0,y)});
+  scrollTo(0,0);
+}
+// ---------- single-best-option MCQ ----------
+function mcqStart(bi,mode){
+  const b=banks[bi];
+  const perm=b.questions.map(q=>q.options.map((_,i)=>i).sort(()=>Math.random()-.5)); // perm[q][shownPos]=originalIdx
+  S={mcq:true,b,mode,idx:0,perm,pick:b.questions.map(()=>null),checked:b.questions.map(()=>false),start:Date.now(),limit:b.questions.length*60000};
+  if(mode==="exam"){timerEl.hidden=false;tick=setInterval(()=>{const left=S.limit-(Date.now()-S.start);timerEl.textContent=fmt(left);if(left<=0){clearInterval(tick);mcqFinish()}},500)}
+  else timerEl.hidden=true;
+  mcqRender();
+}
+function mcqRender(){
+  const {b,idx,perm}=S,q=b.questions[idx],L="ABCDE",shown=S.checked[idx];
+  app.innerHTML=`<div class="card"><div class="meta">Question ${idx+1} of ${b.questions.length} · ${esc(q.topic)}</div>
+   <div class="stem" style="line-height:1.5">${esc(q.stem)}</div>
+   <div style="margin-top:12px">${perm[idx].map((o,pos)=>{const sel=S.pick[idx]===pos,right=o===q.answer;
+     const st=shown?(right?"background:var(--okbg);border-color:var(--ok)":(sel?"background:var(--badbg);border-color:var(--bad)":"")):(sel?"background:color-mix(in srgb,var(--accent) 15%,var(--card));border-color:var(--accent)":"");
+     return `<button class="opt" data-pos="${pos}" style="display:block;width:100%;text-align:left;margin:6px 0;${st}" ${shown?"disabled":""}><b>${L[pos]}.</b> ${esc(q.options[o])}</button>`}).join("")}</div>
+   ${shown?`<div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: O&G slides ${esc(q.src)}</div>`:""}
+   <div class="row"><button id="prev" ${idx?"":"disabled"}>Back</button>
+   ${S.mode==="practice"&&!shown?`<button class="primary" id="check" ${S.pick[idx]===null?"disabled":""}>Check</button>`:""}
+   ${idx<b.questions.length-1?`<button class="primary" id="next">Next</button>`:`<button class="primary" id="fin">Finish</button>`}</div>
+   <div class="dots">${b.questions.map((_,k)=>`<button class="dot ${k===idx?"cur":""} ${S.pick[k]!==null?"done":""}" data-go="${k}">${k+1}</button>`).join("")}</div></div>`;
+  app.querySelectorAll(".opt").forEach(o=>o.onclick=()=>{S.pick[idx]=+o.dataset.pos;mcqRender()});
+  $("#prev").onclick=()=>{S.idx--;mcqRender()};
+  if($("#next")) $("#next").onclick=()=>{S.idx++;mcqRender()};
+  if($("#check")) $("#check").onclick=()=>{S.checked[idx]=true;mcqRender()};
+  if($("#fin")) $("#fin").onclick=()=>{const un=S.pick.filter(p=>p===null).length; if(S.mode==="exam"&&un){ask(un+" unanswered. Submit anyway?",mcqFinish);return} mcqFinish()};
+  app.querySelectorAll("[data-go]").forEach(d=>d.onclick=()=>{S.idx=+d.dataset.go;mcqRender()});
+}
+function mcqFinish(){
+  clearInterval(tick);timerEl.hidden=true;
+  const {b,perm,pick}=S,L="ABCDE",topics={};let got=0,pen=0;
+  b.questions.forEach((q,i)=>{const ok=pick[i]!==null&&perm[i][pick[i]]===q.answer; if(ok)got++; else if(pick[i]!==null&&b.negativeMarking)pen+=.5;
+    const t=topics[q.topic]=topics[q.topic]||[0,0];t[1]++;if(ok)t[0]++});
+  const net=got-pen, max=b.questions.length;
+  const h=load();h.push({date:Date.now(),title:b.title,mode:S.mode,got:net,max,topics});save(h);
+  const weak=Object.entries(topics).filter(([_,v])=>v[0]<v[1]);
+  app.innerHTML=`<div class="card"><div class="meta">${esc(b.title)} · ${S.mode==="exam"?"time used "+fmt(Date.now()-S.start):"practice"}</div>
+   <div class="score">${net} / ${max} <span style="font-size:18px;color:var(--mute)">(${Math.round(100*net/max)}%)</span></div>
+   ${weak.length?`<p><b>Revise first:</b> ${weak.map(([k,v])=>`${esc(k)} (${v[0]}/${v[1]})`).join(" · ")}</p>`:"<p>Clean sweep.</p>"}
+   <div class="row"><button class="primary" id="home">Back to papers</button><button id="retry">Retake</button></div></div>`+
+   b.questions.map((q,i)=>{const p=pick[i],ok=p!==null&&perm[i][p]===q.answer,correctPos=perm[i].indexOf(q.answer);
+     return `<div class="card"><div class="meta">Q${i+1} · ${esc(q.topic)} · <b style="color:var(--${ok?"ok":"bad"})">${ok?"correct":(p===null?"not answered":"wrong")}</b></div>
+     <div class="stem" style="line-height:1.5">${esc(q.stem)}</div>
+     <p>Your answer: <b>${p===null?"—":L[p]+". "+esc(q.options[perm[i][p]])}</b><br>Correct: <b>${L[correctPos]}. ${esc(q.options[q.answer])}</b></p>
+     <div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: O&G slides ${esc(q.src)}</div></div>`}).join("");
+  $("#home").onclick=home;$("#retry").onclick=()=>mcqStart(banks.indexOf(b),S.mode);scrollTo(0,0);
+}
+
+// ---------- essays: write, then self-mark against a point-by-point model answer ----------
+const EKEY="mbIII-resit-essay-drafts-v1";
+const eload=()=>{try{return JSON.parse(localStorage.getItem(EKEY))||{}}catch(e){return{}}};
+const esave=o=>{try{localStorage.setItem(EKEY,JSON.stringify(o))}catch(e){}};
+function essayStart(bi,k){
+  const b=banks[bi],e=b.essays[k],id=b.id+":"+k;
+  S={essay:true,b,e,id,start:Date.now()};
+  app.innerHTML=`<div class="card"><div class="meta">${esc(e.kind)} · ${esc(e.src)}</div>
+   <div class="stem" style="line-height:1.5"><b>${esc(e.prompt)}</b></div>
+   <p class="meta">Write it as you would in the exam hall: headings first, then points. Allow ${e.marks>=20?"30":"12"} minutes.</p>
+   <textarea id="ans" rows="18" style="width:100%;font:inherit;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)" placeholder="Write your answer here (auto-saved in this browser)…">${esc(eload()[id]||"")}</textarea>
+   <div class="row"><button class="primary" id="mark">Done — show model answer and mark</button><button id="home">Back</button></div></div>`;
+  const t=$("#ans");t.oninput=()=>{const d=eload();d[id]=t.value;esave(d)};
+  $("#home").onclick=home;$("#mark").onclick=()=>essayMark(t.value);
+}
+function essayMark(written){
+  const {b,e,id}=S,total=e.sections.reduce((n,s)=>n+s.pts.length,0);
+  app.innerHTML=`<div class="card"><div class="meta">${esc(e.kind)} · self-marking</div>
+   <div class="stem" style="line-height:1.5"><b>${esc(e.prompt)}</b></div>
+   <div class="score" id="sc"></div><p class="meta">Tick each point you actually covered. Be strict: a point counts only if you wrote it, not if you merely knew it.</p>
+   <div class="explain"><b>Examiner's tip:</b> ${esc(e.tip)}</div></div>
+   <div class="card"><details><summary>Your answer</summary><pre style="white-space:pre-wrap;font:inherit">${esc(written||"(nothing written)")}</pre></details></div>`+
+   e.sections.map((s,si)=>`<div class="card"><h3 style="margin-top:0">${esc(s.h)}</h3>${s.pts.map((p,pi)=>`<label style="display:flex;gap:10px;margin:8px 0;cursor:pointer"><input type="checkbox" data-s="${si}" data-p="${pi}" style="margin-top:6px"><span>${esc(p.t)}${p.x?` <span class="meta">(beyond the slides)</span>`:""}</span></label>`).join("")}</div>`).join("")+
+   `<div class="card"><div class="row"><button class="primary" id="save">Save score</button><button id="home">Back to papers</button></div></div>`;
+  const upd=()=>{const boxes=[...app.querySelectorAll("input[type=checkbox]")],n=boxes.filter(c=>c.checked).length;
+    $("#sc").innerHTML=`${(n/total*e.marks).toFixed(1)} / ${e.marks} <span style="font-size:18px;color:var(--mute)">(${n}/${total} points)</span>`;return n};
+  app.querySelectorAll("input[type=checkbox]").forEach(c=>c.onchange=upd);upd();
+  $("#home").onclick=home;
+  $("#save").onclick=()=>{const topics={};e.sections.forEach((s,si)=>{const t=topics[e.topic+" · "+s.h]=[0,s.pts.length];s.pts.forEach((_,pi)=>{if(app.querySelector(`[data-s="${si}"][data-p="${pi}"]`).checked)t[0]++})});
+    const n=upd(),h=load();h.push({date:Date.now(),title:b.title+" — "+e.kind,mode:"essay",got:+(n/total*e.marks).toFixed(1),max:e.marks,topics});save(h);home()};
+  scrollTo(0,0);
+}
+
+// ---------- flashcards ----------
+const CKEY="mbIII-resit-cards-v1";
+const cload=()=>{try{return JSON.parse(localStorage.getItem(CKEY))||{}}catch(e){return{}}};
+const csave=o=>{try{localStorage.setItem(CKEY,JSON.stringify(o))}catch(e){}};
+const cid=(b,i)=>b.id+":"+i;
+function cardsMastered(b){const m=cload();return b.cards.filter((_,i)=>(m[cid(b,i)]||{}).streak>=2).length+"/"+b.cards.length}
+function startCards(bi,all){
+  const b=banks[bi],m=cload();
+  let order=b.cards.map((_,i)=>i).sort(()=>Math.random()-.5);
+  if(!all) order.sort((x,y)=>((m[cid(b,x)]||{}).streak||0)-((m[cid(b,y)]||{}).streak||0));
+  S={cards:true,b,bi,all,queue:order,pos:0,missed:[],got:0,revealed:false,typed:""};
+  renderCard();
+}
+function renderCard(){
+  const {b,queue,pos}=S;
+  if(pos>=queue.length) return cardsDone();
+  const c=b.cards[queue[pos]];
+  app.innerHTML=`<div class="card"><div class="meta">Card ${pos+1} of ${queue.length} · ${esc(c.topic)}</div>
+   <div class="stem" style="line-height:1.5">${esc(c.q)}</div>
+   ${S.revealed?`<div class="explain" style="margin-top:14px"><b>Answer:</b> ${esc(c.a)}</div>
+     ${S.typed?`<div class="src">You wrote: ${esc(S.typed)}</div>`:""}
+     <div class="explain"><b>Connect it:</b> ${esc(c.connect)}</div>
+     <div class="src">Source: ${esc(c.src)}${c.extra?" · <b>beyond the slides</b>":""}</div>
+     <div class="row"><button class="primary" id="got">I had it all</button><button id="miss">I missed something</button></div>`
+   :`<textarea id="typed" rows="3" placeholder="Say or type your answer from memory first…" style="width:100%;margin-top:14px;font:inherit;padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)">${esc(S.typed)}</textarea>
+     <div class="row"><button class="primary" id="rev">Reveal answer</button></div>`}
+   <div class="bar" style="margin-top:16px"><i style="width:${Math.round(100*pos/queue.length)}%"></i></div></div>`;
+  if(S.revealed){$("#got").onclick=()=>rate(true);$("#miss").onclick=()=>rate(false)}
+  else{const t=$("#typed");t.focus();t.oninput=()=>S.typed=t.value;$("#rev").onclick=()=>{S.typed=t.value;S.revealed=true;renderCard()}}
+}
+function rate(ok){
+  const {b,queue,pos}=S,i=queue[pos],m=cload(),k=cid(b,i),r=m[k]||{streak:0,seen:0};
+  r.seen++; r.streak=ok?r.streak+1:0; m[k]=r; csave(m);
+  if(ok)S.got++; else S.missed.push(i);
+  S.pos++;S.revealed=false;S.typed="";renderCard();
+}
+function cardsDone(){
+  const {b,queue,missed,got}=S, byTopic={};
+  missed.forEach(i=>{const t=b.cards[i].topic;byTopic[t]=(byTopic[t]||0)+1});
+  const pct=Math.round(100*got/queue.length);
+  app.innerHTML=`<div class="card"><div class="meta">${esc(b.title)}</div>
+   <div class="score">${got} / ${queue.length} <span style="font-size:18px;color:var(--mute)">(${pct}%)</span></div>
+   <p>${missed.length?`<b>Missed:</b> ${Object.entries(byTopic).map(([k,v])=>`${esc(k)} (${v})`).join(" · ")}`:"Every card recalled. Come back tomorrow to confirm it stuck."}</p>
+   <p class="meta">A card counts as mastered after two clean recalls in a row, so re-test it on a different day.</p>
+   <div class="row">${missed.length?`<button class="primary" id="drill">Drill the ${missed.length} missed</button>`:""}<button id="home">Back to papers</button></div></div>`;
+  $("#home").onclick=home;
+  if($("#drill")) $("#drill").onclick=()=>{S={...S,queue:missed.slice().sort(()=>Math.random()-.5),pos:0,missed:[],got:0,revealed:false,typed:""};renderCard()};
+}
+
+home();
+})();
+
+</script>
+<footer style="max-width:760px;margin:0 auto;padding:8px 16px 28px;color:var(--mute);font-size:13px">Revision practice for MBBS III O&amp;G, written from UCH lecture slides. Not examiner-verified; check answers against your lectures and textbooks. Scores and drafts are saved only in this browser.</footer></body></html>
