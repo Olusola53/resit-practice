@@ -57,6 +57,124 @@ table{display:block;overflow-x:auto}
 <header><h1>MBBS III Resit · Exam Practice</h1><div id="timer" hidden></div></header>
 <main id="app"></main>
 <script>
+// O&G · Flashcards · Antepartum haemorrhage.
+// The supplied slide deck has NO APH lecture; standard teaching shaped by past papers. src names a slide page only where the deck mentions the point.
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "og-cards-aph",
+  subject: "O&G",
+  group: "Antepartum haemorrhage",
+  type: "cards",
+  title: "O&G Flashcards · Antepartum haemorrhage",
+  cards: [
+    { topic: "Basics", src: "p.497, 170",
+      q: "Define antepartum haemorrhage (APH) and give its incidence.",
+      a: "Bleeding from the genital tract after the age of viability (28 weeks in Nigeria; 24 weeks in the UK) and before delivery of the baby. Complicates about 3–5% of pregnancies.",
+      connect: "Before viability it is abortion; after delivery it is PPH. Vaginal bleeding is the first of the danger signs of pregnancy on your ANC slide (p.143)." },
+    { topic: "Basics", src: "Standard teaching",
+      q: "List the causes of antepartum haemorrhage (past paper: 'Causes of APH').",
+      a: "Placenta praevia (about a third), abruptio placentae (about a third), and the rest unclassified or 'incidental': cervicitis, ectropion, cervical polyp or carcinoma, vaginal and vulval lesions or trauma, genital infection, 'show' of early labour, vasa praevia, uterine rupture, marginal (circumsinusoidal) sinus bleed.",
+      connect: "'Incidental' (local) APH is a diagnosis of exclusion: scan out praevia, then examine the cervix and vagina with a speculum. Slide p.170 lists ruptured uterus, abruptio and praevia as bleeding danger signs.", extra: true },
+    { topic: "Basics", src: "Standard teaching",
+      q: "What are the two types of APH, and what is the first rule of management of any APH?",
+      a: "Placenta praevia (bleeding from a placenta in the lower segment) and abruptio placentae (accidental haemorrhage; premature separation of a normally sited placenta). First rule: do NOT do a vaginal (digital) examination until the placental site is known.",
+      connect: "Past short note: 'Two types of antepartum haemorrhage'. The rule protects the woman from torrential bleeding if the finger disturbs a low placenta.", extra: true },
+    { topic: "Placenta praevia", src: "Standard teaching",
+      q: "Define placenta praevia and list the classification.",
+      a: "Implantation of the placenta wholly or partly in the lower uterine segment. Type I: placenta in the lower segment, not reaching the os (low-lying). Type II: reaches the edge of the os (marginal). Type III: partially covers the os (incomplete central). Type IV: completely covers the os (complete central). Types III and IV are major.",
+      connect: "Past MCQ: 'Type III is major placenta praevia' (true). Type decides the route of delivery." },
+    { topic: "Placenta praevia", src: "Standard teaching",
+      q: "What are the risk factors for placenta praevia?",
+      a: "Previous caesarean section (risk rises with the number), previous placenta praevia, multiparity (grand multipara: your slides p.303 and p.1183 link grand multiparity with praevia), advanced maternal age, multiple pregnancy, previous uterine surgery or curettage, smoking, IVF.",
+      connect: "Scar plus praevia is the dangerous combination because of placenta accreta.", extra: true },
+    { topic: "Placenta praevia", src: "Standard teaching",
+      q: "Describe the clinical features of placenta praevia.",
+      a: "Painless, recurrent, bright red 'causeless' bleeding, typically at 28–34 weeks (often a warning haemorrhage first, but not always). Soft non-tender uterus, malpresentation (breech, transverse, oblique) and a high floating head, normal fetal heart, shock proportional to the visible loss.",
+      connect: "Past MCQ: 'there is always a warning bleed' is false and 'it causes abdominal pain' is false.", extra: true },
+    { topic: "Placenta praevia", src: "Standard teaching",
+      q: "How is placenta praevia diagnosed?",
+      a: "Ultrasound: transabdominal first; transvaginal is more accurate and safe. MRI if accreta is suspected (previous scar). Never by digital examination. A routine 20-week scan often finds it, but most low placentas move up as the lower segment grows, so rescan at about 32 weeks.",
+      connect: "Past essay: a woman with type III praevia found on routine scan. The answer starts with the rescan, not the caesarean.", extra: true },
+    { topic: "Placenta praevia", src: "Standard teaching",
+      q: "Outline the management of placenta praevia (past paper: 'Management of placenta praevia').",
+      a: "Assess and resuscitate (ABC, two IV lines, FBC, group and crossmatch, clotting, anti-D if Rh-negative). Admit. If mother stable and fetus preterm: expectant management with steroids (24–34 weeks) and correction of anaemia, then CS at 37–38 weeks (earlier if major with bleeding). Emergency CS for heavy bleeding, fetal distress or labour. Minor types clear of the os may deliver vaginally.",
+      connect: "Delivery needs a senior obstetrician, anaesthetist, blood and neonatal care. Anticipate PPH: the lower segment contracts poorly.", extra: true },
+    { topic: "Placenta praevia", src: "Standard teaching",
+      q: "What are the maternal and fetal complications of placenta praevia?",
+      a: "Maternal: antepartum, intrapartum and postpartum haemorrhage, shock, anaemia, placenta accreta (with a scar), hysterectomy, infection, thromboembolism, death. Fetal: preterm birth, malpresentation, IUGR, cord prolapse, vasa praevia, anaemia and perinatal death.",
+      connect: "Most perinatal deaths are from prematurity. Hence the push to reach 37 weeks safely.", extra: true },
+    { topic: "Abruptio placentae", src: "Standard teaching",
+      q: "Define abruptio placentae (accidental haemorrhage) and its types.",
+      a: "Premature separation of a normally situated placenta after the age of viability and before delivery of the fetus. Types: revealed (blood escapes through the cervix), concealed (retroplacental clot, no external bleeding) and mixed. Incidence about 0.5–1% of pregnancies.",
+      connect: "Concealed type is the most dangerous because the visible loss hides the real one.", extra: true },
+    { topic: "Abruptio placentae", src: "p.303, 1000, 1183, 1278",
+      q: "List the risk factors for abruptio placentae (past paper: 'Risk factors of accidental haemorrhage').",
+      a: "Hypertension and pre-eclampsia (commonest association), previous abruption, trauma (RTA, blows, domestic violence), sudden decompression (ruptured membranes with polyhydramnios, delivery of first twin), multiparity and grand multiparity, advanced age, anaemia and folate deficiency, smoking, cocaine, short cord, external cephalic version, thrombophilia, PROM, low socioeconomic status.",
+      connect: "Your slides name abruptio in grand multiparity (p.303, 1183), in the effects of anaemia (p.1000) and as a sequel of PROM (p.1278)." },
+    { topic: "Abruptio placentae", src: "Standard teaching",
+      q: "Describe the clinical features of abruptio placentae.",
+      a: "Constant severe abdominal pain, dark bleeding (revealed) or none (concealed), a tense, hard, tender 'woody' uterus that may be larger than dates, difficulty palpating fetal parts, fetal distress or absent fetal heart, and shock out of proportion to the visible loss. Features of pre-eclampsia are often present. Oliguria and bleeding elsewhere suggest coagulopathy.",
+      connect: "Compare with praevia: painful, hard, shocked out of proportion, fetus often compromised.", extra: true },
+    { topic: "Abruptio placentae", src: "Standard teaching",
+      q: "How is abruption diagnosed and what investigations are done?",
+      a: "Mainly clinical (a past MCQ: 'usual method of diagnosing placental abruption: clinical'). Ultrasound may be normal. FBC, group and crossmatch, clotting profile (fibrinogen, PT, APTT, platelets, FDPs or D-dimer), urea and electrolytes, liver function, urine output. Kleihauer test to quantify fetomaternal haemorrhage for anti-D. CTG for fetal state.",
+      connect: "Clotting results guide transfusion of FFP, platelets and cryoprecipitate.", extra: true },
+    { topic: "Abruptio placentae", src: "Standard teaching",
+      q: "Outline the management of abruptio placentae.",
+      a: "Resuscitate: two large IV lines, blood and fluids, catheter with hourly urine output (aim above 30 ml/h), oxygen, analgesia. Correct coagulopathy (FFP, cryoprecipitate, platelets). Live fetus in distress or mother unstable: emergency CS. Fetal death and mother stable: ARM with oxytocin for vaginal delivery. Prevent PPH (active third stage, oxytocin infusion). Anti-D if Rh-negative. Be ready for hysterectomy if bleeding persists.",
+      connect: "Past question: 'Treatment of antepartum haemorrhage'. The principle is to treat shock and clotting first and deliver once she is stable.", extra: true },
+    { topic: "Abruptio placentae", src: "Standard teaching",
+      q: "What is a Couvelaire uterus?",
+      a: "Extravasation of blood into the myometrium (sometimes to the serosa) in severe concealed abruption (uterine apoplexy). The muscle contracts poorly, so atonic PPH is likely; usually responds to oxytocics and massage, but may need compression sutures or hysterectomy.",
+      connect: "Explains why every abruption needs PPH prevention and a transfusion plan.", extra: true },
+    { topic: "Abruptio placentae", src: "p.1425, 1432–1435",
+      q: "List the maternal and fetal complications of accidental haemorrhage (past paper: 'Maternal and fetal complications').",
+      a: "Maternal: haemorrhagic shock, coagulopathy/DIC, acute renal failure (acute tubular or cortical necrosis), PPH (Couvelaire uterus), Sheehan syndrome, sepsis, anaemia, amniotic fluid embolism, maternal death. Fetal: hypoxia, IUGR, prematurity, intrauterine death, perinatal mortality (about 30–50% in severe cases).",
+      connect: "Your slides list abruption as a cause of DIC (p.1432) and describe the lab picture (low platelets, prolonged PT and APTT, raised D-dimer; treatment with FFP, platelets and treating the cause, p.1434–1435). Sheehan syndrome is on p.1425 as a consequence of PPH." },
+    { topic: "Abruptio placentae", src: "p.1318, 1338",
+      q: "A woman has an abruption at 37 weeks and a stillbirth. What breast problems can she have, and how are they prevented?",
+      a: "Engorgement, mastitis and breast abscess. Prevent or treat with firm breast support or binding, no nipple stimulation, ice packs, mild analgesics (aspirin, ibuprofen) and bromocriptine for 10–14 days.",
+      connect: "This is a case study on your lactation slides (p.1318, answered on p.1338), so an examiner can join obstetric emergency to lactation." },
+    { topic: "Differential diagnosis", src: "Standard teaching",
+      q: "Differentiate placenta praevia from abruptio placentae (past paper: 'Differential diagnosis between placenta previa and accidental haemorrhage').",
+      a: "Pain: praevia painless; abruption constant, severe. Bleeding: praevia bright red, recurrent, equal to shock; abruption dark, may be concealed, shock out of proportion. Uterus: praevia soft, relaxed; abruption hard, tender, woody, larger than dates. Presentation: praevia malpresentation, high head; abruption normal lie. Fetal heart: praevia normal; abruption distressed or absent. Associations: praevia with scar and multiparity; abruption with pre-eclampsia and trauma.",
+      connect: "This table is also a short MCQ. Learn it as pain, colour, uterus, lie, fetal heart.", extra: true },
+    { topic: "Other causes", src: "Standard teaching",
+      q: "What is vasa praevia and how does it present?",
+      a: "Fetal vessels running through the membranes across or near the internal os, not protected by cord or placenta (velamentous cord insertion, succenturiate or bilobed placenta, low-lying placenta, IVF). Presents with painless fresh bleeding at rupture of the membranes with fetal bradycardia or a sinusoidal trace; the blood lost is fetal.",
+      connect: "Past T/F stem: 'vasa praevia always results in maternal mortality' is false; the loss is fetal. Apt test confirms fetal blood.", extra: true },
+    { topic: "Other causes", src: "Standard teaching",
+      q: "How is vasa praevia diagnosed and managed?",
+      a: "Antenatal: transvaginal colour Doppler. In labour: Apt (alkali denaturation) test on blood. If diagnosed antenatally: steroids, admission around 30–32 weeks and elective CS at 34–36 weeks. If bleeding with fetal compromise: immediate emergency CS and neonatal resuscitation with blood.",
+      connect: "Rapid delivery is the only treatment. A fetus has only about 250 ml of blood, so a small loss is fatal.", extra: true },
+    { topic: "Other causes", src: "p.170",
+      q: "How can uterine rupture present with antepartum bleeding?",
+      a: "With sudden severe pain, vaginal bleeding, loss of fetal heart, a change in uterine shape with fetal parts palpable under the skin, and shock. Risk factors: previous scar, obstructed labour, grand multiparity, oxytocin misuse.",
+      connect: "Ruptured uterus is listed with abruptio and praevia among bleeding danger signs on your slide (p.170). Treat by resuscitation and laparotomy.", extra: true },
+    { topic: "Management", src: "Standard teaching",
+      q: "A woman presents with antepartum haemorrhage. How do you assess her?",
+      a: "Resuscitate first (airway, IV fluids, oxygen, call for help). History: gestation, amount, colour, pain, trauma, fetal movement, previous scars, hypertension. Examination: pulse, BP, pallor, abdominal tone, tenderness, lie and presentation, fetal heart. Bloods: FBC, group and crossmatch, clotting. Scan for placental site. No digital vaginal examination before the scan; speculum examination afterwards to exclude local causes.",
+      connect: "In a primary facility: IV line, keep warm, refer with a health worker. All APH is treated as dangerous because the visible loss can understate the true loss.", extra: true },
+    { topic: "Management", src: "Standard teaching",
+      q: "What is the role of anti-D, corticosteroids and Kleihauer testing in APH?",
+      a: "Anti-D: give to every Rh-negative woman with APH (within 72 hours). Kleihauer: counts fetal cells in maternal blood to calculate the anti-D dose in larger fetomaternal haemorrhage. Corticosteroids (betamethasone or dexamethasone) between 24 and 34 weeks to mature the fetal lungs if early delivery is likely.",
+      connect: "Same anti-D principle as in abortion (p.514) and ectopic pregnancy.", extra: true },
+    { topic: "Prevention", src: "p.143",
+      q: "How can APH be prevented or its outcome improved?",
+      a: "Early booking and ANC with scan, treating hypertension and anaemia, avoiding smoking and cocaine, promoting family planning (limits grand multiparity), safe delivery practices to avoid previous scars, and educating women on danger signs (vaginal bleeding is the first on your slide p.143) so they report immediately. Deliver in a unit with blood and a theatre.",
+      connect: "Preventing delay in reaching hospital saves lives more than any single drug.", extra: true },
+    { topic: "Cases", src: "Standard teaching",
+      q: "A 31-year-old G3P2 with a previous caesarean section has painless bleeding at 34 weeks. The scan shows an anterior placenta praevia. What is your concern?",
+      a: "Placenta accreta (increta or percreta), because praevia over a uterine scar. Plan delivery in a tertiary unit by a senior team with blood, cell salvage and possible hysterectomy; MRI or Doppler to assess invasion; counsel about hysterectomy.",
+      connect: "The more caesareans, the higher the risk of both praevia and accreta.", extra: true },
+    { topic: "Cases", src: "Standard teaching",
+      q: "A hypertensive woman at 36 weeks has severe abdominal pain, a hard tender uterus and absent fetal heart. BP is 90/60, pulse 130. What is your management?",
+      a: "Concealed abruption with fetal death and shock. Resuscitate with two IV lines, blood and fluids, catheter; check clotting and correct it; treat the hypertension if she recovers; ARM and oxytocin for vaginal delivery when stable; active management of third stage; monitor for renal failure and PPH.",
+      connect: "Blood pressure may fall because of shock, hiding pre-eclampsia. Watch urine output.", extra: true }
+  ]
+}]);
+
+</script>
+<script>
 // O&G · Flashcards · Ectopic pregnancy.
 // The supplied slide deck has NO ectopic lecture; cards are standard teaching shaped by the past-paper questions.
 // src names a slide page only where the deck mentions the point. extra:true is used for items the deck never touches.
@@ -461,6 +579,88 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// O&G · Essays · Antepartum haemorrhage. Prompt 1 is a real past question (2000.42 and later repeats).
+// The supplied slide deck has no APH lecture; points are standard teaching. x:true = beyond what a typical lecture covers.
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "og-essay-aph",
+  subject: "O&G",
+  group: "Antepartum haemorrhage",
+  type: "essay",
+  title: "O&G Essays · Antepartum haemorrhage (2 questions)",
+  essays: [
+    {
+      kind: "Long essay (20 marks)", marks: 20, topic: "Antepartum haemorrhage · placenta praevia", src: "past paper 2000.42, repeated later · standard teaching",
+      prompt: "A 26-year-old gravida 4 para 3 lawyer, whose last menstrual period was 15 June 1999, was discovered on routine ultrasonography to have a type 3 placenta praevia. Discuss the management of this patient.",
+      tip: "Read the stem like a patient: she is asymptomatic, the diagnosis came from a routine scan, and she is G4P3 (ask about previous scars). Work out her gestation first, because the plan depends on it (before 32 weeks she needs a repeat scan; later she needs admission planning). Structure: confirm, counsel, antenatal care, bleeding plan, delivery, postpartum.",
+      sections: [
+        { h: "Introduction and assessment", pts: [
+          { t: "Placenta praevia: placenta implanted wholly or partly in the lower uterine segment; type III is partial (incomplete central), a major type." },
+          { t: "Calculate gestational age from the LMP (EDD) and confirm with the scan; management depends on gestation." },
+          { t: "Take a history: any bleeding, pain, fetal movements, previous caesarean sections or uterine surgery (accreta risk), previous APH or PPH, anaemia, malaria, sickle cell." },
+          { t: "Examine: pallor, BP, fundal height, lie and presentation (malpresentation is common), fetal heart. No digital vaginal examination." }
+        ]},
+        { h: "Counselling and antenatal care", pts: [
+          { t: "Explain the diagnosis, the risk of sudden severe bleeding and that many low placentas move upwards as the lower segment develops." },
+          { t: "Repeat the ultrasound at about 32 weeks (and later if still low); use transvaginal scan to confirm position." },
+          { t: "Advise: avoid sexual intercourse, strenuous activity and vaginal examinations; report any bleeding, pain or contractions immediately and go straight to hospital." },
+          { t: "Correct anaemia (haematinics, malaria prophylaxis, treat infections) and keep Hb above 10 g/dl; group and save, and identify blood donors." },
+          { t: "Plan where to deliver: a hospital with blood bank, theatre, anaesthetist and neonatal care; arrange transport and stay near the hospital late in pregnancy." },
+          { t: "Check Rhesus status and give anti-D if Rh-negative with any bleed." }
+        ]},
+        { h: "If she bleeds", pts: [
+          { t: "Admit; resuscitate (ABC, two large IV lines, fluids, oxygen); FBC, group and crossmatch, clotting profile." },
+          { t: "Monitor pulse, BP, blood loss and fetal heart (CTG); catheterise if shocked." },
+          { t: "Expectant management if the bleed is small, she is stable and the fetus preterm: bed rest, corticosteroids 24–34 weeks, correct anaemia, blood available; aim for 37–38 weeks." },
+          { t: "Emergency caesarean section for heavy continuing bleeding, maternal shock or fetal distress, regardless of gestation." }
+        ]},
+        { h: "Delivery", pts: [
+          { t: "Major type (III or IV): delivery by caesarean section; elective at 37–38 weeks (earlier if recurrent bleeding)." },
+          { t: "Senior obstetrician and anaesthetist present; blood crossmatched; paediatrician informed; consider regional or general anaesthesia by the situation." },
+          { t: "Be prepared for placenta accreta if there is a previous scar, and for atonic bleeding from the lower segment (oxytocin, ergometrine or carboprost, uterine massage, compression sutures, hysterectomy as last resort)." },
+          { t: "Minor types (placenta well clear of the os) may be allowed vaginal delivery with caution; the route is determined by the type, not by parity." }
+        ]},
+        { h: "Complications and puerperium", pts: [
+          { t: "Maternal: antepartum, intrapartum and postpartum haemorrhage, shock, anaemia, accreta, hysterectomy, infection, thromboembolism, death." },
+          { t: "Fetal: prematurity, malpresentation, IUGR, cord prolapse, vasa praevia, perinatal death." },
+          { t: "Postpartum: watch for PPH in the first 24 hours, give oxytocin and antibiotics, treat anaemia, offer family planning counselling (she is already G4P3) and advise on the next pregnancy (recurrence risk)." }
+        ]}
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Antepartum haemorrhage · abruptio placentae", src: "past papers og.320, og.365, og.375 · standard teaching",
+      prompt: "Discuss accidental haemorrhage (abruptio placentae): risk factors, diagnosis, complications and management.",
+      tip: "Four headings, one list under each, and a one-line definition at the top. A frequent mark-loser is writing 'DIC' without saying how you recognise and treat it, so name the clotting tests and the products you give. Also mention PPH prevention.",
+      sections: [
+        { h: "Definition and types", pts: [
+          { t: "Premature separation of a normally situated placenta after 28 weeks and before delivery of the fetus." },
+          { t: "Revealed, concealed and mixed; concealed carries the greatest danger because visible loss under-estimates the true loss." }
+        ]},
+        { h: "Risk factors", pts: [
+          { t: "Hypertension and pre-eclampsia (commonest), previous abruption, trauma, sudden decompression of the uterus (ruptured membranes with polyhydramnios, first twin delivery)." },
+          { t: "Multiparity and grand multiparity, advanced age, anaemia and folate deficiency, smoking, cocaine, PROM, short cord, thrombophilia." }
+        ]},
+        { h: "Diagnosis", pts: [
+          { t: "Clinical: constant severe pain, dark bleeding or none, hard tender woody uterus larger than dates, fetal distress or absent heart, shock out of proportion to visible loss." },
+          { t: "Investigations: FBC, group and crossmatch, clotting profile (fibrinogen low, PT and APTT prolonged, platelets low, raised FDPs or D-dimer), renal function; Kleihauer test for anti-D dose; ultrasound may be normal and does not exclude it." }
+        ]},
+        { h: "Complications", pts: [
+          { t: "Maternal: haemorrhagic shock, DIC, acute renal failure, PPH from Couvelaire uterus, Sheehan syndrome, sepsis, death." },
+          { t: "Fetal: hypoxia, prematurity, IUGR, intrauterine death, high perinatal mortality." }
+        ]},
+        { h: "Management", pts: [
+          { t: "Resuscitate: two large IV lines, blood and fluids, oxygen, catheter with hourly urine output; correct coagulopathy with FFP, cryoprecipitate and platelets." },
+          { t: "Live fetus and distressed or mother unstable: emergency caesarean section. Fetal death and mother stable: ARM with oxytocin for vaginal delivery." },
+          { t: "Prevent PPH: active management of the third stage, oxytocin infusion, early recourse to uterine compression sutures or hysterectomy." },
+          { t: "Anti-D if Rh-negative; lactation suppression if there is a stillbirth (binding, analgesics, bromocriptine for 10–14 days).", x: true },
+          { t: "Prevention: early booking, control of hypertension and anaemia, avoid smoking, counselling for recurrence in later pregnancies.", x: true }
+        ]}
+      ]
+    }
+  ]
+}]);
+
+</script>
+<script>
 // O&G · Essays · Ectopic pregnancy. Both prompts are real past questions.
 // The supplied slide deck has no ectopic lecture; points are standard teaching. x:true = also beyond what a typical lecture covers.
 window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
@@ -774,6 +974,97 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// O&G · Single-best-option MCQ · Antepartum haemorrhage.
+// The supplied slide deck has NO APH lecture. Content is standard teaching shaped by the past papers;
+// src names a slide page only where the deck mentions the point.
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "og-mcq-aph",
+  subject: "O&G",
+  group: "Antepartum haemorrhage",
+  type: "mcq",
+  title: "O&G MCQ · Antepartum haemorrhage (15 single best option)",
+  negativeMarking: false,
+  questions: [
+    { topic: "Basics", src: "p.497, 170",
+      stem: "In Nigeria, antepartum haemorrhage is defined as bleeding from the genital tract:",
+      options: ["Before 20 weeks of gestation", "After 28 weeks and before delivery of the baby", "During the first stage of labour only", "Within 24 hours after delivery", "After rupture of the membranes only"],
+      answer: 1,
+      explain: "It is bleeding after the age of viability (28 weeks in Nigeria, 24 weeks in the UK; slide p.497) and before the baby is delivered. Earlier bleeding is abortion; bleeding after delivery is PPH. The two big causes, placenta praevia and abruption, are listed with ruptured uterus as the bleeding danger signs in labour (p.170)." },
+    { topic: "Placenta praevia", src: "Standard teaching",
+      stem: "A multiparous woman at 32 weeks has sudden painless bright red vaginal bleeding. The uterus is soft and non-tender, the fetus lies transverse and the fetal heart is normal. The most likely diagnosis is:",
+      options: ["Placental abruption", "Placenta praevia", "Ruptured uterus", "Vasa praevia", "Cervical carcinoma"],
+      answer: 1,
+      explain: "Painless, recurrent, bright red, 'causeless' bleeding with a relaxed uterus, an abnormal lie or high presenting part, and a fetus that is not distressed is placenta praevia. The placenta in the lower segment prevents the head from engaging, so malpresentation is common. Shock is in proportion to the visible loss." },
+    { topic: "Placenta praevia", src: "Standard teaching",
+      stem: "In a woman with antepartum haemorrhage, which of the following must NOT be done until the placental site is known?",
+      options: ["Fetal heart rate monitoring", "Intravenous access", "Digital vaginal examination", "Blood group and crossmatch", "Abdominal palpation"],
+      answer: 2,
+      explain: "A finger in the cervix can disturb a low placenta and cause torrential haemorrhage. Exclude praevia by ultrasound first. A gentle speculum examination is allowed afterwards to look for local causes such as cervicitis, polyp or ectropion." },
+    { topic: "Placenta praevia", src: "Standard teaching",
+      stem: "Which of the following is NOT a typical feature of placenta praevia?",
+      options: ["Painless bleeding", "Malpresentation of the fetus", "Soft, non-tender uterus", "Hard, tender, woody uterus", "Normal fetal heart rate"],
+      answer: 3,
+      explain: "A hard, tender, woody uterus is abruption. This pairing (soft and painless versus hard and painful) is the bread-and-butter of the differential diagnosis between the two, a recurring past-paper question. Also remember that a 'warning haemorrhage' is common but not always present (a past T/F stem calls 'always' false)." },
+    { topic: "Placenta praevia", src: "Standard teaching",
+      stem: "In the commonly used classification of placenta praevia, which types are regarded as 'major'?",
+      options: ["Types I and II", "Types II and III", "Types III and IV", "Type IV only", "Type I only"],
+      answer: 2,
+      explain: "Type I (lateral/low-lying) and II (marginal) are minor; Type III (partial/incomplete central) and IV (complete central) are major. Past papers repeatedly ask 'Type III is a major placenta praevia' (true). The newer system simply calls it praevia if the placenta covers the internal os and low-lying if its edge is within 2 cm of it." },
+    { topic: "Placenta praevia", src: "Standard teaching",
+      stem: "In placenta praevia, the route of delivery is determined mainly by:",
+      options: ["Parity of the woman", "The type (position) of the placenta and the clinical state", "The age of the woman", "The weight of the fetus only", "The presence of a warning haemorrhage"],
+      answer: 1,
+      explain: "Major types (III, IV) need caesarean section; minor types where the placenta edge is well clear of the os may be allowed a vaginal delivery. So 'delivery is always by caesarean section in praevia' is false (a past T/F stem). Elective CS is usually at 37–38 weeks; emergency CS for heavy bleeding or fetal distress." },
+    { topic: "Placenta praevia", src: "Standard teaching",
+      stem: "A 26-year-old G4P3 has a routine scan at 20 weeks showing a type III placenta praevia. She has no bleeding. The most appropriate plan includes:",
+      options: ["Immediate delivery by caesarean section", "Repeat the scan at about 32 weeks, advise on danger signs, no intercourse or vaginal examination, and plan delivery at a hospital", "Digital examination to confirm the diagnosis", "Reassure that no follow-up is needed", "Induction of labour at 38 weeks"],
+      answer: 1,
+      explain: "From a past 'discuss the management' essay. Many low placentas migrate upwards as the lower segment grows, so rescan at 32–36 weeks. Meanwhile: correct anaemia, check for a previous caesarean scar (risk of accreta), explain danger signs, avoid intercourse, deliver in a unit with blood and theatre, and admit if she bleeds or lives far away." },
+    { topic: "Placenta praevia", src: "Standard teaching",
+      stem: "A woman with placenta praevia at 30 weeks has a small bleed that has stopped. She is stable and the fetus is well. The best management is:",
+      options: ["Immediate caesarean section", "Expectant management in hospital with antenatal corticosteroids, anti-D if Rh-negative and blood available", "Discharge home the same day", "Induction of labour", "Digital vaginal examination to assess the cervix"],
+      answer: 1,
+      explain: "Conservative (expectant) management aims to gain fetal maturity: admit, resuscitate if needed, correct anaemia, group and crossmatch, corticosteroids for lung maturity (24–34 weeks), anti-D for Rh-negative women, then CS at 37–38 weeks. Intervene earlier for heavy bleeding, fetal distress or labour." },
+    { topic: "Abruptio placentae", src: "p.1000, 1432",
+      stem: "Which of the following is the commonest identifiable association of placental abruption?",
+      options: ["Hypertensive disease of pregnancy (pre-eclampsia)", "Previous caesarean section", "Maternal diabetes mellitus", "Primigravid status", "Low-lying placenta"],
+      answer: 0,
+      explain: "Hypertension and pre-eclampsia are the leading associations. Others: trauma (blunt abdominal injury, domestic violence), sudden uterine decompression (rupture of membranes with polyhydramnios, delivery of the first twin), smoking, cocaine, previous abruption, multiparity and anaemia/folate deficiency (anaemia in pregnancy is listed with abruptio on the slides, p.1000), and PROM (p.1278). The slides link abruptio with grand multiparity (p.303, 1183)." },
+    { topic: "Abruptio placentae", src: "Standard teaching",
+      stem: "A woman at 35 weeks with pre-eclampsia has constant severe abdominal pain and scanty dark vaginal bleeding. The uterus is hard, tender and larger than dates, fetal heart sounds are absent and she is pale with a pulse of 120/min. The most likely diagnosis is:",
+      options: ["Placenta praevia", "Concealed placental abruption", "Vasa praevia", "Ruptured ectopic pregnancy", "Normal labour"],
+      answer: 1,
+      explain: "Pain, a woody uterus larger than dates (retroplacental clot), absent fetal heart and shock out of proportion to visible loss describe a concealed abruption. The blood hides behind the placenta, so the visible loss under-estimates the real one. Hypertension and the proteinuria of pre-eclampsia are the clue to the cause." },
+    { topic: "Abruptio placentae", src: "Standard teaching",
+      stem: "The usual method of diagnosing placental abruption is:",
+      options: ["Clinical diagnosis", "D-dimer level", "Kleihauer test", "Transabdominal ultrasound", "MRI of the pelvis"],
+      answer: 0,
+      explain: "A past-paper favourite. Abruption is a clinical diagnosis: ultrasound often looks normal (only a minority of cases show a retroplacental clot) so a normal scan does not exclude it. Kleihauer quantifies fetomaternal haemorrhage for anti-D dosing; D-dimer is not diagnostic." },
+    { topic: "Abruptio placentae", src: "p.1432–1435",
+      stem: "The coagulation failure that complicates severe abruption is best described as:",
+      options: ["Haemophilia A", "Disseminated intravascular coagulation (consumptive coagulopathy)", "Von Willebrand disease", "Vitamin K deficiency", "Idiopathic thrombocytopenic purpura"],
+      answer: 1,
+      explain: "Thromboplastin from the damaged placenta triggers DIC: fibrinogen and platelets fall, PT and APTT are prolonged and D-dimer or FDPs rise (slides p.1432–1435 list abruptio placentae among the causes). Treat the cause (deliver), replace with FFP, platelets and cryoprecipitate, and give blood. A past T/F stem 'abruption shortens clotting time' is false: it prolongs it." },
+    { topic: "Abruptio placentae", src: "Standard teaching",
+      stem: "A woman with a severe abruption has had an intrauterine fetal death. She is haemodynamically stable with no coagulopathy. The best management is:",
+      options: ["Immediate caesarean section regardless", "Resuscitation, correction of any clotting problem, and vaginal delivery after artificial rupture of membranes with oxytocin", "Await spontaneous labour for two weeks", "Hysterectomy", "Tocolysis"],
+      answer: 1,
+      explain: "When the fetus is dead and the mother stable, vaginal delivery is safest: ARM (shortens labour and reduces further placental separation) and oxytocin if needed, with blood and clotting products ready. CS is reserved for maternal instability, fetal distress in a live fetus or obstetric indications. Be ready for PPH from a Couvelaire uterus." },
+    { topic: "Abruptio placentae", src: "p.1338",
+      stem: "A woman with an abruption has an intrauterine death at 37 weeks and delivers a stillbirth. She is expected to have milk. Which is the most appropriate advice for the breasts (slide case study)?",
+      options: ["Encourage breastfeeding", "Breast binding or support, ice packs, analgesics, avoid nipple stimulation, and consider bromocriptine", "Express milk regularly", "No advice is needed", "Start oxytocin nasal spray"],
+      answer: 1,
+      explain: "From your lactation lecture (p.1338), problems of suppression are engorgement, mastitis and breast abscess; manage with binding, no tactile stimulation, ice packs, mild analgesics (aspirin, ibuprofen) and bromocriptine for 10–14 days. The case (p.1318) is exactly an abruption with intrauterine death, so the examiner is linking two topics." },
+    { topic: "Other causes", src: "Standard teaching",
+      stem: "Ruptured membranes are followed immediately by painless fresh vaginal bleeding and fetal bradycardia. The most likely diagnosis is:",
+      options: ["Placenta praevia", "Abruptio placentae", "Vasa praevia", "Cervical ectropion", "Uterine rupture"],
+      answer: 2,
+      explain: "Fetal vessels running in the membranes across the internal os tear when the membranes rupture, so the blood lost is FETAL: the baby exsanguinates quickly while the mother is stable. Risk factors: velamentous cord insertion, succenturiate or bilobed placenta, low-lying placenta and IVF. A past stem 'vasa praevia always results in maternal mortality' is false: the risk is fetal. Diagnose by Apt test on the blood, treat by immediate CS." }
+  ]
+}]);
+
+</script>
+<script>
 // O&G · Single-best-option MCQ · Ectopic pregnancy.
 // NOTE: the supplied slide deck has NO ectopic lecture. Content is standard teaching (RCOG/Ten Teachers level),
 // aimed at the patterns in the past papers. src shows the slide page only where the deck actually mentions the point.
@@ -959,8 +1250,8 @@ const banks=[];
   const by={}; b.questions.forEach(q=>(by[q.group]=by[q.group]||[]).push(q));
   Object.entries(by).forEach(([g,qs])=>banks.push({...b,id:b.id+"::"+g,group:g,title:"O&G Fill-in-the-gap · "+g,questions:qs}));
 });
-const GROUPS=["Menstrual disorders & DUB","Amenorrhoea & PCOS","Abortion","Ectopic pregnancy","Infertility","Fibroids & endometriosis","Anaemia in pregnancy","Postpartum haemorrhage & oxytocics"];
-const COMING=["Antenatal care & booking","Labour & the partograph","Antepartum haemorrhage","Hypertension in pregnancy","Gynaecological cancers","Family planning","Genital infections & STIs","Prolapse & fistulae","Instruments & imaging (picture test)"];
+const GROUPS=["Menstrual disorders & DUB","Amenorrhoea & PCOS","Abortion","Ectopic pregnancy","Antepartum haemorrhage","Infertility","Fibroids & endometriosis","Anaemia in pregnancy","Postpartum haemorrhage & oxytocics"];
+const COMING=["Antenatal care & booking","Labour & the partograph","Hypertension in pregnancy","Gynaecological cancers","Family planning","Genital infections & STIs","Prolapse & fistulae","Instruments & imaging (picture test)"];
 let curGroup=null;
 const TYPE_LABEL={cards:"Flashcards",mcq:"Multiple choice",essay:"Essays",fillgap:"Fill in the gap"};
 const TYPE_ORDER=["cards","mcq","fillgap","essay"];
