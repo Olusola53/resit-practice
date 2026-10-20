@@ -48,6 +48,10 @@ table{display:block;overflow-x:auto}
   .dot{width:36px;height:36px}
 }
 .opt:disabled{opacity:1;color:var(--ink)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.tile{display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-align:left;padding:14px;min-height:76px;background:var(--bg)}
+.tile:hover,.tile:focus-visible{border-color:var(--accent)}
+.tile b{font-size:16px}
 
 </style>
 <header><h1>MBBS III Resit · Exam Practice</h1><div id="timer" hidden></div></header>
@@ -59,6 +63,7 @@ table{display:block;overflow-x:auto}
 window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
   id: "og-cards-ectopic",
   subject: "O&G",
+  group: "Ectopic pregnancy",
   type: "cards",
   title: "O&G Flashcards · Ectopic pregnancy",
   cards: [
@@ -184,6 +189,7 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
   id: "og-cards-endometriosis",
   subject: "O&G",
+  group: "Fibroids & endometriosis",
   type: "cards",
   title: "O&G Flashcards · Endometriosis",
   cards: [
@@ -306,6 +312,7 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
   id: "og-cards-infertility",
   subject: "O&G",
+  group: "Infertility",
   type: "cards",
   title: "O&G Flashcards · Infertility",
   cards: [
@@ -459,6 +466,7 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
   id: "og-essay-ectopic",
   subject: "O&G",
+  group: "Ectopic pregnancy",
   type: "essay",
   title: "O&G Essays · Ectopic pregnancy (2 past questions)",
   essays: [
@@ -544,6 +552,7 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
   id: "og-essay-infertility",
   subject: "O&G",
+  group: "Infertility",
   type: "essay",
   title: "O&G Essays · Infertility (2 scenarios)",
   essays: [
@@ -641,121 +650,121 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
   negativeMarking: false,
   questions: [
     {
-      topic: "Menstrual disorders", src: "p.92, 94",
+      topic: "Menstrual disorders", group: "Menstrual disorders & DUB", src: "p.92, 94",
       stem: "Normal menstrual blood loss is {1} to {2} ml. Menorrhagia is loss of more than {3} ml, with a normal or prolonged duration.",
       blanks: [["30"], ["80"], ["80"]],
       explain: "Menorrhagia is defined by VOLUME (>80 ml), not by days. If the cycle is also shortened (e.g. 8/20) it becomes polymenorrhagia, and the slide ties that to PID. Fibroids (submucous), polyps and adenomyosis are the uterine causes."
     },
     {
-      topic: "Menstrual disorders", src: "p.91, 95, 97, 98",
+      topic: "Menstrual disorders", group: "Menstrual disorders & DUB", src: "p.91, 95, 97, 98",
       stem: "A normal cycle is 21–35 days. A cycle shorter than {1} days with normal flow is polymenorrhoea; longer than {2} days is oligomenorrhoea. Irregular, acyclical, prolonged bleeding from uterine pathology is called {3}.",
       blanks: [["21"], ["35"], ["metrorrhagia"]],
       explain: "Poly/oligo describe the INTERVAL (frequency); menorrhagia describes the AMOUNT; metrorrhagia describes bleeding with NO cycle at all. Polymenorrhoea and oligomenorrhoea are usually ovulatory/hormonal; metrorrhagia points to a structural lesion, so think fibroid, polyp, cancer."
     },
     {
-      topic: "Dysfunctional uterine bleeding", src: "p.101, 109, 119",
+      topic: "Dysfunctional uterine bleeding", group: "Menstrual disorders & DUB", src: "p.101, 109, 119",
       stem: "Adolescent DUB is {1} in nature because of immaturity of the hypothalamo-pituitary-ovarian axis. Endometrial curettage is mandatory in women over {2} years and is avoided in {3} DUB.",
       blanks: [["anovulatory", "anovulation"], ["40", "forty"], ["adolescent", "adolescents"]],
       explain: "Both ends of reproductive life (adolescent and perimenopausal) are anovulatory. The difference is what you do: adolescent = reassure, hormones, avoid invasive tests; over 40 = biopsy first to exclude endometrial hyperplasia or cancer."
     },
     {
-      topic: "Dysfunctional uterine bleeding", src: "p.113, 114",
+      topic: "Dysfunctional uterine bleeding", group: "Menstrual disorders & DUB", src: "p.113, 114",
       stem: "To arrest acute DUB bleeding, norethisterone {1} mg is given three times daily for {2} days. Tranexamic acid, an antifibrinolytic, should be avoided in women with a history of {3}.",
       blanks: [["5"], ["10", "ten"], ["thromboembolism", "thrombosis", "venous thromboembolism", "vte", "dvt", "thromboembolic disease"]],
       explain: "Norethisterone doses by purpose: stop bleeding 5 mg tds x10 days; anovulatory DUB days 15–25; ovulatory DUB days 5–25. Tranexamic acid works by blocking fibrinolysis, so the danger is clotting, which is why previous VTE rules it out."
     },
     {
-      topic: "Abortion", src: "p.497, 498",
+      topic: "Abortion", group: "Abortion", src: "p.497, 498",
       stem: "In Nigeria the age of viability is {1} weeks, corresponding to a weight of about 1,000 g. The WHO defines abortion as expulsion of a fetus weighing less than {2} g.",
       blanks: [["28", "twenty eight", "twenty-eight"], ["500", "five hundred"]],
       explain: "Viability is the cut-off between abortion and preterm birth. Nigeria 28 weeks, USA 24 weeks, WHO 20–24 weeks. The same 28-week cut-off is used for parity: in 'para x+y', x counts deliveries after 28 weeks and y counts losses before it."
     },
     {
-      topic: "Abortion", src: "p.500, 503, 504",
+      topic: "Abortion", group: "Abortion", src: "p.500, 503, 504",
       stem: "Spontaneous abortion complicates about {1}% of clinical pregnancies, and 80% occur before {2} weeks. In first-trimester losses about 50–60% of fetuses have chromosomal abnormalities, and the most common type is autosomal {3}.",
       blanks: [["15", "fifteen"], ["12", "twelve"], ["trisomy", "trisomies"]],
       explain: "Early losses are mostly the fetus's fault (chromosomes); later losses are mostly the mother's (cervical incompetence, uterine anomalies, infection). Chromosomal causes fall from ~50% in the first trimester to 20–30% in the second and 5–10% in the third."
     },
     {
-      topic: "Abortion", src: "p.509, 511",
+      topic: "Abortion", group: "Abortion", src: "p.509, 511",
       stem: "In threatened abortion the cervix remains {1}. It becomes inevitable abortion when there is increasing bleeding, abdominal cramps radiating to the back, and {2} of the cervix.",
       blanks: [["closed", "shut"], ["dilatation", "dilation", "dilatation of the cervix", "opening"]],
       explain: "The cervical os is the dividing line. Closed + viable fetal echo = threatened (about half go on to abort). Dilated = inevitable. Dilated with some tissue passed = incomplete. Always rule out ectopic pregnancy first."
     },
     {
-      topic: "Abortion", src: "p.514, 515, 520",
+      topic: "Abortion", group: "Abortion", src: "p.514, 515, 520",
       stem: "Incomplete abortion is best evacuated by {1} (MVA) using a {2} syringe. {3} gammaglobulin is given to Rh(D)-negative women.",
       blanks: [["manual vacuum aspiration", "mva", "vacuum aspiration"], ["karman", "karmans", "karman's"], ["anti-d", "anti d", "antid", "anti-d immunoglobulin"]],
       explain: "MVA is preferred because it carries fewer post-evacuation complications, is cheaper (reusable equipment) and can be done in small clinics. Dilatation and curettage is 'not recommended'. Rhesus-negative = anti-D, as in every bleeding event in pregnancy."
     },
     {
-      topic: "Abortion", src: "p.522, 524",
+      topic: "Abortion", group: "Abortion", src: "p.522, 524",
       stem: "Septic abortion usually follows {1} abortion. A septic uterus is soft and easier to {2}, so antibiotics are given for at least {3} hours before evacuation.",
       blanks: [["incomplete"], ["perforate", "perforation"], ["6", "six"]],
       explain: "Septic = incomplete abortion plus infection (fever, rigors, odorous discharge). Order of work: resuscitate, triple-regimen antibiotics covering aerobes and anaerobes, oxytocics, then evacuate. Tetanus prophylaxis and contraceptive counselling follow. Evacuating a septic uterus too early risks bacteraemia and perforation."
     },
     {
-      topic: "Abortion", src: "p.529, 531, 532",
+      topic: "Abortion", group: "Abortion", src: "p.529, 531, 532",
       stem: "Missed abortion is retention of a dead conceptus behind a {1} cervical os. {2} is more commonly associated with it than with other types of abortion. Up to 12 weeks use MVA; beyond 12 weeks induce with {3} followed by oxytocin.",
       blanks: [["closed", "shut"], ["coagulopathy", "coagulation failure", "coagulation defect", "dic", "disseminated intravascular coagulation"], ["prostaglandins", "prostaglandin", "misoprostol"]],
       explain: "A dead fetus held for weeks releases thromboplastin, so check clotting time and platelets BEFORE evacuating. Symptoms of pregnancy regress, the uterus is smaller than dates, and the pregnancy test turns negative. A blighted ovum is a missed abortion with an empty gestational sac."
     },
     {
-      topic: "Abortion", src: "p.533, 558, 562",
+      topic: "Abortion", group: "Abortion", src: "p.533, 558, 562",
       stem: "Recurrent abortion is {1} or more consecutive losses before viability. The most common cause in sub-Saharan Africa is cervical {2}, treated by cerclage (McDonald or {3} suture) between 14 and 18 weeks.",
       blanks: [["3", "three"], ["incompetence", "incompetent"], ["shirodkar"]],
       explain: "Cervical incompetence = painless dilatation with recurrent MID-trimester losses (membranes rupture painlessly). Compare uterine anomalies and fibroids, which also cause second-trimester losses, and antiphospholipid syndrome (treated with low-dose aspirin plus heparin). The cerclage suture is removed at 38 weeks."
     },
     {
-      topic: "Amenorrhoea", src: "p.574, 575",
+      topic: "Amenorrhoea", group: "Amenorrhoea & PCOS", src: "p.574, 575",
       stem: "Primary amenorrhoea is no menses by age {1} years without secondary sexual characteristics, or by age {2} years with them. Secondary amenorrhoea is cessation of menses for more than {3} months in a woman who previously menstruated.",
       blanks: [["14", "fourteen"], ["16", "sixteen"], ["6", "six"]],
       explain: "Always exclude pregnancy first in any secondary amenorrhoea. Physiological amenorrhoea: pre-puberty, pregnancy, lactation, menopause. Secondary amenorrhoea can also be defined as the equivalent of 3 cycles in a woman with oligomenorrhoea."
     },
     {
-      topic: "Amenorrhoea", src: "p.578, 592, 594",
+      topic: "Amenorrhoea", group: "Amenorrhoea & PCOS", src: "p.578, 592, 594",
       stem: "In PCOS the LH:FSH ratio is raised, greater than {1}:1. Hyperprolactinaemia is treated with {2} agonists such as bromocriptine or cabergoline. In androgen insensitivity the uterus is absent but circulating {3} is normal.",
       blanks: [["2", "3", "2-3", "two", "three"], ["dopamine", "dopaminergic"], ["testosterone"]],
       explain: "Pattern for the hormone question: high FSH/LH = ovarian failure (Turner, premature failure, resistant ovary); low FSH/LH = pituitary/hypothalamic failure; high LH:FSH = PCOS; high prolactin = adenoma (get MRI/CT of the pituitary). Androgen insensitivity: 46XY, blind vagina, no uterus, normal testosterone, receptor defect."
     },
     {
-      topic: "Anaemia in pregnancy", src: "p.963, 964, 984",
+      topic: "Anaemia in pregnancy", group: "Anaemia in pregnancy", src: "p.963, 964, 984",
       stem: "WHO defines anaemia in pregnancy as haemoglobin below {1} g/dl and haematocrit below 33%. Many Nigerian hospitals use {2} g/dl as the practical cut-off. The commonest type worldwide is {3} deficiency anaemia.",
       blanks: [["11", "eleven"], ["10", "ten"], ["iron", "iron deficiency"]],
       explain: "The WHO line (11) is for screening; the local working line (10 g/dl, PCV 30%) comes from work showing fetal harm only below it. Severity: severe is Hb below 6.8 / PCV below 19%. Causes in the tropics are multifactorial: iron, folate, malaria, hookworm, haemoglobinopathies and blood loss."
     },
     {
-      topic: "Anaemia in pregnancy", src: "p.971, 985, 992",
+      topic: "Anaemia in pregnancy", group: "Anaemia in pregnancy", src: "p.971, 985, 992",
       stem: "In pregnancy plasma volume expands by 46–55% while red cell mass expands by only 18–25%, giving physiological {1}. Each fetus requires about {2} mg of iron. Iron absorption is enhanced by {3} acid.",
       blanks: [["haemodilution", "hemodilution", "dilution", "anaemia", "anemia", "physiological anaemia"], ["500", "five hundred"], ["ascorbic", "vitamin c"]],
       explain: "Plasma outgrows red cells, so Hb drops, most noticeably in the second trimester. That is why the cut-off is 10.5 g/dl in the second trimester (CDC). Inhibitors of iron absorption: phytates, tannates, tea and coffee, calcium, herbal drinks. Enhancers: ascorbic acid, gastric acidity, protein."
     },
     {
-      topic: "Fibroids", src: "p.730, 741, 744, 745",
+      topic: "Fibroids", group: "Fibroids & endometriosis", src: "p.730, 741, 744, 745",
       stem: "Uterine fibroids are the most common uterine tumour. The commonest secondary change is {1} degeneration, and sarcomatous change into leiomyosarcoma occurs in about {2}%. Diagnosis is mainly {3}.",
       blanks: [["hyaline"], ["0.5", ".5", "half", "less than 1", "<1"], ["clinical", "clinically"]],
       explain: "Most fibroids are asymptomatic; when symptomatic the leading symptom is menorrhagia (submucous). Warning signs of sarcoma: postmenopausal growth or bleeding, rapid growth, a fibroid that turns soft, tender or fixed. Pregnancy of 20+ weeks and OCP use are protective; Black women have 2–3 times the risk."
     },
     {
-      topic: "Postpartum haemorrhage", src: "p.1397, 1403, 1410",
+      topic: "Postpartum haemorrhage", group: "Postpartum haemorrhage & oxytocics", src: "p.1397, 1403, 1410",
       stem: "PPH is blood loss of more than {1} ml after vaginal delivery, or more than {2} ml after caesarean section. The commonest cause is uterine {3}, accounting for about 80%.",
       blanks: [["500", "five hundred"], ["1000", "1,000", "one thousand", "1 litre", "1l"], ["atony", "atonicity"]],
       explain: "Primary PPH is within 24 hours; secondary is from 24 hours to 6 weeks. Remember the 4Ts: Tone (80%), Trauma, Tissue, Thrombin. First actions: call for help, rub up the uterus, IV access, and oxytocin infusion as first-line oxytocic. Prevent with active management of the third stage."
     },
     {
-      topic: "Oxytocics", src: "p.175–178",
+      topic: "Oxytocics", group: "Postpartum haemorrhage & oxytocics", src: "p.175–178",
       stem: "Syntometrine combines oxytocin and {1}. Ergometrine takes 6–7 minutes to act IM and is contraindicated in women with {2} or heart disease. Oxytocin acts within about {3} minutes when given IM.",
       blanks: [["ergometrine", "ergometrin", "ergot"], ["hypertension", "high blood pressure", "pre-eclampsia", "htn"], ["2.5", "2 5", "two and a half", "3", "2-3"]],
       explain: "Pick the drug from the patient: hypertensive or cardiac patient = oxytocin, NEVER ergometrine or syntometrine. Ergometrine gives sustained tonic contraction (2–4 hours) but raises BP and causes vomiting. Oxytocin is fast and side-effect free but not heat stable. Misoprostol is the PGE1 analogue for when injectables are unavailable."
     },
     {
-      topic: "Infertility", src: "p.611, 616, 620, 625",
+      topic: "Infertility", group: "Infertility", src: "p.611, 616, 620, 625",
       stem: "Infertility is failure to conceive after {1} year of regular unprotected intercourse; in women over {2} years investigation starts after 6 months. In Africa most infertile women have {3} infertility, while the commonest cause of anovulatory infertility is PCOS.",
       blanks: [["1", "one", "12 months", "twelve months"], ["35", "thirty five", "thirty-five"], ["tubal", "tubal factor", "tubal disease"]],
       explain: "The single most important prognostic factor is the age of the female partner (fertility halves at 35 and drops sharply after 37). The tubal link: pelvic infection (PID, post-abortal and puerperal sepsis) damages the tubes, which ties together the abortion, STI and infertility questions."
     },
     {
-      topic: "Endometriosis", src: "p.755, 756, 759",
+      topic: "Endometriosis", group: "Fibroids & endometriosis", src: "p.755, 756, 759",
       stem: "Endometriosis is the presence of endometrial glands and stroma outside the uterus. Definitive diagnosis is by {1}. The commonest site is the {2}, and the typical lesion there is a {3} coloured cyst.",
       blanks: [["laparoscopy", "laparoscopic visualisation", "laparoscopic visualization"], ["ovary", "ovaries"], ["chocolate", "chocolate-coloured", "brown"]],
       explain: "The slide lists the ovary, uterosacral ligament and pouch of Douglas as the commonest sites. 35–50% of infertile women have it, and it is linked to low parity. Leading theory: retrograde menstruation. The ovarian lesion is also called an endometrioma."
@@ -771,6 +780,7 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
   id: "og-mcq-ectopic",
   subject: "O&G",
+  group: "Ectopic pregnancy",
   type: "mcq",
   title: "O&G MCQ · Ectopic pregnancy (14 single best option)",
   negativeMarking: false,
@@ -855,6 +865,7 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
   id: "og-mcq-infertility",
   subject: "O&G",
+  group: "Infertility",
   type: "mcq",
   title: "O&G MCQ · Infertility (15 single best option)",
   negativeMarking: false,
@@ -942,7 +953,18 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 (function(){
 "use strict";
 const $=s=>document.querySelector(s), app=$("#app"), timerEl=$("#timer");
-const banks=window.QUESTION_BANKS||[];
+const banks=[];
+(window.QUESTION_BANKS||[]).forEach(b=>{
+  if(b.type!=="fillgap") return banks.push(b);
+  const by={}; b.questions.forEach(q=>(by[q.group]=by[q.group]||[]).push(q));
+  Object.entries(by).forEach(([g,qs])=>banks.push({...b,id:b.id+"::"+g,group:g,title:"O&G Fill-in-the-gap · "+g,questions:qs}));
+});
+const GROUPS=["Menstrual disorders & DUB","Amenorrhoea & PCOS","Abortion","Ectopic pregnancy","Infertility","Fibroids & endometriosis","Anaemia in pregnancy","Postpartum haemorrhage & oxytocics"];
+const COMING=["Antenatal care & booking","Labour & the partograph","Antepartum haemorrhage","Hypertension in pregnancy","Gynaecological cancers","Family planning","Genital infections & STIs","Prolapse & fistulae","Instruments & imaging (picture test)"];
+let curGroup=null;
+const TYPE_LABEL={cards:"Flashcards",mcq:"Multiple choice",essay:"Essays",fillgap:"Fill in the gap"};
+const TYPE_ORDER=["cards","mcq","fillgap","essay"];
+const countOf=b=>b.type==="cards"?b.cards.length:b.type==="essay"?b.essays.length:b.questions.length;
 const KEY="mbIII-resit-history-v1";
 const load=()=>{try{return JSON.parse(localStorage.getItem(KEY))||[]}catch(e){return[]}};
 const save=h=>{try{localStorage.setItem(KEY,JSON.stringify(h))}catch(e){}};
@@ -967,31 +989,50 @@ function ask(msg,yes){
 
 const srcOf=s=>/^p\./.test(s)?"O&G slides "+esc(s):esc(s);
 
-function home(){
-  clearInterval(tick); timerEl.hidden=true; S=null;
-  const hist=load();
-  app.innerHTML=`<div class="card"><h2 style="margin-top:0">Choose a paper</h2>`+
-   banks.map(bankRow).join("")+`</div>`+
-   weakCard(hist)+histCard(hist);
+function wire(){
   app.querySelectorAll("[data-start]").forEach(b=>b.onclick=()=>start(+b.dataset.start,b.dataset.mode));
   app.querySelectorAll("[data-mcq]").forEach(b=>b.onclick=()=>mcqStart(+b.dataset.mcq,b.dataset.mode));
   app.querySelectorAll("[data-essay]").forEach(b=>b.onclick=()=>essayStart(+b.dataset.essay,+b.dataset.k));
   app.querySelectorAll("[data-cards]").forEach(b=>b.onclick=()=>startCards(+b.dataset.cards,b.dataset.all==="1"));
-  const rs=$("#reset"); if(rs) rs.onclick=()=>ask("Clear all saved results?",()=>{save([]);home()});
+  app.querySelectorAll("[data-topic]").forEach(b=>b.onclick=()=>{curGroup=b.dataset.topic;topicPage()});
+  const all=$("#all"); if(all) all.onclick=()=>{curGroup=null;root()};
+  const rs=$("#reset"); if(rs) rs.onclick=()=>ask("Clear all saved results?",()=>{save([]);root()});
+}
+function home(){ curGroup?topicPage():root(); }
+function root(){
+  clearInterval(tick); timerEl.hidden=true; S=null; scrollTo(0,0);
+  const hist=load();
+  const tile=g=>{const bs=banks.filter(b=>b.group===g),n=t=>bs.filter(b=>b.type===t).reduce((s,b)=>s+countOf(b),0);
+    const bits=[["cards","flashcards"],["mcq","MCQs"],["fillgap","gap-fills"],["essay","essays"]].filter(([t])=>n(t)).map(([t,l])=>`${n(t)} ${n(t)===1?l.replace(/s$/,""):l}`).join(" · ");
+    return `<button class="tile" data-topic="${esc(g)}"><b>${esc(g)}</b><span class="meta">${bits}</span></button>`};
+  app.innerHTML=`<div class="card"><h2 style="margin:0 0 4px">Obstetrics &amp; Gynaecology</h2>
+   <div class="meta" style="margin-bottom:12px">Pick a topic, then choose what to practise.</div>
+   <div class="tiles">${GROUPS.map(tile).join("")}</div></div>
+   <div class="card"><h3 style="margin:0 0 6px">Still to come</h3><div class="meta">${COMING.map(esc).join(" · ")}</div></div>
+   <div class="card"><h2 style="margin:0 0 4px">Paediatrics</h2><div class="meta">Coming after O&amp;G.</div></div>`+
+   weakCard(hist)+histCard(hist);
+  wire();
+}
+function topicPage(){
+  clearInterval(tick); timerEl.hidden=true; S=null; scrollTo(0,0);
+  const g=curGroup,bs=banks.map((b,i)=>[b,i]).filter(([b])=>b.group===g).sort((x,y)=>TYPE_ORDER.indexOf(x[0].type)-TYPE_ORDER.indexOf(y[0].type));
+  app.innerHTML=`<div class="row" style="margin:0 0 10px"><button id="all">← All topics</button></div>
+   <div class="card"><h2 style="margin:0 0 4px">${esc(g)}</h2><div class="meta">Choose an activity.</div>${bs.map(([b,i])=>bankRow(b,i)).join("")}</div>`;
+  wire();
 }
 
 function bankRow(b,i){
-  if(b.type==="cards") return `<div style="margin:12px 0"><b>${esc(b.title)}</b>
+  if(b.type==="cards") return `<div style="margin:12px 0"><b>${TYPE_LABEL[b.type]}</b>
      <div class="meta">${b.cards.length} cards · ${cardsMastered(b)} mastered</div>
      <button class="primary" data-cards="${i}" data-all="0">Study (weakest first)</button>
      <button data-cards="${i}" data-all="1">All cards, shuffled</button></div>`;
-  if(b.type==="mcq") return `<div style="margin:12px 0"><b>${esc(b.title)}</b>
+  if(b.type==="mcq") return `<div style="margin:12px 0"><b>${TYPE_LABEL[b.type]}</b>
      <div class="meta">${b.questions.length} questions · ${b.negativeMarking?"negative marking":"no negative marking"} · options reshuffled each attempt</div>
      <button class="primary" data-mcq="${i}" data-mode="exam">Start timed exam</button>
      <button data-mcq="${i}" data-mode="practice">Practice (check as you go)</button></div>`;
-  if(b.type==="essay") return `<div style="margin:12px 0"><b>${esc(b.title)}</b>
+  if(b.type==="essay") return `<div style="margin:12px 0"><b>${TYPE_LABEL[b.type]}</b>
      ${b.essays.map((e,k)=>`<div class="meta" style="margin-top:6px">${esc(e.kind)} · ${esc(e.prompt.slice(0,90))}…</div><button class="primary" data-essay="${i}" data-k="${k}">Write &amp; self-mark</button>`).join("")}</div>`;
-  return `<div style="margin:12px 0"><b>${esc(b.title)}</b>
+  return `<div style="margin:12px 0"><b>${TYPE_LABEL[b.type]}</b>
      <div class="meta">${b.questions.length} questions · ${b.questions.reduce((n,q)=>n+q.blanks.length,0)} gaps · ${b.negativeMarking?"negative marking":"no negative marking"}</div>
      <button class="primary" data-start="${i}" data-mode="exam">Start timed exam</button>
      <button data-start="${i}" data-mode="practice">Practice (check as you go)</button></div>`;
@@ -1062,7 +1103,7 @@ function results(first){
   app.innerHTML=`<div class="card"><div class="meta">${esc(S.b.title)} · ${S.mode==="exam"?"time used "+fmt(Date.now()-S.start):"practice"}</div>
    <div class="score">${sc.got} / ${sc.max} <span style="font-size:18px;color:var(--mute)">(${pct}%)</span></div>
    ${weak.length?`<p><b>Revise first:</b> ${weak.map(([k,v])=>`${esc(k)} (${v[0]}/${v[1]})`).join(" · ")}</p>`:`<p>Clean sweep.</p>`}
-   <div class="row"><button class="primary" id="home">Back to papers</button><button id="retry">Retake</button></div></div>`+
+   <div class="row"><button class="primary" id="home">Back to topic</button><button id="retry">Retake</button></div></div>`+
    S.b.questions.map((q,i)=>`<div class="card"><div class="meta">Q${i+1} · ${esc(q.topic)}</div><div class="stem">${
      q.stem.split(/\{(\d+)\}/).map((p,k)=>{ if(k%2===0)return esc(p); const n=+p-1,key=i+"-"+n; const auto=isCorrect(S.ans[i][n],q.blanks[n]); const ok=S.over[key]!==undefined?S.over[key]:auto;
        return `<span class="gapres ${ok?"ok":"bad"}">${esc(S.ans[i][n]||"—")}${auto?"":` <small>→ ${esc(q.blanks[n][0])}</small>`}</span>${auto?"":`<label class="toggle"><input type="checkbox" data-ov="${key}" ${ok?"checked":""}> I was right</label>`}`}).join("")
@@ -1110,7 +1151,7 @@ function mcqFinish(){
   app.innerHTML=`<div class="card"><div class="meta">${esc(b.title)} · ${S.mode==="exam"?"time used "+fmt(Date.now()-S.start):"practice"}</div>
    <div class="score">${net} / ${max} <span style="font-size:18px;color:var(--mute)">(${Math.round(100*net/max)}%)</span></div>
    ${weak.length?`<p><b>Revise first:</b> ${weak.map(([k,v])=>`${esc(k)} (${v[0]}/${v[1]})`).join(" · ")}</p>`:"<p>Clean sweep.</p>"}
-   <div class="row"><button class="primary" id="home">Back to papers</button><button id="retry">Retake</button></div></div>`+
+   <div class="row"><button class="primary" id="home">Back to topic</button><button id="retry">Retake</button></div></div>`+
    b.questions.map((q,i)=>{const p=pick[i],ok=p!==null&&perm[i][p]===q.answer,correctPos=perm[i].indexOf(q.answer);
      return `<div class="card"><div class="meta">Q${i+1} · ${esc(q.topic)} · <b style="color:var(--${ok?"ok":"bad"})">${ok?"correct":(p===null?"not answered":"wrong")}</b></div>
      <div class="stem" style="line-height:1.5">${esc(q.stem)}</div>
@@ -1142,7 +1183,7 @@ function essayMark(written){
    <div class="explain"><b>Examiner's tip:</b> ${esc(e.tip)}</div></div>
    <div class="card"><details><summary>Your answer</summary><pre style="white-space:pre-wrap;font:inherit">${esc(written||"(nothing written)")}</pre></details></div>`+
    e.sections.map((s,si)=>`<div class="card"><h3 style="margin-top:0">${esc(s.h)}</h3>${s.pts.map((p,pi)=>`<label style="display:flex;gap:10px;margin:8px 0;cursor:pointer"><input type="checkbox" data-s="${si}" data-p="${pi}" style="margin-top:6px"><span>${esc(p.t)}${p.x?` <span class="meta">(beyond the slides)</span>`:""}</span></label>`).join("")}</div>`).join("")+
-   `<div class="card"><div class="row"><button class="primary" id="save">Save score</button><button id="home">Back to papers</button></div></div>`;
+   `<div class="card"><div class="row"><button class="primary" id="save">Save score</button><button id="home">Back to topic</button></div></div>`;
   const upd=()=>{const boxes=[...app.querySelectorAll("input[type=checkbox]")],n=boxes.filter(c=>c.checked).length;
     $("#sc").innerHTML=`${(n/total*e.marks).toFixed(1)} / ${e.marks} <span style="font-size:18px;color:var(--mute)">(${n}/${total} points)</span>`;return n};
   app.querySelectorAll("input[type=checkbox]").forEach(c=>c.onchange=upd);upd();
@@ -1196,7 +1237,7 @@ function cardsDone(){
    <div class="score">${got} / ${queue.length} <span style="font-size:18px;color:var(--mute)">(${pct}%)</span></div>
    <p>${missed.length?`<b>Missed:</b> ${Object.entries(byTopic).map(([k,v])=>`${esc(k)} (${v})`).join(" · ")}`:"Every card recalled. Come back tomorrow to confirm it stuck."}</p>
    <p class="meta">A card counts as mastered after two clean recalls in a row, so re-test it on a different day.</p>
-   <div class="row">${missed.length?`<button class="primary" id="drill">Drill the ${missed.length} missed</button>`:""}<button id="home">Back to papers</button></div></div>`;
+   <div class="row">${missed.length?`<button class="primary" id="drill">Drill the ${missed.length} missed</button>`:""}<button id="home">Back to topic</button></div></div>`;
   $("#home").onclick=home;
   if($("#drill")) $("#drill").onclick=()=>{S={...S,queue:missed.slice().sort(()=>Math.random()-.5),pos:0,missed:[],got:0,revealed:false,typed:""};renderCard()};
 }
