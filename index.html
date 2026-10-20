@@ -425,6 +425,129 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// O&G · Flashcards · Family planning.
+// Slide-backed items cite p.xxx (population dynamics p.373-414, new technology p.415-438, natural methods/LAM p.439-459,
+// postpartum p.1456-1458, haemoglobinopathies p.1084, post-abortion p.550-556). extra:true = standard teaching not in the deck.
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "og-cards-fp",
+  subject: "O&G",
+  group: "Family planning",
+  type: "cards",
+  title: "O&G Flashcards · Family planning",
+  cards: [
+    { topic: "Basics", src: "Standard teaching",
+      q: "Define family planning (WHO) and list its components.",
+      a: "Enabling individuals and couples to anticipate and attain their desired number of children and the spacing and timing of births, through contraception and the treatment of involuntary infertility. Components: counselling, provision of methods, management of side effects, treatment of infertility, and preconception advice.",
+      connect: "Past short question: 'What is family planning according to the WHO?'. Fertility regulation is also the subject of your population lecture (p.399).", extra: true },
+    { topic: "Population and policy", src: "p.374, 386, 391, 407, 411",
+      q: "Give the Nigerian FP figures in your lecture.",
+      a: "Growth rate 2.9% per year (doubling time about 24 years). TFR 5.7 (urban 4.9, rural 6.1). Awareness 90% of men and 80% of women. Contraceptive prevalence: any method 13%, modern 8% (pill, injectables and male condom 2% each); urban 20% vs rural 9%. Unmet need 17%. Mean birth interval 31 months. 25% of 15–19-year-olds have given birth or are pregnant.",
+      connect: "Awareness is high but use is low: the problem is access, cost, myths and partner attitude, not knowledge." },
+    { topic: "Population and policy", src: "p.401, 402",
+      q: "Why is fertility so high in Nigeria?",
+      a: "Early marriage and childbearing; a high proportion of sexually active women exposed to pregnancy risk with low contraceptive uptake; short birth intervals due to short breastfeeding; desire for large families. Young age of childbearing raises the growth rate even if TFR stays the same.",
+      connect: "The generation-interval example on your slide: raising the generation time from 20 to 30 years cuts a population of 80 to 26 over 60 years (a 67.5% fall, p.403–404)." },
+    { topic: "Population and policy", src: "p.396, 397",
+      q: "State the targets of the National Policy on Population for Sustainable Development (2004).",
+      a: "Reduce population growth to 2% or less by 2015; reduce TFR by at least 0.6 children every 5 years; raise modern contraceptive prevalence by at least 2% a year; infant mortality to 35 per 1,000 and child mortality to 45 per 1,000 by 2015; maternal mortality to 125 per 100,000 by 2010 and 75 by 2015; eliminate illiteracy by 2020; cut adult HIV prevalence 25% every 5 years.",
+      connect: "MDG 5 (p.398) aimed to cut maternal mortality by three-quarters by 2015; Nigeria's ratio was still about 800 per 100,000 in the slides (p.388)." },
+    { topic: "Population and policy", src: "p.1042, 527, 554, 1183, 1192",
+      q: "How does family planning reduce maternal morbidity and mortality? (past essay 2002.4)",
+      a: "Delays motherhood out of adolescence; spaces births (avoids closely spaced pregnancies and anaemia); limits grand multiparity (haemorrhage, rupture, hypertension, abruption); prevents unintended pregnancy and so unsafe abortion (13% of maternal deaths); allows safe pregnancy in women with medical disease; post-abortion and postpartum FP prevents repeat risk. Also lowers infant and child deaths and improves education and household income.",
+      connect: "Your anaemia lecture says it in one line: delay motherhood, discourage grand multiparity, avoid closely spaced births (p.1042). Unsafe abortion is a prime indicator of unmet need (p.554)." },
+    { topic: "Adolescents", src: "p.389–390; Standard teaching",
+      q: "What limits contraceptive use by adolescents in Nigeria? (past MCQ)",
+      a: "Clinics that are not adolescent-friendly, provider reluctance to serve unmarried youth, ignorance of the need for reproductive health services, inability to pay, and fear of being judged by providers. Consequences of early sexual activity: unintended pregnancy, STIs and HIV, unsafe abortion, loss of education, early parenthood (p.390).",
+      connect: "In a past 'all true' stem, all the options were correct. Remember: confidentiality plus a friendly environment." },
+    { topic: "Natural methods", src: "p.441–446",
+      q: "List the natural (fertility awareness) methods and how each works.",
+      a: "Calendar (rhythm): subtract 18 from the shortest and 11 from the longest of at least 6 cycles. Basal body temperature: rises 0.2–0.5°C around ovulation; measure at the same time before rising. Cervical mucus (Billings): fertile when clear and stretchy. Symptothermal: combines them. Standard Days Method: days 8–19 for cycles of 26–32 days (CycleBeads). Coitus interruptus. Lactational amenorrhoea method (LAM).",
+      connect: "Past question: 'List 3 natural family planning methods'. Fertile period spans about 2–3 days before to at least 2 days after ovulation (p.443)." },
+    { topic: "Natural methods", src: "p.447–452",
+      q: "Give the effectiveness, advantages, disadvantages and checklist for periodic abstinence.",
+      a: "Effectiveness varies most of all methods: 20 pregnancies per 100 women in the first year; better when methods are combined. Advantages: no side effects, no cost, acceptable to religious groups, involves men, immediately reversible, no effect on breastfeeding. Disadvantages: only somewhat effective, takes 2–3 cycles to learn, needs 8–16 days of abstinence per cycle, needs partner cooperation, difficult after childbirth or with irregular cycles, no STI protection. Check: medical conditions that make pregnancy dangerous, abnormal bleeding, discharge, recent delivery or abortion, STI/PID in the last 3 months, drugs and fevers that alter signs.",
+      connect: "Classic essay point: 'natural methods are free of side effects but only moderately effective'." },
+    { topic: "Natural methods", src: "p.453",
+      q: "What is coitus interruptus?",
+      a: "Withdrawal of the penis before ejaculation: the oldest reversible method. Failure rate about 10 pregnancies per 100 woman-years (data are unreliable); requires self-control; no protection against STIs.",
+      connect: "Still the commonest 'traditional method' in many communities (past question: 'List 4 traditional contraceptive methods')." },
+    { topic: "Natural methods", src: "p.454–458",
+      q: "Describe LAM: criteria, effectiveness, advantages and disadvantages.",
+      a: "Exclusive breastfeeding for 6 months with amenorrhoea maintained; about 2% pregnancy rate if used correctly (extended LAM up to 9–12 months). Advantages: effective for at least 6 months, immediate postpartum use, no cost, no hormones, best breastfeeding practice, baby protected from diarrhoea, measles and pneumonia. Disadvantages: effectiveness uncertain after 6 months, frequent feeding is inconvenient for working mothers, no STI protection, HIV transmission risk through milk. Checklist: HIV, medicines used while breastfeeding, newborn conditions.",
+      connect: "Counselling for LAM should include starting a follow-on method at the right time." },
+    { topic: "Combined hormonal", src: "Standard teaching; p.420–422",
+      q: "Describe the combined oral contraceptive pill: composition, mechanism, benefits, risks and side effects.",
+      a: "Ethinylestradiol 20–35 µg plus a progestogen. Mechanism: inhibits ovulation (suppresses FSH and LH), thickens cervical mucus, thins the endometrium. Benefits: regular lighter periods, less dysmenorrhoea, protection against ovarian and endometrial cancer, PID, ectopic pregnancy and functional cysts, improves acne. Risks: venous thromboembolism, stroke and MI in at-risk women, hypertension, small rise in breast and cervical cancer risk. Side effects: nausea, breast tenderness, breakthrough bleeding, headache, mood change.",
+      connect: "Past MCQ: 'side effects of COCs'. New alternatives avoid the liver's first-pass effect: vaginal ring, patch (Ortho Evra), and Yasmin with the progestin drospirenone (p.420–421).", extra: true },
+    { topic: "Combined hormonal", src: "Standard teaching",
+      q: "List the contraindications to hormonal (oestrogen-containing) contraception. (past: 'List 10')",
+      a: "Previous or current venous thromboembolism or thrombophilia; ischaemic heart disease or stroke; migraine with aura; hypertension (160/100 or more); breast cancer; active liver disease or liver tumour; diabetes with vascular complications; smoker over 35; undiagnosed genital tract bleeding; pregnancy; breastfeeding under 6 weeks postpartum; SLE with antiphospholipid antibodies.",
+      connect: "Progestogen-only methods (pill, implant, injectable, LNG-IUS) are the alternative for most of these women.", extra: true },
+    { topic: "Combined hormonal", src: "Standard teaching",
+      q: "What advice do you give for missed combined pills?",
+      a: "One pill missed (less than 24 hours late): take it as soon as remembered and carry on. Two or more missed: take the most recent missed pill now, continue the pack, and use condoms or abstain for 7 days. Missed in the first week with unprotected intercourse: consider emergency contraception. Missed in the third week: finish the active pills and skip the pill-free interval.",
+      connect: "Vomiting within 3 hours of a dose counts as a missed pill. Antibiotic cover is only needed with enzyme-inducing antibiotics such as rifampicin.", extra: true },
+    { topic: "Progestogen-only", src: "Standard teaching; p.422, 1457",
+      q: "Describe progestogen-only pills and injectables.",
+      a: "POP: taken at the same time every day without a break; suitable for breastfeeding mothers; mainly thickens mucus (desogestrel POP also inhibits ovulation). Injectables: DMPA 150 mg IM every 3 months or NET-EN 200 mg every 2 months; primary mode of action is inhibition of ovulation; side effects: irregular bleeding then amenorrhoea, weight gain, delayed return of fertility (about 9–10 months), reduced bone density. Combined monthly injectables (Cyclofem, Mesigyna) have first-year failure of 0.2 per 100 woman-years and less bleeding disturbance but must be given monthly (p.422).",
+      connect: "Past MCQ: 'primary mode of action of the progestogen-only injectable' = inhibition of ovulation. Use during lactation is recommended (p.1457).", extra: true },
+    { topic: "Implants", src: "p.435; Standard teaching",
+      q: "Describe the contraceptive implants. (asked in 6 sittings)",
+      a: "Norplant: 6 levonorgestrel capsules, 5 years. Jadelle: 2 rods, 75 mg levonorgestrel each, an improved Norplant (5 years). Implanon: 1 rod of etonogestrel (3-ketodesogestrel), 3 years. Inserted subdermally in the inner upper arm under local anaesthesia. Mechanism: inhibits ovulation, thickens mucus. Side effects: irregular bleeding, amenorrhoea, headache, weight change. Rapid return of fertility on removal; effect reduced by enzyme inducers (rifampicin, carbamazepine, phenytoin).",
+      connect: "LARC (long-acting reversible contraceptives) = implants, IUCD and LNG-IUS. Past question: 'Norplant is effective for 10 years' is false." },
+    { topic: "IUCD", src: "p.423, 425; Standard teaching",
+      q: "Describe the IUCD: types, mechanism, insertion, advantages and complications. (asked in about 8 sittings)",
+      a: "Types: copper T 380A (10 years) and levonorgestrel IUS (Mirena: T-shaped polyethylene, 52 mg LNG, p.425; 5 years). Mechanism: copper is toxic to sperm and causes a sterile inflammatory reaction that prevents fertilisation and implantation; LNG thickens mucus and thins endometrium. Insertion: with menses or within 48 hours or after 4 weeks postpartum; postabortion if no infection. Advantages: highly effective, long-acting, no hormones (copper), rapid return of fertility. Complications: pain, menorrhagia (copper), expulsion, perforation, PID in the first 20 days, ectopic pregnancy (in the rare failures), lost strings.",
+      connect: "Research aims in your slides (p.423): fewer side effects, suitable for nulliparae, easier insertion, lower expulsion. Immediate postpartum insertion has a high chance of extrusion (p.1458).", extra: true },
+    { topic: "IUCD", src: "Standard teaching",
+      q: "List the contraindications to IUCD and what to do about lost strings or pregnancy with an IUCD.",
+      a: "Contraindications: pregnancy, acute PID or current STI or purulent cervicitis, undiagnosed vaginal bleeding, cervical or endometrial cancer, distorted uterine cavity, and Wilson's disease or copper allergy (copper IUCD). Lost strings: exclude pregnancy, ultrasound, then retrieve. Pregnancy with an IUCD: remove it early if the strings are visible (lowers miscarriage and sepsis risk), and exclude ectopic pregnancy.",
+      connect: "Past stem: 'An IUCD is said to have lost its memory if it does not regain its shape after removal from the introducer'. In sickle cell disease IUCDs are not the best choice because of infection and bleeding (p.1084).", extra: true },
+    { topic: "Barrier", src: "p.426, 427; Standard teaching",
+      q: "Describe barrier methods of contraception. (past short note)",
+      a: "Male condom (latex; 2% failure with perfect use, up to 15–18% typical; protects against STIs including HIV); female condom; diaphragm and cervical cap (used with spermicide, left 6 hours after intercourse); spermicides (nonoxynol-9). New: Lea's Shield, a reusable silicone cervical barrier with a central valve, inserted before intercourse and left in for 8 hours afterwards (p.426); the panty condom (p.427).",
+      connect: "Condoms are the only method that protects against STIs and HIV: dual protection means condoms plus another method.", extra: true },
+    { topic: "Emergency contraception", src: "p.431; Standard teaching",
+      q: "Write short notes on emergency contraception. (asked in at least 9 sittings)",
+      a: "Indications: unprotected intercourse, condom rupture or slippage, missed pills, IUCD expulsion, sexual assault. Methods: levonorgestrel 1.5 mg single dose within 72 hours (some effect up to 120); ulipristal 30 mg within 120 hours; Yuzpe regimen (ethinylestradiol 100 µg plus LNG 0.5 mg, repeated after 12 hours); copper IUCD within 5 days (most effective, more than 99%). Mechanism: delays or inhibits ovulation (hormonal); copper is toxic to sperm and causes sterile endometritis. Side effects: nausea, vomiting (repeat dose if within 2 hours), irregular bleeding, headache. Not effective if already pregnant; does not protect against STIs; start a regular method afterwards.",
+      connect: "Your slide p.431 describes the research: single-dose LNG 1.5 mg vs two doses 0.75 mg 12 hours apart, mifepristone 10 mg and gestrinone. A past MCQ states that the IUD is indicated for adolescents too." },
+    { topic: "Sterilisation", src: "p.428; Standard teaching",
+      q: "Describe the methods of surgical contraception. (past: 'Surgical contraception')",
+      a: "Female: tubal ligation by minilaparotomy (Pomeroy, Parkland, Irving, Uchida, Madlener) or laparoscopy (Filshie clips, Falope rings); hysteroscopic transcervical Essure micro-inserts: stainless steel inner coil, nitinol outer coil, PET fibres (p.428). Male: vasectomy (no-scalpel), effective after about 20 ejaculations or 3 months with a semen check. Failure about 0.5% (female), 0.15% (male); ectopic proportion is high after failure. Counsel: permanent, consent of the client, discuss alternatives (LARC).",
+      connect: "Postpartum minilaparotomy is done within 48 hours while the fundus is high. Past MCQ: 'which techniques are used at minilaparotomy': all of Pomeroy, Uchida, Irving, Madlener.", extra: true },
+    { topic: "New methods", src: "p.417–422",
+      q: "List the contraceptive methods recently introduced in your lecture.",
+      a: "Combined hormonal: Yasmin (drospirenone), NuvaRing (vaginal ring), Ortho Evra (patch), monthly combined injectables (Cyclofem, Mesigyna). IUCDs: new copper IUDs, Mirena. Barriers: Lea's Shield, panty condom. Sterilisation: Essure. Implants: Jadelle, Implanon. Injectable immunocontraceptives (anti-hCG). Male: testosterone undecanoate.",
+      connect: "The aims (p.417): easier to use, better service delivery, fewer side effects, affordable, and responsive to different groups including men." },
+    { topic: "New methods", src: "p.432–434",
+      q: "Describe the contraceptive vaginal ring and the immunocontraceptive.",
+      a: "Ring: a long-acting method under the user's control; steroids absorbed through the vagina and released from a silastic ring (slide: 150 µg nestorone and 12 µg ethinylestradiol daily over a year). Advantages: continuous use for weeks, unrelated to intercourse, fewer side effects (no liver first pass), rapid return of fertility. Immunocontraceptive: slow-release vaccine against hCG, aiming at 6 months or more of protection after one injection.",
+      connect: "A past stem asks which advantage the ring does not have: protection against STIs." },
+    { topic: "New methods", src: "p.436, 437",
+      q: "What male methods are in the lecture?",
+      a: "Injectable testosterone undecanoate (suppresses sperm), with a pilot of the same with DMPA; gossypol (from cottonseed oil, 99% effective at depressing spermatogenesis, but causes potassium depletion and risk of arrhythmias). Existing male methods: condom, withdrawal, vasectomy.",
+      connect: "A past stem: 'One of the following is a current contraceptive method available to men'.", extra: true },
+    { topic: "Postpartum and special", src: "p.1456–1458, 1084, 550–556",
+      q: "Which contraception suits the postpartum, post-abortion and sickle cell patient?",
+      a: "Postpartum: progestogen-only methods (minipill, implant, depot) if hormonal; combined pills reduce milk so delay until lactation is established; condoms before 6 weeks; IUCD inserted immediately postpartum has high extrusion; resume at 3 weeks (p.1456–1458). Post-abortion: counselling and a method before leaving the clinic (p.550–556). Sickle cell: barrier or Norplant (stabilises red cell membranes), permanent sterilisation if family complete, IUCD not ideal (p.1084).",
+      connect: "Counselling should begin in pregnancy because intercourse may resume before the 6-week visit." },
+    { topic: "Postpartum and special", src: "Standard teaching",
+      q: "What are the WHO medical eligibility categories?",
+      a: "Category 1: no restriction. 2: advantages generally outweigh risks. 3: risks usually outweigh advantages. 4: unacceptable health risk (do not use). Used to decide which method a woman with a given condition can use.",
+      connect: "COC with a history of VTE or migraine with aura is category 4; DMPA in a woman at risk of osteoporosis is category 2.", extra: true },
+    { topic: "Cases", src: "Standard teaching",
+      q: "A 28-year-old para 3 with sickle cell disease asks for contraception after her third delivery. What do you advise?",
+      a: "Take a full history; offer progestogen-only methods (implant or depot, which may reduce crises) or condoms; avoid the combined pill (thrombotic risk) and avoid IUCDs because of infection and bleeding risk; discuss tubal ligation if the family is complete, especially since pregnancy is high-risk (slides p.1084).",
+      connect: "Aim to keep parity low in sickle cell disease because each pregnancy carries a high risk.", extra: true },
+    { topic: "Cases", src: "Standard teaching",
+      q: "A woman had unprotected intercourse 4 days ago and asks for help. What can you give?",
+      a: "Pregnancy test first; offer a copper IUCD (effective up to 5 days) or ulipristal 30 mg (up to 120 hours). Levonorgestrel is licensed to 72 hours but may reduce risk later. Counsel on side effects, STI risk and a regular method.",
+      connect: "Past question: 'four indications for emergency contraceptives'. The 72-hour limit is for hormonal pills; the IUCD is not limited to 72 hours.", extra: true }
+  ]
+}]);
+
+</script>
+<script>
 // O&G · Flashcards · Hypertension in pregnancy.
 // The supplied slide deck has NO lecture on pre-eclampsia/eclampsia; standard teaching shaped by past papers.
 // src names a slide page only where the deck mentions the point.
@@ -1001,6 +1124,91 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
         { h: "Advantages and failure", pts: [
           { t: "Avoids anaesthesia and surgery and preserves the tube, with comparable later fertility in suitable women.", x: true },
           { t: "Failure (rising hCG, increasing pain, rupture) needs surgery; about 10–15% of cases fail." }
+        ]}
+      ]
+    }
+  ]
+}]);
+
+</script>
+<script>
+// O&G · Essays · Family planning.
+// Prompt 1 is a real past question (2002.4, repeated in 2k17-2k2.16). Prompt 2 is the most repeated short note in this area (at least 9 sittings).
+// Slide-backed points cite p.xxx; x:true = standard teaching beyond the deck.
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "og-essay-fp",
+  subject: "O&G",
+  group: "Family planning",
+  type: "essay",
+  title: "O&G Essays · Family planning (2 questions)",
+  essays: [
+    {
+      kind: "Long essay (20 marks)", marks: 20, topic: "Family planning · maternal health", src: "past papers 2002.4, 2k17-2k2.16 · p.374–413, 527, 554, 1042",
+      prompt: "Effective implementation of family planning services has a strategic role to play in reducing maternal morbidity and mortality. Discuss.",
+      tip: "Make an argument, not a list of methods. Start with the Nigerian problem in figures (maternal mortality, fertility, unmet need), show the mechanism by which FP prevents maternal deaths (fewer and safer pregnancies, fewer unsafe abortions), then say what 'effective implementation' requires (access, quality, counselling, integration). Finish with the wider benefits.",
+      sections: [
+        { h: "Introduction: the problem", pts: [
+          { t: "Family planning (WHO): enabling couples to have the number of children they want, when they want, through contraception and treatment of involuntary infertility." },
+          { t: "Maternal mortality is high: about 800 per 100,000 live births in the slides; 66% of births occur at home and 37% of women have no antenatal care (p.388)." },
+          { t: "Fertility is high: TFR 5.7 (rural 6.1), growth rate 2.9% with doubling in about 24 years (p.374, 386); contraceptive prevalence is only 13% (modern 8%), yet awareness is high (p.391)." },
+          { t: "Unmet need (women wishing to space or limit but not using a method) is 17% (p.391, 407)." }
+        ]},
+        { h: "How family planning reduces maternal deaths", pts: [
+          { t: "Fewer pregnancies mean fewer exposures to the risk of dying: every woman who avoids a pregnancy avoids all its risks." },
+          { t: "Prevents unintended pregnancy and so unsafe abortion, which accounts for about 13% of maternal deaths (p.527); unsafe abortion is a prime indicator of unmet need for FP (p.554)." },
+          { t: "Delays childbearing in adolescents: teenage pregnancy carries a higher risk of pre-eclampsia, obstructed labour, preterm birth and complications of abortion (p.300, 390)." },
+          { t: "Limits grand multiparity, which carries risks of abruptio placentae, placenta praevia, ruptured uterus, PPH, anaemia and pre-eclampsia (p.303, 1183, 1192)." },
+          { t: "Spaces births: avoids closely spaced pregnancies that deplete iron and folate and cause anaemia (p.1042: family planning delays motherhood, discourages grand multiparity and avoids closely spaced births)." },
+          { t: "Protects women with medical disease (heart disease, sickle cell disease, hypertension, diabetes, HIV) from dangerous pregnancy, and allows planned pre-conception care (p.1084).", x: true },
+          { t: "Post-abortion and postpartum family planning prevents repeat unintended pregnancy and short intervals (p.550–556, 1456–1458)." }
+        ]},
+        { h: "Methods and counselling", pts: [
+          { t: "Offer a range: natural methods and LAM (p.439–459), barrier methods, combined and progestogen-only pills, injectables, implants, IUCD and LNG-IUS, emergency contraception and permanent methods; new methods are improving choice (p.417–438)." },
+          { t: "Choice of method follows medical eligibility criteria, the woman's wishes and breastfeeding status; condoms for dual protection against STIs and HIV.", x: true },
+          { t: "Informed choice and good counselling (side-effect management) improve continuation; fear of side effects is a major reason for non-use (p.438)." }
+        ]},
+        { h: "Making it effective", pts: [
+          { t: "Increase access: availability at primary health care level, community-based distribution, social marketing, affordability, integration with antenatal, postnatal and post-abortion services." },
+          { t: "Adolescent-friendly services: confidential, non-judgemental, affordable (clinics that are not adolescent-friendly and provider bias limit use).", x: true },
+          { t: "Involve men and community leaders; correct myths and religious or cultural barriers (men decide in many households).", x: true },
+          { t: "Train providers, ensure commodity supply, and monitor with unmet need and contraceptive prevalence." },
+          { t: "Policy: the national population policy aims for a growth rate of 2% or less, a TFR reduction of 0.6 every 5 years, a rise in modern CPR of 2% a year and a maternal mortality ratio of 75 per 100,000 by 2015 (p.393–397)." }
+        ]},
+        { h: "Wider benefits and conclusion", pts: [
+          { t: "Improves child survival (longer intervals), nutrition and education, particularly for girls; improves household income and national development (p.379, 392)." },
+          { t: "Reduces the burden on health, education and housing services and the high dependency ratio of a young population (p.377, 379)." },
+          { t: "Conclusion: family planning is one of the most cost-effective interventions for safe motherhood; its success depends on access, choice and quality, together with skilled attendants and emergency obstetric care." }
+        ]}
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Family planning · emergency contraception", src: "past papers 2004.3, 2007.5, 2011.23, 2013.11, 2016.35, 2019.24, 2020.11, 2020.17 and others · p.431 · standard teaching",
+      prompt: "Write short notes on emergency contraception.",
+      tip: "Asked in at least nine sittings. A template that earns marks: definition, indications, methods with doses and time limits, mechanism, side effects, contraindications and counselling. Always state that the copper IUCD is the most effective and that hormonal EC does not cause abortion.",
+      sections: [
+        { h: "Definition and indications", pts: [
+          { t: "Methods used after unprotected intercourse to prevent pregnancy; not intended for regular use.", x: true },
+          { t: "Indications: unprotected sex, condom failure (slip or rupture), missed combined or progestogen-only pills, late DMPA injection, IUCD expulsion, sexual assault, failure of natural methods.", x: true }
+        ]},
+        { h: "Methods and doses", pts: [
+          { t: "Levonorgestrel 1.5 mg as a single dose within 72 hours (some benefit to 120 hours); the older two-dose regimen was 0.75 mg 12 hours apart (p.431).", x: true },
+          { t: "Ulipristal acetate 30 mg single dose within 120 hours.", x: true },
+          { t: "Yuzpe regimen: ethinylestradiol 100 µg plus levonorgestrel 0.5 mg, repeated 12 hours later (for example four low-dose combined pills twice).", x: true },
+          { t: "Copper IUCD inserted within 5 days of unprotected intercourse: the most effective (more than 99%) and gives ongoing contraception.", x: true },
+          { t: "Mifepristone 10 mg and gestrinone have been studied (p.431)." }
+        ]},
+        { h: "Mechanism", pts: [
+          { t: "Hormonal methods: inhibit or delay ovulation; may thicken cervical mucus; they do not disrupt an established pregnancy.", x: true },
+          { t: "Copper IUCD: toxic to sperm and ova, causes a sterile inflammatory reaction in the endometrium and prevents implantation.", x: true }
+        ]},
+        { h: "Side effects and cautions", pts: [
+          { t: "Nausea and vomiting (more with the Yuzpe regimen; repeat the dose if vomiting within 2 hours), headache, breast tenderness, irregular bleeding.", x: true },
+          { t: "Not effective if the woman is already pregnant; does not protect against STIs; does not give ongoing protection (except the IUCD).", x: true },
+          { t: "IUCD contraindicated with active pelvic infection or pregnancy; hormonal EC has few contraindications and can be used in adolescents.", x: true }
+        ]},
+        { h: "Counselling and follow-up", pts: [
+          { t: "Offer a pregnancy test if the next period is more than a week late; start a regular method; give STI screening and advice after sexual assault.", x: true },
+          { t: "Increase awareness and access (pharmacies, adolescent services) because EC is underused (low knowledge among adolescents).", x: true }
         ]}
       ]
     }
@@ -1591,6 +1799,97 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// O&G · Single-best-option MCQ · Family planning.
+// Slide-backed items cite p.xxx (population dynamics p.373-414, new technology p.415-438, natural methods/LAM p.439-459,
+// postpartum contraception p.1456-1458). "Standard teaching" = core methods the deck does not cover (pills, injectables, IUCD, EC).
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "og-mcq-fp",
+  subject: "O&G",
+  group: "Family planning",
+  type: "mcq",
+  title: "O&G MCQ · Family planning (15 single best option)",
+  negativeMarking: false,
+  questions: [
+    { topic: "Population and policy", src: "p.407",
+      stem: "Unmet need for family planning refers to the proportion of fecund women who:",
+      options: ["Use a traditional method", "Wish to space or limit births but are not using contraception", "Have never heard of contraception", "Are infertile", "Are using a method incorrectly"],
+      answer: 1,
+      explain: "Slide p.407. In the 2003 NDHS slides the unmet need (spacers plus limiters) was 17% (p.391, 411). Unsafe abortion is described as a prime indicator of unmet need (p.554). It is not about awareness, which was already high (90% of men, 80% of women, p.391)." },
+    { topic: "Population and policy", src: "p.391, 411",
+      stem: "In the 2003 Nigeria Demographic and Health Survey summarised in your lecture, the prevalence of use of any modern contraceptive method was about:",
+      options: ["8%", "25%", "40%", "60%", "75%"],
+      answer: 0,
+      explain: "Any method 13%, modern methods 8% (pill, injectables and male condom 2% each); urban 20% versus rural 9% (p.391). Awareness is high (90% of men, 80% of women), so the gap is use, not knowledge. National target: raise modern CPR by at least 2% every year (p.396)." },
+    { topic: "Natural methods", src: "p.444",
+      stem: "In the calendar (rhythm) method, the first day of the fertile time is estimated by:",
+      options: ["Subtracting 18 from the shortest recorded cycle", "Adding 14 to the longest cycle", "Subtracting 11 from the shortest cycle", "Counting 14 days from the last menstrual period", "Subtracting 18 from the longest cycle"],
+      answer: 0,
+      explain: "Subtract 18 days from the SHORTEST of at least 6 recorded cycles for the first fertile day, and 11 days from the LONGEST cycle for the last fertile day. A woman with cycles of 26–30 days: fertile from day 8 to day 19. That is the same window as the Standard Days Method (days 8–19, for cycles of 26–32 days, p.429)." },
+    { topic: "Natural methods", src: "p.445",
+      stem: "In the basal body temperature method, ovulation is signalled by:",
+      options: ["A fall of 0.5°C at ovulation", "A rise of 0.2–0.5°C around the time of ovulation", "A rise of 2°C for 24 hours", "Watery, clear mucus", "A fall in pulse rate"],
+      answer: 1,
+      explain: "Temperature (same time each morning, before rising, same route) rises by 0.2–0.5°C around ovulation because of progesterone. The woman can have sex after the temperature has been raised for 3 days. Billings (cervical mucus) method: fertile when mucus is clear, slippery and stretchy. Periodic abstinence: about 20 pregnancies per 100 women in the first year (p.447)." },
+    { topic: "Natural methods", src: "p.454",
+      stem: "For the lactational amenorrhoea method (LAM) to give about 98% protection, which conditions must apply?",
+      options: ["Any breastfeeding for 12 months", "Exclusive breastfeeding, amenorrhoea maintained, baby under 6 months", "Breastfeeding twice daily with formula top-ups", "Menses returned but breastfeeding continues", "Breastfeeding plus oral contraceptive pills"],
+      answer: 1,
+      explain: "Slide p.454: exclusive breastfeeding for 6 months, amenorrhoea must be maintained; about 2% pregnancy rate if properly used. After 6 months effectiveness is uncertain (p.457), so start a follow-on method. Disadvantages: no protection against STIs, small chance of HIV transmission via milk (p.457)." },
+    { topic: "Natural methods", src: "p.429",
+      stem: "The Standard Days Method (CycleBeads) is suitable for women whose cycles are:",
+      options: ["Irregular", "26 to 32 days long", "Shorter than 21 days", "Longer than 40 days", "Absent"],
+      answer: 1,
+      explain: "It identifies days 8–19 as fertile and is for women with cycles of 26–32 days; efficacy about 95% when properly used. Red bead = day 1, brown beads = days when pregnancy is unlikely, white beads = fertile days (p.430)." },
+    { topic: "IUCD", src: "p.425",
+      stem: "The levonorgestrel intrauterine system (Mirena) is:",
+      options: ["A copper device with 380 mm² of copper", "A T-shaped polyethylene device with a reservoir containing 52 mg of levonorgestrel", "A progesterone-releasing ring", "A device containing 150 mg of medroxyprogesterone", "A non-hormonal device made of silicone"],
+      answer: 1,
+      explain: "Slide p.425: T-shaped polyethylene frame, 32 mm, silicone reservoir with 52 mg levonorgestrel. Mechanisms: thickens cervical mucus, thins the endometrium, and may inhibit ovulation. It reduces menstrual loss, so it is also used for menorrhagia. Effective for 5 years (copper T 380A is effective for 10 years)." },
+    { topic: "IUCD", src: "Standard teaching; p.1458",
+      stem: "Which of the following is a contraindication to insertion of an IUCD?",
+      options: ["Nulliparity", "Uterine fibroid that does not distort the cavity", "Acute pelvic inflammatory disease (salpingitis)", "Hypothyroidism", "HIV-positive partner"],
+      answer: 2,
+      explain: "Active pelvic infection, pregnancy, unexplained vaginal bleeding, cervical or endometrial cancer, and a distorted cavity are contraindications. Nulliparity is not (past MCQ), nor is a previous ectopic pregnancy in current WHO guidance. Inserting an IUCD in the immediate postpartum has a high chance of extrusion (p.1458) and it is not the best choice in sickle cell disease (infection and bleeding, p.1084)." },
+    { topic: "Emergency contraception", src: "Standard teaching; p.431",
+      stem: "Which is the most effective method of emergency contraception?",
+      options: ["Levonorgestrel 1.5 mg", "Combined (Yuzpe) regimen", "Copper IUCD inserted within 5 days", "Nonoxynol-9 spermicide", "Two doses of mifepristone"],
+      answer: 2,
+      explain: "A copper IUCD within 5 days of unprotected intercourse (more than 99% effective; also gives ongoing contraception). Hormonal: levonorgestrel 1.5 mg stat within 72 hours (some effect to 120 hours), ulipristal 30 mg within 120 hours, or Yuzpe (EE 100 µg + LNG 0.5 mg, repeated 12 hours later). Your slide p.431 describes the research on single-dose LNG, mifepristone 10 mg and gestrinone. Emergency contraception is asked in at least nine sittings." },
+    { topic: "Emergency contraception", src: "Standard teaching",
+      stem: "Which of the following is NOT used as emergency contraception?",
+      options: ["Levonorgestrel 1.5 mg", "Ulipristal acetate", "Yuzpe regimen", "Copper IUCD", "Nonoxynol-9 spermicide"],
+      answer: 4,
+      explain: "A past MCQ with the same stem. Spermicides are a barrier-type vaginal method used before intercourse; they have no emergency role. EC mechanism (asked directly): levonorgestrel delays or inhibits ovulation; copper causes sterile endometritis and is toxic to sperm. Mifepristone does NOT work by making the zona pellucida impenetrable." },
+    { topic: "Hormonal methods", src: "Standard teaching",
+      stem: "The primary mode of action of the progestogen-only injectable (DMPA) is:",
+      options: ["Inhibition of ovulation", "Prevention of implantation only", "Spermicidal action", "Atrophy of the fallopian tube", "Destruction of the corpus luteum"],
+      answer: 0,
+      explain: "DMPA 150 mg IM every 3 months suppresses the LH surge and so prevents ovulation; it also thickens cervical mucus and thins the endometrium. Side effects: menstrual irregularity then amenorrhoea, weight gain, delayed return of fertility (about 9–10 months), loss of bone density. The combined monthly injectables (Cyclofem, Mesigyna) cause fewer menstrual disturbances (p.422)." },
+    { topic: "Hormonal methods", src: "Standard teaching",
+      stem: "A woman with a previous deep vein thrombosis asks for the combined oral contraceptive pill. You should:",
+      options: ["Prescribe a low-dose pill", "Advise against it, since a history of VTE is a contraindication, and offer a progestogen-only or non-hormonal method", "Prescribe the pill with aspirin", "Prescribe the pill with a calcium supplement", "Reduce the pill dose by half"],
+      answer: 1,
+      explain: "Contraindications to oestrogen-containing methods (past 'list 10'): previous VTE or thrombophilia, ischaemic heart disease, stroke, migraine with aura, severe hypertension, breast cancer, active liver disease or liver tumour, smoker over 35, diabetes with vascular disease, within 6 weeks postpartum while breastfeeding, undiagnosed genital bleeding. Alternatives: copper or LNG-IUCD, implant, injectable, POP." },
+    { topic: "Implants", src: "p.435",
+      stem: "Which of the following statements about contraceptive implants is correct?",
+      options: ["Norplant consists of six levonorgestrel capsules; Jadelle has 2 rods of levonorgestrel 75 mg each; Implanon has a single rod", "Norplant is effective for 10 years", "Implanon contains levonorgestrel", "Jadelle is a single-rod implant", "Implants protect against STIs"],
+      answer: 0,
+      explain: "Slide p.435: Jadelle (2 silicone rods, 75 mg levonorgestrel each, an improved Norplant), Implanon (1 rod of etonogestrel, the active metabolite of desogestrel). Norplant lasts 5 years, not 10 (a past stem). Jadelle 5 years, Implanon 3 years. Effects of enzyme inducers (rifampicin, carbamazepine, phenytoin) reduce effectiveness; return of fertility is rapid after removal. Past short notes: 'contraceptive implants' (6 sittings)." },
+    { topic: "Postpartum", src: "p.1456–1458",
+      stem: "A breastfeeding woman at 3 weeks postpartum wants a hormonal method. The best choice is:",
+      options: ["Combined oral contraceptive pill immediately", "Progestogen-only method (minipill, implant, or depot)", "Copper IUCD immediately", "Diaphragm", "No method is needed until 6 weeks"],
+      answer: 1,
+      explain: "Slide p.1457: progestogen-only pills, Norplant or depot-Provera are recommended; combined pills reduce milk more, so establish lactation first. Non-hormonal choice before 6 weeks: condom, preferred over caps and diaphragms (the cervix needs time to return to normal), and it prevents STIs (p.1458). The slides add that sexual intercourse can resume at about 3 weeks, so counsel early (p.1456)." },
+    { topic: "Hormonal methods", src: "p.432–433",
+      stem: "Compared with the combined oral contraceptive pill, a contraceptive vaginal ring has all of the following advantages EXCEPT:",
+      options: ["No daily intake is needed", "Use is unrelated to intercourse", "Fewer side-effects because it avoids first-pass liver metabolism", "Fertility returns rapidly on removal", "Protection against sexually transmitted infections"],
+      answer: 4,
+      explain: "A past MCQ. Your slides list the advantages of the ring (p.432–433): worn continuously for weeks, not tied to intercourse, less systemic effect by avoiding the liver, and a quick return of fertility. The ring (and every hormonal method) gives no protection against STIs; only condoms do." }
+  ]
+}]);
+
+</script>
+<script>
 // O&G · Single-best-option MCQ · Hypertension in pregnancy.
 // The supplied slide deck has NO lecture on pre-eclampsia/eclampsia. Standard teaching shaped by the past papers;
 // src names a slide page only where the deck mentions the point.
@@ -1872,8 +2171,8 @@ const banks=[];
   const by={}; b.questions.forEach(q=>(by[q.group]=by[q.group]||[]).push(q));
   Object.entries(by).forEach(([g,qs])=>banks.push({...b,id:b.id+"::"+g,group:g,title:"O&G Fill-in-the-gap · "+g,questions:qs}));
 });
-const GROUPS=["Menstrual disorders & DUB","Amenorrhoea & PCOS","Abortion","Ectopic pregnancy","Antepartum haemorrhage","Hypertension in pregnancy","Labour & the partograph","Infertility","Fibroids & endometriosis","Anaemia in pregnancy","Postpartum haemorrhage & oxytocics"];
-const COMING=["Antenatal care & booking","Gynaecological cancers","Family planning","Genital infections & STIs","Prolapse & fistulae","Instruments & imaging (picture test)"];
+const GROUPS=["Menstrual disorders & DUB","Amenorrhoea & PCOS","Abortion","Ectopic pregnancy","Antepartum haemorrhage","Hypertension in pregnancy","Labour & the partograph","Family planning","Infertility","Fibroids & endometriosis","Anaemia in pregnancy","Postpartum haemorrhage & oxytocics"];
+const COMING=["Antenatal care & booking","Gynaecological cancers","Genital infections & STIs","Prolapse & fistulae","Instruments & imaging (picture test)"];
 let curGroup=null;
 const TYPE_LABEL={cards:"Flashcards",mcq:"Multiple choice",essay:"Essays",fillgap:"Fill in the gap"};
 const TYPE_ORDER=["cards","mcq","fillgap","essay"];
