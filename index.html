@@ -79,6 +79,7 @@ select{font:inherit;padding:8px;border:1px solid var(--line);border-radius:8px;b
 .chip-btn small{color:var(--mute);font-size:12px}
 .chip-btn.on{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,var(--card));font-weight:600}
 .detail{margin-top:8px}
+.tfb:disabled{opacity:1;color:var(--ink)}
 
 </style>
 <header><h1>MBBS III Resit · Exam Practice</h1><div id="timer" hidden></div></header>
@@ -2486,6 +2487,901 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Essays · Endocrinology. Two long "leading to a diagnosis" essays and seven short essays.
+// Points flagged x:true go beyond the slides (the deck covers growth, puberty, CAH, Cushing and the pituitary, p.35-56; it has no
+// lecture on diabetes, thyroid disease, hypoglycaemia or rickets, so those essays are standard teaching shaped by past papers:
+// 2012.19 hypoglycaemia short note, 2k17-2k2.291 DKA, 2k17-2k2.307 hypoglycaemia, 2k17-2k2.337 rickets).
+(function(){
+const P=(t,x)=>x?{t,x:true}:{t};
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-essay-endo",
+  subject: "Paediatrics",
+  group: "Paediatric endocrinology",
+  type: "essay",
+  title: "Paediatrics Essays · Endocrinology (2 long, 7 short)",
+  essays: [
+    {
+      kind: "Long essay (20 marks) · leading to a diagnosis", marks: 20, topic: "Diabetic ketoacidosis", src: "Standard teaching; past papers 2k17-2k2.291, 2k17-2k2.374, paed.187",
+      prompt: "A 7-year-old girl is brought to the emergency room with a 3-week history of excessive thirst, passing large volumes of urine and weight loss. For 2 days she has had abdominal pain and vomiting, and today she is drowsy with deep, sighing breathing. Discuss your diagnosis and management.",
+      tip: "Name the diagnosis in the first line, justify it from the history, then work in the order you would act: resuscitate, confirm, treat, monitor, prevent complications, educate. Examiners give most marks for the fluid and insulin plan and for naming cerebral oedema.",
+      sections: [
+        { h: "Diagnosis and reasoning", pts: [
+          P("Diabetic ketoacidosis (DKA) as the first presentation of type 1 diabetes mellitus.", true),
+          P("Polyuria, polydipsia, weight loss: osmotic diuresis and catabolism from insulin deficiency.", true),
+          P("Vomiting and abdominal pain from ketosis; drowsiness from acidosis and hyperosmolarity; Kussmaul (acidotic) breathing.", true),
+          P("Biochemical criteria: glucose over 11 mmol/L, venous pH under 7.3 or bicarbonate under 18 mmol/L, ketonaemia or ketonuria.", true),
+        ]},
+        { h: "Differential diagnosis", pts: [
+          P("Severe malaria or sepsis with metabolic acidosis (slide p.143-144 lists acidosis and hypoglycaemia in severe malaria).", true),
+          P("Hypoglycaemic coma in a known diabetic, salicylate poisoning, gastroenteritis with acidosis, meningitis, other causes of coma.", true),
+          P("Always check bedside glucose and urine/blood ketones; do not rely on the breathing pattern alone.", true),
+        ]},
+        { h: "Immediate assessment and investigations", pts: [
+          P("ABC, oxygen if needed, two IV lines, weigh the child, assess dehydration and conscious level (GCS).", true),
+          P("Blood glucose, blood gas/pH, urea, electrolytes, creatinine, ketones, FBC, blood culture, malaria parasite, urinalysis.", true),
+          P("ECG for potassium effect if available.", true),
+          P("Later: HbA1c, islet autoantibodies, thyroid and coeliac screening.", true),
+        ]},
+        { h: "Management", pts: [
+          P("Fluids: 10-20 ml/kg 0.9% saline over 30-60 min ONLY if shocked; otherwise replace deficit plus maintenance evenly over about 48 hours.", true),
+          P("Insulin: IV infusion 0.05-0.1 unit/kg/hour started about 1 hour after fluids; no bolus.", true),
+          P("Potassium: add about 40 mmol/L to fluids once urine output is established and K+ is not high.", true),
+          P("Add dextrose when glucose falls to about 14 mmol/L; keep the insulin running to clear ketones.", true),
+          P("No routine bicarbonate.", true),
+          P("Nurse in HDU/ICU; hourly glucose and neuro observations; electrolytes and gas every 2-4 hours.", true),
+          P("Treat the precipitant: infection, missed insulin.", true),
+        ]},
+        { h: "Complications to prevent or treat", pts: [
+          P("Cerebral oedema: headache, bradycardia, rising BP, falling GCS 4-12 hours in; give mannitol 0.5-1 g/kg or hypertonic saline, slow fluids.", true),
+          P("Hypokalaemia, hypoglycaemia, hypophosphataemia; aspiration (nasogastric tube if drowsy); thrombosis; infection.", true),
+        ]},
+        { h: "Long-term plan and education", pts: [
+          P("Basal-bolus subcutaneous insulin once eating; dose about 0.7-1 unit/kg/day.", true),
+          P("Teach injection technique and site rotation, glucose monitoring, hypoglycaemia recognition and treatment, sick-day rules (never omit insulin).", true),
+          P("HbA1c every 3 months; screening for retinopathy, nephropathy, thyroid, coeliac disease; diet; school and family support.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Long essay (20 marks) · leading to a diagnosis", marks: 20, topic: "Congenital adrenal hyperplasia", src: "p.48-50, 56 + Standard teaching; past papers 2000.9, paed.36, 37, 185, 191",
+      prompt: "A 12-day-old baby is brought with poor feeding, vomiting and lethargy. On examination the baby is dehydrated and the genitalia are ambiguous. Discuss the diagnosis and management.",
+      tip: "Two problems at once: an emergency (salt-wasting crisis) and a diagnostic and social problem (ambiguous genitalia). Resuscitate first, then investigate, then counsel. Do not announce a sex. Name 21-hydroxylase deficiency and its biochemistry.",
+      sections: [
+        { h: "Diagnosis", pts: [
+          P("Congenital adrenal hyperplasia (CAH): ambiguous genitalia in the newborn strongly suggests CAH (slide p.49).", false),
+          P("Autosomal recessive; deficiency of an enzyme needed for cortisol synthesis, commonest 21-hydroxylase (p.49-50).", false),
+          P("Low cortisol leads to raised ACTH and over-production of androgens; salt-wasting from aldosterone deficiency presents at 1-3 weeks.", true),
+          P("Virilised 46,XX baby with normal ovaries and uterus; an XY baby can look normal and present only with the crisis.", true),
+        ]},
+        { h: "Differential diagnosis", pts: [
+          P("Other forms of CAH: 11-beta-hydroxylase, 3-beta-HSD, 17-alpha-hydroxylase/17,20-lyase deficiency (p.50).", false),
+          P("46,XY disorders of sex development: androgen insensitivity, 5-alpha-reductase deficiency, gonadal dysgenesis.", true),
+          P("Ovotesticular DSD; sepsis, pyloric stenosis, metabolic disease as causes of the vomiting and shock.", true),
+        ]},
+        { h: "Investigations", pts: [
+          P("Plasma 17-hydroxyprogesterone raised (21-OH and 11-OH deficiency), cortisol low, urinary 17-ketosteroids raised (p.50).", false),
+          P("Serum sodium low, potassium raised, bicarbonate low; glucose often low (p.50).", false),
+          P("Karyotype (and SRY), pelvic ultrasound for uterus, genitogram; testosterone, DHT, LH, FSH, ACTH if needed.", true),
+          P("Bone age advanced later (p.50); genetic studies.", false),
+        ]},
+        { h: "Emergency management", pts: [
+          P("ABC; 0.9% saline 20 ml/kg boluses for shock; 10% dextrose 2 ml/kg for hypoglycaemia.", true),
+          P("IV hydrocortisone as a stress dose (up to 100 mg/m2 in crisis, p.50), then maintenance.", false),
+          P("Monitor sodium, potassium, glucose closely; correct hyperkalaemia if ECG changes.", true),
+        ]},
+        { h: "Long-term management", pts: [
+          P("Lifelong glucocorticoid replacement: hydrocortisone 10-20 mg/m2/day in divided doses (p.50).", false),
+          P("Fludrocortisone and salt supplements in the salt-wasting form.", true),
+          P("Goal: suppress adrenal androgen secretion so normal growth and skeletal maturation proceed (p.50).", false),
+          P("Monitor 17-OHP, growth, bone age; watch for iatrogenic Cushing (hypertension, weight gain, striae); inadequate dosing gives early fast growth then short stature (p.50-51).", false),
+          P("Stress-dose rules for illness and surgery; emergency card or bracelet.", true),
+        ]},
+        { h: "Counselling and psychosocial", pts: [
+          P("Do not assign sex until the multidisciplinary team (paediatrician, endocrinologist, surgeon, psychologist) has the results; counsel parents together.", true),
+          P("Genetic counselling: 25% recurrence risk; prenatal diagnosis and newborn screening where available.", true),
+          P("Later feminising surgery decisions, fertility and psychosocial support.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Congenital hypothyroidism", src: "p.37, 41-42, 81 + Standard teaching; past papers paed.186, 217, 224, 239",
+      prompt: "Write short notes on congenital hypothyroidism.",
+      tip: "Definition, causes, clues in the newborn, diagnosis, treatment with dose and timing, outcome. The marks are for early recognition and levothyroxine.",
+      sections: [
+        { h: "Definition and causes", pts: [
+          P("Deficiency of thyroid hormone present from birth.", true),
+          P("Thyroid dysgenesis (aplasia, hypoplasia, ectopic gland) commonest; dyshormonogenesis (inborn errors); iodine deficiency; transient (maternal antibodies, drugs).", true),
+          P("Thyroid hormone is needed for brain growth and maturation, fontanelle closure and growth (p.37).", false),
+        ]},
+        { h: "Clinical features", pts: [
+          P("Prolonged jaundice, constipation or delayed stooling (p.81), poor feeding, lethargy, hypotonia.", false),
+          P("Large tongue, hoarse cry, umbilical hernia, dry coarse skin, cold mottled skin, bradycardia.", true),
+          P("Wide fontanelles with delayed anterior fontanelle closure (p.41); short stature with high US/LS ratio (p.41).", false),
+          P("Retarded bone age (p.42).", false),
+        ]},
+        { h: "Diagnosis", pts: [
+          P("Newborn heel-prick TSH screening on about day 5; raised TSH with low free T4.", true),
+          P("Thyroid ultrasound or scan for the cause; knee X-ray for absent distal femoral epiphysis.", true),
+        ]},
+        { h: "Treatment and outcome", pts: [
+          P("Levothyroxine 10-15 micrograms/kg/day, started within 2 weeks of birth; lifelong in permanent forms.", true),
+          P("Monitor TSH and free T4, growth, development.", true),
+          P("Early treatment gives a normal outcome; late treatment gives intellectual disability, deafness and short stature (cretinism).", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Neonatal hypoglycaemia", src: "p.59, 143-144, 174 + Standard teaching; past papers 2012.19, paed.235, 897, 901, 2k17-2k2.307",
+      prompt: "Write short notes on neonatal hypoglycaemia.",
+      tip: "Define, list at-risk babies, then causes, features, treatment with the dextrose dose, prevention. Name the at-risk groups from the slides: SGA, preterm, infants of diabetic mothers.",
+      sections: [
+        { h: "Definition and risk", pts: [
+          P("Blood glucose below about 2.6 mmol/L (47 mg/dl) in the newborn; may be asymptomatic.", true),
+          P("At risk: small for gestational age, preterm, infant of a diabetic mother, asphyxia, hypothermia, sepsis, polycythaemia.", false),
+        ]},
+        { h: "Causes", pts: [
+          P("SGA: rapid depletion of glycogen stores and impaired gluconeogenesis (p.174).", false),
+          P("Hyperinsulinism: infant of a diabetic mother (p.59), Beckwith-Wiedemann syndrome, rhesus disease.", true),
+          P("Endocrine: hypopituitarism, cortisol or GH deficiency, CAH (p.50, 56). Metabolic: glycogen storage disease, galactosaemia, fatty-acid oxidation defects.", true),
+        ]},
+        { h: "Clinical features", pts: [
+          P("Jitteriness, apnoea, cyanosis, lethargy, poor feeding, hypotonia, seizures, hypothermia; may be silent.", true),
+        ]},
+        { h: "Management and prevention", pts: [
+          P("Confirm with a lab glucose or reflectance strip; take a critical sample if persistent.", true),
+          P("Asymptomatic: feed early (breast milk), recheck; symptomatic or low: 10% dextrose 2 ml/kg IV, then infusion 6-8 mg/kg/min.", true),
+          P("Persistent: hydrocortisone, glucagon, diazoxide; look for hyperinsulinism or hormone deficiency.", true),
+          P("Prevention: early breastfeeding, skin-to-skin, keep warm, monitor at-risk babies.", true),
+          P("Untreated, it risks brain injury and developmental delay.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Rickets", src: "p.38, 41 + Standard teaching; past papers 2k17-2k2.337, paed.40-43, 190, 193, 197, 212, 231",
+      prompt: "Write short notes on nutritional rickets in children.",
+      tip: "Define, causes (include dietary calcium in Nigeria), clinical features by site, biochemistry and X-ray, treatment with doses, prevention, differentials for bowing.",
+      sections: [
+        { h: "Definition and causes", pts: [
+          P("Defective mineralisation of growing bone and cartilage (the growth plate, p.38).", true),
+          P("Vitamin D deficiency (poor sunlight, prolonged exclusive breastfeeding without supplement, malabsorption), dietary calcium deficiency, renal and hypophosphataemic rickets.", true),
+        ]},
+        { h: "Clinical features", pts: [
+          P("Delayed anterior fontanelle closure, frontal bossing, craniotabes (p.41).", false),
+          P("Wide wrists, rachitic rosary, Harrison sulcus, genu varum or valgum, windswept deformity.", true),
+          P("Pot belly, hypotonia, delayed walking, delayed dentition, hypocalcaemic tetany or seizures.", true),
+          P("High US/LS ratio, short stature (p.41).", false),
+        ]},
+        { h: "Investigations", pts: [
+          P("Low phosphate, raised alkaline phosphatase, calcium low or normal, raised PTH, low 25-hydroxy vitamin D.", true),
+          P("X-ray wrist: cupping, fraying, widened growth plate.", true),
+        ]},
+        { h: "Treatment and prevention", pts: [
+          P("Vitamin D (for example 2,000-6,000 IU daily for about 12 weeks, or stoss dose) plus calcium; treat hypocalcaemia with IV calcium gluconate.", true),
+          P("Prevention: 400 IU vitamin D daily in infancy, sunlight, calcium-rich diet; orthopaedic correction only for persistent deformity.", true),
+          P("Differentials: Blount disease, physiological bowing, hypophosphataemic and renal rickets, skeletal dysplasia.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Short stature", src: "p.45-47; past papers 2017.87, paed.202",
+      prompt: "Outline the approach to a child who is brought with short stature.",
+      tip: "Define, then history, examination, tests in a logical order, then treatment depending on cause. Quote the slide lists (causes 1-9, tests, GH indications).",
+      sections: [
+        { h: "Definition and causes", pts: [
+          P("Height below the 3rd centile (about -2 SD); 3-5% of children (p.45-46).", false),
+          P("Familial, constitutional delay, nutritional, systemic disease (CHD, TB, CRF, HIV), drugs (steroids), endocrine (GH deficiency, hypothyroidism, Cushing, diabetes), intrauterine (LBW), chromosomal (Turner, Down), emotional deprivation (p.46).", false),
+        ]},
+        { h: "History and examination", pts: [
+          P("Birth events and anthropometry, growth history, nutrition, family history and parental heights and pubertal timing (p.46).", false),
+          P("Plot on charts; height velocity over at least 6 months (p.40); mid-parental height; US/LS ratio and arm span (p.41); Tanner stage; dysmorphism, webbing (Turner).", false),
+        ]},
+        { h: "Investigations", pts: [
+          P("General: FBC, ESR, urinalysis, stool, LFTs, coeliac antibodies, karyotype, bone age (p.46).", false),
+          P("Endocrine: TSH, T4, adrenal tests, calcium, phosphate, PTH, vitamin D; GH axis: IGF-1, IGFBP-3, dynamic tests (p.46-47).", false),
+        ]},
+        { h: "Management", pts: [
+          P("Treat the cause; reassure in familial or constitutional delay; nutrition support.", false),
+          P("Recombinant GH for proven GH deficiency, Turner syndrome, CRF awaiting transplant, Prader-Willi, SGA without catch-up by 2 years, idiopathic short stature (p.47).", false),
+          P("Delayed puberty: testosterone (boys) or oestradiol (girls); bone age is important (p.48).", false),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Disorders of puberty", src: "p.42-44, 47-48; past papers paed.216, 2017.87",
+      prompt: "Write short notes on precocious puberty.",
+      tip: "Definition by age, central versus peripheral causes with examples, work-up (bone age is advanced), treatment by cause. Say who is more often organic.",
+      sections: [
+        { h: "Definition", pts: [
+          P("Secondary sexual characteristics before 8 years in girls and before 9 years in boys (p.48).", false),
+          P("Normal puberty: girls 8-14 years, first sign breast bud; boys 9-14 years, first sign testicular enlargement (p.42-43).", false),
+        ]},
+        { h: "Causes", pts: [
+          P("Central (gonadotropin-dependent): idiopathic (often familial), tumours (optic glioma), raised intracranial pressure (p.48).", false),
+          P("Peripheral (gonadotropin-independent): gonadal, adrenal tumours or cysts; abnormal steroid regulation; CAH (p.48).", false),
+          P("Commoner in girls and mostly idiopathic; in boys an organic cause is likely.", true),
+          P("Others: McCune-Albright, hypothyroidism, hamartoma, hCG-secreting tumours.", true),
+        ]},
+        { h: "Evaluation", pts: [
+          P("Growth chart and Tanner staging; bone age advanced (p.42, 48).", false),
+          P("LH, FSH (GnRH stimulation), oestradiol or testosterone, 17-OHP, TSH; pelvic or testicular ultrasound; MRI brain.", true),
+        ]},
+        { h: "Treatment", pts: [
+          P("Central: GnRH agonists (p.48).", false),
+          P("CAH: hydrocortisone; autonomous sex hormone excess: antiandrogens, aromatase inhibitors, oestrogen antagonists (p.48).", false),
+          P("Complications: short final height from early epiphyseal fusion, psychosocial problems.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Turner syndrome", src: "p.41, 47-48, 199 + Standard teaching; past papers 2k17-2k1.52, paed.255, 268, 468, 990",
+      prompt: "Write short notes on Turner syndrome.",
+      tip: "Genetics, features by system, associated problems, diagnosis, treatment (GH then oestrogen), counselling. Use the slide links (US/LS ratio, bone age, horseshoe kidney, GH approved).",
+      sections: [
+        { h: "Genetics", pts: [
+          P("45,X monosomy (or mosaic/structural abnormality); loss of a sex chromosome in meiosis or early mitosis, not related to maternal age.", true),
+          P("Primary hypogonadism, hypergonadotropic (p.48).", false),
+        ]},
+        { h: "Clinical features", pts: [
+          P("Short stature; raised US/LS ratio (p.41); webbed neck, low posterior hairline, shield chest, cubitus valgus.", false),
+          P("Lymphoedema of hands and feet at birth; short fourth metacarpal; many naevi.", true),
+          P("Streak gonads, delayed puberty and primary amenorrhoea, infertility.", true),
+        ]},
+        { h: "Associated problems", pts: [
+          P("Cardiac: bicuspid aortic valve, coarctation of the aorta. Renal: horseshoe kidney (p.199).", false),
+          P("Autoimmune thyroiditis, coeliac disease, diabetes; recurrent otitis media and deafness; normal intelligence with learning difficulties in some.", true),
+        ]},
+        { h: "Diagnosis and management", pts: [
+          P("Karyotype (p.46); echocardiogram, renal ultrasound, thyroid function, audiometry.", false),
+          P("Growth hormone therapy (p.47); oestrogen at puberty age to induce puberty (p.48).", false),
+          P("Counselling about infertility and donor-egg options; X-linked recessive conditions can be expressed (p.264).", false),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Diabetes mellitus", src: "Standard teaching; past papers 2000.10, 2k17-2k2.375, 2k19.43, paed.192, 195, 210-211, 219-220",
+      prompt: "Discuss the long-term management of type 1 diabetes mellitus in a school-age child.",
+      tip: "Aims first (not normal glucose at all times), then the regimen, monitoring, hypoglycaemia, sick days, complications screening, associated disease and psychosocial care.",
+      sections: [
+        { h: "Aims", pts: [
+          P("Symptom control, normal growth and development, good control without severe hypoglycaemia, prevention of microvascular complications.", true),
+        ]},
+        { h: "Insulin and diet", pts: [
+          P("Lifelong insulin; basal-bolus regimen or twice-daily mixed insulin; dose about 0.7-1 unit/kg/day, higher in puberty.", true),
+          P("Injection technique, rotation of sites; pens, storage.", true),
+          P("Regular meals and snacks matched to insulin; complex carbohydrate; avoid highly refined sugars.", true),
+        ]},
+        { h: "Monitoring and acute problems", pts: [
+          P("Home glucose monitoring; HbA1c every 3 months (not monthly).", true),
+          P("Hypoglycaemia: recognise, treat with fast glucose, glucagon for severe.", true),
+          P("Sick-day rules: never omit insulin, check ketones, seek help early to avoid DKA.", true),
+        ]},
+        { h: "Complications and associations", pts: [
+          P("Screen annually for retinopathy, nephropathy (albumin:creatinine), neuropathy, blood pressure, lipids.", true),
+          P("Autoimmune thyroid disease and coeliac disease; poor control can slow growth and delay puberty.", true),
+          P("Education, school plan, psychosocial support, transition to adult care.", true),
+        ]},
+      ]
+    },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · Picture test (picture + 5 True/False statements each, negative marking −½) · Endocrinology.
+// Pictures are real clinical photographs and radiographs from Wikimedia Commons, linked live (not copied) with licence and
+// author in each caption. Statements are written against the slide material where it exists (p.xxx) and standard teaching otherwise.
+// Real exam picture stations on these themes: paed.38 (neck swelling), paed.39 (genitalia), paed.40-43 (rickets X-rays and legs),
+// paed.70, 72 (windswept deformity, rickets).
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+const F=n=>"https://commons.wikimedia.org/wiki/Special:FilePath/"+n+"?width=720";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-pics-endo",
+  subject: "Paediatrics",
+  group: "Paediatric endocrinology",
+  type: "pics",
+  title: "Paediatrics Picture test · Endocrinology (12 pictures)",
+  negativeMarking: true,
+  secPerQ: 90,
+  questions: [
+    { topic: "Picture: rickets", src: S+"; p.41; paed.40-43", img: F("XrayRicketsLegssmall.jpg"),
+      credit: "AP radiograph of the legs of a 2-year-old with rickets. Wikimedia Commons, CC BY-SA 1.0, uploader Mrich.",
+      stem: "This radiograph is from a 2-year-old with bowed legs.",
+      items: I([
+        ["The most likely diagnosis is rickets.", true, "Bowing of the long bones with widened, frayed metaphyses."],
+        ["Serum alkaline phosphatase is expected to be reduced.", false, "RAISED."],
+        ["The anterior fontanelle may close later than expected in this condition.", true, "Slide p.41 lists rickets among the causes of late closure."],
+        ["Wedge osteotomy in the first year of life is the treatment of choice.", false, "Treat medically first (vitamin D and calcium); surgery only for residual deformity."],
+        ["Blount disease is an important differential diagnosis for the bowing.", true, "Isolated tibia vara, normal biochemistry, normal wrists."],
+      ]),
+      explain: "Station version: (a) what abnormality is seen (b) X-ray findings (c) four differentials (Blount, physiological bowing, hypophosphataemic rickets, renal rickets, skeletal dysplasia) (d) daily vitamin D allowance (400 IU) (e) investigations." },
+
+    { topic: "Picture: rickets", src: S+"; paed.40-43", img: F("RicketsChestXray.jpg"),
+      credit: "Chest radiograph showing nodular costochondral junctions in rickets. Wikimedia Commons, CC BY-SA 3.0, Frank Gaillard.",
+      stem: "This chest radiograph is from an infant with a long history of poor weight gain and cough.",
+      items: I([
+        ["The beaded appearance at the anterior rib ends is the rachitic rosary.", true, "Swollen costochondral junctions."],
+        ["The same swelling can be felt clinically along the sides of the chest.", true, "Rosary; also Harrison sulcus."],
+        ["Serum calcium is always low in this condition.", false, "Often normal; phosphate is low and ALP raised."],
+        ["Repeated chest infections are a recognised association.", true, "Soft chest wall and weak respiratory muscles."],
+        ["Treatment is vitamin D alone, without calcium.", false, "Calcium is part of treatment; give both."],
+      ]),
+      explain: "Similar look: scurvy rosary (sharp, 'sunken' rib ends, with sub-periosteal haemorrhage and corner fractures on the knee X-ray). Chest X-ray is not the best view; the wrist and knee show the metaphyseal change best." },
+
+    { topic: "Picture: rickets", src: S+"; paed.70, 72", img: F("A_child_with_rickets_in_1949.jpg"),
+      credit: "A child with rickets, 1949. Wikimedia Commons, public domain (Ministry of Information & Broadcasting, Government of India / UN photograph).",
+      stem: "This child is malnourished and has severe bowing of the legs.",
+      items: I([
+        ["The deformity may be genu varum or windswept in this condition.", true, "Past picture stations show windswept deformity (valgus one side, varum the other) in rickets."],
+        ["Pot belly and wide wrists may accompany it.", true, "Hypotonia and wrist epiphyseal widening."],
+        ["The child will have a high serum phosphate.", false, "Low."],
+        ["Prevention in infancy is 400 IU of vitamin D daily.", true, "Standard dose; plus calcium-rich weaning foods."],
+        ["The bone changes are always irreversible.", false, "Mostly remodel with treatment."],
+      ]),
+      explain: "A nutrition picture too: the same child may have wasting, vitamin A deficiency, and iron deficiency. Think of the whole malnourished child, not just the legs." },
+
+    { topic: "Picture: thyroid", src: S+"; p.41-42; paed.186, 224", img: F("CDpic1.png"),
+      credit: "3-month-old infant with untreated congenital hypothyroidism: myxoedematous facies and macroglossia. Rastogi & LaFranchi, BioMed Central, CC BY 2.5, via Wikimedia Commons.",
+      stem: "This 3-month-old infant has a puffy face, a large tongue and feeds poorly.",
+      items: I([
+        ["The most likely diagnosis is congenital hypothyroidism.", true, "Myxoedematous facies and macroglossia."],
+        ["A high TSH with a low free T4 would be expected.", true, "Primary hypothyroidism, negative feedback lost (p.55)."],
+        ["Tachycardia and diarrhoea are expected.", false, "Bradycardia and constipation."],
+        ["Delayed closure of the anterior fontanelle is expected.", true, "Slide p.41."],
+        ["Bone age is advanced.", false, "RETARDED (slide p.42)."],
+      ]),
+      explain: "Why this gets a picture station: it is treatable and the picture is classic. Unrecognised by 3 months means irreversible IQ loss. Levothyroxine started in the first 2 weeks gives a near-normal outcome." },
+
+    { topic: "Picture: thyroid", src: S+"; paed.186, 224, 239", img: F("CDpic3.png"),
+      credit: "Same infant, whole body: hypotonic posture, protruding abdomen. Rastogi & LaFranchi, BioMed Central, CC BY 2.5, via Wikimedia Commons.",
+      stem: "The whole infant is shown: floppy posture and a distended abdomen.",
+      items: I([
+        ["An umbilical hernia may be present.", true, "Weak abdominal muscles."],
+        ["Prolonged physiological jaundice is part of the history.", true, "Slow hepatic conjugation."],
+        ["Meconium ileus is typical.", false, "That is cystic fibrosis; hypothyroidism delays meconium passage."],
+        ["Cold, mottled skin is a recognised sign.", true, "Low metabolic rate."],
+        ["The condition is usually fatal if untreated.", false, "Not usually fatal; causes cretinism."],
+      ]),
+      explain: "Newborn screening (heel-prick TSH on day 5) exists because these signs are often missed in the first weeks." },
+
+    { topic: "Picture: Turner", src: S+"; p.41, 47-48, 199", img: F("Preoperative_webbed_neck_in_Turner_syndrome.jpg"),
+      credit: "Teenage girl with Turner syndrome and webbed neck. Imen Mehri Turki, CC BY 4.0, via Wikimedia Commons.",
+      stem: "This teenage girl is short and has not started puberty.",
+      items: I([
+        ["The karyotype is 45,X (or a mosaic).", true, "Slide p.48."],
+        ["FSH and LH are expected to be low.", false, "HIGH: hypergonadotropic hypogonadism from streak ovaries (p.48)."],
+        ["Coarctation of the aorta should be looked for.", true, "Also bicuspid aortic valve."],
+        ["Horseshoe kidney is commoner in this condition.", true, "Slide p.199."],
+        ["Growth hormone is not approved for her short stature.", false, "It is (slide p.47)."],
+      ]),
+      explain: "Same station, different angle: also shown as shield chest, cubitus valgus, puffy hands and feet in a newborn. Karyotype, echo, renal ultrasound, thyroid and coeliac screening." },
+
+    { topic: "Picture: Cushing", src: "p.51-52; "+S, img: F("BabyCushing.png"),
+      credit: "Infant with features of Cushing syndrome: round facies, acne. Fudge, von Allmen, Volmar, Calikoglu, CC BY 3.0, via Wikimedia Commons.",
+      stem: "This child has a round face, acne and has stopped growing.",
+      items: I([
+        ["The condition is caused by excess glucocorticoid.", true, "Slide p.51."],
+        ["The commonest cause in a child is long-term steroid treatment.", true, "Iatrogenic first, then adrenal and pituitary."],
+        ["Central obesity, purple striae and hypertension may be present.", true, "Slide p.51."],
+        ["Growth is usually accelerated.", false, "Growth is IMPAIRED (slide p.51); fat child who is short."],
+        ["Cushing disease and Cushing syndrome are the same.", false, "Disease = pituitary ACTH excess only (p.51)."],
+      ]),
+      explain: "Tests: 24-h urinary free cortisol, midnight cortisol, low-dose dexamethasone suppression (p.51-52). Treatment depends on cause; pituitary adenoma: transsphenoidal surgery (p.52)." },
+
+    { topic: "Picture: ambiguous genitalia", src: "p.49-50; paed.36, 39", img: F("Ambiguous_genitalia.jpg"),
+      credit: "Ambiguous genitalia of a preterm infant: clitoromegaly and hyperpigmentation. Tantbirojn, Taweevisit, Sritippayawan, Uerpairojkit, CC BY 2.0, via Wikimedia Commons.",
+      stem: "A newborn with an enlarged clitoris-phallus and darkly pigmented genital skin.",
+      items: I([
+        ["Congenital adrenal hyperplasia is the commonest cause in a 46,XX baby.", true, "Slide p.49."],
+        ["The baby should be given a sex of rearing in the delivery room.", false, "Wait for karyotype, ultrasound and hormone results."],
+        ["Plasma 17-hydroxyprogesterone is raised.", true, "Slide p.50 (21- and 11-hydroxylase)."],
+        ["The baby may lose salt and present in shock in the first weeks.", true, "Hyponatraemia, hyperkalaemia, acidosis."],
+        ["Hyperpigmentation points to low ACTH.", false, "HIGH ACTH stimulates melanocytes (MSH)."],
+      ]),
+      explain: "Hyperpigmentation + ambiguous genitalia = CAH until proven otherwise. Hydrocortisone and fluid resuscitation first; sex assignment afterwards." },
+
+    { topic: "Picture: ambiguous genitalia", src: "p.48-50; "+S, img: F("ClitoromegalyCAH.jpg"),
+      credit: "Clitoromegaly with normal labia and introitus in a child with CAH. Siddiqui, Soomro, Ganatra, CC BY 3.0, via Wikimedia Commons.",
+      stem: "A girl with an enlarged clitoris and normal labia and vaginal opening.",
+      items: I([
+        ["This is virilisation from excess adrenal androgen.", true, "21-hydroxylase deficiency is the commonest cause (p.50)."],
+        ["Treatment is lifelong glucocorticoid replacement.", true, "Slide p.50: hydrocortisone 10-20 mg/m2/day in divided doses."],
+        ["Over-treatment suppresses growth and can cause a Cushingoid appearance.", true, "Slide p.50-51."],
+        ["Bone age is delayed.", false, "ADVANCED (p.50)."],
+        ["She may present later with precocious puberty if untreated.", true, "Slide p.48: CAH is a peripheral cause of precocious puberty."],
+      ]),
+      explain: "Prader stages describe virilisation from 1 (isolated clitoromegaly) to 5 (a male-type phallus with urethra at the tip)." },
+
+    { topic: "Picture: puberty", src: "p.43-44", img: F("Female_breasts_five_Tanner_stages.jpg"),
+      credit: "Five Tanner stages of breast growth. Shuttleworth, The Adolescent Period (1951), public domain, via Wikimedia Commons.",
+      stem: "Tanner staging of breast development.",
+      items: I([
+        ["Stage I has no glandular tissue; the areola follows the contour of the chest.", true, "Slide p.44."],
+        ["Stage II is the breast bud with widening of the areola.", true, "The first sign of puberty in girls (p.43)."],
+        ["Stage V is reached before stage III.", false, "They go in order I to V."],
+        ["In stage IV the areola and papilla form a secondary mound.", true, "Slide p.44."],
+        ["The first sign of puberty in girls is pubic hair.", false, "Breast bud (p.43)."],
+      ]),
+      explain: "Pubic hair uses the same 5 stages for both sexes. Boys: genital stages are based on testicular volume (4, 6, 12, 20 ml)." },
+
+    { topic: "Picture: puberty", src: "p.44", img: F("Male_genitalia_five_Tanner_stages.png"),
+      credit: "Five Tanner stages of male genital development. Shuttleworth, The Adolescent Period (1951), public domain, via Wikimedia Commons.",
+      stem: "Tanner staging of male genital development.",
+      items: I([
+        ["Stage II corresponds to a testicular volume of 4-6 ml.", true, "Slide p.44."],
+        ["Penile length increases first, before testicular enlargement.", false, "Testicular enlargement is the FIRST sign (p.43); penile growth starts at stage III."],
+        ["A Prader orchidometer (beads) is used to estimate testicular volume.", true, "Standard instrument in picture tests."],
+        ["Stage V has a testicular volume above 20 ml.", true, "Slide p.44."],
+        ["Precocious puberty in a boy means signs before 9 years.", true, "Slide p.48."],
+      ]),
+      explain: "A boy with testes of 3 ml who is 15 years old has constitutional delay or hypogonadism (slide p.48)." },
+
+    { topic: "Picture: diabetes", src: S+"; paed.192, 195", img: F("Insulin_pen.JPG"),
+      credit: "Pre-filled insulin pens. Wikimedia Commons, public domain (PerPlex).",
+      stem: "A pre-filled insulin pen used by a 10-year-old with type 1 diabetes.",
+      items: I([
+        ["Injection sites should be rotated within the same body region.", true, "Avoids lipohypertrophy."],
+        ["Insulin is given subcutaneously in the abdomen, thigh or buttock.", true, "Never intramuscularly in routine care."],
+        ["Intermediate or basal insulin and rapid-acting insulin are never used together.", false, "Basal-bolus regimens do exactly that."],
+        ["A child on insulin who is vomiting and unwell should stop insulin.", false, "Never stop; check ketones, seek review (sick-day rules)."],
+        ["Oral hypoglycaemic agents replace insulin in type 1 diabetes.", false, "No; insulin is lifelong."],
+      ]),
+      explain: "Other instruments in this station: glucometer, ketone strips, urine dipstick, sharps bin. Counselling points: hypoglycaemia recognition, glucose tablets, glucagon." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · True/False (5 statements per stem, negative marking −½) · Endocrinology paper 1: growth, puberty, pituitary, adrenal.
+// Every stem cites the slide page(s) it comes from (Paediatrics CS edited.pdf; growth lecture p.35-48, adrenal p.49-52,
+// hypothalamo-pituitary axis p.53-56). Items marked "Standard teaching" go beyond the slides (e.g. salt-wasting detail).
+// Shape of past papers: 2000.9, paed.36-37, 185, 191, 196, 201, 202, 216, 236, 2017.87, 2k17-2k2.373.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-endo-1",
+  subject: "Paediatrics",
+  group: "Paediatric endocrinology",
+  type: "tf",
+  title: "Paediatrics T/F · Endocrinology 1: growth, puberty, pituitary, adrenal (17 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "Growth & growth charts", src: "p.39-40",
+      stem: "Concerning normal growth in childhood:",
+      items: I([
+        ["A term newborn loses about 10% of birth weight in the first week and regains it by about 10 days.", true, "Slide p.39."],
+        ["Birth weight doubles by 5 months and triples by 1 year.", true, "Slide p.39. (Length: about 25 cm in year 1, then 10 cm in year 2, p.40.)"],
+        ["Height velocity in the second year of life is about 10 cm per year.", true, "Slide p.40 table: 1st year 25, 2nd year 10, 3-4 yr 7, 5-7 yr 6, 7 to puberty 5, puberty 10.3 cm/yr."],
+        ["A single height measurement is a more sensitive indicator of abnormal growth than height velocity.", false, "Height velocity is the MOST sensitive way to pick up growth abnormality early (p.40). One height only tells you where the child is, not where the child is heading."],
+        ["A period of 3 months is enough to calculate height velocity reliably in a child older than 2 years.", false, "At least 6 months is needed (p.40). In a child older than 2, under 4 cm/year needs close follow-up."],
+      ]),
+      explain: "Growth is judged by the trajectory, not the number. Plot on the sex-specific chart, remeasure after 6 months, and a flat curve means slowed or arrested growth (p.39). Link: short stature work-up (Q8-9) and failure to thrive (Q10)." },
+
+    { topic: "Growth & growth charts", src: "p.41",
+      stem: "Body proportions, head size and fontanelles:",
+      items: I([
+        ["The upper segment : lower segment ratio is about 1.7 at birth and falls to about 1.0 by 10 years.", true, "Slide p.41: birth 1.7, 3 y 1.33, 5 y 1.17, 10 y 1.0, below 1.0 after 10 years."],
+        ["The US/LS ratio is raised in rickets, achondroplasia, Turner syndrome and hypothyroidism.", true, "Slide p.41: raised where the limbs are short (the trunk is relatively long)."],
+        ["The US/LS ratio is raised in Marfan syndrome.", false, "It is LOWERED in Marfan (long limbs). Marfan also has an arm span greater than height (p.41)."],
+        ["Arm span equals height at about 10 years.", true, "Slide p.41. Increased in sickle cell disease, Marfan, skeletal dysplasia. Useful when a child cannot stand."],
+        ["Delayed closure of the anterior fontanelle is a feature of congenital hypothyroidism, rickets and hydrocephalus.", true, "Slide p.41 (also syphilis). The anterior fontanelle measures about 3 x 2 cm and normally closes at 9-18 months."],
+      ]),
+      explain: "Disproportion tells you the growth problem is skeletal (rickets, dysplasia) or hormonal (hypothyroidism, Turner) rather than just 'small'. The same four words, rickets / hypothyroidism / Turner / achondroplasia, keep appearing in picture tests." },
+
+    { topic: "Endocrine control of growth", src: "p.36-38",
+      stem: "Endocrine regulation of childhood growth:",
+      items: I([
+        ["Growth hormone is secreted in pulses, with a peak soon after the onset of sleep, and is the major determinant of growth in childhood.", true, "Slide p.37 (peak about 1.5 h after sleep)."],
+        ["The liver is the principal source of circulating IGF-1, and IGF-1 exerts negative feedback on GH.", true, "Slide p.37. GH is the most potent regulator of IGF-1 production after birth."],
+        ["In malnutrition GH is low and IGF-1 is normal.", false, "The reverse: GH is HIGH but IGF-1 is LOW (p.37). So a low IGF-1 alone does not prove GH deficiency in a malnourished child."],
+        ["A delay in the infancy-childhood transition is usually followed by catch-up growth.", false, "Slide p.37: a delay in ICT is NOT followed by catch-up and is the main mechanism of short stature in children living in poor areas."],
+        ["Insulin deficiency lowers IGF-1 and raises IGFBP-1, disturbing growth.", true, "Slide p.38. Insulin is an anabolic hormone; poorly controlled diabetes can stunt growth (Mauriac syndrome)."],
+      ]),
+      explain: "The chain is hypothalamus (GHRH, somatostatin, ghrelin) to pituitary GH to liver IGF-1 to growth plate. Thyroxine, insulin, cortisol and sex steroids tune it. Link: kwashiorkor/malnutrition and the diabetes stems." },
+
+    { topic: "Puberty", src: "p.42-45",
+      stem: "Normal puberty:",
+      items: I([
+        ["The first sign of puberty in girls is breast development (thelarche).", true, "Slide p.43. Mean age about 11, range 8-14."],
+        ["The first sign of puberty in boys is testicular enlargement.", true, "Slide p.43. Mean age 11.6 years (range 9-13.5); puberty takes about 3 years."],
+        ["Tanner stage III in boys corresponds to a testicular volume of 12-20 ml.", false, "Slide p.44: stage II 4-6 ml, III 6-12 ml, IV 12-20 ml, V over 20 ml. Under 4 ml is prepubertal."],
+        ["Boys end up about 12.5 cm taller than girls partly because they have about 2 extra years of prepubertal growth.", true, "Slide p.45. The later onset and larger amplitude of the male spurt give the 12.5 cm difference."],
+        ["Pubic hair is the first sign of puberty in most girls.", false, "Breast bud (Tanner II) comes first. Pubic hair alone, without breast or testicular change, points to adrenarche, not true puberty."],
+      ]),
+      explain: "Remember the testicular volumes as 4 / 6 / 12 / 20. Orchidometer (Prader beads) is a standard picture-test instrument. Link: delayed and precocious puberty (Q6-7)." },
+
+    { topic: "Puberty", src: "p.38, 43",
+      stem: "Hormones and puberty:",
+      items: I([
+        ["Puberty in girls will not proceed until an adequate body mass has been achieved, and leptin is important for this.", true, "Slide p.43. Leptin is made by adipose tissue."],
+        ["Oestrogen is important for skeletal maturation and fusion of the epiphyses, and augments GH release.", true, "Slide p.43. That is why early oestrogen exposure (precocious puberty) shortens final height."],
+        ["Adrenarche is caused by activation of the hypothalamic-pituitary-gonadal axis.", false, "Adrenarche is the onset of adrenal androgen (DHEA, DHEAS) production from the zona reticularis, independent of the gonads (p.38)."],
+        ["Adrenarche begins on average at about 6 years.", true, "Slide p.38 (range 3-4 to 8-9 years)."],
+        ["Malnutrition and anorexia nervosa tend to hasten the onset of puberty.", false, "They DELAY puberty. Obesity tends to bring it earlier (p.43 lists nutritional status, stress, genetics, SGA, photoperiod)."],
+      ]),
+      explain: "Think of two separate switches: the adrenal one (adrenarche, about 6 y, pubic and axillary hair, body odour) and the gonadal one (thelarche / testicular growth). Premature adrenarche is benign; premature thelarche likewise. True precocious puberty has both." },
+
+    { topic: "Puberty", src: "p.47-48",
+      stem: "Disorders of pubertal timing:",
+      items: I([
+        ["Precocious puberty is the appearance of secondary sexual characteristics before 8 years in girls or 9 years in boys.", true, "Slide p.48."],
+        ["Central (gonadotropin-dependent) precocious puberty is treated with GnRH agonists.", true, "Slide p.48. Peripheral causes are treated at source, e.g. hydrocortisone in CAH."],
+        ["CAH is a cause of peripheral (gonadotropin-independent) precocious puberty.", true, "Slide p.48: enzyme deficiencies (CAH), gonadal and adrenal tumours and cysts are peripheral causes."],
+        ["Delayed puberty is defined as no pubertal sign by 10 years in both sexes.", false, "Slide p.48: boys no sign by 13.5-14 years, girls no sign by 13.5 years (or incomplete 5 years after starting)."],
+        ["Kallmann syndrome is a cause of hypergonadotropic hypogonadism.", false, "It is HYPOgonadotropic (isolated GnRH deficiency) with anosmia (p.48). Turner and Klinefelter are the hypergonadotropic ones."],
+      ]),
+      explain: "Sort every puberty problem into central versus peripheral, then early versus late. Bone age is very important in both (p.48): advanced in precocious puberty, delayed in constitutional delay." },
+
+    { topic: "Puberty", src: "p.46, 48; past papers 2017.87, paed.202",
+      stem: "Causes of delayed puberty include:",
+      items: I([
+        ["Turner syndrome (45,X) in girls.", true, "Primary hypogonadism, hypergonadotropic (p.48)."],
+        ["Klinefelter syndrome (47,XXY) in boys.", true, "Primary hypogonadism, hypergonadotropic (p.48)."],
+        ["Craniopharyngioma and Kallmann syndrome (secondary, hypogonadotropic hypogonadism).", true, "Slide p.48."],
+        ["Constitutional delay, often with a history of late puberty in a parent.", true, "Commonest cause. Final adult height is normal (p.46). Ask the father's pubertal history."],
+        ["Untreated 21-hydroxylase deficiency CAH.", false, "Untreated CAH causes precocious (peripheral) puberty, with advanced bone age and early epiphyseal fusion."],
+      ]),
+      explain: "Past-paper case: a 15-year-old boy with 3 ml testes and 3 cm growth last year is most likely constitutional delay. Father's pubertal pattern is relevant; a short course of low-dose testosterone can be given for distress; a monthly GnRH agonist would be wrong (that suppresses puberty). Link: precocious puberty treatment." },
+
+    { topic: "Short stature & GH", src: "p.45-46",
+      stem: "Short stature:",
+      items: I([
+        ["Short stature is a height below the 3rd centile (about -2 SD) for age.", true, "Slide p.45-46. About 3-5% of children are therefore 'short'."],
+        ["Familial short stature and constitutional delay are common causes, and many of these children have a normal growth velocity.", true, "Slide p.46."],
+        ["In constitutional delay of growth and puberty the final adult height is normal.", true, "Slide p.46: delayed skeletal growth and onset of puberty, but final height is normal."],
+        ["A karyotype should be done in a short girl to exclude Turner syndrome.", true, "Slide p.46 lists karyotype among the tests. Also check dysmorphism, webbing, Tanner stage."],
+        ["Rickets and achondroplasia cause short stature with a LOW upper : lower segment ratio.", false, "The ratio is HIGH (short limbs, relatively long trunk, p.41)."],
+      ]),
+      explain: "The commonest causes are normal variants; the dangerous ones are the pathological ones: nutritional, systemic disease (CHD, TB, CRF, HIV, asthma), endocrine, chromosomal (Turner, Down), drugs (steroids), emotional deprivation (p.46)." },
+
+    { topic: "Short stature & GH", src: "p.37, 42, 46-47",
+      stem: "Evaluation and treatment of short stature:",
+      items: I([
+        ["Target (mid-parental) height should be calculated and the child plotted on the correct sex and age chart.", true, "Slide p.45. Boys: (father + mother + 13) / 2. Girls: (father + mother - 13) / 2 cm. Standard teaching for the formula."],
+        ["Bone age is advanced in hypothyroidism.", false, "Retarded bone age is the characteristic feature of hypothyroidism (p.42). Advanced in thyrotoxicosis, CAH, precocious puberty."],
+        ["IGF-1 and IGFBP-3 are used to screen the GH axis, but IGF-1 is low in malnutrition.", true, "Slide p.47."],
+        ["Recombinant GH is approved only for children with proven GH deficiency.", false, "Slide p.47: also Turner syndrome, CRF awaiting transplant, Prader-Willi, SGA without catch-up by 2 years, idiopathic short stature (below -2.25 SD)."],
+        ["Prolonged corticosteroid use is a drug cause of poor growth.", true, "Slide p.46."],
+      ]),
+      explain: "Order of work-up on p.46-47: history and examination and growth chart first; then FBC, ESR, urea/creatinine, urinalysis, stool, LFTs, coeliac serology, karyotype, bone age; then TSH/T4, cortisol, IGF-1, IGFBP-3, calcium, phosphate, PTH, vitamin D; dynamic GH tests last." },
+
+    { topic: "Short stature & GH", src: "p.47",
+      stem: "Failure to thrive:",
+      items: I([
+        ["A child is failing to thrive if weight falls below the 3rd-5th centile or crosses 2 or more major centile lines.", true, "Slide p.47."],
+        ["The term is applied mainly to infants and young children up to 2-3 years.", true, "Slide p.47."],
+        ["The commonest causes are poor nutritional intake, feeding problems and abnormal losses.", true, "Slide p.47."],
+        ["Systemic disease such as congenital heart disease and TB can cause it.", true, "Slide p.47. Also GH deficiency, hypothyroidism, Down syndrome."],
+        ["Poverty, neglect and emotional deprivation are not recognised causes.", false, "Environmental causes (poverty, poor nutrition, emotional and physical abuse) are listed on p.47."],
+      ]),
+      explain: "Failure to thrive is a weight problem; short stature is a height problem. Weight falls first in nutritional causes; height falls first (with preserved weight) in endocrine causes, so an obese, short child suggests endocrine disease (hypothyroidism, Cushing)." },
+
+    { topic: "Pituitary & hypothalamus", src: "p.54-55",
+      stem: "The hypothalamo-pituitary axis:",
+      items: I([
+        ["The anterior pituitary develops from the roof of the mouth (oral ectoderm).", true, "Slide p.54 (Rathke's pouch)."],
+        ["The posterior pituitary develops from neuroectoderm of the diencephalon.", true, "Slide p.54."],
+        ["The posterior pituitary synthesises vasopressin and oxytocin itself.", false, "The posterior pituitary does not make hormones: the hypothalamus makes vasopressin and oxytocin and they are released from the posterior pituitary (p.55)."],
+        ["Delivery of hypothalamic releasing hormones to the anterior pituitary depends on an intact pituitary stalk.", true, "Slide p.54. They have short half-lives and travel in the portal vasculature."],
+        ["Negative feedback acts through a short loop (pituitary to hypothalamus) and a long loop (target organ to pituitary and hypothalamus).", true, "Slide p.55."],
+      ]),
+      explain: "If the target gland fails, the trophic hormone rises (primary: raised TSH in hypothyroidism, raised ACTH in Addison, raised FSH/LH in Turner). If the pituitary or hypothalamus fails, everything is low (secondary). That one rule answers many results-interpretation viva questions." },
+
+    { topic: "Pituitary & hypothalamus", src: "p.56",
+      stem: "Craniopharyngioma in a child:",
+      items: I([
+        ["It often damages the optic nerves, hypothalamus and pituitary.", true, "Slide p.56."],
+        ["Headache, impaired visual fields and abnormal appetite with obesity are typical.", true, "Slide p.56."],
+        ["GH is the most commonly deficient anterior pituitary hormone (about 75%).", true, "Slide p.56: anterior deficiency 80%, GH 75%, gonadotropins 40%, ACTH/TSH 25%."],
+        ["Post-operative obesity is uncommon.", false, "Slide p.56: post-operative obesity is VERY common."],
+        ["Precocious puberty never occurs; only delayed puberty is seen.", false, "Slide p.56 N.B.: precocious puberty may occur. Also hyperprolactinaemia (20%), ADH deficiency (9-17%) and post-operative SIADH."],
+      ]),
+      explain: "A short, growth-failing child with headaches and visual field loss is a craniopharyngioma until proved otherwise. Calcification on skull X-ray or MRI is the picture-test clue. Link: diabetes insipidus (bank 2)." },
+
+    { topic: "Pituitary & hypothalamus", src: "p.51, 56",
+      stem: "Pituitary tumours and hypersecretion states:",
+      items: I([
+        ["Prolactinoma typically presents in puberty.", true, "Slide p.56."],
+        ["An ACTH-secreting pituitary tumour causes Cushing disease.", true, "Slides p.51, 56."],
+        ["A GH-secreting tumour before epiphyseal fusion causes true (pituitary) gigantism.", true, "Slide p.56. After fusion it causes acromegaly (standard)."],
+        ["Optic gliomas are associated with neurofibromatosis.", true, "Slide p.56 (obs. neurofibromatosis)."],
+        ["Cushing syndrome and Cushing disease mean the same thing.", false, "Cushing SYNDROME = any glucocorticoid excess (commonest cause: exogenous steroids). Cushing DISEASE = excess ACTH from a pituitary adenoma (p.51)."],
+      ]),
+      explain: "Syndrome versus disease is a favourite short-answer trap. Other tumours near the pituitary with endocrine effects: dysgerminoma, histiocytosis, hamartoma (precocious puberty), dermoid cysts and teratomas (p.56)." },
+
+    { topic: "CAH & adrenal", src: "p.49-50; past papers 2000.9, paed.37, 185",
+      stem: "Congenital adrenal hyperplasia (CAH):",
+      items: I([
+        ["It is inherited as an autosomal recessive disorder.", true, "Slide p.49."],
+        ["The commonest enzyme deficiency is 21-hydroxylase.", true, "Slide p.50. Others: 11-beta-hydroxylase, 3-beta-HSD, 17-alpha-hydroxylase/17,20-lyase."],
+        ["In the newborn, ambiguous genitalia strongly suggests CAH.", true, "Slide p.49."],
+        ["Plasma 17-hydroxyprogesterone is raised in 21-hydroxylase and 11-hydroxylase deficiency.", true, "Slide p.50. Bone age is advanced; serum bicarbonate falls and potassium rises."],
+        ["Cortisol is made in the zona glomerulosa and aldosterone in the zona fasciculata.", false, "Reversed: glomerulosa = aldosterone, fasciculata = cortisol, reticularis = androgens (DHEA), medulla = adrenaline/noradrenaline (p.49). Salt, sugar, sex: outside to inside."],
+      ]),
+      explain: "Low cortisol means no negative feedback, so ACTH rises and drives the adrenals to over-produce whatever is upstream of the block: androgens in 21-hydroxylase deficiency. Link: ambiguous genitalia stem in bank 2." },
+
+    { topic: "CAH & adrenal", src: "p.49-50 + Standard teaching",
+      stem: "Classic salt-wasting 21-hydroxylase deficiency:",
+      items: I([
+        ["Hyponatraemia, hyperkalaemia and metabolic acidosis are expected.", true, "Aldosterone deficiency (Na loss) plus the slide's low HCO3 and high K (p.50). Hypochloraemia also. Standard teaching for the mechanism."],
+        ["Hypertension is a feature.", false, "Hypotension and shock. Hypertension occurs in 11-beta-hydroxylase (excess deoxycorticosterone) and 17-alpha-hydroxylase deficiency. Standard teaching."],
+        ["A 46,XX baby is virilised (clitoromegaly, fused labia) but has normal ovaries and uterus.", true, "Excess adrenal androgen in utero. Boys look normal at birth and may present with an adrenal crisis at 1-3 weeks. Standard teaching."],
+        ["Treatment is lifelong glucocorticoid replacement, with fludrocortisone added in salt-wasting forms.", true, "Slide p.50 (glucocorticoid replacement); fludrocortisone is standard teaching."],
+        ["Bone age is delayed in untreated CAH.", false, "Advanced (p.50, p.42). Androgen excess speeds growth early and closes the epiphyses early, so adult height is short."],
+      ]),
+      explain: "Past answer key for 'present in 21-hydroxylase deficiency': hypertension NO, hypokalaemia NO, acidosis YES, hyponatraemia YES, hypochloraemia YES. Newborn crisis: 0.9% saline 20 ml/kg, glucose for hypoglycaemia, IV hydrocortisone." },
+
+    { topic: "CAH & adrenal", src: "p.50; paed.236",
+      stem: "CAH treatment and variants:",
+      items: I([
+        ["Non-classic CAH presents late with precocious pubarche, hirsutism, menstrual irregularity or infertility.", true, "Slide p.50."],
+        ["Non-classic CAH is more common than the classic form.", true, "Standard teaching (about 1 in 1,000 versus about 1 in 15,000)."],
+        ["Starting hydrocortisone is 10-20 mg/m2/day in divided doses, increased up to 100 mg/m2 in crisis or life-threatening illness.", true, "Slide p.50."],
+        ["Treatment is monitored by plasma 17-OHP, and over-treatment shows as hypertension, rapid weight gain and striae.", true, "Slide p.50-51 (iatrogenic Cushing)."],
+        ["20,22-desmolase deficiency is compatible with a normal life without treatment.", false, "It blocks all steroid synthesis and is life-threatening (lipoid CAH). Answer key to paed.2000.9(e) says 'not compatible with life' untreated."],
+      ]),
+      explain: "Too little glucocorticoid: androgens stay high, growth is fast at first but ends short from premature epiphyseal closure. Too much: growth suppressed and Cushingoid (p.50). Narrow window, so monitor growth, bone age and 17-OHP." },
+
+    { topic: "CAH & adrenal", src: "p.51-52",
+      stem: "Cushing syndrome and adrenal insufficiency:",
+      items: I([
+        ["Features of Cushing syndrome include central obesity, purple striae, hypertension, hyperglycaemia and impaired growth.", true, "Slides p.51: moon facies, hirsutism, poor wound healing, osteoporosis too."],
+        ["Diagnosis uses 24-hour urinary free cortisol, midnight plasma or late-night salivary cortisol and the low-dose dexamethasone suppression test.", true, "Slide p.51-52."],
+        ["Cushing disease is treated by transsphenoidal pituitary microsurgery, with radiation if surgery fails.", true, "Slide p.52."],
+        ["In primary adrenal insufficiency plasma ACTH is low.", false, "ACTH is HIGH (loss of feedback) with pigmentation. Low ACTH belongs to secondary insufficiency (lack of CRH/ACTH, p.51)."],
+        ["Adrenal haemorrhage, TB, autoimmune destruction and AIDS can cause primary adrenal insufficiency.", true, "Slide p.51."],
+      ]),
+      explain: "The commonest cause of Cushing syndrome in a child is steroid treatment. Sudden withdrawal after long courses causes secondary adrenal insufficiency: give a stress dose in illness or surgery." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · True/False (5 statements per stem, negative marking −½) · Endocrinology paper 2: diabetes, DKA, hypoglycaemia,
+// thyroid, rickets, Turner, diabetes insipidus, ambiguous genitalia.
+// The slide deck has NO lecture on diabetes, thyroid disease, hypoglycaemia or rickets, so these are "Standard teaching" shaped
+// by the real past questions (paed.186-197, 210-220, 235, 253-255, 897-901, 2k17-2k2.374-376). Slide cross-links are cited as p.xxx.
+// Ask for your own notes if the UCH lecturers taught thresholds or doses that differ from the ones given here.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-endo-2",
+  subject: "Paediatrics",
+  group: "Paediatric endocrinology",
+  type: "tf",
+  title: "Paediatrics T/F · Endocrinology 2: diabetes, thyroid, rickets, Turner, DI (20 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "Diabetes mellitus", src: S+"; paed.210, 211, 220, 253",
+      stem: "Type 1 diabetes mellitus in children:",
+      items: I([
+        ["It results from autoimmune destruction of the pancreatic beta cells; islet autoantibodies (GAD, IA-2) are often present.", true, "The mechanism of the insulin deficiency."],
+        ["Obesity is the usual predisposing factor.", false, "That is type 2 diabetes. Type 1 children are usually lean or have lost weight."],
+        ["It requires insulin for life; oral hypoglycaemic agents are not the treatment.", true, "No residual cure; the honeymoon phase is temporary."],
+        ["An oral glucose tolerance test is mandatory to confirm the diagnosis in a symptomatic child.", false, "Classic symptoms plus a random plasma glucose of 11.1 mmol/L (200 mg/dl) or more are enough. OGTT is rarely needed and can be dangerous."],
+        ["Prolonged insulin use can lead to a cure.", false, "Insulin replaces what is missing; it does not restore beta cells."],
+      ]),
+      explain: "Past papers asked this stem in eight sources. The pattern: type 1 is autoimmune, lean, ketosis-prone, insulin-dependent; type 2 is obese, acanthosis, metformin. Link: acanthosis nigricans in the picture test." },
+
+    { topic: "Diabetes mellitus", src: S+"; paed.219, 253, 2000.10",
+      stem: "Presentation and diagnosis of diabetes mellitus in a child:",
+      items: I([
+        ["Polyuria, polydipsia, weight loss and secondary nocturnal enuresis are typical.", true, "Osmotic diuresis plus catabolism. A previously dry child who starts bed-wetting needs a urine dip."],
+        ["Diabetic ketoacidosis can be the first presentation.", true, "A quarter or more of new cases, more in the very young and where diagnosis is delayed."],
+        ["A random plasma glucose of 7.0 mmol/L with symptoms is diagnostic.", false, "Random: 11.1 mmol/L (200 mg/dl) or more. 7.0 mmol/L (126 mg/dl) is the FASTING threshold. HbA1c 6.5% or more also qualifies."],
+        ["HbA1c should be measured monthly.", false, "Every 3 months; it reflects the preceding 2-3 months."],
+        ["Prolonged corticosteroid therapy can cause diabetes.", true, "Drug-induced hyperglycaemia (steroids) also links to Cushing syndrome (p.51)."],
+      ]),
+      explain: "Glycosuria alone is not diabetes: renal glycosuria and proximal tubular disease also cause it, so confirm with blood glucose. Link: Cushing, nephrotic syndrome (p.220 lists diabetes in the metabolic causes of proteinuria)." },
+
+    { topic: "Diabetes mellitus", src: S+"; paed.192, 195",
+      stem: "Long-term management of type 1 diabetes:",
+      items: I([
+        ["A basal-bolus regimen (long-acting plus pre-meal rapid-acting insulin) is the usual modern approach.", true, "Alternatives: twice-daily mixed insulin, or a pump."],
+        ["Injection sites should be rotated to avoid lipohypertrophy.", true, "Lipohypertrophy gives erratic absorption."],
+        ["Insulin requirements vary widely with growth, puberty, illness, exercise and the honeymoon period.", true, "Puberty raises the dose (growth hormone and sex steroids are insulin-antagonistic); the honeymoon lowers it."],
+        ["The long-term aim is a blood glucose that is never above or below normal.", false, "Unrealistic and dangerous. The aim is HbA1c as near target as possible WITHOUT severe hypoglycaemia, with normal growth and development."],
+        ["Long-term complications are not a concern in childhood, so screening can wait until adulthood.", false, "Screen for retinopathy, nephropathy (urine albumin : creatinine) and neuropathy from puberty or about 5 years after diagnosis."],
+      ]),
+      explain: "The past-paper objectives list: no polyuria/polydipsia, normal growth and development, prevention of microangiopathy, normal lipids; 'continuously normal blood glucose' was the false one." },
+
+    { topic: "Diabetes mellitus", src: S+"; p.38, 59",
+      stem: "Associations and complications of type 1 diabetes:",
+      items: I([
+        ["Hypoglycaemia is the commonest acute complication of treatment.", true, "Too much insulin, missed meal, exercise."],
+        ["Autoimmune thyroid disease and coeliac disease are associated.", true, "Screen periodically (TSH, tissue transglutaminase)."],
+        ["Poor control can cause growth failure and delayed puberty (Mauriac syndrome).", true, "Insulin deficiency lowers IGF-1 and raises IGFBP-1 (slide p.38)."],
+        ["Microalbuminuria is the earliest sign of diabetic nephropathy.", true, "Detect early; ACE inhibitor if persistent."],
+        ["The Somogyi effect is early-morning hyperglycaemia caused by the normal dawn surge of growth hormone and cortisol.", false, "That describes the DAWN phenomenon. Somogyi = rebound hyperglycaemia after nocturnal hypoglycaemia (from too much evening insulin)."],
+      ]),
+      explain: "Maternal diabetes harms the baby too (Q9). Slide p.59 lists diabetes in pregnancy as a cause of spina bifida, TGA, VSD, anencephaly, imperforate anus and radial aplasia." },
+
+    { topic: "Diabetic ketoacidosis", src: S+"; 2k17-2k2.374, paed.187",
+      stem: "Diabetic ketoacidosis (DKA) in a child:",
+      items: I([
+        ["Diagnosis needs hyperglycaemia (over 11 mmol/L), venous pH under 7.3 or bicarbonate under 18 mmol/L, and ketonaemia or ketonuria.", true, "Severe: pH under 7.1 or bicarbonate under 5."],
+        ["Deep, sighing (Kussmaul) breathing is characteristic.", true, "Respiratory compensation for the metabolic acidosis."],
+        ["Serum sodium may be normal or low despite the hyperglycaemia and dehydration.", true, "Glucose pulls water into the plasma (dilution), so correct the sodium for glucose."],
+        ["Total body potassium is depleted even when the first serum potassium is normal or raised.", true, "Acidosis and insulin lack shift K+ out of cells; osmotic diuresis wastes it. K+ falls once insulin starts."],
+        ["Kussmaul breathing in a known diabetic proves DKA, so glucose and ketones need not be checked.", false, "Acidotic breathing also occurs in malaria and sepsis, and a diabetic child may be hypoglycaemic. Always check glucose and ketones (past paper paed.187)."],
+      ]),
+      explain: "The past-paper case: 5-year-old, polyphagia, polydipsia, bed-wetting, 10% weight loss, Kussmaul breathing. Expect glucose about 300 mg/dl, bicarbonate about 10 mmol/L, treat with IV fluids and insulin infusion in an HDU/ICU, not a general ward; calcium 11.8 mg/dl would NOT be expected." },
+
+    { topic: "Diabetic ketoacidosis", src: S+" (ISPAD-style)",
+      stem: "Management of DKA:",
+      items: I([
+        ["Start with airway, breathing and circulation; give a 10-20 ml/kg 0.9% saline bolus only if shocked, then replace the deficit steadily over about 48 hours.", true, "Slow rehydration lowers the risk of cerebral oedema."],
+        ["Insulin infusion (0.05-0.1 unit/kg/hour) is started about an hour after fluids begin.", true, "Insulin switches off ketogenesis; fluids first."],
+        ["Potassium is added to the IV fluids once urine is passing, unless the child is hyperkalaemic.", true, "Typically 40 mmol/L; monitor ECG and electrolytes."],
+        ["Routine intravenous bicarbonate should be given in severe acidosis.", false, "Not recommended: it can worsen intracellular acidosis and hypokalaemia, and raise cerebral oedema risk."],
+        ["Cerebral oedema occurs only before treatment and never after it is started.", false, "Typically 4-12 hours into treatment: headache, bradycardia, rising BP, falling GCS. Give mannitol (0.5-1 g/kg) or hypertonic saline and slow the fluids."],
+      ]),
+      explain: "Hourly glucose and neuro observations; electrolytes and blood gases every 2-4 h. Add dextrose to the fluid when glucose falls to about 14 mmol/L so insulin can continue. Transition to subcutaneous insulin when the child is eating and ketones have cleared." },
+
+    { topic: "Hypoglycaemia", src: S+"; p.143-144",
+      stem: "Hypoglycaemia in childhood:",
+      items: I([
+        ["Low blood glucose with detectable insulin and low ketones suggests hyperinsulinism.", true, "Insulin blocks fat breakdown, so no ketones (hypoketotic hypoglycaemia). Check the critical sample before treating if you can."],
+        ["Ketotic hypoglycaemia is the commonest cause of fasting hypoglycaemia in well pre-school children.", true, "Small thin children; resolves by about 8-10 years."],
+        ["Hypoglycaemia (under 2.2 mmol/L) is a recognised complication of severe malaria.", true, "Slide p.143. Cytokines reduce gluconeogenesis (p.144); quinine adds hyperinsulinism."],
+        ["GH and cortisol deficiency can present with hypoglycaemia.", true, "Counter-regulatory hormones missing: hypopituitarism, Addison, CAH. Link p.50, 56."],
+        ["The correct bolus for a hypoglycaemic child is 50% dextrose 2 ml/kg.", false, "Use 10% dextrose 2-5 ml/kg IV (25-50% is too hyperosmolar and damages veins). Past paper: 20-25 ml 'concentrated glucose' is not a safe test."],
+      ]),
+      explain: "Critical sample at the time of hypoglycaemia: glucose, insulin, cortisol, GH, ketones/BOHB, lactate, FFA, ammonia. Then the pattern of ketones and insulin sorts hyperinsulinism from hormone deficiency from metabolic disease." },
+
+    { topic: "Hypoglycaemia", src: "p.174; paed.235, 897, 901",
+      stem: "Neonatal hypoglycaemia:",
+      items: I([
+        ["It is common in small-for-gestational-age babies.", true, "Slide p.174: rapid depletion of glycogen stores and impaired gluconeogenesis."],
+        ["It is rare in babies of diabetic mothers.", false, "COMMON: fetal hyperinsulinism after maternal hyperglycaemia, then the glucose supply is cut at birth."],
+        ["Birth asphyxia, hypothermia and sepsis are recognised causes.", true, "Increased glucose use and poor stores."],
+        ["Biliary atresia is a recognised cause.", false, "Not a cause. Genuine causes include Beckwith-Wiedemann (hyperinsulinism) and glycogen storage disease."],
+        ["It carries a good prognosis with minimal treatment even when symptomatic.", false, "Symptomatic or prolonged hypoglycaemia can cause permanent brain injury: treat promptly (10% dextrose 2 ml/kg then an infusion)."],
+      ]),
+      explain: "Operational threshold: treat below about 2.6 mmol/L (47 mg/dl). Early feeding, skin-to-skin and glucose checks in at-risk babies (SGA, preterm, IDM) prevent most of it (slide p.174 lists hypoglycaemia among SGA and preterm problems)." },
+
+    { topic: "Hypoglycaemia", src: S+"; p.59",
+      stem: "Infant of a diabetic mother:",
+      items: I([
+        ["Macrosomia is typical.", true, "Fetal hyperinsulinism is anabolic."],
+        ["Hypoglycaemia, hypocalcaemia and polycythaemia occur.", true, "Also jaundice and hypomagnesaemia."],
+        ["Respiratory distress is more likely because surfactant production is delayed.", true, "Insulin antagonises cortisol's effect on lung maturation."],
+        ["Congenital anomalies are increased: neural tube defects, TGA, VSD and imperforate anus.", true, "Slide p.59 (VACTERL-like pattern)."],
+        ["The commonest problem in the first days is hyperglycaemia.", false, "Hypoglycaemia, not hyperglycaemia."],
+      ]),
+      explain: "Case from the past papers: a 37-week baby of a diabetic mother with early respiratory symptoms. Remember hypoglycaemia first, then RDS (ground-glass, air bronchograms), polycythaemia, and look for the cardiac and spinal anomalies." },
+
+    { topic: "Thyroid disease", src: S+"; p.37, 41, 81; paed.186, 217, 224, 239",
+      stem: "Congenital hypothyroidism: recognition",
+      items: I([
+        ["The commonest cause is thyroid dysgenesis (agenesis, hypoplasia or ectopic gland).", true, "About 85% in iodine-replete areas; iodine deficiency is the world's commonest cause overall."],
+        ["Prolonged jaundice, constipation, poor feeding, lethargy and hypotonia are typical early features.", true, "Slide p.81 lists hypothyroidism under delayed stooling and neonatal cholestasis work-up."],
+        ["Tachycardia and diarrhoea are typical.", false, "Bradycardia and constipation. (Past paper: 'tachycardia' was the false option.)"],
+        ["Meconium ileus is a typical presentation.", false, "That is cystic fibrosis. Hypothyroidism gives delayed passage of meconium."],
+        ["Wide-open fontanelles, macroglossia, umbilical hernia and cold mottled skin occur.", true, "Slide p.41: late closure of the anterior fontanelle; p.37 thyroid hormone drives fontanelle closure and brain development."],
+      ]),
+      explain: "Remember: Hypothyroid baby = prolonged jaundice, big tongue, hoarse cry, hernia, hypotonia, cold, dry skin. Retarded bone age (p.42); no distal femoral epiphysis on a term baby's knee X-ray." },
+
+    { topic: "Thyroid disease", src: S,
+      stem: "Congenital hypothyroidism: screening and treatment",
+      items: I([
+        ["Newborn screening uses a heel-prick TSH on about day 5, with a high TSH and low free T4 confirming it.", true, "Primary hypothyroidism: high TSH, low T4 (negative feedback, p.55)."],
+        ["Levothyroxine (about 10-15 micrograms/kg/day) should be started in the first 2 weeks of life.", true, "Early treatment protects IQ."],
+        ["The age at which treatment starts is the most important determinant of the child's eventual intelligence.", true, "Delayed treatment = intellectual disability, deafness, short stature, spasticity (cretinism)."],
+        ["Untreated, it is usually fatal in infancy.", false, "Not usually lethal; the harm is severe and permanent neurodevelopmental disability and growth failure (past paper: 'usually lethal' was false)."],
+        ["Treatment can be stopped at 1 year in all children once milestones are normal.", false, "Usually lifelong in permanent forms; only some transient forms (maternal antibodies, iodine) can be reassessed after 3 years."],
+      ]),
+      explain: "Why screening exists: the signs are subtle in the first weeks, but the brain window is narrow. Link: iodine deficiency and cretinism (slide p.59 lists iodine under 20 micrograms/day causing mental retardation, deafness, spastic diplegia)." },
+
+    { topic: "Thyroid disease", src: S+"; p.42; paed.194, 230, 233",
+      stem: "Juvenile (acquired) hypothyroidism in a 5-year-old:",
+      items: I([
+        ["Hashimoto (autoimmune) thyroiditis is the commonest cause in areas without iodine deficiency.", true, "Goitre is common; antithyroid peroxidase antibodies positive."],
+        ["Short stature and a slow growth velocity are expected.", true, "Weight may rise as height falls: short and fat suggests endocrine disease."],
+        ["Bradycardia, dry skin, constipation, cold intolerance and weight gain are expected.", true, "Slowed metabolism."],
+        ["Bone age is advanced.", false, "RETARDED (slide p.42). Advanced bone age belongs to thyrotoxicosis, CAH, precocious puberty."],
+        ["Full bounding pulse and warm tremulous hands are typical.", false, "Those are thyrotoxicosis."],
+      ]),
+      explain: "Rare paradox: severe untreated hypothyroidism can cause early breast or testicular enlargement (Van Wyk-Grumbach) even though bone age is delayed. Check TSH in any short child (slide p.46-47)." },
+
+    { topic: "Thyroid disease", src: S+"; paed.38",
+      stem: "A 10-year-old girl with a neck swelling and thyrotoxicosis (Graves disease):",
+      items: I([
+        ["Tachycardia, tremor, weight loss despite a good appetite and heat intolerance are expected.", true, "Hypermetabolism."],
+        ["Linear growth may accelerate and the bone age is advanced.", true, "Slide p.42 lists thyrotoxicosis among causes of advanced bone age."],
+        ["Exophthalmos is present in every case.", false, "Absent in many children; look for lid lag and stare."],
+        ["Emergency thyroidectomy is the first-line treatment.", false, "Start antithyroid drugs (carbimazole/methimazole) plus propranolol; surgery or radioiodine is for relapse after a long course."],
+        ["A sore throat or fever on carbimazole needs urgent stopping of the drug and a full blood count.", true, "Agranulocytosis."],
+      ]),
+      explain: "Graves disease is autoimmune (TSH-receptor stimulating antibodies). Neonatal thyrotoxicosis occurs when maternal antibodies cross the placenta. Heart failure is a rare severe complication, as in the past-paper options." },
+
+    { topic: "Rickets", src: S+"; p.41; paed.190, 193, 250",
+      stem: "Nutritional (vitamin D deficiency) rickets: findings",
+      items: I([
+        ["Serum phosphate is low.", true, "Secondary hyperparathyroidism wastes phosphate."],
+        ["Serum alkaline phosphatase is raised.", true, "Osteoblast activity."],
+        ["Serum calcium is always low.", false, "Low or low-normal: PTH keeps it near normal until late (past paper: 'always low' was false)."],
+        ["Closure of the anterior fontanelle is delayed.", true, "Slide p.41 lists rickets among causes."],
+        ["Hypertonia is characteristic.", false, "Hypotonia and proximal weakness (late walking, pot belly)."],
+      ]),
+      explain: "Mnemonic for the labs: calcium low-or-normal, phosphate LOW, ALP HIGH, PTH HIGH, 25-OH vitamin D LOW. Reverse every one of them for the past-paper trap options." },
+
+    { topic: "Rickets", src: S+"; paed.40-43, 189, 199, 212, 226",
+      stem: "Clinical and radiological features of rickets:",
+      items: I([
+        ["X-ray shows widened growth plates with cupping and fraying of the metaphyses.", true, "Wrist and knee are best."],
+        ["Rachitic rosary (swollen costochondral junctions) and Harrison sulcus occur.", true, "See the chest X-ray in the picture test."],
+        ["In a bow-legged toddler breastfed for 8 months with recurrent chest infections, nutritional history, wrist X-ray and fontanelle examination are all relevant.", true, "Prolonged exclusive breast milk without vitamin D, and chest infections, point to rickets; Blount disease is the main differential."],
+        ["Wedge osteotomy is the treatment of choice in the first year of life.", false, "Medical treatment first; osteotomy only for deformity persisting after healing, in an older child."],
+        ["Vitamin D deficiency is a common cause of Blount disease.", false, "Blount disease is a growth disorder of the medial proximal tibia (early walkers, obesity); metabolic bone tests and wrist X-ray are normal."],
+      ]),
+      explain: "Rickets: widened wrists, bowed legs, rosary, craniotabes, frontal bossing, delayed dentition, pot belly, hypocalcaemic seizures. Blount: isolated bowed tibia with a beak at the medial metaphysis, normal ALP." },
+
+    { topic: "Rickets", src: S+"; paed.197, 212, 231, 275",
+      stem: "Causes and treatment of rickets:",
+      items: I([
+        ["Low dietary calcium is an important cause in Nigerian children despite plenty of sunlight.", true, "Cereal-based diets high in phytate; calcium alone can heal it."],
+        ["Treatment is vitamin D (for example 2,000-6,000 IU daily for about 12 weeks, or one large 'stoss' dose) plus calcium.", true, "Standard doses; prevention is 400 IU daily in infancy."],
+        ["X-linked hypophosphataemic rickets responds to vitamin D alone.", false, "It needs oral phosphate plus calcitriol. Calcium is normal, phosphate low, ALP high, vitamin D normal."],
+        ["Calcium supplementation is not needed in nutritional rickets.", false, "Calcium is part of treatment; vitamin D alone can precipitate hypocalcaemia."],
+        ["The bone deformities of early rickets usually correct with medical treatment.", true, "Remodelling with growth. Deformities fixed in older children may need surgery."],
+      ]),
+      explain: "Hypocalcaemic tetany or seizures in an infant with rickets: IV 10% calcium gluconate. Renal rickets (CKD) and vitamin D resistance need active vitamin D (calcitriol) and phosphate; plain vitamin D will not do." },
+
+    { topic: "Turner & chromosomal", src: S+"; p.41, 47-48, 199; paed.255, 268, 468, 990",
+      stem: "Turner syndrome:",
+      items: I([
+        ["The usual karyotype is 45,X (or a mosaic), diagnosed by chromosome analysis.", true, "Slide p.48 (45,X); p.46 karyotype in the short-stature work-up."],
+        ["Webbed neck, low posterior hairline, shield chest, cubitus valgus and lymphoedema of the hands and feet at birth are typical.", true, "See the picture test."],
+        ["Streak gonads cause hypergonadotropic hypogonadism, so FSH and LH are high.", true, "Slide p.48 (primary hypogonadism)."],
+        ["Coarctation of the aorta, bicuspid aortic valve and horseshoe kidney are associated.", true, "Slide p.199: horseshoe kidney is commoner in Turner syndrome."],
+        ["Severe intellectual disability is typical.", false, "Intelligence is usually normal (with some visuospatial difficulty)."],
+      ]),
+      explain: "High-yield short-answer: short stature plus a webbed neck in a girl, plus a cardiac murmur. Karyotype, echocardiography and renal ultrasound, then GH and oestrogen. Slide p.264 adds that girls with Turner syndrome can develop Duchenne muscular dystrophy (X-linked recessive)." },
+
+    { topic: "Turner & chromosomal", src: S+"; p.47, 48, 264; paed.255",
+      stem: "Turner syndrome: management and links",
+      items: I([
+        ["Recombinant growth hormone is an approved treatment for the short stature.", true, "Slide p.47."],
+        ["Oestrogen is needed to induce puberty and maintain secondary sexual characteristics.", true, "Slide p.48: girls with delayed puberty are given oestradiol."],
+        ["Spontaneous fertility is the rule.", false, "Most are infertile (ovarian failure); donor-egg IVF is possible. Rare spontaneous pregnancy in mosaics."],
+        ["Girls with Turner syndrome can be affected by X-linked recessive disease such as Duchenne muscular dystrophy.", true, "Slide p.264: only one X, so a recessive gene on it is expressed."],
+        ["The risk rises sharply with maternal age, as in trisomy 21.", false, "No clear maternal-age effect; mostly a sporadic loss of a sex chromosome at meiosis or early mitosis."],
+      ]),
+      explain: "Turner (female, 45,X) versus Klinefelter (male, 47,XXY): both hypergonadotropic hypogonadism (p.48). Turner short, Klinefelter tall with small firm testes." },
+
+    { topic: "Diabetes insipidus", src: S+"; p.55-56; 2014.3, paed.1128",
+      stem: "Diabetes insipidus (DI):",
+      items: I([
+        ["Central DI is due to deficiency of vasopressin (ADH) made in the hypothalamus.", true, "Slide p.55. Causes: craniopharyngioma, germinoma, histiocytosis X, head injury, neurosurgery (p.56)."],
+        ["Polyuria, polydipsia and nocturia with dilute urine are typical.", true, "Low urine osmolality and specific gravity."],
+        ["Fluid restriction produces a rising serum sodium and osmolality without concentrating the urine.", true, "The water-deprivation test. Desmopressin then concentrates the urine in central DI but not nephrogenic."],
+        ["Glycosuria is expected.", false, "Glycosuria belongs to diabetes mellitus; in DI the urine is clear of sugar."],
+        ["Nephrogenic DI responds to desmopressin.", false, "The kidney is resistant (often X-linked AVPR2); treat with fluids, thiazides and a low-salt diet."],
+      ]),
+      explain: "ADH excess is the opposite: SIADH gives hyponatraemia with concentrated urine and is treated with fluid restriction. Slide p.56 says SIADH can follow craniopharyngioma surgery, so watch sodium both ways post-op." },
+
+    { topic: "Ambiguous genitalia", src: "p.49-50; paed.36, 37, 185; Standard teaching",
+      stem: "A newborn with ambiguous genitalia:",
+      items: I([
+        ["CAH is strongly suspected, and the commonest finding is a virilised 46,XX baby.", true, "Slide p.49 (ambiguous genitalia in the newborn strongly suggests CAH). 21-hydroxylase deficiency is commonest."],
+        ["The sex of rearing should be announced immediately before the baby leaves the delivery room.", false, "Do not assign sex until the multidisciplinary team has done karyotype, ultrasound and hormone tests, and parents are counselled."],
+        ["The baby may deteriorate with vomiting, dehydration and shock at 1-3 weeks of life.", true, "Salt-wasting crisis; monitor sodium, potassium and glucose."],
+        ["Karyotype, pelvic ultrasound, 17-hydroxyprogesterone and serum electrolytes are first-line tests.", true, "Slide p.50: raised 17-OHP, low bicarbonate, high potassium."],
+        ["Ambiguous genitalia is a typical presentation of Turner syndrome.", false, "Turner girls have normal female external genitalia. Past paper options that ARE correct: CAH (21-hydroxylase) and pseudohermaphroditism."],
+      ]),
+      explain: "46,XX DSD: CAH. 46,XY DSD: androgen insensitivity, 5-alpha-reductase deficiency, defects of testosterone synthesis. Ovotesticular DSD and mixed gonadal dysgenesis make up the rest. Hydrocortisone and saline are life-saving." },
+  ]
+}]);
+})();
+
+</script>
+<script>
 (function(){
 "use strict";
 const $=s=>document.querySelector(s), app=$("#app"), timerEl=$("#timer");
@@ -2498,8 +3394,10 @@ const banks=[];
 const GROUPS=["Menstrual disorders & DUB","Amenorrhoea & PCOS","Abortion","Ectopic pregnancy","Antepartum haemorrhage","Hypertension in pregnancy","Labour & the partograph","Family planning","Infertility","Fibroids & endometriosis","Anaemia in pregnancy","Postpartum haemorrhage & oxytocics"];
 const COMING=["Antenatal care & booking","Gynaecological cancers","Genital infections & STIs","Prolapse & fistulae","Instruments & imaging (picture test)"];
 let curGroup=null;
-const TYPE_LABEL={cards:"Flashcards",mcq:"Multiple choice",essay:"Essays",fillgap:"Fill in the gap"};
-const TYPE_ORDER=["cards","mcq","fillgap","essay"];
+const PGROUPS=["Paediatric endocrinology"];
+const PCOMING=["Neonatology","Nutrition & malnutrition","Infectious diseases","Haemato-oncology","Cardiology","Nephrology","Neurology","Gastroenterology"];
+const TYPE_LABEL={cards:"Flashcards",mcq:"Multiple choice",essay:"Essays",fillgap:"Fill in the gap",tf:"True / False (5 stems each, negative marking)",pics:"Picture test (5 True / False per picture)"};
+const TYPE_ORDER=["cards","mcq","tf","pics","fillgap","essay"];
 const countOf=b=>b.type==="cards"?b.cards.length:b.type==="essay"?b.essays.length:b.questions.length;
 const KEY="mbIII-resit-history-v1";
 const load=()=>{try{return JSON.parse(localStorage.getItem(KEY))||[]}catch(e){return[]}};
@@ -2523,10 +3421,11 @@ function ask(msg,yes){
   document.body.appendChild(o);$("#ask-n").onclick=()=>o.remove();$("#ask-y").onclick=()=>{o.remove();yes()};
 }
 
-const srcOf=s=>/^p\./.test(s)?"O&G slides "+esc(s):esc(s);
+const srcOf=(s,subj)=>/^p\./.test(s)?(subj==="Paediatrics"?"Paediatrics":"O&G")+" slides "+esc(s):esc(s);
 
 function wire(){
   app.querySelectorAll("[data-start]").forEach(b=>b.onclick=()=>start(+b.dataset.start,b.dataset.mode));
+  app.querySelectorAll("[data-tf]").forEach(b=>b.onclick=()=>tfStart(+b.dataset.tf,b.dataset.mode));
   app.querySelectorAll("[data-mcq]").forEach(b=>b.onclick=()=>mcqStart(+b.dataset.mcq,b.dataset.mode));
   app.querySelectorAll("[data-essay]").forEach(b=>b.onclick=()=>essayStart(+b.dataset.essay,+b.dataset.k));
   app.querySelectorAll("[data-cards]").forEach(b=>b.onclick=()=>startCards(+b.dataset.cards,b.dataset.all==="1"));
@@ -2540,7 +3439,7 @@ function root(){
   stopAudio(); clearInterval(tick); timerEl.hidden=true; S=null; scrollTo(0,0);
   const hist=load();
   const tile=g=>{const bs=banks.filter(b=>b.group===g),n=t=>bs.filter(b=>b.type===t).reduce((s,b)=>s+countOf(b),0);
-    const bits=[["cards","flashcards"],["mcq","MCQs"],["fillgap","gap-fills"],["essay","essays"]].filter(([t])=>n(t)).map(([t,l])=>`${n(t)} ${n(t)===1?l.replace(/s$/,""):l}`).join(" · ");
+    const bits=[["cards","flashcards"],["mcq","MCQs"],["tf","T/F stems"],["pics","pictures"],["fillgap","gap-fills"],["essay","essays"]].filter(([t])=>n(t)).map(([t,l])=>`${n(t)} ${n(t)===1?l.replace(/s$/,""):l}`).join(" · ");
     return `<button class="tile" data-topic="${esc(g)}"><b>${esc(g)}</b><span class="meta">${bits}</span></button>`};
   const feat=banks.map((b,i)=>[b,i]).filter(([b])=>b.type==="saq").map(([b,i])=>{const a=window.OG1_AUDIO;
     return `<button class="tile feature" data-saq="${i}"><b>${esc(b.group)}</b><span>${b.items.length} questions with answers, more detail and memory hooks${a?` · listen on the go: full lesson, quick hooks or test yourself, by topic`:""}</span></button>`}).join("");
@@ -2548,7 +3447,10 @@ function root(){
    <div class="meta" style="margin-bottom:12px">Pick a topic, then choose what to practise.</div>
    <div class="tiles">${GROUPS.map(tile).join("")}</div></div>
    <div class="card"><h3 style="margin:0 0 6px">Still to come</h3><div class="meta">${COMING.map(esc).join(" · ")}</div></div>
-   <div class="card"><h2 style="margin:0 0 4px">Paediatrics</h2><div class="meta">Coming after O&amp;G.</div></div>`+
+   <div class="card"><h2 style="margin:0 0 4px">Paediatrics</h2>
+   <div class="meta" style="margin-bottom:12px">True/False stems with negative marking, picture tests, essays.</div>
+   <div class="tiles">${PGROUPS.map(tile).join("")}</div>
+   <div class="meta" style="margin-top:12px">Still to come: ${PCOMING.map(esc).join(" · ")}</div></div>`+
    weakCard(hist)+histCard(hist);
   wire();
 }
@@ -2561,6 +3463,10 @@ function topicPage(){
 }
 
 function bankRow(b,i){
+  if(b.type==="tf"||b.type==="pics"){const items=b.questions.reduce((n,q)=>n+q.items.length,0); return `<div style="margin:12px 0"><b>${TYPE_LABEL[b.type]}</b>
+     <div class="meta">${esc(b.title)} · ${b.questions.length} ${b.type==="pics"?"pictures":"stems"} · ${items} statements · ${b.negativeMarking?"−½ per wrong answer, 0 for blank":"no negative marking"}</div>
+     <button class="primary" data-tf="${i}" data-mode="exam">Start timed exam</button>
+     <button data-tf="${i}" data-mode="practice">Practice (check as you go)</button></div>`}
   if(b.type==="cards") return `<div style="margin:12px 0"><b>${TYPE_LABEL[b.type]}</b>
      <div class="meta">${b.cards.length} cards · ${cardsMastered(b)} mastered</div>
      <button class="primary" data-cards="${i}" data-all="0">Study (weakest first)</button>
@@ -2580,7 +3486,7 @@ function weakCard(h){
   const t={}; h.forEach(r=>r.topics&&Object.entries(r.topics).forEach(([k,v])=>{t[k]=t[k]||[0,0];t[k][0]+=v[0];t[k][1]+=v[1]}));
   const rows=Object.entries(t).map(([k,v])=>[k,v[0]/v[1],v[0],v[1]]).sort((a,b)=>a[1]-b[1]);
   if(!rows.length) return "";
-  return `<div class="card"><h3 style="margin-top:0">Weak points (all attempts)</h3>`+rows.map(r=>`<div>${esc(r[0])} <span class="meta">${r[2]}/${r[3]} gaps</span><div class="bar"><i style="width:${Math.round(r[1]*100)}%"></i></div></div>`).join("")+`</div>`;
+  return `<div class="card"><h3 style="margin-top:0">Weak points (all attempts)</h3>`+rows.map(r=>`<div>${esc(r[0])} <span class="meta">${r[2]}/${r[3]} correct</span><div class="bar"><i style="width:${Math.round(r[1]*100)}%"></i></div></div>`).join("")+`</div>`;
 }
 function histCard(h){
   if(!h.length) return "";
@@ -2697,6 +3603,64 @@ function mcqFinish(){
      <p>Your answer: <b>${p===null?"—":L[p]+". "+esc(q.options[perm[i][p]])}</b><br>Correct: <b>${L[correctPos]}. ${esc(q.options[q.answer])}</b></p>
      <div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: ${srcOf(q.src)}</div></div>`}).join("");
   $("#home").onclick=home;$("#retry").onclick=()=>mcqStart(banks.indexOf(b),S.mode);scrollTo(0,0);
+}
+
+
+// ---------- True/False stems (5 statements each, negative marking) and picture tests ----------
+function tfStart(bi,mode){
+  const b=banks[bi], per=b.secPerQ||(b.type==="pics"?90:120);
+  S={tf:true,b,mode,idx:0,ans:b.questions.map(q=>q.items.map(()=>null)),checked:b.questions.map(()=>false),start:Date.now(),limit:b.questions.length*per*1000};
+  if(mode==="exam"){timerEl.hidden=false;tick=setInterval(()=>{const left=S.limit-(Date.now()-S.start);timerEl.textContent=fmt(left);if(left<=0){clearInterval(tick);tfFinish()}},500)}
+  else timerEl.hidden=true;
+  tfRender();
+}
+const tfPts=(a,key,neg)=>a===null?0:(a===key?1:(neg?-.5:0));
+function tfRows(q,ans,reveal,neg){
+  return q.items.map((it,k)=>{const a=ans[k],right=a!==null&&a===it.a;
+    const btn=(v,l)=>{const on=a===v, st=on?(reveal?(right?"background:var(--okbg);border-color:var(--ok)":"background:var(--badbg);border-color:var(--bad)"):"background:color-mix(in srgb,var(--accent) 18%,var(--card));border-color:var(--accent)"):"";
+      return `<button class="tfb" data-k="${k}" data-v="${v}" style="min-width:64px;${st}" ${reveal?"disabled":""}>${l}</button>`};
+    return `<div style="padding:10px 0;border-top:1px solid var(--line)"><div style="line-height:1.5"><b>${"abcde"[k]}.</b> ${esc(it.t)}</div>
+     <div class="row" style="margin-top:6px">${btn(true,"True")}${btn(false,"False")}</div>
+     ${reveal?`<div class="explain" style="margin-top:8px"><b>${it.a?"TRUE":"FALSE"}</b>${a===null?" · not answered (0)":right?" · +1":(neg?" · −½":" · wrong")}. ${esc(it.why)}</div>`:""}</div>`}).join("");
+}
+function tfRender(){
+  const {b,idx}=S,q=b.questions[idx],shown=S.checked[idx],neg=b.negativeMarking;
+  app.innerHTML=`<div class="card"><div class="meta">${b.type==="pics"?"Picture":"Stem"} ${idx+1} of ${b.questions.length} · ${esc(q.topic)}</div>
+   ${q.img?`<figure style="margin:0 0 12px"><img src="${esc(q.img)}" alt="Exam picture ${idx+1}" style="max-width:100%;max-height:360px;display:block;margin:0 auto;border-radius:8px;background:#fff" referrerpolicy="no-referrer"><figcaption class="meta" style="margin-top:6px">${q.credit?esc(q.credit):""}</figcaption></figure>`:""}
+   <div class="stem" style="line-height:1.5"><b>${esc(q.stem)}</b></div>
+   <div style="margin-top:6px">${tfRows(q,S.ans[idx],shown,neg)}</div>
+   ${shown?`<div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: ${srcOf(q.src,b.subject)}</div>`:""}
+   <div class="row"><button id="prev" ${idx?"":"disabled"}>Back</button>
+   ${S.mode==="practice"&&!shown?`<button class="primary" id="check">Check</button>`:""}
+   ${idx<b.questions.length-1?`<button class="primary" id="next">Next</button>`:`<button class="primary" id="fin">Finish</button>`}</div>
+   <div class="meta" style="margin-top:8px">Tap an answer again to clear it. Blank = 0, wrong = ${neg?"−½":"0"}.</div>
+   <div class="dots">${b.questions.map((_,k)=>`<button class="dot ${k===idx?"cur":""} ${S.ans[k].some(x=>x!==null)?"done":""}" data-go="${k}">${k+1}</button>`).join("")}</div></div>`;
+  app.querySelectorAll(".tfb").forEach(o=>o.onclick=()=>{const k=+o.dataset.k,v=o.dataset.v==="true";S.ans[idx][k]=S.ans[idx][k]===v?null:v;const y=scrollY;tfRender();scrollTo(0,y)});
+  $("#prev").onclick=()=>{S.idx--;tfRender();scrollTo(0,0)};
+  if($("#next")) $("#next").onclick=()=>{S.idx++;tfRender();scrollTo(0,0)};
+  if($("#check")) $("#check").onclick=()=>{S.checked[idx]=true;tfRender()};
+  if($("#fin")) $("#fin").onclick=()=>{const un=S.ans.reduce((n,a)=>n+a.filter(x=>x===null).length,0); if(S.mode==="exam"&&un){ask(un+" statement(s) left blank (they score 0, not −½). Submit anyway?",tfFinish);return} tfFinish()};
+  app.querySelectorAll("[data-go]").forEach(d=>d.onclick=()=>{S.idx=+d.dataset.go;tfRender();scrollTo(0,0)});
+}
+function tfFinish(){
+  clearInterval(tick);timerEl.hidden=true;
+  const {b,ans}=S,neg=b.negativeMarking,topics={};let net=0,right=0,wrong=0,blank=0;
+  b.questions.forEach((q,i)=>q.items.forEach((it,k)=>{const a=ans[i][k],ok=a!==null&&a===it.a;
+    net+=tfPts(a,it.a,neg); if(a===null)blank++; else if(ok)right++; else wrong++;
+    const t=topics[q.topic]=topics[q.topic]||[0,0];t[1]++;if(ok)t[0]++}));
+  const max=b.questions.reduce((n,q)=>n+q.items.length,0);
+  const h=load();h.push({date:Date.now(),title:b.title,mode:S.mode,got:net,max,topics});save(h);
+  const weak=Object.entries(topics).filter(([_,v])=>v[0]<v[1]).sort((x,y)=>x[1][0]/x[1][1]-y[1][0]/y[1][1]);
+  app.innerHTML=`<div class="card"><div class="meta">${esc(b.title)} · ${S.mode==="exam"?"time used "+fmt(Date.now()-S.start):"practice"}</div>
+   <div class="score">${net} / ${max} <span style="font-size:18px;color:var(--mute)">(${Math.round(100*net/max)}%)</span></div>
+   <p>${right} right · ${wrong} wrong${neg?` (−${wrong/2})`:""} · ${blank} left blank. ${neg&&wrong>right?"You lost more to guessing than you gained: leave a statement blank unless you are more than 2 in 3 sure.":""}</p>
+   ${weak.length?`<p><b>Revise first:</b> ${weak.map(([k,v])=>`${esc(k)} (${v[0]}/${v[1]})`).join(" · ")}</p>`:"<p>Clean sweep.</p>"}
+   <div class="row"><button class="primary" id="home">Back to topic</button><button id="retry">Retake</button></div></div>`+
+   b.questions.map((q,i)=>`<div class="card"><div class="meta">${b.type==="pics"?"Picture":"Stem"} ${i+1} · ${esc(q.topic)}</div>
+     ${q.img?`<img src="${esc(q.img)}" alt="" style="max-width:100%;max-height:220px;display:block;margin:0 auto 10px;border-radius:8px;background:#fff" referrerpolicy="no-referrer">`:""}
+     <div class="stem" style="line-height:1.5"><b>${esc(q.stem)}</b></div>${tfRows(q,ans[i],true,neg)}
+     <div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: ${srcOf(q.src,b.subject)}</div></div>`).join("");
+  $("#home").onclick=home;$("#retry").onclick=()=>tfStart(banks.indexOf(b),S.mode);scrollTo(0,0);
 }
 
 // ---------- essays: write, then self-mark against a point-by-point model answer ----------
