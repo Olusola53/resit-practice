@@ -2768,6 +2768,37 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Where to find the answers: Paediatrics CS slide pages for every T/F stem and picture (checked against Paediatrics-slides.txt).
+// Format per stem, in bank order: pg = slide pages that answer the in-slide statements ("" = nothing in the deck);
+// out = 0-based indexes of statements (a=0, b=1, ...) whose answer is OUTSIDE the slides (standard teaching).
+// If pg is "" every statement is outside. app.js merges this onto the banks at load.
+window.PAGE_MAP = {
+  "pa-tf-endo-1": [
+    {pg:"p.39-40",out:[]}, {pg:"p.41",out:[]}, {pg:"p.37-38",out:[]}, {pg:"p.43-45",out:[]}, {pg:"p.38, 43",out:[]},
+    {pg:"p.48",out:[]}, {pg:"p.46, 48",out:[]}, {pg:"p.41, 45-46",out:[]}, {pg:"p.42, 45-47",out:[]}, {pg:"p.47",out:[]},
+    {pg:"p.54-55",out:[]}, {pg:"p.56",out:[]}, {pg:"p.51, 56",out:[]}, {pg:"p.49-50",out:[]},
+    {pg:"p.49-50",out:[0,1,2,3]}, {pg:"p.50-51",out:[1,4]}, {pg:"p.51-52",out:[3]}
+  ],
+  "pa-tf-endo-2": [
+    {pg:"",out:[]}, {pg:"",out:[]}, {pg:"",out:[]}, {pg:"p.38",out:[0,1,3,4]}, {pg:"",out:[]},
+    {pg:"",out:[]}, {pg:"p.143",out:[0,1,3,4]}, {pg:"p.174",out:[1,2,3,4]}, {pg:"p.59",out:[0,1,2,4]}, {pg:"p.41, 81",out:[0,2,3]},
+    {pg:"",out:[]}, {pg:"p.42",out:[0,1,2,4]}, {pg:"p.42",out:[0,2,3,4]}, {pg:"p.41",out:[0,1,2,4]}, {pg:"",out:[]},
+    {pg:"",out:[]}, {pg:"p.46, 48, 199",out:[1,4]}, {pg:"p.47-48, 264",out:[2,4]}, {pg:"p.55-56, 237",out:[3]}, {pg:"p.49-50",out:[1,2,4]}
+  ],
+  "pa-tf-endo-3": [
+    {pg:"",out:[]}, {pg:"p.143-144",out:[2,3,4]}, {pg:"",out:[]}, {pg:"",out:[]}, {pg:"",out:[]},
+    {pg:"",out:[]}, {pg:"",out:[]}, {pg:"",out:[]}, {pg:"",out:[]}, {pg:"",out:[]},
+    {pg:"",out:[]}, {pg:"",out:[]}, {pg:"",out:[]}, {pg:"p.174",out:[1,2,3,4]}, {pg:"",out:[]}
+  ],
+  "pa-pics-endo": [
+    {pg:"p.41",out:[0,1,3,4]}, {pg:"",out:[]}, {pg:"",out:[]}, {pg:"p.41-42, 55",out:[0,2]}, {pg:"",out:[]},
+    {pg:"p.47-48, 199",out:[2]}, {pg:"p.51-52",out:[1]}, {pg:"p.49-50",out:[1,3,4]}, {pg:"p.48, 50-51",out:[]}, {pg:"p.43-44",out:[]},
+    {pg:"p.43-44, 48",out:[2]}, {pg:"",out:[]}
+  ]
+};
+
+</script>
+<script>
 // Paediatrics · Picture test (picture + 5 True/False statements each, negative marking −½) · Endocrinology.
 // Pictures are real clinical photographs and radiographs from Wikimedia Commons, linked live (not copied) with licence and
 // author in each caption. Statements are written against the slide material where it exists (p.xxx) and standard teaching otherwise.
@@ -3574,6 +3605,8 @@ const banks=[];
   const by={}; b.questions.forEach(q=>(by[q.group]=by[q.group]||[]).push(q));
   Object.entries(by).forEach(([g,qs])=>banks.push({...b,id:b.id+"::"+g,group:g,title:"O&G Fill-in-the-gap · "+g,questions:qs}));
 });
+const PM=window.PAGE_MAP||{};
+banks.forEach(b=>{const m=PM[b.id]; if(m&&b.questions) b.questions.forEach((q,i)=>{const e=m[i]; if(!e)return; q.pg=e.pg; q.items.forEach((it,k)=>{it.o=!e.pg||e.out.includes(k)})})});
 const GROUPS=["Menstrual disorders & DUB","Amenorrhoea & PCOS","Abortion","Ectopic pregnancy","Antepartum haemorrhage","Hypertension in pregnancy","Labour & the partograph","Family planning","Infertility","Fibroids & endometriosis","Anaemia in pregnancy","Postpartum haemorrhage & oxytocics"];
 const COMING=["Antenatal care & booking","Gynaecological cancers","Genital infections & STIs","Prolapse & fistulae","Instruments & imaging (picture test)"];
 let curGroup=null;
@@ -3604,7 +3637,12 @@ function ask(msg,yes){
   document.body.appendChild(o);$("#ask-n").onclick=()=>o.remove();$("#ask-y").onclick=()=>{o.remove();yes()};
 }
 
-const srcOf=(s,subj)=>/^p\./.test(s)?(subj==="Paediatrics"?"Paediatrics":"O&G")+" slides "+esc(s):esc(s);
+const srcOf=(s,subj)=>(/^p\./.test(s)?(subj==="Paediatrics"?"Paediatrics":"O&G")+" slides "+esc(s):esc(s)).replace(/Standard teaching/g,"<b>outside the slide</b> (standard teaching)").replace(/beyond the slides/g,"outside the slide");
+const tfWhere=q=>{ if(q.pg===undefined) return `Source: ${srcOf(q.src,"Paediatrics")}`;
+  const outs=q.items.map((it,k)=>it.o?"abcde"[k]:"").filter(Boolean);
+  if(!q.pg) return "<b>Outside the slide</b>: standard teaching, not in the Paediatrics deck.";
+  return `Paediatrics slides <b>${esc(q.pg)}</b>`+(outs.length?` · statement${outs.length>1?"s":""} ${outs.join(", ")}: <b>outside the slide</b> (standard teaching)`:" · every statement is answered in the slides");};
+const tfTag=(q,k)=>{const it=q.items[k]; if(q.pg===undefined) return ""; return it.o?`<span class="meta"> · outside the slide</span>`:`<span class="meta"> · slide ${esc(q.pg)}</span>`};
 
 function wire(){
   app.querySelectorAll("[data-start]").forEach(b=>b.onclick=()=>start(+b.dataset.start,b.dataset.mode));
@@ -3698,6 +3736,7 @@ function render(){
   const {b,idx}=S, q=b.questions[idx], practice=S.mode==="practice";
   app.innerHTML=`<div class="card"><div class="meta">Question ${idx+1} of ${b.questions.length} · ${esc(q.topic)}</div>
    <div class="stem">${qView(idx)}</div>
+   <div class="src">📖 Find the answers: ${srcOf(q.src,b.subject)}</div>
    ${S.checked[idx]?`<div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: ${srcOf(q.src)}</div>`:""}
    <div class="row"><button id="prev" ${idx?"":"disabled"}>Back</button>
    ${practice&&!S.checked[idx]?`<button class="primary" id="check">Check</button>`:""}
@@ -3753,6 +3792,7 @@ function mcqRender(){
   const {b,idx,perm}=S,q=b.questions[idx],L="ABCDE",shown=S.checked[idx];
   app.innerHTML=`<div class="card"><div class="meta">Question ${idx+1} of ${b.questions.length} · ${esc(q.topic)}</div>
    <div class="stem" style="line-height:1.5">${esc(q.stem)}</div>
+   <div class="src" style="margin-top:4px">📖 Find the answer: ${srcOf(q.src,b.subject)}</div>
    <div style="margin-top:12px">${perm[idx].map((o,pos)=>{const sel=S.pick[idx]===pos,right=o===q.answer;
      const st=shown?(right?"background:var(--okbg);border-color:var(--ok)":(sel?"background:var(--badbg);border-color:var(--bad)":"")):(sel?"background:color-mix(in srgb,var(--accent) 15%,var(--card));border-color:var(--accent)":"");
      return `<button class="opt" data-pos="${pos}" style="display:block;width:100%;text-align:left;margin:6px 0;${st}" ${shown?"disabled":""}><b>${L[pos]}.</b> ${esc(q.options[o])}</button>`}).join("")}</div>
@@ -3804,15 +3844,16 @@ function tfRows(q,ans,reveal,neg){
       return `<button class="tfb" data-k="${k}" data-v="${v}" style="min-width:64px;${st}" ${reveal?"disabled":""}>${l}</button>`};
     return `<div style="padding:10px 0;border-top:1px solid var(--line)"><div style="line-height:1.5"><b>${"abcde"[k]}.</b> ${esc(it.t)}</div>
      <div class="row" style="margin-top:6px">${btn(true,"True")}${btn(false,"False")}</div>
-     ${reveal?`<div class="explain" style="margin-top:8px"><b>${it.a?"TRUE":"FALSE"}</b>${a===null?" · not answered (0)":right?" · +1":(neg?" · −½":" · wrong")}. ${esc(it.why)}</div>`:""}</div>`}).join("");
+     ${reveal?`<div class="explain" style="margin-top:8px"><b>${it.a?"TRUE":"FALSE"}</b>${a===null?" · not answered (0)":right?" · +1":(neg?" · −½":" · wrong")}. ${esc(it.why)}${tfTag(q,k)}</div>`:""}</div>`}).join("");
 }
 function tfRender(){
   const {b,idx}=S,q=b.questions[idx],shown=S.checked[idx],neg=b.negativeMarking;
   app.innerHTML=`<div class="card"><div class="meta">${b.type==="pics"?"Picture":"Stem"} ${idx+1} of ${b.questions.length} · ${esc(q.topic)}</div>
    ${q.img?`<figure style="margin:0 0 12px"><img src="${esc(q.img)}" alt="Exam picture ${idx+1}" style="max-width:100%;max-height:360px;display:block;margin:0 auto;border-radius:8px;background:#fff" referrerpolicy="no-referrer"><figcaption class="meta" style="margin-top:6px">${q.credit?esc(q.credit):""}</figcaption></figure>`:""}
    <div class="stem" style="line-height:1.5"><b>${esc(q.stem)}</b></div>
+   <div class="src" style="margin-top:4px">📖 Find the answers: ${tfWhere(q)}</div>
    <div style="margin-top:6px">${tfRows(q,S.ans[idx],shown,neg)}</div>
-   ${shown?`<div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: ${srcOf(q.src,b.subject)}</div>`:""}
+   ${shown?`<div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Also from: ${srcOf(q.src,b.subject)}</div>`:""}
    <div class="row"><button id="prev" ${idx?"":"disabled"}>Back</button>
    ${S.mode==="practice"&&!shown?`<button class="primary" id="check">Check</button>`:""}
    ${idx<b.questions.length-1?`<button class="primary" id="next">Next</button>`:`<button class="primary" id="fin">Finish</button>`}</div>
@@ -3841,8 +3882,8 @@ function tfFinish(){
    <div class="row"><button class="primary" id="home">Back to topic</button><button id="retry">Retake</button></div></div>`+
    b.questions.map((q,i)=>`<div class="card"><div class="meta">${b.type==="pics"?"Picture":"Stem"} ${i+1} · ${esc(q.topic)}</div>
      ${q.img?`<img src="${esc(q.img)}" alt="" style="max-width:100%;max-height:220px;display:block;margin:0 auto 10px;border-radius:8px;background:#fff" referrerpolicy="no-referrer">`:""}
-     <div class="stem" style="line-height:1.5"><b>${esc(q.stem)}</b></div>${tfRows(q,ans[i],true,neg)}
-     <div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Source: ${srcOf(q.src,b.subject)}</div></div>`).join("");
+     <div class="stem" style="line-height:1.5"><b>${esc(q.stem)}</b></div><div class="src" style="margin-top:4px">📖 Find the answers: ${tfWhere(q)}</div>${tfRows(q,ans[i],true,neg)}
+     <div class="explain"><b>Connect it:</b> ${esc(q.explain)}</div><div class="src">Also from: ${srcOf(q.src,b.subject)}</div></div>`).join("");
   $("#home").onclick=home;$("#retry").onclick=()=>tfStart(banks.indexOf(b),S.mode);scrollTo(0,0);
 }
 
@@ -3853,7 +3894,7 @@ const esave=o=>{try{localStorage.setItem(EKEY,JSON.stringify(o))}catch(e){}};
 function essayStart(bi,k){
   const b=banks[bi],e=b.essays[k],id=b.id+":"+k;
   S={essay:true,b,e,id,start:Date.now()};
-  app.innerHTML=`<div class="card"><div class="meta">${esc(e.kind)} · ${esc(e.src)}</div>
+  app.innerHTML=`<div class="card"><div class="meta">${esc(e.kind)} · 📖 Find it: ${srcOf(e.src,b.subject)}</div>
    <div class="stem" style="line-height:1.5"><b>${esc(e.prompt)}</b></div>
    <p class="meta">Write it as you would in the exam hall: headings first, then points. Allow ${e.marks>=20?"30":"12"} minutes.</p>
    <textarea id="ans" rows="18" style="width:100%;font:inherit;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)" placeholder="Write your answer here (auto-saved in this browser)…">${esc(eload()[id]||"")}</textarea>
@@ -3863,12 +3904,12 @@ function essayStart(bi,k){
 }
 function essayMark(written){
   const {b,e,id}=S,total=e.sections.reduce((n,s)=>n+s.pts.length,0);
-  app.innerHTML=`<div class="card"><div class="meta">${esc(e.kind)} · self-marking</div>
+  app.innerHTML=`<div class="card"><div class="meta">${esc(e.kind)} · self-marking · 📖 Find it: ${srcOf(e.src,b.subject)}</div>
    <div class="stem" style="line-height:1.5"><b>${esc(e.prompt)}</b></div>
    <div class="score" id="sc"></div><p class="meta">Tick each point you actually covered. Be strict: a point counts only if you wrote it, not if you merely knew it.</p>
    <div class="explain"><b>Examiner's tip:</b> ${esc(e.tip)}</div></div>
    <div class="card"><details><summary>Your answer</summary><pre style="white-space:pre-wrap;font:inherit">${esc(written||"(nothing written)")}</pre></details></div>`+
-   e.sections.map((s,si)=>`<div class="card"><h3 style="margin-top:0">${esc(s.h)}</h3>${s.pts.map((p,pi)=>`<label style="display:flex;gap:10px;margin:8px 0;cursor:pointer"><input type="checkbox" data-s="${si}" data-p="${pi}" style="margin-top:6px"><span>${esc(p.t)}${p.x?` <span class="meta">(beyond the slides)</span>`:""}</span></label>`).join("")}</div>`).join("")+
+   e.sections.map((s,si)=>`<div class="card"><h3 style="margin-top:0">${esc(s.h)}</h3>${s.pts.map((p,pi)=>`<label style="display:flex;gap:10px;margin:8px 0;cursor:pointer"><input type="checkbox" data-s="${si}" data-p="${pi}" style="margin-top:6px"><span>${esc(p.t)}${p.x?` <span class="meta">(outside the slide)</span>`:""}</span></label>`).join("")}</div>`).join("")+
    `<div class="card"><div class="row"><button class="primary" id="save">Save score</button><button id="home">Back to topic</button></div></div>`;
   const upd=()=>{const boxes=[...app.querySelectorAll("input[type=checkbox]")],n=boxes.filter(c=>c.checked).length;
     $("#sc").innerHTML=`${(n/total*e.marks).toFixed(1)} / ${e.marks} <span style="font-size:18px;color:var(--mute)">(${n}/${total} points)</span>`;return n};
@@ -4021,7 +4062,7 @@ function renderCard(){
    ${S.revealed?`<div class="explain" style="margin-top:14px"><b>Answer:</b> ${esc(c.a)}</div>
      ${S.typed?`<div class="src">You wrote: ${esc(S.typed)}</div>`:""}
      <div class="explain"><b>Connect it:</b> ${esc(c.connect)}</div>
-     <div class="src">Source: ${esc(c.src)}${c.extra?" · <b>beyond the slides</b>":""}</div>
+     <div class="src">Source: ${esc(c.src)}${c.extra?" · <b>outside the slide</b>":""}</div>
      <div class="row"><button class="primary" id="got">I had it all</button><button id="miss">I missed something</button></div>`
    :`<textarea id="typed" rows="3" placeholder="Say or type your answer from memory first…" style="width:100%;margin-top:14px;font:inherit;padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)">${esc(S.typed)}</textarea>
      <div class="row"><button class="primary" id="rev">Reveal answer</button></div>`}
