@@ -3382,6 +3382,189 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · True/False (5 statements per stem, negative marking −½) · Endocrinology paper 3: diabetes, DKA, hypoglycaemia in depth.
+// Standard teaching (the deck has no diabetes or hypoglycaemia lecture); slide cross-links cited as p.xxx. Stems avoid repeating papers 1-2.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-endo-3",
+  subject: "Paediatrics",
+  group: "Paediatric endocrinology",
+  type: "tf",
+  title: "Paediatrics T/F · Endocrinology 3: diabetes, DKA, hypoglycaemia in depth (15 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "Diabetes mellitus", src: S+"; paed.220",
+      stem: "Type 2 diabetes and other forms of diabetes in young people:",
+      items: I([
+        ["Obesity, acanthosis nigricans, a strong family history and puberty are typical of type 2 diabetes in a child.", true, "Pubertal insulin resistance peaks in mid-puberty."],
+        ["Metformin is a first-line drug in type 2 diabetes in a child who is not ketotic.", true, "With lifestyle change; insulin if ketotic or markedly hyperglycaemic at presentation."],
+        ["Type 2 diabetes in a child never presents with ketosis or DKA.", false, "A minority do present with ketosis or DKA, so insulin is started first and metformin added later."],
+        ["MODY is inherited as an autosomal dominant trait and islet autoantibodies are typically positive.", false, "MODY is autosomal dominant, but autoantibodies are typically NEGATIVE (not autoimmune)."],
+        ["Neonatal diabetes (onset under 6 months) due to potassium-channel (KCNJ11) mutations can be treated with oral sulfonylureas.", true, "Genetic testing changes treatment; true type 1 diabetes is very rare under 6 months."],
+      ]),
+      explain: "Type 2 in a child: obese, acanthosis, PCOS, family history, usually negative antibodies, high or normal C-peptide. Acanthosis nigricans (dark velvety neck skin) is a marker of hyperinsulinaemia." },
+
+    { topic: "Hypoglycaemia", src: "p.143-144; "+S,
+      stem: "Hypoglycaemia in the tropical child (malaria and malnutrition):",
+      items: I([
+        ["Hypoglycaemia in severe malaria is defined as whole-blood glucose below 2.2 mmol/L (40 mg/dl).", true, "Slide p.143."],
+        ["Reduced gluconeogenesis from excess cytokines contributes to it.", true, "Slide p.144. Quinine adds hyperinsulinism; parasites also consume glucose."],
+        ["A child with severe malaria who convulses should have the blood glucose checked immediately.", true, "Hypoglycaemia can itself cause the seizure or coma and is easily missed."],
+        ["Severe acute malnutrition makes hypoglycaemia less likely because fat stores supply energy.", false, "Hypoglycaemia (with hypothermia) is a leading killer in severe malnutrition: glycogen and gluconeogenic substrate are depleted."],
+        ["Treat with an IV bolus of 10% dextrose (about 2-5 ml/kg) and then keep feeding or infusing glucose.", true, "Then recheck glucose in 15-30 minutes; recurrence is common."],
+      ]),
+      explain: "Rule for the ward: unconscious, convulsing, or shocked child in a malaria zone gets a glucose check with the first set of observations. Link: cerebral malaria (p.144) and kwashiorkor." },
+
+    { topic: "Diabetes mellitus", src: S,
+      stem: "Insulin preparations:",
+      items: I([
+        ["Rapid-acting analogues (lispro, aspart) start working within about 15 minutes and are given with or just before meals.", true, "Peak 1-2 h."],
+        ["Soluble (regular) human insulin should be given about 30 minutes before a meal.", true, "Slower onset and longer tail than the analogues."],
+        ["NPH (isophane) insulin has a peak around 4-8 hours, which can cause nocturnal hypoglycaemia.", true, "Reason many children prefer a peakless basal insulin."],
+        ["Glargine and detemir are intermediate-acting insulins with a marked peak.", false, "They are long-acting, relatively peakless basal analogues."],
+        ["Insulin in current use must be kept frozen to preserve potency.", false, "Never freeze. Unopened stock in the fridge; the vial or pen in use at room temperature for about 28 days."],
+      ]),
+      explain: "Only soluble (regular) insulin or rapid analogue goes into an IV infusion, as in DKA (bank 2). Cold-chain problems are real in Nigeria: heat-damaged insulin is a cause of 'unexplained' poor control." },
+
+    { topic: "Diabetes mellitus", src: S,
+      stem: "The 'honeymoon' (partial remission) period of type 1 diabetes:",
+      items: I([
+        ["It follows the start of insulin as residual beta cells recover from glucotoxicity.", true, "Insulin needs fall."],
+        ["Insulin requirements fall (often under 0.5 unit/kg/day) and glucose may be near normal.", true, "Typical definition."],
+        ["It lasts weeks to a year or two.", true, "Not permanent."],
+        ["It means the child is cured, so insulin can be stopped.", false, "Stopping insulin leads to relapse and DKA. Continue a small dose to preserve beta cells and avoid antibodies."],
+        ["It ends with a sharp rise in insulin requirement, which is a sign of a new illness.", false, "Rising need is the expected end of the honeymoon (or puberty, or infection); look for an intercurrent cause only if sudden and severe."],
+      ]),
+      explain: "Parents often panic when the dose changes. The honeymoon explains why the first months are 'easy' and then harder; puberty then raises the dose again (growth hormone and sex steroids are insulin-antagonistic)." },
+
+    { topic: "Hypoglycaemia", src: S,
+      stem: "Hypoglycaemia in a child with type 1 diabetes: recognition and treatment",
+      items: I([
+        ["Sweating, tremor, palpitations, pallor and hunger are adrenergic (autonomic) warning symptoms.", true, "Neuroglycopenic: headache, confusion, behaviour change, seizure, coma."],
+        ["A mild episode is treated with about 10-20 g of fast-acting carbohydrate, with glucose rechecked in 10-15 minutes.", true, "Juice, glucose tablets; then a slow-release carbohydrate snack."],
+        ["An unconscious or convulsing child should be given sugar by mouth.", false, "Aspiration risk. Give IM glucagon (0.5 mg under 25 kg, 1 mg above) or IV 10% dextrose 2-5 ml/kg."],
+        ["Recurrent severe hypoglycaemia in a child under 5 years can damage the developing brain.", true, "So targets are relaxed in the very young."],
+        ["Beta-blockers can mask the adrenergic warning signs.", true, "Sweating may persist; tremor and palpitations are blunted."],
+      ]),
+      explain: "'15-15 rule': 15 g carbohydrate, wait 15 minutes, recheck. Family teaching: glucagon kit, glucose tablets in the school bag, a medical bracelet." },
+
+    { topic: "Hypoglycaemia", src: S,
+      stem: "Triggers and complications of hypoglycaemia:",
+      items: I([
+        ["Exercise lowers blood glucose and can cause delayed hypoglycaemia overnight.", true, "Reduce the evening insulin or add a snack after sport."],
+        ["Alcohol protects against hypoglycaemia in adolescents.", false, "It blocks gluconeogenesis and causes delayed, severe hypoglycaemia."],
+        ["Glucagon is effective in glycogen storage disease type I and in a child who is starved of glycogen.", false, "Glucagon works by releasing liver glycogen: it fails when glycogen is absent or depleted."],
+        ["Hypoglycaemia unawareness can follow frequent episodes.", true, "Strict avoidance for a few weeks may restore warning symptoms."],
+        ["A missed or delayed meal is a common precipitant.", true, "Insulin acts whether or not the child eats."],
+      ]),
+      explain: "Seizure during sleep, morning headache and unexplained night sweats suggest nocturnal hypoglycaemia; check a 3 a.m. glucose. Somogyi rebound comes after such episodes (bank 2)." },
+
+    { topic: "Diabetic ketoacidosis", src: S,
+      stem: "Pathophysiology and tests in DKA:",
+      items: I([
+        ["Insulin deficiency with high counter-regulatory hormones (glucagon, cortisol, adrenaline, GH) drives lipolysis and ketone production.", true, "Free fatty acids are converted in the liver to ketones."],
+        ["Beta-hydroxybutyrate is the predominant ketone in DKA.", true, "Urine nitroprusside strips detect acetoacetate, not BOHB, so can under-read; blood BOHB is better."],
+        ["Abdominal pain in DKA always means there is an acute surgical abdomen.", false, "It is common in DKA and settles with treatment; reassess after rehydration."],
+        ["A raised white cell count is proof of infection.", false, "Stress and ketosis cause leucocytosis; look for infection on clinical grounds and culture."],
+        ["The anion gap is raised.", true, "Unmeasured ketoacid anions."],
+      ]),
+      explain: "Follow the chain: no insulin, so glucose cannot enter cells, so the liver makes more glucose and fatty acids; ketones; acidosis; osmotic diuresis; dehydration; potassium loss. Sepsis and malaria must be looked for as precipitants." },
+
+    { topic: "Diabetic ketoacidosis", src: S,
+      stem: "Cerebral oedema in DKA:",
+      items: I([
+        ["It is the commonest cause of death from DKA in children.", true, "Incidence about 0.5-1% of episodes."],
+        ["Risk is higher in young children, new-onset diabetes and severe acidosis at presentation.", true, "Also low pCO2 and high urea at presentation."],
+        ["Risk is increased by bicarbonate therapy and a rapid fall in plasma osmolality.", true, "Hence no routine bicarbonate and a slow fluid plan."],
+        ["It always presents with coma from the first minute.", false, "Often heralded by headache, irritability, bradycardia, hypertension, fixed pupils or falling GCS."],
+        ["Mannitol or hypertonic saline should be withheld until a CT scan confirms it.", false, "Treat at once on clinical suspicion; do not delay for imaging."],
+      ]),
+      explain: "'Headache, slow pulse, high BP, falling GCS in a DKA child at hour 4-12 means brain swelling.' Nurse head-up, reduce fluid rate, hypertonic agent, then image once stable." },
+
+    { topic: "Diabetic ketoacidosis", src: S,
+      stem: "Details of DKA treatment:",
+      items: I([
+        ["An insulin bolus should be given with the first fluid to lower the glucose quickly.", false, "No bolus: infusion only, started after about an hour of fluids."],
+        ["If the initial serum potassium is below about 3 mmol/L, insulin should be delayed until potassium replacement has started.", true, "Insulin drives K+ into cells and can cause fatal arrhythmia."],
+        ["Once the glucose is normal the insulin infusion should be stopped.", false, "Add dextrose and continue insulin until the ketoacidosis has cleared."],
+        ["Plasma glucose should fall steadily by roughly 2-5 mmol/L per hour; a very rapid fall is undesirable.", true, "Rapid falls in osmolality raise cerebral oedema risk."],
+        ["Phosphate can be given as part of the potassium replacement.", true, "Potassium phosphate in part, watching calcium."],
+      ]),
+      explain: "Fluid plan: bolus only if shocked; deficit plus maintenance over 48 hours; 0.9% saline or balanced solution with potassium; no hypotonic fluids early on." },
+
+    { topic: "Diabetic ketoacidosis", src: S,
+      stem: "Resolution of DKA and the switch to subcutaneous insulin:",
+      items: I([
+        ["DKA is resolved when pH is above 7.3 and ketones are clearing, not merely when the glucose is normal.", true, "Glucose normalises before ketones."],
+        ["Subcutaneous rapid-acting insulin should be given 15-30 minutes BEFORE the infusion is stopped.", true, "Avoids a gap in insulin cover and relapse."],
+        ["Oral intake can start once the child is alert and no longer vomiting.", true, "Then convert to basal-bolus."],
+        ["A normal blood glucose is the only criterion for discharge.", false, "Also needs ketones cleared, a stable regimen, and the family trained."],
+        ["Education and a written sick-day plan are optional before discharge.", false, "Essential: DKA is preventable with correct sick-day rules."],
+      ]),
+      explain: "Counselling station: 'what do I do when my child is sick?' Never stop insulin, check glucose and ketones 2-4 hourly, fluids, and return if vomiting, drowsy or ketones moderate or large." },
+
+    { topic: "Diabetic ketoacidosis", src: S,
+      stem: "Hyperosmolar hyperglycaemic state (HHS) in young people:",
+      items: I([
+        ["It is characterised by very high glucose (over about 33 mmol/L), high osmolality, severe dehydration and little or no ketosis.", true, "pH typically above 7.25."],
+        ["It is more typical of type 2 diabetes and obese adolescents.", true, "Some insulin remains, enough to suppress ketogenesis."],
+        ["Management uses aggressive early insulin and fast fluids to bring down the glucose.", false, "Fluids first, slowly; insulin delayed; avoid a fast fall in osmolality (cerebral oedema, thrombosis, rhabdomyolysis)."],
+        ["Mortality is higher than for simple DKA.", true, "Rhabdomyolysis, thrombosis and renal failure."],
+        ["A mixed DKA and HHS picture can occur.", true, "Treat the dehydration cautiously."],
+      ]),
+      explain: "Seen in obese teenagers with type 2 diabetes who present late. Contrast with DKA: more dehydrated, less acidotic." },
+
+    { topic: "Diabetes mellitus", src: S+"; paed.188",
+      stem: "Polyuria, polydipsia and glycosuria: differential diagnosis",
+      items: I([
+        ["Diabetes insipidus causes glycosuria.", false, "Urine is dilute with NO glucose in DI."],
+        ["Renal glycosuria is glucose in the urine with a normal blood glucose.", true, "Benign tubular threshold defect."],
+        ["Fanconi syndrome and proximal tubular disorders cause glycosuria with normal blood glucose.", true, "Also phosphaturia, aminoaciduria, bicarbonate loss."],
+        ["A starved, vomiting child can have ketonuria without glycosuria.", true, "Starvation ketosis; check blood glucose."],
+        ["Hypercalcaemia and hypokalaemia are not causes of polyuria.", false, "Both cause nephrogenic polyuria and polydipsia."],
+      ]),
+      explain: "Always confirm glycosuria with blood glucose. Also consider psychogenic polydipsia, chronic kidney disease, urinary tract infection and sickle cell disease (isosthenuria)." },
+
+    { topic: "Diabetes mellitus", src: S+"; p.220",
+      stem: "Chronic complications of diabetes in childhood:",
+      items: I([
+        ["Retinopathy is rare before puberty or before about 5 years of diabetes, but screening starts around age 11-12.", true, "Annual dilated retinal photography or ophthalmoscopy."],
+        ["Albumin : creatinine ratio in an early-morning urine is checked yearly for nephropathy.", true, "Microalbuminuria."],
+        ["Limited joint mobility (the 'prayer sign') can occur.", true, "Cheiroarthropathy."],
+        ["Long-term complications are not related to the HbA1c.", false, "Tight control reduces microvascular risk (DCCT)."],
+        ["Complications cannot begin in childhood because the disease is too short.", false, "Early changes (microalbuminuria, retinal changes) can start in adolescence, hence screening."],
+      ]),
+      explain: "Check also blood pressure, lipids, feet, thyroid function and coeliac antibodies. Slide p.220 lists diabetes under the metabolic causes of proteinuria." },
+
+    { topic: "Hypoglycaemia", src: "p.174; "+S,
+      stem: "Treatment of neonatal hypoglycaemia:",
+      items: I([
+        ["A well, asymptomatic baby with a mildly low glucose is fed early (breast milk) and rechecked.", true, "Treat at risk babies (SGA p.174, preterm, IDM) with early feeds."],
+        ["A symptomatic or very low glucose (under about 1.5-2 mmol/L) needs IV 10% dextrose 2 ml/kg and then a continuous infusion.", true, "Infusion about 6-8 mg/kg/min, titrated."],
+        ["50% dextrose is the correct bolus for a hypoglycaemic newborn.", false, "Far too hyperosmolar: risk of tissue necrosis and intraventricular haemorrhage; use 10%."],
+        ["Needing more than about 8-10 mg/kg/min of glucose suggests hyperinsulinism.", true, "Hyperinsulinaemic hypoglycaemia."],
+        ["A hypoglycaemic baby with micropenis, midline defects or prolonged jaundice should be screened for hypopituitarism.", true, "GH and cortisol deficiency (slide p.56)."],
+      ]),
+      explain: "Hypoglycaemia plus micropenis in a boy is hypopituitarism until proven otherwise. Plan for a persistent case: critical sample, glucagon response, ketones, then diazoxide for hyperinsulinism." },
+
+    { topic: "Hypoglycaemia", src: S,
+      stem: "Persistent or recurrent hypoglycaemia in infancy and childhood:",
+      items: I([
+        ["In hyperinsulinism the ketones and free fatty acids are LOW and insulin is inappropriately detectable.", true, "Hypoketotic hypoglycaemia; glucagon causes a glucose rise."],
+        ["Diazoxide is a first-line drug for persistent hyperinsulinism, with hypertrichosis and fluid retention as side effects.", true, "Octreotide and surgery for resistant or focal disease."],
+        ["Glycogen storage disease type I presents with hepatomegaly, hypoglycaemia, lactic acidosis and hyperlipidaemia.", true, "Fasting tolerance is short."],
+        ["Fatty-acid oxidation defects (such as MCAD deficiency) cause HYPERketotic hypoglycaemia with fasting.", false, "They cause HYPOketotic hypoglycaemia: fat cannot be burned to make ketones."],
+        ["Beckwith-Wiedemann syndrome features macroglossia, omphalocele and hemihypertrophy.", true, "Hyperinsulinism, plus later Wilms tumour risk."],
+      ]),
+      explain: "Sorting rule: low glucose with HIGH ketones suggests ketotic hypoglycaemia, hormone deficiency (GH, cortisol) or glycogen disease; low glucose with LOW ketones points to hyperinsulinism or a fat oxidation defect. Slide p.50 and 56 link cortisol and GH deficiency." },
+  ]
+}]);
+})();
+
+</script>
+<script>
 (function(){
 "use strict";
 const $=s=>document.querySelector(s), app=$("#app"), timerEl=$("#timer");
