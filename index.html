@@ -2768,6 +2768,435 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Essays · Infectious diseases (immunisation, measles, TB, HIV, tetanus, pertussis, malaria).
+// Four long essays (two "leading to a diagnosis", two social paediatrics) and thirteen short notes taken from the real past papers:
+// 2001.1, 2008.15, 2012.16 (HIV social), 2018.77 (Tania, TB), 2012.17 / 2k17-2k2.325, 338 (immunisation), 2k17-2k2.350, 285, 292, 317,
+// 328, 331, 273-274, 316 and the PMTCT / ART notes. Points with x:true are outside the slides (standard teaching).
+(function(){
+const P=(t,x)=>x?{t,x:true}:{t};
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-essay-id",
+  subject: "Paediatrics",
+  group: "Infectious diseases",
+  type: "essay",
+  title: "Paediatrics Essays · Infectious diseases (4 long, 12 short)",
+  essays: [
+    {
+      kind: "Long essay (20 marks) · leading to a diagnosis", marks: 20, topic: "HIV in a child", src: "p.153-171 (slide case 1, p.171); 2k23.155, mixed-co.119",
+      prompt: "A 5-year-old boy, a maternal orphan, is referred from a private hospital with recurrent diarrhoea, fever, cough and weight loss. He weighs 12 kg, height 90 cm, MUAC 11 cm, temperature 38 degrees Celsius. He is wasted with generalised lymphadenopathy, oral thrush, crepitations in the lungs and hepatosplenomegaly. How will you manage this child?",
+      tip: "Open with the working diagnosis (HIV with severe malnutrition, WHO stage 4, with pneumonia and probable TB), then confirm HIV, find and treat the opportunistic infections, nutrition, then ART (after infections are controlled), prophylaxis, immunisation and psychosocial care. Examiners reward the TB link and the timing of ART.",
+      sections: [
+        { h: "Diagnosis and staging", pts: [
+          P("Probable HIV infection with severe wasting (MUAC 11 cm), persistent diarrhoea, oral candidiasis, lymphadenopathy, hepatosplenomegaly and pneumonia.", false),
+          P("WHO clinical stage 4: severe wasting not responding to standard therapy, PCP or recurrent severe infections; pulmonary or lymph node TB would be stage 3, extrapulmonary TB stage 4 (p.161-162).", false),
+          P("Differentials: TB, severe malnutrition, malaria, chronic infection; maternal death raises the suspicion (p.162).", false),
+        ]},
+        { h: "Confirm the diagnosis", pts: [
+          P("Child over 18 months: rapid HIV antibody test, confirmed with a second different antibody test (p.162).", false),
+          P("CD4 count and viral load where available; FBC, LFT, urea and electrolytes, creatinine, urinalysis (p.164).", false),
+          P("Test the child for TB: symptoms, chest X-ray, Xpert MTB/RIF on sputum or gastric aspirate, tuberculin test (p.154, 164).", false),
+        ]},
+        { h: "Treat the acute problems", pts: [
+          P("Admit; resuscitate and treat dehydration and sepsis; oxygen for hypoxia.", true),
+          P("Pneumonia: antibiotics; consider Pneumocystis pneumonia (co-trimoxazole 15-20 mg/kg/day for 21 days, steroids if severe, p.169).", false),
+          P("Oral thrush: gentian violet or nystatin, fluconazole if resistant (p.169). Chronic diarrhoea: stool studies, rehydration, zinc.", false),
+          P("Treat TB if confirmed (2RHZE/4RH); start TB treatment first and ART about 2 weeks later (p.157, 170).", false),
+        ]},
+        { h: "Nutrition and prophylaxis", pts: [
+          P("Nutritional rehabilitation: ready-to-use therapeutic food, vitamin, iron and folate supplements (p.170).", false),
+          P("Co-trimoxazole prophylaxis daily (also protects against toxoplasmosis and malaria, p.170).", false),
+        ]},
+        { h: "Antiretroviral therapy", pts: [
+          P("Start ART once infections are controlled and the caregiver is ready: 3 or more years age bands (p.166); ABC + 3TC + EFV or LPV/r by current guideline.", false),
+          P("Beware IRIS in the first weeks, and drug interactions with rifampicin (p.168, 170).", false),
+          P("Adherence plan before starting; monitor at 2 weeks, monthly for 3 months, then 3-monthly; viral load every 6 months (p.168).", false),
+        ]},
+        { h: "Immunisation and psychosocial care", pts: [
+          P("Complete the schedule; all vaccines if asymptomatic; BCG and yellow fever are avoided in symptomatic HIV; add pneumococcal, varicella, hepatitis A, yearly influenza (p.170).", false),
+          P("Social support for an orphan: identify a caregiver, disclosure plan, school, social worker, support groups; avoid institutionalisation if family care is possible (p.170).", false),
+          P("Screen siblings and the surviving parent; counsel and test the family.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Long essay (20 marks) · leading to a diagnosis", marks: 20, topic: "Measles", src: "p.128-132; paed.645, 655, 2k17-2k1.49",
+      prompt: "A 3-year-old boy is brought with 3 days of fever, cough, runny nose, red eyes and a rash that began behind the ears. His mother cannot say whether he was immunised. Discuss the diagnosis, management, complications and prevention.",
+      tip: "Diagnose measles from the story (3 Cs + rash) and say why. Then structure: confirm and assess severity, isolate, supportive care and vitamin A, complications, then prevention (vaccine, campaigns, ward contacts). Quote the WHO case definition and Koplik spots.",
+      sections: [
+        { h: "Diagnosis", pts: [
+          P("Measles: prodrome of fever, cough, coryza and conjunctivitis, then a maculopapular rash starting behind the ears and spreading down (p.129-130).", false),
+          P("Koplik spots opposite the lower molars are pathognomonic but last 12-18 hours (p.129).", false),
+          P("WHO case definition: fever above 38 degrees, maculopapular non-vesicular rash, plus cough, coryza or conjunctivitis (p.130).", false),
+          P("Differentials: rubella, roseola, drug reaction, enteroviral infection, rickettsial rash, scarlet fever, Kawasaki disease (p.130).", false),
+        ]},
+        { h: "Investigations", pts: [
+          P("Mainly clinical; FBC leucopenia with relative lymphocytosis (p.130).", false),
+          P("Confirm with measles IgM, rising IgG or virus isolation from nasopharynx or urine (p.130).", false),
+          P("Chest X-ray and other tests if complications; CSF if encephalitis (raised protein and lymphocytes, normal glucose, p.130).", false),
+        ]},
+        { h: "Management", pts: [
+          P("Isolation until 5 days after the rash appears; droplet and contact precautions (p.128).", false),
+          P("Supportive: fluids, antipyretics, nutrition, eye and mouth care, calamine for itch (p.131).", false),
+          P("Vitamin A (2 doses on consecutive days) to reduce morbidity, mortality and blindness.", true),
+          P("Treat complications: antibiotics for bronchopneumonia or otitis, treat diarrhoea, anticonvulsants.", false),
+          P("Admit if complications, malnutrition or immunosuppression.", true),
+        ]},
+        { h: "Complications", pts: [
+          P("Bronchopneumonia (major cause of death), croup, myocarditis, activation of TB (p.131).", false),
+          P("Neurologic: encephalitis (about 2 per 1000), SSPE years later (p.131).", false),
+          P("Diarrhoea, malnutrition, blindness, DIC and haemorrhagic measles (p.131).", false),
+        ]},
+        { h: "Prevention and control", pts: [
+          P("Measles vaccine at 9 months, 0.5 ml subcutaneous in the upper left arm, efficacy about 85%; a second dose gives better protection (p.125, 132).", false),
+          P("Immunise the child after recovery if he was not immunised; give immune globulin or vaccine to susceptible contacts within 5 days (p.132).", false),
+          P("Catch-up campaign for under-15s and follow-up campaigns every 2-4 years; herd immunity above 80% (p.124, 132).", false),
+          P("Health education, cold-chain maintenance and reduction of missed opportunities (p.124, 126).", false),
+        ]},
+      ]
+    },
+    {
+      kind: "Long essay (20 marks) · social paediatrics", marks: 20, topic: "HIV: psychosocial implications", src: "p.159-171; past papers 2001.1, 2008.15, 2012.16",
+      prompt: "A 6-month-old boy, the child of a 26-year-old fashion designer who is the third of three wives of a 48-year-old long-distance truck driver, is admitted with failure to thrive and is confirmed HIV positive. Discuss the psychosocio-economic implications of this development for the family and the community.",
+      tip: "Social paediatrics essays reward a structure: the child, the mother, the father and other wives, the household, the community, then health-system and economic implications, and then what you would do. Show you know the clinical facts (vertical transmission, PMTCT, ART).",
+      sections: [
+        { h: "Medical background", pts: [
+          P("Probable vertical transmission; mother-to-child accounts for about 90% of paediatric HIV (p.159); risk 35-45% in Africa without intervention (p.159).", false),
+          P("The mother is presumed positive and the father and other wives and children are at risk (polygamy, truck driver).", true),
+        ]},
+        { h: "Implications for the child", pts: [
+          P("Chronic illness, growth failure, opportunistic infections, school, risk of becoming an orphan; need for lifelong ART and adherence (p.164, 169).", false),
+          P("Stigma and discrimination; delayed development; need for immunisation and nutrition (p.170).", false),
+        ]},
+        { h: "Implications for the mother", pts: [
+          P("Shock, guilt, blame and possible divorce or abandonment; domestic violence.", true),
+          P("Loss of income and her own illness; need for ART and PMTCT counselling for future pregnancies (p.171).", false),
+          P("Disclosure difficulties, depression, risk of defaulting treatment.", true),
+        ]},
+        { h: "Implications for the father and other wives", pts: [
+          P("Need to be counselled and tested (partner notification); denial and refusal to test (2008.15).", true),
+          P("Risk to the other wives and their children; polygamous unions amplify the spread.", true),
+          P("Occupational risk: long-distance driving, multiple partners.", true),
+        ]},
+        { h: "Economic implications", pts: [
+          P("Cost of tests, drugs, admissions, nutrition and transport; loss of earnings from sick parents.", true),
+          P("Poor nutrition from lack of food (p.170); orphaning and school dropout.", false),
+        ]},
+        { h: "Community and health-system implications", pts: [
+          P("Stigma, isolation and rumour; risk of non-disclosure and further transmission.", true),
+          P("Burden on hospitals, need for community-based care and support groups.", true),
+        ]},
+        { h: "Management and prevention", pts: [
+          P("Confirm, stage and start ART; co-trimoxazole prophylaxis; nutrition support; immunisation (p.164-171).", false),
+          P("Counsel the family; test the household; PMTCT for future pregnancies; community education; social welfare linkage.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Long essay (20 marks) · social paediatrics", marks: 20, topic: "Tuberculosis: social implications", src: "p.151-158; past paper 2018.77",
+      prompt: "Tania is an 11-year-old girl newly diagnosed with disseminated TB. She is the first of 6 children. Her father, a gardener, died of TB 3 months ago and her mother is a petty trader. The family has moved into the grandmother's two-bedroom shared apartment. (i) Itemise the factors responsible for the growing burden of TB in Nigeria. (ii) Identify the predisposing factors to TB in Tania's scenario. (iii) Discuss the psychosocial and economic implications of the disease for Tania and her family. (iv) What measures are required to curb further spread of the disease in the family?",
+      tip: "Four parts, so give four headed sections and spend time evenly. Part (iv) is the public-health answer: case-finding, contact tracing, isoniazid prophylaxis, DOT, BCG, nutrition, housing.",
+      sections: [
+        { h: "(i) Factors responsible for the growing TB burden", pts: [
+          P("HIV pandemic, multidrug resistance, decline of national TB control programmes (p.151).", false),
+          P("Worsening economic situation, poverty, overcrowding, malnutrition (p.151, 153).", false),
+          P("Conflicts and displaced populations living in poor conditions (p.151).", false),
+          P("Under-diagnosis: about 4 million cases undetected; only about 5% of childhood cases notified in Nigeria (p.151).", false),
+        ]},
+        { h: "(ii) Predisposing factors in Tania", pts: [
+          P("Prolonged close contact with her father who had TB (probably untreated or smear-positive) (p.151).", false),
+          P("Overcrowding in a 2-bedroom shared house; poverty; possible malnutrition (p.153).", false),
+          P("Possible HIV co-infection and measles or other infections (p.153); delayed diagnosis.", false),
+        ]},
+        { h: "(iii) Psychosocial and economic implications", pts: [
+          P("Grief after her father's death; fear, stigma and isolation at school; missed schooling.", true),
+          P("Loss of the main breadwinner; the mother's small trade income; cost of drugs, tests and transport; hunger.", true),
+          P("Long treatment (6-12 months, p.157) with adherence difficulties; side effects (p.157); risk of default and drug-resistant TB (p.157-158).", false),
+          P("Risk of infection to siblings and the grandmother; family anxiety.", true),
+        ]},
+        { h: "(iv) Measures to curb spread in the family", pts: [
+          P("Treat Tania: 2RHZE/10RH for disseminated TB (12 months, p.157) with DOT (p.156).", false),
+          P("Contact tracing: screen all siblings, mother and grandmother with symptoms, chest X-ray, tuberculin test; isoniazid prophylaxis for well child contacts (p.157).", false),
+          P("Test everyone for HIV (p.154); BCG for unvaccinated children (p.157).", false),
+          P("Improve ventilation and housing, nutrition support, social welfare; health education on cough hygiene.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Routine immunisation", src: "p.121-127; past papers 2012.17, 2k17-2k2.325, 338",
+      prompt: "Write short notes on routine immunisation in Nigeria.",
+      tip: "Definition, strategies, schedule with routes, sites, contraindications, safety and programme problems. Draw the schedule from p.125 and mention the newer vaccines.",
+      sections: [
+        { h: "Definition and strategy", pts: [
+          P("Routine immunisation is an outlined programme for immunising children at appropriate ages (p.125); delivered by fixed, outreach and mobile services.", false),
+          P("EPI started 1974 for six killer diseases; Nigeria 1978; relaunched as NPI in 1996 (p.124).", false),
+        ]},
+        { h: "Schedule (slide)", pts: [
+          P("BCG at birth; OPV at birth, 6, 10 and 14 weeks; pentavalent and PCV at 6, 10, 14 weeks; IPV at 14 weeks (p.125).", false),
+          P("Measles and yellow fever at 9 months; vitamin A twice (p.125). Hepatitis B and OPV0 within 2 weeks of birth.", false),
+          P("Rotavirus, second measles dose, meningitis vaccine, malaria vaccine and HPV have been added in current practice.", true),
+        ]},
+        { h: "Routes and sites", pts: [
+          P("BCG intradermal 0.05 ml left arm; OPV oral 2 drops; Penta, PCV and IPV IM 0.5 ml outer thigh; measles SC left arm; yellow fever SC right arm (p.125).", false),
+        ]},
+        { h: "Contraindications and safety", pts: [
+          P("Anaphylaxis to a previous dose; moderate to severe acute illness (p.126).", false),
+          P("Mild side effects: fever, pain at the site; avoid missed opportunities from invalid contraindications (p.126).", false),
+        ]},
+        { h: "Problems and indicators", pts: [
+          P("Drop-out rate of 10% or less acceptable; coverage; cold-chain failure; irregular vaccine supply (p.124, 126).", false),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Catch-up immunisation", src: "p.125-126, 132 + outside the slides; 2017.64, paed.651, 2k17-2k2.424",
+      prompt: "A mother brings her 18-month-old child who has never been immunised. Outline how you will catch up the child's immunisation, and explain what a 'catch-up campaign' is.",
+      tip: "Individual catch-up: never restart, minimum intervals, which vaccines can no longer be given, record keeping. Campaign catch-up: the slide definition. Mention contraindications and missed opportunities.",
+      sections: [
+        { h: "Principles of individual catch-up", pts: [
+          P("Take a full history and card; do not restart a series: count valid doses given and continue.", true),
+          P("Respect the minimum interval of 4 weeks between doses of pentavalent, OPV and PCV (p.125).", false),
+          P("Give several vaccines at the same visit at separate sites.", true),
+          P("Valid contraindications only: anaphylaxis or moderate-severe illness (p.126); avoid missed opportunities.", false),
+        ]},
+        { h: "What an 18-month-old can still receive", pts: [
+          P("BCG (if no scar, and TB risk), OPV, pentavalent (3 doses, 4 weeks apart), PCV, IPV, measles, yellow fever, hepatitis B.", true),
+          P("Rotavirus is no longer possible (age limit); HPV is for older girls (past question 2017.64).", true),
+          P("Measles at least 9 months; give vitamin A.", false),
+        ]},
+        { h: "Population catch-up (campaigns)", pts: [
+          P("National Immunisation Days: nationwide mass campaigns to boost coverage (p.125).", false),
+          P("'Catch-up' measles campaign: a one-time effort to vaccinate all children under 15 years, to reduce susceptibles and include primary vaccine failures (p.132).", false),
+          P("'Follow-up' campaigns every 2-4 years for children under 9 months at catch-up and those born since (p.132).", false),
+        ]},
+        { h: "Follow-up", pts: [
+          P("Give a card, return dates, link to growth monitoring; test for HIV if indicated and give vaccines per HIV status (p.170).", false),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Vaccines not in the NPI", src: "p.125 + outside the slides; past papers 2k17-2k2.350, cohort-n.62",
+      prompt: "Write short notes on vaccines that are not yet part of Nigeria's National Programme on Immunisation.",
+      tip: "Policy changes quickly, so say which vaccines are being or have been introduced, the slide list of developed-country vaccines, the benefit of each and the barriers (cost, cold chain, delivery).",
+      sections: [
+        { h: "Vaccines on the developed-country list (slide)", pts: [
+          P("Hepatitis A, varicella, MMR, influenza, meningococcal and HPV vaccines (p.125).", false),
+          P("Rotavirus and pneumococcal vaccines, listed on the slide among developed-country vaccines, have since been introduced in Nigeria.", true),
+        ]},
+        { h: "Examples and benefits", pts: [
+          P("MMR: protects against mumps and rubella as well as measles; rubella vaccine prevents congenital rubella syndrome.", true),
+          P("Varicella and hepatitis A: reduce chickenpox and hepatitis; typhoid conjugate vaccine for enteric fever.", true),
+          P("Annual influenza and meningococcal vaccines for risk groups and outbreaks (p.123).", false),
+        ]},
+        { h: "Barriers to introduction", pts: [
+          P("Cost, cold-chain capacity, vaccine supply, competing priorities and weak coverage of existing vaccines (p.124, 126).", false),
+          P("Need for disease burden data, cost-effectiveness and political will.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "PMTCT of HIV", src: "p.159-160, 163, 171; past papers 2009.6, 2k17-2k2.129",
+      prompt: "Write short notes on prevention of mother-to-child transmission (PMTCT) of HIV.",
+      tip: "Give the risk, then the three time points (pregnancy, labour, breastfeeding) and the interventions at each, then the follow-up and testing of the exposed infant.",
+      sections: [
+        { h: "Background", pts: [
+          P("Mother-to-child transmission causes about 90% of paediatric HIV; risk 35-45% in Africa without intervention (p.159).", false),
+          P("Stages: intra-uterine, peripartum (about 60%, most important), post-partum breastfeeding (least common) (p.160).", false),
+        ]},
+        { h: "Interventions", pts: [
+          P("HIV counselling and testing of every pregnant woman, the entry point (p.171).", false),
+          P("ART for the woman during pregnancy and continued during breastfeeding (p.171).", false),
+          P("Minimally invasive procedures in labour; elective caesarean section where indicated (p.171).", false),
+          P("ARV prophylaxis (nevirapine, with or without zidovudine) to the baby from birth for 6 weeks (p.171).", false),
+          P("Safe infant feeding; co-trimoxazole prophylaxis from 6 weeks (p.171).", false),
+        ]},
+        { h: "Follow-up of the exposed infant", pts: [
+          P("DNA PCR at 6 weeks (and 3-6 months), antibody test at 18 months; test 6 weeks after stopping breastfeeding (p.163, 171).", false),
+          P("Immunisation as per schedule; growth and development monitoring (p.170).", false),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Diagnosis of paediatric HIV", src: "p.160-163; past papers 2k17-2k2.292, cohort-n.20",
+      prompt: "Write short notes on the diagnosis of paediatric AIDS.",
+      tip: "Clinical suspicion and staging, then the two lab pathways split at 18 months (virological versus antibody) and the pitfalls.",
+      sections: [
+        { h: "Clinical clues", pts: [
+          P("High index of suspicion; early features non-specific: fever, diarrhoea, failure to thrive, cough, lymphadenopathy (p.160).", false),
+          P("Very specific conditions: PCP, oesophageal candidiasis, Kaposi sarcoma, LIP, multidermatomal zoster, lymphoma (p.160).", false),
+          P("WHO clinical staging 1-4 (p.161-162).", false),
+        ]},
+        { h: "Under 18 months", pts: [
+          P("Maternal antibody persists up to 18 months, so antibody tests are unreliable (p.162).", false),
+          P("HIV DNA PCR, ideally at birth, 6 weeks and 3-6 months; dried blood spot can be used (p.163-164).", false),
+          P("Confirm with a second sample; p24 antigen is least sensitive and not recommended (p.163).", false),
+        ]},
+        { h: "18 months and older", pts: [
+          P("Rapid antibody test, confirmed with a different antibody test (p.162).", false),
+          P("In severe immunosuppression a false-negative antibody test can occur (p.163).", false),
+        ]},
+        { h: "After diagnosis", pts: [
+          P("CD4, viral load, TB screen, baseline blood tests, immunisation status and counselling (p.164).", false),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Antiretroviral therapy in children", src: "p.164-168",
+      prompt: "Write short notes on antiretroviral therapy in children.",
+      tip: "Goals, drug classes with examples, regimen by age, toxicity pairs, monitoring, adherence and failure.",
+      sections: [
+        { h: "Goals and drug classes", pts: [
+          P("Maximally suppress viral replication, slow disease progression, improve survival, delay resistance; ART does not cure (p.164).", false),
+          P("NRTIs (zidovudine, lamivudine, abacavir); NNRTIs (nevirapine, efavirenz); protease inhibitors (lopinavir/ritonavir); integrase inhibitors (dolutegravir); entry inhibitors; CCR5 blockers (p.165).", false),
+        ]},
+        { h: "Regimens", pts: [
+          P("Under 3 years: ABC + 3TC + LPV/r; 3-6 years ABC + 3TC + EFV or LPV/r; adolescents and adults TLD (p.166).", false),
+        ]},
+        { h: "Toxicity", pts: [
+          P("Zidovudine anaemia; abacavir hypersensitivity; stavudine neuropathy and lipodystrophy; efavirenz CNS effects; nevirapine rash and hepatotoxicity (p.167).", false),
+        ]},
+        { h: "Monitoring, failure, adherence", pts: [
+          P("Review at 2 weeks, monthly for 3 months, then 3-monthly; CD4 every 3 months, viral load every 6 months (p.168).", false),
+          P("Failure: clinical, immune or viral (over 1,000 copies) after at least 24 weeks of adherent ART: switch to second line (p.166-167).", false),
+          P("Adherence of 95% or more; IRIS awareness (p.168-169).", false),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Management of an infant of a TB mother", src: "p.151, 157; past paper 2k17-2k2.317, 2017.34",
+      prompt: "Discuss the management of a 2-day-old infant of a mother with smear-positive tuberculosis.",
+      tip: "Rule out congenital TB, protect the baby, treat the mother, give isoniazid, follow the baby and handle BCG. Slide p.157 gives the plan.",
+      sections: [
+        { h: "Assessment", pts: [
+          P("Examine the baby for signs of congenital or neonatal TB; chest X-ray if symptomatic (p.157).", false),
+          P("Check the mother's treatment status and smear; start or continue her treatment immediately (p.157).", false),
+        ]},
+        { h: "Prophylaxis and treatment", pts: [
+          P("Start isoniazid soon after delivery (p.157).", false),
+          P("If the chest X-ray is normal, continue isoniazid for 6 months; if abnormal, treat as TB with combination chemotherapy (p.157).", false),
+          P("Defer BCG until isoniazid prophylaxis is complete.", true),
+        ]},
+        { h: "Feeding and follow-up", pts: [
+          P("Breastfeeding is encouraged once the mother is on treatment, with mask and hygiene precautions.", true),
+          P("Test the baby (and mother) for HIV; follow growth and symptoms; screen household contacts (p.154, 157).", false),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Complications of measles", src: "p.128-132; past paper 2k17-2k2.285",
+      prompt: "Write short notes on the complications of measles.",
+      tip: "Group by system, quote the frequencies the slide gives, and finish with prevention.",
+      sections: [
+        { h: "Respiratory", pts: [
+          P("Bronchopneumonia, the major cause of death; giant-cell pneumonia in immunodeficiency (p.129).", false),
+          P("Croup and activation of TB (p.131).", false),
+        ]},
+        { h: "Neurological", pts: [
+          P("Encephalitis about 2 per 1000, 2-5 days after the rash (p.131).", false),
+          P("SSPE about 10.8 years later; ADEM (p.131).", false),
+        ]},
+        { h: "Other", pts: [
+          P("Myocarditis, hepatitis, DIC, purpura fulminans, haemorrhagic measles (p.131).", false),
+          P("Diarrhoea and malnutrition; blindness (vitamin A deficiency), otitis media.", true),
+        ]},
+        { h: "Prevention", pts: [
+          P("Vaccination at 9 months, campaigns, vitamin A, early treatment (p.131-132).", false),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Neonatal tetanus", src: "p.136-138; past papers 2k17-2k2.328, paed.688, 718",
+      prompt: "Write short notes on neonatal tetanus.",
+      tip: "Cause, risk factors, clinical features, management, prognosis, prevention.",
+      sections: [
+        { h: "Cause", pts: [
+          P("Clostridium tetani spores contaminating the umbilical stump; unhygienic cord care, circumcision, ear piercing, scarification; mother unimmunised (p.136-137).", false),
+        ]},
+        { h: "Clinical features", pts: [
+          P("Excessive crying, refusal to suck, trismus, rigidity, spasms; always generalised (p.137).", false),
+          P("Complications: aspiration, apnoea, hypoxia, autonomic instability.", true),
+        ]},
+        { h: "Management", pts: [
+          P("TIG 500 units; penicillin G or metronidazole; diazepam; quiet dark room; airway and nutrition; cord care (p.137).", false),
+        ]},
+        { h: "Prognosis and prevention", pts: [
+          P("Poor: onset under 48 hours, incubation under 7 days, temperature over 40, tachycardia over 150 (p.138).", false),
+          P("Maternal tetanus toxoid immunisation, clean delivery and cord care, health education.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Pertussis", src: "p.134-136; past papers 2016.50, 2022.5, 2k17-2k2.331",
+      prompt: "Write short notes on pertussis.",
+      tip: "Organism, three phases, definition, diagnosis, treatment of case and contacts, complications, prevention.",
+      sections: [
+        { h: "Organism and epidemiology", pts: [
+          P("Bordetella pertussis, a small Gram-negative coccobacillus; droplets; attack rate nearly 100%; peak age 1-5 years (p.134).", false),
+        ]},
+        { h: "Clinical features", pts: [
+          P("Incubation 3-12 days; catarrhal (2 weeks), paroxysmal (2-6 weeks), convalescent (2-4 weeks) (p.135).", false),
+          P("Infants under 3 months may have apnoea and cyanosis without whoop (p.135).", false),
+        ]},
+        { h: "Diagnosis and treatment", pts: [
+          P("Case definition: cough over 14 days plus paroxysms, whoop or post-tussive vomiting; lymphocytosis; PCR and culture (p.135).", false),
+          P("Erythromycin 40-50 mg/kg/day for patient and contacts; supportive care and nutrition (p.135).", false),
+        ]},
+        { h: "Complications and prevention", pts: [
+          P("Pneumonia, apnoea, haemorrhages, encephalopathy, hernias, rib fracture (p.135-136).", false),
+          P("Immunisation; booster for contacts under 7 years (p.135).", false),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Malaria", src: "p.139-149; past papers 2k17-2k2.273-274, 316",
+      prompt: "Write short notes on (a) acute uncomplicated malaria and (b) acute complicated (severe) malaria in children.",
+      tip: "Two halves, five marks each. For (b) give the WHO features and the artesunate regimen; for (a) the ACT regimen and the confirmation rule.",
+      sections: [
+        { h: "(a) Uncomplicated malaria", pts: [
+          P("Symptomatic infection without vital organ dysfunction (p.143).", false),
+          P("Confirm with microscopy or RDT (p.146-147).", false),
+          P("Treat with an ACT: artemether-lumefantrine 3 days; or artesunate + amodiaquine (p.147).", false),
+          P("Review the diagnosis and dosing if the response is inadequate (p.147).", false),
+        ]},
+        { h: "(b) Severe malaria: definition", pts: [
+          P("Cerebral malaria, severe anaemia (Hb under 5), hypoglycaemia, acidosis, renal failure, pulmonary oedema, shock, abnormal bleeding, prostration, hyperparasitaemia, jaundice (p.143-144).", false),
+        ]},
+        { h: "(b) Management", pts: [
+          P("Airway, glucose, anticonvulsants, fluids for shock (p.147-148).", false),
+          P("IV artesunate at 0, 12, 24 hours then daily; follow with a 3-day ACT (p.148); quinine as alternative.", false),
+          P("Blood transfusion for severe anaemia; furosemide for pulmonary oedema; monitor glucose, Hb, parasitaemia (p.148-149).", false),
+        ]},
+        { h: "Prevention", pts: [
+          P("Insecticide-treated nets, screening, early treatment, health education (p.149).", false),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Diphtheria", src: "p.132-134; past paper paed.715",
+      prompt: "Write short notes on diphtheria.",
+      tip: "Organism and toxin, pseudomembrane, forms, complications with timing, diagnosis, treatment, prevention.",
+      sections: [
+        { h: "Cause and pathogenesis", pts: [
+          P("Corynebacterium diphtheriae (gravis, intermedius, mitis); exotoxin encoded by a bacteriophage; pseudomembrane (p.132-133).", false),
+        ]},
+        { h: "Clinical forms and complications", pts: [
+          P("Nasal, tonsillar/pharyngeal (bull neck), laryngeal, cutaneous (p.133).", false),
+          P("Myocarditis 1-2 weeks, neuropathies 2-6 weeks, renal failure (p.133).", false),
+        ]},
+        { h: "Diagnosis and treatment", pts: [
+          P("Clinical, culture, PCR for the toxin gene (p.133).", false),
+          P("Antitoxin, penicillin or erythromycin for 14 days, supportive care, toxoid after recovery (p.134).", false),
+        ]},
+        { h: "Prevention", pts: [
+          P("Active immunisation; treat carriers and unimmunised contacts with antibiotics for 7 days (p.134).", false),
+        ]},
+      ]
+    },
+  ]
+}]);
+})();
+
+</script>
+<script>
 // Where to find the answers: Paediatrics CS slide pages for every T/F stem and picture (checked against Paediatrics-slides.txt).
 // Format per stem, in bank order: pg = slide pages that answer the in-slide statements ("" = nothing in the deck);
 // out = 0-based indexes of statements (a=0, b=1, ...) whose answer is OUTSIDE the slides (standard teaching).
@@ -2796,6 +3225,12 @@ window.PAGE_MAP = {
     {pg:"p.43-44, 48",out:[2]}, {pg:"",out:[]}
   ]
 };
+window.PAGE_MAP["pa-tf-id-1"] = [{"pg": "p.121-122, 124", "out": []}, {"pg": "p.122-123", "out": []}, {"pg": "p.124-125", "out": []}, {"pg": "p.125", "out": []}, {"pg": "p.125", "out": [3, 4]}, {"pg": "p.125", "out": [1, 4]}, {"pg": "p.126, 170", "out": [2, 3]}, {"pg": "p.124, 126", "out": []}, {"pg": "p.125, 132", "out": []}, {"pg": "p.125", "out": [0, 2, 3, 4]}, {"pg": "p.122, 125, 156, 170", "out": [1]}, {"pg": "p.170", "out": []}, {"pg": "p.125", "out": [0]}, {"pg": "p.132", "out": [1, 2, 3, 4]}];
+window.PAGE_MAP["pa-tf-id-2"] = [{"pg": "p.128-129", "out": []}, {"pg": "p.129-130", "out": []}, {"pg": "p.130", "out": []}, {"pg": "p.129, 131", "out": []}, {"pg": "p.128, 131-132", "out": [1, 2]}, {"pg": "p.125, 132", "out": []}, {"pg": "p.124, 128, 132", "out": [1]}, {"pg": "p.130", "out": [1, 2]}, {"pg": "p.132-133", "out": []}, {"pg": "p.133-134", "out": []}, {"pg": "p.134-135", "out": [3]}, {"pg": "p.135", "out": []}, {"pg": "p.135-136", "out": [4]}, {"pg": "p.136", "out": []}, {"pg": "p.136-137", "out": []}, {"pg": "p.137", "out": [4]}, {"pg": "p.136-138", "out": [2, 4]}];
+window.PAGE_MAP["pa-tf-id-3"] = [{"pg": "p.151-152", "out": []}, {"pg": "p.151, 153", "out": []}, {"pg": "p.152-153", "out": []}, {"pg": "p.153", "out": []}, {"pg": "p.153-155", "out": [3, 4]}, {"pg": "p.154-155", "out": []}, {"pg": "p.156", "out": [4]}, {"pg": "p.156-157", "out": []}, {"pg": "p.157", "out": []}, {"pg": "p.157", "out": []}, {"pg": "p.157-158", "out": []}];
+window.PAGE_MAP["pa-tf-id-4"] = [{"pg": "p.159", "out": []}, {"pg": "p.159-160", "out": []}, {"pg": "p.160", "out": []}, {"pg": "p.161-162", "out": []}, {"pg": "p.162-163", "out": []}, {"pg": "p.162-163", "out": []}, {"pg": "p.163, 170-171", "out": []}, {"pg": "p.171", "out": []}, {"pg": "p.164-165", "out": []}, {"pg": "p.166", "out": []}, {"pg": "p.166-168", "out": []}, {"pg": "p.167", "out": []}, {"pg": "p.168-169", "out": [2]}, {"pg": "p.169-170", "out": []}, {"pg": "p.154, 170", "out": []}, {"pg": "p.170-171", "out": [4]}, {"pg": "", "out": []}];
+window.PAGE_MAP["pa-tf-id-5"] = [{"pg": "p.139, 142", "out": []}, {"pg": "p.142, 146-147", "out": []}, {"pg": "p.143-144", "out": []}, {"pg": "p.144-146", "out": []}, {"pg": "p.145, 148", "out": [4]}, {"pg": "p.147", "out": []}, {"pg": "p.147-148", "out": [4]}, {"pg": "p.148-149", "out": []}, {"pg": "p.149-150", "out": [0, 1, 4]}];
+window.PAGE_MAP["pa-pics-id"] = [{"pg": "p.128-130", "out": []}, {"pg": "p.128, 130", "out": [3]}, {"pg": "p.136-137", "out": []}, {"pg": "p.137-138", "out": [4]}, {"pg": "p.154, 156", "out": []}, {"pg": "p.153, 155, 157", "out": []}, {"pg": "p.153-155", "out": []}, {"pg": "p.143, 146-148", "out": []}, {"pg": "p.134-136", "out": []}, {"pg": "p.160-162, 169", "out": [4]}, {"pg": "p.160, 162", "out": [2, 3]}, {"pg": "p.160-161", "out": [3, 4]}, {"pg": "p.125", "out": [0, 3, 4]}];
 
 </script>
 <script>
@@ -2960,6 +3395,183 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
         ["Oral hypoglycaemic agents replace insulin in type 1 diabetes.", false, "No; insulin is lifelong."],
       ]),
       explain: "Other instruments in this station: glucometer, ketone strips, urine dipstick, sharps bin. Counselling points: hypoglycaemia recognition, glucose tablets, glucagon." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · Picture test (picture + 5 True/False, −½ per wrong) · Infectious diseases.
+// Real clinical photographs and a radiograph from Wikimedia Commons, linked live (nothing copied), licence and author in each caption.
+// Statements are written against the slides (page numbers per picture are in pa-pages.js) and past picture stations
+// (paed.81, 192, 203, 215: malaria film, gibbus, TB chest X-ray; paed.39 etc.). Adult photographs are used where no child photo was free to use.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const F=n=>"https://commons.wikimedia.org/wiki/Special:FilePath/"+n+"?width=720";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-pics-id",
+  subject: "Paediatrics",
+  group: "Infectious diseases",
+  type: "pics",
+  title: "Paediatrics Picture test · Infectious diseases (13 pictures)",
+  negativeMarking: true,
+  secPerQ: 90,
+  questions: [
+    { topic: "Picture: measles", src: "p.129-130", img: F("Koplik_spots,_measles_6111_lores.jpg"),
+      credit: "Koplik spots on the third pre-eruptive day of measles. CDC, public domain, via Wikimedia Commons.",
+      stem: "The buccal mucosa of a child with 3 days of fever, cough, coryza and red eyes.",
+      items: I([
+        ["These are Koplik spots, pathognomonic of measles.", true, "Slide p.129-130."],
+        ["They are best seen opposite the lower molars.", true, "Slide p.129 (palate and buccal mucosa, usually opposite the lower molars)."],
+        ["They persist for 2-3 weeks.", false, "Very transient: 12-18 hours (p.129)."],
+        ["The maculopapular rash appears about 24 hours later, behind the ears and along the hairline.", true, "Slide p.130."],
+        ["The causative virus has two antigenic types.", false, "Only one (p.128)."],
+      ]),
+      explain: "Koplik spots appear in the prodrome before the rash. Complications: bronchopneumonia, croup, TB reactivation, encephalitis, SSPE (p.131). Prevention: vaccine at 9 months, campaigns (p.132)." },
+
+    { topic: "Picture: measles", src: "p.130-131", img: F("RougeoleDP.jpg"),
+      credit: "Child on day 4 of measles rash. CDC/NIP/Barbara Rice, public domain, via Wikimedia Commons.",
+      stem: "A child with fever, cough and conjunctivitis and this rash on the 4th day.",
+      items: I([
+        ["The rash begins on the face and spreads downwards.", true, "Slide p.130."],
+        ["The severity of the illness is related to the extent and confluence of the rash.", true, "Slide p.130."],
+        ["The rash fades in the order in which it appeared, with desquamation.", true, "Slide p.130."],
+        ["Acyclovir is the specific treatment.", false, "Supportive; vitamin A (outside the slide)."],
+        ["Infectivity ends by the 3rd day of the rash.", false, "Contagious until about 5 days after the rash appears (p.128)."],
+      ]),
+      explain: "Differentials in the picture station: rubella, roseola, drug rash, scarlet fever, Kawasaki disease, rickettsial rash (spares the face, p.130). WHO case definition p.130." },
+
+    { topic: "Picture: tetanus", src: "p.136-137", img: F("PHIL_tetanus.jpg"),
+      credit: "Opisthotonos in a patient with generalised tetanus. CDC, public domain, via Wikimedia Commons.",
+      stem: "Arched back, clenched jaw and spasms; the patient is fully conscious.",
+      items: I([
+        ["This posture is opisthotonos.", true, "Slide p.136."],
+        ["The toxin blocks release of glycine and GABA.", true, "Slide p.136."],
+        ["The causative organism is a Gram-negative bacillus.", false, "Gram-positive, spore-forming obligate anaerobe (p.136)."],
+        ["Diagnosis is clinical.", true, "Slide p.137."],
+        ["Human tetanus immunoglobulin and penicillin or metronidazole are part of treatment.", true, "Slide p.137."],
+      ]),
+      explain: "Opisthotonos matches tetanus; 'diplegic gait' does not (past match question). Complications: hypertension, vertebral fractures, ileus, urinary retention, myositis ossificans." },
+
+    { topic: "Picture: tetanus", src: "p.137-138", img: F("Neonatal_tetanus_6374.jpg"),
+      credit: "Neonate with rigidity from neonatal tetanus. CDC, public domain, via Wikimedia Commons.",
+      stem: "A baby who stopped sucking at day 7 and now has stiffness and spasms.",
+      items: I([
+        ["The mother was probably not immunised against tetanus.", true, "Slide p.137: infants of unimmunised mothers."],
+        ["Unhygienic cord care is a common portal of entry.", true, "Slide p.137."],
+        ["Neonatal tetanus is always generalised.", true, "Slide p.137."],
+        ["A cephalic form and short incubation carry a good prognosis.", false, "Poor prognostic factors: incubation under 7 days, onset under 48 hours, cephalic (p.138)."],
+        ["Recovery gives lifelong immunity.", false, "No lifelong immunity (past paper 688)."],
+      ]),
+      explain: "Neonatal tetanus prevention: maternal tetanus toxoid in pregnancy, clean delivery and cord care. Treatment includes TIG 500 units, diazepam, penicillin, nutrition." },
+
+    { topic: "Picture: TB", src: "p.156", img: F("Mantoux_tuberculin_skin_test.jpg"),
+      credit: "Placing a Mantoux tuberculin skin test in the forearm. Greg Knobloch, public domain, via Wikimedia Commons.",
+      stem: "A Mantoux test is being given intradermally.",
+      items: I([
+        ["The result is read as the diameter of induration, not redness.", true, "Slide p.156 (induration in mm)."],
+        ["10 mm or more is positive irrespective of BCG vaccination.", true, "Slide p.156."],
+        ["5 mm or more is positive in an HIV-infected or severely malnourished child.", true, "Slide p.156."],
+        ["A positive test means active TB disease.", false, "It means infection, not necessarily disease (p.156)."],
+        ["It is the best single test to confirm TB in a child with severe malnutrition.", false, "Tuberculin skin test has limited value (p.154); Xpert is first-line."],
+      ]),
+      explain: "Instrument question: a 0.05 ml needle with a bevelled lip delivers the intradermal dose (paed.105 lists insulin, BCG, DPT, OPV as options: BCG is the intradermal one)." },
+
+    { topic: "Picture: TB", src: "p.153, 155", img: F("Chest_radiograph_of_miliary_tuberculosis_1.jpg"),
+      credit: "Chest radiograph of miliary tuberculosis (bilateral interstitial infiltrates), CC BY 4.0, Herreros et al., via Wikimedia Commons. Adult patient.",
+      stem: "A chest X-ray with innumerable small nodules in both lung fields.",
+      items: I([
+        ["This pattern is miliary TB, from haematogenous dissemination.", true, "Slide p.153."],
+        ["Miliary TB typically appears 2-6 months after primary infection.", true, "Slide p.153."],
+        ["Treatment is a 6-month regimen.", false, "Miliary TB needs 2RHZE/10RH, 12 months (p.157)."],
+        ["Steroids are indicated if the disease involves the meninges, pericardium or pleura.", true, "Slide p.157: TB meningitis, pericarditis, pleural effusion."],
+        ["Disseminated TB is commonest in immunocompromised patients and at the extremes of age.", true, "Slide p.153."],
+      ]),
+      explain: "A past chest X-ray station asked whether features suggested TB, tracheal deviation, effusion, upper-lobe consolidation (paed.203). Children's X-rays usually show hilar nodes, collapse-consolidation, effusion rather than cavities." },
+
+    { topic: "Picture: TB", src: "p.153, 155", img: F("Young_man_with_a_typical_case_of_scrofula_Wellcome_L0076911.jpg"),
+      credit: "Young man with scrofula (tuberculous cervical lymphadenitis). Wellcome Collection L0076911, CC BY 4.0, via Wikimedia Commons.",
+      stem: "A neck swelling that has been present for months and is not tender.",
+      items: I([
+        ["Tuberculous lymphadenitis is the most likely diagnosis.", true, "Slide p.155."],
+        ["Node enlargement is typically asymmetric and painless, lasting over 1 month, and most commonly in the neck.", true, "Slide p.155."],
+        ["Fine needle aspiration for cytology and culture is a useful investigation.", true, "Slide p.155."],
+        ["Management is incision and drainage.", false, "Anti-TB treatment; drainage leaves sinuses. Past question 2017.75."],
+        ["A tuberculin test and Xpert on aspirate are not helpful.", false, "Both can help (p.154-155)."],
+      ]),
+      explain: "Differential of a neck mass in a Nigerian child: TB adenitis, Burkitt lymphoma (jaw), Hodgkin lymphoma, reactive lymphadenopathy, mumps (paed.96)." },
+
+    { topic: "Picture: malaria", src: "p.146", img: F("P._falciparum_thin_smear_ring_forms_and_gametocyte.jpg"),
+      credit: "Giemsa thin smear: ring forms and a gametocyte of P. falciparum. Jenkayaks, CC BY-SA 3.0, via Wikimedia Commons.",
+      stem: "A blood film of a convulsing, febrile child.",
+      items: I([
+        ["This is a thin film (single layer of red cells) used to identify the species.", true, "Slide p.146."],
+        ["Both sexual and asexual forms are counted when working out parasite density.", true, "Slide p.146."],
+        ["Severe malaria can be caused by P. vivax and P. falciparum equally.", false, "Only P. falciparum causes severe malaria (p.146)."],
+        ["First-line treatment is chloroquine.", false, "ACT (artemether-lumefantrine) for uncomplicated; IV artesunate for severe (p.147-148)."],
+        ["Hypoglycaemia may complicate treatment or the disease.", true, "Hypoglycaemia under 2.2 mmol/L is part of severe malaria (p.143); past option 'hyperglycaemia complicates treatment' is false."],
+      ]),
+      explain: "Station answers: identify the film, name the species, list 4 complications of severe malaria, give the first-line drug. A crescentic gametocyte (as here) is not needed for diagnosis (past paper 689d)." },
+
+    { topic: "Picture: pertussis", src: "p.134-135", img: F("Pertussis.jpg"),
+      credit: "Young boy with pertussis. CDC, public domain, via Wikimedia Commons.",
+      stem: "A child with a long paroxysmal cough ending in a whoop and vomiting.",
+      items: I([
+        ["The organism is Bordetella pertussis.", true, "Slide p.134."],
+        ["Erythromycin 40-50 mg/kg/day is given to the patient and close contacts.", true, "Slide p.135."],
+        ["Blood count shows a neutrophil leucocytosis.", false, "Lymphocytosis, 15,000-100,000/cc (p.135)."],
+        ["Complications include apnoea, pneumonia, subconjunctival haemorrhage and rib fracture.", true, "Slide p.135-136."],
+        ["Infection gives lifelong immunity.", false, "No lifelong immunity (p.134)."],
+      ]),
+      explain: "Pertussis picture clues: subconjunctival haemorrhage, a child holding the chest during a paroxysm, a tongue ulcer from the frenulum. Whoop absent under 3 months." },
+
+    { topic: "Picture: HIV", src: "p.160, 169", img: F("CandidiasisFromCDCinJPEG03-18-06.JPG"),
+      credit: "Oral pseudomembranous candidiasis in an HIV patient. Sol Silverman Jr., CDC, public domain, via Wikimedia Commons. Adult mouth.",
+      stem: "White plaques on the tongue and palate of an HIV-infected child.",
+      items: I([
+        ["Persistent oral thrush is a feature common in HIV-infected children.", true, "Slide p.160; persistent after 6 weeks is WHO stage 3 (p.161)."],
+        ["Plaques are difficult to remove with a tongue blade.", true, "Slide p.169."],
+        ["Oesophageal candidiasis presents with dysphagia or retrosternal pain and is a stage 4 condition.", true, "Slide p.169, 162."],
+        ["Gentian violet or nystatin are used, and fluconazole if resistant.", true, "Slide p.169."],
+        ["Thrush is always a sign of AIDS.", false, "It can be due to antibiotics, inhaled steroids, or normal in the neonate; persistent or recurrent thrush suggests HIV."],
+      ]),
+      explain: "Other very-specific HIV conditions (p.160): PCP, Kaposi sarcoma, extrapulmonary cryptococcosis, LIP, multidermatomal zoster, lymphoma." },
+
+    { topic: "Picture: HIV", src: "p.160, 162", img: F("Kaposi's_Sarcoma.jpg"),
+      credit: "Kaposi sarcoma on the skin of an AIDS patient. Public domain, via Wikimedia Commons. Adult skin.",
+      stem: "Violaceous plaques and nodules on the skin.",
+      items: I([
+        ["Kaposi sarcoma is very specific to HIV infection.", true, "Slide p.160."],
+        ["It is a WHO stage 4 (severe) condition.", true, "Slide p.162."],
+        ["It is caused by human herpesvirus 8 (HHV-8).", true, "Standard teaching; seen with severe immunosuppression."],
+        ["Starting ART is part of its management.", true, "ART is the cornerstone (standard teaching); chemotherapy for aggressive disease."],
+        ["It is the only malignancy associated with HIV.", false, "Lymphoma is also listed (p.160, 162: cerebral or B-cell non-Hodgkin lymphoma)."],
+      ]),
+      explain: "Stage 4 events: PCP, extrapulmonary TB, Kaposi sarcoma, oesophageal candidiasis, HIV encephalopathy, CNS toxoplasmosis, cryptococcal meningitis, severe wasting (p.162)." },
+
+    { topic: "Picture: HIV", src: "p.160-161", img: F("Shingles.JPG"),
+      credit: "Child with shingles in the C8/T1 dermatome. James Heilman MD, CC BY-SA 3.0, via Wikimedia Commons.",
+      stem: "A painful vesicular rash in a band on one side of the chest of a child.",
+      items: I([
+        ["Herpes zoster is a WHO stage 2 condition in HIV.", true, "Slide p.161."],
+        ["Zoster involving multiple dermatomes is very specific to HIV infection.", true, "Slide p.160."],
+        ["Single-dermatome zoster is also seen in uninfected children.", true, "Slide p.160."],
+        ["It is caused by the virus that causes chickenpox.", true, "Varicella-zoster virus (standard teaching)."],
+        ["Zoster should lead to withholding all HIV testing.", false, "It should prompt HIV counselling and testing."],
+      ]),
+      explain: "Link to measles and TB: all three can unmask HIV or be worse in HIV. TB-HIV: test every TB patient for HIV (p.154)." },
+
+    { topic: "Picture: immunisation / polio", src: "p.121, 125; paed.1316", img: F("Polio_lores134.jpg"),
+      credit: "Atrophy and paralysis of the right leg and foot due to polio. CDC/NIP/Barbara Rice, public domain, via Wikimedia Commons. Adult.",
+      stem: "A wasted, flail leg after a febrile illness in childhood.",
+      items: I([
+        ["This is a late sequel of poliomyelitis, a lower motor neuron paralysis.", true, "Standard teaching; hypotonia and hyporeflexia (as in past scenario 2017.13)."],
+        ["Oral polio vaccine is given at birth, 6, 10 and 14 weeks.", true, "Slide p.125."],
+        ["Oral polio vaccine is given by intramuscular injection.", false, "Oral, 2 drops (p.125); IPV is the IM one at 14 weeks."],
+        ["Vaccine-associated paralysis is a recognised (rare) complication of the live oral vaccine.", true, "Past paper 658/667: 'paralysis - polio' is listed among complications of immunisation."],
+        ["Polio can be cured by antibiotics.", false, "No specific treatment; prevention by vaccine."],
+      ]),
+      explain: "Polio emergence in an IDP camp was a past social-paediatrics essay (cohort-n.1): discuss the medical, psychosocial and economic effects, and the immunisation response." },
   ]
 }]);
 })();
@@ -3596,6 +4208,852 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · True/False (5 statements per stem, −½ per wrong) · Infectious diseases 1: immunisation, schedule, catch-up.
+// Slide source: Paediatrics CS edited.pdf, Immunisation in childhood p.121-127 (schedule table is an image on p.125).
+// "Outside the slide" = standard teaching (WHO/Nigeria NPI practice) that the deck does not state; page numbers per stem live in pa-pages.js.
+// Real past questions this follows: paed.101-102, 642-667, 2017.64, 2017.99, 2k17-2k1.44, 2k17-2k2.424-440, 2k23.136-153, 2k23.212, mixed-co.296.
+// The slide schedule is older than today's NPI (rotavirus, hepatitis B birth dose, IPV2, MCV2, malaria vaccine, HPV have been added):
+// where the slide and current practice differ, the explanation says so. Check against your department's current NPI card.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Immunisation";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-id-1",
+  subject: "Paediatrics",
+  group: "Infectious diseases",
+  type: "tf",
+  title: "Paediatrics T/F · Infectious diseases 1: immunisation and catch-up (14 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "Immunisation", src: "p.121-122, 124",
+      stem: "Immunity and immunisation:",
+      items: I([
+        ["Immunisation is, with sanitation, one of the two most cost-effective ways of preventing infectious disease.", true, "Slide p.121; it eradicated smallpox and nearly eradicated polio."],
+        ["Passive immunisation gives lasting, life-long protection.", false, "It is TEMPORARY protection from ready-made antibody (p.121)."],
+        ["Antibody crossing the placenta may protect the baby for the first 3 to 6 months of life.", true, "Slide p.122; this is why measles is rare before 6 months (p.128)."],
+        ["Hepatitis B immunoglobulin and tetanus immune globulin are examples of passive immunisation.", true, "Slide p.122."],
+        ["Herd immunity is reached when about 50% of a community is vaccinated.", false, "A critical level of more than 80% (p.124) stops spread."],
+      ]),
+      explain: "Active = your own immune system is stimulated (vaccine or infection). Passive = borrowed antibody (placenta, immunoglobulin). Jenner 1796 cowpox is the origin (p.121). Link: tetanus (TIG + toxoid), hepatitis B (birth dose + HBIG)." },
+
+    { topic: "Immunisation", src: "p.122-123",
+      stem: "Types of vaccine:",
+      items: I([
+        ["BCG, measles and oral polio vaccine are live attenuated vaccines.", true, "Slide p.122 (also MMR, varicella, yellow fever, oral typhoid, rotavirus)."],
+        ["Rabies vaccine and pertussis vaccine are live vaccines.", false, "Both are INACTIVATED (p.123). Live ones: BCG, measles, OPV, yellow fever, rotavirus."],
+        ["Diphtheria and tetanus vaccines are toxoids, a kind of fractional inactivated vaccine.", true, "Slide p.123."],
+        ["Hepatitis B vaccine is a recombinant vaccine made in yeast cells.", true, "Slide p.123."],
+        ["Inactivated vaccines usually give full protection after the first dose.", false, "The first dose only 'primes'; protection comes after the 2nd or 3rd dose and may need boosters (p.123)."],
+      ]),
+      explain: "Rule: live vaccines usually need one dose and give long protection but are avoided in severe immunosuppression; inactivated vaccines need several doses. Polysaccharide vaccines (pneumococcal, meningococcal, Salmonella Typhi) are poorly immunogenic (p.123)." },
+
+    { topic: "Immunisation", src: "p.125",
+      stem: "Route and site of vaccines in the National Programme on Immunisation:",
+      items: I([
+        ["BCG is given intradermally, 0.05 ml, into the upper left arm.", true, "Slide p.125."],
+        ["Measles vaccine is given intramuscularly.", false, "Subcutaneous, 0.5 ml, upper LEFT arm (p.125)."],
+        ["Pentavalent vaccine is given into the buttock (gluteal region).", false, "IM into the outer part of the THIGH, 0.5 ml (p.125). Adjuvanted vaccines go deep into muscle (p.122)."],
+        ["Yellow fever vaccine is given subcutaneously into the upper right arm.", true, "Slide p.125."],
+        ["Oral polio vaccine is two drops by mouth.", true, "Slide p.125."],
+      ]),
+      explain: "Memory: arms for the 'skin' vaccines (BCG intradermal left arm; measles SC left arm; yellow fever SC right arm), thighs for the adjuvanted IM ones (penta, PCV, IPV), mouth for OPV and vitamin A. Smallpox is intradermal but no longer given." },
+
+    { topic: "Immunisation", src: "p.125",
+      stem: "The National Immunisation Schedule as shown in the slides:",
+      items: I([
+        ["BCG is given at birth or as soon as possible after birth.", true, "Slide p.125."],
+        ["OPV is given four times: at birth, 6, 10 and 14 weeks.", true, "Slide p.125; OPV0 and hepatitis B0 within 2 weeks of delivery."],
+        ["Pentavalent and PCV are each given three times, at 6, 10 and 14 weeks, at least 4 weeks apart.", true, "Slide p.125."],
+        ["Measles vaccine is given at 6 months.", false, "9 months (p.125). A dose given earlier does not count and must be repeated at 9 months."],
+        ["Vitamin A is given twice: 100,000 IU at 9 months and 200,000 IU at 15 months.", true, "Slide p.125 (the slide lists it with the 9 and 15 month visits; newer guides give it at 6 and 12 months)."],
+      ]),
+      explain: "Slide schedule: Birth BCG + OPV0 (+ HepB0) | 6 wk OPV1 Penta1 PCV1 | 10 wk OPV2 Penta2 PCV2 | 14 wk OPV3 Penta3 PCV3 IPV | 9 mo measles + yellow fever + vitamin A. Today's NPI has added rotavirus, a second IPV, a second measles dose at 15 months, a meningitis vaccine at 9 months, malaria and HPV vaccines; learn those from your latest immunisation card." },
+
+    { topic: "Immunisation", src: "p.125 + current NPI",
+      stem: "A 10-month-old child who is fully immunised for age on the national schedule should have received:",
+      items: I([
+        ["Three doses of pentavalent vaccine.", true, "6, 10 and 14 weeks (p.125)."],
+        ["The first dose of measles vaccine.", true, "At 9 months (p.125)."],
+        ["Yellow fever vaccine.", true, "At 9 months (p.125)."],
+        ["The second dose of measles vaccine.", false, "In the current NPI the second dose is at 15 months, so not yet."],
+        ["The first dose of HPV vaccine.", false, "HPV is for older girls (about 9-14 years)."],
+      ]),
+      explain: "Past papers asked this in 2019 and 2023 with options IPV2, second measles dose, third pentavalent, meningococcal, yellow fever. Answer by drawing the schedule line and ticking everything due before 10 months." },
+
+    { topic: "Immunisation", src: "p.125 + current NPI",
+      stem: "A fully immunised 5-month-old should have received:",
+      items: I([
+        ["BCG.", true, "At birth."],
+        ["Three doses of hepatitis B-containing vaccine (via pentavalent) plus the birth dose.", true, "Penta contains hepatitis B (outside the slide: pentavalent = DPT + HepB + Hib)."],
+        ["Yellow fever vaccine.", false, "9 months."],
+        ["Inactivated polio vaccine.", true, "Slide p.125 gives IPV at 14 weeks."],
+        ["The first dose of HPV vaccine.", false, "Not given to infants."],
+      ]),
+      explain: "Past question asked this exact stem. Count weeks, not months: by 14 weeks (3.5 months) the whole primary series is done; nothing more is due until 9 months." },
+
+    { topic: "Immunisation", src: "p.126",
+      stem: "Contraindications to immunisation:",
+      items: I([
+        ["Anaphylactic hypersensitivity to a previous dose is a contraindication.", true, "Slide p.126."],
+        ["Moderate to severe acute illness is a (temporary) contraindication.", true, "Slide p.126; mild illness is not."],
+        ["Prematurity is a contraindication.", false, "Vaccinate on chronological age. Valid contraindications are few."],
+        ["A family history of adverse reactions to vaccines is a contraindication.", false, "Not a valid contraindication (p.126 calls fear of adverse events and invalid contraindications a cause of missed opportunities)."],
+        ["Being the child of an HIV-positive mother is a contraindication.", false, "HIV-exposed or asymptomatic infected children get the schedule (p.170). Mother's pregnancy and previous pertussis are not contraindications either."],
+      ]),
+      explain: "Past question (paed.101) lists these as options; by slide p.126 none of them is a valid contraindication. Common invalid reasons: mild fever, cold, diarrhoea, malnutrition, prematurity, breastfeeding, family history. Missing a vaccine because of them is a 'missed opportunity'." },
+
+    { topic: "Immunisation", src: "p.124, 126",
+      stem: "Immunisation programme concepts:",
+      items: I([
+        ["A drop-out rate of 10% or less is acceptable.", true, "Slide p.126; full immunisation is always the goal."],
+        ["A missed opportunity is a visit by an eligible child who does not receive a due vaccine.", true, "Slide p.126 (invalid contraindications, fear of adverse events, clinics that vaccinate only on some days)."],
+        ["Mild illness with low fever is a valid reason to defer vaccination.", false, "It is an invalid contraindication (p.126)."],
+        ["No vaccine is 100% efficacious, so a fully immunised child can still get the disease.", true, "Slide p.126: efficacy 71% to 95%, average about 80%."],
+        ["The Nigerian programme was launched as the National Programme on Immunisation in 1978.", false, "EPI was launched in 1978 and relaunched as the NPI in 1996 (p.124)."],
+      ]),
+      explain: "Drop-out = started but did not finish (Penta1 to Penta3 or BCG to measles). Coverage and drop-out are the numbers examiners like. The original EPI (1974) targeted six diseases: TB, polio, tetanus, diphtheria, pertussis and measles (p.124)." },
+
+    { topic: "Catch-up immunisation", src: "p.125, 132",
+      stem: "Supplemental immunisation and measles campaigns:",
+      items: I([
+        ["National Immunisation Days are nationwide mass campaigns to boost and sustain coverage.", true, "Slide p.125."],
+        ["Supplemental immunisation is delivered through the routine fixed, outreach and mobile services.", false, "It is done OUTSIDE the routine strategies (p.125)."],
+        ["A measles 'catch-up' campaign is a one-time effort to vaccinate all children under 15 years.", true, "Slide p.132; it lowers the number of susceptible children (herd immunity)."],
+        ["'Follow-up' measles campaigns are repeated every 2-4 years to mop up new susceptibles.", true, "Slide p.132: children under 9 months at catch-up plus those born since."],
+        ["A catch-up campaign targets only children who have never been vaccinated.", false, "It also covers primary vaccine failures (about 15% do not seroconvert, p.132)."],
+      ]),
+      explain: "This is the only 'catch-up' the deck states. Individual-child catch-up (next stem) is standard WHO practice, outside the slides. Link: measles control strategy, herd immunity (p.124)." },
+
+    { topic: "Catch-up immunisation", src: "Outside the slides (WHO catch-up rules); p.125; 2017.64, paed.651",
+      stem: "Catching up a child who has missed vaccines:",
+      items: I([
+        ["Do not restart the series; count doses already given and continue from where it stopped.", true, "Standard WHO rule: a delay never needs the series repeated."],
+        ["The minimum interval of 4 weeks between doses of pentavalent, OPV and PCV still applies.", true, "Slide p.125 gives 4 weeks."],
+        ["Several vaccines may be given at the same visit in different sites.", true, "Standard teaching; use different limbs or separate thigh sites."],
+        ["An 18-month-old who has never been vaccinated can still receive measles and hepatitis B.", true, "Past question: measles T, hepatitis B T, but not HPV or rotavirus."],
+        ["Rotavirus vaccine can be started at any age.", false, "It has an upper age limit (first dose early, by about 15 weeks; last by 8 months) because of intussusception risk."],
+      ]),
+      explain: "Question you may get: 'a child came at 14 weeks but missed the 10-week visit': give the due 14-week vaccines and the missed 10-week doses, at least 4 weeks after the previous dose of each. Document everything on the card." },
+
+    { topic: "Immunisation", src: "p.122, 124, 157, 170; paed.643, 656",
+      stem: "BCG vaccine:",
+      items: I([
+        ["It is a live attenuated vaccine.", true, "Slide p.122."],
+        ["It gives complete (100%) protection against tuberculosis.", false, "It mainly protects young children from severe forms such as miliary TB and TB meningitis."],
+        ["It is given intradermally into the upper left arm in a dose of 0.05 ml.", true, "Slide p.125 (intradermal, p.124)."],
+        ["It is contraindicated in an HIV-infected child who has symptoms.", true, "Slide p.170: only BCG and yellow fever are contraindicated in symptomatic HIV."],
+        ["A tuberculin test of 10 mm or more is positive irrespective of BCG vaccination.", true, "Slide p.156."],
+      ]),
+      explain: "BCG gives a papule then a small scar in about 2-3 months (picture test). Complication: BCG adenitis. BCG is also part of TB prevention in the community (p.157)." },
+
+    { topic: "Immunisation", src: "p.170",
+      stem: "Vaccination of HIV-exposed or HIV-infected children:",
+      items: I([
+        ["An HIV-infected child without symptoms can receive all the vaccines on the schedule, including measles.", true, "Slide p.170."],
+        ["If the child has symptoms of HIV, only BCG and yellow fever are contraindicated.", true, "Slide p.170."],
+        ["Pneumococcal vaccine, varicella, hepatitis A and yearly influenza vaccine are also recommended.", true, "Slide p.170."],
+        ["Measles vaccine is contraindicated in every child born to an HIV-positive mother.", false, "Slide p.170 says all schedule vaccines, including measles, can be given. Past papers 2000.21 and paed.102 ask this."],
+        ["Sick HIV-infected children should not be vaccinated, to avoid missed-opportunity worries.", false, "The slide says AVOID missed opportunities in sick HIV-infected children (p.170)."],
+      ]),
+      explain: "Live vaccines are only withheld when immunosuppression is severe or symptomatic (and then BCG and YF only). Also give co-trimoxazole prophylaxis from 6 weeks (p.170-171)." },
+
+    { topic: "Immunisation", src: "p.124-125; paed.647, 653, 2k17-2k2.439",
+      stem: "Pentavalent vaccine and other vaccines:",
+      items: I([
+        ["Pentavalent contains diphtheria, tetanus, pertussis, hepatitis B and Haemophilus influenzae type b antigens.", true, "Standard teaching: DPT + HepB + Hib."],
+        ["Pentavalent also protects against polio.", false, "Polio needs OPV/IPV (p.125)."],
+        ["Pentavalent protects against pneumococcal disease.", false, "PCV is separate (p.125). The Hib component protects against Haemophilus, not Streptococcus pneumoniae."],
+        ["Hepatitis B vaccine is first given at 6 weeks.", false, "The birth dose is given at birth or within 2 weeks (p.125)."],
+        ["MMR, varicella, hepatitis A, influenza, meningococcal and HPV vaccines are recommended in many developed countries.", true, "Slide p.125 list. Past essay: 'vaccines not yet part of the NPI'."],
+      ]),
+      explain: "Essay prompt 'Vaccines not yet part of Nigeria's NPI' (2k17-2k2.350): MMR, varicella, hepatitis A, influenza, typhoid, meningococcal conjugates, depending on current policy. Penta replaced separate DPT, HepB and Hib." },
+
+    { topic: "Immunisation", src: "Outside the slides (cold chain); p.132",
+      stem: "Vaccine handling and the cold chain:",
+      items: I([
+        ["Freeze-dried measles vaccine must be reconstituted with its own diluent.", true, "Slide p.132."],
+        ["Reconstituted measles and BCG vials should be discarded after about 6 hours.", true, "Standard teaching: they lose potency quickly."],
+        ["Pentavalent and hepatitis B vaccines are damaged by freezing.", true, "Adjuvant (aluminium) vaccines must never be frozen."],
+        ["Oral polio vaccine is stable at room temperature for months.", false, "OPV is one of the MOST heat-sensitive vaccines."],
+        ["Vaccines are stored at +2 to +8 degrees Celsius.", true, "Standard cold chain range."],
+      ]),
+      explain: "Cold-chain failure (poor maintenance, p.124) explains falling coverage and outbreaks. Use vaccine vial monitors, an ice-lined fridge, and 'shake test' for suspected frozen adjuvanted vaccines." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · True/False (5 statements per stem, −½ per wrong) · Infectious diseases 2: measles, diphtheria, pertussis, tetanus.
+// Slide source: Measles, diphtheria, pertussis & tetanus p.128-138. Items marked "outside the slide" are standard teaching.
+// Past questions this follows: 2000.14, paed.645, 684, 697, 704, 746, 754, 2k17-2k2.285, 421, 426; paed.676, 682, 694, 737, 2k20-2k2.16;
+// paed.15 (tetanus), 688, 701, 718, 764, 972, 2017.25, 2k20-2k2.19; paed.715 (diphtheria).
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-id-2",
+  subject: "Paediatrics",
+  group: "Infectious diseases",
+  type: "tf",
+  title: "Paediatrics T/F · Infectious diseases 2: measles, diphtheria, pertussis, tetanus (17 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "Measles", src: "p.128-129",
+      stem: "Epidemiology of measles:",
+      items: I([
+        ["The median age of measles infection in Nigeria is about 17 months.", true, "Slide p.128; by 1 year a third have had measles, by 3 years about three-quarters."],
+        ["Maternal antibody protects the infant for roughly the first 6 months of life.", true, "Slide p.128."],
+        ["The incubation period is 10-14 days.", true, "Slide p.128."],
+        ["A child is infectious only after the rash appears.", false, "Contagious from about 4 days BEFORE to 5 days after the rash (p.128)."],
+        ["Two antigenic types of measles virus are known.", false, "Only ONE antigenic type, no animal reservoir, no vector (p.128-129). This is why vaccination can control it."],
+      ]),
+      explain: "Measles is an RNA paramyxovirus (Morbillivirus), spread by droplets. Risk factors: overcrowding, malnutrition, immunodeficiency (p.128). Peak incidence in the tropics is in the dry season (p.129). Link: BCG/TB activation, vitamin A, herd immunity." },
+
+    { topic: "Measles", src: "p.129-130",
+      stem: "Clinical features of measles:",
+      items: I([
+        ["The prodrome is fever with cough, coryza and conjunctivitis, lasting about 3-5 days.", true, "Slide p.129; all increase in severity before the rash."],
+        ["Koplik spots are pathognomonic: greyish-white dots opposite the lower molars, lasting 12-18 hours.", true, "Slide p.129-130."],
+        ["The rash begins behind the ears and along the hairline, then spreads down to reach the legs by the 3rd day.", true, "Slide p.130."],
+        ["The fever falls when the rash appears.", false, "There is an ABRUPT RISE in temperature as the rash appears (p.130)."],
+        ["When the rash fades it disappears in the order it appeared, with desquamation over 7-10 days.", true, "Slide p.130."],
+      ]),
+      explain: "Picture-test pearls: Koplik spots (buccal mucosa), the confluent maculopapular rash starting on the face, and brawny desquamation. A severe confluent, ecchymotic rash on palms and soles means severe disease (p.130)." },
+
+    { topic: "Measles", src: "p.130",
+      stem: "Diagnosis of measles:",
+      items: I([
+        ["Diagnosis is mainly clinical.", true, "Slide p.130."],
+        ["The WHO case definition is fever above 38 degrees Celsius with a maculopapular non-vesicular rash and at least one of cough, coryza or conjunctivitis.", true, "Slide p.130."],
+        ["The blood count shows leucopenia with a relative lymphocytosis.", true, "Slide p.130."],
+        ["Blood culture is used to diagnose measles.", false, "Confirm with measles IgM serology, a rising IgG, or virus isolation (nasopharynx, urine); culture is not used (p.130)."],
+        ["In measles encephalitis the CSF shows raised protein and cells (lymphocytes) with normal glucose.", true, "Slide p.130."],
+      ]),
+      explain: "Differentials listed on p.130: roseola, rubella (tender nodes), drug reaction (no cough), enteroviral infection, rickettsial infection (spares the face), scarlet fever. Kawasaki disease, in the past question, is another differential (outside the slide)." },
+
+    { topic: "Measles", src: "p.129, 131",
+      stem: "Complications of measles:",
+      items: I([
+        ["Bronchopneumonia is the major cause of measles-related death in young children.", true, "Slide p.129 (immunosuppression predisposes to bacterial infection)."],
+        ["Laryngotracheobronchitis (croup) and myocarditis may occur.", true, "Slide p.131."],
+        ["Measles can reactivate a tuberculous focus.", true, "Slide p.131; measles is also a risk factor for TB (p.153)."],
+        ["Encephalitis is a common complication.", false, "About 2 per 1000 cases, 2-5 days after the rash (p.131): uncommon but serious."],
+        ["Subacute sclerosing panencephalitis (SSPE) appears years later, on average about 10.8 years.", true, "Slide p.131."],
+      ]),
+      explain: "Complications of measles is a past short note (2k17-2k2.285). Organise by system: respiratory, GI (diarrhoea, malnutrition), eye (blindness from vitamin A deficiency), neuro (encephalitis, SSPE), others (DIC, haemorrhagic measles, hepatitis)." },
+
+    { topic: "Measles", src: "p.128, 131-132; vitamin A outside the slide",
+      stem: "Management and prevention of an individual measles case:",
+      items: I([
+        ["Treatment is supportive and symptomatic, plus treatment of complications.", true, "Slide p.131."],
+        ["Acyclovir is the specific treatment.", false, "No specific antiviral treatment (past papers list measles-acyclovir as a wrong match). Supportive care is the rule."],
+        ["Vitamin A supplementation reduces morbidity and mortality from measles.", true, "Outside the slide (the slide's wording here is damaged): standard WHO practice, 2 doses on 2 consecutive days."],
+        ["Isolation is advised from the 7th day after exposure until 5 days after the rash appears.", true, "Slide p.128."],
+        ["Immune serum globulin within 5 days of exposure gives passive protection to a susceptible contact.", true, "Slide p.132."],
+      ]),
+      explain: "Ward outbreak (paed.704/712): isolate the case, give immunoglobulin or vaccine to susceptible contacts, and avoid cross-infection. Natural infection gives lifelong immunity, but vaccination is the mainstay (p.131)." },
+
+    { topic: "Measles", src: "p.132",
+      stem: "Measles vaccine:",
+      items: I([
+        ["It is a live attenuated freeze-dried vaccine that must be reconstituted.", true, "Slide p.132."],
+        ["It is given at 9 months, 0.5 ml subcutaneously.", true, "Slides p.125, 132."],
+        ["Efficacy is 100%, so no child needs a repeat dose.", false, "Efficacy is about 85%: up to 15% do not seroconvert (p.132). Hence the second dose and campaigns."],
+        ["About 10% of children develop a low-grade fever and 5% a mild non-infectious rash.", true, "Slide p.132."],
+        ["There is good evidence that MMR vaccine causes autism.", false, "No scientific evidence (p.132)."],
+      ]),
+      explain: "Duration of immunity is lifelong (p.132). No contraindication, even if the child is sick or malnourished (p.132), although moderate-severe illness is a general contraindication (p.126). Link: the NPI schedule, outbreaks at 6 months." },
+
+    { topic: "Measles", src: "p.124, 128, 132",
+      stem: "Control of measles:",
+      items: I([
+        ["Routine immunisation is the foundation of effective measles control.", true, "Slide p.132."],
+        ["A dose of measles vaccine given before 9 months (for example at 6 months during an outbreak) must be repeated at or after 9 months.", true, "Outside the slide: maternal antibody blocks the early dose. Past question: 'measles at 6 months will also be given at 9 months'."],
+        ["Measles vaccine should be withheld from malnourished children.", false, "Slide p.132: no contraindication even if the child is sick or malnourished."],
+        ["In 2003 measles vaccine coverage in Nigeria was about 36%.", true, "Slide p.132 (35.9%, NDHS 2003)."],
+        ["Quarantine of cases alone is an effective way to stop spread.", false, "Contagious before the rash appears, so isolation cannot stop spread: immunisation does (p.128)."],
+      ]),
+      explain: "Herd immunity needs more than 80% coverage (p.124). Strategy slide p.132: routine + catch-up campaign (under 15 years) + follow-up campaigns every 2-4 years." },
+
+    { topic: "Measles", src: "p.130; paed.645, 655",
+      stem: "A 2-year-old has 3 days of fever, cough, coryza, conjunctivitis and a maculopapular rash. The immunisation history is unknown:",
+      items: I([
+        ["Clinical evaluation, looking for complications, is needed.", true, "Diagnosis is clinical (p.130)."],
+        ["Broad-spectrum antibiotics are routinely required.", false, "Only for bacterial complications (pneumonia, otitis)."],
+        ["Antipyretics alone are all that is needed.", false, "Assess for pneumonia, croup, dehydration, malnutrition; give vitamin A."],
+        ["A blood culture for measles is the confirmatory test.", false, "Serology (IgM) or viral isolation (p.130)."],
+        ["Kawasaki disease, rubella and drug rash are differential diagnoses.", true, "Slide p.130 lists rubella and drug reaction; Kawasaki comes from the past question."],
+      ]),
+      explain: "Past answer pattern: admit if there are complications or the child is malnourished, isolate with contact and droplet precautions, give vitamin A, immunise contacts, and vaccinate the child after recovery if not immune." },
+
+    { topic: "Diphtheria", src: "p.132-133",
+      stem: "Diphtheria: the organism and pathogenesis",
+      items: I([
+        ["The causative organism is Corynebacterium diphtheriae, a Gram-positive non-sporulating bacillus.", true, "Slide p.132."],
+        ["A bacteriophage carries the gene (tox) for the exotoxin.", true, "Slide p.133."],
+        ["The toxin causes tissue necrosis by inhibiting protein synthesis.", true, "Slide p.133."],
+        ["The hallmark lesion is a pseudomembrane, grey to brown, made of necrosed epithelium, fibrin, leucocytes, red cells and organisms.", true, "Slide p.133."],
+        ["The incubation period is 2 to 4 weeks.", false, "2-4 DAYS (p.133). Humans are the only reservoir; spread by droplets and skin exudate."],
+      ]),
+      explain: "Risk factors: poverty, overcrowding, poor hygiene (p.133); peak age 2-14 years in the unimmunised, winter peak (p.132). Mitis is the less toxigenic biotype (p.132)." },
+
+    { topic: "Diphtheria", src: "p.133-134",
+      stem: "Diphtheria: clinical features and treatment",
+      items: I([
+        ["Tonsillar/pharyngeal diphtheria can give a 'bull neck' from cervical lymphadenitis and oedema.", true, "Slide p.133-134."],
+        ["Laryngeal diphtheria causes hoarseness, stridor and a croupy cough, with risk of suffocation.", true, "Slide p.133."],
+        ["Cardiac toxicity (arrhythmia, heart block) appears 1-2 weeks after the first symptoms.", true, "Slide p.133; diphtheria can cause cardiac arrest."],
+        ["Neuropathies appear within the first 48 hours.", false, "2-6 weeks later; may resemble Guillain-Barré syndrome (p.133)."],
+        ["Treatment is neutralising antitoxin plus penicillin or erythromycin for 14 days and supportive care.", true, "Slide p.134; carriers and contacts get penicillin or erythromycin for 7 days."],
+      ]),
+      explain: "Diagnosis: clinical (pseudomembrane), culture on black-halo tellurite media, PCR for the tox gene, serology (p.133). Prognosis is poor under 4 years from airway obstruction (p.134). Cutaneous diphtheria is commoner in warm climates (p.133)." },
+
+    { topic: "Pertussis", src: "p.134-135",
+      stem: "Pertussis (whooping cough):",
+      items: I([
+        ["It is caused by Bordetella pertussis, a small Gram-negative coccobacillus.", true, "Slide p.134."],
+        ["The incubation period is 4-6 weeks.", false, "3 to 12 days (p.135)."],
+        ["The illness has catarrhal (about 2 weeks), paroxysmal (2-6 weeks) and convalescent (2-4 weeks) phases.", true, "Slide p.135."],
+        ["It is most infectious in the catarrhal and early paroxysmal stages.", true, "Outside the slide but standard (past papers 676, 694). The slide notes immunisation shortens all stages."],
+        ["Every infant develops the typical whoop.", false, "No whoop in infants under 3 months: gasping, cyanosis, apnoea, bulging red eyes (p.135)."],
+      ]),
+      explain: "Pertussis toxin causes epithelial damage, histamine sensitivity, insulin secretion and leucocyte dysfunction (p.135). Neither infection nor vaccination gives lifelong immunity, and there is no chronic carrier state (p.134)." },
+
+    { topic: "Pertussis", src: "p.135",
+      stem: "Diagnosis and treatment of pertussis:",
+      items: I([
+        ["The case definition is a cough of more than 14 days plus one of: paroxysms, whoop, post-tussive vomiting.", true, "Slide p.135."],
+        ["There is a lymphocytic leucocytosis (15,000-100,000/cc) late in the catarrhal or early paroxysmal phase.", true, "Slide p.135."],
+        ["Erythromycin 40-50 mg/kg/day is given to the patient and to close contacts.", true, "Slide p.135."],
+        ["Penicillin is the antibiotic of choice.", false, "A macrolide is the choice (erythromycin); penicillin is not effective for pertussis (p.135 and past answer notes)."],
+        ["A complete series of childhood vaccines gives lifelong immunity.", false, "Immunity wanes; no vaccination or infection gives lifelong protection (p.134). Past question 2k20-2k2.16."],
+      ]),
+      explain: "Diagnosis: nasopharyngeal aspirate on Regan-Lowe charcoal agar, PCR, serology (p.135). Close contacts under 7 years get a booster dose of vaccine (p.135). Newborns are best protected by 'cocooning' (shielding them from infected adults)." },
+
+    { topic: "Pertussis", src: "p.135-136",
+      stem: "Complications of pertussis:",
+      items: I([
+        ["Pneumonia, otitis media and atelectasis occur.", true, "Slide p.135 (pneumonia, otitis)."],
+        ["Subconjunctival, intracranial and pulmonary haemorrhage can occur.", true, "Slide p.135."],
+        ["Apnoea and encephalopathy occur, especially in young infants.", true, "Slide p.135-136."],
+        ["Hernias, rib fracture and urinary incontinence can follow the violent coughing.", true, "Slide p.136."],
+        ["Pertussis usually spares the lungs.", false, "Respiratory complications dominate; bronchiectasis can follow (past paper options 694, 682)."],
+      ]),
+      explain: "Pertussis complications also include malnutrition and dehydration from vomiting (p.136). Prevention is immunisation. Link: bronchiectasis (TB and pertussis are common causes, past paper 2000.18)." },
+
+    { topic: "Tetanus", src: "p.136",
+      stem: "Tetanus: the organism and pathogenesis",
+      items: I([
+        ["The cause is Clostridium tetani, a Gram-positive spore-forming obligate anaerobic bacillus.", true, "Slide p.136 (a past option wrongly said 'Gram negative')."],
+        ["The toxin (tetanospasmin) travels up motor nerves to the brainstem and spinal cord.", true, "Slide p.136 (retrograde intraneuronal transport)."],
+        ["It blocks release of the inhibitory neurotransmitters glycine and GABA.", true, "Slide p.136."],
+        ["It causes spasm by releasing too much acetylcholine at the neuromuscular junction.", false, "It removes INHIBITION, giving rigidity, spasms and autonomic overactivity (p.136); botulinum toxin is the one that blocks acetylcholine."],
+        ["Neonatal tetanus kills about 500,000 babies a year.", true, "Slide p.136 (old estimate)."],
+      ]),
+      explain: "Entry: wounds, umbilical stump, circumcision, ear piercing, scarification, unsterile injections (p.136). Low oxygen potential at the wound lets spores germinate. Link: immunisation of mothers prevents neonatal tetanus." },
+
+    { topic: "Tetanus", src: "p.136-137",
+      stem: "Clinical features of tetanus:",
+      items: I([
+        ["The incubation period is 2-14 days (sometimes months).", true, "Slide p.136."],
+        ["Trismus (lockjaw), rigidity, opisthotonus and intermittent spasms are typical.", true, "Slide p.136."],
+        ["The patient is conscious, anxious and fearful.", true, "Slide p.137."],
+        ["Autonomic overactivity (tachycardia, labile hypertension, sweating) can occur.", true, "Slide p.137; also urinary retention."],
+        ["The EEG, CSF and EMG are always abnormal and confirm the diagnosis.", false, "They are normal; diagnosis is CLINICAL (p.137)."],
+      ]),
+      explain: "Localised or cephalic tetanus may be limited to adjacent muscles (p.137). Differentials: dental abscess with trismus, brainstem encephalitis, rabies, hypocalcaemia (p.137). Complications asked in past papers: ileus, vertebral fracture, myositis ossificans, hypertension." },
+
+    { topic: "Tetanus", src: "p.137",
+      stem: "Management of tetanus:",
+      items: I([
+        ["Human tetanus immunoglobulin (3,000-6,000 units, 500 units in neonates) neutralises unbound toxin.", true, "Slide p.137."],
+        ["Penicillin G for 10-14 days (or metronidazole) destroys the organism.", true, "Slide p.137."],
+        ["Diazepam is used to control spasms; magnesium sulphate, midazolam and phenobarbitone are alternatives.", true, "Slide p.137."],
+        ["The patient should be nursed in a quiet, dark environment, ideally in ICU.", true, "Slide p.137."],
+        ["Recovery from tetanus gives lifelong immunity, so no vaccine is needed afterwards.", false, "Infection does NOT confer immunity; give toxoid after recovery (past answer: 'recovery does not confer lifelong immunity')."],
+      ]),
+      explain: "Wound debridement, supportive care (fluids, nutrition, airway), and prevention by active plus passive immunisation (p.137). Poor prognosis: short incubation under 7 days, onset under 48 hours, cephalic, neonatal, generalised, temperature above 40 degrees, tachycardia (p.138)." },
+
+    { topic: "Tetanus", src: "p.136-138",
+      stem: "Neonatal tetanus:",
+      items: I([
+        ["It follows unhygienic cord care, circumcision, ear piercing or scarification in an infant of an unimmunised mother.", true, "Slide p.137."],
+        ["It is always generalised, with excessive crying, refusal to suck, trismus, rigidity and spasms.", true, "Slide p.137."],
+        ["Onset is usually in the 4th week of life.", false, "Usually within the first 2 weeks (about day 7). Earlier onset means worse prognosis (p.138)."],
+        ["Neonatal tetanus has a worse prognosis than post-neonatal tetanus.", true, "Slide p.138."],
+        ["Surviving the infection gives lifelong immunity.", false, "Past paper 688: no lifelong immunity is acquired."],
+      ]),
+      explain: "Prevention: tetanus toxoid to pregnant women, clean delivery, clean cord care, and tetanus immunoglobulin where needed. Past short note: 'Neonatal tetanus' (2k17-2k2.328) and 'Tetanus' (2019.6)." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · True/False (5 statements per stem, −½ per wrong) · Infectious diseases 3: tuberculosis in children.
+// Slide source: Tuberculosis in children p.151-158 (Dr Regina Oladokun). Items marked outside the slide are standard teaching.
+// Past questions this follows: paed.14, 692, 708, 720, 734, 790, 2017.59, 2017.75, 2017.111, 2018.20, 2k17-2k1.40, 2k17-2k2.317, 441,
+// 2k23.181, 193, 196, 213, mixed-co.120, 2017.34, 2018.77 (Tania), paed.1426.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-id-3",
+  subject: "Paediatrics",
+  group: "Infectious diseases",
+  type: "tf",
+  title: "Paediatrics T/F · Infectious diseases 3: tuberculosis (11 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "Tuberculosis", src: "p.151-152",
+      stem: "Epidemiology and transmission of TB:",
+      items: I([
+        ["TB is the world's deadliest infectious disease, killing more people than HIV and malaria combined.", true, "Slide p.151."],
+        ["The most important source of infection is the sputum of a person with open (smear-positive) TB.", true, "Slide p.151."],
+        ["Primary infection in a child usually follows prolonged close contact with an untreated adult with cavitary disease.", true, "Slide p.151."],
+        ["M. bovis can be transmitted by drinking milk from infected cattle.", true, "Slide p.151."],
+        ["Antibodies play the main role in protection against TB.", false, "Antibodies play NO role in inhibiting growth or immunity; protection is cell-mediated (p.152)."],
+      ]),
+      explain: "Nigeria: incidence 338 per 100,000 (2012); only about 5% of childhood TB was notified, so the true burden is unknown (p.151). Aetiology: M. tuberculosis, M. bovis, M. africanum, M. microti (p.151)." },
+
+    { topic: "Tuberculosis", src: "p.151, 153",
+      stem: "Factors behind the burden of TB and risk factors for disease:",
+      items: I([
+        ["The HIV pandemic, multidrug resistance and decline of national TB control programmes explain the resurgence.", true, "Slide p.151 (also worsening economics and conflicts with displaced persons)."],
+        ["HIV infection and malnutrition increase the risk of TB.", true, "Slide p.153."],
+        ["Measles and pertussis increase the risk of TB.", true, "Slide p.153."],
+        ["Prolonged corticosteroid therapy increases the risk.", true, "Slide p.153."],
+        ["Diabetes mellitus does not increase the risk.", false, "It does (p.153); so do leukaemia, Hodgkin disease and chronic malabsorption."],
+      ]),
+      explain: "Essay material for the Tania question (2018.77): the factors responsible for TB burden in Nigeria; predisposing factors in the child (overcrowding, a father who died of TB, poverty); psychosocial effects; control measures (case finding, contact tracing, BCG, better living standards - p.157)." },
+
+    { topic: "Tuberculosis", src: "p.152-153",
+      stem: "Pathogenesis of TB:",
+      items: I([
+        ["70-90% of people exposed to TB never develop symptoms or signs.", true, "Slide p.152."],
+        ["The primary complex is the primary focus plus the regional lymph nodes draining it.", true, "Slide p.152."],
+        ["The characteristic lesion is a granuloma with central caseous necrosis.", true, "Slide p.152."],
+        ["About 15% of primary infections progress to disease in the first 10 years.", true, "Slide p.153."],
+        ["Every primary complex progresses to active disease.", false, "It can heal; only a minority progress (p.153)."],
+      ]),
+      explain: "Four outcomes (p.152-153): no infection; infection with a primary complex; pulmonary disease (pneumonia, cavity, endobronchial TB, nodes compressing bronchi); systemic (miliary, meningitis, Pott's disease, pericarditis). Disseminated disease is commonest in the immunocompromised and at the extremes of age." },
+
+    { topic: "Tuberculosis", src: "p.153; 2017.75",
+      stem: "The 'timetable' of TB after primary infection:",
+      items: I([
+        ["Miliary and meningeal TB appear within 2-6 months.", true, "Slide p.153."],
+        ["TB adenitis appears 3-9 months after infection.", true, "Slide p.153."],
+        ["Bone and joint TB appears after several years.", true, "Slide p.153."],
+        ["Renal and genital TB appear more than 10 years after infection.", true, "Slide p.153."],
+        ["Reactivation pulmonary TB occurs within weeks of the primary infection.", false, "It takes a number of YEARS (p.153). Pulmonary disease (progressive primary) occurs within a few months."],
+      ]),
+      explain: "Easy way: the more dangerous the form, the sooner it shows (miliary, meningitis within 6 months); the organ forms (bone, kidney) come years later. Past stem: 'disseminated TB occurs in 2-6 months' is TRUE." },
+
+    { topic: "Tuberculosis", src: "p.153-155; paed.692, 2017.75",
+      stem: "Clinical features and suspicion of TB in a child:",
+      items: I([
+        ["Presumptive TB: cough of 2 weeks or more, weight loss or failure to thrive, fever with or without night sweats, and contact with an adult with TB.", true, "Slide p.153."],
+        ["Phlyctenular conjunctivitis is a hypersensitivity reaction to tuberculous protein.", true, "Slide p.153-154; so is erythema nodosum."],
+        ["A gibbus (spinal angulation) with upper motor neuron signs suggests spinal TB (Pott's disease).", true, "Slide p.154."],
+        ["TB adenitis is best treated by incision and drainage.", false, "It is treated with anti-TB drugs; node enlargement is asymmetric, painless, more than 1 month, usually cervical (p.155). Drainage leaves sinuses."],
+        ["The absence of cavities on a chest X-ray excludes pulmonary TB in a child.", false, "Childhood TB is usually the primary complex or nodes, not cavities (p.155). Past question stems in 2017, 2018 and 2023."],
+      ]),
+      explain: "Examination: wasting, pallor, cervical lymphadenopathy, gibbus, distended abdomen with ascites (p.154). Always test for HIV in every child with TB (p.154). Past picture station: back of a child with a gibbus (paed.192)." },
+
+    { topic: "Tuberculosis", src: "p.154-155",
+      stem: "Diagnosis of TB in children:",
+      items: I([
+        ["Xpert MTB/RIF is now a first-line test; it also detects rifampicin resistance and gives a result in about 2 hours.", true, "Slide p.154."],
+        ["Gastric aspirate and non-respiratory samples can be tested on Xpert.", true, "Slide p.154."],
+        ["Culture (Lowenstein-Jensen or MGIT) is the gold standard but slow, up to 6 weeks.", true, "Slide p.155."],
+        ["AFB smear microscopy is mandatory before any child can be treated.", false, "Microscopy is only for where Xpert is not available and for monitoring (p.155). Many children are diagnosed clinically."],
+        ["Interferon-gamma release assays are recommended in high-burden countries.", false, "WHO: do NOT use in high-burden countries (p.155)."],
+      ]),
+      explain: "Other tests: chest X-ray, tuberculin skin test and ESR (limited value), CSF analysis for TB meningitis, histology for adenitis, ultrasound for abdominal TB, CT/MRI for TB meningitis (p.154)." },
+
+    { topic: "Tuberculosis", src: "p.156",
+      stem: "The tuberculin (Mantoux) skin test:",
+      items: I([
+        ["An induration of 0-4 mm is negative; 5-9 mm is borderline.", true, "Slide p.156."],
+        ["An induration of 10 mm or more is positive irrespective of BCG vaccination.", true, "Slide p.156."],
+        ["5 mm or more is positive in an HIV-infected or severely malnourished child.", true, "Slide p.156."],
+        ["A positive test proves the child has active TB disease.", false, "It shows INFECTION with M. tuberculosis, not necessarily disease (p.156)."],
+        ["A negative test excludes TB.", false, "False negatives occur in malnutrition, HIV, miliary TB and overwhelming disease; TST has limited value (p.154)."],
+      ]),
+      explain: "A past question gave 'an induration of 10 mm is in keeping with neonatal infection': in a young child a 10 mm reaction is positive. Next steps are chest X-ray, Xpert and clinical scoring." },
+
+    { topic: "Tuberculosis", src: "p.156-157; paed.14, 2k17-2k1.40, 2k23.193",
+      stem: "Treatment of TB in children:",
+      items: I([
+        ["Treatment has an intensive phase (2 months) and a continuation phase.", true, "Slide p.156."],
+        ["Regimen 1 for pulmonary TB and most extrapulmonary TB is 2RHZE/4RH, 6 months in all.", true, "Slide p.157."],
+        ["TB meningitis, miliary TB and spinal or joint TB need 2RHZE/10RH, 12 months.", true, "Slide p.157."],
+        ["Streptomycin is a first-line drug.", false, "First-line: isoniazid, rifampicin, pyrazinamide, ethambutol (p.157). Streptomycin and amikacin are not."],
+        ["Abdominal TB and TB adenitis need 12 months of treatment.", false, "Six months (Regimen 1). Twelve months is only for meningitis, miliary and osteoarticular TB."],
+      ]),
+      explain: "DOTS is desirable at least in the intensive phase (p.156). Doses (p.157): rifampicin 10-20, isoniazid 10-15, pyrazinamide 25-30, ethambutol 20-25 mg/kg/day." },
+
+    { topic: "Tuberculosis", src: "p.157",
+      stem: "Adverse effects of anti-TB drugs:",
+      items: I([
+        ["Rifampicin causes orange discolouration of urine and tears and can cause hepatotoxicity.", true, "Slide p.157."],
+        ["Isoniazid can cause peripheral neuritis, hepatotoxicity and psychosis.", true, "Slide p.157; give pyridoxine."],
+        ["Pyrazinamide can cause hyperuricaemia, rash and hepatotoxicity.", true, "Slide p.157."],
+        ["Ethambutol causes optic neuritis.", true, "Slide p.157; check vision where possible."],
+        ["Isoniazid is the drug that commonly causes optic neuritis.", false, "That is ETHAMBUTOL. Isoniazid causes peripheral neuritis."],
+      ]),
+      explain: "Stevens-Johnson syndrome can be precipitated by anti-TB drugs (past paper 709). Rifampicin also lowers serum levels of protease inhibitors by 80% and NNRTIs by 20-60% (p.170)." },
+
+    { topic: "Tuberculosis", src: "p.157; 2k17-2k2.317, 2017.34",
+      stem: "Steroids, contacts and the newborn of a mother with TB:",
+      items: I([
+        ["Steroids are indicated in TB meningitis, TB pericarditis and TB pleural effusion.", true, "Slide p.157."],
+        ["Children who are contacts of a smear-positive case should be screened (symptoms, chest X-ray, tuberculin test) and given isoniazid prophylaxis if well.", true, "Slide p.157."],
+        ["A newborn of a mother with TB should start isoniazid soon after delivery, and continue it for 6 months if the chest X-ray is normal.", true, "Slide p.157."],
+        ["If the X-ray is abnormal, the infant is treated as having TB with combination therapy.", true, "Slide p.157."],
+        ["Steroids are routinely given in all pulmonary TB.", false, "Only in the specific forms listed (p.157). Past question paed.14(d)."],
+      ]),
+      explain: "Management of a 2-day-old infant of a smear-positive mother (past essay): treat the mother, do not separate unnecessarily, isoniazid prophylaxis, examine and X-ray the baby, and give BCG after the prophylaxis ends if not on isoniazid. The mother's treatment must start or continue (p.157)." },
+
+    { topic: "Tuberculosis", src: "p.157-158",
+      stem: "Drug-resistant TB (DR-TB):",
+      items: I([
+        ["MDR-TB is resistance to at least rifampicin and isoniazid.", true, "Slide p.158."],
+        ["XDR-TB is resistance to rifampicin, isoniazid, a quinolone and an injectable aminoglycoside.", true, "Slide p.158."],
+        ["DR-TB in a child is usually acquired from an adult contact with DR-TB.", true, "Slide p.158."],
+        ["Children with suspected DR-TB should have a GeneXpert, then culture and drug susceptibility testing.", true, "Slide p.158."],
+        ["Primary drug resistance means resistance in previously treated patients.", false, "Primary = among NEW cases; acquired = among previously treated cases (p.157)."],
+      ]),
+      explain: "Causes: spontaneous mutation and cross-resistance (p.157). Poor adherence promotes resistance, which is why DOT matters. Prevention of TB in a community: case finding and treatment, contact tracing with isoniazid prophylaxis, BCG, better living standards (p.157)." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · True/False (5 statements per stem, −½ per wrong) · Infectious diseases 4: HIV/AIDS in children.
+// Slide source: Overview of HIV in children and adolescents p.159-171 (Dr Regina Oladokun). Items outside the slide are standard teaching.
+// Past questions this follows: 2000.21, paed.102, 395, 714, 725-732, 2017.28, 2017.34, 2k17-2k2.292, 425-428, 2k18-2k2.23, 2k23.155,
+// mixed-co.119, 2008.15, 2012.16, 2001.1, paed.677. ART regimens in the slide are the 2019 FMOH ones; guidelines change, so check
+// the current national guideline for regimens and when to start.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-id-4",
+  subject: "Paediatrics",
+  group: "Infectious diseases",
+  type: "tf",
+  title: "Paediatrics T/F · Infectious diseases 4: HIV/AIDS (17 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "HIV", src: "p.159",
+      stem: "HIV: the virus and the epidemic",
+      items: I([
+        ["HIV is a retrovirus that attaches to CD4+ cells and causes CD4 depletion.", true, "Slide p.159; macrophages may also be infected."],
+        ["Reverse transcriptase, integrase and protease are the three key viral enzymes.", true, "Slide p.159: entry, incorporation of RNA into host DNA, assembly."],
+        ["AIDS is caused by HTLV and can be cured with zidovudine.", false, "HIV (not HTLV); ART suppresses but does NOT cure (p.164)."],
+        ["About 1.9 million people lived with HIV in Nigeria in 2019 (NAIIS).", true, "Slide p.159."],
+        ["In NAIIS 2019 the prevalence in children aged 0-14 years was 1.5%.", false, "1.5% was for ADULTS 15-64 years; children 0.2% (p.159)."],
+      ]),
+      explain: "UN 90-90-90 target (p.159): 90% of people living with HIV know their status, 90% of those get sustained ART, 90% of those are virally suppressed. Sub-Saharan Africa has about 90% of children with HIV." },
+
+    { topic: "HIV", src: "p.159-160; 2k18-2k2.23",
+      stem: "Transmission of HIV to children:",
+      items: I([
+        ["Mother-to-child transmission accounts for about 90% of paediatric HIV.", true, "Slide p.159."],
+        ["Without intervention the risk of mother-to-child transmission is 35-45% in Africa.", true, "Slide p.159 (25-35% in Western Europe)."],
+        ["The peripartum period is the most important time for transmission (about 60%).", true, "Slide p.160."],
+        ["Transmission is highest in the first trimester.", false, "Delivery/labour is the highest-risk period (past question 2k18-2k2.23)."],
+        ["Breastfeeding is the commonest time of transmission.", false, "Post-partum (breastfeeding) transmission is the LEAST common stage (p.160)."],
+      ]),
+      explain: "Other routes: blood transfusion, sexual intercourse (adolescents), percutaneous (unsterile needles). HIV is not transmitted by contact with faeces, urine or saliva (past question 2k17-2k2.182)." },
+
+    { topic: "HIV", src: "p.160",
+      stem: "Natural history and clinical features of paediatric HIV:",
+      items: I([
+        ["Rapid progressors (25-30%) die by age 1 year.", true, "Slide p.160: infection in utero or early perinatal period."],
+        ["Category 2 (50-60%) develop symptoms early and usually die by 3-5 years.", true, "Slide p.160."],
+        ["Long-term survivors (5-25%) may live beyond 8 years.", true, "Slide p.160."],
+        ["Pneumocystis pneumonia, oesophageal candidiasis, Kaposi sarcoma and lymphoid interstitial pneumonitis are very specific to HIV.", true, "Slide p.160."],
+        ["Persistent hepatosplenomegaly is specific to HIV, never seen in uninfected children.", false, "It is common in HIV but also in uninfected children in malaria-endemic areas (p.160)."],
+      ]),
+      explain: "Common in HIV and uncommon in uninfected: severe recurrent bacterial infection, persistent thrush, bilateral parotid enlargement, persistent generalised lymphadenopathy, persistent fever, neurologic dysfunction (p.160). Early features are non-specific: fever, diarrhoea, failure to thrive, cough." },
+
+    { topic: "HIV", src: "p.161-162",
+      stem: "WHO clinical staging of paediatric HIV:",
+      items: I([
+        ["Stage 1 is asymptomatic or persistent generalised lymphadenopathy.", true, "Slide p.161."],
+        ["Herpes zoster, recurrent oral ulcers and papular pruritic eruptions are stage 2.", true, "Slide p.161."],
+        ["Pulmonary TB and lymph node TB are stage 4.", false, "Pulmonary and lymph node TB are stage 3; EXTRA-pulmonary TB is stage 4 (p.161-162)."],
+        ["Persistent diarrhoea for 14 days or more and persistent fever over 1 month are stage 3.", true, "Slide p.161."],
+        ["Pneumocystis pneumonia, Kaposi sarcoma, oesophageal candidiasis and HIV encephalopathy are stage 4.", true, "Slide p.162."],
+      ]),
+      explain: "Stages: 1 asymptomatic, 2 mild, 3 advanced, 4 severe (p.162). Past scenario (2k23.155): a 3-year-old maternal orphan, 6 kg, lymphadenopathy, dyspnoea, crepitations: severe wasting plus pneumonia is stage 4; TB screening is mandatory." },
+
+    { topic: "HIV", src: "p.162-163",
+      stem: "Diagnosis of HIV in a child under 18 months:",
+      items: I([
+        ["Maternal HIV antibody crosses the placenta and can persist in the infant for up to 18 months.", true, "Slide p.162."],
+        ["A positive antibody test in a young infant proves the infant is infected.", false, "It does not necessarily mean infection (p.162). Use virological tests."],
+        ["DNA PCR is the recommended test for children under 18 months.", true, "Slide p.163; ideally at birth, 6 weeks and 3-6 months; at least by 6-8 weeks."],
+        ["Two positive tests are the gold standard for diagnosis.", true, "Slide p.163; dried blood spot (DBS) can be used."],
+        ["P24 antigen is the most sensitive test in infants.", false, "It is the LEAST sensitive (p.163)."],
+      ]),
+      explain: "DNA PCR sensitivity is about 93% at 2 weeks and near 100% at 3-6 months (p.163). RNA PCR is less sensitive in infants and affected by ART. Past essay: 'Diagnosis of paediatric AIDS' (2k17-2k2.292)." },
+
+    { topic: "HIV", src: "p.162-163",
+      stem: "Diagnosis of HIV from 18 months and special situations:",
+      items: I([
+        ["From 18 months, antibody tests (rapid test or ELISA) are used, confirmed with a different antibody test.", true, "Slide p.162."],
+        ["A breastfed infant's final test should be at least 6 weeks after breastfeeding stops.", true, "Slide p.163."],
+        ["A severely immunosuppressed child may have a false-negative antibody test.", true, "Slide p.163."],
+        ["Dried blood spot PCR requires venepuncture of at least 5 ml.", false, "DBS needs a skin prick on filter paper, tiny volume, easy to store and transport (p.163-164)."],
+        ["A presumptive clinical diagnosis is preferred when tests are available.", false, "Not encouraged when antibody tests are easily available (p.163)."],
+      ]),
+      explain: "Presumptive severe HIV in an antibody-positive infant needs a Stage 4 condition or two of: oral thrush, severe pneumonia, severe sepsis (p.162). Western blot is not used for diagnosis in a 12-month-old (past question 2000.21)." },
+
+    { topic: "HIV", src: "p.163, 170-171; paed.714, 725, 2k17-2k2.425",
+      stem: "An infant of an HIV-positive mother has a negative DNA PCR at 6 weeks:",
+      items: I([
+        ["Breastfeeding should be stopped immediately.", false, "Safe infant feeding with maternal ART is the PMTCT plan (p.171); a stop of breastfeeding triggers a final test 6 weeks later."],
+        ["Co-trimoxazole prophylaxis continues until HIV infection is excluded.", true, "Slide p.170-171: from 6 weeks until diagnosis confirmed negative or 1 year."],
+        ["Further testing is needed later (repeat PCR, and an antibody test at 18 months).", true, "Slide p.171, 163."],
+        ["If the baby is breastfed, a final test is done at least 6 weeks after cessation of breastfeeding.", true, "Slide p.163."],
+        ["No further testing is needed.", false, "A negative result at 6 weeks does not exclude later infection through breastfeeding."],
+      ]),
+      explain: "Past questions varied the options (repeat PCR at 10 weeks, at 3 months, test at 4 weeks after weaning). Safe answer: continue prophylaxis, continue follow-up, final test per feeding history, antibody at 18 months." },
+
+    { topic: "HIV", src: "p.171; 2017.34",
+      stem: "Prevention of mother-to-child transmission (PMTCT):",
+      items: I([
+        ["HIV counselling and testing is the entry point of PMTCT.", true, "Slide p.171."],
+        ["ART is given to the woman during pregnancy and continued during breastfeeding.", true, "Slide p.171."],
+        ["Minimally invasive obstetric procedures and elective caesarean section reduce transmission.", true, "Slide p.171."],
+        ["The baby gets nevirapine, or nevirapine plus zidovudine, from birth for the first 6 weeks.", true, "Slide p.171."],
+        ["All infants of HIV-positive mothers take zidovudine for the first 6 months.", false, "Not the standard: infant prophylaxis is for the first 6 WEEKS (p.171). Past question 2017.34."],
+      ]),
+      explain: "PMTCT is also a past essay (2009.6, 2k17-2k2.129). Include the four prongs: prevent HIV in women, prevent unintended pregnancy in women with HIV, ART for pregnant women, care and support for the mother-infant pair. Co-trimoxazole from 6 weeks (p.171)." },
+
+    { topic: "HIV", src: "p.164-165",
+      stem: "Principles of antiretroviral therapy (ART):",
+      items: I([
+        ["The goal is maximal suppression of viral replication for as long as possible.", true, "Slide p.164."],
+        ["ART cures HIV infection if taken for years.", false, "ART will not cure HIV (p.164)."],
+        ["Zidovudine, lamivudine and abacavir are nucleoside reverse transcriptase inhibitors (NRTIs).", true, "Slide p.165."],
+        ["Nevirapine and efavirenz are non-nucleoside reverse transcriptase inhibitors.", true, "Slide p.165."],
+        ["Lopinavir/ritonavir is a protease inhibitor and dolutegravir an integrase inhibitor.", true, "Slide p.165."],
+      ]),
+      explain: "Initial evaluation (p.164): confirm HIV, clinical evaluation, immunisation status, anthropometry, neurodevelopment, CD4, TB screening, baseline labs, adherence plan. Treatment modalities: treat infections, prophylaxis, ART, nutrition, immunisation, psychological support, palliative care." },
+
+    { topic: "HIV", src: "p.166; 2017.28",
+      stem: "First-line ART and treatment response:",
+      items: I([
+        ["For adults and adolescents the preferred first-line is tenofovir + lamivudine + dolutegravir (TLD).", true, "Slide p.166 (2019 FMOH)."],
+        ["For a 9-month-old, the current preferred regimen is abacavir + lamivudine + lopinavir/ritonavir.", true, "Slide p.166 (pellets under 3 years)."],
+        ["ABC/3TC/DTG is the recommended regimen for a 9-month-old child.", false, "On the slide, ABC/3TC/DTG is for children aged 7-10 years who weigh more than 30 kg."],
+        ["Virological suppression is a viral load below 1,000 copies per ml.", true, "Slide p.166; undetectable (under 20 copies) by 6 months."],
+        ["Virologic failure is two consecutive viral loads above 1,000 copies per ml within 3 months, with adherence support, after at least 6 months on ART.", true, "Slide p.166."],
+      ]),
+      explain: "Past question: SK, 9 months, newly diagnosed, asymptomatic. Modern guidelines treat every infected child; the slide table gives the regimen for age. Continued breastfeeding with maternal ART is part of the PMTCT plan (p.171). Regimens change: check the current national guideline." },
+
+    { topic: "HIV", src: "p.166-168",
+      stem: "Switching, immune failure and monitoring on ART:",
+      items: I([
+        ["Switch to second line is recommended after at least 24 weeks of adherent therapy with clinical, immune or viral failure.", true, "Slide p.166-167."],
+        ["Immune failure: CD4 below 200 or below 10% in a child aged 2 to under 5 years; below 100 over 5 years.", true, "Slide p.167."],
+        ["Clinical failure is the appearance or reappearance of a WHO stage 3 or 4 event.", true, "Slide p.167."],
+        ["A child on ART is seen at 2 weeks, then monthly for 3 months, then every 3 months.", true, "Slide p.168."],
+        ["Viral load is monitored every 3 months.", false, "Every 6 months where available; CD4 every 3 months (p.168)."],
+      ]),
+      explain: "Visits include growth chart, examination, development, immunisation, nutrition, psychosocial review, adverse effects, and ARV dose review for every 10% weight gain (p.168). Baseline and 3-monthly FBC, LFT, electrolytes and creatinine, lipids and amylase." },
+
+    { topic: "HIV", src: "p.167",
+      stem: "Toxicity of antiretroviral drugs:",
+      items: I([
+        ["Zidovudine causes anaemia, neutropenia and thrombocytopenia.", true, "Slide p.167."],
+        ["Abacavir can cause a hypersensitivity syndrome (fever, rash, malaise, vomiting).", true, "Slide p.167."],
+        ["Stavudine causes peripheral neuropathy, pancreatitis, lipodystrophy and lactic acidosis.", true, "Slide p.167."],
+        ["Efavirenz causes transient CNS effects (abnormal dreams, dizziness) over the first 10-14 days and is teratogenic.", true, "Slide p.167."],
+        ["The main toxicity of nevirapine is peripheral neuropathy.", false, "Nevirapine: life-threatening rash (Stevens-Johnson, toxic epidermal necrolysis) and hepatotoxicity (p.167)."],
+      ]),
+      explain: "Tenofovir: reduced bone density and renal toxicity; lopinavir/ritonavir: diarrhoea, dyslipidaemia, hepatitis (p.167). Remember pairs: Z-anaemia, A-hypersensitivity, S-neuropathy, E-CNS, N-rash." },
+
+    { topic: "HIV", src: "p.168-169",
+      stem: "IRIS and adherence:",
+      items: I([
+        ["Immune reconstitution inflammatory syndrome (IRIS) is a paradoxical worsening after starting ART, in about 30% in the first weeks.", true, "Slide p.168."],
+        ["In TB IRIS, lymphadenopathy and infiltrates worsen while CD4 rises and viral load falls.", true, "Slide p.168."],
+        ["IRIS means ART has failed and must be stopped.", false, "It reflects immune recovery; manage the OI (steroids) and continue ART."],
+        ["Optimal adherence is 95% or more, meaning at most 3 missed doses a month of a twice-daily drug.", true, "Slide p.169."],
+        ["Poor adherence leads to resistance and cross-resistance within a drug class.", true, "Slide p.169."],
+      ]),
+      explain: "Adherence is a partnership between patient, family and health team: two-way discussion, fit doses to the family's life, disclosure support, child-specific strategy (p.164, 169)." },
+
+    { topic: "HIV", src: "p.169-170",
+      stem: "Opportunistic infections in HIV:",
+      items: I([
+        ["Pneumocystis pneumonia peaks at 3-6 months of age and has a high mortality.", true, "Slide p.169."],
+        ["PCP is treated with co-trimoxazole 15-20 mg/kg/day for 21 days, plus steroids in severe cases.", true, "Slide p.169."],
+        ["PCP prophylaxis is co-trimoxazole once daily from 6 weeks in all infants of HIV-positive mothers.", true, "Slide p.169-170; it also protects against toxoplasmosis and malaria."],
+        ["Oral thrush that fails gentian violet or nystatin can be treated with fluconazole.", true, "Slide p.169."],
+        ["Lymphoid interstitial pneumonitis occurs mainly in the first month of life.", false, "It occurs in children over 2 years, with clubbing, parotid enlargement and reticulonodular infiltrates; steroids help (p.170)."],
+      ]),
+      explain: "Prevention strategies for OIs: chemoprophylaxis and immunisation (p.169). Oesophageal candidiasis presents with dysphagia or retrosternal pain." },
+
+    { topic: "HIV", src: "p.154, 170",
+      stem: "HIV and TB together:",
+      items: I([
+        ["Every child with TB should have an HIV test.", true, "Slide p.154."],
+        ["Rifampicin lowers the concentration of most protease inhibitors by 80% or more and NNRTIs by 20-60%.", true, "Slide p.170."],
+        ["Start TB treatment first, and begin ART about 2 weeks later.", true, "Slide p.170."],
+        ["ART should be delayed until all TB treatment is finished.", false, "Start ART about 2 weeks after TB treatment (p.170); a past option gave this wrong choice (mixed-co.119)."],
+        ["For a child on lopinavir/ritonavir, rifabutin replaces rifampicin.", true, "Slide p.170; adolescents on dolutegravir get a double dose."],
+      ]),
+      explain: "A 3-year-old HIV-positive maternal orphan with lymphadenopathy and crepitations must be tested for TB (past questions). Beware IRIS after starting both. Also note that the child needs nutrition and psychosocial support, not institutionalisation as a rule." },
+
+    { topic: "HIV", src: "p.170-171; 2008.15, 2012.16, 2001.1",
+      stem: "Care and psychosocial aspects of paediatric HIV:",
+      items: I([
+        ["Poor nutrition in HIV is caused by difficulty feeding (thrush), lack of food, drug side effects, infections, diarrhoea and illness in the caregiver.", true, "Slide p.170."],
+        ["Nutritional support includes breastfeeding, vitamin, iron and folate supplements; ready-to-use foods are useful.", true, "Slide p.170."],
+        ["Psychological support starts with an assessment of family support and coping.", true, "Slide p.170."],
+        ["Orphaning is a risk, especially when a parent is also ill.", true, "Slide p.170."],
+        ["A maternal orphan with HIV should routinely be placed in an institution.", false, "Past option (2k23.155e): family- and community-based care is preferred; institutional care is a last resort."],
+      ]),
+      explain: "Social paediatrics essay (2001.1, 2008.15, 2012.16): discuss stigma, disclosure, fathers who refuse testing or deny paternity, polygamous household, orphan care, cost of ART, school, adherence, and community effects." },
+
+    { topic: "HIV", src: "Outside the slides; paed.677, 731, 732, 2014.4",
+      stem: "HIV-associated nephropathy (HIVAN) in children:",
+      items: I([
+        ["It may manifest before AIDS develops.", true, "Past question option; HIVAN can present early."],
+        ["It shows a striking predilection for black children.", true, "Past question option; strong association with African ancestry (APOL1)."],
+        ["Proteinuria is the earliest and most consistent finding.", true, "Typically nephrotic-range."],
+        ["The kidneys are small and shrunken early in the disease.", false, "Kidneys are typically ENLARGED and echogenic on ultrasound."],
+        ["ART is part of treatment.", true, "ART reduces progression; ACE inhibitors and steroids are adjuncts."],
+      ]),
+      explain: "Nothing about HIVAN is in the deck. Keep the mini-picture: black child, heavy proteinuria or nephrotic syndrome, large bright kidneys, collapsing FSGS on biopsy." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · True/False (5 statements per stem, −½ per wrong) · Infectious diseases 5: malaria in children.
+// Slide source: Malaria in children p.139-150. Items marked outside the slide are standard teaching.
+// Past questions this follows: paed.103, 678, 679, 687, 689, 702, 703, 706, 710, 716, 2017.32, paed.16, 2k17-2k2.273-274, 316, paed.15.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-id-5",
+  subject: "Paediatrics",
+  group: "Infectious diseases",
+  type: "tf",
+  title: "Paediatrics T/F · Infectious diseases 5: malaria (9 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "Malaria", src: "p.139, 142",
+      stem: "The parasite, its cycle and the fevers:",
+      items: I([
+        ["P. falciparum is the most fatal species.", true, "Slide p.139."],
+        ["P. vivax is the most fatal species.", false, "P. vivax is the most COMMON worldwide; falciparum is the most fatal (p.139)."],
+        ["P. malariae has a 72-hour periodicity, while P. vivax and P. ovale have 48-hour cycles.", true, "Slide p.142."],
+        ["P. ovale has a 96-hour cycle.", false, "48 hours (p.142). Past paper 687 had the periodicities as options: falciparum is a continuous fever, not 24 hours."],
+        ["Clinical illness is caused by the erythrocytic stage; sporozoites and the liver stage cause no disease.", true, "Slide p.142: symptoms come with rupture of schizont-containing red cells."],
+      ]),
+      explain: "Five human species: falciparum, vivax, ovale, malariae and knowlesi (zoonotic, SE Asia) - p.139. Fever paroxysms are due to synchronous lysis of red cells (p.142); symptoms are cytokine-driven." },
+
+    { topic: "Malaria", src: "p.142, 146-147",
+      stem: "Transmission, endemicity and diagnosis:",
+      items: I([
+        ["Malaria is transmitted by the bite of the female Anopheles mosquito.", true, "Slide p.142."],
+        ["In a holoendemic area the spleen and parasite rates are constantly above 70%.", true, "Slide p.142 (hypoendemic 1-10%)."],
+        ["The thick film identifies the species and the thin film measures parasite density.", false, "Reversed: THICK film = degree of parasitisation; THIN film = species (p.146)."],
+        ["A single negative blood film excludes malaria.", false, "Repeat smears may be needed (p.146)."],
+        ["Rapid diagnostic tests detect parasite antigen.", true, "Slide p.146-147: also PCR and antibody tests."],
+      ]),
+      explain: "Giemsa-stained smear is the standard; falciparum smears are best taken after a febrile paroxysm; parasite density is counted against an assumed 8000 WBC/µl (p.146). Past picture station: malarial parasite blood film (paed.81, 215)." },
+
+    { topic: "Malaria", src: "p.143-144",
+      stem: "WHO features of severe malaria:",
+      items: I([
+        ["Cerebral malaria: unrousable coma persisting at least 30 minutes after a convulsion, with falciparum parasitaemia and no other cause.", true, "Slide p.143-144 (GCS under 11 or Blantyre under 3)."],
+        ["Severe anaemia is haemoglobin below 5 g/dl (haematocrit below 15%).", true, "Slide p.143."],
+        ["Hypoglycaemia is a whole-blood glucose below 2.2 mmol/L.", true, "Slide p.143."],
+        ["Hyperpyrexia means a core temperature above 38.5 degrees Celsius.", false, "Above 40 degrees (p.144). Paracetamol is given above 38.5 (p.148)."],
+        ["Acidosis is arterial pH below 7.25 or bicarbonate below 15 mmol/L; repeated convulsions are 3 or more in 24 hours.", true, "Slide p.143-144."],
+      ]),
+      explain: "Also on the list: renal failure, pulmonary oedema, circulatory collapse (algid malaria), abnormal bleeding/DIC, impaired consciousness, prostration, hyperparasitaemia (over 5% or 250,000/µl), jaundice. Past case: parasite count 150,000/µl in a non-immune child: acidosis, oliguria, pulmonary oedema." },
+
+    { topic: "Malaria", src: "p.144-146",
+      stem: "Pathogenesis and risk factors for severe malaria:",
+      items: I([
+        ["Cytoadherence, rosetting and sequestration of infected red cells in deep vessels block microcirculation.", true, "Slide p.144-145."],
+        ["Severe malaria is caused only by P. falciparum.", true, "Slide p.146."],
+        ["Children under 5 years and primigravidae are most at risk.", true, "Slide p.145-146."],
+        ["Sickle cell trait and haemoglobin F give some protection against severe malaria.", true, "Slide p.146."],
+        ["Adults and older children in endemic areas are more susceptible than young children.", false, "They are LESS susceptible, because of acquired immunity (p.146)."],
+      ]),
+      explain: "Other risk factors: immunosuppression, splenectomy, non-immune status, pre-existing organ failure, displaced persons (p.145-146). Genetic traits that protect: sickle trait, HbF, G6PD deficiency, ovalocytosis (past paper 703). Duffy-negative people can be infected by vivax (p.146)." },
+
+    { topic: "Malaria", src: "p.145, 148; paed.679, 716",
+      stem: "Malaria and anaemia:",
+      items: I([
+        ["Malaria-associated anaemia is multifactorial: haemolysis, ineffective erythropoiesis, phagocytosis of uninfected red cells.", true, "Slide p.145."],
+        ["Its severity tends to relate to the degree of parasitaemia.", true, "Slide p.145."],
+        ["Severe anaemia with heart failure needs urgent blood transfusion, packed cells 10 ml/kg or whole blood with frusemide.", true, "Slide p.148."],
+        ["Donor blood should be screened for HIV and hepatitis B and C.", true, "Slide p.148."],
+        ["Iron deficiency alone explains malarial anaemia.", false, "It is multifactorial; malaria is nonetheless the commonest cause of severe anaemia in Nigerian children (past paper 679)."],
+      ]),
+      explain: "Past scenario: 15-month-old with PCV 10%: malaria is the likely cause; sickle cell disease is the other major one (genotype should be known but transfusion must not be delayed); give packed cells, not a large volume of whole blood." },
+
+    { topic: "Malaria", src: "p.147; paed.103, 706",
+      stem: "Treatment of uncomplicated malaria:",
+      items: I([
+        ["Artemisinin-based combination therapy (ACT) is recommended.", true, "Slide p.147."],
+        ["Artemether-lumefantrine (1.5/9 mg/kg twice daily for 3 days) is used in Nigeria.", true, "Slide p.147."],
+        ["Artesunate plus amodiaquine is an accepted ACT.", true, "Slide p.147 (artesunate 4 mg/kg once daily for 3 days)."],
+        ["Chloroquine is the first-line drug.", false, "ACT is first-line (p.147); chloroquine resistance made it obsolete. Past paper 103c."],
+        ["Treatment can start without any confirmatory test in a child with poor response.", false, "Confirm that the child truly has malaria, check dosing and intake before changing to another ACT (p.147)."],
+      ]),
+      explain: "Past question: chemotherapy against malaria in Nigeria should NOT be given to everyone under 5 or routinely with kwashiorkor treatment; use targeted chemoprevention and test first. Seasonal chemoprevention exists in some northern states (outside the slide)." },
+
+    { topic: "Malaria", src: "p.147-148; paed.689, 702",
+      stem: "Treatment of severe malaria:",
+      items: I([
+        ["Parenteral artesunate is the treatment of choice: 2.4 mg/kg (3 mg/kg if under 20 kg) IV at 0, 12 and 24 hours, then daily.", true, "Slide p.148."],
+        ["After the child regains consciousness, a full 3-day ACT course follows.", true, "Slide p.148."],
+        ["Quinine is the drug of first choice.", false, "Artesunate is; quinine and IM artemether are alternatives (p.148)."],
+        ["Hypoglycaemia is corrected with 0.5 ml/kg of 50% dextrose diluted to 10-15%.", true, "Slide p.147."],
+        ["Dexamethasone and mannitol improve survival in cerebral malaria.", false, "Steroids are harmful; mannitol is not proven (past paper options 689e, 702e)."],
+      ]),
+      explain: "Coma: airway, side-lying, NGT, IV line, correct hypoglycaemia. Convulsions: rectal diazepam 0.5 mg/kg, IM paraldehyde 0.1 ml/kg, then phenobarbitone 10-15 mg/kg (p.147). Hypoglycaemia is an index of poor prognosis (past paper)." },
+
+    { topic: "Malaria", src: "p.148-149",
+      stem: "Supportive care and monitoring in severe malaria:",
+      items: I([
+        ["Shock or severe dehydration: 20-30 ml/kg of normal saline, reassess within 30 minutes.", true, "Slide p.148."],
+        ["Fever above 38.5 degrees is treated with paracetamol, tepid sponging and fanning.", true, "Slide p.148."],
+        ["Pulmonary oedema: prop up, give oxygen and furosemide 2-4 mg/kg IV, and exclude anaemia as the cause of heart failure.", true, "Slide p.149."],
+        ["Monitor blood glucose, haemoglobin and daily parasitaemia; vital signs at least 6-hourly.", true, "Slide p.149."],
+        ["Hypoglycaemia is rare in cerebral malaria.", false, "It is common and is an index of poor prognosis (p.143, past paper 689b)."],
+      ]),
+      explain: "Renal failure: rehydrate, furosemide challenge, catheter; refer for dialysis if no urine in 24 hours. Bleeding: fresh whole blood. Recovery: assess vision, hearing and neurological sequelae (p.149)." },
+
+    { topic: "Malaria", src: "p.149-150; paed.678, 710",
+      stem: "Complications, prevention and clinical clues:",
+      items: I([
+        ["Hyperpyrexia, convulsions, diarrhoea and metabolic acidosis are recognised complications of acute malaria in infancy.", true, "Standard teaching (past paper 678)."],
+        ["Cerebral malaria is one of the commonest causes of coma in children in Ibadan.", true, "Past paper 710 (with meningitis and tetanus)."],
+        ["Insecticide-treated nets and mosquito screening are key preventive measures.", true, "Slide p.149."],
+        ["Community health workers can help follow up patients.", true, "Slide p.150."],
+        ["A fever in a Nigerian child returning from Britain after 3 months rules out malaria because he was born abroad.", false, "Non-immune: malaria (and meningitis) must still be considered; a positive film does not exclude meningitis (past question paed.15)."],
+      ]),
+      explain: "Health education: early diagnosis and treatment, adequate doses, ITNs, community mobilisation (p.149-150). In a convulsing febrile child, consider cerebral malaria, meningitis, hypoglycaemia and simple febrile convulsion together." },
+  ]
+}]);
+})();
+
+</script>
+<script>
 (function(){
 "use strict";
 const $=s=>document.querySelector(s), app=$("#app"), timerEl=$("#timer");
@@ -3610,8 +5068,8 @@ banks.forEach(b=>{const m=PM[b.id]; if(m&&b.questions) b.questions.forEach((q,i)
 const GROUPS=["Menstrual disorders & DUB","Amenorrhoea & PCOS","Abortion","Ectopic pregnancy","Antepartum haemorrhage","Hypertension in pregnancy","Labour & the partograph","Family planning","Infertility","Fibroids & endometriosis","Anaemia in pregnancy","Postpartum haemorrhage & oxytocics"];
 const COMING=["Antenatal care & booking","Gynaecological cancers","Genital infections & STIs","Prolapse & fistulae","Instruments & imaging (picture test)"];
 let curGroup=null;
-const PGROUPS=["Paediatric endocrinology"];
-const PCOMING=["Neonatology","Nutrition & malnutrition","Infectious diseases","Haemato-oncology","Cardiology","Nephrology","Neurology","Gastroenterology"];
+const PGROUPS=["Paediatric endocrinology","Infectious diseases"];
+const PCOMING=["Neonatology","Nutrition & malnutrition","Haemato-oncology","Cardiology","Nephrology","Neurology","Gastroenterology"];
 const TYPE_LABEL={cards:"Flashcards",mcq:"Multiple choice",essay:"Essays",fillgap:"Fill in the gap",tf:"True / False (5 stems each, negative marking)",pics:"Picture test (5 True / False per picture)"};
 const TYPE_ORDER=["cards","mcq","tf","pics","fillgap","essay"];
 const countOf=b=>b.type==="cards"?b.cards.length:b.type==="essay"?b.essays.length:b.questions.length;
