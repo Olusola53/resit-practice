@@ -2487,6 +2487,53 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Flashcards · Pulmonology. Source: Paediatrics CS edited.pdf p.282-316 (asthma, croup, bronchiolitis, ARI, pneumonia).
+// extra:true = beyond the slides (standard teaching). Mastery = 2 clean recalls in a row.
+(function(){
+const C=(topic,src,q,a,connect,extra)=>Object.assign({topic,src,q,a,connect},extra?{extra:true}:{});
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-cards-pulm",
+  subject: "Paediatrics",
+  group: "Pulmonology",
+  type: "cards",
+  title: "Paediatrics Flashcards · Pulmonology",
+  cards: [
+    C("Pneumonia","p.306","Give the preferred clinical definition of pneumonia.","Fever, respiratory symptoms and evidence of parenchymal involvement, either on examination or as infiltrates on chest X-ray. The histological definition (acute inflammation of lung parenchyma by micro-organisms) is the gold standard but impractical.","Community-acquired = acquired outside hospital or developing within 48 hours of admission."),
+    C("Pneumonia","p.307-308","How big is the burden of pneumonia in under-5s?","Leading cause of death outside the neonatal period; about 1.3 million deaths worldwide in 2011, 70% in Africa and South Asia. Nigeria: about 17% of under-5 deaths, 146,000 in 2010, about 400 children a day.","Opening line for any pneumonia essay or social paediatrics question."),
+    C("Pneumonia","p.308","List risk factors for pneumonia in children.","Household air pollution, age under 5, moderate-severe malnutrition, no exclusive breastfeeding in 6 months, low birth weight, no measles vaccine, HIV, sickle cell disease, heart disease, asthma, overcrowding (family >6).","The same list is your 'prevention' section: clean cooking fuel, breastfeeding, immunisation (measles, PCV, Hib), nutrition."),
+    C("Pneumonia","p.308-309","What organisms cause pneumonia by age group?","All ages: S. pneumoniae (30-50%), Hib (10-30%), RSV (main virus). Neonates: Gram-negative enterics (Klebsiella), group B strep, S. aureus. School age: Mycoplasma. HIV: Pneumocystis jirovecii, TB. Nigerian studies: Klebsiella, S. aureus, S. pneumoniae.","Treat as bacterial until proved otherwise (p.309)."),
+    C("Pneumonia","p.309","What respiratory rates define fast breathing?","50 or more per minute at 2-11 months; 40 or more at 1-5 years; 60 or more under 2 months. Count for a full minute in a calm or sleeping child.","Fast breathing is the most sensitive sign; RR is the first step in the case-management chain."),
+    C("Pneumonia","p.306, 313","Give the WHO classification of pneumonia severity.","Pneumonia: fast breathing with or without lower chest indrawing. Severe pneumonia: plus cyanosis (SpO2 <90%), grunting, very severe indrawing, convulsion, inability to feed, or reduced consciousness.","Severity decides home versus admission and oral versus injectable antibiotics."),
+    C("Pneumonia","p.307","Why does lower chest wall indrawing occur and in which conditions?","Fall in intrathoracic pressure with airway obstruction: asthma, bronchiolitis, laryngotracheobronchitis, and pneumonia.","Do not diagnose pneumonia from indrawing alone. Look for fever and crepitations."),
+    C("Pneumonia","p.311-312","Compare chest signs of lobar pneumonia, effusion and pneumothorax.","Lobar: dull, bronchial breathing, increased fremitus, crackles, no shift. Effusion: stony dull, absent breath sounds, reduced fremitus, shift away. Pneumothorax: hyper-resonant, absent breath sounds, shift away if tension. Collapse: dull, shift towards.","Anchor on percussion. Mediastinum moves away from fluid and air, towards collapse."),
+    C("Pneumonia","p.313","List the complications of pneumonia.","Parapneumonic effusion or empyema, heart failure, sepsis, pneumatocoele, pneumothorax, lung abscess, bronchiectasis, respiratory failure, and metastatic foci: meningitis, septic arthritis, osteomyelitis.","Complication is an admission criterion and a reason for a chest X-ray."),
+    C("Pneumonia","p.313-314","Who should be admitted with pneumonia, and who needs investigations?","Admit: under 2 months, severe pneumonia, complications, cannot feed. Chest X-ray only for admitted or suspected complications. FBC for severe/admitted. Blood culture for sick admitted children. No routine X-ray or FBC for outpatients.","Saves cost and avoids unnecessary radiation."),
+    C("Pneumonia","Standard teaching","What antibiotics are used for pneumonia?","Fast-breathing pneumonia: oral amoxicillin (dispersible tablets, 3-5 days). Severe: IV/IM ampicillin or benzylpenicillin plus gentamicin; ceftriaxone if poor response; add cloxacillin if staphylococcal disease is suspected. Doses per hospital protocol.","The deck defers antibiotics to 'a second file'. Check your unit protocol.",true),
+    C("Pneumonia","p.314-316","What are the indications and routes for oxygen therapy?","Central cyanosis, severe lower chest indrawing, SpO2 <91%; also restlessness, tachycardia, tachypnoea 20 above the cut-off. Nasal prongs/catheter 0.5-1 L/min (0-2 months), 2-3 L/min (3 months-5 years), max 4. Prongs ~30-35%, nasopharyngeal catheter 45-60%.","Pulse oximetry is the way to confirm adequacy. An oxygen concentrator helps if cylinders are costly."),
+    C("Pneumonia","p.314-315","Which drugs should be avoided in pneumonia?","Cough syrups containing antihistamines or opioids (codeine, hydrocodone): little benefit, may be toxic.","A favourite 'false' option in T/F stems."),
+    C("Pneumonia","p.315","When should a child with pneumonia be referred or reviewed by a specialist; what is the discharge package?","Refer if no improvement or worsening at 48 hours, ventilation needed, SpO2 persistently <91%, low BP or inotropes, altered mental status. At discharge: review in 2 days, complete immunisation (PCV, Hib), return if fast breathing, feed more for 2 weeks.","Ties into social paediatrics: prevention and caregiver education."),
+    C("Asthma","p.282","Define asthma and hyper-responsiveness.","GINA 2015: a heterogeneous disease usually with chronic airway inflammation, defined by respiratory symptoms (wheeze, breathlessness, chest tightness, cough) that vary over time and intensity, with variable expiratory airflow limitation. Hyper-responsiveness: airways constrict too easily and too much. Atopy: ability to make IgE to common allergens.","Variability is the key idea."),
+    C("Asthma","p.283-284","State key epidemiology of childhood asthma.","Commoner in industrialised, urban and affluent settings; 60% start before age 3, 80% before 5; male : female 1.3 : 1. Risk: two asthmatic parents 6x, one parent 3x.","Heredity plus environment."),
+    C("Asthma","p.284","Differentiate inducers from inciters, and name the main triggers.","Inducers start asthma (allergens, pollution, viral infections, formula feeding). Inciters provoke attacks: viral URI (most important), aeroallergens, pollution, exercise, irritant fumes, emotion, cold dry air.","Trigger control is part of long-term management."),
+    C("Asthma","p.285-286","Outline the allergic cascade.","Sensitisation (Th2 and B cells make allergen-specific IgE bound to mast cells); early phase (mediator release: histamine, leukotrienes: oedema, bronchospasm); late phase (eosinophil and neutrophil influx); airway remodelling (thick wall, smooth muscle).","Early = bronchodilator-responsive; late = steroid-responsive."),
+    C("Asthma","p.286-287","What features suggest an alternative diagnosis to asthma?","Failure to thrive, neonatal onset, vomiting with symptoms, continuous wheeze, no response to controllers, no link to triggers, focal lung or cardiac signs, clubbing, hypoxaemia outside viral illness.","Differentials: GERD, foreign body, tracheomalacia, TB, congenital heart disease, cystic fibrosis, PCD, vascular ring, BPD, immune deficiency."),
+    C("Asthma","p.286-287","How is asthma diagnosed in a child?","Aged 5 or under: clinical, 3 or more wheeze episodes, airway obstruction signs, improvement with bronchodilator, atopy history. Aged 6 or over: same plus PEF rise >15% and FEV1/FVC <80%. CXR is not diagnostic.","Spirometry needs cooperation (usually >5 years)."),
+    C("Asthma","p.288","What is RTOB?","Resuscitation (ABC), Triage (life-threatening or not), Oxygen (if SpO2 <95%), Bronchodilators (salbutamol, repeated).","The first minutes of any acute attack."),
+    C("Asthma","p.288, 291-292","Outline drug management of acute severe asthma.","Salbutamol 4-6 puffs (<5 y) or 6-10 puffs (>5 y) by spacer, repeated at 20 and 40 minutes; oxygen; prednisolone 1-2 mg/kg (max 40-60 mg) or IV hydrocortisone; ipratropium 0.25 mg neb every 20-30 min x3; then IV MgSO4 50 mg/kg (max 2 g) over 20 min; IV salbutamol 15 mcg/kg; aminophylline 5 mg/kg over 20 min then 0.5-1 mg/kg/h in ICU.","Follow-up: observe 24 hours, 3 days of medicine, inhaler technique, PEF thrice daily, written plan."),
+    C("Asthma","p.289-290","Give the GINA steps of long-term therapy.","Step 1 SABA prn. Step 2 low ICS (or LTRA). Step 3 medium ICS (or low ICS + LTRA). Step 4 medium/high ICS + LABA. Step 5 add anti-IgE or low-dose oral steroid.","Check technique, adherence, triggers and co-morbidities (rhinitis, GERD, obesity, sleep apnoea) before stepping up."),
+    C("Croup","p.293","Describe viral croup.","Parainfluenza commonest; age 1-3 years; coryzal prodrome, hoarseness, inspiratory/biphasic stridor, barking cough worse at night; lasts 2-5 days. Danger signs: reduced air entry, expiratory stridor, rising heart rate, pulsus paradoxus, severe indrawing, hypotonia.","Differentials: epiglottitis, diphtheria, retropharyngeal abscess, foreign body, bacterial tracheitis, laryngomalacia."),
+    C("Croup","p.293-294","How is croup managed by grade?","Grade 1: supportive. Grade 2+: nebulised adrenaline (1 ml 1:1000 + 3 ml saline, O2 8-10 L/min, every 15-30 min) plus dexamethasone 0.6 mg/kg IM/IV or prednisolone 1 mg/kg. Grade 3: no improvement in 1 hour, call anaesthetist. Grade 4: intubate. Hydration; avoid steroids after measles or herpes.","Never examine the throat if epiglottitis is possible."),
+    C("Bronchiolitis","p.295-296","Describe the epidemiology and presentation of bronchiolitis.","Under 2 years, peak 2-6 months, rainy season, RSV about 70%. Coryza and low fever for 2-5 days, then cough, dyspnoea, wheeze, feeding difficulty, crepitations, fine wheeze. CXR: hyperinflation, flat diaphragm, some atelectasis or lobar infiltrates.","Most severe under 6 months."),
+    C("Bronchiolitis","p.297-298","How is bronchiolitis managed?","Oxygen, IV/NG fluids, trial of salbutamol (0.15 mg/kg), nebulised epinephrine is better; no antibiotics, ribavirin or ipratropium. Admit if SpO2 <92%, <6 months, poor hydration, RR >70, cardiorespiratory disease. PICU: desaturation on 40% O2, cyanosis, apnoea or acidosis. Prevention: hand washing; palivizumab for high-risk infants.","Most recover in 5-7 days; cough may last 2 weeks."),
+    C("URTI","p.299-300","Summarise the common cold.","Rhinovirus about 50%. Incubation 1-3 days; 6-12 episodes a year; lasts about 7 days; sneezing, rhinorrhoea, blocked nose. Treat symptomatically. Complications: AOM, sinusitis, tonsillitis, croup, bronchiolitis, pneumonia.","Differentials: allergic rhinitis, nasal diphtheria, foreign body, pertussis catarrhal stage, measles prodrome."),
+    C("URTI","p.300-302, 305","Summarise acute otitis media.","Common in infants (short, wide, straight eustachian tube). Otalgia, fever, irritability; otoscopy: red, immobile, bulging drum; perforation gives otorrhoea. Organisms: S. pneumoniae, H. influenzae, Moraxella; neonates S. aureus, Pseudomonas, E. coli. Treatment: amoxicillin (high dose), co-amoxiclav second line; neonates parenteral ampicillin/sulbactam + amikacin; aural toilet, analgesia.","Complications: hearing loss, mastoiditis, meningitis, brain abscess, facial palsy."),
+    C("URTI","p.302-304","Summarise streptococcal tonsillopharyngitis.","Group A beta-haemolytic strep; sudden fever, sore throat, exudative tonsils, tender nodes, no cough. Complications: otitis media, peritonsillar abscess; later rheumatic fever and glomerulonephritis. Treat 10 days of penicillin V or amoxicillin (or single IM benzathine penicillin; erythromycin/azithromycin if allergic).","Treatment prevents rheumatic fever."),
+  ]
+}]);
+})();
+
+</script>
+<script>
 // Paediatrics · Essays · Endocrinology. Two long "leading to a diagnosis" essays and seven short essays.
 // Points flagged x:true go beyond the slides (the deck covers growth, puberty, CAH, Cushing and the pituitary, p.35-56; it has no
 // lecture on diabetes, thyroid disease, hypoglycaemia or rickets, so those essays are standard teaching shaped by past papers:
@@ -3197,6 +3244,332 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Essays · Pulmonology. Two long essays (one leading to a diagnosis, one social paediatrics) and six short.
+// Source: Paediatrics CS edited.pdf p.282-316. Points flagged x:true go beyond the slides (e.g. pneumonia antibiotic doses, which the
+// deck leaves to a "second file"; WHO under-2-month cut-off; epiglottitis antibiotics).
+(function(){
+const P=(t,x)=>x?{t,x:true}:{t};
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-essay-pulm",
+  subject: "Paediatrics",
+  group: "Pulmonology",
+  type: "essay",
+  title: "Paediatrics Essays · Pulmonology (2 long, 6 short)",
+  essays: [
+    {
+      kind: "Long essay (20 marks) · leading to a diagnosis", marks: 20, topic: "Pneumonia in a toddler", src: "p.306-316",
+      prompt: "A 2-year-old boy is brought with 3 days of fever, cough and fast breathing. He is refusing feeds. On examination his respiratory rate is 56/min, he has lower chest wall indrawing, SpO2 is 89% in air, and there are crackles with bronchial breathing at the right base. Discuss your diagnosis and management.",
+      tip: "Name the diagnosis with its severity class, give the reasoning from the findings, list the differentials, then treat in order: oxygen, antibiotics, fluids, monitoring, complications, discharge and prevention.",
+      sections: [
+        { h: "Diagnosis and reasoning", pts: [
+          P("Severe community-acquired pneumonia (probably lobar, right lower zone). Cough, fever and respiratory symptoms with signs of parenchymal involvement (p.306)."),
+          P("Fast breathing: 56/min is above the 40/min cut-off for 1-5 years (p.309). Lower chest indrawing (p.307)."),
+          P("Severe class because SpO2 is below 90% and he cannot feed (p.306, 313)."),
+          P("Bronchial breathing with crackles at the base indicates consolidation (p.310-311)."),
+        ]},
+        { h: "Differential diagnosis", pts: [
+          P("Bronchial asthma and bronchiolitis (lower chest indrawing, wheeze) (p.312)."),
+          P("Malaria with metabolic acidosis, foreign body aspiration, pulmonary TB, congenital heart disease, severe URTI (p.312)."),
+          P("Look for HIV, malnutrition and sickle cell disease as host factors (p.308).", false),
+        ]},
+        { h: "Likely organisms", pts: [
+          P("S. pneumoniae (30-50%) and Hib (10-30%) worldwide; RSV commonest virus (p.308)."),
+          P("In Nigerian series also S. aureus and Klebsiella (p.308); treated as bacterial until proved otherwise (p.309)."),
+        ]},
+        { h: "Immediate management", pts: [
+          P("Admit: severe pneumonia, cannot feed (p.313-314)."),
+          P("Oxygen by nasal prongs 2-3 L/min for 3 months to 5 years, titrated to SpO2 above 90-91% (p.314-315)."),
+          P("Clear the airway by gentle suction; keep child semi-upright; nursing observations at least 3-hourly; doctor review twice daily (p.314)."),
+          P("IV access; start IV/IM ampicillin or benzylpenicillin plus gentamicin (or ceftriaxone per local protocol); add cloxacillin if staphylococcal pneumonia is suspected (the deck does not give the regimen).", true),
+        ]},
+        { h: "Investigations", pts: [
+          P("Chest X-ray (admitted child; look for effusion, pneumatocoele, consolidation), full blood count and blood culture (p.314)."),
+          P("Pulse oximetry; malaria film or RDT in an endemic area; HIV test and TB work-up if indicated.", true),
+        ]},
+        { h: "Supportive care", pts: [
+          P("Small frequent feeds, NG feeding if needed; IV isotonic fluid with at least 5% glucose if not tolerated (p.314)."),
+          P("Paracetamol for fever of 39 °C or more; salbutamol if widespread rhonchi (p.314)."),
+          P("Avoid antihistamine and opioid cough syrups (p.314-315)."),
+        ]},
+        { h: "Complications to watch for", pts: [
+          P("Parapneumonic effusion and empyema, pneumothorax, pneumatocoele, lung abscess, heart failure, sepsis, meningitis, osteomyelitis and septic arthritis (p.313)."),
+          P("Refer for specialist review if no improvement at 48 hours, SpO2 persistently below 91%, hypotension, need for ventilation or altered mental status (p.315)."),
+        ]},
+        { h: "Discharge and prevention", pts: [
+          P("Discharge when fast breathing, distress and fever have resolved, he feeds and tolerates oral drugs (p.314)."),
+          P("Review in 2 days; complete immunisation including PCV and Hib; feed more often for 2 weeks; return if fast breathing (p.315)."),
+          P("Nutrition, exclusive breastfeeding, clean cooking fuel, avoid overcrowding and smoke, measles vaccine (p.308)."),
+        ]},
+      ]
+    },
+    {
+      kind: "Long essay (20 marks) · social paediatrics", marks: 20, topic: "Childhood pneumonia: burden and prevention", src: "p.306-309, 312-315",
+      prompt: "Pneumonia is the leading infectious cause of death in under-5 children in Nigeria. Discuss the burden of the disease, the risk factors, and the measures for its prevention and control.",
+      tip: "Open with numbers (Nigeria 17%, 146,000 in 2010), then risk factors, then a structured Protect / Prevent / Treat plan (GAPPD), and close with community case management and the role of immunisation.",
+      sections: [
+        { h: "Burden", pts: [
+          P("Pneumonia is the leading infectious cause of death in under-5s outside the neonatal period; 1.3 million deaths worldwide in 2011, about 70% in Africa and South Asia (p.306-307)."),
+          P("Nigeria: about 17% of under-5 deaths, 146,000 in 2010, about 400 children a day; second highest globally (p.307-308)."),
+          P("Major reason: incomplete access to health care, especially rural (p.307)."),
+        ]},
+        { h: "Risk factors", pts: [
+          P("Household air pollution, overcrowding, age below 5, low birth weight, moderate to severe malnutrition (p.308)."),
+          P("No exclusive breastfeeding for 6 months, no measles vaccination in the first 12 months (p.308)."),
+          P("Background disease: HIV, sickle cell disease, heart disease, asthma (p.308)."),
+        ]},
+        { h: "Protect, Prevent, Treat (GAPPD)", pts: [
+          P("The Integrated Global Action Plan for Pneumonia and Diarrhoea (2013) has three parts: protect, prevent and treat (p.312)."),
+          P("Protect: exclusive breastfeeding to 6 months, complementary feeding, vitamin A, avoid smoke and crowding.", true),
+          P("Prevent: vaccines (Hib, pneumococcal conjugate, measles, pertussis), hand washing, HIV prevention and cotrimoxazole prophylaxis, clean cooking fuel (p.315 for vaccines at discharge).", true),
+          P("Treat: community case management (count breaths, chest indrawing), oral amoxicillin at the primary level, referral of severe cases, oxygen availability (p.313-316)."),
+        ]},
+        { h: "Health system and community", pts: [
+          P("Train community health workers to count respiratory rate and recognise danger signs; ensure referral transport and supply of antibiotics and oxygen (including oxygen concentrators and pulse oximetry, p.316).", true),
+          P("Caregiver education: bring the child promptly with cough and fast breathing; complete immunisation (p.315)."),
+          P("Domesticate national CAP management guidelines (p.309)."),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Bronchial asthma: acute attack", src: "p.288-292",
+      prompt: "Write short notes on the management of an acute severe attack of asthma in a 6-year-old.",
+      tip: "RTOB, triage, doses, adjuncts, and discharge plan.",
+      sections: [
+        { h: "Assessment", pts: [
+          P("Resuscitation, triage, oxygen, bronchodilators (RTOB) (p.288)."),
+          P("Life-threatening: cyanosis, silent chest, poor effort, exhaustion, drowsiness (p.289). Severe: too breathless to talk or feed, tachycardia, retractions."),
+        ]},
+        { h: "First-line treatment", pts: [
+          P("Oxygen to keep SpO2 at least 95% (p.288)."),
+          P("Salbutamol 6-10 puffs by spacer (age over 5) or 2.5-5 mg nebulised, repeated at 20 and 40 minutes (p.288, 290)."),
+          P("Oral prednisolone 1-2 mg/kg, maximum 40-60 mg; IV dexamethasone 0.6 mg/kg or IV hydrocortisone as alternatives (p.288, 291). The slide prints hydrocortisone as 40 mg/kg, which looks like a typo: the usual dose is 4 mg/kg.", true),
+          P("Ipratropium bromide 0.25 mg nebulised 20-30 minutely x3 then 4-6 hourly (p.292)."),
+        ]},
+        { h: "Refractory or life-threatening", pts: [
+          P("Consult ICU; IV magnesium sulphate 50 mg/kg (max 2 g) over 20 minutes; IV salbutamol 15 mcg/kg over 10 minutes; IV aminophylline 5 mg/kg over 20 minutes then 0.5-1 mg/kg/h; prepare to intubate (p.288, 292)."),
+        ]},
+        { h: "Follow-up and discharge", pts: [
+          P("Observe at least 24 hours; discharge with at least 3 days of medication; check inhaler and spacer technique; PEFR 3 times daily until review within 3 days; written action plan; identify and avoid triggers (p.292)."),
+          P("Start or step up controller therapy (ICS) (p.289-290)."),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Bronchial asthma: classification and long-term control", src: "p.289-290",
+      prompt: "Classify childhood asthma by severity and outline long-term control.",
+      tip: "Four classes with numbers, then the five GINA steps, goals and non-drug measures.",
+      sections: [
+        { h: "Classification", pts: [
+          P("Intermittent: symptoms 2 days or fewer a week, nights 2 or fewer a month, FEV1/PEF above 80%, variability below 20% (p.289)."),
+          P("Mild persistent: more than 2 days a week, not daily; nights more than 2 a month; FEV1/PEF above 80%; variability 20-30% (p.289)."),
+          P("Moderate persistent: daily symptoms, nights more than once a week, FEV1/PEF 60-80%, variability above 30% (p.289)."),
+          P("Severe persistent: continuous symptoms, frequent nights, FEV1/PEF below 60%, variability above 30% (p.289-290)."),
+        ]},
+        { h: "Stepwise treatment", pts: [
+          P("Step 1 SABA as needed (consider low ICS). Step 2 low-dose ICS or LTRA. Step 3 medium-dose ICS. Step 4 medium/high ICS plus LABA. Step 5 add anti-IgE or low-dose oral steroid (p.289-290)."),
+        ]},
+        { h: "Goals", pts: [
+          P("No daytime or night symptoms, no rescue use, near-normal lung function (FEV1/PEF above 80%), no activity limits, minimal side-effects, meet family expectations (p.289)."),
+        ]},
+        { h: "Non-drug measures", pts: [
+          P("Avoid triggers: house dust mite, animal dander, pollen, smoke, pollution, food allergy; treat co-morbidities: rhinitis, GERD, obesity, sleep apnoea; written action plan (p.290, 292)."),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Acute laryngotracheobronchitis (viral croup)", src: "p.293-294",
+      prompt: "Write short notes on viral croup.",
+      tip: "Cause, age, features, danger signs, differentials, and the grade-based management.",
+      sections: [
+        { h: "Cause and features", pts: [
+          P("Parainfluenza virus commonest; also measles, rhinovirus, RSV, influenza; age 1-3 years (p.293)."),
+          P("Coryzal prodrome, hoarseness, inspiratory or biphasic stridor, barking brassy cough worse at night and on crying; self-limiting in 2-5 days (p.293)."),
+        ]},
+        { h: "Danger signs", pts: [
+          P("Markedly reduced air entry, hypotonia, expiratory stridor, rising heart rate, pulsus paradoxus, severe indrawing, cyanosis as a late sign (p.293)."),
+        ]},
+        { h: "Differentials", pts: [
+          P("Epiglottitis (Hib; toxic, drooling, dysphagia), diphtheria (grey membrane), retropharyngeal abscess, foreign body, bacterial tracheitis, laryngomalacia (p.293-294)."),
+          P("If epiglottitis is possible do not examine the throat or take an X-ray; go to theatre for intubation (p.293)."),
+        ]},
+        { h: "Management", pts: [
+          P("Grade 1: supportive, keep calm, hydration by mouth/NG/IV (p.294)."),
+          P("Grade 2 or worse: nebulised adrenaline 1 ml of 1:1000 in 3 ml saline, O2 8-10 L/min, every 15-30 minutes, plus dexamethasone 0.6 mg/kg IM/IV or prednisolone 1 mg/kg (avoid after measles or herpes) (p.294)."),
+          P("Grade 3: no improvement in 1 hour, alert anaesthetist; grade 4: intubate; tracheostomy rarely (p.294)."),
+          P("Antibiotics only if bacterial tracheitis or secondary infection is suspected (p.294)."),
+          P("Investigations if cause unclear: lateral and AP neck X-ray; direct laryngoscopy or bronchoscopy for severe stridor not responding (p.294)."),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Acute bronchiolitis", src: "p.295-298",
+      prompt: "Write short notes on acute bronchiolitis.",
+      tip: "Definition, RSV, risk factors, features, diagnosis, treatment and why antibiotics are not used.",
+      sections: [
+        { h: "Definition and epidemiology", pts: [
+          P("Acute infectious inflammatory disease of the lower respiratory tract causing small-airway obstruction; children under 2 years, peak 2-6 months, rainy season in the tropics, boys more than girls (p.295)."),
+          P("RSV about 70% (type A causes the severe cases); others: parainfluenza, influenza, adenovirus, metapneumovirus (p.295)."),
+          P("Risk factors: low birth weight, prematurity, crowding, parental smoking, no breastfeeding, day care (p.295)."),
+        ]},
+        { h: "Clinical features and diagnosis", pts: [
+          P("Coryza and low fever, then cough, dyspnoea, wheezing, feeding difficulty; tachypnoea, flaring, retractions; fine crepitations and diffuse wheezing (p.296)."),
+          P("Clinical diagnosis; RSV antigen by IFA or ELISA on nasopharyngeal secretions; culture is the gold standard; CXR shows hyperinflation (p.296)."),
+        ]},
+        { h: "Management", pts: [
+          P("Oxygen and fluids (IV or NG); trial of salbutamol 0.15 mg/kg; nebulised epinephrine is better (p.297-298)."),
+          P("Admit if SpO2 under 92%, age under 6 months, poor hydration, RR above 70, or cardio-respiratory disease; PICU if desaturating on 40% oxygen, cyanosis, apnoea or acidosis (p.297)."),
+          P("Not useful: antibiotics, ribavirin, ipratropium; hypertonic saline controversial (p.297-298)."),
+        ]},
+        { h: "Prevention and outcome", pts: [
+          P("Hand washing, disposable gloves and gowns, palivizumab for high-risk infants (p.295, 298)."),
+          P("Recovery in 5-7 days; 20% have protracted wheeze for months; BPD, CHD and pulmonary hypertension worsen the course (p.297)."),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Acute otitis media", src: "p.300-305",
+      prompt: "Write short notes on acute otitis media in children.",
+      tip: "Why infants, organisms, features, treatment by age, complications.",
+      sections: [
+        { h: "Definition and predisposing factors", pts: [
+          P("Acute inflammation of the middle ear with effusion and rapid onset of otalgia, fever, irritability, anorexia or vomiting (p.300)."),
+          P("Common in infants: eustachian tube is shorter, wider and straighter (p.300)."),
+          P("Risk factors: age 6-18 months, day care, recent cold, allergies, adenoid hypertrophy, passive smoking, bottle feeding while lying down (p.301-302)."),
+        ]},
+        { h: "Organisms and diagnosis", pts: [
+          P("Older children: S. pneumoniae, H. influenzae, Moraxella catarrhalis, Strep pyogenes. Neonates: S. aureus, Pseudomonas, E. coli (p.301)."),
+          P("Otoscopy: red immobile drum, fluid, perforation; MCS of discharge; tympanocentesis if available; sepsis screen in toxic neonates (p.302)."),
+        ]},
+        { h: "Treatment", pts: [
+          P("Neonates: parenteral ampicillin/sulbactam plus amikacin (p.302)."),
+          P("Older: oral high-dose amoxicillin first line, co-amoxiclav second line, parenteral ceftriaxone if vomiting (p.302)."),
+          P("Supportive: aural toilet, analgesia/antipyretic (p.302, 305)."),
+        ]},
+        { h: "Complications", pts: [
+          P("Hearing loss, mastoiditis, petrositis, labyrinthitis, meningitis, brain abscess, facial nerve palsy, lateral sinus thrombosis; chronic otitis media with cholesteatoma (p.302-305)."),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Streptococcal tonsillopharyngitis", src: "p.302-304",
+      prompt: "Write short notes on acute exudative tonsillopharyngitis in a child.",
+      tip: "Cause, features, differentials, complications and the 10-day treatment that prevents rheumatic fever.",
+      sections: [
+        { h: "Aetiology and features", pts: [
+          P("Group A beta-haemolytic Streptococcus; fever above 38 °C, sore throat, dysphagia, headache, exudative enlarged tonsils, cervical lymphadenitis; cough is unusual; younger children have GI symptoms (p.302-303)."),
+        ]},
+        { h: "Investigations", pts: [
+          P("Throat swab culture, rapid antigen test (specific, low sensitivity), FBC shows polymorphonuclear leucocytosis, blood culture in ill children (p.303)."),
+        ]},
+        { h: "Differentials", pts: [
+          P("Diphtheria (grey membrane), infectious mononucleosis (EBV: hepatosplenomegaly, atypical lymphocytes), viral pharyngitis, herpangina (Coxsackie A) (p.303-304)."),
+        ]},
+        { h: "Complications", pts: [
+          P("Suppurative: otitis media, sinusitis, peritonsillar abscess, retropharyngeal abscess, cervical adenitis. Non-suppurative: rheumatic fever, post-streptococcal glomerulonephritis (p.303)."),
+        ]},
+        { h: "Treatment", pts: [
+          P("Treat if symptomatic with positive rapid test, scarlet fever, family contact, or past/recent rheumatic fever (p.303-304)."),
+          P("Amoxicillin 50 mg/kg once daily (max 1 g) or penicillin V 250 mg qds for 10 days; single IM benzathine penicillin; erythromycin or azithromycin if allergic (p.304)."),
+          P("Analgesia, fluids, calories (p.304)."),
+        ]},
+      ]
+    },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · Single-best-option MCQ · Pulmonology (asthma, croup, bronchiolitis, URTI, pneumonia).
+// Source: Paediatrics CS edited.pdf p.282-316. src shows the slide page; "Standard teaching" marks points beyond the deck.
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-mcq-pulm",
+  subject: "Paediatrics",
+  group: "Pulmonology",
+  type: "mcq",
+  title: "Paediatrics MCQ · Pulmonology (15 single best option)",
+  negativeMarking: false,
+  questions: [
+    { topic: "Pneumonia", src: "p.309",
+      stem: "A 9-month-old has cough and difficulty breathing. Which respiratory rate counts as fast breathing for pneumonia?",
+      options: ["30 per minute", "40 per minute", "50 per minute or more", "60 per minute or more", "70 per minute or more"],
+      answer: 2,
+      explain: "At 2-11 months the cut-off is 50 or more; at 1-5 years it is 40 or more (p.309). 60 or more is for the young infant under 2 months. Count for a full minute in a calm child. Bronchiolitis admission uses >70 (p.297)." },
+    { topic: "Pneumonia", src: "p.308",
+      stem: "The commonest bacterial cause of community-acquired pneumonia worldwide in children is:",
+      options: ["Staphylococcus aureus", "Haemophilus influenzae type b", "Streptococcus pneumoniae", "Klebsiella pneumoniae", "Mycoplasma pneumoniae"],
+      answer: 2,
+      explain: "S. pneumoniae causes 30-50% of cases and Hib 10-30% (p.308). Nigerian studies isolate Klebsiella and S. aureus more often (p.308), partly because of prior antibiotic use. That is why PCV and Hib vaccines matter (p.315)." },
+    { topic: "Pneumonia", src: "p.306, 313",
+      stem: "Which one finding makes a child with cough and fast breathing 'severe pneumonia' by the WHO classification used in the slides?",
+      options: ["Fever of 38.5 °C", "Lower chest wall indrawing alone", "Oxygen saturation of 94%", "Inability to feed", "Nasal discharge"],
+      answer: 3,
+      explain: "Severe pneumonia = pneumonia features plus any of: cyanosis (or SpO2 below 90%), grunting, very severe chest indrawing, convulsion, inability to feed, decreased level of consciousness (p.306, 313). Chest indrawing is listed under pneumonia on the slide's table." },
+    { topic: "Pneumonia: chest signs", src: "p.311-312",
+      stem: "A child has dull-to-percussion right base, absent breath sounds and the trachea is pushed to the left. The most likely diagnosis is:",
+      options: ["Lobar pneumonia", "Large right pleural effusion", "Right pneumothorax", "Right lung collapse", "Bronchopneumonia"],
+      answer: 1,
+      explain: "Stony dull + absent breath sounds + mediastinum displaced AWAY from the lesion = pleural effusion (p.311-312). Consolidation has bronchial breathing and no shift; collapse pulls the mediastinum TOWARDS the lesion; pneumothorax is hyper-resonant." },
+    { topic: "Pneumonia", src: "p.314-315",
+      stem: "Which is an absolute indication for oxygen in a child with pneumonia?",
+      options: ["Fever above 39 °C", "Cough lasting more than 3 days", "Central cyanosis", "Respiratory rate of 42 at age 3 years", "Crepitations in one zone"],
+      answer: 2,
+      explain: "Absolute indications: central cyanosis, severe lower chest wall indrawing, SpO2 below 91% (p.315). Other signs: restlessness, tachycardia, tachypnoea 20 above the cut-off. Prongs deliver about 30-35% oxygen (p.316)." },
+    { topic: "Pneumonia", src: "p.314-315",
+      stem: "Which of these should be AVOIDED in the management of a child with pneumonia?",
+      options: ["Antipyretics", "Cough syrup containing codeine or an antihistamine", "Small frequent feeds", "Gentle nasal suction", "Oxygen by nasal prongs"],
+      answer: 1,
+      explain: "Antihistamine and opioid cough mixtures add little and may be toxic (p.314-315). Supportive measures that help: feeds or NG feeds, IV fluid with 5% glucose if feeds not tolerated, suction, antipyretics for fever of 39 °C or more, bronchodilator if wheeze." },
+    { topic: "Asthma", src: "p.284",
+      stem: "The commonest trigger of acute asthma attacks in children is:",
+      options: ["Exercise", "Viral upper respiratory tract infection", "House dust mite", "Cold air", "Emotional stress"],
+      answer: 1,
+      explain: "Viral URI is the most important inciter (p.284); RSV, rhinovirus and parainfluenza are the usual viruses. Other triggers: allergens, pollution, exercise, emotion, irritant fumes, cold dry air. Distinguish inducers (cause onset) from inciters (provoke attacks)." },
+    { topic: "Asthma", src: "p.289",
+      stem: "A child has daily symptoms and night symptoms more than once a week, with FEV1 of 70% predicted and PEF variability above 30%. The severity class is:",
+      options: ["Intermittent", "Mild persistent", "Moderate persistent", "Severe persistent", "Exercise-induced only"],
+      answer: 2,
+      explain: "Moderate persistent: daily symptoms, nights > 1/week, FEV1 or PEF 60-80%, variability > 30% (p.289). Intermittent: <=2 days/week, <=2 nights/month, >80%. Mild: >2 days/week not daily. Severe: continuous symptoms, FEV1 <60% (p.289-290)." },
+    { topic: "Asthma", src: "p.289",
+      stem: "The preferred controller for Step 2 (mild persistent asthma) is:",
+      options: ["Short-acting beta agonist alone", "Low-dose inhaled corticosteroid", "Oral prednisolone", "Long-acting beta agonist alone", "Anti-IgE antibody"],
+      answer: 1,
+      explain: "Step 1 SABA as needed; Step 2 low-dose ICS (alternative: leukotriene receptor antagonist); Step 3 medium-dose ICS; Step 4 medium/high ICS plus LABA; Step 5 add anti-IgE or low-dose oral steroid (p.289-290)." },
+    { topic: "Asthma", src: "p.289",
+      stem: "In a child with an acute asthma attack, which finding indicates a life-threatening attack?",
+      options: ["Too breathless to feed", "Tachycardia of 140", "Silent chest", "Use of accessory muscles", "Wheeze on both sides"],
+      answer: 2,
+      explain: "Life-threatening: cyanosis, silent chest, poor respiratory effort, exhaustion, agitation or reduced consciousness (p.289). Being too breathless to talk or feed, tachycardia and retractions describe acute SEVERE asthma. A quiet chest means little air movement." },
+    { topic: "Asthma", src: "p.292",
+      stem: "The recommended dose of IV magnesium sulphate in severe acute childhood asthma is:",
+      options: ["5 mg/kg over 5 minutes", "50 mg/kg (maximum 2 g) over 20 minutes", "0.6 mg/kg once", "15 mcg/kg over 10 minutes", "1 g every 6 hours"],
+      answer: 1,
+      explain: "50% MgSO4 (2 mmol/ml) 0.1 ml/kg, i.e. 50 mg/kg, maximum 2 g, in 20 ml saline over 20 minutes (p.292). IV salbutamol 15 mcg/kg over 10 minutes; dexamethasone 0.6 mg/kg; aminophylline loading 5 mg/kg over 20 minutes. Do not confuse with the eclampsia regimen." },
+    { topic: "Croup", src: "p.293",
+      stem: "The commonest cause of viral croup is:",
+      options: ["RSV", "Measles virus", "Parainfluenza virus", "Adenovirus", "Influenza A"],
+      answer: 2,
+      explain: "Parainfluenza is commonest; measles, rhinovirus, RSV and influenza are others (p.293). Age 1-3 years, barking cough, inspiratory stridor, worse at night, lasts 2-5 days." },
+    { topic: "Croup", src: "p.293-294",
+      stem: "A 3-year-old with fever, drooling, a toxic appearance and muffled voice is suspected of epiglottitis. The correct next step is:",
+      options: ["Examine the throat with a spatula", "Lateral neck X-ray before anything else", "Take to theatre for intubation under anaesthesia", "Oral dexamethasone and review in 24 hours", "Nebulised salbutamol"],
+      answer: 2,
+      explain: "Avoid throat examination or X-ray, which may precipitate complete obstruction. Arrange urgent intubation under anaesthesia (p.293). Hib is the usual cause, so vaccination status matters; treat with IV ceftriaxone (standard teaching)." },
+    { topic: "Bronchiolitis", src: "p.295, 297-298",
+      stem: "Which statement about acute bronchiolitis is correct?",
+      options: ["Routine antibiotics shorten the illness", "Ribavirin is recommended for all infants", "Peak incidence is at 2-6 months and RSV is the commonest cause", "Chest X-ray is needed in every case", "It is commonest in the dry season in the tropics"],
+      answer: 2,
+      explain: "RSV causes about 70%; peak 2-6 months; rainy season in the tropics (p.295). Antibiotics and ribavirin are not useful (p.298); X-rays are not routine (p.296). Treatment is oxygen and fluids, plus a trial of salbutamol or nebulised epinephrine." },
+    { topic: "Pharyngitis", src: "p.303-304",
+      stem: "A 7-year-old has sudden fever, sore throat and tonsils covered with yellow exudate, with no cough. The antibiotic course should last:",
+      options: ["3 days", "5 days", "7 days", "10 days", "21 days"],
+      answer: 3,
+      explain: "Group A streptococcal pharyngitis is treated with 10 days of oral penicillin V or amoxicillin (or a single IM benzathine penicillin) to prevent acute rheumatic fever (p.304). Cough is unusual in streptococcal disease; cough, rhinorrhoea and conjunctivitis point to a virus (p.303)." },
+  ]
+}]);
+
+</script>
+<script>
 // Where to find the answers: Paediatrics CS slide pages for every T/F stem and picture (checked against Paediatrics-slides.txt).
 // Format per stem, in bank order: pg = slide pages that answer the in-slide statements ("" = nothing in the deck);
 // out = 0-based indexes of statements (a=0, b=1, ...) whose answer is OUTSIDE the slides (standard teaching).
@@ -3231,6 +3604,8 @@ window.PAGE_MAP["pa-tf-id-3"] = [{"pg": "p.151-152", "out": []}, {"pg": "p.151, 
 window.PAGE_MAP["pa-tf-id-4"] = [{"pg": "p.159", "out": []}, {"pg": "p.159-160", "out": []}, {"pg": "p.160", "out": []}, {"pg": "p.161-162", "out": []}, {"pg": "p.162-163", "out": []}, {"pg": "p.162-163", "out": []}, {"pg": "p.163, 170-171", "out": []}, {"pg": "p.171", "out": []}, {"pg": "p.164-165", "out": []}, {"pg": "p.166", "out": []}, {"pg": "p.166-168", "out": []}, {"pg": "p.167", "out": []}, {"pg": "p.168-169", "out": [2]}, {"pg": "p.169-170", "out": []}, {"pg": "p.154, 170", "out": []}, {"pg": "p.170-171", "out": [4]}, {"pg": "", "out": []}];
 window.PAGE_MAP["pa-tf-id-5"] = [{"pg": "p.139, 142", "out": []}, {"pg": "p.142, 146-147", "out": []}, {"pg": "p.143-144", "out": []}, {"pg": "p.144-146", "out": []}, {"pg": "p.145, 148", "out": [4]}, {"pg": "p.147", "out": []}, {"pg": "p.147-148", "out": [4]}, {"pg": "p.148-149", "out": []}, {"pg": "p.149-150", "out": [0, 1, 4]}];
 window.PAGE_MAP["pa-pics-id"] = [{"pg": "p.128-130", "out": []}, {"pg": "p.128, 130", "out": [3]}, {"pg": "p.136-137", "out": []}, {"pg": "p.137-138", "out": [4]}, {"pg": "p.154, 156", "out": []}, {"pg": "p.153, 155, 157", "out": []}, {"pg": "p.153-155", "out": []}, {"pg": "p.143, 146-148", "out": []}, {"pg": "p.134-136", "out": []}, {"pg": "p.160-162, 169", "out": [4]}, {"pg": "p.160, 162", "out": [2, 3]}, {"pg": "p.160-161", "out": [3, 4]}, {"pg": "p.125", "out": [0, 3, 4]}];
+window.PAGE_MAP["pa-tf-pulm-1"] = [{"pg": "p.282-284", "out": []}, {"pg": "p.284", "out": []}, {"pg": "p.285-286", "out": []}, {"pg": "p.282, 286-287", "out": []}, {"pg": "p.286-287", "out": []}, {"pg": "p.288, 292", "out": []}, {"pg": "p.288-289, 293", "out": []}, {"pg": "p.289-290", "out": [4]}, {"pg": "p.293", "out": []}, {"pg": "p.293-294", "out": [4]}];
+window.PAGE_MAP["pa-tf-pulm-2"] = [{"pg": "p.295", "out": []}, {"pg": "p.295-296", "out": []}, {"pg": "p.297-298", "out": []}, {"pg": "p.299-300, 314-315", "out": []}, {"pg": "p.300-302, 305", "out": []}, {"pg": "p.302-304", "out": []}, {"pg": "p.306-309", "out": []}, {"pg": "p.307, 309-310", "out": []}, {"pg": "p.311-312", "out": []}, {"pg": "p.306, 313-314", "out": []}, {"pg": "p.314-316", "out": [4]}];
 
 </script>
 <script>
@@ -5054,6 +5429,274 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · True/False (5 statements per stem, negative marking −½) · Pulmonology paper 1: bronchial asthma and croup.
+// Source: Paediatrics CS edited.pdf, Pulmonology section. Asthma p.282-292, viral croup (ALTB) p.293-294.
+// Statements that go beyond the slides are listed in PAGE_MAP (pa-pages.js) as "outside the slide".
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-pulm-1",
+  subject: "Paediatrics",
+  group: "Pulmonology",
+  type: "tf",
+  title: "Paediatrics T/F · Pulmonology 1: asthma and croup (10 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "Asthma: definition & epidemiology", src: "p.282-284",
+      stem: "Concerning childhood bronchial asthma:",
+      items: I([
+        ["GINA 2015 defines asthma as a heterogeneous disease usually characterised by chronic airway inflammation, with respiratory symptoms that vary over time together with variable expiratory airflow limitation.", true, "Slide p.282. Variability is the key word: symptoms and airflow both fluctuate."],
+        ["Bronchial hyper-responsiveness is the tendency of the airway to constrict too easily and too much.", true, "Slide p.282. Atopy is separate: the ability to make IgE to common allergens such as pollen, mites and moulds."],
+        ["About 60% of children with asthma have their first symptoms before 3 years and 80% before 5 years.", true, "Slide p.284."],
+        ["Asthma is commoner in rural than urban children and in poor than affluent children.", false, "The reverse: urban over rural, affluent over non-affluent, industrialised over developing countries (p.283-284)."],
+        ["The male : female ratio is about 1.3 : 1.", true, "Slide p.284. Boys are commoner in childhood; the ratio reverses after puberty (outside the slide)."],
+      ]),
+      explain: "Think of asthma as an atopic, early-onset, urban disease of boys. Link to the allergic cascade (Q2) and to the age-specific diagnostic criteria (Q3)." },
+
+    { topic: "Asthma: risk factors & triggers", src: "p.284",
+      stem: "Risk factors, inducers and inciters of asthma:",
+      items: I([
+        ["If both parents are asthmatic the risk to the child is about 6 times that of the general population; with one parent it is about 3 times.", true, "Slide p.284."],
+        ["Inducers start the first attack in a person; inciters (triggers) cause attacks in a person who already has asthma.", true, "Slide p.284. Many inducers are also inciters."],
+        ["The commonest inciter of acute attacks is exercise.", false, "Viral upper respiratory infection is the most important inciter (p.284). Exercise, cold dry air, emotion, fumes and aeroallergens are others."],
+        ["Formula feeding (lack of exclusive breastfeeding) is listed as an inducer.", true, "Slide p.284."],
+        ["The commonest virus linked to asthma in children is RSV, followed by rhinovirus and parainfluenza virus.", true, "Slide p.284."],
+      ]),
+      explain: "A good short-note opening: heredity (6x / 3x), then environment (allergens, pollution, viruses, diet). RSV bronchiolitis in infancy is the classic forerunner, so link to the bronchiolitis stems in paper 2." },
+
+    { topic: "Asthma: pathogenesis", src: "p.285-286",
+      stem: "Pathogenesis of atopic asthma:",
+      items: I([
+        ["An imbalance between Th1 and Th2 cells, with Th2 predominating, underlies atopic asthma.", true, "Slide p.285. Th1 (IFN-γ) suppresses allergic inflammation; Th2 enhances it."],
+        ["The four stages of the allergic cascade are sensitisation, early phase response, late phase response and airway remodelling.", true, "Slide p.285."],
+        ["Sensitisation involves CD4+ Th2 cells and B cells producing allergen-specific IgE.", true, "Slide p.285."],
+        ["The late phase response is mainly due to mast-cell degranulation within minutes of allergen exposure.", false, "That is the EARLY phase (mucosal oedema and bronchospasm). The late phase is an influx of eosinophils and neutrophils that further narrows the airway (p.286)."],
+        ["Airway remodelling means thickened walls with increased submucosal tissue, adventitia and smooth muscle.", true, "Slide p.286. Treating inflammation early (first five years) may prevent progressive loss of lung function."],
+      ]),
+      explain: "Early = mast cell mediators (histamine, leukotrienes) = reversible bronchospasm; late = cells = inflammation, which is why inhaled steroids (not bronchodilators) are the controller." },
+
+    { topic: "Asthma: diagnosis", src: "p.286-287",
+      stem: "Diagnosis of asthma in children:",
+      items: I([
+        ["Diagnosis in children aged 5 years and under rests largely on clinical judgement because lung function tests are hard to do.", true, "Slide p.282."],
+        ["In a child aged 5 or less, three or more episodes of wheeze with signs of airway obstruction, improvement on bronchodilators and a personal or family history of atopy support the diagnosis.", true, "Slide p.286."],
+        ["In children aged 6 and over, an FEV1/FVC ratio below 80% and a rise in PEF of more than 15% after a bronchodilator support asthma.", true, "Slide p.287."],
+        ["Continuous wheezing, onset in the neonatal period and failure to respond to controller medication suggest an alternative diagnosis.", true, "Slide p.286. Also: failure to thrive, vomiting with respiratory symptoms, focal lung or cardiac signs, clubbing."],
+        ["A normal chest radiograph excludes asthma and a hyperinflated one confirms it.", false, "The chest X-ray is not diagnostic: it may show air trapping but is mainly used to exclude other causes (p.287)."],
+      ]),
+      explain: "Under 5: clinical. Over 6: spirometry or PEF reversibility. The red flags (neonatal onset, continuous wheeze, no response) are the bridge to the differential diagnosis (Q5)." },
+
+    { topic: "Asthma: differential diagnosis", src: "p.286-287",
+      stem: "Differential diagnosis of recurrent wheeze in a child. Match the condition to its typical feature:",
+      items: I([
+        ["Foreign body aspiration: abrupt severe cough and/or stridor during eating or play, with focal lung signs.", true, "Slide p.286-287."],
+        ["Gastro-oesophageal reflux: cough on feeding, vomits easily after large feeds, poor response to asthma drugs.", true, "Slide p.286."],
+        ["Cystic fibrosis: failure to thrive with loose, greasy, bulky stools.", true, "Slide p.287."],
+        ["Primary ciliary dyskinesia: situs inversus occurs in about 50%.", true, "Slide p.287. Chronic ear infections and purulent nasal discharge as well."],
+        ["Bronchopulmonary dysplasia typically occurs in a term infant with normal birth weight.", false, "It affects infants born prematurely with very low birth weight who needed prolonged ventilation or oxygen (p.287)."],
+      ]),
+      explain: "Everything that wheezes is not asthma. Pair each condition with its clue: FB (sudden), GERD (feeds), CF (stools), PCD (situs inversus), BPD (prematurity), TB (contact), cardiac (cyanosis on feeding)." },
+
+    { topic: "Asthma: acute attack", src: "p.288-292",
+      stem: "Management of acute asthma in a child:",
+      items: I([
+        ["The mnemonic RTOB stands for Resuscitation, Triage, Oxygen, Bronchodilators.", true, "Slide p.288."],
+        ["Salbutamol by MDI with spacer is given as 4-6 puffs in children under 5 and 6-10 puffs in those over 5, and reviewed at 20 and 40 minutes.", true, "Slide p.288."],
+        ["Oxygen is given if SpO2 is below 95%, and oral prednisolone 1-2 mg/kg (maximum 40-60 mg) is started early.", true, "Slide p.288."],
+        ["Ipratropium bromide is added in severe attacks, 0.25 mg nebulised every 20-30 minutes for 3 doses, then 4-6 hourly.", true, "Slide p.292."],
+        ["Intravenous magnesium sulphate is contraindicated in children.", false, "It is an adjunct in severe and life-threatening attacks: 50 mg/kg (maximum 2 g) over 20 minutes (p.292)."],
+      ]),
+      explain: "Order of action: Airway-Breathing-Circulation, triage, oxygen, repeated SABA, steroids early, ipratropium, then magnesium, IV salbutamol and aminophylline in ICU. Discharge only after at least 24 hours of observation with 3 days of medicine (p.292)." },
+
+    { topic: "Asthma: severity", src: "p.289",
+      stem: "Severity of an acute attack:",
+      items: I([
+        ["Cyanosis, a silent chest, poor respiratory effort, exhaustion and reduced consciousness indicate a life-threatening attack.", true, "Slide p.289."],
+        ["A child too breathless to talk or feed, with tachypnoea, tachycardia and retractions, has acute severe asthma.", true, "Slide p.289."],
+        ["A silent chest is reassuring because wheeze has settled.", false, "A silent chest means so little air is moving that there is no wheeze. It is a life-threatening sign (p.289)."],
+        ["Cyanosis is a late, terminal sign and intervention must precede it.", true, "Slide p.292-293."],
+        ["A life-threatening attack is managed on the ward with oral steroids and salbutamol alone.", false, "Consult ICU; give SABA, oxygen, ipratropium, IV magnesium sulphate and IV aminophylline, and prepare for intubation (p.288)."],
+      ]),
+      explain: "Triage decides the route: life-threatening (any confusion, drowsiness, cyanosis, silent chest) goes to ICU; otherwise severe versus moderate/mild. Do not wait for blood gases." },
+
+    { topic: "Asthma: long-term control", src: "p.289-290",
+      stem: "Classification and long-term control (GINA steps):",
+      items: I([
+        ["Intermittent asthma: symptoms 2 days a week or fewer, night symptoms 2 a month or fewer, FEV1/PEF above 80% and PEF variability below 20%.", true, "Slide p.289."],
+        ["Severe persistent asthma has continuous symptoms, frequent night symptoms, FEV1 or PEF below 60% and PEF variability above 30%.", true, "Slide p.289-290."],
+        ["Step 2 preferred controller is a low-dose inhaled corticosteroid, with a leukotriene receptor antagonist as an alternative.", true, "Slide p.289."],
+        ["Step 4 preferred controller is medium or high dose ICS plus a long-acting beta agonist (LABA).", true, "Slide p.290."],
+        ["A long-acting beta agonist should be used alone, without an inhaled steroid, as a controller.", false, "LABA is always added to an ICS, never given alone (standard teaching, outside the slide). Slide step 4 pairs ICS plus LABA."],
+      ]),
+      explain: "Memorise the ladder: Step 1 SABA only; 2 low ICS; 3 medium ICS; 4 ICS+LABA; 5 add anti-IgE or low-dose oral steroid. Step up if poorly controlled, step down after 3 months of control. Check co-morbidities (rhinitis, GERD, obesity, sleep apnoea) and triggers (p.290)." },
+
+    { topic: "Croup (ALTB)", src: "p.293",
+      stem: "Viral croup (acute laryngotracheobronchitis):",
+      items: I([
+        ["Parainfluenza virus is the commonest cause.", true, "Slide p.293. Others: measles, rhinovirus, RSV, influenza."],
+        ["It is commonest in children aged 1-3 years.", true, "Slide p.293."],
+        ["Typical features are a coryzal prodrome, hoarseness, inspiratory or biphasic stridor and a barking, brassy cough that is worse at night.", true, "Slide p.293."],
+        ["It usually lasts 2-5 days and is generally self-limiting.", true, "Slide p.293."],
+        ["Expiratory stridor developing in the course of illness is a sign of improvement.", false, "Development of expiratory stridor is a danger sign (with markedly reduced air entry, rising heart rate, pulsus paradoxus, severe chest indrawing, hypotonia) (p.293)."],
+      ]),
+      explain: "Croup = barking cough + inspiratory stridor in a toddler after a cold. The danger signs mean the airway is nearly shut." },
+
+    { topic: "Croup (ALTB)", src: "p.293-294",
+      stem: "Assessment and management of croup:",
+      items: I([
+        ["If epiglottitis is suspected, do not examine the throat or send for an X-ray; take the child to theatre for intubation under anaesthesia.", true, "Slide p.293. Features: toxic look, drooling, dysphagia, retracted neck (Hib)."],
+        ["Differentials include diphtheria, retropharyngeal abscess, foreign body, laryngomalacia and bacterial tracheitis.", true, "Slide p.293-294. Grey tonsillar membrane points to diphtheria; pseudomembrane on X-ray to bacterial tracheitis."],
+        ["Nebulised adrenaline (1 ml of 1:1000 in 3 ml saline) is used for grade 2 or worse disease, repeated every 15-30 minutes.", true, "Slide p.294."],
+        ["Dexamethasone 0.6 mg/kg IM/IV, or oral prednisolone 1 mg/kg, is given; steroids are avoided after recent measles or herpetic infection.", true, "Slide p.294."],
+        ["Antibiotics are routinely required in viral croup.", false, "The cause is a virus. Antibiotics (ampicillin or amoxicillin on the slide) are for suspected bacterial tracheitis or secondary infection, not routine (p.294; reasoning outside the slide)."],
+      ]),
+      explain: "Grade 1: supportive. Grade 2+: adrenaline neb + steroid. Grade 3: no improvement in about an hour, warn the anaesthetist. Grade 4: intubate. Link: diphtheria and measles croup in the infectious diseases bank." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · True/False (5 statements per stem, negative marking −½) · Pulmonology paper 2: bronchiolitis, upper respiratory
+// infections (coryza, otitis media, pharyngitis) and community-acquired pneumonia.
+// Source: Paediatrics CS edited.pdf: bronchiolitis p.295-298, ARI/URTI p.299-305, pneumonia p.306-316.
+// The deck's antibiotic regimens for pneumonia are on a "second file" it does not contain, so those statements are outside the slide.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-pulm-2",
+  subject: "Paediatrics",
+  group: "Pulmonology",
+  type: "tf",
+  title: "Paediatrics T/F · Pulmonology 2: bronchiolitis, URTI and pneumonia (11 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "Bronchiolitis", src: "p.295-296",
+      stem: "Acute bronchiolitis:",
+      items: I([
+        ["It is an acute infectious inflammatory disease of the lower respiratory tract causing obstruction of the small airways.", true, "Slide p.295."],
+        ["RSV causes about 70% of cases, and peak incidence is at 2-6 months.", true, "Slide p.295."],
+        ["It is the commonest lower respiratory tract infection of infancy needing hospital admission.", true, "Slide p.295."],
+        ["In tropical countries it occurs mainly in the dry season.", false, "Principally the rainy season in the tropics (fall and winter in temperate countries) (p.295)."],
+        ["Prematurity, low birth weight, crowding, parental smoking, no breastfeeding and day-care attendance are risk factors.", true, "Slide p.295."],
+      ]),
+      explain: "Think of a 4-month-old boy in the rainy season with a runny nose then wheeze and feeding difficulty. Same virus (RSV) that later links to childhood asthma." },
+
+    { topic: "Bronchiolitis", src: "p.296-297",
+      stem: "Features and course of bronchiolitis:",
+      items: I([
+        ["The incubation period is 2-5 days, starting with profuse coryza and low-grade fever.", true, "Slide p.295-296."],
+        ["Examination shows retractions, fine crepitations and diffuse fine wheezing.", true, "Slide p.296."],
+        ["The chest X-ray typically shows hyperinflation with a flattened diaphragm; 20-30% have lobar infiltrates or atelectasis.", true, "Slide p.296."],
+        ["The gold standard for definitive diagnosis is viral culture of RSV, although detecting antigen by IFA or ELISA on nasopharyngeal secretions is the screening test.", true, "Slide p.296."],
+        ["Infants over 6 months of age are the most severely affected because of their smaller airways.", false, "Infants under 6 months are most severely affected (smaller, more easily blocked airways, poorer clearance) (p.296)."],
+      ]),
+      explain: "Diagnosis is clinical (age + season + findings). Tests are not routine. Chronic cardiopulmonary disease (BPD, CHD, pulmonary hypertension) worsens the course (p.297)." },
+
+    { topic: "Bronchiolitis", src: "p.297-298",
+      stem: "Management of bronchiolitis:",
+      items: I([
+        ["Mainstays are oxygen and fluid replacement (IV or by nasogastric tube).", true, "Slide p.297."],
+        ["Admit if SpO2 is persistently below 92% in air, age under 6 months, unable to maintain oral hydration, respiratory rate above 70/min, or chronic cardiorespiratory disease.", true, "Slide p.297."],
+        ["Routine antibiotics and ribavirin are indicated.", false, "Neither is useful (p.298). Antibiotics only if a bacterial co-infection is proved."],
+        ["A trial of salbutamol (0.15 mg/kg) may be given and continued only if the child responds.", true, "Slide p.297. Nebulised epinephrine is better than salbutamol (p.298); ipratropium is not useful (p.297)."],
+        ["Palivizumab is a monoclonal antibody against RSV given to selected high-risk infants during epidemics.", true, "Slide p.298. Hand washing prevents nosocomial spread."],
+      ]),
+      explain: "Supportive care is the treatment. PICU triggers: desaturation despite 40% oxygen, central cyanosis, apnoea or acidosis (p.297)." },
+
+    { topic: "Acute respiratory infections", src: "p.299-300",
+      stem: "Acute coryza (common cold) and ARI definitions:",
+      items: I([
+        ["An acute respiratory infection is one of under 2 weeks (14 days) duration.", true, "Slide p.299."],
+        ["About half of colds are caused by rhinoviruses.", true, "Slide p.299."],
+        ["The classic triad is sneezing, rhinorrhoea and blocked nose; illness usually lasts about 7 days.", true, "Slide p.300."],
+        ["A child may have 6-12 colds per year.", true, "Slide p.300."],
+        ["Antibiotics and cough syrups with codeine are the recommended treatment.", false, "Treatment is symptomatic: nasal toilet, antipyretic, fluids, honey or simple remedies. Antibiotics do not help a viral cold (p.300; opioid cough syrups are to be avoided, p.314-315)."],
+      ]),
+      explain: "Complications to quote: acute otitis media, sinusitis, tonsillitis, croup, bronchiolitis, pneumonia (p.300). Differentials: nasal diphtheria, foreign body in the nose (unilateral discharge), pertussis catarrhal stage, prodromal measles." },
+
+    { topic: "Acute otitis media", src: "p.300-305",
+      stem: "Acute otitis media (AOM):",
+      items: I([
+        ["It is common in infants because the eustachian tube is shorter, wider and more horizontal.", true, "Slide p.300."],
+        ["In older children the commonest organisms are Streptococcus pneumoniae, Haemophilus influenzae and Moraxella catarrhalis.", true, "Slide p.301."],
+        ["An immobile red bulging tympanic membrane or middle ear fluid is seen on otoscopy.", true, "Slide p.302."],
+        ["Oral amoxicillin is the correct antibiotic for AOM in a neonate.", false, "Neonates need parenteral ampicillin/sulbactam plus amikacin (p.302), because the organisms include S. aureus, Pseudomonas, E. coli (p.301). The slide's mock test (p.305) asks this."],
+        ["Complications include mastoiditis, meningitis, brain abscess, hearing loss and facial nerve palsy.", true, "Slide p.302-305."],
+      ]),
+      explain: "Older child: high-dose amoxicillin first line, co-amoxiclav second line. Supportive: aural toilet for otorrhoea, analgesia. Do not give pethidine (mock test option d, p.305). Chronic otitis media = painless discharging perforation; look for cholesteatoma (p.304)." },
+
+    { topic: "Tonsillopharyngitis", src: "p.302-304",
+      stem: "Acute tonsillopharyngitis:",
+      items: I([
+        ["Group A beta-haemolytic Streptococcus causes exudative tonsillopharyngitis; cough is unusual and onset is rapid.", true, "Slide p.302-303."],
+        ["Viral pharyngitis has insidious onset with rhinorrhoea, cough, conjunctivitis and hoarseness.", true, "Slide p.303."],
+        ["Delayed non-suppurative complications are acute rheumatic fever and acute glomerulonephritis.", true, "Slide p.303."],
+        ["Herpangina is caused by Coxsackie A virus and shows vesicles and ulcers in the posterior pharynx.", true, "Slide p.304."],
+        ["Treatment of streptococcal pharyngitis is a 3-day course of oral penicillin V.", false, "Penicillin V 250 mg qds or amoxicillin is given for 10 days (a single IM benzathine penicillin is an alternative; erythromycin or azithromycin if allergic) so as to prevent rheumatic fever (p.304)."],
+      ]),
+      explain: "Differential of a membrane: diphtheria (grey, adherent) versus streptococcal (yellow, blood-tinged exudate) versus infectious mononucleosis (EBV, hepatosplenomegaly, atypical lymphocytes). Link to the diphtheria and rheumatic fever material." },
+
+    { topic: "Pneumonia: burden & aetiology", src: "p.306-309",
+      stem: "Epidemiology and aetiology of community-acquired pneumonia in children:",
+      items: I([
+        ["Outside the neonatal period, pneumonia is the leading cause of death in children under 5 worldwide.", true, "Slide p.307."],
+        ["Pneumonia accounts for about 17% of under-5 deaths in Nigeria (about 146,000 in 2010).", true, "Slide p.307-308."],
+        ["Globally the two commonest bacteria are Streptococcus pneumoniae (30-50%) and Haemophilus influenzae type b (10-30%); RSV is the main virus.", true, "Slide p.308."],
+        ["In neonates the usual pathogens are Gram-negative enteric organisms and Gram-positive cocci such as group B streptococcus and S. aureus.", true, "Slide p.309."],
+        ["Mycoplasma pneumoniae is an important cause in infants under 6 months.", false, "Mycoplasma is important in SCHOOL-AGED children (p.309). In HIV-infected children think Pneumocystis jirovecii and TB (p.308)."],
+      ]),
+      explain: "Risk factors to list (p.308): household air pollution, age under 5, malnutrition, no exclusive breastfeeding, low birth weight, no measles vaccine, HIV, sickle cell disease, heart disease, asthma, overcrowding. The same list answers a social paediatrics essay on prevention." },
+
+    { topic: "Pneumonia: clinical features", src: "p.306-310",
+      stem: "Clinical features and definitions:",
+      items: I([
+        ["Fast breathing is a respiratory rate of 50 or more per minute at 2-11 months, and 40 or more at 1-5 years.", true, "Slide p.309. Count for a full minute in a calm child."],
+        ["Lower chest wall indrawing is also seen in asthma, bronchiolitis and laryngotracheobronchitis because they lower intrathoracic pressure.", true, "Slide p.307."],
+        ["Nasal flaring and grunting (in young infants) are simple WHO clinical signs of pneumonia.", true, "Slide p.307."],
+        ["Radiologically, lobar pneumonia shows a smooth dense homogeneous opacity of one lobe, often due to S. pneumoniae.", true, "Slide p.310."],
+        ["Neonatal pneumonia is diagnosed when respiratory rate is 40 per minute or more.", false, "For a newborn the slide gives tachypnoea of 60 per minute or more, within a general sepsis picture (fever or hypothermia, poor feeding, jaundice, etc.) (p.310)."],
+      ]),
+      explain: "WHO cut-offs (standard teaching): under 2 months 60+, 2-11 months 50+, 1-5 years 40+. The chest X-ray is the gold standard of diagnosis but does not give the cause (p.310)." },
+
+    { topic: "Pneumonia: chest signs", src: "p.311-312",
+      stem: "Physical signs in lobar pneumonia and other chest lesions:",
+      items: I([
+        ["Lobar consolidation: diminished movement, increased vocal fremitus, dull percussion, bronchial breathing, crackles.", true, "Slide p.311."],
+        ["Pleural effusion: stony dull percussion, absent or reduced breath sounds, mediastinum displaced away from the effusion if large.", true, "Slide p.311-312."],
+        ["Pneumothorax: hyper-resonant percussion, absent breath sounds, mediastinal shift away from the affected side if under tension.", true, "Slide p.311-312."],
+        ["Lung collapse: mediastinal shift towards the affected side, dull percussion, indrawing of intercostal spaces.", true, "Slide p.311."],
+        ["In bronchopneumonia vocal resonance is increased and percussion is dull over the lung.", false, "Bronchopneumonia (patchy): normal vocal fremitus and resonance, resonant percussion, vesicular breathing with crackles (p.311)."],
+      ]),
+      explain: "A favourite exam table. Anchor on percussion: dull + bronchial = consolidation; stony dull + absent = effusion; hyper-resonant + absent = pneumothorax. Mediastinum moves AWAY from fluid or air, TOWARDS collapse and fibrosis." },
+
+    { topic: "Pneumonia: classification & admission", src: "p.306, 313",
+      stem: "WHO classification and the decision to admit:",
+      items: I([
+        ["Pneumonia is fast breathing with or without lower chest indrawing; severe pneumonia adds cyanosis (or SpO2 below 90%), grunting, very severe chest indrawing, convulsion, inability to feed or reduced consciousness.", true, "Slide p.306, 313."],
+        ["Children aged under 2 months with pneumonia should be admitted.", true, "Slide p.313."],
+        ["Children with severe pneumonia, with complications, or who cannot feed should be admitted.", true, "Slide p.313-314."],
+        ["Common complications include parapneumonic effusion or empyema, heart failure, sepsis, pneumatocoele, pneumothorax, lung abscess and bronchiectasis.", true, "Slide p.313."],
+        ["Every child with pneumonia needs a chest radiograph and full blood count before treatment starts.", false, "Not for outpatients. Chest X-ray is for those admitted or with suspected complications; FBC for severe or admitted cases; blood culture in sick admitted children (p.314)."],
+      ]),
+      explain: "Step-wise approach: count RR, look for chest indrawing and flaring, check cyanosis and SpO2, percuss, auscultate, look for complications and other organ involvement, classify, decide who is admitted, decide investigations (p.313-314)." },
+
+    { topic: "Pneumonia: supportive care", src: "p.314-316",
+      stem: "Treatment and supportive care of pneumonia:",
+      items: I([
+        ["Oxygen is given if SpO2 is below 91% in air, or when central cyanosis or severe lower chest wall indrawing is present.", true, "Slide p.314-315."],
+        ["Nasal prongs or catheter oxygen is given at 0.5-1 L/min in infants aged 0-2 months and 2-3 L/min from 3 months to 5 years (maximum 4 L/min).", true, "Slide p.314."],
+        ["Cough syrups containing antihistamines or opioids such as codeine should be avoided.", true, "Slide p.314-315."],
+        ["Refer for specialist review if there is no improvement after 48 hours, SpO2 stays below 91% on oxygen, the child needs ventilation or inotropes, or has altered mental status.", true, "Slide p.315."],
+        ["Fast-breathing pneumonia at home is treated with oral amoxicillin, and severe pneumonia with IV/IM ampicillin or benzylpenicillin plus gentamicin.", true, "Outside the slide: the deck refers to a second file for antibiotics. This is the WHO pocket-book regimen; confirm doses with your unit."],
+      ]),
+      explain: "Remember the discharge package (p.315): review 2 days later, check and complete immunisation (pneumococcal and Hib vaccines), return if fast breathing recurs, feed more often for 2 weeks. Nasal prongs 30-35% O2, nasopharyngeal catheter 45-60% (p.316)." },
+  ]
+}]);
+})();
+
+</script>
+<script>
 (function(){
 "use strict";
 const $=s=>document.querySelector(s), app=$("#app"), timerEl=$("#timer");
@@ -5068,7 +5711,7 @@ banks.forEach(b=>{const m=PM[b.id]; if(m&&b.questions) b.questions.forEach((q,i)
 const GROUPS=["Menstrual disorders & DUB","Amenorrhoea & PCOS","Abortion","Ectopic pregnancy","Antepartum haemorrhage","Hypertension in pregnancy","Labour & the partograph","Family planning","Infertility","Fibroids & endometriosis","Anaemia in pregnancy","Postpartum haemorrhage & oxytocics"];
 const COMING=["Antenatal care & booking","Gynaecological cancers","Genital infections & STIs","Prolapse & fistulae","Instruments & imaging (picture test)"];
 let curGroup=null;
-const PGROUPS=["Paediatric endocrinology","Infectious diseases"];
+const PGROUPS=["Paediatric endocrinology","Infectious diseases","Pulmonology"];
 const PCOMING=["Neonatology","Nutrition & malnutrition","Haemato-oncology","Cardiology","Nephrology","Neurology","Gastroenterology"];
 const TYPE_LABEL={cards:"Flashcards",mcq:"Multiple choice",essay:"Essays",fillgap:"Fill in the gap",tf:"True / False (5 stems each, negative marking)",pics:"Picture test (5 True / False per picture)"};
 const TYPE_ORDER=["cards","mcq","tf","pics","fillgap","essay"];
