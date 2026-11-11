@@ -2534,6 +2534,52 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Flashcards · Rheumatic fever and infective endocarditis. Source: Paediatrics CS edited.pdf p.14-23.
+// extra:true = beyond the slides (standard teaching). Mastery = 2 clean recalls in a row.
+(function(){
+const C=(topic,src,q,a,connect,extra)=>Object.assign({topic,src,q,a,connect},extra?{extra:true}:{});
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-cards-rhd",
+  subject: "Paediatrics",
+  group: "Rheumatic fever & endocarditis",
+  type: "cards",
+  title: "Paediatrics Flashcards · Rheumatic fever and endocarditis",
+  cards: [
+    C("ARF","p.14","What is the cause and mechanism of acute rheumatic fever?","Group A beta-haemolytic streptococcal pharyngitis, followed by an autoimmune reaction (antibody or antigen-antibody damage of the heart and joints) after a latent period.","Pharyngitis, ARF, carditis, RHD: the four-step chain on the slide."),
+    C("ARF","p.14","Epidemiology of ARF?","Commonest acquired heart disease of children in developing countries; age 5-15 years; M = F; low socio-economic status; overcrowding.","Opening line for the long essay and the social paediatrics essay."),
+    C("ARF","p.14","What does the carditis of ARF involve, and what is the hallmark?","Pancarditis: endocardium (mitral ++, aortic +, tricuspid rare), myocardium and pericardium (fibrinous pericarditis, effusion). Hallmark: the Aschoff nodule.","Left-sided valves take the highest pressure, so they scar first."),
+    C("Jones criteria","p.14","List the 5 major Jones criteria.","Carditis, (poly)arthritis, subcutaneous nodules, erythema marginatum, Sydenham's chorea.","CASES: Carditis, Arthritis, Subcutaneous nodules, Erythema marginatum, Sydenham's chorea."),
+    C("Jones criteria","p.14","List the 5 minor Jones criteria.","Fever, arthralgia, previous ARF, raised acute-phase reactants (ESR, CRP, WCC), prolonged PR interval.","Minor criteria = non-specific. The PR interval does not count if carditis is already a major criterion."),
+    C("Jones criteria","p.15","What is the rule for diagnosing ARF?","2 major, or 1 major + 2 minor criteria, PLUS evidence of recent streptococcal infection (ASOT above 333 Todd units, positive throat culture or antigen test).","The Jones question is a 'repeat' short note in 3 sittings; start with the rule, then list the criteria."),
+    C("Jones criteria","p.14; "+S,"Which exceptions may be diagnosed without evidence of recent strep infection?","Chorea as the only manifestation, indolent carditis and recurrences in known RHD may be diagnosed on the criteria without ASOT evidence.","Chorea is late, so the ASOT has often fallen back to normal.",true),
+    C("Jones criteria","p.14; "+S,"Describe the arthritis of ARF.","Migratory (flitting) polyarthritis of the large joints; very painful, hot, swollen; heals completely; responds dramatically to aspirin.","Licks the joints, bites the heart.",false),
+    C("ARF","p.14; "+S,"Describe erythema marginatum and subcutaneous nodules.","Erythema marginatum: evanescent non-itchy pink rings with clearing centre, on trunk and proximal limbs, sparing the face, worse with warmth. Nodules: painless firm nodules over extensor surfaces and bony prominences, last 1-3 weeks. Both rare in Nigerian children and go with carditis.","Both are the 'rare but specific' criteria.",true),
+    C("ARF","p.14; "+S,"Describe Sydenham's chorea.","Late manifestation (1-6 months after infection): purposeless involuntary movements, emotional lability, hypotonia, clumsiness; self-limiting over weeks to months; ASOT may be normal. Treat with rest, valproate or carbamazepine, haloperidol if severe; start penicillin prophylaxis.","Chorea may be the only criterion.",true),
+    C("ARF","p.15","Clinical features of rheumatic carditis?","Tachycardia, murmurs (apical pansystolic murmur radiating to the axilla in mitral regurgitation; apical mid-diastolic in mitral stenosis; diastolic murmur with collapsing pulse in aortic incompetence), friction rub, heart failure.","Heart failure in a child with RHD: tachycardia, hepatomegaly, raised JVP, gallop."),
+    C("ARF","p.15","Treatment of an attack of ARF?","Bed rest; aspirin 50-100 mg/kg/day; prednisolone 2 mg/kg/day for carditis; penicillin to eradicate the streptococcus; treat heart failure.","Then secondary prophylaxis before the child leaves the ward."),
+    C("Prophylaxis","p.15-16","Primary versus secondary prevention of ARF?","Primary: treat streptococcal pharyngitis early with IM procaine/benzathine penicillin or 10 days penicillin V. Secondary: IM benzathine penicillin 1.2 mega units monthly (alternative oral penicillin V 125-250 mg bd; erythromycin if allergic) to prevent repeat attacks; plus health education.","Repeat attacks worsen the valve damage."),
+    C("Prophylaxis","p.16; "+S,"How long should secondary prophylaxis continue?","No carditis: 5 years or to age 21 (whichever is longer). Carditis without residual valve disease: 10 years or to age 21. Persistent valve disease: at least 10 years, often to age 40 or lifelong.","Duration depends on how much of the heart was damaged.",true),
+    C("Chronic RHD","p.15","What is chronic rheumatic heart disease and what are its lesions?","Permanent valvular damage with chronic cardiac decompensation: mitral incompetence, mitral stenosis, aortic incompetence. Previous history of ARF. CXR: LA, LV enlargement, increased pulmonary vascular markings.","Mitral regurgitation commonest in children."),
+    C("Chronic RHD","p.15-16","How is chronic RHD investigated and treated?","Echocardiography, cardiac catheterisation; medical (anti-failure, prophylaxis against recurrence and endocarditis) and surgical (valve repair, balloon valvotomy, valve replacement).","The slide prints the headings; the surgical options are standard.",false),
+    C("Differential","p.16","Differential diagnosis of ARF?","Malaria, sickle cell disease, acute leukaemia, rheumatoid (juvenile idiopathic) arthritis, infective endocarditis (also septic arthritis, SLE).","Fever plus joint pain: think of each in turn."),
+    C("Endocarditis","p.16, 20","Define infective endocarditis and its classification.","A microbial infection of the endocardial surface of the heart, especially the valves. Classified as acute or subacute, bacterial or fungal, native or prosthetic valve.","Subacute = viridans strep on damaged valve; acute = Staph aureus, can affect normal hearts."),
+    C("Endocarditis","p.20","Pathogenesis of IE: the three steps.","Damage to the endothelium, formation of non-bacterial thrombotic vegetation on the damaged surface, transient bacteraemia and adherence of organisms.","High-pressure jet, thrombus, bacteria land."),
+    C("Endocarditis","p.17, 20","Predisposing factors for IE.","Congenital heart disease (VSD, PDA, aortic stenosis/bicuspid aortic valve, Fallot, complex cyanotic CHD), rheumatic heart disease, prosthetic valves, shunts, hypertrophic cardiomyopathy; dental caries or manipulation, central lines, urethral catheterisation, cardiac catheterisation, IV drug use, immunosuppression, septicaemia. Rare in pulmonary stenosis and ASD.","A past paper asked this in 3 sittings."),
+    C("Endocarditis","p.16-18, 20","Causative organisms of IE?","Streptococcus viridans (commonest in subacute), Staph aureus (acute, normal hearts), enterococci, gram-negatives, HACEK group (Haemophilus, Actinobacillus, Cardiobacterium, Eikenella, Kingella), Neisseria, fungi (Candida).","Viridans: damaged valve, dental. Staph: skin, lines, normal valve."),
+    C("Endocarditis","p.17, 21","Clinical features of IE.","Four mechanisms: bacteraemia (fever 99%, malaise, arthralgia, headache), valvulitis (changing murmur 21%, heart failure 9%), immune response (Osler's nodes, Roth spots, glomerulonephritis/haematuria, rheumatoid factor), emboli (petechiae 21%, Janeway lesions, splinter haemorrhages, stroke, renal and splenic infarcts). Splenomegaly, clubbing.","Fever in a child with a murmur: IE until proven otherwise."),
+    C("Endocarditis","p.21-22","State the Modified Duke criteria.","Major: positive blood cultures (typical organism); evidence of endocardial involvement on echo (oscillating mass, abscess, new dehiscence, new regurgitation). Minor: predisposing heart condition or IV drug use; fever 38°C or more; vascular phenomena (emboli, septic pulmonary infarcts, mycotic aneurysm, intracranial haemorrhage, conjunctival petechiae, Janeway); immunologic phenomena (GN, Osler, Roth, rheumatoid factor); microbiological evidence not meeting major.","Definite: 2 major, 1 major + 3 minor or 5 minor (outside the slide)."),
+    C("Endocarditis","p.18, 22","Investigations for suspected IE.","At least 3 (ideally 6) blood cultures over 24 hours before antibiotics; echocardiography (transthoracic, trans-oesophageal if needed); FBC (anaemia, leucocytosis), ESR/CRP, urine microscopy (haematuria), CXR, ECG (new heart block), histology of removed valve.","TOE and urine MCS were true in the past paper; abdominal USS was false."),
+    C("Endocarditis","p.18, 22-23","Treatment of IE?","Bactericidal parenteral antibiotics for about 6 weeks: viridans - penicillin or ampicillin or ceftriaxone plus gentamicin; staph - oxacillin/cloxacillin or nafcillin plus gentamicin (vancomycin if MRSA); gram-negative - ceftriaxone, cefotaxime or ceftazidime plus gentamicin. Treat heart failure. Surgery: valve replacement, correction of the defect, embolectomy, remove mycotic aneurysms.","Culture first, then antibiotics."),
+    C("Endocarditis","p.23","Complications of IE.","Heart failure, embolic events (cerebral, renal, pulmonary, coronary), persistent bacteraemia, periannular abscess, prosthetic device malfunction, arrhythmia or new heart block, mycotic aneurysm.","Right-sided lesions cause pulmonary emboli; with a right-to-left shunt emboli go systemic (p.17)."),
+    C("Endocarditis","p.18, 23","Prophylaxis against IE: who, what and when?","For prosthetic valves, previous IE, unrepaired CHD (and cardiac transplant recipients). A single dose 30-60 minutes before the procedure: oral amoxicillin 50 mg/kg, or ampicillin IV. Plus good oral hygiene and health education.","Not the same as ARF prophylaxis (monthly penicillin for years)."),
+    C("Connect it","p.14-23","How are ARF and IE connected?","Rheumatic valve damage is a predisposing lesion for IE. A child with RHD who develops fever and a changing murmur needs blood cultures before any antibiotic or steroid. Both have a criteria set (Jones for ARF, Duke for IE) and both are prevented by antibiotics (long-term penicillin for ARF; single-dose cover for IE).","Both are asked as 'Concerning...' T/F stems and as short notes."),
+  ]
+}]);
+})();
+
+</script>
+<script>
 // Paediatrics · Essays · Endocrinology. Two long "leading to a diagnosis" essays and seven short essays.
 // Points flagged x:true go beyond the slides (the deck covers growth, puberty, CAH, Cushing and the pituitary, p.35-56; it has no
 // lecture on diabetes, thyroid disease, hypoglycaemia or rickets, so those essays are standard teaching shaped by past papers:
@@ -3480,6 +3526,253 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Essays · Rheumatic fever and infective endocarditis. Three long essays (one leading to a diagnosis, one social paediatrics,
+// one IE) and five short essays. Source: Paediatrics CS edited.pdf p.14-23. Points flagged x:true go beyond the slides.
+// Past papers: 2015.2 and 2k17-2k2.558 (ARF), 2013.21, 2k17-2k2.322 and cohort-n.44 (Jones criteria), 2k17-2k2.340 and cohort-n.55
+// (secondary prevention), 2k17-2k2.310, 360 and cohort-n.33 (IE), 2000.55 (socio-economic determinants of RHD), 2007.22 (11-year-old with RHD).
+(function(){
+const P=(t,x)=>x?{t,x:true}:{t};
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-essay-rhd",
+  subject: "Paediatrics",
+  group: "Rheumatic fever & endocarditis",
+  type: "essay",
+  title: "Paediatrics Essays · Rheumatic fever and endocarditis (3 long, 5 short)",
+  essays: [
+    {
+      kind: "Long essay (20 marks) · leading to a diagnosis", marks: 20, topic: "Acute rheumatic fever", src: "p.14-16; past papers 2015.2, 2k17-2k2.369, 2k17-2k2.558",
+      prompt: "A 10-year-old boy is brought with a 5-day history of fever and painful swelling first of the right knee, then the left ankle. He had a sore throat 3 weeks ago. He is breathless on exertion, has a heart rate of 130 per minute and an apical pansystolic murmur. Discuss your diagnosis and management.",
+      tip: "Name the diagnosis in the first line, justify it against the Jones criteria (count the major and minor findings out loud), then give treatment in order: rest, aspirin, steroids for carditis, penicillin, heart failure, secondary prophylaxis.",
+      sections: [
+        { h: "Diagnosis and reasoning", pts: [
+          P("Acute rheumatic fever with carditis and migratory polyarthritis, following group A beta-haemolytic streptococcal pharyngitis (p.14)."),
+          P("Major criteria present: migratory large-joint arthritis and carditis (tachycardia, apical pansystolic murmur of mitral regurgitation, possible failure) (p.14)."),
+          P("Minor criteria possible: fever, raised ESR/CRP/WCC, prolonged PR interval (p.14)."),
+          P("Evidence of recent streptococcal infection: ASOT above 333 Todd units, throat swab (p.15)."),
+          P("Two major criteria plus evidence of strep infection fulfils the Jones rule (p.15)."),
+        ]},
+        { h: "Differential diagnosis", pts: [
+          P("Malaria, sickle cell disease (bone/joint crisis), acute leukaemia, juvenile idiopathic arthritis, infective endocarditis (p.16)."),
+          P("Septic arthritis or osteomyelitis, myocarditis, SLE.", true),
+        ]},
+        { h: "Investigations", pts: [
+          P("ASOT (repeat in 2 weeks), throat swab, ESR, CRP, FBC (p.14-15)."),
+          P("ECG: prolonged PR interval, arrhythmias (p.14)."),
+          P("Chest X-ray: cardiomegaly, left atrium, pulmonary congestion (p.15)."),
+          P("Echocardiography: valve regurgitation, effusion, ventricular function; detects subclinical carditis (p.16).", true),
+          P("Blood cultures, malaria parasite and a sickling test to exclude the differentials.", true),
+        ]},
+        { h: "Treatment of the attack", pts: [
+          P("Admit for bed rest while the inflammation is active (p.15)."),
+          P("Aspirin 50-100 mg/kg/day in divided doses for the arthritis (p.15)."),
+          P("Prednisolone 2 mg/kg/day for carditis, then taper (p.15)."),
+          P("Penicillin to eradicate the streptococcus: IM benzathine or procaine penicillin, or 10 days oral penicillin V (p.15)."),
+          P("Treat heart failure: diuretics, ACE inhibitor; digoxin with caution in active carditis (p.15).", true),
+          P("Treat chorea, if present, with valproate or carbamazepine.", true),
+        ]},
+        { h: "Prevention and follow-up", pts: [
+          P("Secondary prophylaxis: IM benzathine penicillin 1.2 mega units monthly (about 3-4 weekly), or oral penicillin V 125-250 mg bd, erythromycin if allergic (p.15-16)."),
+          P("Duration: 5 years or to age 21 without carditis; 10 years or to 21 with carditis; longer with valve disease.", true),
+          P("Prophylaxis against endocarditis in those with prosthetic valves, previous IE or other high-risk lesions (p.23). Dental hygiene.", true),
+          P("Health education, treat sore throats promptly, improve housing and reduce overcrowding (p.14, 16)."),
+          P("Cardiology follow-up with echo; surgery (valvotomy, valve repair or replacement) for severe residual disease (p.16).", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Long essay (20 marks) · social paediatrics", marks: 20, topic: "Rheumatic heart disease: social and psychosocial aspects", src: "p.14-16; Standard teaching; past papers 2000.55, 2007.22",
+      prompt: "An 11-year-old boy has been diagnosed with rheumatic heart disease. Discuss the socio-economic determinants of rheumatic heart disease in Nigeria and the psychosocial implications for this child and his family.",
+      tip: "Split it clearly into (1) why the disease is common here (determinants) and (2) what it does to the child and family, then (3) what you would do. Social paediatrics essays reward a structure that moves from cause to consequence to action.",
+      sections: [
+        { h: "Why rheumatic heart disease is common: determinants", pts: [
+          P("Commonest acquired heart disease of children in developing countries; 5-15 years; low socio-economic status and overcrowding (p.14)."),
+          P("Overcrowded housing and large families spread group A streptococcus by droplets.", true),
+          P("Poverty, poor nutrition and low parental education delay recognition of sore throat and joint pain.", true),
+          P("Limited access to health care, self-medication and delayed or inadequate antibiotic treatment of pharyngitis mean the first attack is not prevented.", true),
+          P("Poor adherence to monthly benzathine penicillin: cost, distance, injection pain, stock-outs, lack of understanding (p.15-16).", true),
+          P("Few cardiac surgery and echocardiography services; late presentation with established valve disease.", true),
+        ]},
+        { h: "Impact on the child", pts: [
+          P("Exercise limitation, breathlessness, fatigue and recurrent hospital admissions; heart failure (p.15).", true),
+          P("Missed school and poor academic progress; stigma and restriction from sport.", true),
+          P("Fear, anxiety and depression; loss of self-esteem, dependence on others.", true),
+          P("Recurrent attacks worsen the valve damage if prophylaxis stops (p.16).", true),
+        ]},
+        { h: "Impact on the family", pts: [
+          P("Cost of long-term injections, drugs, transport, investigations, surgery; loss of parental income.", true),
+          P("Parental guilt and stress; strain on siblings; marital pressure.", true),
+          P("Fear of death and of future surgery; belief that the illness is spiritual leading to delay or to use of alternative care.", true),
+        ]},
+        { h: "Management and prevention", pts: [
+          P("Treat the sore throat early and prevent the first attack (primary prevention) (p.15-16)."),
+          P("Secondary prophylaxis with benzathine penicillin; health education to encourage adherence (p.15-16)."),
+          P("Counselling and support; link with school: allow regular follow-up, adapt sport.", true),
+          P("Community education, improved housing, school health programmes, subsidised care.", true),
+          P("Echo screening and cardiac surgery referral for severe disease (p.16).", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Long essay (20 marks) · leading to a diagnosis", marks: 20, topic: "Infective endocarditis", src: "p.16-23; past papers 2k17-2k2.310, 2k17-2k2.360, cohort-n.33",
+      prompt: "A 6-year-old girl with a known ventricular septal defect has had fever for 5 weeks, weight loss and joint pains. She had a dental extraction 2 months ago. She has splinter haemorrhages, finger clubbing, splenomegaly and a changing systolic murmur. Discuss your diagnosis and management.",
+      tip: "Start with 'infective endocarditis (subacute)', then explain the predisposing lesion, the organism and the route. Quote the Duke criteria. Management order: blood cultures first, then echo, then bactericidal antibiotics for 6 weeks, watch complications, surgery if indicated, prevention.",
+      sections: [
+        { h: "Diagnosis and reasoning", pts: [
+          P("Subacute infective endocarditis on a VSD, probably Streptococcus viridans after a dental procedure (p.16-18, 20)."),
+          P("Predisposition: uncorrected VSD, which damages the endothelium and forms a nidus for platelet-fibrin thrombus (p.17, 20)."),
+          P("Fever, weight loss and arthralgia (p.21); changing murmur, splenomegaly (p.21)."),
+          P("Late immunological signs: clubbing, splinter haemorrhages, Osler's nodes, Janeway lesions, Roth spots, haematuria (p.17)."),
+          P("Modified Duke criteria: predisposing heart disease, fever and immunological and vascular phenomena are minor; positive blood cultures and echo evidence of endocardial involvement are the major criteria needed (p.21-22)."),
+        ]},
+        { h: "Differential diagnosis", pts: [
+          P("Acute rheumatic fever, sickle cell disease, myocarditis, pericardial effusion, cardiomyopathy (p.18)."),
+          P("Typhoid and other septicaemias, tuberculosis, HIV, malignancy, SLE and other collagen diseases (p.19)."),
+        ]},
+        { h: "Investigations", pts: [
+          P("At least three, ideally six, blood cultures over 24 hours before any antibiotic (p.18, 22)."),
+          P("Echocardiography for vegetations, abscess and regurgitation, trans-oesophageal if needed (p.18, 21-22)."),
+          P("FBC (anaemia, leucocytosis), ESR/CRP, urine microscopy (haematuria), rheumatoid factor (p.21-22)."),
+          P("Chest X-ray and ECG: failure, septic emboli, new heart block (p.22).")
+        ]},
+        { h: "Treatment", pts: [
+          P("Admit; parenteral bactericidal antibiotics for about 6 weeks (p.18, 22)."),
+          P("Viridans streptococci: penicillin or ampicillin or ceftriaxone, with gentamicin (p.18, 22)."),
+          P("Staph aureus: oxacillin/cloxacillin or nafcillin with gentamicin; vancomycin if MRSA (p.18, 22)."),
+          P("Treat heart failure (p.23)."),
+          P("Surgery: valve replacement, correction of the heart defect, embolectomy, removal of mycotic aneurysms (p.23). Indications: refractory failure, abscess, persistent bacteraemia, large vegetations or embolism, fungal IE.", true),
+          P("Monitor temperature, CRP, repeat echo and ECG for PR prolongation (p.23).", true),
+        ]},
+        { h: "Complications and prevention", pts: [
+          P("Heart failure, emboli (brain, kidney, lung, coronaries), persistent bacteraemia, periannular abscess, new heart block, mycotic aneurysm (p.23)."),
+          P("Repair the VSD after the infection is cleared; dental hygiene and health education (p.23).", true),
+          P("Antibiotic prophylaxis before procedures for high-risk groups: a single dose 30-60 minutes before, oral amoxicillin 50 mg/kg (p.23)."),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Modified Jones criteria", src: "p.14-15; past papers 2013.21, 2k17-2k2.322, cohort-n.44",
+      prompt: "Write short notes on the modified Jones criteria.",
+      tip: "State what they are for, list major (5) and minor (5), give the rule, then the caveats. Four lines of caveats lift the mark.",
+      sections: [
+        { h: "Purpose", pts: [
+          P("Clinical criteria for the diagnosis of acute rheumatic fever (p.14)."),
+        ]},
+        { h: "Major criteria (5)", pts: [
+          P("Carditis: heart failure, murmurs, pericardial friction rub, tachycardia (p.14)."),
+          P("Arthritis: pain and swelling, fleeting/migratory, large joints (p.14)."),
+          P("Subcutaneous nodules (p.14)."),
+          P("Erythema marginatum (p.14)."),
+          P("Sydenham's chorea (p.14)."),
+        ]},
+        { h: "Minor criteria (5)", pts: [
+          P("Fever, arthralgia, previous ARF (p.14)."),
+          P("Raised acute-phase reactants (WCC, ESR, CRP) (p.14)."),
+          P("Prolonged PR interval on ECG (p.14)."),
+        ]},
+        { h: "Rule and caveats", pts: [
+          P("2 major, or 1 major + 2 minor, plus evidence of recent streptococcal infection (ASOT above 333 Todd units) (p.15)."),
+          P("Chorea or indolent carditis may stand alone; recurrences in known RHD need fewer criteria.", true),
+          P("The 2015 AHA revision: low-risk versus moderate/high-risk populations; subclinical carditis on echo counts; monoarthritis/polyarthralgia accepted in high-risk groups.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Prevention of rheumatic fever and rheumatic heart disease", src: "p.15-16; past papers 2k17-2k2.340, cohort-n.55, 2017.143",
+      prompt: "Write short notes on the prevention of rheumatic fever and rheumatic heart disease.",
+      tip: "Primary, secondary (with drug, dose, route, duration) and general measures. Mention 'deep IM', never IV.",
+      sections: [
+        { h: "Primary prevention", pts: [
+          P("Treat streptococcal pharyngitis promptly: IM procaine/benzathine penicillin or 10 days of oral penicillin V (p.15-16)."),
+          P("Prevents the first attack if started within about 9 days of the sore throat.", true),
+        ]},
+        { h: "Secondary prevention", pts: [
+          P("IM benzathine penicillin 1.2 mega units monthly (about 3-4 weekly) (p.15-16)."),
+          P("Or oral penicillin V 125-250 mg twice daily (p.15)."),
+          P("Erythromycin 125-250 mg twice daily if allergic to penicillin (p.15)."),
+          P("Duration: 5 years or to 21; 10 years or to 21 with carditis; lifelong in severe valve disease.", true),
+        ]},
+        { h: "General measures", pts: [
+          P("Health education on adherence, early treatment of sore throat (p.16)."),
+          P("Better housing, less overcrowding, access to care (p.14).", true),
+          P("Prophylaxis against infective endocarditis for patients with prosthetic valves or previous IE (p.23).", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Chronic rheumatic heart disease", src: "p.15-16; past papers paed.94, paed.99",
+      prompt: "Write short notes on chronic rheumatic heart disease in a child.",
+      tip: "Definition, lesions in order of frequency, clinical features by lesion, investigations, treatment. Link to prevention.",
+      sections: [
+        { h: "Definition and lesions", pts: [
+          P("Permanent valvular damage after ARF with chronic cardiac decompensation (p.15)."),
+          P("Mitral incompetence, mitral stenosis, aortic incompetence (p.15)."),
+        ]},
+        { h: "Clinical features", pts: [
+          P("Symptoms: breathlessness, cough, easy fatigability, PND, palpitations, swelling (p.15)."),
+          P("Signs: active apex, raised JVP, loud P2; apical pansystolic murmur to the axilla (MR); apical mid-diastolic murmur (MS); diastolic murmur with collapsing pulses (AI); heart failure (p.15)."),
+        ]},
+        { h: "Investigations", pts: [
+          P("CXR: left atrial and left ventricular enlargement, increased pulmonary vascular markings (p.15)."),
+          P("ECG, echocardiography, cardiac catheterisation (p.15-16)."),
+        ]},
+        { h: "Treatment", pts: [
+          P("Medical: heart failure treatment, secondary prophylaxis, endocarditis prophylaxis (p.16)."),
+          P("Surgical: balloon valvotomy, valve repair or replacement (p.16).", true),
+          P("Differential: endomyocardial fibrosis, other cardiomyopathies, congenital MR, MS, AS, VSD (p.16)."),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Infective endocarditis: diagnosis", src: "p.17-22; past papers 2k17-2k2.310, 2k17-2k2.366",
+      prompt: "Write short notes on the diagnosis of infective endocarditis in children.",
+      tip: "Clinical clues in four mechanisms, then investigations, then the Duke criteria.",
+      sections: [
+        { h: "Clinical clues", pts: [
+          P("High index of suspicion in a child with heart disease and prolonged fever (p.17)."),
+          P("Fever, malaise, arthralgia, changing murmur, heart failure, petechiae, hepatosplenomegaly (p.21)."),
+          P("Embolic and immune signs: clubbing, splinter haemorrhages, Osler's nodes, Janeway lesions, Roth spots, haematuria (p.17)."),
+        ]},
+        { h: "Investigations", pts: [
+          P("Three to six blood cultures before antibiotics (p.18)."),
+          P("Echocardiography (TTE; TOE if needed): vegetation, abscess, regurgitation (p.22)."),
+          P("FBC, ESR/CRP, urine microscopy, CXR, ECG (p.22)."),
+        ]},
+        { h: "Modified Duke criteria", pts: [
+          P("Major: typical organisms in blood cultures; endocardial involvement on echo (p.21)."),
+          P("Minor: predisposing heart disease, fever 38°C or more, vascular and immunologic phenomena, other microbiological evidence (p.21-22)."),
+          P("Definite = 2 major, 1 major + 3 minor or 5 minor.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Prophylaxis against infective endocarditis", src: "p.18, 23; past papers 2k17-2k2.364",
+      prompt: "Write short notes on the prevention of infective endocarditis in children with heart disease.",
+      tip: "Who is at risk, what procedures, which drug, when, and non-antibiotic measures. State clearly that this is a single dose.",
+      sections: [
+        { h: "Principle", pts: [
+          P("Achieve adequate antibiotic blood levels before the procedure so bacteria in the blood are killed before they lodge on the heart (p.23)."),
+        ]},
+        { h: "Who needs it", pts: [
+          P("Prosthetic cardiac valves, previous IE, unrepaired congenital heart disease, cardiac transplant recipients (p.23)."),
+          P("Low-risk lesions (ASD, pulmonary stenosis) need not (p.17).")
+        ]},
+        { h: "Regimen", pts: [
+          P("Single dose 30-60 minutes before the procedure (p.23)."),
+          P("Oral amoxicillin 50 mg/kg; ampicillin IV if unable to take oral (p.23)."),
+          P("Dental procedures involving gingival manipulation are the main trigger.", true),
+        ]},
+        { h: "Other measures", pts: [
+          P("Identify patients at risk, oral and dental hygiene, health education (p.18, 23)."),
+          P("Early repair of congenital lesions where possible.", true),
+        ]},
+      ]
+    },
+  ]
+}]);
+})();
+
+</script>
+<script>
 // Paediatrics · Single-best-option MCQ · Pulmonology (asthma, croup, bronchiolitis, URTI, pneumonia).
 // Source: Paediatrics CS edited.pdf p.282-316. src shows the slide page; "Standard teaching" marks points beyond the deck.
 window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
@@ -3570,6 +3863,91 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Single-best-option MCQ · Acute rheumatic fever, rheumatic heart disease and infective endocarditis.
+// Source: Paediatrics CS edited.pdf p.14-23. src shows the slide page; "Standard teaching" marks points beyond the deck.
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-mcq-rhd",
+  subject: "Paediatrics",
+  group: "Rheumatic fever & endocarditis",
+  type: "mcq",
+  title: "Paediatrics MCQ · Rheumatic fever and endocarditis (14 single best option)",
+  negativeMarking: false,
+  questions: [
+    { topic: "ARF: cause", src: "p.14",
+      stem: "Acute rheumatic fever follows infection with:",
+      options: ["Staphylococcus aureus", "Group A beta-haemolytic Streptococcus pyogenes", "Streptococcus pneumoniae", "Streptococcus viridans", "Group B Streptococcus"],
+      answer: 1,
+      explain: "Group A beta-haemolytic strep in the throat (p.14). Viridans strep causes endocarditis, not ARF. Link the two: rheumatic valves are the soil in which viridans strep later grows." },
+    { topic: "ARF: pathology", src: "p.14",
+      stem: "The histological hallmark of rheumatic carditis is:",
+      options: ["Osler's node", "Reed-Sternberg cell", "Aschoff nodule", "Roth spot", "Janeway lesion"],
+      answer: 2,
+      explain: "Aschoff nodule (p.14). Osler, Roth and Janeway are signs of infective endocarditis (p.17, 21-22)." },
+    { topic: "Jones criteria", src: "p.14",
+      stem: "Which of the following is a MINOR Jones criterion?",
+      options: ["Sydenham's chorea", "Carditis", "Erythema marginatum", "Prolonged PR interval", "Subcutaneous nodules"],
+      answer: 3,
+      explain: "Minor: fever, arthralgia, previous ARF, raised acute-phase reactants (ESR, CRP, WCC) and prolonged PR interval (p.14). The other four are major." },
+    { topic: "Jones criteria", src: "p.15",
+      stem: "A 10-year-old has fever, migratory arthritis of the knees and ankles, and an apical pansystolic murmur 2 weeks after a sore throat. Which finding is needed to complete the diagnosis of ARF?",
+      options: ["Positive blood culture", "Evidence of recent streptococcal infection (e.g. ASOT above 333 Todd units)", "Subcutaneous nodules", "Echocardiographic vegetation", "Positive rheumatoid factor"],
+      answer: 1,
+      explain: "Two major criteria (carditis and arthritis) are present, so the Jones rule is met once there is evidence of recent streptococcal infection (p.15). Nodules are not needed; a vegetation or positive culture would point to endocarditis." },
+    { topic: "Jones criteria: chorea", src: "Standard teaching",
+      stem: "An 11-year-old girl has 3 weeks of emotional lability, clumsiness, dropping things and involuntary movements. ASOT is normal. What is the best statement?",
+      options: ["ARF is excluded by the normal ASOT", "Chorea can be the only manifestation and the ASOT may be normal because it appears late", "She needs a lumbar puncture first", "Steroids are the treatment of choice", "It always occurs with arthritis"],
+      answer: 1,
+      explain: "Sydenham's chorea appears 1-6 months after the infection, when the titre has fallen, and can be the sole major criterion. Echo to look for carditis, secondary prophylaxis, valproate or carbamazepine for severe cases." },
+    { topic: "ARF: carditis", src: "p.15",
+      stem: "In chronic rheumatic heart disease in childhood, the commonest valve lesion is:",
+      options: ["Mitral stenosis", "Mitral incompetence", "Aortic stenosis", "Tricuspid regurgitation", "Pulmonary stenosis"],
+      answer: 1,
+      explain: "Mitral incompetence, then mitral stenosis, then aortic incompetence (p.15). Pure mitral stenosis takes years and is commoner in adults. Tricuspid is rare (p.14)." },
+    { topic: "ARF: treatment", src: "p.15",
+      stem: "Which drug is added for rheumatic carditis with cardiomegaly or heart failure?",
+      options: ["Prednisolone 2 mg/kg/day", "Oral penicillin V alone", "Haloperidol", "Gentamicin", "Warfarin"],
+      answer: 0,
+      explain: "Bed rest, aspirin 50-100 mg/kg/day, prednisolone 2 mg/kg/day for carditis, penicillin to eradicate the organism, plus anti-failure treatment (p.15). Haloperidol is for severe chorea." },
+    { topic: "ARF: prophylaxis", src: "p.15-16",
+      stem: "Which regimen is correct for secondary prevention of rheumatic fever?",
+      options: ["IV benzathine penicillin monthly", "IM benzathine penicillin 1.2 mega units about monthly, for years", "Oral ciprofloxacin for 10 days", "Oral penicillin for 10 days once", "Aspirin daily"],
+      answer: 1,
+      explain: "Deep IM benzathine penicillin (p.15-16); oral penicillin V 125-250 mg bd or erythromycin if allergic. IV benzathine is a trap option from the past paper. Duration is years (5 years or to age 21 without carditis, longer with carditis; outside the slide)." },
+    { topic: "IE: organism", src: "p.16-18",
+      stem: "A 6-year-old with a small VSD develops 5 weeks of low-grade fever, weight loss and a changing murmur after dental extraction. The most likely organism is:",
+      options: ["Staphylococcus aureus", "Streptococcus viridans", "Pseudomonas aeruginosa", "Candida albicans", "Group A streptococcus"],
+      answer: 1,
+      explain: "Subacute endocarditis on a damaged valve after dental manipulation: viridans streptococci (p.16, 18, 20). Acute fulminant disease on a normal valve is Staph aureus." },
+    { topic: "IE: investigation", src: "p.18, 22",
+      stem: "The most important investigation to do before starting antibiotics in suspected infective endocarditis is:",
+      options: ["Chest X-ray", "At least three blood cultures", "Abdominal ultrasound", "Lumbar puncture", "Urinalysis"],
+      answer: 1,
+      explain: "At least three, ideally six, blood cultures over 24 hours before treatment (p.18, 22). Echo is the second pillar. Abdominal USS was a false option in the past paper." },
+    { topic: "Duke criteria", src: "p.21-22",
+      stem: "Which is a MAJOR Modified Duke criterion?",
+      options: ["Fever of 38°C or more", "Osler's nodes", "Predisposing heart disease", "Oscillating mass on a valve on echocardiography", "Janeway lesions"],
+      answer: 3,
+      explain: "Major = typical organism in blood cultures and endocardial involvement (oscillating mass, abscess, new regurgitation or new dehiscence of a prosthetic valve) (p.21). The others are minor (p.21-22)." },
+    { topic: "IE: signs", src: "p.17, 21-22",
+      stem: "Painless, flat red macules on the palms and soles in a patient with endocarditis are called:",
+      options: ["Osler's nodes", "Roth spots", "Janeway lesions", "Splinter haemorrhages", "Erythema marginatum"],
+      answer: 2,
+      explain: "Janeway lesions are painless embolic macules; Osler's nodes are tender pulp nodules; Roth spots are retinal haemorrhages with pale centres (p.17, 21-22). Erythema marginatum belongs to ARF." },
+    { topic: "IE: treatment", src: "p.18, 22",
+      stem: "Which is the most appropriate empirical combination for staphylococcal endocarditis on a native valve in the slide's regimen?",
+      options: ["Oxacillin (cloxacillin) plus gentamicin, vancomycin if indicated", "Oral amoxicillin alone", "Metronidazole", "Erythromycin", "Ciprofloxacin alone"],
+      answer: 0,
+      explain: "Oxacillin or nafcillin plus gentamicin; vancomycin for MRSA (p.22). Treatment is parenteral and bactericidal, for about six weeks (p.22)." },
+    { topic: "IE: prophylaxis", src: "p.23",
+      stem: "In which patient is antibiotic prophylaxis before a dental extraction MOST clearly indicated?",
+      options: ["Child with a small ASD", "Child with rheumatic mitral regurgitation on native valve", "Child with a prosthetic heart valve", "Child with innocent murmur", "Child with mild pulmonary stenosis"],
+      answer: 2,
+      explain: "Indicated for prosthetic valves, previous IE, unrepaired CHD and cardiac transplant recipients (p.23); ASD and PS are low-risk (p.17). A single dose, amoxicillin 50 mg/kg orally 30-60 minutes before (p.23)." },
+  ]
+}]);
+
+</script>
+<script>
 // Where to find the answers: Paediatrics CS slide pages for every T/F stem and picture (checked against Paediatrics-slides.txt).
 // Format per stem, in bank order: pg = slide pages that answer the in-slide statements ("" = nothing in the deck);
 // out = 0-based indexes of statements (a=0, b=1, ...) whose answer is OUTSIDE the slides (standard teaching).
@@ -3606,6 +3984,11 @@ window.PAGE_MAP["pa-tf-id-5"] = [{"pg": "p.139, 142", "out": []}, {"pg": "p.142,
 window.PAGE_MAP["pa-pics-id"] = [{"pg": "p.128-130", "out": []}, {"pg": "p.128, 130", "out": [3]}, {"pg": "p.136-137", "out": []}, {"pg": "p.137-138", "out": [4]}, {"pg": "p.154, 156", "out": []}, {"pg": "p.153, 155, 157", "out": []}, {"pg": "p.153-155", "out": []}, {"pg": "p.143, 146-148", "out": []}, {"pg": "p.134-136", "out": []}, {"pg": "p.160-162, 169", "out": [4]}, {"pg": "p.160, 162", "out": [2, 3]}, {"pg": "p.160-161", "out": [3, 4]}, {"pg": "p.125", "out": [0, 3, 4]}];
 window.PAGE_MAP["pa-tf-pulm-1"] = [{"pg": "p.282-284", "out": []}, {"pg": "p.284", "out": []}, {"pg": "p.285-286", "out": []}, {"pg": "p.282, 286-287", "out": []}, {"pg": "p.286-287", "out": []}, {"pg": "p.288, 292", "out": []}, {"pg": "p.288-289, 293", "out": []}, {"pg": "p.289-290", "out": [4]}, {"pg": "p.293", "out": []}, {"pg": "p.293-294", "out": [4]}];
 window.PAGE_MAP["pa-tf-pulm-2"] = [{"pg": "p.295", "out": []}, {"pg": "p.295-296", "out": []}, {"pg": "p.297-298", "out": []}, {"pg": "p.299-300, 314-315", "out": []}, {"pg": "p.300-302, 305", "out": []}, {"pg": "p.302-304", "out": []}, {"pg": "p.306-309", "out": []}, {"pg": "p.307, 309-310", "out": []}, {"pg": "p.311-312", "out": []}, {"pg": "p.306, 313-314", "out": []}, {"pg": "p.314-316", "out": [4]}];
+
+// Rheumatic fever & endocarditis
+window.PAGE_MAP["pa-tf-rhd-1"] = [{"pg": "p.14", "out": []}, {"pg": "p.14", "out": [4]}, {"pg": "p.14", "out": [3, 4]}, {"pg": "p.14", "out": [4]}, {"pg": "p.15", "out": [3, 4]}, {"pg": "", "out": [0, 1, 2, 3, 4]}, {"pg": "p.14-15", "out": []}, {"pg": "p.15", "out": [4]}, {"pg": "p.15-16", "out": [4]}, {"pg": "p.16", "out": [4]}];
+window.PAGE_MAP["pa-tf-rhd-2"] = [{"pg": "p.16, 20", "out": []}, {"pg": "p.17, 20", "out": []}, {"pg": "p.16-18, 20", "out": [4]}, {"pg": "p.17, 21", "out": []}, {"pg": "p.17, 23", "out": []}, {"pg": "p.18, 21-22", "out": []}, {"pg": "p.21-22", "out": [4]}, {"pg": "p.18, 22-23", "out": []}, {"pg": "p.18, 23", "out": [1]}];
+window.PAGE_MAP["pa-pics-rhd"] = [{"pg": "p.14", "out": [1, 2, 3, 4]}, {"pg": "p.14", "out": [1, 2, 3, 4]}, {"pg": "p.14", "out": [0, 1, 3, 4]}, {"pg": "p.14", "out": [1, 2, 3]}, {"pg": "p.17, 22", "out": [3]}, {"pg": "p.17, 21", "out": [3]}, {"pg": "p.17, 21", "out": []}, {"pg": "p.17", "out": [1, 2, 3, 4]}, {"pg": "p.21-22", "out": [3]}, {"pg": "p.16, 20", "out": [2]}];
 
 </script>
 <script>
@@ -3947,6 +4330,149 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
         ["Polio can be cured by antibiotics.", false, "No specific treatment; prevention by vaccine."],
       ]),
       explain: "Polio emergence in an IDP camp was a past social-paediatrics essay (cohort-n.1): discuss the medical, psychosocial and economic effects, and the immunisation response." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · Picture test (picture + 5 True/False statements each, negative marking −½) · Rheumatic fever and infective endocarditis.
+// Pictures are real clinical photographs, a histology slide, an echocardiogram and a pathology specimen from Wikimedia Commons, linked live
+// (not copied) with licence and author in each caption. The two rheumatic-nodule images are watercolour paintings from the Wellcome Collection.
+// Statements are written against Paediatrics CS edited.pdf p.14-23 (and standard teaching where marked).
+// Real exam picture stations on these themes: Osler's nodes / Janeway lesions / splinter haemorrhages, erythema marginatum, rheumatic nodules, clubbing.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+const F=n=>"https://commons.wikimedia.org/wiki/Special:FilePath/"+n+"?width=720";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-pics-rhd",
+  subject: "Paediatrics",
+  group: "Rheumatic fever & endocarditis",
+  type: "pics",
+  title: "Paediatrics Picture test · Rheumatic fever and endocarditis (10 pictures)",
+  negativeMarking: true,
+  secPerQ: 90,
+  questions: [
+    { topic: "Picture: erythema marginatum", src: "p.14; "+S, img: F("Erythema marginatum.jpg"),
+      credit: "Erythema marginatum on the forearm of a child after a warm bath. Wikimedia Commons, CC BY-SA 4.0, uploader Adsie.",
+      stem: "A 9-year-old with a sore throat 3 weeks ago, fever and swollen knees now has this rash on the arm and trunk.",
+      items: I([
+        ["This rash is erythema marginatum, a major criterion of ARF.", true, "Slide p.14."],
+        ["It is itchy and persistent for weeks.", false, "It is non-itchy and evanescent: it comes and goes within hours, and is brought out by warmth."],
+        ["It usually affects the face.", false, "Trunk and proximal limbs; the face is spared."],
+        ["It is common in Nigerian children with ARF.", false, "Uncommon; when present it usually accompanies carditis."],
+        ["Echocardiography and an ASOT are appropriate next investigations.", true, "Look for carditis; show a recent streptococcal infection."],
+      ]),
+      explain: "Station version: (a) name the sign (b) name the disease (c) other four major criteria (d) one investigation proving recent streptococcal infection (e) treatment. Differential: viral exanthem, urticaria, drug rash." },
+
+    { topic: "Picture: rheumatic nodules (hand)", src: "p.14; "+S, img: F("Subcutaneous rheumatic nodules on the hand Wellcome L0062024.jpg"),
+      credit: "Watercolour of subcutaneous rheumatic nodules on the hand, Thomas Godart. Wellcome Collection (L0062024), CC BY 4.0, via Wikimedia Commons.",
+      stem: "A child with fever, joint pains and a murmur. A watercolour from the Wellcome Collection shows these lesions over the finger joints.",
+      items: I([
+        ["These are subcutaneous nodules, a major criterion of ARF.", true, "Slide p.14."],
+        ["They are typically painless and firm and lie over bony prominences and tendons.", true, "Standard teaching."],
+        ["They are usually tender and the overlying skin is red and hot.", false, "Painless; the skin is normal."],
+        ["Their presence suggests associated carditis.", true, "Past paper: nodules go with carditis."],
+        ["They are the commonest major criterion.", false, "Arthritis and carditis are commoner; nodules are rare."],
+      ]),
+      explain: "Other sites: elbows, knees, occiput, scalp, spine. They last about 1-3 weeks. Differential: rheumatoid nodules, ganglia, gouty tophi. Rheumatoid nodules are the one to name because JIA is on the ARF differential (p.16)." },
+
+    { topic: "Picture: rheumatic nodules (ears, knee)", src: "p.14; "+S, img: F("Subcutaneous rheumatic nodules on the ears and knee Wellcome L0062023.jpg"),
+      credit: "Watercolour of subcutaneous rheumatic nodules on the ears and knee, Thomas Godart. Wellcome Collection (L0062023), CC BY 4.0, via Wikimedia Commons.",
+      stem: "This painting shows nodules on the ear and over the knee in a patient with rheumatic fever.",
+      items: I([
+        ["Nodules can occur over extensor surfaces such as the knees and elbows.", true, "Standard teaching."],
+        ["The nodules are caused by direct infection of the skin by the streptococcus.", false, "They are immune-mediated granulomatous lesions (Aschoff-like), not infection."],
+        ["Their presence adds a major criterion to the diagnosis.", true, "Slide p.14."],
+        ["Salicylates are given to dissolve the nodules.", false, "Nodules resolve with treatment of the attack; aspirin treats the arthritis."],
+        ["Echocardiography should be done because carditis is frequently present.", true, "Nodules are strongly associated with carditis."],
+      ]),
+      explain: "Link to the Aschoff nodule (hallmark, p.14): the histological lesion in the heart. The subcutaneous nodule has the same type of inflammatory granuloma." },
+
+    { topic: "Picture: Aschoff body", src: "p.14", img: F("Aschoff Body in Rheumatic Myocarditis.jpg"),
+      credit: "Aschoff body in rheumatic myocarditis (histology). Wikimedia Commons, CC BY-SA 2.0, Ed Uthman, MD.",
+      stem: "This is a histology slide of myocardium from a patient who died of rheumatic carditis.",
+      items: I([
+        ["The lesion shown is the hallmark of rheumatic carditis.", true, "Slide p.14: Aschoff nodule."],
+        ["It is found in the myocardium and perivascular connective tissue.", true, "Standard teaching."],
+        ["It contains Anitschkow cells (caterpillar-like nuclei) and giant cells.", true, "Standard teaching."],
+        ["It is a bacterial abscess full of neutrophils.", false, "It is a granuloma, not an abscess; the streptococcus is not in the heart."],
+        ["The disease it indicates is a pancarditis.", true, "Endocardium, myocardium and pericardium (p.14)."],
+      ]),
+      explain: "Pathology line to remember: sore throat, antibodies cross-react with heart, Aschoff nodule, pancarditis, mitral valve scarring, RHD." },
+
+    { topic: "Picture: Janeway lesion", src: "p.17, 22", img: F("Janeway lesion.JPG"),
+      credit: "Janeway lesions on the palm of a 36-year-old man with staphylococcal endocarditis. Wikimedia Commons, CC BY-SA 4.0, uploader Warfieldian.",
+      stem: "Painless erythematous macules on the palm of a patient with fever and a new murmur.",
+      items: I([
+        ["These are Janeway lesions.", true, "Slide p.17, 22."],
+        ["They are painful, tender nodules in the finger pulps.", false, "That describes Osler's nodes; Janeway lesions are painless macules on palms and soles."],
+        ["They are a vascular (embolic) phenomenon and a minor Duke criterion.", true, "Slide p.22."],
+        ["They are classically caused by septic emboli, so they are more typical of acute (staphylococcal) endocarditis.", true, "Standard teaching."],
+        ["Blood cultures should be taken before antibiotics.", true, "Slide p.18."],
+      ]),
+      explain: "Memory: Janeway = no pain (Jane is painless, on the palms); Osler = ouch (immune, painful, pulp). Janeway is embolic/vascular, Osler and Roth are immunological." },
+
+    { topic: "Picture: Osler's nodes (hand)", src: "p.17, 21", img: F("Osler Nodules Hand.jpg"),
+      credit: "Osler's nodes on the left hand of a 43-year-old man with subacute bacterial endocarditis. Wikimedia Commons, CC BY-SA 4.0, Roberto J. Galindo.",
+      stem: "Tender, raised, red-purple lesions in the finger pulps in a patient with fever for 6 weeks.",
+      items: I([
+        ["These are Osler's nodes.", true, "Slide p.17, 21."],
+        ["They are an immunologic (immune-complex) phenomenon and a minor Duke criterion.", true, "Slide p.21."],
+        ["They are painless.", false, "Osler's nodes are tender (Janeway lesions are painless)."],
+        ["They are classically found in subacute endocarditis.", true, "Standard teaching."],
+        ["They are a major Duke criterion.", false, "Minor criterion (immunologic phenomena, p.21)."],
+      ]),
+      explain: "Station questions often combine this with clubbing, splinter haemorrhages and Roth spots: 'name the signs, name the condition, name the criteria, name the investigation'." },
+
+    { topic: "Picture: Osler's lesions (foot)", src: "p.17, 21", img: F("Osler Spots foot.jpg"),
+      credit: "Osler's lesions on the left foot and first toe of a 43-year-old man with subacute bacterial endocarditis. Wikimedia Commons, CC BY-SA 4.0, Roberto J. Galindo.",
+      stem: "Purple tender lesions on the toe pad of a patient with a heart murmur and fever.",
+      items: I([
+        ["The commonest underlying diagnosis is infective endocarditis.", true, "Slide p.17, 21."],
+        ["The commonest organism in subacute disease is Streptococcus viridans.", true, "Slide p.16, 18."],
+        ["Antibiotics are usually continued for about six weeks.", true, "Slide p.22."],
+        ["A single blood culture before antibiotics is enough.", false, "At least three, ideally six (p.18)."],
+        ["Echocardiography is not needed if blood cultures are positive.", false, "Echo is a major criterion and shows vegetations, abscess or regurgitation (p.21-22)."],
+      ]),
+      explain: "The same patient as the hand picture. Always look at hands and feet, nails, conjunctivae and fundi in a child with prolonged fever and a murmur." },
+
+    { topic: "Picture: clubbing", src: "p.17; "+S, img: F("Clubbing fingers 2.jpg"),
+      credit: "Finger clubbing. Wikimedia Commons, CC BY-SA 4.0, uploader Wesalius.",
+      stem: "This child's fingers have this deformity.",
+      items: I([
+        ["The sign shown is digital clubbing.", true, "Slide p.17: a late manifestation of subacute endocarditis."],
+        ["It occurs in subacute infective endocarditis and in cyanotic congenital heart disease.", true, "Standard teaching."],
+        ["Loss of the angle between the nail and nail fold and a bulbous finger tip are features.", true, "Standard teaching."],
+        ["It is a feature of acute rheumatic fever.", false, "Not a feature of ARF."],
+        ["It is also found in bronchiectasis and cystic fibrosis.", true, "Standard teaching: suppurative lung disease."],
+      ]),
+      explain: "Cardiac causes in a child: cyanotic CHD (Fallot, TGA) and infective endocarditis. These are exactly the lesions that develop endocarditis, so look for clubbing plus fever (hypercyanotic spells, brain abscess and IE all complicate cyanotic CHD, p.12)." },
+
+    { topic: "Picture: echocardiogram", src: "p.21-22", img: F("Aortic valve endocarditis with vegetation E00121 (CardioNetworks ECHOpedia).jpg"),
+      credit: "Colour Doppler echocardiogram, aortic valve endocarditis with a regurgitant jet. CardioNetworks ECHOpedia, CC BY-SA 3.0, via Wikimedia Commons.",
+      stem: "A colour Doppler echocardiogram from a patient with aortic valve endocarditis.",
+      items: I([
+        ["Echocardiography is a major diagnostic criterion for endocarditis.", true, "Slide p.22."],
+        ["The coloured jet shows valvular regurgitation, which counts as a major criterion when new.", true, "Slide p.21."],
+        ["Other echo major criteria are an oscillating vegetation and a cardiac abscess.", true, "Slide p.21."],
+        ["A normal transthoracic echo completely excludes endocarditis.", false, "Small vegetations may be missed; trans-oesophageal echo is more sensitive."],
+        ["Aortic regurgitation would give a diastolic murmur with collapsing pulses.", true, "Slide p.15 (AI)."],
+      ]),
+      explain: "Echo + blood cultures are the two major criteria. A new regurgitant murmur in a febrile child with a known lesion is endocarditis until proven otherwise." },
+
+    { topic: "Picture: vegetation (pathology)", src: "p.16, 20", img: F("Gross pathology of vegetation of infective endocarditis, annotated.jpg"),
+      credit: "Gross pathology of a vegetation of infective endocarditis. Wikimedia Commons, CC0, Mikael Häggström, M.D.",
+      stem: "A pathology specimen from a patient who died of endocarditis.",
+      items: I([
+        ["The lesion is a vegetation: platelets, fibrin and microorganisms on a damaged valve.", true, "Pathogenesis p.20: non-bacterial thrombotic endocarditis, then bacteraemia and adherence."],
+        ["Vegetations can embolise to the brain, kidneys, spleen and lungs.", true, "Slide p.17, 23."],
+        ["Vegetations are a feature of ARF carditis.", false, "Not in ARF: the 'vegetations' of rheumatic valvulitis are tiny verrucae along the closure line (verrucous endocarditis), not friable infected masses (standard teaching)."],
+        ["Vegetations on the tricuspid valve cause septic pulmonary emboli.", true, "Slide p.17."],
+        ["Surgery may be needed for large vegetations with embolism.", true, "Slide p.23 (valve replacement, embolectomy)."],
+      ]),
+      explain: "Pathogenesis in three steps (p.20): endothelial damage, non-bacterial thrombotic vegetation, transient bacteraemia with adherence. Chronic RHD valves are scarred, thickened and fused; IE valves carry friable infected vegetations." },
   ]
 }]);
 })();
@@ -5697,6 +6223,256 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · True/False (5 statements per stem, negative marking −½) · Acute rheumatic fever and rheumatic heart disease.
+// Source: Paediatrics CS edited.pdf p.14-16 (Ogunkunle: acquired heart disease; modified Jones criteria, treatment, prophylaxis, differentials).
+// Past papers: 2k17-2k2.361-363, 369, 371, 558; 2017.103; paed.30, 94, 107; Modified Jones criteria asked in 2013.21, 2k17-2k2.322, cohort-n.44.
+// The slide Jones criteria are the older modified (1992) set; the 2015 AHA revision is marked as outside the slide.
+// Past-paper keys are unverified; statements here were checked against the slides and standard teaching.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-rhd-1",
+  subject: "Paediatrics",
+  group: "Rheumatic fever & endocarditis",
+  type: "tf",
+  title: "Paediatrics T/F · Acute rheumatic fever and rheumatic heart disease (10 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "ARF: epidemiology and cause", src: "p.14; "+S,
+      stem: "Acute rheumatic fever (ARF) in Nigerian children:",
+      items: I([
+        ["It is the commonest acquired heart disease of children in developing countries.", true, "Slide p.14."],
+        ["It follows infection of the throat by group A beta-haemolytic streptococcus.", true, "Slide p.14: pharyngitis, then ARF, then carditis, then rheumatic heart disease."],
+        ["The peak age is 5-15 years and boys and girls are equally affected.", true, "Slide p.14: M = F, age 5-15 years."],
+        ["Low socio-economic status and overcrowding are risk factors.", true, "Slide p.14."],
+        ["The heart is damaged by direct invasion of the valves by the streptococcus.", false, "It is an autoimmune reaction: antibody or antigen-antibody damage of the heart (molecular mimicry) after the infection (p.14), not infection of the valve."],
+      ]),
+      explain: "Sore throat, then a latent period of about 2-3 weeks, then ARF. Treating the throat early prevents the first attack (primary prevention). Overcrowding spreads streptococci, which is why this is also a social paediatrics topic." },
+
+    { topic: "ARF: pathology", src: "p.14; "+S,
+      stem: "Pathology of rheumatic heart disease:",
+      items: I([
+        ["The carditis is a pancarditis involving endocardium, myocardium and pericardium.", true, "Slide p.14."],
+        ["The mitral valve is the valve most often damaged, followed by the aortic valve.", true, "Slide p.14: mitral ++, aortic +."],
+        ["Tricuspid valve involvement is common.", false, "Rare (slide p.14)."],
+        ["The Aschoff nodule is the hallmark of the diagnosis.", true, "Slide p.14. Found in the myocardium; Anitschkow cells in it."],
+        ["Treating the streptococcal sore throat with penicillin within 9 days of onset prevents most first attacks of ARF.", true, "Primary prevention; standard teaching (outside the slide). The slide gives IM procaine penicillin (p.15-16)."],
+      ]),
+      explain: "Why mitral first: the left-sided valves take the highest pressures, so they bear the brunt of the inflammation. Pericardial involvement gives a friction rub and effusion." },
+
+    { topic: "Jones criteria: major", src: "p.14",
+      stem: "The modified Jones criteria (major criteria):",
+      items: I([
+        ["The five major criteria are carditis, arthritis, subcutaneous nodules, erythema marginatum and Sydenham's chorea.", true, "Slide p.14. Memory: 'CASES': Carditis, Arthritis, Subcutaneous nodules, Erythema marginatum, Sydenham's."],
+        ["Fever is a major criterion.", false, "Fever is a MINOR criterion (p.14)."],
+        ["The arthritis is migratory, flitting and affects the large joints.", true, "Slide p.14."],
+        ["The arthritis of ARF usually leaves permanent joint deformity.", false, "It heals completely without residual damage, which is why it is called the arthritis that 'licks the joints and bites the heart'."],
+        ["The arthritis responds dramatically to aspirin.", true, "Standard teaching; a good response supports the diagnosis, and aspirin before diagnosis can mask it."],
+      ]),
+      explain: "The carditis is the only manifestation that causes lasting harm. Joint disease is the commonest feature but heals; carditis and chorea are the ones that matter for prognosis." },
+
+    { topic: "Jones criteria: minor", src: "p.14; "+S,
+      stem: "The modified Jones criteria (minor criteria):",
+      items: I([
+        ["Fever and arthralgia are minor criteria.", true, "Slide p.14."],
+        ["A previous history of ARF is a minor criterion.", true, "Slide p.14."],
+        ["Raised ESR, C-reactive protein or white cell count (acute-phase reactants) are minor criteria.", true, "Slide p.14."],
+        ["A prolonged PR interval on ECG is a minor criterion.", true, "Slide p.14. It does not count if carditis is already used as the major criterion (standard teaching)."],
+        ["Arthralgia can be counted as a minor criterion when arthritis is already counted as the major criterion.", false, "The same manifestation is never counted twice (standard teaching)."],
+      ]),
+      explain: "Minor criteria are non-specific; only the combination with evidence of streptococcal infection makes the diagnosis. The 2015 AHA revision (low-risk versus moderate/high-risk populations) also lets subclinical carditis on echo count as major (outside the slide)." },
+
+    { topic: "Diagnosing ARF", src: "p.15; "+S,
+      stem: "Making the diagnosis of ARF:",
+      items: I([
+        ["The diagnosis needs 2 major, or 1 major plus 2 minor criteria, together with evidence of recent streptococcal infection.", true, "Slide p.15."],
+        ["An antistreptolysin O titre above 333 Todd units is evidence of recent streptococcal infection.", true, "Slide p.15."],
+        ["An ASOT above 333 Todd units alone is diagnostic of ARF.", false, "It only shows a recent streptococcal infection. You still need the Jones criteria. (A past paper asked this: False.)"],
+        ["The ASOT is always raised when Sydenham's chorea is the only feature.", false, "Chorea appears late, after the antibody titre has fallen, so ASOT may be normal (standard teaching)."],
+        ["A positive throat culture or rapid antigen test can also serve as evidence of recent streptococcal infection.", true, "Standard teaching (outside the slide)."],
+      ]),
+      explain: "ASOT rises after about 1 week and peaks at 3-6 weeks. Repeat paired samples 2 weeks apart to show a rising titre. Anti-DNase B is an alternative." },
+
+    { topic: "Specific manifestations", src: S,
+      stem: "Manifestations of ARF:",
+      items: I([
+        ["Sydenham's chorea may be the only manifestation of ARF.", true, "Late manifestation; Jones criteria allow it alone."],
+        ["Chorea appears within the first week of the sore throat.", false, "Late: 1-6 months after the infection."],
+        ["Erythema marginatum is an evanescent, non-itchy rash of the trunk and proximal limbs that spares the face.", true, "Rings with a clear centre; brought out by heat (a warm bath)."],
+        ["Subcutaneous nodules are painless, firm and lie over bony prominences and extensor tendons.", true, "They are mobile over bone and are not tender."],
+        ["Erythema marginatum and subcutaneous nodules are common in Nigerian children and occur without carditis.", false, "Both are uncommon and when present usually accompany carditis."],
+      ]),
+      explain: "A past paper asked 'subcutaneous nodules indicate ongoing carditis'. The nodules do go with carditis, which is why they are a bad prognostic sign." },
+
+    { topic: "Carditis and chronic RHD", src: "p.14-15; "+S,
+      stem: "Cardiac findings in ARF and rheumatic heart disease:",
+      items: I([
+        ["Carditis may show murmurs, a pericardial friction rub, tachycardia and heart failure.", true, "Slide p.14."],
+        ["Mitral regurgitation gives an apical pansystolic murmur radiating to the axilla.", true, "Slide p.15."],
+        ["Mitral stenosis gives an apical mid-diastolic murmur.", true, "Slide p.15 (apical diastolic murmur)."],
+        ["Aortic incompetence gives a diastolic murmur in the aortic area with collapsing pulses.", true, "Slide p.15."],
+        ["In chronic rheumatic heart disease mitral stenosis is more common than mitral regurgitation in children.", false, "In children the commonest lesion is mitral incompetence, then mitral stenosis, then aortic incompetence (slide p.15; matches the past-paper key)."],
+      ]),
+      explain: "10-year-old with chronic rheumatic mitral disease: hyperactive precordium, apical pansystolic murmur, displaced apex, raised JVP when failing, NOT a murmur at the left upper sternal edge (that is VSD or PS) (past paper paed.94)." },
+
+    { topic: "Treatment of ARF", src: "p.15; "+S,
+      stem: "Treatment of acute rheumatic fever:",
+      items: I([
+        ["Bed rest is part of the treatment.", true, "Slide p.15."],
+        ["Aspirin at 50-100 mg/kg/day is used for the arthritis and fever.", true, "Slide p.15."],
+        ["Prednisolone at 2 mg/kg/day is added for carditis.", true, "Slide p.15."],
+        ["Penicillin is given to eradicate the streptococcus.", true, "Slide p.15 (IM procaine penicillin; the past-paper key accepted 'crystalline penicillin')."],
+        ["Aspirin prevents the development of carditis.", false, "It relieves symptoms only; no drug has been shown to prevent valve damage once the attack has started."],
+      ]),
+      explain: "Treat the attack: rest, aspirin, steroids if carditis with cardiomegaly or failure, penicillin, anti-failure drugs. Then start secondary prophylaxis before discharge." },
+
+    { topic: "Prophylaxis", src: "p.15-16; "+S,
+      stem: "Prevention of rheumatic fever:",
+      items: I([
+        ["Secondary prophylaxis is IM benzathine penicillin 1.2 mega units every month.", true, "Slide p.15. (Standard teaching gives it every 3-4 weeks; 600,000 units for under 27 kg.)"],
+        ["Oral penicillin V 125-250 mg twice daily is an alternative.", true, "Slide p.15."],
+        ["Erythromycin is used in penicillin-allergic patients.", true, "Slide p.15."],
+        ["Benzathine penicillin for prophylaxis is given intravenously.", false, "It is given by deep INTRAMUSCULAR injection (a past paper tested this: 'IV benzathine' is false)."],
+        ["Secondary prophylaxis can be stopped once the acute attack has settled.", false, "It continues for years: at least 5 years or to age 21 without carditis; 10 years or to age 21 with carditis; much longer or lifelong with valve disease (outside the slide)."],
+      ]),
+      explain: "Primary prevention = treat the sore throat. Secondary prevention = monthly benzathine penicillin to stop repeat attacks that worsen the valves (slide p.16). Poor adherence is the biggest reason for failure, so health education is part of it." },
+
+    { topic: "Differential diagnosis", src: "p.16; "+S,
+      stem: "Differential diagnosis of ARF in a child with fever and joint pain:",
+      items: I([
+        ["Malaria is a differential listed on the slide.", true, "Slide p.16."],
+        ["Sickle cell disease (bone and joint crisis) is a differential.", true, "Slide p.16."],
+        ["Acute leukaemia is a differential.", true, "Slide p.16."],
+        ["Rheumatoid (juvenile idiopathic) arthritis and infective endocarditis are differentials.", true, "Slide p.16."],
+        ["Septic arthritis typically migrates from one large joint to another within hours.", false, "Septic arthritis is a hot, swollen, painful single joint that does not migrate."],
+      ]),
+      explain: "Endocarditis is the dangerous mimic: fever, new murmur and arthralgia. Blood cultures before any antibiotic or steroid settle it (see the endocarditis set)." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · True/False (5 statements per stem, negative marking −½) · Infective endocarditis in children.
+// Source: Paediatrics CS edited.pdf p.16-19 (Ogunkunle) and p.20-23 (Adebayo: pathogenesis, Modified Duke criteria, treatment, prophylaxis).
+// Past papers: 2000.31, 2k19.62 and paed.93 (predisposing factors); 2k17-2k2.310, 360, 364, 366 and paed.80, 90, 115 (IE); 2k23.186.
+// Duke counting rules (definite = 2 major, or 1 major + 3 minor, or 5 minor) and antibiotic durations beyond the slide are marked outside the slide.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-rhd-2",
+  subject: "Paediatrics",
+  group: "Rheumatic fever & endocarditis",
+  type: "tf",
+  title: "Paediatrics T/F · Infective endocarditis (9 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "IE: definition and classification", src: "p.16, 20",
+      stem: "Infective endocarditis (IE) in children:",
+      items: I([
+        ["It is a microbial infection of the endocardial surface of the heart, especially the valves.", true, "Slide p.16, 20."],
+        ["It is common in children with structurally normal hearts.", false, "Not very common; a dreaded complication of structural heart disease (p.20). Acute IE can affect normal hearts but is uncommon."],
+        ["It is classified by clinical course (acute or subacute), organism (bacterial or fungal) and valve (native or prosthetic).", true, "Slide p.20."],
+        ["Subacute IE is commoner in patients with underlying heart disease, usually due to Streptococcus viridans.", true, "Slide p.16."],
+        ["Acute IE can affect normal hearts and is typically caused by Staphylococcus aureus and gram-negative organisms.", true, "Slide p.16-17."],
+      ]),
+      explain: "Subacute = viridans strep on a damaged valve, indolent over weeks. Acute = Staph aureus, aggressive over days, can destroy a normal valve. Immunocompromised and fungal IE are also acute." },
+
+    { topic: "IE: predisposing factors", src: "p.17, 20",
+      stem: "Predisposing factors for infective endocarditis:",
+      items: I([
+        ["Congenital heart disease such as VSD, PDA, aortic stenosis and Fallot's tetralogy.", true, "Slide p.17."],
+        ["Rheumatic heart disease.", true, "Slide p.17, 20 (rheumatic mitral valve). Asked in 2000.31, 2k19.62 and paed.93."],
+        ["Pulmonary stenosis and atrial septal defect carry a high risk.", false, "Rare in pulmonary stenosis and ASD (slide p.17); low-pressure jets cause little endothelial damage."],
+        ["Dental caries or dental manipulation, central lines and urethral catheterisation.", true, "Slide p.17, 20."],
+        ["Cardiac catheterisation, prolonged IV cannulation, IV drug use and immunosuppression.", true, "Slide p.17."],
+      ]),
+      explain: "Key idea: a high-pressure jet hits the endothelium, which becomes damaged, platelets and fibrin settle (non-bacterial thrombotic endocarditis), then a transient bacteraemia seeds it (pathogenesis, p.20). Small VSD is the classic high-risk lesion despite being 'minor'." },
+
+    { topic: "IE: organisms", src: "p.16, 18, 20",
+      stem: "Organisms causing infective endocarditis:",
+      items: I([
+        ["Streptococcus viridans is the commonest cause in children with congenital or rheumatic heart disease.", true, "Slide p.16, 18."],
+        ["Staphylococcus aureus is a common cause in patients with a normal heart.", true, "Slide p.16-17, 18. Past paper (asked in 4 sources)."],
+        ["The HACEK group (Haemophilus, Actinobacillus, Cardiobacterium, Eikenella, Kingella) are recognised causes.", true, "Slide p.20."],
+        ["Candida and other fungi cause IE in immunocompromised patients and after cardiac surgery.", true, "Slide p.16-17, 20."],
+        ["Staphylococcus aureus never infects prosthetic valves.", false, "It is a leading cause of acute and prosthetic-valve IE (coagulase-negative staphylococci are the early prosthetic-valve organism: standard teaching)."],
+      ]),
+      explain: "When blood cultures stay negative think of prior antibiotics, HACEK, Coxiella (serology is a Duke major criterion, p.21), Bartonella and fungi." },
+
+    { topic: "IE: clinical features", src: "p.17, 21",
+      stem: "Clinical features of infective endocarditis:",
+      items: I([
+        ["Fever is present in about 99% of cases.", true, "Slide p.21."],
+        ["Petechiae and a changing murmur each occur in about 21%.", true, "Slide p.21."],
+        ["Splinter haemorrhages, Osler's nodes, Janeway lesions and Roth spots are late immunological or embolic signs.", true, "Slide p.17, 21-22."],
+        ["Heart failure is the commonest presenting feature, found in most patients.", false, "Only about 9% (slide p.21). Fever is the commonest."],
+        ["Haematuria and glomerulonephritis result from immune complexes.", true, "Slide p.17, 21 (Duke minor criterion: immunologic phenomenon)."],
+      ]),
+      explain: "Think in four mechanisms (p.20): bacteraemia (fever, malaise), valvulitis (murmur, failure), immune response (Osler, Roth, GN, rheumatoid factor) and emboli (stroke, splenic/renal infarcts, Janeway, mycotic aneurysm)." },
+
+    { topic: "IE: emboli and complications", src: "p.17, 23",
+      stem: "Complications of infective endocarditis:",
+      items: I([
+        ["Embolic events can involve the brain, kidneys, lungs and coronary arteries.", true, "Slide p.17, 23."],
+        ["In a right-to-left shunt, emboli bypass the lungs and reach the brain and other systemic organs.", true, "Slide p.17 (systemic emboli in R to L shunt). A past paper asked 'pulmonary embolism is likely in R-L shunt': that is the false option."],
+        ["Right-sided (tricuspid) vegetations cause septic pulmonary emboli.", true, "Slide p.17."],
+        ["Periannular abscess may cause a new heart block.", true, "Slide p.23. PR prolongation on serial ECGs is the warning sign."],
+        ["Mycotic aneurysms are a rare but listed complication; an intracranial one can rupture.", true, "Slide p.23; a Duke vascular minor criterion."],
+      ]),
+      explain: "Heart failure from valve destruction is the commonest cause of death and the commonest indication for surgery." },
+
+    { topic: "IE: investigations", src: "p.18, 21-22",
+      stem: "Investigations in suspected infective endocarditis:",
+      items: I([
+        ["At least three blood cultures, ideally six, are taken before antibiotics are started.", true, "Slide p.18 ('at least 3, ideally 6')."],
+        ["Blood cultures are taken over 24 hours; if urgent, at least one hour apart.", true, "Slide p.22."],
+        ["Echocardiography showing vegetations is a major diagnostic criterion.", true, "Slide p.21-22."],
+        ["A positive echocardiogram is diagnostic on its own.", false, "Echo is one major criterion; the diagnosis uses the Modified Duke criteria. A past paper asked this: False."],
+        ["Urine microscopy may show haematuria, and a trans-oesophageal echo is useful when the trans-thoracic study is unclear.", true, "Slide p.22 (urine m/c/s); TOE (past paper 2k17.366: urine MCS and TOE were the true options; abdominal USS was false)."],
+      ]),
+      explain: "FBC: normocytic anaemia, leucocytosis, raised ESR/CRP. CXR for failure or septic emboli. ECG for heart block. Never start antibiotics before the cultures unless the child is dying." },
+
+    { topic: "Modified Duke criteria", src: "p.21-22; "+S,
+      stem: "The Modified Duke criteria:",
+      items: I([
+        ["Two positive blood cultures for organisms typical of endocarditis is a major criterion.", true, "Slide p.21."],
+        ["An oscillating intracardiac mass, new valvular regurgitation and a cardiac abscess are echocardiographic major criteria.", true, "Slide p.21."],
+        ["A predisposing heart condition, fever of 38°C or more and Janeway lesions are minor criteria.", true, "Slide p.22."],
+        ["Osler's nodes, Roth spots, glomerulonephritis and rheumatoid factor are minor (immunologic) criteria.", true, "Slide p.21."],
+        ["A definite diagnosis needs only one major criterion.", false, "Definite = 2 major, or 1 major + 3 minor, or 5 minor (outside the slide)."],
+      ]),
+      explain: "Memory: Duke major = Blood cultures + Endocardium (echo). Minor = Predisposition, Fever, Vascular, Immunological, Microbiology (PFVIM). Same question pattern as Jones for ARF." },
+
+    { topic: "IE: treatment", src: "p.18, 22-23; "+S,
+      stem: "Treatment of infective endocarditis:",
+      items: I([
+        ["High-dose bactericidal antibiotics are given parenterally.", true, "Slide p.18."],
+        ["Antibiotic therapy is given for about six weeks.", true, "Slide p.22 (standard teaching gives 4-6 weeks depending on organism and valve)."],
+        ["Streptococcus viridans is treated with penicillin or ampicillin or ceftriaxone, with gentamicin.", true, "Slide p.18, 22."],
+        ["Staphylococcal IE is treated with cloxacillin/oxacillin or nafcillin plus gentamicin, with vancomycin if MRSA.", true, "Slide p.18, 22."],
+        ["Surgery is never needed once antibiotics have been given.", false, "Valve replacement, correction of the defect, embolectomy and removal of mycotic aneurysms are listed (p.23). Indications: refractory failure, abscess, persistent bacteraemia, large vegetations or embolism, fungal IE."],
+      ]),
+      explain: "Gram-negative IE: ceftriaxone, cefotaxime or ceftazidime plus gentamicin (p.23). Treat heart failure at the same time. Choose the drug from the culture and sensitivity, not a guess." },
+
+    { topic: "IE: prophylaxis", src: "p.18, 23",
+      stem: "Prophylaxis against infective endocarditis:",
+      items: I([
+        ["It is indicated for prosthetic cardiac valves, previous IE, unrepaired congenital heart disease and cardiac transplant recipients.", true, "Slide p.23."],
+        ["It is indicated for all patients with rheumatic heart disease before any dental procedure.", false, "Not in the slide's high-risk list (p.23). Current guidelines no longer recommend it for native-valve rheumatic disease, but good dental hygiene is advised (outside the slide)."],
+        ["A single dose is given 30-60 minutes before the procedure.", true, "Slide p.23."],
+        ["Oral amoxicillin 50 mg/kg is the usual agent; ampicillin is the parenteral option.", true, "Slide p.23."],
+        ["Good oral and dental hygiene and health education are part of prevention.", true, "Slide p.18, 23."],
+      ]),
+      explain: "Aim: get adequate blood levels BEFORE the procedure so bacteria in the blood are killed before they lodge on the heart (p.23). Do not confuse this with ARF prophylaxis, which is long-term monthly penicillin." },
+  ]
+}]);
+})();
+
+</script>
+<script>
 (function(){
 "use strict";
 const $=s=>document.querySelector(s), app=$("#app"), timerEl=$("#timer");
@@ -5711,8 +6487,8 @@ banks.forEach(b=>{const m=PM[b.id]; if(m&&b.questions) b.questions.forEach((q,i)
 const GROUPS=["Menstrual disorders & DUB","Amenorrhoea & PCOS","Abortion","Ectopic pregnancy","Antepartum haemorrhage","Hypertension in pregnancy","Labour & the partograph","Family planning","Infertility","Fibroids & endometriosis","Anaemia in pregnancy","Postpartum haemorrhage & oxytocics"];
 const COMING=["Antenatal care & booking","Gynaecological cancers","Genital infections & STIs","Prolapse & fistulae","Instruments & imaging (picture test)"];
 let curGroup=null;
-const PGROUPS=["Paediatric endocrinology","Infectious diseases","Pulmonology"];
-const PCOMING=["Neonatology","Nutrition & malnutrition","Haemato-oncology","Cardiology","Nephrology","Neurology","Gastroenterology"];
+const PGROUPS=["Paediatric endocrinology","Infectious diseases","Pulmonology","Rheumatic fever & endocarditis"];
+const PCOMING=["Neonatology","Nutrition & malnutrition","Haemato-oncology","Congenital heart disease & heart failure","Nephrology","Neurology","Gastroenterology"];
 const TYPE_LABEL={cards:"Flashcards",mcq:"Multiple choice",essay:"Essays",fillgap:"Fill in the gap",tf:"True / False (5 stems each, negative marking)",pics:"Picture test (5 True / False per picture)"};
 const TYPE_ORDER=["cards","mcq","tf","pics","fillgap","essay"];
 const countOf=b=>b.type==="cards"?b.cards.length:b.type==="essay"?b.essays.length:b.questions.length;
