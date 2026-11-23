@@ -2692,6 +2692,46 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Flashcards · Sickle cell disease. Source: Paediatrics CS edited.pdf p.94-96; extra:true = beyond the slides.
+(function(){
+const C=(topic,src,q,a,connect,extra)=>Object.assign({topic,src,q,a,connect},extra?{extra:true}:{});
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-cards-scd",
+  subject: "Paediatrics",
+  group: "Sickle cell disease",
+  type: "cards",
+  title: "Paediatrics Flashcards · Sickle cell disease",
+  cards: [
+    C("Basics","p.94","Normal haemoglobin types and the defect in Hb S.","HbA alpha2 beta2 (above 95%), HbA2 alpha2 delta2 (2.5-3.5%), HbF alpha2 gamma2 (under 2% after 1 year). Hb S: glutamic acid replaced by valine at position 6 of the beta chain.","Single amino acid change, one very big disease."),
+    C("Basics","p.94","Genetics and epidemiology of SCD in Nigeria.","Autosomal recessive. AS = trait, SS = sickle cell anaemia; SC, S-thal, SD are other forms. Nigeria: 1-2 million with Hb SS (2-3%); Ibadan: SS 3.1%, SC 1.1%, AS 23.7%.","Trait is NOT disease."),
+    C("Basics","p.94","What happens in sickle cell trait?","Sickling only under extreme hypoxia; intrarenal sickling causes haematuria and hyposthenuria.","Two carriers: 25% SS per pregnancy."),
+    C("Pathophysiology","p.94-95","Pathophysiology of sickle cell disease.","Deoxy Hb S polymerises into tactoids, the cell sickles, becomes rigid and sticky, blocks the microcirculation (vaso-occlusion, infarction, pain, organ failure) and is destroyed early by the RES (lifespan 17 days, PCV about 24%), with marrow hyperplasia 6-8 times and widened skull diploe.","Two arms: occlusion and haemolysis."),
+    C("Precipitants","p.95","Precipitating factors of sickle cell crisis.","Infections, hypoxia, cold, acidosis, dehydration: D-CHAIN.","Past paper: '4 precipitants of VOC in SCD' (2k23.407)."),
+    C("Stable state","p.95","Clinical features in the steady state.","Chronic haemolytic anaemia: pallor, jaundice, frontal bossing, gnathopathy, hepatosplenomegaly, haemic murmur, stunted growth, delayed puberty; hand-foot syndrome in early childhood.","Past paper: 'a typical sickle cell patient is pale and jaundiced'."),
+    C("Stable state",S,"Onset of symptoms and hand-foot syndrome.","Symptoms start from 4-6 months as Hb F falls. Hand-foot syndrome (dactylitis): painful swelling of hands and feet between about 6 and 24 months.","Hb F protects until it declines.",true),
+    C("VOC","p.95","Describe vaso-occlusive crisis and its management.","Painful crisis: bone (hand-foot syndrome, long bones, ribs, vertebrae) and abdomen (can mimic acute surgical abdomen). Management: identify and treat the precipitant, bed rest, liberal fluids orally or IV (at least 1.5 times maintenance), analgesics; usually lasts under 1 week.","Past paper 2013.19 and 2k17-2k2.351-352 short notes."),
+    C("VOC",S,"Analgesia in a painful crisis.","Early adequate analgesia: paracetamol or ibuprofen for mild pain; oral or IV morphine for severe pain, titrated, with monitoring; warmth, hydration; avoid pethidine. Look for infection and acute chest syndrome.","Treat pain within an hour of arrival.",true),
+    C("Crises","p.95","Types of anaemic crisis and how to differentiate them.","Acute splenic sequestration (young children; rapid splenic enlargement, shock, retics high); aplastic crisis (parvovirus; falling PCV, low retics, normal WBC and platelets); hyperhaemolytic crisis (deeper jaundice, worsening anaemia, retics high, infection). All need transfusion and treatment of the cause.","Past papers 2k17-2k2.294 and cohort-n.22: 'differences between the causes of anaemic crises'."),
+    C("Crises","p.95","When is transfusion indicated in SCD?","Severity of anaemia, steady-state haematocrit, haemodynamic stability, and associated conditions such as septicaemia or other crises. Specifically: sequestration, aplastic and hyperhaemolytic crises, stroke, acute chest syndrome.","Do not transfuse above a PCV of about 30% (hyperviscosity).",false),
+    C("Complications","p.96","Infections in SCD: organisms and reasons.","Encapsulated organisms: Pneumococcus and Haemophilus influenzae causing septicaemia, meningitis and pneumonia; osteomyelitis from Staphylococcus aureus and Salmonella. Reasons: autosplenectomy, poor opsonisation, impaired complement.","Fever in SCD is an emergency."),
+    C("Complications","p.96","Stroke in SCD.","CVA with hemiparesis and cranial nerve palsies. Treatment: exchange transfusion (or straight packed-cell transfusion), hypertransfusion regimen, IV fluids. Screening with transcranial Doppler yearly from 2 years (velocity above 200 cm/s needs chronic transfusion).","Past paper: 'CVA: EBT with HbA blood'.",false),
+    C("Complications","p.96","Acute chest syndrome: definition and treatment.","New pulmonary infiltrate with fever, cough, chest pain or hypoxia. Treat with oxygen, IV fluids (avoid overload), antibiotics and exchange or packed-cell transfusion.","Leading cause of death in SCD."),
+    C("Complications","p.96","Other complications.","Heart failure; urinary tract infection, haematuria, hyposthenuria, nephrotic syndrome, renal failure; priapism; avascular necrosis of the femoral and humeral heads; retinopathy (more with SC); leg ulcers, gallstones, delayed growth.","Priapism: hydration, analgesia, urgent specialist referral (etilefrine as per local practice)."),
+    C("Complications",S,"Priapism in sickle cell disease.","Painful persistent erection: hydration, analgesia, warm baths, exercise, aspiration and irrigation or alpha-agonist (etilefrine, phenylephrine) if beyond 4 hours; urology review; prevention of recurrence.","Past paper 2k17-2k2.405/409.",true),
+    C("Diagnosis","p.96","Diagnosis of sickle cell disease.","Haemoglobin electrophoresis (neonates: HPLC or isoelectric focusing; later: citrate agar or cellulose acetate), PCV, blood film (sickle cells, target cells, polychromasia, nucleated red cells, Howell-Jolly bodies), FBC.","Sickling test (metabisulphite) cannot separate trait from disease."),
+    C("Management","p.96","Routine care in the stable state.","Counselling and education; daily folic acid; vaccination (pneumococcus, Haemophilus; meningococcus and typhoid where available); penicillin prophylaxis; malaria prophylaxis (proguanil); regular review.","Past paper 2k17-2k2.411: folic acid, penicillin, vaccines routine; iron not."),
+    C("Management",S,"Penicillin prophylaxis schedule.","Penicillin V from about 2-3 months: 125 mg twice daily to age 3, then 250 mg twice daily to age 5.","Compare with the slide 'penicillin prophylaxis'.",true),
+    C("Management","p.96","Other therapeutic approaches.","Bone marrow transplant (curative), hydroxyurea (raises Hb F, reduces sickling and crises), anti-sickling drugs.","Hydroxyurea is for frequent crises, acute chest syndrome, stroke risk."),
+    C("Variants","p.96","Other haemoglobinopathies.","Hb SC: less severe than SS but proliferative sickle retinopathy more common; S-beta-zero thal resembles SS; S-beta-plus mild; S-HPFH very mild.","Paed.508: Hb S+C is associated with SCA in Nigerian children."),
+    C("Prevention","p.96","Prevention of sickle cell disease.","Education, genotype testing and genetic counselling (before marriage), prenatal diagnosis, newborn screening where available.","Social paediatrics angle."),
+    C("Prognosis","p.96","Life expectancy.","About 50% survive beyond the fifth decade in the United States; no definite figures in Nigeria.","Early deaths are from infection, sequestration and stroke."),
+  ]
+}]);
+})();
+
+</script>
+<script>
 // Paediatrics · Essays · Acute diarrhoea and dehydration. Two long essays (leading to a diagnosis; social paediatrics) and two short.
 // Source: Paediatrics CS edited.pdf p.70-73; points beyond the deck are x:true (WHO plans, zinc, ORS composition, rotavirus vaccine, dysentery antibiotics).
 // Past papers: 2017.80, 2017.62, 2k20-2k2.25, 2k23.165, 2k23.182-183, 2000.4.
@@ -4239,6 +4279,172 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Essays · Sickle cell disease. Two long essays (leading to a diagnosis; social paediatrics) and four short.
+// Source: Paediatrics CS edited.pdf p.94-96; x:true = beyond the slides. Past papers: 2013.19, 2k17-2k2.351-352, cohort-n.63 (VOC),
+// 2k17-2k2.294, cohort-n.22 (anaemic crises), 2017.147 (aplastic crisis), paed.10 (drowsy SCA child), 2007.10 and cohort-n.183 (SCD in pregnancy: O&G).
+(function(){
+const P=(t,x)=>x?{t,x:true}:{t};
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-essay-scd",
+  subject: "Paediatrics",
+  group: "Sickle cell disease",
+  type: "essay",
+  title: "Paediatrics Essays · Sickle cell disease (2 long, 4 short)",
+  essays: [
+    {
+      kind: "Long essay (20 marks) · leading to a diagnosis", marks: 20, topic: "Sickle cell disease: crisis", src: "p.94-96; past papers paed.10, 2013.19",
+      prompt: "A 4-year-old girl is brought to the emergency room with fever for 2 days, severe pallor, deepening jaundice and an enlarged left upper abdomen. Her mother says she has had several painful swellings of the hands and feet since infancy. Her PCV is 12%. Discuss your diagnosis and management.",
+      tip: "Name sickle cell anaemia with a crisis and say which one (sequestration versus hyperhaemolysis versus aplastic) and why. Management: stabilise, transfuse, treat the infection, then long-term care and counselling.",
+      sections: [
+        { h: "Diagnosis and reasoning", pts: [
+          P("Sickle cell anaemia (Hb SS) in an anaemic crisis, most likely acute splenic sequestration with infection as the precipitant (p.95)."),
+          P("Supporting: recurrent hand-foot syndrome (dactylitis) in early life, chronic pallor and jaundice, PCV 12% (steady state about 24%), splenic enlargement (p.95)."),
+          P("Sequestration: young child, rapid splenic enlargement, severe pallor, shock; aplastic crisis would show a small spleen and low reticulocytes; hyperhaemolytic crisis shows deeper jaundice with high reticulocytes (p.95)."),
+          P("Fever may mean septicaemia, malaria or pneumonia: encapsulated organisms (pneumococcus, Haemophilus) (p.96)."),
+        ]},
+        { h: "Differential diagnosis", pts: [
+          P("Severe malaria with anaemia, haemolytic crisis of G6PD deficiency, other haemolytic anaemias, hyperreactive malarial splenomegaly, leukaemia.", true),
+        ]},
+        { h: "Investigations", pts: [
+          P("PCV, FBC, reticulocyte count, blood film, malaria parasite, blood culture, urinalysis, liver function (p.96)."),
+          P("Haemoglobin electrophoresis to confirm genotype if not known (p.96)."),
+          P("Group and crossmatch before transfusion; chest X-ray for pneumonia or acute chest syndrome.", true),
+        ]},
+        { h: "Treatment", pts: [
+          P("ABC, oxygen, IV access; treat shock with cautious fluid and urgent blood transfusion (p.95)."),
+          P("Transfuse packed cells slowly and avoid over-transfusion because trapped blood is released from the spleen later.", true),
+          P("Parenteral antibiotics early (ceftriaxone) and antimalarial treatment if parasitaemic; liberal fluids (p.95-96)."),
+          P("Analgesia and treatment of the precipitating cause (p.95)."),
+        ]},
+        { h: "Long-term care and prevention", pts: [
+          P("Folic acid, pneumococcal and Haemophilus vaccines, penicillin prophylaxis, malaria prophylaxis (proguanil) (p.96)."),
+          P("Splenectomy after recurrent sequestration (standard teaching).", true),
+          P("Counselling, parental education to detect an enlarging spleen and fever early; genotype testing of parents and siblings (p.96).", false),
+          P("Hydroxyurea for frequent crises; bone marrow transplant where available (p.96)."),
+        ]},
+      ]
+    },
+    {
+      kind: "Long essay (20 marks) · social paediatrics", marks: 20, topic: "Sickle cell disease: burden, prevention and psychosocial care", src: "p.94-96; Standard teaching",
+      prompt: "Discuss the burden of sickle cell disease in Nigeria and the measures for its prevention and for the psychosocial care of affected children and their families.",
+      tip: "Burden (numbers), genetics, prevention at three levels (primary: genotype counselling and screening; secondary: newborn screening and prophylaxis; tertiary: crisis care), then the psychosocial and school issues.",
+      sections: [
+        { h: "Burden", pts: [
+          P("Nigeria has the largest number of SCD patients in the world: 1-2 million with Hb SS, 2-3% of the population (p.94)."),
+          P("Ibadan: SS 3.1%, SC 1.1%, AS 23.7% (p.94); about a quarter of Nigerians carry the trait."),
+          P("High childhood mortality from infection, sequestration, stroke and anaemic crises; life expectancy is not definitively known in Nigeria (p.96).", false),
+        ]},
+        { h: "Genetics and primary prevention", pts: [
+          P("Autosomal recessive; two AS carriers have 25% risk per pregnancy (p.94)."),
+          P("Premarital genotype testing, genetic counselling, community and school education (p.96).", false),
+          P("Prenatal diagnosis where available (p.96)."),
+        ]},
+        { h: "Secondary prevention", pts: [
+          P("Newborn screening (HPLC or isoelectric focusing) and early enrolment in a comprehensive clinic (p.96)."),
+          P("Penicillin prophylaxis, pneumococcal and Haemophilus vaccines, folic acid, malaria prophylaxis, early treatment of fever (p.96)."),
+          P("Transcranial Doppler screening and hydroxyurea for selected children.", true),
+        ]},
+        { h: "Psychosocial impact and care", pts: [
+          P("Chronic illness with recurrent painful crises and admissions; school absence, poor performance, delayed puberty and body-image problems (p.95).", false),
+          P("Cost of drugs and admissions; parental stress and guilt; stigma; disruption of family income.", true),
+          P("Support: counselling, school liaison (water access, avoid cold and exertion), peer and family support groups, transition to adult care.", true),
+          P("Reproductive counselling for adolescents (pregnancy in SCD is high risk: see O&G).", true),
+        ]},
+        { h: "Policy", pts: [
+          P("Sickle cell clinics, national screening programme, health insurance cover, public education.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Vaso-occlusive crisis", src: "p.95; past papers 2013.19, 2k17-2k2.351-352, cohort-n.63",
+      prompt: "Write short notes on vaso-occlusive crisis in sickle cell disease.",
+      tip: "Definition, precipitants (D-CHAIN), clinical patterns, management, complications.",
+      sections: [
+        { h: "Definition and precipitants", pts: [
+          P("Acute painful episode from microvascular occlusion by sickled cells causing infarction (p.95)."),
+          P("Infection, hypoxia, cold, acidosis, dehydration (p.95)."),
+        ]},
+        { h: "Clinical patterns", pts: [
+          P("Bone pain: hand-foot syndrome (dactylitis), long bones, ribs, vertebrae (p.95)."),
+          P("Abdominal pain mimicking an acute surgical abdomen (p.95)."),
+        ]},
+        { h: "Management", pts: [
+          P("Identify and treat the precipitating cause (p.95)."),
+          P("Bed rest, liberal fluids orally or IV at least 1.5 times maintenance, analgesics (p.95)."),
+          P("Usually lasts under a week (p.95)."),
+          P("Strong opioid analgesia for severe pain; watch for acute chest syndrome and infection.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Anaemic crises in sickle cell anaemia", src: "p.95; past papers 2k17-2k2.294, cohort-n.22, 2017.147",
+      prompt: "Write short notes on the differences between the causes of anaemic crises in sickle cell anaemia.",
+      tip: "Three crises. For each: mechanism, who, trigger, clues (spleen, reticulocytes, jaundice), treatment. A table in prose is fine.",
+      sections: [
+        { h: "Acute splenic sequestration", pts: [
+          P("Pooling of blood in the spleen, rapid splenic enlargement, shock; commonest in younger children (p.95)."),
+          P("Reticulocytes high; urgent transfusion; find and treat the precipitant (p.95)."),
+        ]},
+        { h: "Aplastic crisis", pts: [
+          P("Cessation of haemopoiesis for a few days, precipitated by infection, especially parvovirus (p.95)."),
+          P("Falling PCV with low reticulocytes; WBC and platelets normal; urgent blood transfusion (p.95)."),
+        ]},
+        { h: "Hyperhaemolytic crisis", pts: [
+          P("Increased jaundice and worsening anaemia, precipitated by infection (p.95)."),
+          P("Transfusion and treatment of the cause (p.95)."),
+          P("Concurrent G6PD deficiency or drugs may contribute.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Routine care in sickle cell disease", src: "p.96; past paper 2k17-2k2.411",
+      prompt: "Write short notes on the routine care of a child with sickle cell anaemia in the steady state.",
+      tip: "List each element with the reason: folic acid (haemolysis), penicillin and vaccines (hyposplenism), proguanil (malaria), education.",
+      sections: [
+        { h: "Daily medicines", pts: [
+          P("Folic acid daily for increased marrow turnover (p.96)."),
+          P("Penicillin prophylaxis; vaccines against pneumococcus and Haemophilus influenzae (p.96)."),
+          P("Malaria prophylaxis with proguanil (p.96)."),
+          P("Not routine iron supplements.", true),
+        ]},
+        { h: "Education and counselling", pts: [
+          P("Avoid dehydration, cold and infection; drink plenty of fluids; early treatment of fever (p.95)."),
+          P("Recognise warning signs: pallor with abdominal swelling, hemiparesis, chest pain, priapism, fever (p.95-96)."),
+        ]},
+        { h: "Surveillance and other therapy", pts: [
+          P("Regular growth, development, eye and renal review (p.96)."),
+          P("Hydroxyurea, transfusion programmes, bone marrow transplant for selected patients (p.96)."),
+          P("Transcranial Doppler yearly from age 2.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Complications of sickle cell disease", src: "p.95-96",
+      prompt: "Write short notes on the complications of sickle cell disease in childhood by system.",
+      tip: "Use the slide's systems: infections, CNS, respiratory, cardiovascular, genitourinary, skeletal. Give treatment for the big three: stroke, acute chest syndrome and infection.",
+      sections: [
+        { h: "Infection", pts: [
+          P("Septicaemia, meningitis, pneumonia from Pneumococcus and Haemophilus; osteomyelitis from Staph aureus and Salmonella (p.96)."),
+        ]},
+        { h: "Neurological", pts: [
+          P("Stroke with hemiparesis and cranial nerve palsies; exchange or simple transfusion with a hypertransfusion regimen (p.96)."),
+        ]},
+        { h: "Respiratory and cardiac", pts: [
+          P("Acute chest syndrome: exchange or packed-cell transfusion, IV fluids, oxygen, antibiotics (p.96)."),
+          P("Heart failure from chronic anaemia (p.96)."),
+        ]},
+        { h: "Genitourinary and skeletal", pts: [
+          P("UTI, haematuria, hyposthenuria, nephrotic syndrome, renal failure, priapism (p.96)."),
+          P("Avascular necrosis of femoral or humeral head (p.96)."),
+        ]},
+      ]
+    },
+  ]
+}]);
+})();
+
+</script>
+<script>
 // Paediatrics · Single-best-option MCQ · Acute diarrhoea and dehydration. Source: Paediatrics CS edited.pdf p.70-73; "Standard teaching" = outside the slide.
 window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
   id: "pa-mcq-dd",
@@ -4607,6 +4813,80 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Single-best-option MCQ · Sickle cell disease. Source: Paediatrics CS edited.pdf p.94-96; "Standard teaching" = outside the slide.
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-mcq-scd",
+  subject: "Paediatrics",
+  group: "Sickle cell disease",
+  type: "mcq",
+  title: "Paediatrics MCQ · Sickle cell disease (12 single best option)",
+  negativeMarking: false,
+  questions: [
+    { topic: "Genetics", src: "p.94",
+      stem: "The molecular defect in sickle haemoglobin is:",
+      options: ["Valine replaced by glutamic acid at position 6 of the alpha chain", "Glutamic acid replaced by valine at position 6 of the beta chain", "Deletion of the beta globin gene", "Lysine replaced by glutamic acid at position 6 of the beta chain", "Excess gamma chains"],
+      answer: 1,
+      explain: "Glu to Val at position 6 of the beta chain (p.94). Lysine at position 6 is Hb C (the SC compound)." },
+    { topic: "Genetics", src: "p.94",
+      stem: "Two parents with sickle cell trait (Hb AS) have a risk of an Hb SS child in each pregnancy of:",
+      options: ["0%", "12.5%", "25%", "50%", "100%"],
+      answer: 2,
+      explain: "Autosomal recessive (p.94): 25% SS, 50% AS, 25% AA. This is the basis of genotype counselling before marriage." },
+    { topic: "Pathophysiology", src: "p.95",
+      stem: "Which factor does NOT precipitate sickling?",
+      options: ["Dehydration", "Cold", "Hypoxia", "Acidosis", "Alkalosis with high oxygen tension"],
+      answer: 4,
+      explain: "D-CHAIN: dehydration, cold, hypoxia, acidosis, infection (p.95). High oxygen tension reduces polymerisation." },
+    { topic: "Stable state", src: "p.95",
+      stem: "Which of the following is a feature of the steady state in sickle cell anaemia?",
+      options: ["Polycythaemia", "Chronic haemolytic anaemia with jaundice, frontal bossing and delayed puberty", "Macrocephaly with hydrocephalus", "Koilonychia", "A massively enlarged spleen in adolescence"],
+      answer: 1,
+      explain: "Anaemia (PCV about 24%), jaundice, bossing, gnathopathy, hepatosplenomegaly, stunted growth, delayed puberty, haemic murmur (p.95). By adolescence the spleen is small from autosplenectomy." },
+    { topic: "VOC", src: "p.95",
+      stem: "Management of a vaso-occlusive crisis includes:",
+      options: ["Dehydrating the patient to reduce sludging", "Corticosteroids", "Liberal oral or IV fluids (at least 1.5 times maintenance), analgesia, treating the precipitating cause", "Routine exchange transfusion", "Iron supplementation"],
+      answer: 2,
+      explain: "Bed rest, liberal fluids, analgesics, identify and treat the cause; usually lasts under a week (p.95). Transfusion is for specific indications." },
+    { topic: "Sequestration", src: "p.95",
+      stem: "A 2-year-old with Hb SS becomes pale and shocked with a rapidly enlarging spleen. The immediate treatment is:",
+      options: ["Oral iron", "Urgent blood transfusion", "Splenectomy now", "Hydroxyurea", "Antimalarials alone"],
+      answer: 1,
+      explain: "Acute splenic sequestration, commonest in young children: urgent transfusion (p.95). Splenectomy is considered after recurrent episodes." },
+    { topic: "Aplastic crisis", src: "p.95",
+      stem: "In aplastic crisis the characteristic findings are:",
+      options: ["Low PCV with high reticulocytes", "Low PCV with low reticulocytes, usually after parvovirus infection", "High PCV", "Leucocytosis and thrombocytosis", "Splenomegaly with shock"],
+      answer: 1,
+      explain: "Cessation of erythropoiesis for days: fall in PCV with reticulocytopenia; WBC and platelets normal (p.95); transfuse and treat the cause." },
+    { topic: "Infection", src: "p.96",
+      stem: "Which pair of organisms are the typical causes of osteomyelitis in sickle cell disease?",
+      options: ["Streptococcus pyogenes and E. coli", "Salmonella species and Staphylococcus aureus", "Klebsiella and Pseudomonas", "Mycobacterium tuberculosis and Candida", "Neisseria and Haemophilus"],
+      answer: 1,
+      explain: "Salmonella and Staph aureus (p.96). Pneumococcus and Haemophilus cause septicaemia, meningitis and pneumonia." },
+    { topic: "CVA", src: "p.96",
+      stem: "A child with sickle cell anaemia develops a sudden hemiparesis. The recommended treatment is:",
+      options: ["Aspirin and anticoagulation", "Exchange transfusion with Hb A blood (hypertransfusion regimen), IV fluids", "Corticosteroids", "Observation only", "Hydroxyurea alone"],
+      answer: 1,
+      explain: "Stroke is treated with exchange (or straight packed-cell) transfusion and hypertransfusion regimen (p.96); past paper 2017.108." },
+    { topic: "Acute chest syndrome", src: "p.96",
+      stem: "Which is part of the management of acute chest syndrome?",
+      options: ["Fluid restriction only", "Oxygen, IV fluids, antibiotics and transfusion (simple or exchange)", "Corticosteroids", "Bronchodilators only", "Iron"],
+      answer: 1,
+      explain: "Exchange or packed-cell transfusion, IV fluids, oxygen therapy and antibiotics (p.96). Avoid over-hydration (standard teaching)." },
+    { topic: "Routine care", src: "p.96; Standard teaching",
+      stem: "Which is NOT part of routine care of a child with sickle cell anaemia?",
+      options: ["Daily folic acid", "Pneumococcal and Haemophilus influenzae vaccination", "Penicillin prophylaxis in early childhood", "Daily iron supplements", "Malaria prophylaxis"],
+      answer: 3,
+      explain: "Folic acid, vaccines, penicillin and proguanil are routine (p.96); iron is only for proven deficiency (risk of iron overload)." },
+    { topic: "Variants and treatment", src: "p.96",
+      stem: "Which statement about other forms of sickle cell disease is correct?",
+      options: ["Hb SC is clinically more severe than Hb SS", "S-beta-zero thalassaemia resembles Hb SS clinically", "S-HPFH is severe", "Hb AS needs penicillin prophylaxis", "Hydroxyurea increases sickling"],
+      answer: 1,
+      explain: "S beta-zero thal resembles SS; S beta-plus is mild; S-HPFH very mild; SC less severe but with sickle retinopathy (p.96). Hydroxyurea reduces sickling (p.96)." },
+  ]
+}]);
+
+</script>
+<script>
 // Where to find the answers: Paediatrics CS slide pages for every T/F stem and picture (checked against Paediatrics-slides.txt).
 // Format per stem, in bank order: pg = slide pages that answer the in-slide statements ("" = nothing in the deck);
 // out = 0-based indexes of statements (a=0, b=1, ...) whose answer is OUTSIDE the slides (standard teaching).
@@ -4656,6 +4936,10 @@ window.PAGE_MAP["pa-tf-ns"] = [{"pg": "p.216, 220", "out": []}, {"pg": "p.211, 2
 window.PAGE_MAP["pa-pics-ns"] = [{"pg": "p.211, 213, 220", "out": []}, {"pg": "p.219, 223", "out": [3]}, {"pg": "p.211-216", "out": []}, {"pg": "p.216-223", "out": []}];
 window.PAGE_MAP["pa-tf-dd"] = [{"pg": "p.70", "out": []}, {"pg": "p.70, 72", "out": []}, {"pg": "p.71", "out": []}, {"pg": "p.71-72", "out": [3, 4]}, {"pg": "p.72-73", "out": []}, {"pg": "p.72", "out": [4]}, {"pg": "p.71, 73", "out": []}, {"pg": "p.70-71", "out": [1, 4]}];
 window.PAGE_MAP["pa-pics-dd"] = [{"pg": "p.71", "out": [3, 4]}, {"pg": "p.72", "out": [0, 1, 4]}, {"pg": "p.70, 72", "out": [1, 3, 4]}, {"pg": "p.70-71, 223", "out": [2, 3]}];
+
+// Sickle cell disease
+window.PAGE_MAP["pa-tf-scd"] = [{"pg": "p.94", "out": []}, {"pg": "p.94-95", "out": [4]}, {"pg": "p.95", "out": [3, 4]}, {"pg": "p.95", "out": []}, {"pg": "p.95", "out": []}, {"pg": "p.96", "out": [3, 4]}, {"pg": "p.96, 225", "out": []}, {"pg": "p.96", "out": [2, 3]}];
+window.PAGE_MAP["pa-pics-scd"] = [{"pg": "p.94-96", "out": [2, 4]}, {"pg": "p.94", "out": []}, {"pg": "p.94-95", "out": []}, {"pg": "p.95-96", "out": [0, 4]}, {"pg": "p.95", "out": [1, 3]}, {"pg": "p.95-96", "out": [2, 4]}];
 
 </script>
 <script>
@@ -5358,6 +5642,100 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
         ["Surgery may be needed for large vegetations with embolism.", true, "Slide p.23 (valve replacement, embolectomy)."],
       ]),
       explain: "Pathogenesis in three steps (p.20): endothelial damage, non-bacterial thrombotic vegetation, transient bacteraemia with adherence. Chronic RHD valves are scarred, thickened and fused; IE valves carry friable infected vegetations." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · Picture test (picture + 5 True/False, negative marking −½) · Sickle cell disease.
+// Real images from Wikimedia Commons, linked live (not copied), credit in each caption. Statements checked against Paediatrics CS edited.pdf p.94-96.
+// The frontal bossing photograph is a general image ("frontal bossing in a child"), not stated to be sickle cell; the hip radiograph shows
+// avascular necrosis in a steroid-treated patient and is used for the sign, which sickle cell disease also causes.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+const F=n=>"https://commons.wikimedia.org/wiki/Special:FilePath/"+n+"?width=720";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-pics-scd",
+  subject: "Paediatrics",
+  group: "Sickle cell disease",
+  type: "pics",
+  title: "Paediatrics Picture test · Sickle cell disease (6 pictures)",
+  negativeMarking: true,
+  secPerQ: 90,
+  questions: [
+    { topic: "Picture: blood film (sickle cells)", src: "p.94, 96", img: F("Sickle Cell Anaemia (SCA).jpg"),
+      credit: "Peripheral blood film in sickle cell anaemia. Wikimedia Commons, CC BY-SA 3.0, Prof. Erhabor Osaro.",
+      stem: "A blood film from a 6-year-old with pallor, jaundice and bone pain.",
+      items: I([
+        ["The film shows sickled and distorted red cells, consistent with sickle cell anaemia.", true, "Slide p.94, 96 (blood film is a diagnostic test)."],
+        ["The diagnosis is confirmed by haemoglobin electrophoresis.", true, "Slide p.96."],
+        ["Howell-Jolly bodies and target cells on the film indicate hyposplenism and haemoglobinopathy.", true, "Standard teaching."],
+        ["The red cell life span is about 120 days.", false, "Shortened to about 17 days (p.95)."],
+        ["Hb A makes up over 95% of the haemoglobin on electrophoresis.", false, "No Hb A in Hb SS: mainly Hb S with raised Hb F (p.94 lists normal HbA over 95%)."],
+      ]),
+      explain: "A film is supportive; the confirmatory test is electrophoresis (HPLC or isoelectric focusing in neonates; cellulose acetate or citrate agar afterwards) (p.96). A sickling test with sodium metabisulphite is positive in both trait and disease." },
+
+    { topic: "Picture: blood film (MGG)", src: "p.94", img: F("Peripheral blood smear stained with MGG of a patient with homozygous Sickle-Cell Disease (SCD).png"),
+      credit: "Peripheral blood smear, May-Grünwald-Giemsa stain, homozygous sickle cell disease, with a sickle cell near the centre. Wikimedia Commons, CC BY 4.0, Vives-Corrons et al.",
+      stem: "A blood film from a child with homozygous sickle cell disease.",
+      items: I([
+        ["The sickle shape arises from polymerisation of deoxygenated haemoglobin S.", true, "Slide p.94 (deoxy Hb S, polymers, tactoids, sickle shape)."],
+        ["The mutation is Glu to Val at position 6 of the beta chain.", true, "Slide p.94."],
+        ["The sickled cells are rigid and are destroyed early by the reticuloendothelial system.", true, "Slide p.94."],
+        ["The disease is inherited as an X-linked recessive trait.", false, "Autosomal recessive (p.94)."],
+        ["Hb AS carriers have anaemia and frequent crises.", false, "Carriers are normally healthy and sickle only in extreme hypoxia (p.94)."],
+      ]),
+      explain: "Exam station: 'identify the cells, name the disease, give the amino acid change, name two precipitants of crisis, name the confirmatory test'." },
+
+    { topic: "Picture: sickling in a vessel", src: "p.94-95", img: F("Sickle cell 01.jpg"),
+      credit: "Normal red cells flowing freely (A) and sickled red cells blocking blood flow in a blood vessel (B). Wikimedia Commons, public domain, National Heart, Lung, and Blood Institute.",
+      stem: "A diagram of normal red cells and sickled cells in a blood vessel.",
+      items: I([
+        ["Sickled cells block the microcirculation causing vaso-occlusion.", true, "Slide p.94-95."],
+        ["Vaso-occlusion explains pain crises, stroke, acute chest syndrome, avascular necrosis and priapism.", true, "Slide p.95-96."],
+        ["Dehydration, hypoxia, cold, acidosis and infection precipitate sickling.", true, "Slide p.95."],
+        ["Liberal fluids and treatment of the precipitating cause are part of crisis management.", true, "Slide p.95."],
+        ["Vaso-occlusion is the cause of the chronic anaemia.", false, "Chronic anaemia is from shortened red cell survival (haemolysis, about 17 days) (p.95)."],
+      ]),
+      explain: "Two mechanisms: vaso-occlusion (pain, infarcts) and haemolysis (anaemia, jaundice, gallstones, leg ulcers). Separate them when you write the pathophysiology." },
+
+    { topic: "Picture: calcified spleen on CT", src: S, img: F("Axial-contrast-enhanced-CT-image-at-bone-window-demonstrates-small-and-calcified-spleen-of-a-patient-with-sickle-cell-di.jpg"),
+      credit: "Axial CT showing a small calcified spleen in a patient with sickle cell disease. Wikimedia Commons, CC BY 4.0, Yildiz, Ariyurek et al.",
+      stem: "An abdominal CT of an adolescent with long-standing sickle cell anaemia.",
+      items: I([
+        ["The spleen is small and calcified from repeated infarction (autosplenectomy).", true, "Standard teaching."],
+        ["Autosplenectomy increases susceptibility to encapsulated organisms.", true, "Slide p.96 (pneumococcus, Haemophilus)."],
+        ["Pneumococcal and Haemophilus vaccination and penicillin prophylaxis are recommended.", true, "Slide p.96."],
+        ["Acute splenic sequestration is a risk at this stage.", false, "It is a complication of the young child with a still-enlarged spleen (p.95)."],
+        ["Splenectomy is the treatment for a single sequestration crisis.", false, "Transfuse urgently (p.95); splenectomy is considered after recurrent episodes."],
+      ]),
+      explain: "A past picture-test style: calcified spleen, gallstones, Howell-Jolly bodies, frontal bossing, hip AVN: all give 'sickle cell disease' as the unifying diagnosis." },
+
+    { topic: "Picture: frontal bossing", src: "p.95", img: F("Frontal bossing-in a child.jpg"),
+      credit: "Frontal bossing (abnormally enlarged forehead) in a child. Wikimedia Commons, public domain (US Federal Government).",
+      stem: "A child with a prominent forehead. In sickle cell anaemia this results from bone marrow expansion.",
+      items: I([
+        ["Skull changes (bossing) and gnathopathy result from marrow hyperplasia.", true, "Slide p.95: marrow activity 6-8 times normal, widening diploe."],
+        ["Rickets, thalassaemia, congenital syphilis and achondroplasia are other causes of frontal bossing.", true, "Standard teaching."],
+        ["Hepatosplenomegaly, haemic murmur and stunted growth may accompany it in sickle cell disease.", true, "Slide p.95."],
+        ["Bossing occurs only after the age of 15 years.", false, "Seen in the young child with chronic haemolysis."],
+        ["The red cell mass is increased (polycythaemia).", false, "Anaemia, with PCV about 24% (p.95)."],
+      ]),
+      explain: "Bone marrow expansion also gives 'hair-on-end' skull X-ray. Differentials in the exam: iron deficiency, thalassaemia major, hereditary spherocytosis." },
+
+    { topic: "Picture: avascular necrosis of the hip", src: "p.96", img: F("Hip Avascular Necrosis.jpg"),
+      credit: "Radiograph of a normal hip and a hip with avascular necrosis in a patient on steroids. Wikimedia Commons, CC BY-SA 3.0, Timcoughlin.",
+      stem: "A radiograph of the hips in an adolescent with groin pain and a limp.",
+      items: I([
+        ["Avascular necrosis of the femoral head is a recognised skeletal complication of sickle cell disease.", true, "Slide p.96 (head of femur or humerus)."],
+        ["It results from vaso-occlusion of the blood supply to the bone.", true, "Slide p.95-96."],
+        ["Long-term corticosteroids and trauma are other causes.", true, "Standard teaching."],
+        ["Salmonella or Staphylococcus aureus osteomyelitis is a differential in a child with fever and bone pain.", true, "Slide p.96."],
+        ["Antibiotics are the treatment for avascular necrosis.", false, "Treat pain, protect weight bearing, orthopaedic referral (standard teaching)."],
+      ]),
+      explain: "Bone pain in SCD: vaso-occlusive infarct versus osteomyelitis. Fever, localised swelling and positive blood cultures favour infection." },
   ]
 }]);
 })();
@@ -7683,6 +8061,115 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · True/False (5 statements per stem, negative marking −½) · Sickle cell disease.
+// Source: Paediatrics CS edited.pdf p.94-96 (Brown: haemoglobinopathies): genetics, pathophysiology, crises, complications, diagnosis, management.
+// Past papers: 2017.108, 2018.69, 2k17-2k2.405, 409, 411, 412, paed.10, paed.508, paed.512, 2013.19 (VOC), 2k17-2k2.294 (anaemic crises), 2017.147 (aplastic crisis).
+// Past-paper keys are unverified. Where a key conflicts with the slide (e.g. "pancytopenia" in aplastic crisis) the slide wins and the statement says so.
+// Penicillin schedule, transcranial Doppler, hydroxyurea dosing and vaccine details beyond the deck are marked outside the slide.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-scd",
+  subject: "Paediatrics",
+  group: "Sickle cell disease",
+  type: "tf",
+  title: "Paediatrics T/F · Sickle cell disease (8 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "Genetics and epidemiology", src: "p.94",
+      stem: "Sickle cell disease in Nigeria:",
+      items: I([
+        ["It is inherited as an autosomal recessive condition.", true, "Slide p.94."],
+        ["The sickle mutation is a substitution of valine for glutamic acid at position 6 of the beta chain.", true, "Slide p.94 (Glu to Val at position 6 of the beta chain)."],
+        ["About 2-3% of Nigerians have Hb SS, and 1-2 million Nigerians have sickle cell anaemia.", true, "Slide p.94. A past paper gave the prevalence as 2%."],
+        ["Hb AS (sickle cell trait) is sickle cell disease.", false, "Hb AS is the carrier state, not SCD (p.94). Sickling occurs only under extreme hypoxia."],
+        ["Hb SC disease is generally more severe than Hb SS.", false, "Hb SC is less severe, but proliferative retinopathy is more common (p.96)."],
+      ]),
+      explain: "Ibadan figures (p.94): Hb SS 3.1%, Hb SC 1.1%, Hb AS 23.7%. Two AS parents have a 25% chance of an SS child in each pregnancy, the basis of genetic counselling." },
+
+    { topic: "Pathophysiology", src: "p.94-95",
+      stem: "Pathophysiology of sickle cell disease:",
+      items: I([
+        ["Deoxygenated Hb S polymerises into tactoids and the red cell becomes sickle-shaped, rigid and sticky.", true, "Slide p.94."],
+        ["Sickled cells block the microcirculation causing vaso-occlusion, infarction, pain and organ failure.", true, "Slide p.95."],
+        ["The red cell lifespan is shortened to about 17 days, causing chronic haemolytic anaemia with a PCV around 24%.", true, "Slide p.95."],
+        ["Bone marrow activity rises 6-8 times, widening the diploe of the skull.", true, "Slide p.95."],
+        ["Fetal haemoglobin worsens sickling.", false, "Hb F protects against sickling (standard teaching), so symptoms start after 4-6 months when Hb F falls. Hb F is under 2% after 1 year (p.94)."],
+      ]),
+      explain: "Precipitants of sickling (p.95): the D-CHAIN: Dehydration, Cold, Hypoxia, Acidosis, Infection (mnemonic 'D CHAIN'). Intrarenal sickling gives haematuria and hyposthenuria even in the trait (p.94)." },
+
+    { topic: "Stable state features", src: "p.95; "+S,
+      stem: "In the steady state a child with sickle cell anaemia typically has:",
+      items: I([
+        ["Pallor and jaundice with a haemic murmur.", true, "Slide p.95; a past paper: 'a typical sickle cell patient is pale and jaundiced'."],
+        ["Frontal bossing, gnathopathy and hepatosplenomegaly in the young child.", true, "Slide p.95."],
+        ["Stunted growth and delayed puberty.", true, "Slide p.95. A past paper listed delayed puberty as true."],
+        ["A massively enlarged spleen persisting into adolescence.", false, "The spleen enlarges early, then repeated infarction leaves a small, fibrosed spleen (autosplenectomy) by about 5-6 years (standard teaching)."],
+        ["Benefit from corticosteroids during crises.", false, "Steroids can precipitate crises and are not part of routine management (past paper: false)."],
+      ]),
+      explain: "Autosplenectomy explains the susceptibility to encapsulated organisms and the Howell-Jolly bodies on the film. Hand-foot syndrome (dactylitis) between 6 and 24 months is the first painful presentation." },
+
+    { topic: "Vaso-occlusive crisis", src: "p.95",
+      stem: "Vaso-occlusive (painful) crisis:",
+      items: I([
+        ["Hand-foot syndrome (dactylitis) in young children, long-bone pain, rib and vertebral pain and abdominal pain are the common patterns.", true, "Slide p.95."],
+        ["The first step is to identify and treat the precipitating cause (infection, dehydration, cold).", true, "Slide p.95."],
+        ["Liberal fluids, orally or intravenously, at least 1.5 times maintenance, are given.", true, "Slide p.95."],
+        ["Adequate analgesia, rest and warmth are part of the treatment.", true, "Slide p.95 (analgesics, bed rest)."],
+        ["A typical episode lasts about a month and always needs transfusion.", false, "Usually under a week (p.95); transfusion is not routine for a painful crisis."],
+      ]),
+      explain: "Hand-foot syndrome occurs between 6 and 24 months (past paper). Acute abdominal crisis can mimic a surgical abdomen (p.95). Past-paper stem: 'VOC is treated with 1.5 maintenance fluid': true." },
+
+    { topic: "Anaemic crises", src: "p.95",
+      stem: "Anaemic crises in sickle cell disease:",
+      items: I([
+        ["Acute splenic sequestration is commonest in younger children and causes rapid splenic enlargement, severe pallor and shock.", true, "Slide p.95."],
+        ["Splenic sequestration needs urgent blood transfusion.", true, "Slide p.95."],
+        ["Aplastic crisis is a temporary cessation of erythropoiesis, often triggered by parvovirus B19, with a low PCV and low reticulocytes.", true, "Slide p.95."],
+        ["In aplastic crisis the white cell and platelet counts are also markedly low (pancytopenia).", false, "The slide states WBC and platelets are NORMAL (p.95). The past-paper option 'pancytopenia' conflicts with the slide."],
+        ["Hyperhaemolytic crisis shows deeper jaundice and worsening anaemia, usually precipitated by infection.", true, "Slide p.95."],
+      ]),
+      explain: "Three crises: sequestration (spleen big, retics high), aplastic (retics low), hyperhaemolytic (jaundice up, retics high). Repeated sequestration is an indication for splenectomy (standard teaching; asked in 2k17-2k2.405)." },
+
+    { topic: "Infections and CNS", src: "p.96; "+S,
+      stem: "Infections and cerebrovascular complications:",
+      items: I([
+        ["Patients are prone to infection by encapsulated organisms such as Pneumococcus and Haemophilus influenzae.", true, "Slide p.96."],
+        ["Osteomyelitis in sickle cell disease is commonly due to Salmonella species and Staphylococcus aureus.", true, "Slide p.96."],
+        ["A stroke (CVA) with hemiparesis is treated with exchange transfusion or simple transfusion with Hb A blood and hypertransfusion.", true, "Slide p.96; past paper 2017.108 (EBT with HbA blood)."],
+        ["Yearly transcranial Doppler screening is recommended from 2 years of age to detect children at high stroke risk.", true, "Outside the slide (standard teaching): velocities above 200 cm/s lead to chronic transfusion."],
+        ["A febrile child with sickle cell disease can safely wait until the next clinic visit.", false, "Fever is an emergency: examine, culture blood, give early parenteral antibiotics (standard teaching)."],
+      ]),
+      explain: "Past paper paed.10: SCA child with drowsiness, fever 39.5°C, PCV 18%, deep jaundice and a left-sided deficit: CVA possible, cerebral malaria possible, urgent packed-cell transfusion, but 'daily penicillin and streptomycin injections' is wrong." },
+
+    { topic: "Other complications", src: "p.96",
+      stem: "Other complications of sickle cell disease:",
+      items: I([
+        ["Acute chest syndrome is treated with exchange or simple packed-cell transfusion, IV fluids, oxygen and antibiotics.", true, "Slide p.96."],
+        ["Avascular necrosis of the femoral or humeral head may occur.", true, "Slide p.96; a past paper listed AVN of the humeral head as true."],
+        ["Priapism, haematuria, hyposthenuria, UTI and nephrotic syndrome are renal and genitourinary complications.", true, "Slide p.96."],
+        ["Heart failure can result from chronic anaemia.", true, "Slide p.96."],
+        ["Hb SS patients are protected against UTI.", false, "Sicklers are at higher risk of UTI (p.225)."],
+      ]),
+      explain: "Link to nephrology: haematuria, hyposthenuria, nephrotic syndrome and renal failure from sickle nephropathy (p.96). Link to neurology: stroke and cranial nerve palsies." },
+
+    { topic: "Diagnosis and routine care", src: "p.96; "+S,
+      stem: "Diagnosis and routine care of a child with sickle cell anaemia:",
+      items: I([
+        ["Haemoglobin electrophoresis confirms the diagnosis (HPLC or isoelectric focusing in neonates).", true, "Slide p.96."],
+        ["Daily folic acid, pneumococcal and Haemophilus influenzae vaccination, penicillin prophylaxis and malaria prophylaxis (proguanil) are routine.", true, "Slide p.96."],
+        ["Penicillin V prophylaxis is given twice daily until about 5 years of age.", true, "Outside the slide for the schedule (standard teaching): from about 2-3 months, 125 mg bd to age 3 then 250 mg bd to 5."],
+        ["Daily iron supplements are given routinely.", false, "Iron overload risk from haemolysis and transfusion; give iron only for proven deficiency (past paper: false)."],
+        ["Hydroxyurea reduces sickling and the frequency of crises and is among the therapies for severe disease.", true, "Slide p.96 lists hydroxyurea, bone marrow transplant and anti-sickling drugs."],
+      ]),
+      explain: "Prevention (p.96): education and prenatal diagnosis; premarital genotype testing and genetic counselling in Nigeria (standard teaching). Variants: S-beta thalassaemia resembles Hb SS; S-HPFH is very mild (p.96)." },
+  ]
+}]);
+})();
+
+</script>
+<script>
 (function(){
 "use strict";
 const $=s=>document.querySelector(s), app=$("#app"), timerEl=$("#timer");
@@ -7697,7 +8184,7 @@ banks.forEach(b=>{const m=PM[b.id]; if(m&&b.questions) b.questions.forEach((q,i)
 const GROUPS=["Menstrual disorders & DUB","Amenorrhoea & PCOS","Abortion","Ectopic pregnancy","Antepartum haemorrhage","Hypertension in pregnancy","Labour & the partograph","Family planning","Infertility","Fibroids & endometriosis","Anaemia in pregnancy","Postpartum haemorrhage & oxytocics"];
 const COMING=["Antenatal care & booking","Gynaecological cancers","Genital infections & STIs","Prolapse & fistulae","Instruments & imaging (picture test)"];
 let curGroup=null;
-const PGROUPS=["Paediatric endocrinology","Infectious diseases","Pulmonology","Rheumatic fever & endocarditis","Neonatal jaundice","Nephrotic syndrome & AGN","Acute diarrhoea & dehydration"];
+const PGROUPS=["Paediatric endocrinology","Infectious diseases","Pulmonology","Rheumatic fever & endocarditis","Neonatal jaundice","Nephrotic syndrome & AGN","Acute diarrhoea & dehydration","Sickle cell disease"];
 const PCOMING=["Neonatology","Nutrition & malnutrition","Haemato-oncology","Congenital heart disease & heart failure","Nephrology","Neurology","Gastroenterology"];
 const TYPE_LABEL={cards:"Flashcards",mcq:"Multiple choice",essay:"Essays",fillgap:"Fill in the gap",tf:"True / False (5 stems each, negative marking)",pics:"Picture test (5 True / False per picture)"};
 const TYPE_ORDER=["cards","mcq","tf","pics","fillgap","essay"];
