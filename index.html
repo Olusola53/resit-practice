@@ -2487,6 +2487,118 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Flashcards · Acute diarrhoea and dehydration. Source: Paediatrics CS edited.pdf p.70-73; extra:true = outside the slide.
+(function(){
+const C=(topic,src,q,a,connect,extra)=>Object.assign({topic,src,q,a,connect},extra?{extra:true}:{});
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-cards-dd",
+  subject: "Paediatrics",
+  group: "Acute diarrhoea & dehydration",
+  type: "cards",
+  title: "Paediatrics Flashcards · Acute diarrhoea and dehydration",
+  cards: [
+    C("Definitions","p.70","Define diarrhoea, acute, persistent, chronic diarrhoea and dysentery.","Diarrhoea: 3 or more loose stools a day after infancy, or looser and more frequent than normal for age. Acute: recent onset, subsides within days. Persistent: begins acutely, lasts at least 14 days. Chronic: insidious, often non-infectious, at least 1 month. Dysentery: visible blood in the stool.","Four labels: 3, 3-5 days, 14 days, 1 month."),
+    C("Epidemiology","p.70","Epidemiology and predisposing factors.","Age 6 months to 5 years, majority before 3. Under 6 months: early formula. Factors: low socio-economic status, poor sanitation, no potable water, poor hygiene, bottle feeding, malnutrition.","Social paediatrics list: WASH, breast-feeding, nutrition."),
+    C("Causes","p.70","Causes of acute diarrhoea.","Virus: rotavirus. Bacteria: enterotoxigenic E. coli, Shigella, Campylobacter jejuni. Protozoa: Cryptosporidium. Invasive: Shigella, EIEC, Campylobacter, Salmonella, Entamoeba histolytica. Associated: malaria, measles, respiratory infections, otitis media; drugs.","Blood or mucus points to invasive."),
+    C("Pathophysiology","p.70","Mechanisms of diarrhoea.","Stimulation of intestinal secretion, mucosal damage by adherence or invasion, increased luminal osmolality (osmotic), abnormal motility, ion transport defect.","Secretory (cholera, ETEC), osmotic (rotavirus, lactose), inflammatory (Shigella)."),
+    C("Clinical","p.70","Clinical features of acute diarrhoea.","Acute, subsides in 3-5 days; vomiting common; prodromal illness suggests a virus; fever has no diagnostic significance; abdominal pain, blood and mucus suggest an invasive agent; signs of dehydration and malnutrition.","Fever does not separate viral from bacterial."),
+    C("Dehydration","p.71","Why are children at higher risk of dehydration?","Larger body surface area to weight ratio, higher body water content per unit weight, higher basal metabolic rate.","Infants worst."),
+    C("Dehydration","p.71","High-risk factors for dehydration in diarrhoea.","Age under 12 months, stopped breast-feeding, frequent stools (above 8 a day), vomiting (above 2 a day), severe malnutrition.","Brings the child to the clinic early."),
+    C("Dehydration","p.71","Clinical signs of mild, moderate and severe dehydration.","Mild: well, alert, thirsty, normal skin. Moderate: restless or irritable, sunken eyes, reduced tears, depressed fontanelle, dry mucosa, thirsty and drinks eagerly, slow pinch, delayed capillary refill (2-4 s), reduced urine. Severe: lethargic or unconscious, very sunken eyes, absent tears, parched mucosa, drinks poorly, pinch over 2 s, capillary refill over 4 s, cold limbs, weak pulse, rapid deep breathing, absent urine.","Best indicators are asterisked: general condition, eyes, thirst, pinch, capillary refill."),
+    C("Dehydration","p.71","Objectives of management of diarrhoea.","Prevent dehydration; correct dehydration; maintain or improve nutrition; treat the aetiological agent if any.","Four goals, one line each."),
+    C("Prevention","p.71","Prevention of dehydration at home.","Unrestricted fluids; continue breast-feeding; in high-risk cases give 10 ml/kg of ORS after each watery stool; teach the mother to make a sugar-salt solution.","Plan A in WHO language.",false),
+    C("Rehydration","p.72","Oral rehydration amounts.","Mild: 30-50 ml/kg ORS over 4 hours. Moderate (some): 60-90 ml/kg over 4 hours (75 ml/kg in the WHO plan). Reassess after 4 hours and repeat if dehydration persists. Correct the deficit in 4 hours.","Round to 75 ml/kg for exams if only one figure is wanted."),
+    C("Rehydration","p.72","When is ORT inappropriate or unsuccessful?","Inappropriate for initial treatment of severe dehydration with shock, paralytic ileus or marked distension, inability to drink (use NG tube if IV not possible). Unsuccessful with very rapid stool loss (above 15 ml/kg/hr), severe repeated vomiting, glucose malabsorption.","Then use IV fluids."),
+    C("Rehydration","p.72","Intravenous rehydration plan.","Shock: 20-30 ml/kg boluses of Ringer's lactate or normal saline until perfusion restored, then ORT. If unable to drink: 0.45% saline in 5% dextrose (or 0.18% saline in 4.3% dextrose), calculate deficit and maintenance, give half the deficit and a third of maintenance in 8 hours, the rest in 16 hours; add KCl once urine is passed.","Fluid then continue with ORS as soon as the child can drink."),
+    C("Rehydration","p.72","Maintenance fluid requirement by weight.","Below 10 kg: 100 ml/kg/day. 11-20 kg: 1000 ml plus 50 ml/kg for each kg above 10. Above 20 kg: 1500 ml plus 20 ml/kg for each kg above 20.","Works out the same as the Holliday-Segar rule."),
+    C("Drugs","p.72","Role of drugs in acute diarrhoea.","Antidiarrhoeal, antiemetic and antisecretory agents are of no benefit and some are dangerous. Antimicrobials only for severe shigella, moderate-severe clostridium colitis, enteroinvasive E. coli, salmonella enteritis in the very young or immunocompromised or systemically ill child.","Zinc is the one useful adjunct (outside the slide).",false),
+    C("Zinc",S,"Zinc supplementation in diarrhoea.","20 mg daily for 10-14 days (10 mg daily if under 6 months), with ORS; reduces duration, severity and recurrence in the following 2-3 months.","Part of the WHO/UNICEF recommendation: ORS plus zinc.",true),
+    C("ORS",S,"Composition of low-osmolarity ORS.","Sodium 75, chloride 65, glucose 75, potassium 20, citrate 10 mmol/L; osmolarity 245 mOsm/L.","Glucose helps sodium absorption through the SGLT1 cotransporter.",true),
+    C("Electrolytes","p.73","Hypernatraemic dehydration: why is it dangerous and how is it corrected?","Least common; dehydration is underestimated because hypertonic serum preserves extracellular volume. Resuscitate shock with 20 ml/kg saline or Ringer's lactate, then correct slowly over 48-72 hours; sodium should fall by under 10 mmol/L per day; slow ORT over 12 hours is safer; if sodium above 160 use 0.45% saline with dextrose. Seizures: anticonvulsants, mannitol.","Rapid correction causes cerebral oedema."),
+    C("Electrolytes","p.73","Management of hypokalaemia and acidosis.","Hypokalaemia: ORS; KCl infusion 10 mmol per 500 ml (max 20 mmol if K below 3), not as a bolus, ECG monitoring if K below 2; maintenance 2-3 mmol/kg/day. Acidosis: correct dehydration; bicarbonate if pH below 7.2 or base deficit above 10: 0.6 x weight x base deficit, half over 1 hour and the rest over 8-12 hours.","Never give potassium in shock before urine is passed."),
+    C("Complications","p.71","Complications and investigations in diarrhoea.","Oliguria and AKI, electrolyte imbalance (low K and HCO3, high or low Na), lactose intolerance, malnutrition. Tests: electrolytes and urea, malaria film, blood gas in severe cases, stool microscopy and culture and reducing substances, urine and blood culture if septicaemic.","Stool reducing substances = lactose intolerance."),
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · Flashcards · Neonatal jaundice. Slides cover cholestasis p.81-85 and neonatal haemolysis p.188-190; the rest is standard teaching (extra:true).
+(function(){
+const C=(topic,src,q,a,connect,extra)=>Object.assign({topic,src,q,a,connect},extra?{extra:true}:{});
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-cards-nj",
+  subject: "Paediatrics",
+  group: "Neonatal jaundice",
+  type: "cards",
+  title: "Paediatrics Flashcards · Neonatal jaundice",
+  cards: [
+    C("Basics",S,"Define physiological jaundice and give its timing.","Unconjugated jaundice appearing after 24 hours (day 2-3), peaking day 3-5 in the term baby (day 5-7 preterm), gone by about 2 weeks (3 weeks preterm). Causes: more red cells, shorter red-cell life, immature conjugation, increased enterohepatic circulation.","Anything outside these limits is pathological.",true),
+    C("Basics",S,"List features that make neonatal jaundice pathological.","Onset under 24 hours; rapid rise (above 5 mg/dl per day); bilirubin above the age-specific treatment line; conjugated above 15% of total (p.81) or above 2 mg/dl; persisting beyond 14 days; pale stool or dark urine; ill baby.","Memory: Early, Fast, High, Long, Conjugated.",true),
+    C("Causes",S,"Causes of jaundice by age: under 24 h, 24-72 h, over 72 h, over 2 weeks.","Under 24 h: Rh, ABO, G6PD, TORCH, sepsis. 24-72 h: physiological, ABO, G6PD, bruising or cephalhaematoma, polycythaemia, prematurity. 72 h to 2 weeks: sepsis, UTI, G6PD, breast-feeding jaundice. Over 2 weeks: breast-milk jaundice, hypothyroidism, biliary atresia, hepatitis, galactosaemia, TORCH.","Use this structure for the short-note opener.",true),
+    C("Haemolysis","p.189","Haemolytic causes of neonatal jaundice.","Rh and ABO incompatibility; G6PD deficiency, spherocytosis, alpha thalassaemia; infection. Haemorrhage (cephalhaematoma, subgaleal, ruptured liver or spleen, feto-maternal haemorrhage) also causes anaemia.","Past paper 2000.33: G6PD, ABO, septicaemia, fracture of femur all true; infant of diabetic mother false."),
+    C("Haemolysis",S,"Compare ABO and Rh haemolytic disease.","ABO: mother O, baby A or B; first baby can be affected; mild; direct Coombs weakly positive or negative; spherocytes. Rh: Rh-negative mother, Rh-positive baby, needs prior sensitisation; severe, hydrops; strongly positive Coombs. Prevent Rh disease with anti-D within 72 hours.","Anti-D after any sensitising event too (abortion, ectopic, APH, amniocentesis).",true),
+    C("G6PD",S,"Why is G6PD deficiency important in Nigeria and what triggers it?","Common X-linked enzyme deficiency; causes acute haemolysis and neonatal jaundice that can be severe. Triggers: naphthalene mothballs, menthol and herbal agents, henna, fava beans, infections, sulphonamides, primaquine, nitrofurantoin. Advice: avoid triggers, screen siblings.","Also appears in the infectious diseases unit (primaquine, malaria).",true),
+    C("Kernicterus",S,"Describe acute and chronic bilirubin encephalopathy.","Acute: lethargy, poor suck, hypotonia, then hypertonia, opisthotonus, retrocollis, high-pitched cry, fever, seizures. Chronic: athetoid cerebral palsy, sensorineural deafness, upward gaze palsy, dental enamel hypoplasia; intelligence often spared. Site: basal ganglia (globus pallidus) and brainstem nuclei.","Only unconjugated bilirubin crosses the blood-brain barrier.",true),
+    C("Kernicterus",S,"What increases the risk of kernicterus at a given bilirubin?","Prematurity, acidosis, sepsis, hypoxia, hypoalbuminaemia, haemolysis, hypoglycaemia and drugs that displace bilirubin from albumin (sulphonamides, ceftriaxone, salicylates).","Be more aggressive treating a sick preterm baby.",true),
+    C("Work-up",S,"Investigations for a jaundiced newborn.","Total and conjugated bilirubin; blood group and direct Coombs of mother and baby; PCV, reticulocytes, blood film; G6PD assay; septic screen (FBC, CRP, blood and urine culture); TSH if prolonged; LFTs, USS, HIDA if conjugated.","Station version: 'take a history from the mother of a 4-day-old with jaundice' (paed.124-127).",true),
+    C("Phototherapy",S,"Mechanism, technique and side effects of phototherapy.","Blue-green light 460-490 nm converts bilirubin to lumirubin and isomers excreted in bile and urine without conjugation. Naked baby, eyes covered, fluids maintained, turn, monitor temperature. Side effects: loose stools, rash, dehydration, hyperthermia, bronze baby with conjugated hyperbilirubinaemia, retinal injury.","The past-paper answer for a 5-day-old with 17 mg/dl and conjugated 1.0 mg/dl.",true),
+    C("Exchange transfusion",S,"Indications and technique of exchange transfusion.","Indications: bilirubin at the exchange line; failure of intensive phototherapy; rising rapidly; signs of bilirubin encephalopathy; severe anaemia with hydrops in Rh disease. Technique: double-volume (about 160-170 ml/kg) with fresh whole blood, O Rh-negative or compatible, through the umbilical vein, 5-10 ml aliquots.","Complications: hypocalcaemia, hyperkalaemia, hypoglycaemia, infection, thrombosis, NEC, thrombocytopenia.",true),
+    C("Treatment",S,"Other measures in isoimmune haemolytic disease.","IVIG 0.5-1 g/kg; correct anaemia (packed cells 10-15 ml/kg); treat hypoglycaemia; keep warm and feeding; follow bilirubin and haemoglobin for rebound and late anaemia.","",true),
+    C("Prolonged jaundice",S,"Causes of prolonged unconjugated jaundice and the first test.","Breast-milk jaundice, hypothyroidism, UTI, G6PD, haemolysis, Gilbert and Crigler-Najjar (rare). First test: conjugated bilirubin; then TSH, urine culture.","Past paper 2k17-2k2.385: 5-week-old, pale stool, dark urine, jaundice from day 4 = cholestasis.",true),
+    C("Cholestasis","p.81","Define neonatal cholestasis and list the causes.","Prolonged conjugated hyperbilirubinaemia (conjugated above 15% of total) in the first 3 months. Extrahepatic: biliary atresia, choledochal cyst, bile-duct perforation, inspissated bile. Intrahepatic: idiopathic neonatal hepatitis, TORCH, bacterial infection, galactosaemia, hypothyroidism, cystic fibrosis, TPN, Alagille.","Basic distinction: extrahepatic (surgical) versus intrahepatic (medical)."),
+    C("Biliary atresia","p.82-83","Clinical features, tests and treatment of biliary atresia.","Well-looking infant, acholic stools from about 2 weeks, firm hepatomegaly. USS: absent gallbladder. HIDA: no excretion. Biopsy: bile-duct proliferation, plugs, fibrosis. Kasai portoenterostomy before 56 days (80-90% bile flow; about 20% after 120 days); later cholangitis, portal hypertension; 70-80% eventually need liver transplant.","Early referral is the exam point."),
+    C("Neonatal hepatitis","p.84","How do you distinguish idiopathic neonatal hepatitis from biliary atresia?","Hepatitis: low birth weight, normal or acholic stools from 1 month, normal liver size or soft to firm, impaired uptake but normal excretion on scan, intralobular inflammation and giant cells on biopsy. Atresia: acholic stools from about 2 weeks, no excretion, bile-duct proliferation.","Both can look identical clinically."),
+    C("Galactosaemia","p.84-85","Features, test and treatment of galactosaemia.","GALT deficiency; vomiting, poor weight gain, jaundice, hepatomegaly, cataracts, hypotonia, E. coli sepsis, developmental delay. Urine reducing substances positive, glucose oxidase negative; confirm with enzyme assay. Lactose-free milk for life, antibiotics, vitamin K, developmental support.","Also screen for galactosaemia in unexplained neonatal sepsis with jaundice."),
+    C("Choledochal cyst","p.84","Describe a choledochal cyst.","Congenital cystic dilatation of the biliary tree. Infants: jaundice, acholic stools, right upper quadrant mass. Older child: colicky pain, jaundice, mass (classic triad in 10-20%) and recurrent pancreatitis. USS, CT or MRI; surgical excision.","Ask about the triad but know it is rare."),
+    C("Prevention",S,"How is neonatal hyperbilirubinaemia prevented?","Anti-D to Rh-negative mothers; antenatal blood group screening; avoid mothballs and herbal agents; early and frequent breast-feeding; check bilirubin before discharge and follow up at day 3-5; educate mothers to recognise jaundice.","The social-paediatrics angle of the topic.",true),
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · Flashcards · Nephrotic syndrome and acute glomerulonephritis. Source: Paediatrics CS edited.pdf p.211-223.
+// extra:true = beyond the slides. Mastery = 2 clean recalls in a row.
+(function(){
+const C=(topic,src,q,a,connect,extra)=>Object.assign({topic,src,q,a,connect},extra?{extra:true}:{});
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-cards-ns",
+  subject: "Paediatrics",
+  group: "Nephrotic syndrome & AGN",
+  type: "cards",
+  title: "Paediatrics Flashcards · Nephrotic syndrome and AGN",
+  cards: [
+    C("Patterns","p.211","List the clinical patterns of glomerular disease.","Nephrotic syndrome, acute glomerulonephritis (nephritic syndrome), mixed nephritic-nephrotic picture, acute kidney injury, chronic kidney disease, recurrent or persistent haematuria, asymptomatic proteinuria, rapidly progressive glomerulonephritis.","Spectrum in 2266 Nigerian children: NS 31%, AGN 25%, UTI 25%, renal failure 6%, Wilms 3% (p.211)."),
+    C("Nephrotic","p.216","Define nephrotic syndrome.","Proteinuria above 50 mg/kg/day (or 40 mg/m²/hr, or early-morning protein:creatinine above 200 mg/mmol), hypoalbuminaemia (below 25 g/L), massive generalised oedema, hyperlipidaemia (cholesterol above 220 mg/dl).","Four features: P-H-O-L (Protein, Hypoalbuminaemia, Oedema, Lipids)."),
+    C("Nephrotic","p.216","Why does proteinuria occur in nephrotic syndrome?","Loss of the glomerular size and charge barrier (polyanions in the basement membrane; foot-process damage), plus haemodynamic changes. Albumin (negatively charged, 69 kDa) is lost first; in minimal change disease loss is selective.","Selective = mainly albumin; non-selective = larger proteins too (IgG)."),
+    C("Nephrotic","p.216-217","Explain the oedema in nephrotic syndrome.","Hypoalbuminaemia lowers oncotic pressure, fluid leaves the vessels, the fall in blood volume stimulates ADH, renin-angiotensin-aldosterone and sympathetic activity, causing sodium and water retention; there may also be an intrarenal defect.","Hence salt restriction and cautious diuretics."),
+    C("Nephrotic","p.217","Explain the hyperlipidaemia in nephrotic syndrome.","The liver makes more albumin and lipoproteins in compensation; large lipoproteins are not lost in urine; lipoprotein lipase activity falls so lipid catabolism is reduced.","Raised LDL, VLDL, triglycerides and cholesterol."),
+    C("Nephrotic","p.211, 217","Epidemiology of nephrotic syndrome in Nigeria.","Commonest chronic renal disease of childhood (31% of renal disease). School-age peak, male predominance. Minimal change rare; FSGS, MPGN, membranous nephropathy and infection-related lesions common; most children steroid resistant.","Contrast with white children: over 90% idiopathic, 85% of those minimal change, 90% steroid sensitive."),
+    C("Nephrotic","p.218-219","Classify the causes of nephrotic syndrome.","Primary: minimal change, MPGN, membranous, FSGS, proliferative GN; congenital (Finnish type, NPHS1 nephrin, NPHS2 podocin). Secondary: infections (quartan malaria, hepatitis B, HIV, schistosomiasis, syphilis, CMV), SLE and HSP, drugs and metals (mercury in creams, gold, penicillamine), malignancy, hereditary diseases (sickle cell, Alport), diabetes.","Quartan malarial nephropathy is the one to name."),
+    C("Nephrotic","p.220","Clinical features of nephrotic syndrome.","Periorbital oedema first, then limbs, ascites, genitalia, pleural effusion; weight gain despite poor appetite; reduced urine output; normal BP early; features of infection.","Oedema is worse on waking and eases on ambulation."),
+    C("Nephrotic","p.220-221","Investigations in nephrotic syndrome.","Urine protein 3-4+, microscopy; 24-hour urine protein or protein:creatinine ratio; serum albumin, cholesterol, urea, creatinine, electrolytes (low total calcium, normal ionised); stool for S. mansoni; G6PD (before drugs); complement; HBsAg and HIV; renal biopsy.","The slide recommends biopsy for all Nigerian children who can safely have it (p.221)."),
+    C("Nephrotic","p.221","Indications for renal biopsy in nephrotic syndrome.","All children presenting in our environment (most are steroid resistant) without contraindication; age under 1 year or over 10; low serum complement; failure of steroid therapy.","Biopsy tells prognosis and plans treatment."),
+    C("Nephrotic","p.221","Treatment of the first episode of steroid-sensitive nephrotic syndrome.","Prednisolone 60 mg/m²/day (max 80 mg) for 4 weeks, then 40 mg/m² on alternate days for 4 weeks. Supportive: salt restriction, daily weights, BP, treat infection, no femoral puncture, thiazide or spironolactone; salt-poor albumin 1 g/kg plus frusemide or FFP for resistant oedema.","Mnemonic: 60 then 40, four then four."),
+    C("Nephrotic","p.221","Treatment of relapses and steroid-dependent disease.","First two relapses: prednisolone 30 mg/m²/day until remission then 40 mg/m² alternate days for 4 weeks. Frequent relapses: low-dose alternate-day prednisolone for up to 12 months. Further relapses: levamisole, cyclophosphamide (3 mg/kg/day x 8 weeks), cyclosporine.","Steroid side effects are the reason to add a second agent."),
+    C("Nephrotic","p.222","Define remission, relapse, frequent relapse, steroid dependence and resistance.","Remission: urine protein under 4 mg/hr/m² or dipstick negative or trace for 3 days. Relapse: protein 40 mg/hr/m² or dipstick 2+ or more for 3 days. Frequent relapse: two or more within 6 months or four or more in 12 months. Dependence: two relapses during treatment or within 14 days of stopping. Resistance: no response to 4 weeks of 60 mg/m²/day.","The definitions are often a short note on their own."),
+    C("Nephrotic","p.222","Steroid-resistant nephrotic syndrome: options.","Biopsy; calcineurin inhibitors (cyclosporine, tacrolimus), mycophenolate, cyclophosphamide with vincristine and prednisolone, pulse methylprednisolone (Mendoza); ACE inhibitors for proteinuria.","About 25-30% of resistant FSGS reach chronic kidney failure within 5 years (p.217)."),
+    C("Nephrotic","p.222-223","Complications of nephrotic syndrome and their treatment.","Infection (antibiotics, pneumococcal vaccine; live vaccines avoided on high-dose steroids), thromboembolism (correct hypovolaemia, heparin), malnutrition, hyperlipidaemia, CKD, loss of vitamin D binding protein; chickenpox needs zoster immunoglobulin or acyclovir; measles needs immunoglobulin.","Peritonitis and cellulitis are the infections to name."),
+    C("Nephrotic","p.223","Differential diagnosis of oedema with proteinuria.","AGN, kwashiorkor, congestive cardiac failure, chronic liver disease, beri-beri.","NS vs kwashiorkor: NS has heavy proteinuria and high cholesterol; kwashiorkor has none."),
+    C("AGN","p.211","Define acute glomerulonephritis and its cardinal features.","Inflammation and proliferation of glomerular cells with sudden onset of haematuria, hypertension, oedema (milder than NS), oliguria, circulatory congestion and renal insufficiency (azotaemia, hyperkalaemia, hyperphosphataemia, hypocalcaemia).","Coca-cola urine plus puffy face plus high BP."),
+    C("AGN","p.212","Causes of the acute nephritic syndrome in children.","Common: post-infectious GN, HSP. Less common: MPGN, IgA nephropathy, SLE, infective endocarditis, shunt nephritis. Uncommon: Wegener's, PAN.","Endocarditis links this unit to cardiology."),
+    C("AGN","p.212-213","Describe post-streptococcal AGN: organism, latent period, age and incidence.","Nephritogenic group A beta-haemolytic streptococci; pharyngitis strains M12 (also 1, 4, 6, 25), latent 1-3 weeks; pyoderma strains M49 etc, latent 3-6 weeks; commoner in our environment after pyoderma; peak 6-7 years; males 2:1; attack rate 15%; 50-85% subclinical; treatment of pharyngitis does not prevent it.","Rheumatogenic strains differ from nephritogenic ones (p.212)."),
+    C("AGN","p.213","Complications of AGN.","Hypertensive encephalopathy, oliguric acute kidney injury, pulmonary oedema, heart failure, nephrotic syndrome (rare), retinopathy, RPGN (under 1%).","Hypertensive encephalopathy = convulsions, impaired consciousness."),
+    C("AGN","p.214-215","Investigations in AGN.","Urinalysis (haematuria, RBC casts, protein 1-2+), urea, creatinine, K+ raised, HCO3 low; C3 low (6-8 weeks), C4 normal; ASOT above 333 Todd units, anti-DNase B, anti-hyaluronidase, streptozyme; throat or skin swab; chest X-ray if overload; renal USS. Biopsy only for atypical features.","Biopsy: hypertension over 3 weeks, ARF, low C3 over 8-12 weeks, nephrotic picture, proteinuria over 6 months, haematuria over 1 year."),
+    C("AGN","p.215-216","Management and prognosis of APSGN.","Supportive: bed rest, fluid and salt restriction, input-output chart, daily weight, BP; frusemide, hydralazine or nifedipine; treat hyperkalaemia and acidosis; penicillin for 10 days (erythromycin if allergic). 80% recover completely; 10% go to CRF; follow up to adulthood.","Resolution times: diuresis in 1 week, haematuria 2-3 weeks, proteinuria 3-6 months, microscopic haematuria up to 1 year."),
+  ]
+}]);
+})();
+
+</script>
+<script>
 // Paediatrics · Flashcards · Pulmonology. Source: Paediatrics CS edited.pdf p.282-316 (asthma, croup, bronchiolitis, ARI, pneumonia).
 // extra:true = beyond the slides (standard teaching). Mastery = 2 clean recalls in a row.
 (function(){
@@ -2574,6 +2686,139 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
     C("Endocarditis","p.23","Complications of IE.","Heart failure, embolic events (cerebral, renal, pulmonary, coronary), persistent bacteraemia, periannular abscess, prosthetic device malfunction, arrhythmia or new heart block, mycotic aneurysm.","Right-sided lesions cause pulmonary emboli; with a right-to-left shunt emboli go systemic (p.17)."),
     C("Endocarditis","p.18, 23","Prophylaxis against IE: who, what and when?","For prosthetic valves, previous IE, unrepaired CHD (and cardiac transplant recipients). A single dose 30-60 minutes before the procedure: oral amoxicillin 50 mg/kg, or ampicillin IV. Plus good oral hygiene and health education.","Not the same as ARF prophylaxis (monthly penicillin for years)."),
     C("Connect it","p.14-23","How are ARF and IE connected?","Rheumatic valve damage is a predisposing lesion for IE. A child with RHD who develops fever and a changing murmur needs blood cultures before any antibiotic or steroid. Both have a criteria set (Jones for ARF, Duke for IE) and both are prevented by antibiotics (long-term penicillin for ARF; single-dose cover for IE).","Both are asked as 'Concerning...' T/F stems and as short notes."),
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · Essays · Acute diarrhoea and dehydration. Two long essays (leading to a diagnosis; social paediatrics) and two short.
+// Source: Paediatrics CS edited.pdf p.70-73; points beyond the deck are x:true (WHO plans, zinc, ORS composition, rotavirus vaccine, dysentery antibiotics).
+// Past papers: 2017.80, 2017.62, 2k20-2k2.25, 2k23.165, 2k23.182-183, 2000.4.
+(function(){
+const P=(t,x)=>x?{t,x:true}:{t};
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-essay-dd",
+  subject: "Paediatrics",
+  group: "Acute diarrhoea & dehydration",
+  type: "essay",
+  title: "Paediatrics Essays · Acute diarrhoea and dehydration (2 long, 2 short)",
+  essays: [
+    {
+      kind: "Long essay (20 marks) · leading to a diagnosis", marks: 20, topic: "Acute gastroenteritis with dehydration", src: "p.70-73; past papers 2017.80, 2k20-2k2.25",
+      prompt: "A 9-month-old boy is brought with a 2-day history of passing watery stools about 10 times a day and vomiting. He is irritable, has sunken eyes, drinks eagerly and the skin pinch goes back slowly. He weighs 8 kg. Discuss your diagnosis and management.",
+      tip: "Name the diagnosis with the degree of dehydration, justify from the signs, then fluid plan with actual numbers, nutrition, drugs (zinc, no antidiarrhoeals), danger signs, prevention.",
+      sections: [
+        { h: "Diagnosis and reasoning", pts: [
+          P("Acute watery diarrhoea (gastroenteritis), most likely rotavirus, with moderate dehydration (p.70-71)."),
+          P("Irritable, sunken eyes, thirsty, drinks eagerly, slow skin pinch = moderate (some) dehydration (p.71)."),
+          P("High-risk features: age under 12 months, stools above 8 a day, vomiting (p.71)."),
+        ]},
+        { h: "Differential and associated conditions", pts: [
+          P("Invasive diarrhoea (Shigella, Campylobacter, amoebiasis) if blood or mucus (p.70)."),
+          P("Malaria, measles, otitis media, respiratory infections, sepsis and UTI as causes of diarrhoea or vomiting (p.70)."),
+          P("Surgical conditions: intussusception, appendicitis if distension or bilious vomiting.", true),
+        ]},
+        { h: "Investigations", pts: [
+          P("Usually none for mild-moderate watery diarrhoea; weigh the child."),
+          P("Severe cases: serum electrolytes, urea, creatinine, blood gas; blood film for malaria parasites (p.71)."),
+          P("Stool microscopy, culture and reducing substances if blood, mucus, persistent or suspected lactose intolerance (p.71)."),
+        ]},
+        { h: "Treatment: rehydration", pts: [
+          P("Oral rehydration: 60-90 ml/kg ORS over 4 hours, so 480-720 ml for 8 kg; reassess after 4 hours and repeat if still dehydrated (p.72)."),
+          P("Small frequent sips by cup and spoon; if vomiting, pause for 10 minutes then continue; NG tube if unable to drink (p.72)."),
+          P("IV fluids if shock (20-30 ml/kg Ringer's lactate or saline), or ORT fails (p.72)."),
+          P("Maintenance and ongoing losses: 10 ml/kg ORS after each watery stool (p.71)."),
+        ]},
+        { h: "Nutrition, drugs and follow-up", pts: [
+          P("Continue breast-feeding and the usual diet; do not starve (p.71).", true),
+          P("Zinc 20 mg daily for 10-14 days (10 mg under 6 months).", true),
+          P("No antidiarrhoeal or antiemetic drugs; no antibiotics unless a specific indication (p.72)."),
+          P("Treat associated malaria or other infection; vitamin A where indicated.", true),
+          P("Counsel mother: danger signs (not drinking, repeated vomiting, blood in stool, fever, lethargy), hygiene, safe water, ORS preparation (p.71).", false),
+        ]},
+        { h: "Complications and prevention", pts: [
+          P("Electrolyte disturbance, acidosis, AKI, lactose intolerance, malnutrition (p.71, 73)."),
+          P("Rotavirus vaccine, exclusive breast-feeding for 6 months, hand washing, sanitation, measles vaccination.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Long essay (20 marks) · social paediatrics", marks: 20, topic: "Diarrhoeal disease in the community", src: "p.70-73; Standard teaching",
+      prompt: "Discuss the factors responsible for the high burden of diarrhoeal disease in children under five in Nigeria and the measures to reduce it.",
+      tip: "Burden, then determinants (host, agent, environment), then prevention at primary, secondary and tertiary levels with named programmes (ORS and zinc, immunisation, WASH, exclusive breast-feeding).",
+      sections: [
+        { h: "Burden", pts: [
+          P("Common illness of children aged 6 months to 5 years, most before 3 years (p.70)."),
+          P("A leading cause of under-5 morbidity and mortality through dehydration and malnutrition.", true),
+        ]},
+        { h: "Determinants", pts: [
+          P("Low socio-economic status, poor sanitation, lack of potable water, poor personal hygiene (p.70)."),
+          P("Bottle feeding and early introduction of formula; no exclusive breast-feeding (p.70)."),
+          P("Malnutrition, measles and malaria, HIV (p.70-71).", false),
+          P("Overcrowding, open defecation, contaminated food, poor maternal education, poverty, limited access to health care.", true),
+        ]},
+        { h: "Primary prevention", pts: [
+          P("Exclusive breast-feeding for 6 months; safe complementary feeding; vitamin A.", true),
+          P("Safe water, sanitation and hand washing (WASH).", true),
+          P("Rotavirus and measles immunisation.", true),
+        ]},
+        { h: "Secondary prevention (early treatment)", pts: [
+          P("Home care: unrestricted fluids, continued feeding, sugar-salt solution or ORS (p.71)."),
+          P("ORS plus zinc, early recognition of danger signs, community health workers.", true),
+        ]},
+        { h: "Tertiary and policy", pts: [
+          P("Hospital rehydration, treatment of complications and malnutrition (p.71-73)."),
+          P("Community education, school health, IMCI, national ORS and zinc programmes, improved water supply.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Oral rehydration therapy", src: "p.71-72; Standard teaching",
+      prompt: "Write short notes on oral rehydration therapy.",
+      tip: "Principle, composition, indications, amounts, contraindications, adjuncts.",
+      sections: [
+        { h: "Principle and composition", pts: [
+          P("Sodium-glucose co-transport in the small intestine remains intact in diarrhoea, so glucose-sodium solutions are absorbed with water.", true),
+          P("Low-osmolarity ORS: sodium 75, glucose 75, potassium 20, chloride 65, citrate 10 mmol/L; 245 mOsm/L.", true),
+          P("Homemade sugar-salt solution can be taught (p.71)."),
+        ]},
+        { h: "Amounts", pts: [
+          P("Mild: 30-50 ml/kg over 4 hours; moderate: 60-90 ml/kg over 4 hours; reassess after 4 hours (p.72)."),
+          P("Prevent dehydration: 10 ml/kg after each watery stool (p.71)."),
+        ]},
+        { h: "When it is not suitable", pts: [
+          P("Shock, paralytic ileus or distension, unable to drink; failure with rapid loss over 15 ml/kg/hr, persistent vomiting, glucose malabsorption (p.72)."),
+          P("Use an NG tube if IV not possible (p.72)."),
+        ]},
+        { h: "Adjuncts and advice", pts: [
+          P("Zinc 10-14 days; continue breast-feeding and normal feeding.", true),
+          P("Teach the mother to give small frequent sips and to return if the child worsens (p.71)."),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Dysentery and persistent diarrhoea", src: "p.70, 72; Standard teaching; past papers 2017.62, 2k23.165",
+      prompt: "A 4-year-old has 3 days of bloody mucoid diarrhoea. Write short notes on the cause and management of dysentery, and on persistent diarrhoea.",
+      tip: "Define each, give the commonest causes, tests and treatment, then say how persistent diarrhoea differs.",
+      sections: [
+        { h: "Dysentery: definition and causes", pts: [
+          P("Diarrhoea with visible blood (p.70)."),
+          P("Shigella (commonest), Campylobacter jejuni, enteroinvasive E. coli, Salmonella, Entamoeba histolytica (p.70)."),
+        ]},
+        { h: "Dysentery: management", pts: [
+          P("Assess and treat dehydration first (p.71-72)."),
+          P("Antibiotic active against Shigella (e.g. ciprofloxacin 15 mg/kg twice daily for 3 days); metronidazole if amoeba on microscopy.", true),
+          P("Severe shigellosis is an indication for antimicrobials (p.72)."),
+          P("Zinc, feeding, vitamin A; watch for HUS, sepsis, rectal prolapse, malnutrition.", true),
+        ]},
+        { h: "Persistent diarrhoea (14 days or more)", pts: [
+          P("Lasts at least 14 days, begins acutely (p.70)."),
+          P("Causes: post-infectious mucosal damage, lactose intolerance, malnutrition, HIV, Giardia, recurrent infections (p.71).", false),
+          P("Management: rehydrate, nutrition plan (lactose-free or reduced-lactose feeds, small frequent meals), zinc and multivitamins, treat specific infection, avoid antidiarrhoeal drugs; stool tests as indicated.", true),
+        ]},
+      ]
+    },
   ]
 }]);
 })();
@@ -3290,6 +3535,227 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Essays · Neonatal jaundice. One long essay "leading to a diagnosis" (past papers cohort-n.8, paed.9: "a five-day-old baby
+// presented with jaundice of two days"; paed.124 history station) and three short essays (2k17-2k2.319, 324, cohort-n.42, 2k17-2k2.385).
+// The deck has no lecture on unconjugated jaundice, so those points are x:true (standard teaching); cholestasis points cite p.81-85.
+(function(){
+const P=(t,x)=>x?{t,x:true}:{t};
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-essay-nj",
+  subject: "Paediatrics",
+  group: "Neonatal jaundice",
+  type: "essay",
+  title: "Paediatrics Essays · Neonatal jaundice (1 long, 3 short)",
+  essays: [
+    {
+      kind: "Long essay (20 marks) · leading to a diagnosis", marks: 20, topic: "Neonatal jaundice", src: "Standard teaching; p.81-85, 188-190; past papers cohort-n.8, paed.9, paed.124-127",
+      prompt: "A 5-day-old term baby boy is brought to the emergency room with yellow discolouration of the eyes and body for 2 days. He was delivered at home and is exclusively breast-fed. His mother is blood group O Rh positive. He is lethargic and feeding poorly. Discuss your diagnosis and management.",
+      tip: "Open with 'neonatal hyperbilirubinaemia, probably unconjugated, with risk of bilirubin encephalopathy', then structure: causes at this age, history and examination, investigations, treatment (phototherapy, exchange), complications, prevention. Name G6PD, ABO and sepsis.",
+      sections: [
+        { h: "Diagnosis and reasoning", pts: [
+          P("Neonatal unconjugated hyperbilirubinaemia with lethargy and poor feeding, which are warning signs of acute bilirubin encephalopathy.", true),
+          P("Causes at this age (day 3-7): G6PD deficiency, ABO incompatibility (mother O), sepsis, breast-feeding jaundice, bruising or cephalhaematoma, polycythaemia.", true),
+          P("Rh disease is unlikely because the mother is Rh positive; the first 24 hours are spared in physiological jaundice, but anything severe is pathological.", true),
+        ]},
+        { h: "History", pts: [
+          P("Onset and progression of jaundice; stool and urine colour (pale stool and dark urine would suggest cholestasis, p.81).", false),
+          P("Family history of G6PD deficiency or neonatal jaundice; maternal blood group and previous affected babies.", true),
+          P("Exposure to mothballs, menthol, herbal medicines or henna; feeding adequacy; delivery details; maternal fever.", true),
+          P("Home delivery, birth asphyxia, cord care and signs of sepsis.", true),
+        ]},
+        { h: "Examination", pts: [
+          P("Extent of jaundice (Kramer), pallor, hydration, weight, temperature, hepatosplenomegaly.", true),
+          P("Bruising, cephalhaematoma, signs of sepsis, omphalitis.", true),
+          P("Neurological signs: tone, cry, opisthotonus, seizures (bilirubin encephalopathy).", true),
+        ]},
+        { h: "Investigations", pts: [
+          P("Serum total and conjugated bilirubin.", true),
+          P("Blood group and direct Coombs test of mother and baby; PCV, reticulocyte count, blood film (spherocytes, Heinz bodies) (p.189).", false),
+          P("G6PD assay; FBC, CRP, blood culture, urinalysis and urine culture.", true),
+        ]},
+        { h: "Treatment", pts: [
+          P("Admit; start intensive phototherapy immediately; maintain fluids and feeding; eye protection; monitor temperature.", true),
+          P("Treat sepsis if suspected; correct hypoglycaemia and dehydration.", true),
+          P("Exchange transfusion if bilirubin reaches the exchange line, fails to fall, or there are neurological signs (double-volume with fresh whole blood).", true),
+          P("IVIG in isoimmune haemolysis; transfuse if severe anaemia (p.189-190).", false),
+          P("Treat the cause: avoid triggers in G6PD deficiency.", true),
+        ]},
+        { h: "Complications and prevention", pts: [
+          P("Kernicterus: athetoid cerebral palsy, deafness, gaze palsy, enamel hypoplasia.", true),
+          P("Anaemia and late complications of exchange transfusion.", true),
+          P("Prevention: antenatal blood group screening and anti-D, avoid mothballs and herbal agents, early breast-feeding, bilirubin check and follow-up before discharge, health education.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Neonatal jaundice: management", src: "Standard teaching; past papers 2k17-2k2.319, 2k17-2k2.324, cohort-n.42",
+      prompt: "Write short notes on the management of neonatal jaundice.",
+      tip: "Assess, investigate, then treat in escalating order: feeds, phototherapy, IVIG, exchange; treat the cause; counsel.",
+      sections: [
+        { h: "Assess", pts: [
+          P("History, Kramer zones, serum bilirubin, risk factors for kernicterus.", true),
+          P("Decide if physiological or pathological (onset under 24 hours, rapid rise, prolonged, conjugated).", true),
+        ]},
+        { h: "Investigate", pts: [
+          P("Bilirubin (total, conjugated), blood groups and Coombs, PCV, reticulocytes, G6PD, septic screen, TSH if prolonged.", true),
+        ]},
+        { h: "Treat", pts: [
+          P("Phototherapy: first-line for unconjugated jaundice above the line; maintain feeding and hydration.", true),
+          P("IVIG 0.5-1 g/kg in isoimmune haemolytic disease.", true),
+          P("Exchange transfusion for bilirubin at the exchange line or neurological signs; double-volume.", true),
+          P("Treat underlying cause (sepsis, hypothyroidism, G6PD triggers).", true),
+        ]},
+        { h: "Prevent and follow up", pts: [
+          P("Anti-D, health education, early feeding; follow up for hearing and development.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Neonatal cholestasis", src: "p.81-85; past papers 2k17-2k2.385, 2k19.6, 2k20-2k2.30",
+      prompt: "A 5-week-old infant is jaundiced since day 4 with pale stools and dark urine. Write short notes on the diagnosis and management.",
+      tip: "Name cholestasis, split extrahepatic from intrahepatic, and give biliary atresia and the 56-day Kasai window as the key exam point.",
+      sections: [
+        { h: "Definition and clues", pts: [
+          P("Conjugated bilirubin above 15% of total within the first 3 months (p.81).", false),
+          P("Pale stools and dark urine; hepatomegaly; well-looking infant suggests biliary atresia (p.82).", false),
+        ]},
+        { h: "Causes", pts: [
+          P("Extrahepatic: biliary atresia, choledochal cyst, bile-duct perforation, mucus plug in cystic fibrosis (p.81, 84).", false),
+          P("Intrahepatic: idiopathic neonatal hepatitis, TORCH and other infections, sepsis and UTI, galactosaemia, hypothyroidism, TPN (p.81, 84-85).", false),
+        ]},
+        { h: "Investigations", pts: [
+          P("Total and conjugated bilirubin, LFTs, PT, albumin, FBC, cultures, TORCH, HBsAg and HIV, urine reducing substances, thyroid function (p.82).", false),
+          P("Ultrasound (absent gallbladder), HIDA scan, liver biopsy (p.82-83).", false),
+        ]},
+        { h: "Treatment", pts: [
+          P("Kasai procedure before 56 days: bile flow in 80-90%; only about 20% after 120 days (p.83).", false),
+          P("Post-op: prophylactic antibiotics against cholangitis, ursodeoxycholic acid, medium-chain triglycerides, fat-soluble vitamins A, D, E, K (p.83).", false),
+          P("Liver transplant if the operation fails or in end-stage liver disease (p.83).", false),
+          P("Galactosaemia: lactose-free milk; hypothyroidism: levothyroxine (p.85).", false),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Kernicterus", src: "Standard teaching",
+      prompt: "Write short notes on bilirubin encephalopathy (kernicterus).",
+      tip: "Pathogenesis, risk factors, acute then chronic features, prevention.",
+      sections: [
+        { h: "Pathogenesis and risk factors", pts: [
+          P("Unconjugated bilirubin crosses the blood-brain barrier and stains the basal ganglia and brainstem nuclei.", true),
+          P("Prematurity, haemolysis, acidosis, sepsis, hypoalbuminaemia, hypoxia, displacing drugs (sulphonamides, ceftriaxone).", true),
+        ]},
+        { h: "Clinical features", pts: [
+          P("Acute: lethargy, poor suck, hypotonia, then hypertonia, opisthotonus, high-pitched cry, fever, seizures.", true),
+          P("Chronic: athetoid cerebral palsy, sensorineural deafness, upward gaze palsy, dental enamel hypoplasia.", true),
+        ]},
+        { h: "Management and prevention", pts: [
+          P("Urgent exchange transfusion for acute encephalopathy plus intensive phototherapy.", true),
+          P("Prevent: early detection and treatment of jaundice, Rh prophylaxis, avoid triggers, follow-up and hearing screening.", true),
+        ]},
+      ]
+    },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · Essays · Nephrotic syndrome and AGN. One long "leading to a diagnosis" and two short essays.
+// Source: Paediatrics CS edited.pdf p.211-223; past papers 2017.109, 2018.45, 2018.35, paed.147 and paed.1159 (history station: nephrotic syndrome).
+(function(){
+const P=(t,x)=>x?{t,x:true}:{t};
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-essay-ns",
+  subject: "Paediatrics",
+  group: "Nephrotic syndrome & AGN",
+  type: "essay",
+  title: "Paediatrics Essays · Nephrotic syndrome and AGN (1 long, 2 short)",
+  essays: [
+    {
+      kind: "Long essay (20 marks) · leading to a diagnosis", marks: 20, topic: "Nephrotic syndrome", src: "p.216-223; past papers 2017.109, 2018.45, paed.147",
+      prompt: "A 6-year-old boy is brought with 3 weeks of progressive facial puffiness followed by swelling of the legs and abdomen. His urine is frothy. He has no haematuria. Blood pressure is normal. Discuss your diagnosis and management.",
+      tip: "Open with 'nephrotic syndrome', then say which type is likely in Nigeria and why biopsy matters. Management order: confirm, find cause, treat with prednisolone (dose), support, complications, follow-up.",
+      sections: [
+        { h: "Diagnosis and reasoning", pts: [
+          P("Nephrotic syndrome: heavy proteinuria, hypoalbuminaemia, massive oedema and hyperlipidaemia (p.216)."),
+          P("Periorbital oedema first, then limbs, ascites and genitalia; frothy urine; normal BP and no haematuria suggest a pure nephrotic picture (p.220)."),
+          P("Primary idiopathic nephrotic syndrome is likely, but in Nigeria minimal change is rare and FSGS, MPGN, membranous and malaria- or hepatitis-related lesions are common (p.217-219)."),
+        ]},
+        { h: "Differential diagnosis", pts: [
+          P("AGN, kwashiorkor, congestive cardiac failure, chronic liver disease, beri-beri (p.223)."),
+          P("Secondary causes to exclude: quartan malaria, hepatitis B, HIV, schistosomiasis, SLE, drugs (mercury creams) (p.219-220)."),
+        ]},
+        { h: "Investigations", pts: [
+          P("Urinalysis (protein 3-4+), microscopy, 24-hour urine protein or protein:creatinine ratio (p.216, 220)."),
+          P("Serum albumin, cholesterol, urea, creatinine, electrolytes (total calcium low), complement C3 (p.220)."),
+          P("HBsAg, HIV, malaria parasite, stool for S. mansoni, G6PD before drugs (p.220)."),
+          P("Renal biopsy: advised in our environment before treatment because most are steroid resistant; also if low C3 or steroid failure (p.221)."),
+        ]},
+        { h: "Treatment", pts: [
+          P("Supportive: daily weight, BP, urinalysis, input-output chart, salt restriction, normal protein diet, no femoral puncture (p.221)."),
+          P("Prednisolone 60 mg/m²/day for 4 weeks, then 40 mg/m² alternate days for 4 weeks (p.221)."),
+          P("Resistant oedema: thiazide or spironolactone, salt-poor albumin 1 g/kg with frusemide, or FFP (p.221)."),
+          P("Relapse regimen, then levamisole, cyclophosphamide or cyclosporine for frequent relapse or steroid dependence (p.221)."),
+          P("Steroid-resistant: biopsy, calcineurin inhibitor, mycophenolate, cyclophosphamide (p.222).", false),
+        ]},
+        { h: "Complications and prevention", pts: [
+          P("Infection (peritonitis, cellulitis), thromboembolism, malnutrition, hyperlipidaemia, CKD (p.222)."),
+          P("Pneumococcal vaccine; avoid live vaccines during high-dose steroids; zoster immunoglobulin or acyclovir for chickenpox exposure (p.222-223)."),
+          P("Prognosis: minimal change relapses until the second decade; quartan malarial nephropathy leads to ESRD in 5-7 years (p.223)."),
+          P("Counselling, adherence, urine dipstick monitoring at home, school plan.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Acute post-streptococcal glomerulonephritis", src: "p.211-216; past papers 2017.35, 2018.35, paed.24",
+      prompt: "Write short notes on acute post-streptococcal glomerulonephritis in children.",
+      tip: "Aetiology, clinical features, complications, investigations, treatment, prognosis. Note pyoderma is commoner here.",
+      sections: [
+        { h: "Aetiology and epidemiology", pts: [
+          P("Group A beta-haemolytic streptococcus; pharyngitis (M12) or pyoderma (M49); pyoderma commoner here (p.212-213)."),
+          P("Peak 6-7 years; males 2:1; attack rate 15% (p.212)."),
+        ]},
+        { h: "Clinical features", pts: [
+          P("Latent period 1-3 weeks after pharyngitis, 3-6 weeks after pyoderma (p.213)."),
+          P("Puffy face, hypertension, cola-coloured urine, oliguria, circulatory congestion (p.211, 213)."),
+        ]},
+        { h: "Complications", pts: [
+          P("Hypertensive encephalopathy, acute kidney injury, pulmonary oedema, heart failure, nephrotic syndrome, RPGN (p.213)."),
+        ]},
+        { h: "Investigations", pts: [
+          P("Urinalysis with RBC casts, low C3 for 6-8 weeks, ASOT above 333 Todd units, anti-DNase B, swab, urea, creatinine, electrolytes (p.214-215)."),
+        ]},
+        { h: "Treatment and prognosis", pts: [
+          P("Supportive: bed rest, salt and fluid restriction, diuretics, antihypertensives, treat hyperkalaemia; penicillin for 10 days (p.215-216)."),
+          P("80% recover completely; 10% go to chronic renal failure; follow up (p.216)."),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Nephrotic syndrome: definitions and complications", src: "p.216-223; past papers 2k17-2k2.503, paed.1168",
+      prompt: "Write short notes on the complications of nephrotic syndrome and how you would prevent them.",
+      tip: "List each complication with its mechanism and prevention. Mention vaccines.",
+      sections: [
+        { h: "Infection", pts: [
+          P("Low immunoglobulins, oedema fluid as culture medium, loss of factor B, steroids and other immunosuppressants (p.222)."),
+          P("Treat promptly with antibiotics; pneumococcal vaccine; avoid live vaccines on steroids; zoster immunoglobulin for chickenpox exposure (p.222-223)."),
+        ]},
+        { h: "Thromboembolism", pts: [
+          P("Fibrinogen, factors V and VIII raised; urinary loss of antithrombin III; hyperaggregable platelets; haemoconcentration (p.222)."),
+          P("Correct hypovolaemia, avoid femoral punctures and over-diuresis, heparin when needed, mobilise (p.221-222)."),
+        ]},
+        { h: "Other complications", pts: [
+          P("Malnutrition, hyperlipidaemia and vascular risk, loss of vitamin D binding protein, chronic renal insufficiency (p.222)."),
+          P("Acute kidney injury from hypovolaemia; steroid side effects.", true),
+        ]},
+      ]
+    },
+  ]
+}]);
+})();
+
+</script>
+<script>
 // Paediatrics · Essays · Pulmonology. Two long essays (one leading to a diagnosis, one social paediatrics) and six short.
 // Source: Paediatrics CS edited.pdf p.282-316. Points flagged x:true go beyond the slides (e.g. pneumonia antibiotic doses, which the
 // deck leaves to a "second file"; WHO under-2-month cut-off; epiglottitis antibiotics).
@@ -3773,6 +4239,199 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Single-best-option MCQ · Acute diarrhoea and dehydration. Source: Paediatrics CS edited.pdf p.70-73; "Standard teaching" = outside the slide.
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-mcq-dd",
+  subject: "Paediatrics",
+  group: "Acute diarrhoea & dehydration",
+  type: "mcq",
+  title: "Paediatrics MCQ · Acute diarrhoea and dehydration (10 single best option)",
+  negativeMarking: false,
+  questions: [
+    { topic: "Definitions", src: "p.70",
+      stem: "Persistent diarrhoea is defined as diarrhoea that begins acutely and lasts:",
+      options: ["At least 3 days", "At least 7 days", "At least 14 days", "At least 1 month", "At least 3 months"],
+      answer: 2,
+      explain: "Acute subsides in days (3-5 days typically), persistent lasts 14 days or more, chronic lasts 1 month or more with insidious onset (p.70)." },
+    { topic: "Causes", src: "p.70",
+      stem: "The commonest viral cause of acute diarrhoea in children is:",
+      options: ["Adenovirus", "Norovirus", "Rotavirus", "Enterovirus", "Hepatitis A virus"],
+      answer: 2,
+      explain: "Rotavirus (p.70). Enterotoxigenic E. coli is the bacterial counterpart; Shigella, Campylobacter, Salmonella and E. histolytica invade the mucosa." },
+    { topic: "Assessment", src: "p.71",
+      stem: "A 9-month-old with 2 days of diarrhoea is irritable, has sunken eyes, drinks eagerly and the skin pinch goes back slowly. He has:",
+      options: ["No dehydration", "Mild dehydration", "Moderate (some) dehydration", "Severe dehydration", "Hypernatraemic shock"],
+      answer: 2,
+      explain: "Restless or irritable, sunken eyes, thirsty and drinking eagerly, slow pinch = moderate dehydration (p.71). Severe: lethargic, drinks poorly, very sunken eyes, pinch over 2 seconds." },
+    { topic: "Treatment", src: "p.72",
+      stem: "The same child weighs 8 kg. The initial ORS requirement over the first 4 hours is about:",
+      options: ["240-400 ml", "480-720 ml", "1000 ml", "100 ml/kg", "Bolus of 20 ml/kg of normal saline"],
+      answer: 1,
+      explain: "Moderate dehydration: 60-90 ml/kg over 4 hours (p.72): 8 kg gives 480-720 ml. Reassess after 4 hours and repeat if dehydration persists. A bolus is for shock." },
+    { topic: "Shock", src: "p.72",
+      stem: "A child with diarrhoea is lethargic, with a weak thready pulse, capillary refill over 4 seconds and cold limbs. The first step is:",
+      options: ["Oral rehydration solution", "Intravenous 20-30 ml/kg boluses of Ringer's lactate or normal saline", "Antidiarrhoeal drug", "Antibiotic", "Stop feeding for 12 hours"],
+      answer: 1,
+      explain: "Severe dehydration with shock needs IV boluses until perfusion returns, then ORT if the child can drink (p.72)." },
+    { topic: "Drugs", src: "p.72",
+      stem: "Which is an indication for antimicrobial therapy in acute diarrhoea?",
+      options: ["Watery diarrhoea with vomiting in a 2-year-old", "Severe shigella infection", "Rotavirus infection", "Mild dehydration", "Any child with fever"],
+      answer: 1,
+      explain: "Severe shigella, enteroinvasive E. coli, salmonella enteritis in the very young or immunocompromised, and moderate-severe Clostridium-associated colitis (p.72). Antidiarrhoeals have no benefit." },
+    { topic: "Hypernatraemia", src: "p.73",
+      stem: "In hypernatraemic dehydration the serum sodium should be lowered by no more than:",
+      options: ["20 mmol/L per day", "10 mmol/L per day (0.5 mmol/L per hour)", "30 mmol/L per day", "50 mmol/L in 6 hours", "Normal within 4 hours"],
+      answer: 1,
+      explain: "Slow correction over 48-72 hours, safest with slow ORT over 12 hours; rapid correction risks cerebral oedema and convulsions (p.73)." },
+    { topic: "Potassium", src: "p.73",
+      stem: "Which is correct about potassium replacement in a dehydrated child?",
+      options: ["Give a slow IV bolus of KCl in shock", "Give KCl by continuous infusion (10 mmol per 500 ml) once urine is passed", "Never needed", "Always use 40 mmol per 500 ml", "Give orally as a 20 mmol bolus"],
+      answer: 1,
+      explain: "Treat hypokalaemia with ORS as far as possible; IV KCl 10 mmol per 500 ml (max 20 mmol if K below 3), only after circulation is restored and urine passed; never a bolus (p.73)." },
+    { topic: "Zinc", src: "Standard teaching",
+      stem: "Zinc supplementation in acute diarrhoea is given at 20 mg daily for:",
+      options: ["3 days", "5 days", "10-14 days", "4 weeks", "Only with persistent diarrhoea"],
+      answer: 2,
+      explain: "20 mg per day for 10-14 days (10 mg per day if under 6 months) reduces duration and recurrence (outside the slide). Give it with ORS." },
+    { topic: "Maintenance fluid", src: "p.72",
+      stem: "Daily maintenance fluid for a 15 kg child is:",
+      options: ["1000 ml", "1250 ml", "1500 ml", "1750 ml", "2000 ml"],
+      answer: 1,
+      explain: "11-20 kg: 1000 ml plus 50 ml/kg for each kg above 10 = 1000 + 250 = 1250 ml (p.72). Under 10 kg: 100 ml/kg/day; above 20 kg: 1500 ml plus 20 ml/kg above 20." },
+  ]
+}]);
+
+</script>
+<script>
+// Paediatrics · Single-best-option MCQ · Neonatal jaundice. The deck covers cholestasis p.81-85 and neonatal haemolysis p.188-190;
+// everything else is standard teaching ("Standard teaching" shows as "outside the slide").
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-mcq-nj",
+  subject: "Paediatrics",
+  group: "Neonatal jaundice",
+  type: "mcq",
+  title: "Paediatrics MCQ · Neonatal jaundice (10 single best option)",
+  negativeMarking: false,
+  questions: [
+    { topic: "Physiological jaundice", src: "Standard teaching",
+      stem: "Which feature makes neonatal jaundice pathological?",
+      options: ["Onset on day 3", "Onset in the first 24 hours", "Peak on day 4", "Disappearing by day 10", "Bilirubin of 8 mg/dl on day 3"],
+      answer: 1,
+      explain: "Jaundice within 24 hours means haemolysis or infection until proven otherwise. Other red flags: rise over 5 mg/dl per day, bilirubin above the treatment line, conjugated bilirubin above 15% of total (p.81), lasting beyond 14 days." },
+    { topic: "Management", src: "Standard teaching",
+      stem: "A 5-day-old term infant weighing 3 kg has bilirubin 17 mg/dl with a conjugated fraction of 1 mg/dl. The best management is:",
+      options: ["Immediate exchange transfusion", "Oral phenobarbitone and recheck in 48 hours", "Phototherapy", "Glucose drinks and ampiclox syrup", "Reassure that it is physiological"],
+      answer: 2,
+      explain: "Unconjugated hyperbilirubinaemia above the treatment line gets phototherapy. Exchange transfusion is for much higher levels or encephalopathy; phenobarbitone is not first-line." },
+    { topic: "Haemolysis", src: "p.189; Standard teaching",
+      stem: "A 36-hour-old baby is jaundiced and pale. Mother is group O Rh positive, baby is group A, direct Coombs weakly positive. The diagnosis is:",
+      options: ["Rh haemolytic disease", "ABO haemolytic disease", "Biliary atresia", "Breast-milk jaundice", "Hypothyroidism"],
+      answer: 1,
+      explain: "Mother O and baby A or B with a weakly positive Coombs is ABO disease (p.189). Rh disease needs an Rh-negative mother and gives a strongly positive Coombs." },
+    { topic: "G6PD", src: "Standard teaching",
+      stem: "A male newborn becomes deeply jaundiced on day 3 after his clothes were stored with mothballs. The likely diagnosis is:",
+      options: ["ABO incompatibility", "G6PD deficiency", "Physiological jaundice", "Galactosaemia", "Choledochal cyst"],
+      answer: 1,
+      explain: "Naphthalene (mothball) exposure triggers haemolysis in G6PD deficiency, which is X-linked and common in Nigeria. Other triggers: menthol, henna, fava beans, some drugs and herbal agents." },
+    { topic: "Kernicterus", src: "Standard teaching",
+      stem: "Which is a feature of chronic bilirubin encephalopathy?",
+      options: ["Spastic diplegia with normal hearing", "Athetoid cerebral palsy with sensorineural deafness", "Microcephaly with calcification", "Hydrocephalus", "Hemiplegia"],
+      answer: 1,
+      explain: "Athetosis, high-frequency deafness, upward gaze palsy and enamel hypoplasia; intelligence often preserved. Spastic diplegia is typical of prematurity (PVL)." },
+    { topic: "Phototherapy", src: "Standard teaching",
+      stem: "Phototherapy lowers bilirubin by:",
+      options: ["Increasing hepatic UDP-glucuronyl transferase", "Converting bilirubin to water-soluble photo-isomers excreted without conjugation", "Destroying red cells", "Blocking the enterohepatic circulation", "Binding bilirubin to albumin"],
+      answer: 1,
+      explain: "Blue-green light (460-490 nm) makes lumirubin and other isomers. Phenobarbitone induces UDP-glucuronyl transferase but is too slow." },
+    { topic: "Exchange transfusion", src: "Standard teaching",
+      stem: "Which complication is NOT typical of exchange transfusion?",
+      options: ["Hypocalcaemia", "Hyperkalaemia", "Necrotising enterocolitis", "Hyperglycaemia leading to ketoacidosis", "Thrombocytopenia"],
+      answer: 3,
+      explain: "Hypoglycaemia (rebound after glucose-rich anticoagulated blood), hypocalcaemia, hyperkalaemia, infection, thrombosis, NEC, thrombocytopenia and arrhythmias are the complications." },
+    { topic: "Cholestasis", src: "p.81-82",
+      stem: "A 5-week-old well-looking infant has jaundice since day 4, pale stools and dark urine. The most important test is:",
+      options: ["Coombs test", "Total and conjugated bilirubin", "G6PD assay", "Serum ferritin", "Skull X-ray"],
+      answer: 1,
+      explain: "Pale stools and dark urine mean cholestasis (p.81-82); confirm with the conjugated fraction (above 15% of total), then USS and HIDA scan. Biliary atresia must be operated early (p.83)." },
+    { topic: "Biliary atresia", src: "p.83",
+      stem: "Bile flow returns after the Kasai procedure in 80-90% of infants operated before:",
+      options: ["14 days", "28 days", "56 days", "120 days", "6 months"],
+      answer: 2,
+      explain: "Before 56 days about 80-90%; after 120 days only about 20% (p.83). Delay turns it into a liver-transplant case." },
+    { topic: "Galactosaemia", src: "p.84-85",
+      stem: "An infant develops vomiting, jaundice, hepatomegaly and cataracts after starting milk feeds. The best management is:",
+      options: ["Kasai portoenterostomy", "Lactose-free milk for life", "Phototherapy alone", "Exchange transfusion", "Levothyroxine"],
+      answer: 1,
+      explain: "Galactosaemia: GALT deficiency; urine reducing substances positive and glucose oxidase negative; E. coli sepsis risk (p.84-85)." },
+  ]
+}]);
+
+</script>
+<script>
+// Paediatrics · Single-best-option MCQ · Nephrotic syndrome and AGN. Source: Paediatrics CS edited.pdf p.211-223.
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-mcq-ns",
+  subject: "Paediatrics",
+  group: "Nephrotic syndrome & AGN",
+  type: "mcq",
+  title: "Paediatrics MCQ · Nephrotic syndrome and AGN (10 single best option)",
+  negativeMarking: false,
+  questions: [
+    { topic: "Nephrotic syndrome", src: "p.216",
+      stem: "Which combination defines nephrotic syndrome?",
+      options: ["Haematuria, hypertension, oliguria", "Heavy proteinuria, hypoalbuminaemia, oedema, hyperlipidaemia", "Proteinuria, hypocholesterolaemia, oedema", "Pyuria, fever, dysuria", "Haematuria, hypocomplementaemia, rash"],
+      answer: 1,
+      explain: "Proteinuria above 40 mg/m²/hr, albumin below 25 g/L, massive oedema, cholesterol raised (p.216, 221). Option A is the nephritic picture." },
+    { topic: "Epidemiology", src: "p.217",
+      stem: "Compared with white children, nephrotic syndrome in Nigerian children is characterised by:",
+      options: ["Minimal change disease as the commonest lesion", "Rarity of minimal change disease and frequent steroid resistance", "Excellent response to steroids in over 90%", "Female predominance and pre-school peak", "Absence of secondary causes"],
+      answer: 1,
+      explain: "In Africa minimal change is rare; FSGS, MPGN, membranous nephropathy and infection-related lesions dominate, with variable but relentless progression (p.217)." },
+    { topic: "Secondary causes", src: "p.219",
+      stem: "A secondary cause of nephrotic syndrome particularly important in West Africa is:",
+      options: ["Plasmodium falciparum", "Plasmodium malariae (quartan malarial nephropathy)", "Streptococcus pyogenes", "Staphylococcus aureus", "Rotavirus"],
+      answer: 1,
+      explain: "Quartan malarial nephropathy: membranoproliferative lesion, poor prognosis, hypertension and ESRD in 5-7 years (p.219, 223). Post-streptococcal GN rarely gives a nephrotic picture (p.213)." },
+    { topic: "Treatment", src: "p.221",
+      stem: "A 6-year-old with first-episode nephrotic syndrome (no contraindication) is started on prednisolone at:",
+      options: ["6 mg/m²/day", "60 mg/m²/day for 4 weeks, then 40 mg/m² on alternate days for 4 weeks", "2 mg/kg every second week", "Cyclophosphamide only", "Frusemide only"],
+      answer: 1,
+      explain: "The slide regimen (p.221), taken from the British Association for Paediatric Nephrology. 6 mg/m²/day is the past-paper trap." },
+    { topic: "Definitions", src: "p.222",
+      stem: "'Steroid resistance' in nephrotic syndrome means:",
+      options: ["Two relapses within 6 months", "Failure to achieve remission after 4 weeks of prednisolone 60 mg/m²/day", "Relapse within 14 days of stopping steroids", "Remission after 6 weeks", "Dipstick trace for 3 days"],
+      answer: 1,
+      explain: "Resistance = no response to 4 weeks at full dose (p.222). Steroid dependence = two consecutive relapses during treatment or within 14 days of stopping." },
+    { topic: "Complications", src: "p.222",
+      stem: "Which is a recognised complication of nephrotic syndrome?",
+      options: ["Hypercoagulable state with thromboembolism", "Hypolipidaemia", "Hypertensive encephalopathy as the commonest event", "Polyuria", "Hyperglobulinaemia"],
+      answer: 0,
+      explain: "Loss of antithrombin III and high fibrinogen cause thrombosis; also infection, malnutrition, hyperlipidaemia and CKD (p.222). Hypertensive encephalopathy is a complication of AGN (p.213)." },
+    { topic: "Differential", src: "p.223; past paper",
+      stem: "Which finding helps distinguish nephrotic syndrome from kwashiorkor?",
+      options: ["Oedema", "Hypoalbuminaemia", "Heavy proteinuria and hypercholesterolaemia", "Pallor", "Irritability"],
+      answer: 2,
+      explain: "Both have oedema and low albumin; proteinuria and raised cholesterol identify NS (past paper, asked in 8 sources). Kwashiorkor shows low cholesterol, skin and hair changes (p.223 differential)." },
+    { topic: "APSGN", src: "p.212-213",
+      stem: "A 6-year-old develops tea-coloured urine, hypertension and puffy eyes 3 weeks after impetigo. The expected complement result is:",
+      options: ["Low C3 that returns to normal by 6-8 weeks", "Low C4", "Normal C3 throughout", "High C3", "Absent C3 permanently"],
+      answer: 0,
+      explain: "Low C3 (and CH50) in the acute phase, normal by 6-8 weeks; if still low at 8-12 weeks reconsider (p.214). C4 is usually normal." },
+    { topic: "APSGN: complication", src: "p.213",
+      stem: "Which is a complication of acute post-streptococcal glomerulonephritis?",
+      options: ["Hypertensive encephalopathy", "Polyuria", "Hypokalaemia", "Hypocalcaemia caused by massive proteinuria", "Spontaneous bacterial peritonitis as the commonest feature"],
+      answer: 0,
+      explain: "Hypertensive encephalopathy, oliguric ARF, pulmonary oedema, heart failure, retinopathy, RPGN (p.213). Hyperkalaemia, not hypokalaemia, accompanies the fall in GFR." },
+    { topic: "APSGN: treatment", src: "p.215-216",
+      stem: "Which statement about APSGN treatment is correct?",
+      options: ["Prolonged high-dose steroids are the mainstay", "Treatment is supportive, with salt and fluid restriction and a 10-day penicillin course", "Early penicillin for pharyngitis prevents the nephritis", "Dialysis is needed in most patients", "Immunosuppression is required for crescents in every case"],
+      answer: 1,
+      explain: "Supportive treatment; penicillin x 10 days to limit spread (p.215); treating the pharyngitis does not prevent AGN (p.212). About 80% recover completely (p.216)." },
+  ]
+}]);
+
+</script>
+<script>
 // Paediatrics · Single-best-option MCQ · Pulmonology (asthma, croup, bronchiolitis, URTI, pneumonia).
 // Source: Paediatrics CS edited.pdf p.282-316. src shows the slide page; "Standard teaching" marks points beyond the deck.
 window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
@@ -3989,6 +4648,83 @@ window.PAGE_MAP["pa-tf-pulm-2"] = [{"pg": "p.295", "out": []}, {"pg": "p.295-296
 window.PAGE_MAP["pa-tf-rhd-1"] = [{"pg": "p.14", "out": []}, {"pg": "p.14", "out": [4]}, {"pg": "p.14", "out": [3, 4]}, {"pg": "p.14", "out": [4]}, {"pg": "p.15", "out": [3, 4]}, {"pg": "", "out": [0, 1, 2, 3, 4]}, {"pg": "p.14-15", "out": []}, {"pg": "p.15", "out": [4]}, {"pg": "p.15-16", "out": [4]}, {"pg": "p.16", "out": [4]}];
 window.PAGE_MAP["pa-tf-rhd-2"] = [{"pg": "p.16, 20", "out": []}, {"pg": "p.17, 20", "out": []}, {"pg": "p.16-18, 20", "out": [4]}, {"pg": "p.17, 21", "out": []}, {"pg": "p.17, 23", "out": []}, {"pg": "p.18, 21-22", "out": []}, {"pg": "p.21-22", "out": [4]}, {"pg": "p.18, 22-23", "out": []}, {"pg": "p.18, 23", "out": [1]}];
 window.PAGE_MAP["pa-pics-rhd"] = [{"pg": "p.14", "out": [1, 2, 3, 4]}, {"pg": "p.14", "out": [1, 2, 3, 4]}, {"pg": "p.14", "out": [0, 1, 3, 4]}, {"pg": "p.14", "out": [1, 2, 3]}, {"pg": "p.17, 22", "out": [3]}, {"pg": "p.17, 21", "out": [3]}, {"pg": "p.17, 21", "out": []}, {"pg": "p.17", "out": [1, 2, 3, 4]}, {"pg": "p.21-22", "out": [3]}, {"pg": "p.16, 20", "out": [2]}];
+
+// Neonatal jaundice, Nephrotic syndrome & AGN, Acute diarrhoea & dehydration
+window.PAGE_MAP["pa-tf-nj"] = [{"pg": "", "out": []}, {"pg": "p.188-190", "out": [2, 4]}, {"pg": "", "out": []}, {"pg": "", "out": []}, {"pg": "", "out": []}, {"pg": "", "out": []}, {"pg": "p.81-85", "out": []}, {"pg": "p.81", "out": [0, 1, 2, 4]}];
+window.PAGE_MAP["pa-pics-nj"] = [{"pg": "", "out": []}, {"pg": "", "out": []}, {"pg": "", "out": []}, {"pg": "", "out": []}, {"pg": "p.81", "out": [0, 1, 2, 4]}];
+window.PAGE_MAP["pa-tf-ns"] = [{"pg": "p.216, 220", "out": []}, {"pg": "p.211, 217-220", "out": []}, {"pg": "p.216-217, 220-221", "out": [2]}, {"pg": "p.220-221", "out": []}, {"pg": "p.221", "out": [3]}, {"pg": "p.222", "out": []}, {"pg": "p.222-223", "out": []}, {"pg": "p.211-216", "out": []}];
+window.PAGE_MAP["pa-pics-ns"] = [{"pg": "p.211, 213, 220", "out": []}, {"pg": "p.219, 223", "out": [3]}, {"pg": "p.211-216", "out": []}, {"pg": "p.216-223", "out": []}];
+window.PAGE_MAP["pa-tf-dd"] = [{"pg": "p.70", "out": []}, {"pg": "p.70, 72", "out": []}, {"pg": "p.71", "out": []}, {"pg": "p.71-72", "out": [3, 4]}, {"pg": "p.72-73", "out": []}, {"pg": "p.72", "out": [4]}, {"pg": "p.71, 73", "out": []}, {"pg": "p.70-71", "out": [1, 4]}];
+window.PAGE_MAP["pa-pics-dd"] = [{"pg": "p.71", "out": [3, 4]}, {"pg": "p.72", "out": [0, 1, 4]}, {"pg": "p.70, 72", "out": [1, 3, 4]}, {"pg": "p.70-71, 223", "out": [2, 3]}];
+
+</script>
+<script>
+// Paediatrics · Picture test (picture + 5 True/False, negative marking −½) · Acute diarrhoea and dehydration.
+// Real images from Wikimedia Commons, linked live, credit in each caption. The skin-pinch photograph is an ADULT hand (no free paediatric
+// photograph was found); the statements are about the sign. Source: Paediatrics CS edited.pdf p.70-73; WHO items are outside the slide.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+const F=n=>"https://commons.wikimedia.org/wiki/Special:FilePath/"+n+"?width=720";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-pics-dd",
+  subject: "Paediatrics",
+  group: "Acute diarrhoea & dehydration",
+  type: "pics",
+  title: "Paediatrics Picture test · Acute diarrhoea and dehydration (4 pictures)",
+  negativeMarking: true,
+  secPerQ: 90,
+  questions: [
+    { topic: "Picture: skin pinch (turgor)", src: "p.71", img: F("LowSkinTurgor.jpg"),
+      credit: "Skin tenting (low skin turgor) on the back of an adult hand. Wikimedia Commons, CC BY-SA 4.0, DRobert.",
+      stem: "A child with diarrhoea is examined and the skin of the abdomen is pinched and released.",
+      items: I([
+        ["A pinch that returns slowly (over 2 seconds) indicates moderate dehydration.", true, "Slide p.71: slow return in moderate; very slow (tenting) in severe."],
+        ["In severe dehydration the skin goes back very slowly (over 2 seconds, tenting).", true, "Slide p.71."],
+        ["Skin turgor is one of the best clinical indicators of hydration.", true, "Slide p.71 (asterisked)."],
+        ["The pinch is done on the dorsum of the hand in infants.", false, "Pinch the skin of the abdomen, along the long axis of the body (standard teaching)."],
+        ["Skin turgor remains reliable in a severely malnourished child.", false, "Unreliable in marasmus (loose skin) and kwashiorkor (oedema) (standard teaching)."],
+      ]),
+      explain: "Use a combination of signs, not one. The slide marks general condition, eyes, thirst, skin pinch and capillary refill as the key indicators." },
+
+    { topic: "Picture: oral rehydration salts", src: "p.71-72; "+S, img: F("ORT saches.JPG"),
+      credit: "Commercially available oral rehydration salt sachets from Nepal and Peru. Wikimedia Commons, CC BY-SA 4.0, James Heilman, MD.",
+      stem: "A mother is given these sachets for a child with watery diarrhoea.",
+      items: I([
+        ["The mixture is made in the volume of clean water stated on the packet.", true, "Wrong volume changes the osmolarity."],
+        ["Low-osmolarity ORS contains sodium 75 mmol/L, glucose 75 mmol/L and total osmolarity about 245 mOsm/L.", true, "Standard teaching."],
+        ["A child with moderate dehydration is given about 60-90 ml/kg over 4 hours.", true, "Slide p.72."],
+        ["ORS is given to a child in shock in place of intravenous fluids.", false, "Shock needs IV boluses (20-30 ml/kg) first (p.72)."],
+        ["Zinc is given alongside for 10-14 days.", true, "Standard teaching."],
+      ]),
+      explain: "Teach the mother: small frequent sips, continue after vomiting (wait 10 minutes), continue breast-feeding, return if not drinking, bloody stool, fever or worsening." },
+
+    { topic: "Picture: rotavirus", src: "p.70", img: F("Rotavirus 2.jpg"),
+      credit: "Transmission electron micrograph of rotavirus. Wikimedia Commons, CC BY-SA 4.0, Dr Graham Beards.",
+      stem: "An electron micrograph from the stool of an infant with severe watery diarrhoea and vomiting.",
+      items: I([
+        ["Rotavirus is the most important viral cause of acute diarrhoea in children.", true, "Slide p.70."],
+        ["Stool is typically watery with no blood or mucus.", true, "Non-invasive; blood suggests Shigella, E. histolytica or Campylobacter (p.70)."],
+        ["Antibiotics are indicated.", false, "Not indicated (p.72)."],
+        ["Rotavirus vaccination reduces severe disease.", true, "Standard teaching (outside the slide)."],
+        ["It invades the intestinal mucosa causing dysentery.", false, "Rotavirus infects the villous enterocytes causing malabsorption and osmotic and secretory diarrhoea; it is not invasive (p.70 lists the invasive organisms)."],
+      ]),
+      explain: "Complications are dehydration and electrolyte disturbance; lactose intolerance may follow (p.71)." },
+
+    { topic: "Picture: kwashiorkor", src: S, img: F("Kwashiorkor 6180.jpg"),
+      credit: "Infant with features of kwashiorkor, 1970. Wikimedia Commons, public domain, CDC.",
+      stem: "A 14-month-old with persistent diarrhoea for 3 weeks, oedema and skin and hair changes.",
+      items: I([
+        ["Malnutrition is both a risk factor for and a complication of diarrhoea.", true, "Slide p.70-71."],
+        ["Severe malnutrition is a high-risk factor for dehydration.", true, "Slide p.71."],
+        ["Dehydration is easy to assess by skin pinch in this child.", false, "Skin turgor and eye signs are unreliable in kwashiorkor and marasmus."],
+        ["Oral rehydration is given as in a well-nourished child, with a special low-sodium rehydration solution (ReSoMal) where available.", true, "Standard teaching; standard ORS has too much sodium for severe acute malnutrition."],
+        ["Heavy proteinuria and high cholesterol distinguish this child from nephrotic syndrome.", false, "They distinguish nephrotic syndrome; kwashiorkor does not have heavy proteinuria or hypercholesterolaemia (p.223)."],
+      ]),
+      explain: "Persistent diarrhoea plus malnutrition: treat dehydration carefully, give micronutrients (zinc, vitamin A), feeding plan, treat infections (malaria, HIV, TB). Links diarrhoea with the malnutrition lecture (p.91)." },
+  ]
+}]);
+})();
 
 </script>
 <script>
@@ -4336,6 +5072,155 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Picture test (picture + 5 True/False, negative marking −½) · Neonatal jaundice.
+// Real images from Wikimedia Commons, linked live (not copied) with licence and author in each caption.
+// The deck has no unconjugated-jaundice lecture, so most statements are standard teaching; cholestasis statements cite p.81-85.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+const F=n=>"https://commons.wikimedia.org/wiki/Special:FilePath/"+n+"?width=720";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-pics-nj",
+  subject: "Paediatrics",
+  group: "Neonatal jaundice",
+  type: "pics",
+  title: "Paediatrics Picture test · Neonatal jaundice (5 pictures)",
+  negativeMarking: true,
+  secPerQ: 90,
+  questions: [
+    { topic: "Picture: jaundiced newborn", src: S, img: F("Ictericia neonatal.jpg"),
+      credit: "Jaundiced newborn with a cord clamp. Wikimedia Commons, CC0, uploader Muago (face obscured by the uploader).",
+      stem: "A 2-day-old baby is jaundiced to the abdomen.",
+      items: I([
+        ["Jaundice reaching the abdomen and thighs on Kramer's rule suggests a bilirubin of about 10-12 mg/dl or more.", true, "Kramer's zones spread from head to feet; this is only a rough guide."],
+        ["Jaundice that starts in the first 24 hours is pathological.", true, "Haemolysis or infection until proven otherwise."],
+        ["The first test to order is a serum bilirubin with its conjugated fraction.", true, "Do not rely on the eye in dark skin."],
+        ["Visual assessment is reliable and replaces the serum level in dark-skinned babies.", false, "Visual assessment underestimates bilirubin; blanch the skin over the sternum and measure the serum level."],
+        ["Blood group and Coombs of both mother and baby are part of the work-up.", true, "Identifies ABO and Rh disease."],
+      ]),
+      explain: "Station: (a) what sign (b) how to grade it (c) three causes at this age (d) three investigations (e) treatment. Early feeding and sunlight are not treatment for a baby this deep." },
+
+    { topic: "Picture: phototherapy", src: S, img: F("Jaundice phototherapy.jpg"),
+      credit: "Newborn infant undergoing phototherapy. Wikimedia Commons, CC BY 3.0, Martybugs.",
+      stem: "A newborn receiving this treatment for neonatal jaundice.",
+      items: I([
+        ["This is phototherapy, which converts bilirubin into water-soluble isomers.", true, "Blue-green light, 460-490 nm."],
+        ["The eyes must be protected with an eye shield.", true, "Prevents retinal injury."],
+        ["Fluid intake should be maintained or increased.", true, "Insensible losses rise under the lamp."],
+        ["It is the treatment of choice for conjugated hyperbilirubinaemia.", false, "Can cause bronze baby syndrome; treat the cholestasis."],
+        ["Complications include loose stools, skin rash and hyperthermia.", true, "Also dehydration."],
+      ]),
+      explain: "Phototherapy is the first-line treatment for unconjugated jaundice above the treatment line. The rate of fall is about 1-2 mg/dl in the first hours with intensive therapy." },
+
+    { topic: "Picture: opisthotonus (kernicterus)", src: S, img: F("Kernicterus 1.jpg"),
+      credit: "Infant with kernicterus in opisthotonic posture. Wikimedia Commons, public domain, Sydney S. Gellis and Murray Feingold.",
+      stem: "An infant with a history of severe neonatal jaundice who was not treated.",
+      items: I([
+        ["The posture shown is opisthotonus due to acute bilirubin encephalopathy.", true, "Arching of the back and neck from basal ganglia damage."],
+        ["Unconjugated bilirubin damages the basal ganglia, especially the globus pallidus.", true, "Standard teaching."],
+        ["Survivors commonly develop athetoid cerebral palsy and sensorineural deafness.", true, "Dyskinetic cerebral palsy with high-frequency hearing loss."],
+        ["Intelligence is typically severely impaired in all survivors.", false, "Often spared in the athetoid form."],
+        ["The condition is prevented by early recognition and treatment of hyperbilirubinaemia.", true, "Phototherapy, exchange transfusion, treating the cause."],
+      ]),
+      explain: "Kernicterus is the reason jaundice is an emergency. The MRI sign in the chronic stage is T2 hyperintensity in the globus pallidus (see the next picture)." },
+
+    { topic: "Picture: MRI in kernicterus", src: S, img: F("Kernicterus.jpg"),
+      credit: "MRI of the head showing hyperintense basal ganglia on T2-weighted images in kernicterus. Wikimedia Commons, CC BY 2.0, Gladys Cossio de Gurrola et al.",
+      stem: "An MRI of a child with athetoid movements and deafness after neonatal jaundice.",
+      items: I([
+        ["The bright signal is in the globus pallidus (basal ganglia).", true, "T2 hyperintensity of the globus pallidus is characteristic."],
+        ["The damage results from bilirubin staining and neuronal injury.", true, "Kernicterus means 'yellow nucleus'."],
+        ["Conjugated bilirubin is the cause.", false, "Unconjugated bilirubin."],
+        ["The child may have a gaze palsy and dental enamel dysplasia.", true, "Part of the chronic bilirubin encephalopathy tetrad: athetosis, deafness, upward gaze palsy, enamel hypoplasia."],
+        ["Phototherapy given now will reverse the changes.", false, "The damage is established; it is prevented, not reversed."],
+      ]),
+      explain: "Connect to the neurology unit: dyskinetic cerebral palsy from perinatal causes = kernicterus, and hypoxic-ischaemic encephalopathy." },
+
+    { topic: "Picture: prolonged jaundice (hypothyroidism)", src: "Standard teaching; p.81", img: F("Jaundice in newborn.jpg"),
+      credit: "6-week-old girl with jaundice due to hypothyroidism, treated with thyroid hormone. Wikimedia Commons, public domain, Dr. Hudson.",
+      stem: "A 6-week-old baby with prolonged jaundice, a large tongue and a hoarse cry.",
+      items: I([
+        ["Congenital hypothyroidism is the likely cause.", true, "Prolonged unconjugated jaundice, large tongue, hoarse cry, constipation."],
+        ["Thyroid function tests (TSH and free T4) confirm it.", true, "The newborn heel-prick TSH screens for it."],
+        ["Levothyroxine is started as early as possible.", true, "Start within 2 weeks of birth for normal development."],
+        ["A conjugated bilirubin does not need to be checked.", false, "Always measure the conjugated fraction in prolonged jaundice (p.81) to exclude cholestasis."],
+        ["Delayed treatment can cause intellectual disability.", true, "Thyroid hormone is needed for brain development."],
+      ]),
+      explain: "Prolonged jaundice checklist: conjugated bilirubin, TSH and free T4, urine culture, breast-feeding history, stool colour, G6PD. This links neonatology, endocrinology and the cholestasis slides (p.81-85)." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · Picture test (picture + 5 True/False, negative marking −½) · Nephrotic syndrome and acute glomerulonephritis.
+// Real images from Wikimedia Commons, linked live (not copied), credit in each caption. Statements checked against Paediatrics CS edited.pdf p.211-223.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+const F=n=>"https://commons.wikimedia.org/wiki/Special:FilePath/"+n+"?width=720";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-pics-ns",
+  subject: "Paediatrics",
+  group: "Nephrotic syndrome & AGN",
+  type: "pics",
+  title: "Paediatrics Picture test · Nephrotic syndrome and AGN (4 pictures)",
+  negativeMarking: true,
+  secPerQ: 90,
+  questions: [
+    { topic: "Picture: periorbital oedema", src: "p.213, 220", img: F("Nephrotic eyes.JPG"),
+      credit: "Periorbital oedema in a child. Wikimedia Commons, CC BY-SA 3.0.",
+      stem: "A school-age child is brought with a puffy face that is worst on waking in the morning.",
+      items: I([
+        ["Nephrotic syndrome and acute glomerulonephritis are the two commonest renal causes.", true, "Slide p.211, 213, 220: oedema starts around the eyes."],
+        ["In nephrotic syndrome the oedema is usually massive, with ascites and genital swelling.", true, "Slide p.220. In AGN it is milder (p.211, 213)."],
+        ["Gross haematuria, hypertension and oliguria favour AGN over nephrotic syndrome.", true, "Slide p.211, 213."],
+        ["Urinalysis showing 3+ or 4+ protein with a normal urine sediment supports nephrotic syndrome.", true, "Slide p.220."],
+        ["Serum cholesterol is low in nephrotic syndrome.", false, "Raised (hyperlipidaemia) (p.216)."],
+      ]),
+      explain: "First-line tests for a puffy child: BP, urinalysis (protein, blood), urine microscopy, serum albumin, urea and creatinine, C3. Differential: AGN, nephrotic syndrome, kwashiorkor, heart failure, liver disease, allergic angioedema (p.223)." },
+
+    { topic: "Picture: nephrotic oedema (malaria)", src: "p.219, 223", img: F("Plasmodium falciparum nephrosis edema PHIL 3894 lores.jpg"),
+      credit: "African child with oedema due to nephrosis associated with malaria. Wikimedia Commons, public domain (CDC Public Health Image Library 3894).",
+      stem: "A child from a malaria-endemic area with generalised oedema and heavy proteinuria.",
+      items: I([
+        ["Quartan malarial nephropathy (P. malariae) is an important secondary cause in Africa.", true, "Slide p.219."],
+        ["It is classically responsive to corticosteroids.", false, "Poor steroid response; progresses to hypertension and end-stage renal disease in 5-7 years (p.219, 223)."],
+        ["The typical biopsy is membranoproliferative with capillary-wall thickening and segmental sclerosis.", true, "Slide p.219."],
+        ["Anti-malarials alone reliably cure the nephropathy once established.", false, "It is immune-mediated and, once established, progressive (p.219)."],
+        ["Plasmodium falciparum is the commonest cause of nephrotic syndrome in Nigeria.", false, "P. malariae is the important one; P. falciparum is rarely a cause (p.219)."],
+      ]),
+      explain: "Link to infectious disease: malaria also causes AKI (blackwater fever, severe malaria). Other secondary causes: hepatitis B, HIV, schistosomiasis, SLE, drugs (p.219-220)." },
+
+    { topic: "Picture: haematuria", src: "p.211-215", img: F("HematuriaGross.jpg"),
+      credit: "Visible (gross) haematuria. Wikimedia Commons, CC BY-SA 4.0, James Heilman, MD. (This example followed trauma; in AGN urine is classically cola or tea coloured.)",
+      stem: "A 7-year-old with facial puffiness, hypertension and this urine 3 weeks after skin sores.",
+      items: I([
+        ["The most likely diagnosis is acute post-streptococcal glomerulonephritis.", true, "Pyoderma with a latent period of 3-6 weeks (p.213)."],
+        ["Expected investigations include red-cell casts, low C3 and a raised ASOT or anti-DNase B.", true, "Slide p.214-215. ASOT above 333 Todd units; anti-DNase B is raised more in pyoderma."],
+        ["Treatment is mainly supportive: salt and fluid restriction, diuretics and antihypertensives.", true, "Slide p.215-216."],
+        ["A 10-day course of penicillin is given.", true, "Slide p.215."],
+        ["Most patients progress to end-stage renal disease.", false, "About 80% recover completely, 10% develop CRF (p.216)."],
+      ]),
+      explain: "Complications to name: hypertensive encephalopathy, oliguric acute kidney injury, pulmonary oedema, heart failure (p.213). Other causes of haematuria with oedema: HSP, IgA nephropathy, SLE, MPGN (p.212, 215)." },
+
+    { topic: "Picture: ascites (watercolour)", src: "p.220", img: F("Abdomen of child affected with ascites Wellcome L0061575.jpg"),
+      credit: "Watercolour drawing of the abdomen of a child with ascites, Thomas Godart. Wellcome Collection (L0061575), CC BY 4.0, via Wikimedia Commons.",
+      stem: "A child with a distended abdomen, shifting dullness and puffy eyelids.",
+      items: I([
+        ["Ascites from nephrotic syndrome occurs because of low serum albumin and sodium and water retention.", true, "Slide p.216-217, 220."],
+        ["Causes of ascites in a child include nephrotic syndrome, chronic liver disease, heart failure, tuberculosis and malnutrition.", true, "Slide p.223 differential."],
+        ["An abdominal paracentesis with a large needle through the femoral vein is the usual treatment.", false, "No femoral puncture in nephrotic syndrome (thrombosis risk) (p.221); treat the cause."],
+        ["Infection of the ascitic fluid (primary peritonitis, often pneumococcal) is a complication.", true, "Slide p.222."],
+        ["Salt-poor albumin 1 g/kg followed by frusemide may be used for resistant oedema.", true, "Slide p.221."],
+      ]),
+      explain: "Spontaneous bacterial peritonitis: fever, abdominal pain in a nephrotic child needs a high index of suspicion; pneumococcal vaccine is part of the care (p.222-223)." },
+  ]
+}]);
+})();
+
+</script>
+<script>
 // Paediatrics · Picture test (picture + 5 True/False statements each, negative marking −½) · Rheumatic fever and infective endocarditis.
 // Pictures are real clinical photographs, a histology slide, an echocardiogram and a pathology specimen from Wikimedia Commons, linked live
 // (not copied) with licence and author in each caption. The two rheumatic-nodule images are watercolour paintings from the Wellcome Collection.
@@ -4473,6 +5358,114 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
         ["Surgery may be needed for large vegetations with embolism.", true, "Slide p.23 (valve replacement, embolectomy)."],
       ]),
       explain: "Pathogenesis in three steps (p.20): endothelial damage, non-bacterial thrombotic vegetation, transient bacteraemia with adherence. Chronic RHD valves are scarred, thickened and fused; IE valves carry friable infected vegetations." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · True/False (5 statements per stem, negative marking −½) · Acute diarrhoea and dehydration.
+// Source: Paediatrics CS edited.pdf p.70-73 (Akinbami: diarrhoeal disease in childhood). WHO Plan A/B/C numbers, zinc, ORS composition,
+// rotavirus vaccine and dysentery antibiotics are NOT in the deck: marked outside the slide (standard teaching).
+// Past papers: 2000.4, 2k19.37, 2017.62, 2017.80, 2k20-2k2.25, 2k23.165, 2k23.182, 2k23.183.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-dd",
+  subject: "Paediatrics",
+  group: "Acute diarrhoea & dehydration",
+  type: "tf",
+  title: "Paediatrics T/F · Acute diarrhoea and dehydration (8 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "Definitions and epidemiology", src: "p.70",
+      stem: "Diarrhoeal disease in childhood:",
+      items: I([
+        ["Diarrhoea is the passage of 3 or more loose stools a day after infancy, or a change to looser, more frequent stools than normal for the child's age.", true, "Slide p.70."],
+        ["Persistent diarrhoea begins acutely and lasts at least 14 days.", true, "Slide p.70."],
+        ["Chronic diarrhoea has an insidious onset, is often non-infectious and lasts at least 1 month.", true, "Slide p.70."],
+        ["Dysentery is diarrhoea with visible blood in the stool.", true, "Slide p.70."],
+        ["Most cases occur in infants under 3 months.", false, "Ages 6 months to 5 years, with the majority before age 3 (p.70)."],
+      ]),
+      explain: "Predisposing factors (p.70): low socio-economic status, poor sanitation, no potable water, poor hygiene, bottle feeding, malnutrition. In under 6 months, early introduction of formula. These double as the prevention and social-paediatrics list." },
+
+    { topic: "Causes", src: "p.70",
+      stem: "Causes of acute diarrhoea:",
+      items: I([
+        ["Rotavirus is the most important viral cause.", true, "Slide p.70."],
+        ["Enterotoxigenic E. coli, Shigella and Campylobacter jejuni are important bacterial causes.", true, "Slide p.70."],
+        ["Shigella, enteroinvasive E. coli, Campylobacter, Salmonella and Entamoeba histolytica invade the mucosa.", true, "Slide p.70 (invasive organisms)."],
+        ["Malaria, measles, respiratory infections and otitis media can be associated with diarrhoea.", true, "Slide p.70."],
+        ["Bacteria are the commonest cause of acute watery diarrhoea and antibiotics are almost always indicated.", false, "Viruses, mainly rotavirus, are commonest; antibiotics are only for specific indications (p.72). A past paper asked this."],
+      ]),
+      explain: "Mechanisms (p.70): stimulation of secretion, mucosal damage by adherence or invasion, raised luminal osmolality (osmotic), abnormal motility, ion transport defect. Watery stools with vomiting suggest a virus; blood and mucus suggest an invasive organism." },
+
+    { topic: "Clinical assessment of dehydration", src: "p.71",
+      stem: "Assessing dehydration in a child with diarrhoea:",
+      items: I([
+        ["Reliable signs of dehydration include thirst, sunken eyes, reduced tears, dry mucous membranes and slow skin pinch.", true, "Slide p.71."],
+        ["Severe dehydration is lethargy or unconsciousness, very sunken eyes, absent tears, parched mucosa, drinking poorly, skin pinch very slow (over 2 s), weak pulse and delayed capillary refill.", true, "Slide p.71 table."],
+        ["In moderate dehydration the child is restless or irritable, thirsty and drinks eagerly.", true, "Slide p.71."],
+        ["Skin turgor, eye appearance, thirst and capillary refill are marked as the best indicators of hydration.", true, "Slide p.71 (asterisked signs)."],
+        ["Deep, rapid (acidotic) breathing is a feature of mild dehydration.", false, "A sign of severe dehydration with acidosis (p.71)."],
+      ]),
+      explain: "High-risk factors for dehydration (p.71): age under 12 months, stopping breast-feeding, more than 8 stools a day, vomiting more than twice a day, severe malnutrition. Infants dehydrate fast because of larger surface area, more body water per kilogram and higher metabolic rate." },
+
+    { topic: "Oral rehydration", src: "p.71-72; "+S,
+      stem: "Oral rehydration therapy (ORT):",
+      items: I([
+        ["Mild dehydration is corrected with about 30-50 ml/kg of ORS over 4 hours; moderate with 60-90 ml/kg over 4 hours, then reassess.", true, "Slide p.72."],
+        ["To prevent dehydration, give 10 ml/kg of ORS after each watery stool, continue breast-feeding and give unrestricted fluids.", true, "Slide p.71."],
+        ["A home sugar-salt solution can be taught to the mother.", true, "Slide p.71 (SSS)."],
+        ["Food should be withheld for 24 hours during diarrhoea to rest the gut.", false, "Continue feeding: breast-feeding and usual diet (standard teaching). A past paper listed 'stop feeding' as false."],
+        ["Zinc (20 mg daily for 10-14 days; 10 mg under 6 months) reduces the duration and severity of diarrhoea.", true, "Outside the slide; part of the WHO/UNICEF recommendation."],
+      ]),
+      explain: "ORT is inappropriate for shock, ileus or marked distension, inability to drink (use NG tube), very rapid stool loss (over 15 ml/kg/hr), severe repeated vomiting, glucose malabsorption (p.72). Low-osmolarity ORS: sodium 75, glucose 75, potassium 20, chloride 65, citrate 10 mmol/L (245 mOsm/L): outside the slide." },
+
+    { topic: "Intravenous therapy", src: "p.72",
+      stem: "Intravenous fluids in diarrhoea:",
+      items: I([
+        ["They are mainly for initial treatment of severe, life-threatening dehydration with shock.", true, "Slide p.72."],
+        ["Give 20-30 ml/kg boluses of Ringer's lactate or normal saline until perfusion is restored, then continue with ORT.", true, "Slide p.72."],
+        ["If the child cannot drink, continue with 0.45% saline in 5% dextrose, giving half the deficit and a third of maintenance in the first 8 hours.", true, "Slide p.72."],
+        ["Potassium chloride is given as a rapid bolus to correct hypokalaemia.", false, "NEVER as a bolus; infusion of 10 mmol per 500 ml (max 20 mmol/500 ml if K below 3), once the child has passed urine (p.73)."],
+        ["Maintenance fluid for a child under 10 kg is 100 ml/kg/day.", true, "Slide p.72."],
+      ]),
+      explain: "Maintenance (p.72): under 10 kg 100 ml/kg/day; 11-20 kg 1000 ml plus 50 ml/kg for each kg above 10; above 20 kg 1500 ml plus 20 ml/kg for each kg above 20." },
+
+    { topic: "Role of drugs", src: "p.72",
+      stem: "Drugs in acute diarrhoea:",
+      items: I([
+        ["Antidiarrhoeal, antiemetic and antisecretory agents are of no benefit and some are dangerous.", true, "Slide p.72. A past paper asked 'give anti-diarrhoea medication': false."],
+        ["Antimicrobials are indicated in severe shigella infection and enteroinvasive E. coli.", true, "Slide p.72."],
+        ["Antimicrobials are indicated for salmonella enteritis in the very young, the immunocompromised or the systemically ill child.", true, "Slide p.72."],
+        ["Antibiotics are given to all children with acute watery diarrhoea.", false, "Not indicated for most watery diarrhoea (p.72)."],
+        ["Bloody diarrhoea (dysentery) is treated with an antibiotic effective against Shigella, e.g. ciprofloxacin.", true, "Outside the slide; WHO recommends it for dysentery."],
+      ]),
+      explain: "Past paper 2k23.165: a 9-month-old with 15 days of diarrhoea and weight loss has persistent diarrhoea; not necessarily bloody or amoebic; needs a diet plan, not antidiarrhoeal drugs." },
+
+    { topic: "Electrolytes", src: "p.71-73",
+      stem: "Electrolyte disturbances in diarrhoea:",
+      items: I([
+        ["Hypernatraemic dehydration is the least common but is often underestimated because the circulation is preserved by the hypertonic serum.", true, "Slide p.73."],
+        ["After shock is corrected, hypernatraemic dehydration is corrected slowly over 48-72 hours so that serum sodium falls by less than 10 mmol/L per day.", true, "Slide p.73."],
+        ["Rapid correction of hypernatraemia risks cerebral oedema and convulsions.", true, "Slide p.73 (convulsions during rehydration)."],
+        ["Hyperkalaemia is the typical potassium disturbance of diarrhoea.", false, "Hypokalaemia (stool potassium loss) (p.71, 73). Past paper 2k23.182 offered hyperkalaemia as an option."],
+        ["Metabolic acidosis is corrected mainly by correcting the dehydration; bicarbonate is reserved for pH below 7.2 or base deficit above 10.", true, "Slide p.73."],
+      ]),
+      explain: "Classification by sodium: isonatraemic (130-150), hyponatraemic (below 130: sodium lost in excess of water), hypernatraemic (above 150: from hypertonic fluids, e.g. concentrated formula or poorly absorbed fluids). Lactose intolerance is another complication (p.71)." },
+
+    { topic: "Complications and prevention", src: "p.71; "+S,
+      stem: "Complications and prevention of diarrhoeal disease:",
+      items: I([
+        ["Complications include oliguria and acute kidney injury, electrolyte imbalance, lactose intolerance and malnutrition.", true, "Slide p.71."],
+        ["Rotavirus vaccination, exclusive breast-feeding for 6 months, hand washing, safe water and sanitation, zinc and measles vaccination reduce the burden.", true, "Standard teaching (outside the slide)."],
+        ["Diarrhoea lasting 14 days or more with weight loss is persistent diarrhoea needing a dietary plan after rehydration.", true, "Slide p.70; standard management."],
+        ["Stool for reducing substances is a useful test when lactose intolerance is suspected.", true, "Slide p.71."],
+        ["The commonest cause of death from diarrhoea is bloody stool.", false, "Dehydration is the commonest cause of death."],
+      ]),
+      explain: "Link to the other units: severe malnutrition (p.91), measles and malaria cause or worsen diarrhoea (p.70), immunisation includes rotavirus in the current schedule (outside the slide)." },
   ]
 }]);
 })();
@@ -5955,6 +6948,223 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · True/False (5 statements per stem, negative marking −½) · Neonatal jaundice.
+// Source: Paediatrics CS edited.pdf has NO lecture on unconjugated neonatal jaundice (physiological jaundice, phototherapy, exchange transfusion,
+// kernicterus). It DOES cover neonatal cholestasis / conjugated hyperbilirubinaemia p.81-85 and neonatal haemolysis/anaemia p.188-190.
+// So most stems are standard teaching shaped by past papers (2000.33, paed.342, paed.347, 2k17-2k2.319 and 324, cohort-n.8 and 42, paed.9, paed.124-127).
+// Bilirubin thresholds vary between charts; confirm against UCH's own treatment chart.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-nj",
+  subject: "Paediatrics",
+  group: "Neonatal jaundice",
+  type: "tf",
+  title: "Paediatrics T/F · Neonatal jaundice (8 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "Physiological versus pathological jaundice", src: S,
+      stem: "Jaundice in the newborn:",
+      items: I([
+        ["Physiological jaundice appears after the first 24 hours, usually on day 2-3.", true, "Jaundice in the first 24 hours is always pathological until proven otherwise."],
+        ["In a term baby physiological jaundice usually peaks on day 3-5 and has cleared by about 10-14 days.", true, "Preterm babies peak later (day 5-7) and clear later (2-3 weeks)."],
+        ["Jaundice is pathological if it appears within 24 hours of birth.", true, "Think haemolysis (Rh, ABO, G6PD), congenital infection or sepsis."],
+        ["Jaundice persisting beyond 14 days in a term baby is physiological.", false, "Prolonged jaundice (beyond 14 days term, 21 days preterm) needs investigation, always including a conjugated bilirubin."],
+        ["A rise in serum bilirubin of more than 5 mg/dl per day suggests haemolysis.", true, "Rapid rise points to haemolysis; physiological jaundice rises slowly."],
+      ]),
+      explain: "A 5-day-old term baby with total bilirubin 17 mg/dl, conjugated 1 mg/dl (past paper, asked in 8 sources): treat with phototherapy, not exchange transfusion, not phenobarbitone, not reassurance. The jaundice is unconjugated and above the treatment line." },
+
+    { topic: "Causes by age of onset", src: "p.188-190; "+S,
+      stem: "Causes of neonatal jaundice:",
+      items: I([
+        ["ABO incompatibility and Rh disease cause unconjugated jaundice with anaemia in the first days of life.", true, "Slide p.189: Rh and ABO haemolytic disease are leading causes of early-onset anaemia. Past paper 2000.33."],
+        ["G6PD deficiency, spherocytosis and alpha thalassaemia are causes of haemolysis in the newborn.", true, "Slide p.189."],
+        ["Septicaemia and cephalhaematoma or other bruising are causes of unconjugated jaundice in a 4-day-old.", true, "Past paper 2000.33 (septicaemia, fracture of femur with haemorrhage). The cause is haemolysis or reabsorption of blood."],
+        ["An infant of a diabetic mother develops jaundice with severe anaemia.", false, "IDM babies are plethoric and polycythaemic (slide p.190), so jaundice comes from the large red-cell mass, not anaemia."],
+        ["Hepatitis and gallstones are the commonest causes of jaundice in the first week.", false, "Not in the first week; a conjugated cause (hepatitis, biliary atresia) shows later with pale stool and dark urine. A past paper listed ABO and spherocytosis as the true options."],
+      ]),
+      explain: "Anchor by age: under 24 h = haemolysis, infection; 24-72 h = physiological, ABO, G6PD, bruising, polycythaemia; 3 days-2 weeks = sepsis, breast-feeding, G6PD; over 2 weeks = breast-milk jaundice, hypothyroidism, biliary atresia, hepatitis, galactosaemia." },
+
+    { topic: "G6PD deficiency and ABO/Rh disease", src: S,
+      stem: "Haemolytic causes of neonatal jaundice in Nigeria:",
+      items: I([
+        ["G6PD deficiency is a common cause of severe neonatal jaundice in Nigeria.", true, "X-linked; males mostly; babies can be affected without any trigger or after exposure."],
+        ["Naphthalene (mothballs) and menthol or henna exposure are recognised triggers.", true, "Counsel the mother: no mothballs in the baby's clothes and no herbal or menthol agents."],
+        ["ABO incompatibility occurs in a mother of blood group AB with an O baby.", false, "It occurs when the mother is group O and the baby is A or B (IgG anti-A or anti-B crosses the placenta)."],
+        ["ABO haemolytic disease can affect the first baby, and the direct Coombs test is only weakly positive or negative.", true, "Because the anti-A and anti-B antibodies are naturally present, no prior sensitisation is needed."],
+        ["Rh disease needs prior maternal sensitisation, so the first Rh-positive baby is usually spared, and the direct Coombs test is strongly positive.", true, "Prevented by anti-D immunoglobulin to the Rh-negative mother within 72 hours of delivery or a sensitising event."],
+      ]),
+      explain: "Remember the ABO and Rh contrast: ABO = mild, first baby, weakly positive Coombs; Rh = severe, later babies, strongly positive Coombs, hydrops. G6PD does not give a positive Coombs; it shows Heinz bodies and a low enzyme assay (may be falsely normal during crisis)." },
+
+    { topic: "Bilirubin encephalopathy", src: S,
+      stem: "Kernicterus (bilirubin encephalopathy):",
+      items: I([
+        ["It results from deposition of unconjugated bilirubin in the basal ganglia and brainstem nuclei.", true, "Globus pallidus, subthalamic nucleus and the auditory and oculomotor nuclei."],
+        ["Early features include lethargy, poor suck and hypotonia, then hypertonia with opisthotonus, a high-pitched cry and seizures.", true, "Opisthotonus is the classic picture-test sign."],
+        ["Chronic sequelae include athetoid cerebral palsy, sensorineural deafness, upward gaze palsy and dental enamel hypoplasia.", true, "Intelligence is often spared."],
+        ["It occurs only when bilirubin is above 40 mg/dl.", false, "Risk depends on the bilirubin level plus prematurity, acidosis, sepsis, hypoalbuminaemia and drugs displacing bilirubin (sulphonamides, ceftriaxone)."],
+        ["Conjugated bilirubin causes kernicterus.", false, "Only unconjugated (lipid-soluble) bilirubin crosses the blood-brain barrier."],
+      ]),
+      explain: "Link to cerebral palsy in the neurology unit: kernicterus gives the dyskinetic (athetoid) type with deafness. Prevent it by treating the jaundice early, not by waiting for symptoms." },
+
+    { topic: "Investigation and phototherapy", src: S,
+      stem: "Management of neonatal unconjugated jaundice:",
+      items: I([
+        ["Initial work-up includes total and conjugated bilirubin, blood group and Coombs test of mother and baby, PCV, reticulocytes and blood film.", true, "Add G6PD assay, septic screen, urine and thyroid tests as indicated."],
+        ["Phototherapy works by converting bilirubin to water-soluble isomers excreted without conjugation.", true, "Blue-green light 460-490 nm causes configurational isomers and lumirubin."],
+        ["Eyes are covered, fluids and feeding are maintained and the baby is turned during phototherapy.", true, "Watch temperature and hydration."],
+        ["Phototherapy is the treatment of choice for conjugated hyperbilirubinaemia from biliary atresia.", false, "Conjugated bilirubin is not made safer by light; it can cause 'bronze baby' syndrome. Treat the cholestasis."],
+        ["Phenobarbitone is the treatment of choice for a 5-day-old term infant with bilirubin of 17 mg/dl.", false, "Phototherapy is. A past paper offered phenobarbitone as the wrong option."],
+      ]),
+      explain: "Side effects of phototherapy: loose stools, rash, dehydration, hyperthermia, retinal damage if eyes unprotected, bronze baby syndrome. Stop when bilirubin has fallen well below the treatment line, then check for rebound." },
+
+    { topic: "Exchange transfusion", src: S,
+      stem: "Exchange transfusion in neonatal jaundice:",
+      items: I([
+        ["It is indicated when bilirubin reaches the exchange line for the baby's age and weight, or phototherapy fails to control a rapid rise.", true, "Also when there are signs of acute bilirubin encephalopathy."],
+        ["A double-volume exchange (about 160-170 ml/kg) removes about 85% of circulating red cells and about 50% of bilirubin.", true, "It also removes antibodies and sensitised cells."],
+        ["Fresh whole blood group O Rh-negative (or compatible) crossmatched against the mother is used in Rh disease.", true, "Group-specific blood is used if not Rh disease."],
+        ["Hypocalcaemia, hyperkalaemia, hypoglycaemia, infection, thrombocytopenia and NEC are complications.", true, "Monitor glucose, calcium and potassium and check platelets after the procedure."],
+        ["Intravenous immunoglobulin has no place in haemolytic disease of the newborn.", false, "IVIG 0.5-1 g/kg reduces the need for exchange in Rh and ABO disease."],
+      ]),
+      explain: "Order of escalation: phototherapy (intensive), IVIG for isoimmune disease, exchange transfusion. Keep the baby feeding; start the exchange early if there are neurological signs." },
+
+    { topic: "Conjugated hyperbilirubinaemia", src: "p.81-85",
+      stem: "Neonatal cholestasis (conjugated hyperbilirubinaemia):",
+      items: I([
+        ["It is defined as conjugated bilirubin above 15% of the total, occurring within the first 3 months of life.", true, "Slide p.81."],
+        ["Pale stools and dark urine point to cholestasis.", true, "Slide p.81-82."],
+        ["A well-looking infant with acholic stools and a firm liver suggests extrahepatic biliary atresia.", true, "Slide p.82."],
+        ["The Kasai procedure restores bile flow in about 80-90% of cases if done before 56 days of life.", true, "Slide p.83: only about 20% after 120 days. Timing predicts outcome."],
+        ["Galactosaemia presents with hepatomegaly, cataracts and a risk of E. coli sepsis, and is managed with a lactose-free milk for life.", true, "Slide p.84-85: urine reducing substances positive, glucose oxidase negative."],
+      ]),
+      explain: "Other causes: neonatal hepatitis (normal or pale stools, impaired uptake with normal excretion on HIDA scan), choledochal cyst (abdominal pain, jaundice, right upper quadrant mass), TORCH, sepsis and UTI, hypothyroidism, TPN. Refer EARLY: delay beyond 8 weeks turns a surgical cure into a liver transplant." },
+
+    { topic: "Prolonged jaundice and breast milk", src: S,
+      stem: "Prolonged jaundice in a well infant of 3 weeks:",
+      items: I([
+        ["Breast-milk jaundice is the commonest cause in a thriving breast-fed baby with normal stool colour.", true, "Unconjugated; usually peaks in the second week and can last up to 12 weeks."],
+        ["Breast-feeding should always be stopped when this is diagnosed.", false, "Continue breast-feeding unless the bilirubin is very high; reassure."],
+        ["Hypothyroidism is a recognised cause of prolonged unconjugated jaundice.", true, "Check TSH (the newborn screen)."],
+        ["Urine infection can present with prolonged jaundice.", true, "Slide p.81 (UTI secondary to E. coli)."],
+        ["A conjugated fraction must be measured in every baby jaundiced beyond 14 days.", true, "To avoid missing biliary atresia while the Kasai window is open."],
+      ]),
+      explain: "Breast-feeding jaundice (early, poor intake, first week) is not the same as breast-milk jaundice (late, healthy, benign). Both are unconjugated; treat the first with more feeds." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · True/False (5 statements per stem, negative marking −½) · Nephrotic syndrome and acute glomerulonephritis.
+// Source: Paediatrics CS edited.pdf p.211-223 (Asinobi: common paediatric renal disorders: AGN p.211-216, nephrotic syndrome p.216-223).
+// Past papers: 2017.35, paed.24 (APSGN); 2017.109, 2018.45, 2k17-2k2.503, 2k19.18, paed.1078, 1083, 1088, 1163, 1168, 1187, 1197 (nephrotic syndrome).
+// Past-paper keys are unverified; statements checked against the slides.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-ns",
+  subject: "Paediatrics",
+  group: "Nephrotic syndrome & AGN",
+  type: "tf",
+  title: "Paediatrics T/F · Nephrotic syndrome and acute glomerulonephritis (8 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "Nephrotic syndrome: definition", src: "p.216",
+      stem: "Nephrotic syndrome in childhood is characterised by:",
+      items: I([
+        ["Heavy proteinuria above 50 mg/kg/day, or above 40 mg/m²/hr, or early-morning protein:creatinine ratio above 200 mg/mmol.", true, "Slide p.216."],
+        ["Hypoalbuminaemia (serum protein below 2.5 g/dl).", true, "Slide p.216 (albumin below 25 g/L, p.221)."],
+        ["Massive generalised oedema.", true, "Slide p.216."],
+        ["Hypolipidaemia.", false, "HYPERlipidaemia (cholesterol above 220 mg/dl), because the liver makes more lipoproteins and lipid catabolism falls (p.216-217)."],
+        ["Normal blood pressure and normal urea in the early stages.", true, "Slide p.220."],
+      ]),
+      explain: "Four-part definition: proteinuria, hypoalbuminaemia, oedema, hyperlipidaemia. Past paper: items INCREASED in the serum of NS = cholesterol, triglycerides, fibrinogen, alpha-2 globulin; DECREASED = albumin, IgG, antithrombin III." },
+
+    { topic: "Nephrotic syndrome: epidemiology and cause", src: "p.211, 217-220",
+      stem: "Nephrotic syndrome in Nigerian children:",
+      items: I([
+        ["It is the commonest chronic renal disease of childhood and accounted for 31% of renal disease in a Nigerian series.", true, "Slide p.211, 217."],
+        ["Minimal change disease is the commonest histology, as in white children.", false, "In Africa minimal change disease is RARE; FSGS, MPGN and membranous nephropathy are common (p.217, 219)."],
+        ["Quartan malarial nephropathy (Plasmodium malariae) is an important secondary cause with a poor prognosis.", true, "Slide p.219, 223. A past paper listed P. falciparum as the commonest cause: false."],
+        ["Hepatitis B, HIV, schistosomiasis and drugs such as mercury (skin-lightening creams) are secondary causes.", true, "Slide p.219-220."],
+        ["Peak age is the pre-school years, with a female preponderance.", false, "Peak in school-age years in Nigeria, with a male preponderance (p.217)."],
+      ]),
+      explain: "Because most Nigerian NS is steroid-resistant and not minimal change, the slide says all patients should have a renal biopsy if safe (p.221). Contrast with white children, where over 90% have minimal change and steroids work." },
+
+    { topic: "Nephrotic syndrome: oedema and clinical features", src: "p.216-217, 220-221",
+      stem: "Pathogenesis and features of the nephrotic state:",
+      items: I([
+        ["Loss of albumin lowers oncotic pressure, so fluid moves into the interstitium; secondary hyperaldosteronism and ADH worsen the oedema.", true, "Slide p.216-217."],
+        ["Oedema begins around the eyes, then the limbs, abdomen and genitalia, and may go down on ambulation.", true, "Slide p.220."],
+        ["Gross haematuria and severe hypertension are typical of minimal change nephrotic syndrome.", false, "Typically absent in minimal change; they point to MPGN, FSGS or a nephritic component."],
+        ["Ascites and pleural effusion may occur.", true, "Slide p.220."],
+        ["Weight gain occurs despite poor appetite.", true, "Slide p.220."],
+      ]),
+      explain: "Distinguish from kwashiorkor (past paper, 8 sources): proteinuria and hypercholesterolaemia are present in NS, not in kwashiorkor; both have hypoalbuminaemia and oedema; ascites is commoner in NS. Differential also AGN, cardiac failure, chronic liver disease and beri-beri (p.223)." },
+
+    { topic: "Nephrotic syndrome: investigations", src: "p.220-221",
+      stem: "Investigations in nephrotic syndrome:",
+      items: I([
+        ["Urinalysis shows protein 3+ to 4+.", true, "Slide p.220."],
+        ["Serum urea and creatinine are usually normal at presentation.", true, "Slide p.220."],
+        ["Total serum calcium is reduced while ionised calcium is normal.", true, "Slide p.220 (low albumin lowers total calcium)."],
+        ["Selective proteinuria (IgG:albumin clearance under 15%) goes with minimal change disease and steroid response.", true, "Slide p.221."],
+        ["Renal biopsy should never be done in a child with nephrotic syndrome in our environment.", false, "The slide recommends biopsy for all children presenting here (most are steroid resistant) unless contraindicated, and for those who fail steroids or have low complement (p.221)."],
+      ]),
+      explain: "A past paper stem asked 'steroids are the drugs of choice in poorly selective proteinuria': false. Selective proteinuria predicts steroid response." },
+
+    { topic: "Nephrotic syndrome: treatment", src: "p.221",
+      stem: "Treatment of nephrotic syndrome in childhood:",
+      items: I([
+        ["Corticosteroids are the mainstay for a steroid-responsive nephrotic syndrome.", true, "Slide p.221."],
+        ["The initial dose of prednisolone is 60 mg/m²/day for 4 weeks, then 40 mg/m² on alternate days for 4 weeks.", true, "Slide p.221. A past-paper option '6 mg/m²/day' was a trap."],
+        ["Cyclophosphamide is useful in frequently relapsing or steroid-dependent disease.", true, "Slide p.221."],
+        ["Cyclosporin (a calcineurin inhibitor) is used in steroid-dependent and steroid-resistant disease.", true, "Slide p.221-222 lists cyclosporine, tacrolimus and mycophenolate; calcineurin inhibitors are usual first-line for resistant disease (outside the slide)."],
+        ["Fast-acting diuretics given freely are the best treatment for resistant oedema.", false, "They risk hypovolaemia and thrombosis; thiazides, spironolactone, salt-poor albumin 1 g/kg with frusemide, or FFP are used (p.221)."],
+      ]),
+      explain: "Support: salt restriction, daily weight, BP, input/output, no femoral puncture (thrombosis), treat infection. Steroid response is the key prognostic test." },
+
+    { topic: "Nephrotic syndrome: definitions of response", src: "p.222",
+      stem: "Definitions in nephrotic syndrome:",
+      items: I([
+        ["Remission is urine protein below 4 mg/hr/m² or dipstick negative/trace for 3 consecutive days.", true, "Slide p.222."],
+        ["Relapse is dipstick 2+ or more for 3 consecutive days after a remission.", true, "Slide p.222."],
+        ["Frequent relapse means two or more relapses within 6 months of the initial response, or four or more in any 12 months.", true, "Slide p.222."],
+        ["Steroid resistance is failure to respond to 4 weeks of prednisolone 60 mg/m²/day.", true, "Slide p.222."],
+        ["Steroid dependence is relapse 3 months after stopping steroids.", false, "Two consecutive relapses during steroid treatment or within 14 days of stopping (p.222)."],
+      ]),
+      explain: "These five definitions are free marks in the short-note version. Learn the numbers: 4 weeks, 3 days, 2 in 6 months, 4 in 12 months, 14 days." },
+
+    { topic: "Nephrotic syndrome: complications", src: "p.222-223",
+      stem: "Complications and management of nephrotic syndrome:",
+      items: I([
+        ["Infections (peritonitis, cellulitis, pneumonia) are common, especially with encapsulated organisms.", true, "Slide p.222 (low immunoglobulins, oedema, loss of factor B)."],
+        ["A hypercoagulable state with loss of antithrombin III predisposes to thromboembolism.", true, "Slide p.222."],
+        ["Polyvalent pneumococcal vaccine is given and live vaccines are avoided during high-dose steroids.", true, "Slide p.222-223."],
+        ["Chickenpox exposure needs zoster immunoglobulin or acyclovir.", true, "Slide p.223."],
+        ["Prognosis is good in quartan malarial nephropathy.", false, "Poor: hypertension and end-stage renal disease within 5-7 years (p.223). Minimal change has a better outcome but may relapse until the second decade."],
+      ]),
+      explain: "Other complications: malnutrition, loss of vitamin D binding protein, hyperlipidaemia, chronic kidney disease, acute kidney injury from hypovolaemia (p.222)." },
+
+    { topic: "Acute post-streptococcal glomerulonephritis", src: "p.211-216",
+      stem: "Acute post-streptococcal glomerulonephritis (APSGN):",
+      items: I([
+        ["It follows pharyngitis (latent period about 1-3 weeks) or pyoderma (3-6 weeks), and pyoderma-related disease is commoner in our environment.", true, "Slide p.212-213."],
+        ["Treatment of the streptococcal pharyngitis does not prevent AGN.", true, "Slide p.212."],
+        ["Features include oedema, hypertension, haematuria (30-70% gross), oliguria and circulatory congestion.", true, "Slide p.211-213."],
+        ["Serum C3 is low in the acute phase and normalises by 6-8 weeks; if still low at 8-12 weeks the diagnosis should be reviewed.", true, "Slide p.214."],
+        ["Prognosis is poor: most children progress to end-stage renal disease.", false, "About 80% recover completely and about 10% progress to chronic renal failure (p.216). Past paper 2017.35 asked this: false."],
+      ]),
+      explain: "Complications: hypertensive encephalopathy (a past-paper TRUE), acute kidney injury, pulmonary oedema, heart failure (p.213). Treatment: supportive, salt and fluid restriction, diuretics, antihypertensives, penicillin for 10 days (p.215-216). Biopsy if hypertension beyond 3 weeks, nephrotic picture, low C3 beyond 8-12 weeks (p.214)." },
+  ]
+}]);
+})();
+
+</script>
+<script>
 // Paediatrics · True/False (5 statements per stem, negative marking −½) · Pulmonology paper 1: bronchial asthma and croup.
 // Source: Paediatrics CS edited.pdf, Pulmonology section. Asthma p.282-292, viral croup (ALTB) p.293-294.
 // Statements that go beyond the slides are listed in PAGE_MAP (pa-pages.js) as "outside the slide".
@@ -6487,7 +7697,7 @@ banks.forEach(b=>{const m=PM[b.id]; if(m&&b.questions) b.questions.forEach((q,i)
 const GROUPS=["Menstrual disorders & DUB","Amenorrhoea & PCOS","Abortion","Ectopic pregnancy","Antepartum haemorrhage","Hypertension in pregnancy","Labour & the partograph","Family planning","Infertility","Fibroids & endometriosis","Anaemia in pregnancy","Postpartum haemorrhage & oxytocics"];
 const COMING=["Antenatal care & booking","Gynaecological cancers","Genital infections & STIs","Prolapse & fistulae","Instruments & imaging (picture test)"];
 let curGroup=null;
-const PGROUPS=["Paediatric endocrinology","Infectious diseases","Pulmonology","Rheumatic fever & endocarditis"];
+const PGROUPS=["Paediatric endocrinology","Infectious diseases","Pulmonology","Rheumatic fever & endocarditis","Neonatal jaundice","Nephrotic syndrome & AGN","Acute diarrhoea & dehydration"];
 const PCOMING=["Neonatology","Nutrition & malnutrition","Haemato-oncology","Congenital heart disease & heart failure","Nephrology","Neurology","Gastroenterology"];
 const TYPE_LABEL={cards:"Flashcards",mcq:"Multiple choice",essay:"Essays",fillgap:"Fill in the gap",tf:"True / False (5 stems each, negative marking)",pics:"Picture test (5 True / False per picture)"};
 const TYPE_ORDER=["cards","mcq","tf","pics","fillgap","essay"];
