@@ -2524,6 +2524,47 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Flashcards · Febrile seizures and childhood epilepsy. Source: Paediatrics CS edited.pdf p.266-275; extra:true = beyond the slides.
+(function(){
+const C=(topic,src,q,a,connect,extra)=>Object.assign({topic,src,q,a,connect},extra?{extra:true}:{});
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-cards-fs",
+  subject: "Paediatrics",
+  group: "Febrile seizures & epilepsy",
+  type: "cards",
+  title: "Paediatrics Flashcards · Febrile seizures and epilepsy",
+  cards: [
+    C("Definitions","p.266","Define a seizure, febrile seizure and epilepsy.","Seizure: paroxysmal clinical event from abnormal discharges of cortical neurons (motor, sensory, autonomic or psychic). Febrile seizure: seizure in a young child (3 months to 5 years) from raised temperature, with no pathology in the brain. Epilepsy: recurrent afebrile (unprovoked) seizures.","Febrile seizure is never epilepsy by definition."),
+    C("Febrile seizures","p.266","Epidemiology and common causes of febrile seizures.","2-3% of children aged 3 months to 5 years; 25% have a positive family history. Causes of fever: malaria, URTI, pharyngotonsillitis, otitis media, bronchopneumonia, UTI, measles.","Malaria is the top cause in Nigeria."),
+    C("Febrile seizures","p.266","Simple versus complex febrile seizures.","Simple (commoner): single attack in 24 hours, generalised, under 15 minutes. Complex: multiple attacks in 24 hours, focal, or lasting over 15 minutes.","Past papers 2018.61, 2k17-2k1.43: 70% complex = false; generalised = simple."),
+    C("Febrile seizures","p.266-267","Recurrence and risk of epilepsy after febrile seizure.","Recurrence about one-third; higher with young age at first episode and onset at lower temperature. Risk of epilepsy about 1%; raised with complex seizures, family history of epilepsy and abnormal neurological examination.","Counsel the parents with these numbers."),
+    C("Febrile seizures","p.267","Management of a child convulsing with fever.","ABC and oxygen; check blood sugar (below 40 mg/dl: 50% glucose 1-2 ml/kg diluted 1:2); stop the seizure: rectal diazepam 5 mg (under 3 years) or 10 mg (over 3), or IV diazepam 0.1-0.3 mg/kg, or IM paraldehyde 1 ml/year of life; history and examination for the cause; investigations.","Past paper 2017.61: blood sugar mandatory; IV access at once; phenobarbitone not indicated."),
+    C("Febrile seizures","p.267","Investigations in a child with fever and convulsion.","Lumbar puncture and CSF analysis to exclude meningitis, blood film for malaria parasites, chest X-ray, urine microscopy and culture, random blood sugar.","LP is not mandatory in every child: meningism, ill look, complex seizure or young infant."),
+    C("Febrile seizures",S,"When is the diagnosis of simple febrile seizure doubtful?","Prolonged post-ictal coma, focal signs, persistent drowsiness, neck stiffness, bulging fontanelle, raised ICP signs, seizure lasting over 15 minutes or repeating, child under 12 months.","Think meningitis, encephalitis, cerebral malaria, hypoglycaemia.",true),
+    C("Febrile seizures",S,"Prevention of recurrence of febrile seizures.","Reassurance and first-aid teaching; prompt treatment of the cause (malaria, UTI, otitis). Antipyretics do not prevent recurrence. Intermittent diazepam or buccal midazolam for selected high-risk children; continuous phenobarbitone or valproate not routinely recommended.","Treat fever for comfort, not to prevent seizures.",true),
+    C("First aid",S,"What should parents do when a child has a seizure?","Stay calm, note the time, lay the child on the side (recovery position) on a safe surface, loosen clothing, do not restrain, do not put anything in the mouth, cool the child, rush to hospital if over 5 minutes, repeated, breathing difficulty or not waking.","Past paper 2k23.142: turn the child on his side.",true),
+    C("Epilepsy","p.267","Epidemiology and aetiology of epilepsy in children.","About 1% of the population (more in developing countries); about 45% of cases in the Paediatric Neurology clinic at UCH. Causes: idiopathic, perinatal brain injury, CNS infections, malformations, trauma, neurocutaneous syndromes (neurofibromatosis, tuberous sclerosis), genetic, tumours.","Past paper 2k20-2k2.11: causes of seizures include hypoglycaemia, hypocalcaemia, hyponatraemia and hypernatraemia."),
+    C("Epilepsy","p.267-268","Classification of epilepsy and seizures.","Simple versus complex (consciousness preserved or altered); focal versus generalised; specific syndromes (Rolandic, Landau-Kleffner, Lennox-Gastaut, infantile spasms); idiopathic, cryptogenic, symptomatic. Generalised: tonic-clonic, absence, atonic, myoclonic. Partial: simple and complex.","Classification decides the drug."),
+    C("Seizure types","p.268","Describe the generalised tonic-clonic seizure.","Loss of consciousness, body stiffening (tonic), then jerking (clonic), cyanosis, incontinence, lasting minutes, followed by post-ictal sleep.","Formerly grand mal."),
+    C("Seizure types","p.268","Describe absence seizures and their treatment.","Onset 4-8 years, commoner in girls; staring with unawareness or eye blinking for 5-20 seconds, many per day; no fall, no post-ictal phase; hyperventilation precipitates; EEG 3 cycle/second spike-wave; ethosuximide or valproate (20-40 mg/kg/day); most outgrow by teenage years.","Past paper 2015.12: blinking true, falls false, ethosuximide drug of choice, 3 Hz spike-wave true, prognosis always poor false."),
+    C("Seizure types","p.268-269","Atonic seizures, myoclonic jerks and partial seizures.","Atonic: sudden loss of tone and falls, valproate, protective helmet. Myoclonic: brief shock-like jerks, accidents like spilling drinks. Simple partial: no impairment of consciousness (tingling, taste, sweating). Complex partial: impaired awareness, aura, automatisms (lip smacking, plucking), carbamazepine.","Complex partial was formerly temporal lobe epilepsy."),
+    C("Syndromes","p.269","Rolandic epilepsy.","Commonest childhood epilepsy (15-25%), onset 3-12 years, nocturnal or on waking, tingling of lips, tongue and cheek, gurgling sounds, then tonic-clonic seizure; otherwise well; EEG centrotemporal spikes; carbamazepine or valproate; outgrown by 14-18 years.","Benign because prognosis is good."),
+    C("Syndromes","p.269-270","Landau-Kleffner and Lennox-Gastaut syndromes.","Landau-Kleffner: loss of language, onset 3-8 years; valproate, lamotrigine, steroids, speech therapy. Lennox-Gastaut: tonic, atonic and atypical absence seizures, mental retardation, onset 2-3 years, poor control; valproate, lamotrigine.","Causes: perinatal injury, malformations, genetic, meningitis; may follow infantile spasms."),
+    C("Syndromes","p.270","Infantile spasms (West syndrome).","Salaam attacks in clusters, peak 4-6 months; underlying brain injury (asphyxia, dysgenesis, tuberous sclerosis); mental retardation; EEG hypsarrhythmia; treat with ACTH, steroids, clonazepam, vigabatrin; poor prognosis.","Triad: spasms, hypsarrhythmia, developmental arrest."),
+    C("Diagnosis","p.271","How is epilepsy diagnosed and investigated?","Clinical diagnosis after 2 or more unprovoked seizures; EEG helps define syndrome, separate partial from generalised and seizure from pseudoseizure or syncope; MRI for focal seizures or symptomatic epilepsy; CT for post-traumatic seizures.","EEG alone is never diagnostic (past paper)."),
+    C("Treatment","p.271","When to start anti-epileptic drugs.","Not after a first unprovoked seizure (60% have no further attack; medication does not change recurrence rate); start after recurrence. Goals: avoid injury, improve psychological function, reduce risk of status. Counsel on duration, side effects, compliance and myths.","Starting a drug is a family decision after counselling."),
+    C("Treatment","p.272","Carbamazepine: uses and adverse effects.","Drug of choice for partial seizures; also generalised tonic-clonic; not for absence, myoclonic or atonic (may worsen). Dose 10-30 mg/kg/day in 2-3 doses, start 5 mg/kg/day; autoinduction. Side effects: rash, mood change, insomnia, hepatotoxicity, blood dyscrasia.","Examine the skin before starting any AED."),
+    C("Treatment","p.273","Sodium valproate: uses and adverse effects.","Broad spectrum: absence, myoclonic, tonic-clonic, atonic, mixed, Lennox-Gastaut, infantile spasms. 20-40 mg/kg/day. Adverse effects: GI upset, weight gain, tremor, hepatotoxicity, alopecia, thrombocytopenia, pancreatitis.","First choice when the seizure type is unclear."),
+    C("Treatment","p.273-274","Phenobarbitone and phenytoin: use and side effects.","Phenobarbitone: oral 3-8 mg/kg/day or IV loading 20 mg/kg; neonatal seizures, GTC, partial; drowsiness, cognitive impairment, hyperkinesia. Phenytoin: GTC and partial, oral 4-7 mg/kg/day, IV load 20 mg/kg in status (fosphenytoin safer); gingival hyperplasia (20-50%), hirsutism, rash, Stevens-Johnson, marrow suppression.","Both are cheap first-line drugs in Nigeria."),
+    C("Treatment","p.274","Stopping anti-epileptic drugs.","About 70% seizure-free for 1-2 years can stop; after 2-3 years seizure-free taper over 4-6 months. Predictors of success: generalised seizures, onset under 10 years, normal neurology, resolved EEG discharges. Retry after 2 years if first attempt fails.","Taper slowly to avoid status."),
+    C("Status epilepticus","p.275","Definition and management of status epilepticus.","Prolonged seizure lasting over 30 minutes (slide) or repeated seizures without regaining consciousness; modern working definition 5 minutes. Steps: ABC and oxygen, check sugar; rectal or IV diazepam; after 10 minutes IM paraldehyde 1 ml/year; IV phenytoin 18-20 mg/kg over 20 minutes; IV phenobarbitone 15-20 mg/kg over 10 minutes; thiopentone anaesthesia.","Predisposing: AED withdrawal, poor compliance, fever, infection."),
+  ]
+}]);
+})();
+
+</script>
+<script>
 // Paediatrics · Flashcards · Neonatal jaundice. Slides cover cholestasis p.81-85 and neonatal haemolysis p.188-190; the rest is standard teaching (extra:true).
 (function(){
 const C=(topic,src,q,a,connect,extra)=>Object.assign({topic,src,q,a,connect},extra?{extra:true}:{});
@@ -3137,6 +3178,182 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
           P("Screen annually for retinopathy, nephropathy (albumin:creatinine), neuropathy, blood pressure, lipids.", true),
           P("Autoimmune thyroid disease and coeliac disease; poor control can slow growth and delay puberty.", true),
           P("Education, school plan, psychosocial support, transition to adult care.", true),
+        ]},
+      ]
+    },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · Essays · Febrile seizures and childhood epilepsy. Two long essays (leading to a diagnosis; social paediatrics) and four short.
+// Source: Paediatrics CS edited.pdf p.266-275; x:true = beyond the slides. Past papers: 2016.47, 2k17-2k2.297-298, cohort-n.24, 2k19.17 (febrile convulsion),
+// 2k17-2k2.339 (status epilepticus), 2015.12-13 and 2k17-2k2.505 (absence), 2k17-2k2.519, 521 (epilepsy), 2017.15 and 2k23.166-167 (child convulsing with fever).
+(function(){
+const P=(t,x)=>x?{t,x:true}:{t};
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-essay-fs",
+  subject: "Paediatrics",
+  group: "Febrile seizures & epilepsy",
+  type: "essay",
+  title: "Paediatrics Essays · Febrile seizures and epilepsy (2 long, 4 short)",
+  essays: [
+    {
+      kind: "Long essay (20 marks) · leading to a diagnosis", marks: 20, topic: "Febrile seizure", src: "p.266-267; past papers 2016.47, 2k17-2k2.297, 2017.61, 2k23.166",
+      prompt: "A 2-year-old girl is brought to the emergency room after a generalised convulsion lasting about 5 minutes. She has had fever for one day. She is now drowsy but rousable, with a temperature of 39.4°C and no neck stiffness. Discuss your diagnosis and management.",
+      tip: "Name 'simple febrile seizure', justify against the definition, and then show you excluded the dangerous causes: hypoglycaemia, meningitis, cerebral malaria. Give diazepam doses, the work-up, and counselling with the recurrence and epilepsy figures.",
+      sections: [
+        { h: "Diagnosis and reasoning", pts: [
+          P("Simple febrile seizure: a child aged 3 months to 5 years, generalised seizure under 15 minutes, single in 24 hours, with fever and no intracranial infection (p.266)."),
+          P("Fever plus seizure must be explained: look for the cause of fever (malaria, URTI, otitis, pneumonia, UTI, measles) (p.266)."),
+          P("Features arguing against: prolonged coma, focal seizure, repeated seizures, neck stiffness, signs of raised ICP (p.267).", false),
+        ]},
+        { h: "Differential diagnosis", pts: [
+          P("Meningitis and encephalitis, cerebral malaria, hypoglycaemia, electrolyte disturbance, head injury, poisoning, first presentation of epilepsy.", true),
+          P("Hypocalcaemia, hyponatraemia and hypernatraemia can cause seizures (past paper 2k20-2k2.11).", true),
+        ]},
+        { h: "Immediate management", pts: [
+          P("ABC, oxygen, position on the side, IV access (p.267)."),
+          P("Check blood sugar: if below 40 mg/dl give 50% dextrose 1-2 ml/kg diluted 1:2 (p.267)."),
+          P("If still convulsing: rectal diazepam 5 mg (under 3 years) or IV diazepam 0.1-0.3 mg/kg, or IM paraldehyde 1 ml per year of life (p.267)."),
+          P("Lower the temperature with paracetamol and tepid sponging.", true),
+        ]},
+        { h: "Investigations", pts: [
+          P("Blood film or rapid test for malaria parasites, urinalysis and culture, chest X-ray, random blood sugar (p.267)."),
+          P("Lumbar puncture and CSF analysis if meningitis is suspected (p.267); delay it if signs of raised ICP."),
+          P("No routine EEG or neuroimaging after a first simple febrile seizure.", true),
+        ]},
+        { h: "Treat the cause and counsel", pts: [
+          P("Treat malaria or other infection; antibiotics if meningitis suspected (p.266-267)."),
+          P("Counsel: about one-third recur; risk of epilepsy about 1%, higher with complex seizures, family history of epilepsy and abnormal neurology (p.266-267)."),
+          P("Teach first aid: side-lying, do not restrain, nothing in the mouth, time the seizure, come early if over 5 minutes.", true),
+          P("Antipyretics do not prevent recurrence; prophylaxis is not routinely needed; consider intermittent diazepam in high-risk children.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Long essay (20 marks) · social paediatrics", marks: 20, topic: "Epilepsy in childhood: psychosocial aspects", src: "p.267, 271-274; Standard teaching",
+      prompt: "A 9-year-old boy has been diagnosed with epilepsy. Discuss the psychosocial implications for the child and his family and how you would address them.",
+      tip: "Burden and myths first, then impact on child, family, school; then your plan: counselling, treatment adherence, school liaison, safety. Slide p.272 lists 'address myths about epilepsy' under counselling.",
+      sections: [
+        { h: "Burden", pts: [
+          P("Epilepsy affects about 1% of the population, more in developing countries; it is about 45% of the Paediatric Neurology clinic at UCH (p.267)."),
+          P("Causes include perinatal injury and CNS infections, which are preventable (p.267).", false),
+        ]},
+        { h: "Myths and stigma", pts: [
+          P("Beliefs that epilepsy is spiritual, contagious or from witchcraft; delay in hospital care, use of traditional or spiritual healers.", true),
+          P("Stigma, social isolation, fear of marriage and employment later.", true),
+          P("Counselling must address myths and parental concerns (p.272)."),
+        ]},
+        { h: "Impact on the child", pts: [
+          P("Injury from falls and drowning; risk of status epilepticus (p.271-275)."),
+          P("School absence, learning difficulty (absence seizures interfere with academic performance, p.268), behavioural problems and anti-epileptic drug side effects (p.272-274)."),
+          P("Low self-esteem, depression, restriction from games, swimming and cycling.", true),
+        ]},
+        { h: "Impact on the family", pts: [
+          P("Anxiety and over-protection, parental guilt, cost of drugs, EEGs and hospital visits.", true),
+          P("Poor adherence from cost, stock-outs, misunderstanding the duration of therapy (p.272).", false),
+        ]},
+        { h: "Management of the psychosocial problems", pts: [
+          P("Adequate counselling on duration, side effects, compliance and myths before starting drugs (p.272)."),
+          P("Use a single effective drug at the lowest dose with simple dosing; monitor (p.272-274)."),
+          P("Liaise with the school: teachers taught first aid; adapt sport; supervision near water.", true),
+          P("Safety: shower not bath, supervision at heights, no unsupervised swimming.", true),
+          P("Support groups, social work, community health education against stigma.", true),
+          P("Review for stopping medication after 2-3 years seizure-free (p.274)."),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Febrile convulsion", src: "p.266-267; past papers 2016.47, 2k17-2k2.298, cohort-n.24",
+      prompt: "Write short notes on febrile convulsions.",
+      tip: "Definition, types, causes, recurrence and epilepsy risk, management, prevention. Keep numbers handy.",
+      sections: [
+        { h: "Definition and epidemiology", pts: [
+          P("Seizures in young children from elevated temperature without intracranial pathology; 3 months to 5 years; 2-3% of children; 25% family history (p.266)."),
+        ]},
+        { h: "Types", pts: [
+          P("Simple: single in 24 hours, generalised, under 15 minutes (commoner). Complex: multiple, focal, over 15 minutes (p.266)."),
+        ]},
+        { h: "Causes", pts: [
+          P("Malaria, URTI, pharyngotonsillitis, otitis media, bronchopneumonia, UTI, measles (p.266)."),
+        ]},
+        { h: "Outcome", pts: [
+          P("Recurrence about 1/3, higher with young age and lower temperature; epilepsy risk about 1%, higher with complex seizures, family history, abnormal neurology (p.266-267)."),
+        ]},
+        { h: "Management", pts: [
+          P("ABC, check sugar, diazepam (rectal 5 mg under 3 years, 10 mg over 3), paraldehyde alternative; find the cause; LP, malaria film, chest X-ray, urine, sugar (p.267)."),
+          P("Counsel and teach first aid; treat the cause; intermittent diazepam in selected cases.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Status epilepticus", src: "p.275; past paper 2k17-2k2.339",
+      prompt: "Write short notes on the management of status epilepticus in a child.",
+      tip: "Definition, causes, the stepwise drug protocol with doses, complications, post-seizure care.",
+      sections: [
+        { h: "Definition and predisposing factors", pts: [
+          P("Seizure over 30 minutes (slide) or repeated seizures without recovery between them; a medical emergency (p.275). Modern definition: 5 minutes.", false),
+          P("Predisposing: sudden AED withdrawal, poor compliance, fever, infection (p.275)."),
+        ]},
+        { h: "Stepwise management", pts: [
+          P("Step 1: ABC, oxygen, check blood sugar (p.275)."),
+          P("Step 2: rectal or IV diazepam; secure IV access (p.275)."),
+          P("Step 3 (after 10 minutes): IM paraldehyde 1 ml per year of life (p.275)."),
+          P("Step 4: IV phenytoin 18-20 mg/kg slowly over 20 minutes (p.275)."),
+          P("Step 5: IV phenobarbitone 15-20 mg/kg over 10 minutes (p.275)."),
+          P("Step 6: induction of anaesthesia with sodium thiopentone (p.275)."),
+        ]},
+        { h: "Complications and follow-up", pts: [
+          P("Hypoxia, brain damage and sudden death (p.275)."),
+          P("Treat the cause (infection, hypoglycaemia, withdrawal), restart or adjust AEDs, ICU monitoring, identify why it occurred.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Absence epilepsy", src: "p.268; past papers 2015.12-13, 2k17-2k2.505",
+      prompt: "Write short notes on childhood absence epilepsy.",
+      tip: "Age, clinical picture, trigger, EEG, drugs, prognosis. Mention that carbamazepine is not used.",
+      sections: [
+        { h: "Clinical features", pts: [
+          P("Onset 4-8 years, commoner in girls (p.268)."),
+          P("Brief loss of responsiveness (5-20 seconds), staring, repeated blinking, many times a day; the child is unaware; no fall and no post-ictal state (p.268)."),
+          P("May interfere with school performance (p.268)."),
+        ]},
+        { h: "Diagnosis", pts: [
+          P("Hyperventilation for 30 seconds precipitates an attack (p.268)."),
+          P("EEG: 3 cycle/second spike-wave discharge (p.268)."),
+        ]},
+        { h: "Treatment and prognosis", pts: [
+          P("Ethosuximide or sodium valproate 20-40 mg/kg/day (p.268)."),
+          P("Carbamazepine is not effective and may worsen absence (p.272)."),
+          P("Most outgrow it by the teenage years (p.268)."),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Principles of anti-epileptic drug therapy", src: "p.271-274; past papers 2k17-2k2.519, 2k17-2k2.521",
+      prompt: "Write short notes on the principles of anti-epileptic drug therapy in children.",
+      tip: "When to start, how to choose, how to monitor, what the common side effects are, and when to stop.",
+      sections: [
+        { h: "When to start", pts: [
+          P("Not after a first unprovoked seizure (60% have no recurrence); start after recurrence (p.271)."),
+          P("Counsel on duration, side effects, compliance and myths (p.272)."),
+        ]},
+        { h: "Choice of drug", pts: [
+          P("Classify the epilepsy accurately; start with one drug at a low dose and increase until control or maximum dose (p.272)."),
+          P("Partial and tonic-clonic seizures: carbamazepine; absence, myoclonic, atonic, mixed: valproate; neonatal seizures: phenobarbitone (p.272-273)."),
+          P("Consider cost, dosing frequency, drug interactions (p.272)."),
+        ]},
+        { h: "Monitoring and adverse effects", pts: [
+          P("Weight, LFTs, electrolytes; drug levels when control is poor (p.274)."),
+          P("Carbamazepine: rash, hepatotoxicity, blood dyscrasia; valproate: hepatotoxicity, weight gain, pancreatitis; phenytoin: gum hyperplasia, hirsutism; phenobarbitone: cognitive effects (p.272-274)."),
+          P("Examine the skin before starting; stop drugs causing hazardous reactions (p.272-273)."),
+        ]},
+        { h: "Stopping", pts: [
+          P("About 70% seizure-free for 1-2 years can stop; taper over 4-6 months after 2-3 years seizure-free (p.274)."),
+          P("Other options: surgery, ketogenic diet, pyridoxine in infants (p.274-275)."),
         ]},
       ]
     },
@@ -4509,6 +4726,80 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Single-best-option MCQ · Febrile seizures and childhood epilepsy. Source: Paediatrics CS edited.pdf p.266-275; "Standard teaching" = outside the slide.
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-mcq-fs",
+  subject: "Paediatrics",
+  group: "Febrile seizures & epilepsy",
+  type: "mcq",
+  title: "Paediatrics MCQ · Febrile seizures and epilepsy (12 single best option)",
+  negativeMarking: false,
+  questions: [
+    { topic: "Febrile seizures", src: "p.266",
+      stem: "A simple febrile seizure is best defined as a seizure that is:",
+      options: ["Focal, lasting 20 minutes", "Generalised, single in 24 hours and lasting under 15 minutes", "Repeated three times in 24 hours", "Associated with meningitis", "Occurring after age 6"],
+      answer: 1,
+      explain: "Simple: single, generalised, under 15 minutes (p.266). Complex: repeated, focal or lasting over 15 minutes. Age range is 3 months to 5 years." },
+    { topic: "Febrile seizures", src: "p.266",
+      stem: "After a first simple febrile seizure the risk of recurrence is about:",
+      options: ["1%", "10%", "One-third", "Two-thirds", "100%"],
+      answer: 2,
+      explain: "About one-third (p.266); higher with young age at onset and onset at a lower temperature. Risk of epilepsy is about 1%." },
+    { topic: "Epilepsy risk", src: "p.266-267",
+      stem: "Which factor increases the risk of later epilepsy after a febrile seizure?",
+      options: ["Simple febrile seizure", "Complex febrile seizure with family history of epilepsy", "Seizure at 4 years", "High peak temperature", "Male sex alone"],
+      answer: 1,
+      explain: "Complex features, family history of epilepsy and abnormal neurological examination (p.266-267)." },
+    { topic: "Management", src: "p.267",
+      stem: "A 4-year-old is convulsing at presentation. After ABC and checking the sugar, the drug of first choice is:",
+      options: ["IV phenobarbitone", "Rectal diazepam 10 mg", "Rectal diazepam 5 mg", "IV phenytoin", "Oral carbamazepine"],
+      answer: 1,
+      explain: "Rectal diazepam 5 mg under 3 years, 10 mg over 3 years (p.267); IV diazepam 0.1-0.3 mg/kg is an alternative." },
+    { topic: "Hypoglycaemia", src: "p.267",
+      stem: "A convulsing child has a blood glucose of 30 mg/dl. The correct action is:",
+      options: ["Oral glucose", "50% glucose 1-2 ml/kg diluted 1:2 IV", "Rectal diazepam only", "10 ml/kg of 5% dextrose over 4 hours", "Observation"],
+      answer: 1,
+      explain: "If below 40 mg/dl give 50% glucose 1-2 ml/kg diluted 1:2 (p.267). Hypoglycaemia is a cause of seizures, so check the sugar in every convulsing child." },
+    { topic: "Differential", src: "p.266-267; past paper",
+      stem: "A 6-year-old with 3 days of fever, GCS 7/15, decerebrate posturing and dilated pupils most likely has:",
+      options: ["Simple febrile seizure", "Meningitis or cerebral malaria with raised ICP", "Absence epilepsy", "Breath-holding spell", "Syncope"],
+      answer: 1,
+      explain: "Persistent coma and focal or brainstem signs exclude a febrile seizure. Do not do a lumbar puncture with signs of raised ICP; treat empirically and image first (past paper 2017.15)." },
+    { topic: "Seizure types", src: "p.268",
+      stem: "Which is a feature of typical absence seizures?",
+      options: ["Fall to the ground with jerking", "Brief staring with unawareness lasting 5-20 seconds and no post-ictal phase", "Post-ictal sleep", "Focal motor jerking", "Onset in infancy"],
+      answer: 1,
+      explain: "Age 4-8 years, girls, many per day, hyperventilation provokes, EEG 3 Hz spike-wave (p.268). Drug: ethosuximide or valproate." },
+    { topic: "Epilepsy syndromes", src: "p.269",
+      stem: "Rolandic epilepsy (benign childhood epilepsy with centrotemporal spikes):",
+      options: ["Is a rare epilepsy with a poor prognosis", "Is the commonest childhood epilepsy, occurs at night with tingling of the lips and tongue, and is outgrown by puberty", "Occurs in infants with hypsarrhythmia", "Needs ACTH", "Presents with absence"],
+      answer: 1,
+      explain: "15-25% of childhood epilepsy, onset 3-12 years, nocturnal or on waking; EEG centrotemporal spikes; carbamazepine or valproate (p.269)." },
+    { topic: "Infantile spasms", src: "p.270",
+      stem: "A 5-month-old has clusters of salaam-type flexor spasms and developmental regression. The treatment is:",
+      options: ["Carbamazepine", "ACTH or steroids, with vigabatrin", "Ethosuximide", "Phenytoin", "No treatment"],
+      answer: 1,
+      explain: "West syndrome: EEG hypsarrhythmia; ACTH, steroids, clonazepam, vigabatrin (p.270). Prognosis poor." },
+    { topic: "AEDs", src: "p.272",
+      stem: "Which seizure type may be WORSENED by carbamazepine?",
+      options: ["Simple partial seizures", "Complex partial seizures", "Absence and myoclonic seizures", "Secondarily generalised seizures", "Rolandic epilepsy"],
+      answer: 2,
+      explain: "Carbamazepine is not effective for absence, myoclonic or atonic seizures and may worsen some (p.272). Valproate covers them." },
+    { topic: "AED adverse effects", src: "p.274",
+      stem: "Gingival hyperplasia and hirsutism are adverse effects of:",
+      options: ["Sodium valproate", "Carbamazepine", "Phenytoin", "Ethosuximide", "Phenobarbitone"],
+      answer: 2,
+      explain: "Phenytoin: gingival hyperplasia in 20-50%, hirsutism, rash, hepatitis, marrow suppression, Stevens-Johnson (p.274). Valproate: weight gain, tremor, hepatotoxicity, alopecia, pancreatitis (p.273)." },
+    { topic: "Status epilepticus", src: "p.275",
+      stem: "In the slide's status epilepticus protocol, which drug follows rectal or IV diazepam when seizures continue after 10 minutes?",
+      options: ["IM paraldehyde 1 ml per year of life", "Thiopentone", "Oral valproate", "IV mannitol", "Oral phenobarbitone"],
+      answer: 0,
+      explain: "Step 3 paraldehyde; step 4 IV phenytoin 18-20 mg/kg over 20 minutes; step 5 IV phenobarbitone 15-20 mg/kg; step 6 thiopentone anaesthesia (p.275)." },
+  ]
+}]);
+
+</script>
+<script>
 // Paediatrics · Single-best-option MCQ · Neonatal jaundice. The deck covers cholestasis p.81-85 and neonatal haemolysis p.188-190;
 // everything else is standard teaching ("Standard teaching" shows as "outside the slide").
 window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
@@ -4941,6 +5232,10 @@ window.PAGE_MAP["pa-pics-dd"] = [{"pg": "p.71", "out": [3, 4]}, {"pg": "p.72", "
 window.PAGE_MAP["pa-tf-scd"] = [{"pg": "p.94", "out": []}, {"pg": "p.94-95", "out": [4]}, {"pg": "p.95", "out": [3, 4]}, {"pg": "p.95", "out": []}, {"pg": "p.95", "out": []}, {"pg": "p.96", "out": [3, 4]}, {"pg": "p.96, 225", "out": []}, {"pg": "p.96", "out": [2, 3]}];
 window.PAGE_MAP["pa-pics-scd"] = [{"pg": "p.94-96", "out": [2, 4]}, {"pg": "p.94", "out": []}, {"pg": "p.94-95", "out": []}, {"pg": "p.95-96", "out": [0, 4]}, {"pg": "p.95", "out": [1, 3]}, {"pg": "p.95-96", "out": [2, 4]}];
 
+// Febrile seizures & epilepsy
+window.PAGE_MAP["pa-tf-fs"] = [{"pg": "p.266", "out": []}, {"pg": "p.266", "out": []}, {"pg": "p.266-267", "out": []}, {"pg": "p.267", "out": []}, {"pg": "p.267", "out": [2, 3, 4]}, {"pg": "", "out": []}, {"pg": "p.267, 271", "out": []}, {"pg": "p.267-269", "out": []}, {"pg": "p.271-275", "out": []}];
+window.PAGE_MAP["pa-pics-fs"] = [{"pg": "p.268", "out": []}, {"pg": "p.270", "out": []}, {"pg": "p.267, 270", "out": [2, 3, 4]}, {"pg": "p.267", "out": [1, 2, 3, 4]}, {"pg": "p.272-274", "out": [3]}];
+
 </script>
 <script>
 // Paediatrics · Picture test (picture + 5 True/False, negative marking −½) · Acute diarrhoea and dehydration.
@@ -5173,6 +5468,87 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
         ["Oral hypoglycaemic agents replace insulin in type 1 diabetes.", false, "No; insulin is lifelong."],
       ]),
       explain: "Other instruments in this station: glucometer, ketone strips, urine dipstick, sharps bin. Counselling points: hypoglycaemia recognition, glucose tablets, glucagon." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · Picture test (picture + 5 True/False, negative marking −½) · Febrile seizures and epilepsy.
+// Real images from Wikimedia Commons, linked live, credit in each caption. Febrile seizure itself has no usable free image, so the
+// pictures cover the EEG patterns and neurocutaneous / drug-reaction signs the slides name (p.267-275). Statements checked against the slides.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+const F=n=>"https://commons.wikimedia.org/wiki/Special:FilePath/"+n+"?width=720";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-pics-fs",
+  subject: "Paediatrics",
+  group: "Febrile seizures & epilepsy",
+  type: "pics",
+  title: "Paediatrics Picture test · Febrile seizures and epilepsy (5 pictures)",
+  negativeMarking: true,
+  secPerQ: 90,
+  questions: [
+    { topic: "Picture: EEG, absence seizure", src: "p.268", img: F("EEG Absence seizure.png"),
+      credit: "EEG showing generalised 3 Hz spike-wave discharge of absence epilepsy. Wikimedia Commons, CC BY-SA 4.0, Bromfield EB, Cavazos JE, Sirven JI.",
+      stem: "An EEG from a 7-year-old girl who 'switches off' for a few seconds many times a day.",
+      items: I([
+        ["The pattern is a generalised 3 cycle/second spike-and-wave discharge.", true, "Slide p.268."],
+        ["Hyperventilation for 30 seconds may precipitate an attack.", true, "Slide p.268."],
+        ["The attacks last 5-20 seconds and there is no post-ictal confusion.", true, "Slide p.268."],
+        ["Carbamazepine is the drug of choice.", false, "Ethosuximide or sodium valproate (p.268, 272); carbamazepine may worsen absence."],
+        ["The child usually falls to the ground during an attack.", false, "She typically does not fall (p.268)."],
+      ]),
+      explain: "Most children outgrow absence epilepsy by the teenage years (p.268). It interferes with school performance, so ask the teacher about 'day-dreaming'." },
+
+    { topic: "Picture: EEG, hypsarrhythmia", src: "p.270", img: F("Hypsarrhythmia.png"),
+      credit: "Interictal EEG showing hypsarrhythmia in a 4-month-old with West syndrome. Wikimedia Commons, CC BY-SA 3.0, Ralphelg.",
+      stem: "A 4-month-old with clusters of sudden flexion of the arms and trunk with a cry, and developmental regression.",
+      items: I([
+        ["The EEG shows a chaotic high-amplitude pattern called hypsarrhythmia.", true, "Slide p.270."],
+        ["The diagnosis is infantile spasms (West syndrome).", true, "Slide p.270."],
+        ["Treatment includes ACTH, steroids, vigabatrin and clonazepam.", true, "Slide p.270."],
+        ["Prognosis is excellent and most children are developmentally normal.", false, "Prognosis is poor; most have mental retardation (p.270)."],
+        ["Underlying causes include severe perinatal asphyxia, cerebral dysgenesis and tuberous sclerosis.", true, "Slide p.270."],
+      ]),
+      explain: "Peak onset 4-6 months (p.270). Infantile spasms may progress to Lennox-Gastaut syndrome. Always look for a skin sign of tuberous sclerosis (the next picture)." },
+
+    { topic: "Picture: tuberous sclerosis", src: "p.267", img: F("Facial angiofibromas of tuberous sclerosis.png"),
+      credit: "Facial angiofibromas of tuberous sclerosis. Wikimedia Commons, CC BY 4.0, Mustaqim K, Mohd Ghazi A, Harun Nor Rashid et al.",
+      stem: "A patient with epilepsy and these papules over the nose and cheeks.",
+      items: I([
+        ["These are facial angiofibromas (adenoma sebaceum) of tuberous sclerosis.", true, "Slide p.267 lists tuberous sclerosis as a neurocutaneous cause of epilepsy."],
+        ["Infantile spasms are a typical early epilepsy presentation.", true, "Slide p.270."],
+        ["Other features are hypopigmented (ash-leaf) macules, shagreen patches, cardiac rhabdomyomas and renal angiomyolipomas.", true, "Standard teaching."],
+        ["It is inherited as an autosomal recessive condition.", false, "Autosomal dominant with many new mutations (TSC1 and TSC2) (standard teaching)."],
+        ["Intellectual disability is invariably absent.", false, "Frequently present with early-onset seizures (standard teaching)."],
+      ]),
+      explain: "Neurocutaneous causes of epilepsy in the slide: neurofibromatosis and tuberous sclerosis (p.267). Wood's lamp shows the ash-leaf macules in the first year." },
+
+    { topic: "Picture: café-au-lait spot", src: "p.267", img: F("Café-au-lait spot on the abdomen in neurofibromatosis type 1.png"),
+      credit: "Café-au-lait spot on the abdomen in neurofibromatosis type 1. Wikimedia Commons, CC BY 4.0, Idiculla J, Pakalomattom S et al.",
+      stem: "A child with seizures and several of these pigmented patches.",
+      items: I([
+        ["Neurofibromatosis is one of the neurocutaneous syndromes listed as a cause of epilepsy.", true, "Slide p.267."],
+        ["Six or more café-au-lait macules above 5 mm (prepubertal) support the diagnosis of NF1.", true, "Standard teaching."],
+        ["Axillary freckling, Lisch nodules and neurofibromas are other features.", true, "Standard teaching."],
+        ["It is inherited in an autosomal recessive manner.", false, "Autosomal dominant (NF1 gene on chromosome 17) (standard teaching)."],
+        ["A single café-au-lait spot proves neurofibromatosis.", false, "One or two spots occur in normal children."],
+      ]),
+      explain: "Skin examination is part of the work-up of every child with epilepsy: look for ash-leaf macules, café-au-lait spots, port-wine stain (Sturge-Weber)." },
+
+    { topic: "Picture: Stevens-Johnson syndrome", src: "p.272-274", img: F("Mucosal desquamation in a person with Stevens–Johnson syndrome.jpg"),
+      credit: "Mucosal desquamation in Stevens-Johnson syndrome. Wikimedia Commons, CC BY-SA 3.0, James Heilman, MD.",
+      stem: "A child on anti-epileptic treatment develops fever, mouth ulcers and a widespread rash 2 weeks after starting a new drug.",
+      items: I([
+        ["Carbamazepine, phenytoin and phenobarbitone are recognised causes of Stevens-Johnson syndrome.", true, "Slide p.273-274 (skin rash, Stevens-Johnson with phenytoin; examine the skin before starting an AED)."],
+        ["The drug should be stopped immediately.", true, "Withdraw if hazardous side effects occur (p.272)."],
+        ["The skin should be examined carefully before starting an anti-epileptic drug.", true, "Slide p.273."],
+        ["Continue the drug and add a steroid cream.", false, "Stop the culprit drug; supportive care in a burns or intensive unit."],
+        ["Hepatotoxicity and blood dyscrasia are other serious reactions to carbamazepine.", true, "Slide p.273."],
+      ]),
+      explain: "Link to pharmacology: aromatic AEDs share cross-reactivity (carbamazepine, phenytoin, phenobarbitone); use valproate if a substitute is needed." },
   ]
 }]);
 })();
@@ -6474,6 +6850,126 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
         ["Beckwith-Wiedemann syndrome features macroglossia, omphalocele and hemihypertrophy.", true, "Hyperinsulinism, plus later Wilms tumour risk."],
       ]),
       explain: "Sorting rule: low glucose with HIGH ketones suggests ketotic hypoglycaemia, hormone deficiency (GH, cortisol) or glycogen disease; low glucose with LOW ketones points to hyperinsulinism or a fat oxidation defect. Slide p.50 and 56 link cortisol and GH deficiency." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · True/False (5 statements per stem, negative marking −½) · Febrile seizures and childhood epilepsy.
+// Source: Paediatrics CS edited.pdf p.266-275 (Oyinlade: febrile seizures p.266-267; epilepsy, seizure types, syndromes, AEDs, status epilepticus p.267-275).
+// Past papers: 2018.61, 2k17-2k1.43, 2016.47, 2k17-2k2.297-298 and cohort-n.24 (febrile convulsions); 2017.61, 2017.15, 2015.3, 2k19.17, 2k23.166-167 (febrile child convulsing);
+// 2015.12-13 and 2k17-2k2.505 (absence); 2k17-2k2.519, 521 (epilepsy); 2k17-2k2.339 (status); 2k23.142 (first aid); 2k20-2k2.11 (causes of seizures).
+// Past-paper keys are unverified. The slide defines status epilepticus as over 30 minutes; the modern working definition is 5 minutes, marked outside the slide.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-fs",
+  subject: "Paediatrics",
+  group: "Febrile seizures & epilepsy",
+  type: "tf",
+  title: "Paediatrics T/F · Febrile seizures and childhood epilepsy (9 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "Febrile seizures: definition and epidemiology", src: "p.266",
+      stem: "Febrile seizures:",
+      items: I([
+        ["They are seizures occurring in young children as a result of raised body temperature, in the absence of a pathology in the brain.", true, "Slide p.266."],
+        ["They affect about 2-3% of children between 3 months and 5 years of age.", true, "Slide p.266."],
+        ["They are usually brief, generalised and tonic-clonic, with a rapid rise in temperature.", true, "Slide p.266."],
+        ["About 25% of cases have a positive family history.", true, "Slide p.266."],
+        ["They occur with an intracranial infection such as meningitis.", false, "By definition there is NO intracranial infection (p.266); a past paper (2018.61) asked 'it occurs without intracranial infection'."],
+      ]),
+      explain: "Common causes (p.266): malaria, URTI, pharyngotonsillitis, otitis media, bronchopneumonia, UTI, measles. Febrile seizure is the commonest seizure disorder of childhood (standard teaching)." },
+
+    { topic: "Simple versus complex febrile seizures", src: "p.266",
+      stem: "Types of febrile seizure:",
+      items: I([
+        ["A simple febrile seizure is a single generalised attack in 24 hours lasting under 15 minutes.", true, "Slide p.266."],
+        ["A complex febrile seizure has multiple attacks in 24 hours, focal features or lasts over 15 minutes.", true, "Slide p.266."],
+        ["The simple form is the commoner type.", true, "Slide p.266. A past paper said '70% are complex': false."],
+        ["A generalised seizure is a feature of a complex febrile seizure.", false, "Generalised seizures are SIMPLE; complex seizures are focal (p.266)."],
+        ["A single generalised seizure lasting 20 minutes is classified as a complex febrile seizure.", true, "Any one complex feature (duration over 15 minutes, focal, or repeated in 24 hours) makes it complex (p.266). A past paper asked 'simple, complex or both'."],
+      ]),
+      explain: "Memory: simple = single, short, generalised (the 'ones'); complex = repeated, prolonged (over 15 min), focal. Complex febrile seizures raise the risk of later epilepsy." },
+
+    { topic: "Recurrence and risk of epilepsy", src: "p.266-267",
+      stem: "Outcome of febrile seizures:",
+      items: I([
+        ["About one-third of children have a recurrence after the first episode.", true, "Slide p.266."],
+        ["Recurrence risk is higher with young age at first episode and onset at a lower body temperature.", true, "Slide p.266."],
+        ["The risk of epilepsy is about 1%, similar to the general population, after a simple febrile seizure.", true, "Slide p.266."],
+        ["Complex seizures, a family history of epilepsy and an abnormal neurological examination raise the risk of epilepsy.", true, "Slide p.266-267."],
+        ["Most children with a febrile seizure later develop epilepsy and mental retardation.", false, "Risk about 1% (p.266)."],
+      ]),
+      explain: "Counselling for parents: reassure, explain recurrence rate, teach first aid and fever management, tell them to return if the seizure lasts over 5 minutes." },
+
+    { topic: "Febrile seizures: acute management", src: "p.267",
+      stem: "A 2-year-old is brought convulsing with a fever of 39°C. Initial management:",
+      items: I([
+        ["Secure the airway, give oxygen and check circulation (ABC).", true, "Slide p.267."],
+        ["Check the blood sugar; if below 40 mg/dl give 50% dextrose 1-2 ml/kg diluted 1:2.", true, "Slide p.267. Past paper 2017.61: checking the blood sugar is mandatory."],
+        ["Rectal diazepam 5 mg is given to a child under 3 years and 10 mg to a child over 3 years.", true, "Slide p.267."],
+        ["IV diazepam at 0.1-0.3 mg/kg or IM paraldehyde at 1 ml per year of life are alternatives.", true, "Slide p.267."],
+        ["Intravenous phenobarbitone is the first-line drug to stop the seizure.", false, "Diazepam is first line (p.267); a past paper listed IV phenobarbitone as false."],
+      ]),
+      explain: "First aid at home (past paper 2k23.142): place the child on the side, protect from injury, do not restrain, put nothing in the mouth, time the seizure, cool the child, take to hospital if it lasts 5 minutes or more." },
+
+    { topic: "Investigations and lumbar puncture", src: "p.267; "+S,
+      stem: "Investigating a child with fever and seizure:",
+      items: I([
+        ["Investigations aim to find the cause of fever and exclude meningitis: blood film for malaria, urinalysis and culture, chest X-ray, random blood sugar.", true, "Slide p.267."],
+        ["Lumbar puncture with CSF analysis is part of the work-up when meningitis is suspected.", true, "Slide p.267."],
+        ["Coma (persisting unconsciousness) after the seizure points to a cause other than simple febrile seizure.", true, "Past paper 2017.61 (coma rules out febrile seizure). Think meningitis, encephalitis or cerebral malaria."],
+        ["EEG and neuroimaging are routinely required after a first simple febrile seizure.", false, "Not indicated (standard teaching)."],
+        ["Lumbar puncture must be done in every child with a febrile seizure regardless of age or signs.", false, "Done if meningeal signs, ill appearance, a complex seizure or an incompletely immunised or very young infant (standard teaching)."],
+      ]),
+      explain: "A past paper (2017.15): a 6-year-old with 3 days of fever, GCS 7/15, decerebrate posturing and dilated pupils has meningitis or cerebral malaria, not febrile seizure; LP is dangerous with signs of raised ICP." },
+
+    { topic: "Febrile seizures: prevention and drugs", src: S,
+      stem: "Preventing recurrence of febrile seizures:",
+      items: I([
+        ["Antipyretics given at the onset of fever reliably prevent recurrence.", false, "They improve comfort but have not been shown to prevent febrile seizures."],
+        ["Intermittent oral or rectal diazepam or buccal midazolam can be used at the onset of fever in selected high-risk children.", true, "Standard teaching: for recurrent or prolonged seizures."],
+        ["Continuous prophylaxis with phenobarbitone or valproate is recommended after every simple febrile seizure.", false, "Not routinely recommended because the risks of side effects outweigh benefits."],
+        ["Parents should be taught to treat the underlying cause (malaria, UTI, otitis) and give first aid.", true, "Standard teaching."],
+        ["Tepid sponging alone aborts a febrile seizure.", false, "It does not stop a seizure."],
+      ]),
+      explain: "Malaria is the commonest cause of fever and febrile seizure in Nigeria: prompt treatment of the fever, and a blood film or rapid test, are part of care (p.266)." },
+
+    { topic: "Epilepsy: definition and aetiology", src: "p.267, 271",
+      stem: "Epilepsy in childhood:",
+      items: I([
+        ["Epilepsy is defined as recurrent afebrile seizures (more than one unprovoked seizure).", true, "Slide p.267, 271."],
+        ["It affects about 1% of the population worldwide, with higher prevalence in developing countries.", true, "Slide p.267."],
+        ["It constitutes about 45% of cases seen in the Paediatric Neurology clinic at UCH.", true, "Slide p.267."],
+        ["Causes include perinatal brain injury, CNS infections, malformations, head trauma, neurocutaneous syndromes, genetic disorders and tumours.", true, "Slide p.267."],
+        ["An abnormal EEG alone is diagnostic of epilepsy irrespective of the history.", false, "Diagnosis is CLINICAL (p.271); EEG supports and classifies. A past paper asked this."],
+      ]),
+      explain: "Seizures after head injury, in the acute phase of CNS infection or after drug intoxication do not count as epilepsy (p.271). Neurocutaneous causes: tuberous sclerosis, neurofibromatosis (picture bank)." },
+
+    { topic: "Seizure types", src: "p.267-269",
+      stem: "Types of seizure in children:",
+      items: I([
+        ["Generalised tonic-clonic seizures involve loss of consciousness, stiffening then jerking, often incontinence and post-ictal sleep.", true, "Slide p.268."],
+        ["Absence seizures last about 5-20 seconds, occur many times a day, with no fall and no post-ictal phase.", true, "Slide p.268. Past paper: repeated blinking true, falls false."],
+        ["Absence seizures are precipitated by hyperventilation and show a 3 cycle/second spike-wave pattern on EEG.", true, "Slide p.268."],
+        ["Simple partial seizures impair consciousness, and complex partial seizures do not.", false, "Reverse: simple = no alteration of consciousness; complex = associated alteration or loss (p.267, 269)."],
+        ["Atonic seizures cause sudden loss of tone with falls and head injury, and protective helmets are advised.", true, "Slide p.268-269."],
+      ]),
+      explain: "Absence onset 4-8 years, more common in girls, most outgrow by teenage years (p.268). Complex partial: aura, automatisms (lip smacking, plucking at clothes) (p.269)." },
+
+    { topic: "Drugs and status epilepticus", src: "p.272-275",
+      stem: "Anti-epileptic drugs and status epilepticus:",
+      items: I([
+        ["Carbamazepine is the drug of choice for partial seizures and is also used for generalised tonic-clonic seizures.", true, "Slide p.272."],
+        ["Carbamazepine is not effective for absence, myoclonic or atonic seizures and may worsen some.", true, "Slide p.272. A past paper asked 'carbamazepine for generalised seizures': mixed."],
+        ["Sodium valproate is effective for absence, myoclonic, atonic, tonic-clonic and mixed seizures, but can cause hepatotoxicity.", true, "Slide p.273."],
+        ["Gingival hyperplasia and hirsutism are side effects of phenytoin.", true, "Slide p.274."],
+        ["Treatment should start after every first unprovoked seizure.", false, "No justification for AED after a first unprovoked seizure; about 60% have no further attack (p.271)."],
+      ]),
+      explain: "Status epilepticus (slide p.275): ABC and oxygen, check sugar; rectal or IV diazepam; after 10 minutes IM paraldehyde; then IV phenytoin 18-20 mg/kg over 20 minutes; then phenobarbitone 15-20 mg/kg; then thiopentone anaesthesia. (Modern definition is 5 minutes of seizure; the slide uses over 30 minutes.)" },
   ]
 }]);
 })();
@@ -8184,7 +8680,7 @@ banks.forEach(b=>{const m=PM[b.id]; if(m&&b.questions) b.questions.forEach((q,i)
 const GROUPS=["Menstrual disorders & DUB","Amenorrhoea & PCOS","Abortion","Ectopic pregnancy","Antepartum haemorrhage","Hypertension in pregnancy","Labour & the partograph","Family planning","Infertility","Fibroids & endometriosis","Anaemia in pregnancy","Postpartum haemorrhage & oxytocics"];
 const COMING=["Antenatal care & booking","Gynaecological cancers","Genital infections & STIs","Prolapse & fistulae","Instruments & imaging (picture test)"];
 let curGroup=null;
-const PGROUPS=["Paediatric endocrinology","Infectious diseases","Pulmonology","Rheumatic fever & endocarditis","Neonatal jaundice","Nephrotic syndrome & AGN","Acute diarrhoea & dehydration","Sickle cell disease"];
+const PGROUPS=["Paediatric endocrinology","Infectious diseases","Pulmonology","Rheumatic fever & endocarditis","Neonatal jaundice","Nephrotic syndrome & AGN","Acute diarrhoea & dehydration","Sickle cell disease","Febrile seizures & epilepsy"];
 const PCOMING=["Neonatology","Nutrition & malnutrition","Haemato-oncology","Congenital heart disease & heart failure","Nephrology","Neurology","Gastroenterology"];
 const TYPE_LABEL={cards:"Flashcards",mcq:"Multiple choice",essay:"Essays",fillgap:"Fill in the gap",tf:"True / False (5 stems each, negative marking)",pics:"Picture test (5 True / False per picture)"};
 const TYPE_ORDER=["cards","mcq","tf","pics","fillgap","essay"];
