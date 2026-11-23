@@ -2608,6 +2608,46 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Flashcards · Meningitis and other intracranial infections. Source: Paediatrics CS edited.pdf p.276-281; extra:true = beyond the slides.
+(function(){
+const C=(topic,src,q,a,connect,extra)=>Object.assign({topic,src,q,a,connect},extra?{extra:true}:{});
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-cards-men",
+  subject: "Paediatrics",
+  group: "Meningitis & encephalitis",
+  type: "cards",
+  title: "Paediatrics Flashcards · Meningitis and encephalitis",
+  cards: [
+    C("Basics","p.276","Define meningitis and give its epidemiology.","Inflammation of the leptomeninges by bacteria, viruses, fungi, protozoa or chemicals; a major cause of morbidity and mortality in developing countries. Pyogenic is commonest; peak in infancy; 95% under 5 years. Risk: HbSS, nephrotic syndrome, asplenia, splenectomy (encapsulated organisms: H. influenzae, S. pneumoniae).","Incidence falls with Hib and pneumococcal vaccines."),
+    C("Basics","p.276","Why is the brain vulnerable to infection?","Deficient local host defences, harmful changes in cerebral blood flow, raised ICP from brain swelling and mass lesions, tissue destruction by inflammation, and limited repair of neuronal tissue.","The skull and blood-brain barrier normally protect it."),
+    C("Causes",S,"Causes of bacterial meningitis by age.","Neonates: Group B streptococcus, E. coli and other gram-negatives, Listeria. Infants and children: S. pneumoniae, H. influenzae type b (leading pathogen in the Ibadan series), N. meningitidis. Others: TB, Staph aureus after trauma or surgery.","Past papers paed.811 and 842: 'most frequent cause'.",true),
+    C("Clinical","p.276-277","Clinical features of meningitis.","Non-specific: fever, lethargy, vomiting, irritability, refusal of feeds, cough, catarrh. Specific: convulsions (60-70%), bulging fontanelle, neck pain, photophobia, headache, coma, signs of raised ICP.","Past paper: diarrhoea is the 'except' option."),
+    C("Clinical","p.277","Features of raised intracranial pressure.","Abnormal pupils (unequal, dilated), vomiting, papilloedema, hypertension, bradycardia, abnormal posturing, abnormal respiration (apnoea, hyperventilation).","Cushing's triad: hypertension, bradycardia, irregular breathing."),
+    C("Clinical","p.277","Meningeal signs in infants.","Neck stiffness, Kernig's and Brudzinski's signs are unusual in infants and young children, so diagnosis needs a high index of suspicion; in a 1-month-old look for crying, vomiting, convulsions, bulging fontanelle.","Past paper paed.832."),
+    C("Diagnosis","p.277","Diagnosis of bacterial meningitis.","Lumbar puncture mandatory: neutrophil pleocytosis, raised protein, reduced CSF:blood glucose ratio (hypoglycorrhachia), ± organisms on Gram stain and culture. Also PCV, FBC, random blood sugar, blood culture, trans-fontanelle ultrasound.","CSF glucose below half of the blood glucose is the key."),
+    C("Diagnosis","p.277","Contra-indications to lumbar puncture.","Raised ICP, thrombocytopenia, coagulopathy, infection of skin at the LP site, very ill patient with imminent cardiorespiratory collapse.","Resuscitate and treat first."),
+    C("Diagnosis",S,"Complications of lumbar puncture.","Headache, vomiting, back pain, introduction of infection (meningitis), bleeding, herniation in raised ICP, rarely nerve root injury.","Past paper paed.1254.",true),
+    C("CSF","p.277","CSF in normal, pyogenic, partially treated, viral and TB meningitis.","Normal: clear, WBC under 5/mm³, protein 10-40 mg/dl, glucose ratio one-half to two-thirds, no organisms. Pyogenic: purulent or turbid, WBC high with neutrophils, protein high, ratio under one-half, Gram positive sometimes. Partially treated: turbid, mixed cells, protein raised, ratio under one-half, Gram negative. Viral: clear, lymphocytes, mild protein rise, normal ratio, Gram negative. TB: clear or xanthochromic, lymphocytes, protein raised, ratio under one-half.","Station: interpret a CSF result (paed.156, 165-167, 173, 179)."),
+    C("Treatment","p.277-278","Antibiotic therapy by age.","IV only. Neonates and 1-2 months: third-generation cephalosporin (ceftriaxone, cefotaxime, ceftazidime) plus an aminoglycoside (gentamicin IM or amikacin IV); Listeria: ampicillin. 3 months or older: third-generation cephalosporin; if unavailable IV crystalline penicillin 0.4 MU/kg/day plus chloramphenicol 100 mg/kg/day.","Do not use IM penicillin and streptomycin (past paper)."),
+    C("Treatment","p.278","Duration of antibiotics.","Gram-negative bacilli 21 days; N. meningitidis 5-7 days; H. influenzae 7-10 days; S. pneumoniae 10-14 days; neonatal meningitis 21 days; ensure at least 5 consecutive days of normal temperature before stopping.","Memory: 21, 5-7, 7-10, 10-14."),
+    C("Treatment","p.278","Steroids in bacterial meningitis.","Controversial: IV dexamethasone 0.15 mg/kg 6-hourly for 48 hours; the first dose given before (or with) the first dose of antibiotic (slide: at least 30 minutes before).","Most benefit in Hib; less certain in the tropics."),
+    C("Treatment","p.278","Supportive therapy.","ABC resuscitation, anticonvulsants, nasogastric feeding, control of raised ICP (mannitol, hyperventilation), frequent turning, strict input-output monitoring.","Treat hypoglycaemia and SIADH."),
+    C("Complications","p.278","Early and late complications of meningitis.","Early: deafness (commonest), subdural effusion (infants), SIADH, visual impairment, cerebral abscess, hydrocephalus, focal deficits (hemiplegia, quadriplegia), cranial nerve deficits, sinus thrombosis, cerebral infarction, cerebritis. Late: epilepsy, mental retardation, speech defects, learning disability, cerebral palsy, ataxia, hyperactivity.","Past paper: learning disability is LATE; hearing loss is common."),
+    C("Complications","p.278","Ibadan series of childhood meningitis (Lagunju 2008).","Commonest intracranial infection; leading pathogen H. influenzae; 80.4% under 5 years; case fatality 26.8%; neurodisability 66%; visual impairment 31.7%, cranial nerve palsies 33.3%, spastic hemiplegia 28.7%, hydrocephalus 26.7%, hearing impairment 25%.","Quote the figures in the essay."),
+    C("Prevention","p.278","Prevention of bacterial meningitis.","Immunisation: Hib, conjugate pneumococcal vaccine, meningococcal (CSM) vaccine during epidemics. Chemoprophylaxis: oral rifampicin for household and close contacts of H. influenzae or meningococcal meningitis.","Link to the immunisation unit."),
+    C("Differential","p.278","Differential diagnosis of meningitis.","Encephalitis, febrile convulsions, cerebral malaria, Reye syndrome, cerebral abscess, posterior fossa tumour, hypoglycaemia.","Link to the febrile seizure set: persisting coma excludes a simple febrile seizure."),
+    C("TBM","p.279","Tuberculous meningitis: epidemiology and stages.","2-6 months after primary infection; 6 months to 4 years; haematogenous spread. Stage I: fever, headache, weight loss, irritability, drowsiness. Stage II: lethargy, nuchal rigidity, seizures, Kernig's sign, vomiting, brainstem signs, cranial nerve palsies, focal signs. Stage III: hemiplegia or paraplegia, coma, decerebrate rigidity, opisthotonus, papilloedema, choroidal tubercles.","Prognosis depends on stage at start of treatment."),
+    C("TBM","p.279","Investigations and CSF in TBM.","Tuberculin test, chest X-ray, CSF: straw-coloured or clear, WBC 10-500 with lymphocytes, protein often above 1 g/dl, glucose below 40 mg/dl, ZN stain may show AFB, culture.","Steroids are useful in treatment (past paper paed.720)."),
+    C("TBM","p.279","Complications and prognosis of TBM.","Stage I good prognosis; stage III high mortality and sequelae: blindness, deafness, paraplegia, mental retardation, speech disturbance, cranial nerve palsies, hydrocephalus.","Early treatment saves lives."),
+    C("Tuberculoma","p.279-280","Tuberculoma.","Intracranial space-occupying lesion, usually infratentorial, single or multiple; headache, fever, convulsions, lateralising signs; Mantoux, skull X-ray, CXR; CT: discrete masses with surrounding oedema; often diagnosed at surgery.","Posterior fossa tumour is the differential."),
+    C("Encephalitis","p.280","Encephalitis: aetiology, features and treatment.","Widespread or focal brain parenchymal inflammation; idiopathic in at least 50%; viruses (mumps, measles, rabies, herpes, EBV), bacteria, rickettsiae, fungi, protozoa; post-infectious allergic. Features: headache, fever, convulsions, lateralising signs, mental dullness, ataxia, speech change. LP, CT, virology. Treatment: antibiotics until meningitis excluded, antivirals, mannitol, nursing care. Complications: SIADH, cortical blindness, aspiration, respiratory failure, DIC; late epilepsy, mental retardation, cerebral palsy.","Think of measles encephalitis and SSPE (see immunisation)."),
+  ]
+}]);
+})();
+
+</script>
+<script>
 // Paediatrics · Flashcards · Neonatal jaundice. Slides cover cholestasis p.81-85 and neonatal haemolysis p.188-190; the rest is standard teaching (extra:true).
 (function(){
 const C=(topic,src,q,a,connect,extra)=>Object.assign({topic,src,q,a,connect},extra?{extra:true}:{});
@@ -4002,6 +4042,175 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Essays · Meningitis and encephalitis. Two long essays (leading to a diagnosis from the slide's case scenario; social paediatrics) and four short.
+// Source: Paediatrics CS edited.pdf p.276-281; x:true = beyond the slides. Past papers: 2k17-2k2.277, cohort-n.13 (bacterial meningitis), 2k17-2k2.315, cohort-n.38,
+// 2022.4 (lumbar puncture), paed.168 (2-year-old comatose station), paed.156 and 165-179 (CSF stations), paed.720 (TBM), 2017.15 (febrile child GCS 7).
+(function(){
+const P=(t,x)=>x?{t,x:true}:{t};
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-essay-men",
+  subject: "Paediatrics",
+  group: "Meningitis & encephalitis",
+  type: "essay",
+  title: "Paediatrics Essays · Meningitis and encephalitis (2 long, 4 short)",
+  essays: [
+    {
+      kind: "Long essay (20 marks) · leading to a diagnosis", marks: 20, topic: "Bacterial meningitis", src: "p.276-279; past papers paed.168, 2017.15, 2k17-2k2.277",
+      prompt: "A 3-year-old boy is brought with a 2-day history of fever and 6 hours of loss of consciousness. He is febrile, comatose, and has decorticate posturing. He has had no immunisations since birth. Discuss your diagnosis and management.",
+      tip: "This is the slide's own case scenario: say acute bacterial meningitis with raised ICP, but list cerebral malaria and encephalitis. Say clearly why you will NOT do an LP at once, and give resuscitation, antibiotics, antimalarial, ICP control, then complications.",
+      sections: [
+        { h: "Diagnosis and reasoning", pts: [
+          P("Acute bacterial (pyogenic) meningitis with raised intracranial pressure: fever, coma and decorticate posturing; peak age under 5 years (p.276-277)."),
+          P("Unimmunised, so Hib, pneumococcus and meningococcus are likely (p.276, 278)."),
+          P("Features of raised ICP: coma, posturing, abnormal pupils, bradycardia, hypertension (p.277)."),
+        ]},
+        { h: "Differential diagnosis", pts: [
+          P("Cerebral malaria, encephalitis, tuberculous meningitis, cerebral abscess, Reye syndrome, hypoglycaemia, posterior fossa tumour (p.278-280)."),
+          P("Febrile seizure is excluded by persisting coma (past paper 2017.61).", true),
+        ]},
+        { h: "History to ask the mother", pts: [
+          P("Duration of fever, vomiting, headache, convulsions, rash, ear discharge, cough, head injury; contact with TB; immunisation (Hib, pneumococcus); sickle cell disease; malaria exposure.", true),
+        ]},
+        { h: "Examination", pts: [
+          P("Vital signs, GCS, pupils, fontanelle, neck stiffness, Kernig's and Brudzinski's signs (unreliable at this age), rash (petechiae), focal deficits, papilloedema, ear and chest examination (p.277).", false),
+        ]},
+        { h: "Should a lumbar puncture be done right away?", pts: [
+          P("No. Raised ICP and imminent cardiorespiratory collapse are contra-indications (p.277)."),
+          P("Treat empirically first, control ICP, then do the LP when safe; blood culture before antibiotics.", true),
+        ]},
+        { h: "Management", pts: [
+          P("ABC, oxygen, IV access, check blood sugar and treat hypoglycaemia (p.278)."),
+          P("IV ceftriaxone or cefotaxime (or penicillin plus chloramphenicol if not available) (p.278)."),
+          P("Antimalarial (IV artesunate) after a blood film or rapid test, because cerebral malaria cannot be excluded.", true),
+          P("Anticonvulsants for seizures; mannitol and hyperventilation for raised ICP; NG feeding; turning; strict input-output (p.278)."),
+          P("Dexamethasone 0.15 mg/kg 6-hourly for 48 hours is controversial (p.278)."),
+          P("Antibiotic duration by organism: 10-14 days for pneumococcus, 7-10 for H. influenzae (p.278)."),
+        ]},
+        { h: "Complications and prevention", pts: [
+          P("Early: deafness (commonest), subdural effusion, SIADH, hydrocephalus, cerebral abscess, cranial nerve palsy, hemiplegia, sinus thrombosis; late: epilepsy, mental retardation, cerebral palsy, learning and speech problems (p.278)."),
+          P("Hearing test and neurodevelopmental follow-up; vaccinate; rifampicin for contacts of Hib or meningococcal disease (p.278)."),
+        ]},
+      ]
+    },
+    {
+      kind: "Long essay (20 marks) · social paediatrics", marks: 20, topic: "Prevention of meningitis in the community", src: "p.276-278; Standard teaching",
+      prompt: "Discuss the burden of childhood meningitis in Nigeria and the measures that can be taken to prevent it and its disabling sequelae.",
+      tip: "Burden (Ibadan figures), risk factors, then prevention at primary, secondary and tertiary levels with named interventions (vaccines, early treatment, chemoprophylaxis, rehabilitation).",
+      sections: [
+        { h: "Burden", pts: [
+          P("Commonest intracranial infection in childhood in Ibadan; 80% under 5 years; case fatality 26.8%; neurodisability in 66% (p.278)."),
+          P("A major cause of morbidity and mortality in developing countries (p.276)."),
+          P("Common sequelae: cranial nerve palsies (33%), visual impairment (32%), spastic hemiplegia (29%), hydrocephalus (27%), hearing impairment (25%) (p.278)."),
+        ]},
+        { h: "Risk factors", pts: [
+          P("Young age; sickle cell disease, nephrotic syndrome, asplenia (p.276)."),
+          P("Malnutrition, overcrowding, poor immunisation coverage, HIV, delayed presentation.", true),
+          P("Epidemics of meningococcal disease in the northern meningitis belt (p.278).", false),
+        ]},
+        { h: "Primary prevention", pts: [
+          P("Routine immunisation: Hib vaccine, conjugate pneumococcal vaccine; meningococcal vaccine in epidemics (p.278)."),
+          P("Improve immunisation coverage, tracing defaulters.", true),
+          P("Breast-feeding, nutrition, reduce overcrowding, ventilation.", true),
+        ]},
+        { h: "Secondary prevention", pts: [
+          P("High index of suspicion and early referral; LP and immediate IV antibiotics (p.277)."),
+          P("Rifampicin chemoprophylaxis for household and close contacts of Hib or meningococcal disease (p.278)."),
+          P("Penicillin prophylaxis and vaccines for children with sickle cell disease (p.276).", false),
+        ]},
+        { h: "Tertiary prevention", pts: [
+          P("Treat complications, hearing and vision screening, physiotherapy and special education for neurodisability (p.278)."),
+          P("Counselling and support for families; community health education to reduce delay.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "CSF analysis in meningitis", src: "p.277; past papers paed.156, 165-167, 173, 179",
+      prompt: "Write short notes on the CSF findings in meningitis in children.",
+      tip: "Give a mini-table in prose: appearance, cells, protein, glucose ratio, Gram stain for normal, pyogenic, partially treated, viral and TB.",
+      sections: [
+        { h: "Normal", pts: [
+          P("Clear and colourless, WBC under 5/mm³, protein 10-40 mg/dl, CSF:blood glucose ratio one-half to two-thirds, no organisms (p.277)."),
+          P("Neonates may have up to about 20-30 cells and protein up to 150 mg/dl.", true),
+        ]},
+        { h: "Pyogenic and partially treated meningitis", pts: [
+          P("Pyogenic: purulent or turbid, WBC markedly raised with neutrophils, protein high, ratio under one-half, Gram stain often positive (p.277)."),
+          P("Partially treated: turbid or hazy, raised cells with mixed neutrophils and lymphocytes, protein raised, ratio under one-half, Gram stain negative (p.277)."),
+        ]},
+        { h: "Viral and tuberculous meningitis", pts: [
+          P("Viral: clear, lymphocytic pleocytosis, mild protein rise, normal glucose ratio, negative Gram stain (p.277)."),
+          P("TB: clear or xanthochromic, lymphocytes 10-500, protein over 1 g/dl in some, glucose below 40 mg/dl, AFB on ZN stain (p.277, 279)."),
+        ]},
+        { h: "Interpretation", pts: [
+          P("A CSF glucose of 20 mg/dl with blood glucose 80 mg/dl is a ratio of 0.25: pyogenic or partially treated (past paper paed.156).", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Tuberculous meningitis", src: "p.279; past papers paed.720, paed.816",
+      prompt: "Write short notes on tuberculous meningitis in children.",
+      tip: "Pathogenesis, the three stages, investigations (CSF), treatment (including steroids), complications and prognosis.",
+      sections: [
+        { h: "Pathogenesis and epidemiology", pts: [
+          P("2-6 months after the primary infection; most common at 6 months to 4 years; haematogenous spread to the cortex and meninges (p.279)."),
+        ]},
+        { h: "Clinical stages", pts: [
+          P("Stage I: fever, headache, weight loss, irritability, drowsiness (p.279)."),
+          P("Stage II: lethargy, nuchal rigidity, seizures, Kernig's sign, vomiting, brainstem signs, cranial nerve palsies (p.279)."),
+          P("Stage III: hemiplegia or paraplegia, coma, decerebrate rigidity, opisthotonus, papilloedema and choroidal tubercles (p.279)."),
+        ]},
+        { h: "Investigations", pts: [
+          P("Tuberculin test, chest X-ray; CSF: straw-coloured or clear, lymphocytes 10-500, protein over 1 g/dl, glucose under 40 mg/dl, ZN stain, culture (p.279)."),
+          P("CT or MRI for hydrocephalus and tuberculoma.", true),
+        ]},
+        { h: "Treatment and prognosis", pts: [
+          P("Four-drug anti-TB therapy with corticosteroids; shunt for hydrocephalus.", true),
+          P("Prognosis depends on stage at start: stage III has high mortality and sequelae (blindness, deafness, paraplegia, mental retardation, hydrocephalus) (p.279)."),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Lumbar puncture", src: "p.277; past papers 2k17-2k2.315, cohort-n.38, 2022.4, paed.1254",
+      prompt: "Write short notes on lumbar puncture in children.",
+      tip: "Indications, contra-indications, procedure, specimens sent, complications.",
+      sections: [
+        { h: "Indications", pts: [
+          P("Suspected meningitis (mandatory) (p.277); also encephalitis, febrile seizure in a young or ill child, subarachnoid haemorrhage, leukaemia staging.", false),
+        ]},
+        { h: "Contra-indications", pts: [
+          P("Raised ICP, thrombocytopenia, coagulopathy, skin infection at the site, imminent cardiorespiratory collapse (p.277)."),
+        ]},
+        { h: "Procedure", pts: [
+          P("Explain to parents and obtain consent; lateral position with the back flexed; aseptic technique; L3-4 or L4-5; stylet needle; measure the pressure.", true),
+        ]},
+        { h: "Specimens and complications", pts: [
+          P("Cell count, protein, glucose (with a simultaneous blood glucose), Gram stain, culture, ZN stain if TB suspected (p.277)."),
+          P("Complications: headache, vomiting, infection, bleeding, herniation, nerve root injury (past paper paed.1254).", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Complications of bacterial meningitis", src: "p.278; past papers 2k17-2k2.522, paed.738",
+      prompt: "Write short notes on the complications of pyogenic meningitis in children.",
+      tip: "Split into early and late, and add the Ibadan figures.",
+      sections: [
+        { h: "Early complications", pts: [
+          P("Deafness (commonest), subdural effusion (infants), SIADH, visual impairment, cerebral abscess, hydrocephalus, focal deficits, cranial nerve palsy, sinus thrombosis, cerebral infarction, cerebritis (p.278)."),
+        ]},
+        { h: "Late complications", pts: [
+          P("Epilepsy, mental retardation, speech defects, learning disability, cerebral palsy, ataxia, hyperactivity (p.278)."),
+        ]},
+        { h: "Ibadan data and prevention", pts: [
+          P("Case fatality 26.8%; neurodisability 66%; hearing impairment 25%; hydrocephalus 26.7% (p.278)."),
+          P("Early treatment, vaccines, hearing screening and developmental follow-up (p.278).", false),
+        ]},
+      ]
+    },
+  ]
+}]);
+})();
+
+</script>
+<script>
 // Paediatrics · Essays · Neonatal jaundice. One long essay "leading to a diagnosis" (past papers cohort-n.8, paed.9: "a five-day-old baby
 // presented with jaundice of two days"; paed.124 history station) and three short essays (2k17-2k2.319, 324, cohort-n.42, 2k17-2k2.385).
 // The deck has no lecture on unconjugated jaundice, so those points are x:true (standard teaching); cholestasis points cite p.81-85.
@@ -5095,6 +5304,80 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Single-best-option MCQ · Meningitis and other intracranial infections. Source: Paediatrics CS edited.pdf p.276-281.
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-mcq-men",
+  subject: "Paediatrics",
+  group: "Meningitis & encephalitis",
+  type: "mcq",
+  title: "Paediatrics MCQ · Meningitis and encephalitis (12 single best option)",
+  negativeMarking: false,
+  questions: [
+    { topic: "Epidemiology", src: "p.276",
+      stem: "About what percentage of childhood meningitis occurs under 5 years of age?",
+      options: ["25%", "50%", "75%", "95%", "100%"],
+      answer: 3,
+      explain: "Peak age in infancy, about 95% under 5 years (p.276)." },
+    { topic: "Risk", src: "p.276",
+      stem: "Which condition predisposes to meningitis by encapsulated organisms?",
+      options: ["Sickle cell disease (HbSS)", "Asthma", "Iron deficiency", "Rickets", "Cleft lip"],
+      answer: 0,
+      explain: "Impaired splenic function: HbSS, nephrotic syndrome, congenital asplenia, splenectomy (p.276)." },
+    { topic: "Clinical", src: "p.277",
+      stem: "In an infant with meningitis, which sign is LEAST reliable?",
+      options: ["Bulging anterior fontanelle", "Neck stiffness and Kernig's sign", "Convulsions", "Irritability and refusal of feeds", "Vomiting"],
+      answer: 1,
+      explain: "Meningeal signs are unusual in infants and young children (p.277); a high index of suspicion is required." },
+    { topic: "LP", src: "p.277",
+      stem: "A 3-year-old is comatose with decorticate posturing and unequal pupils. The lumbar puncture:",
+      options: ["Should be done immediately", "Is contra-indicated because of raised ICP; treat empirically first", "Is unnecessary in every case", "Needs a general anaesthetic", "Is done after 2 weeks of antibiotics"],
+      answer: 1,
+      explain: "Raised ICP is the first contra-indication (p.277). Stabilise, give antibiotics and antimalarials, control ICP, image or reassess, then LP when safe." },
+    { topic: "CSF", src: "p.277",
+      stem: "The CSF shows turbid fluid, WBC 2000/mm³ (90% neutrophils), protein 200 mg/dl and glucose 15 mg/dl with blood sugar 80 mg/dl. The diagnosis is:",
+      options: ["Pyogenic meningitis", "Viral meningitis", "Tuberculous meningitis", "Normal CSF", "Febrile convulsion"],
+      answer: 0,
+      explain: "Neutrophil pleocytosis, high protein and a CSF:blood glucose ratio under one-half (here about 0.19) = pyogenic meningitis (p.277). TBM and viral meningitis are lymphocytic." },
+    { topic: "CSF: TB", src: "p.279",
+      stem: "Which CSF picture suggests tuberculous meningitis?",
+      options: ["Lymphocytes 10-500/mm³, protein above 1 g/dl, glucose below 40 mg/dl", "Neutrophils 5000/mm³ with normal glucose", "Normal cells and protein", "Many red cells only", "Neutrophils with a positive Gram stain"],
+      answer: 0,
+      explain: "CSF in TBM: clear or straw-coloured, lymphocytic pleocytosis, high protein and low glucose; ZN stain may be positive (p.279)." },
+    { topic: "Antibiotics", src: "p.277-278",
+      stem: "The recommended initial antibiotic regimen for a neonate with suspected meningitis is:",
+      options: ["Oral amoxicillin", "A third-generation cephalosporin plus an aminoglycoside", "IM penicillin alone", "Oral chloramphenicol", "No antibiotic until culture"],
+      answer: 1,
+      explain: "Ceftriaxone/cefotaxime/ceftazidime plus gentamicin or amikacin; ampicillin for Listeria (p.277-278)." },
+    { topic: "Antibiotic duration", src: "p.278",
+      stem: "Which duration is correct for the organism?",
+      options: ["N. meningitidis 21 days", "Gram-negative bacilli 21 days", "H. influenzae 21 days", "S. pneumoniae 3 days", "Neonatal meningitis 5 days"],
+      answer: 1,
+      explain: "Gram-negative bacilli and neonatal meningitis 21 days; N. meningitidis 5-7; H. influenzae 7-10; S. pneumoniae 10-14 days (p.278)." },
+    { topic: "Complications", src: "p.278",
+      stem: "The commonest complication of bacterial meningitis is:",
+      options: ["Deafness", "Blindness", "Cerebral abscess", "SIADH", "Subdural effusion"],
+      answer: 0,
+      explain: "Deafness (p.278). Subdural effusion is typical in infants." },
+    { topic: "Prevention", src: "p.278",
+      stem: "Chemoprophylaxis with oral rifampicin is recommended for close contacts of a child with:",
+      options: ["Pneumococcal meningitis", "Meningococcal or H. influenzae meningitis", "Viral meningitis", "TB meningitis", "Neonatal sepsis"],
+      answer: 1,
+      explain: "Household and close contacts of H. influenzae or meningococcal meningitis (p.278)." },
+    { topic: "TBM", src: "p.279",
+      stem: "A 2-year-old has 2 weeks of fever, vomiting, drowsiness, neck stiffness, seizures and a positive Kernig's sign, with a cranial nerve palsy but still rousable. The stage of TBM is:",
+      options: ["Stage I", "Stage II", "Stage III", "Stage IV", "Not TB"],
+      answer: 1,
+      explain: "Stage II: lethargy, nuchal rigidity, seizures, Kernig's sign, vomiting, brainstem signs, cranial nerve palsies. Stage III: coma, hemiplegia, decerebrate rigidity, opisthotonus (p.279)." },
+    { topic: "Encephalitis", src: "p.280",
+      stem: "Which statement about encephalitis is correct?",
+      options: ["It is idiopathic in at least half of cases", "It is always bacterial", "Antibiotics are never needed", "It never causes SIADH", "It spares the cerebral cortex"],
+      answer: 0,
+      explain: "At least 50% idiopathic; viruses include mumps, measles, rabies, herpes, EBV. Start antibiotics until meningitis is excluded (p.280)." },
+  ]
+}]);
+
+</script>
+<script>
 // Paediatrics · Single-best-option MCQ · Neonatal jaundice. The deck covers cholestasis p.81-85 and neonatal haemolysis p.188-190;
 // everything else is standard teaching ("Standard teaching" shows as "outside the slide").
 window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
@@ -5534,6 +5817,10 @@ window.PAGE_MAP["pa-pics-fs"] = [{"pg": "p.268", "out": []}, {"pg": "p.270", "ou
 // Congenital heart disease & heart failure
 window.PAGE_MAP["pa-tf-chd"] = [{"pg": "p.6", "out": []}, {"pg": "p.6-7", "out": []}, {"pg": "p.8-9", "out": []}, {"pg": "p.10", "out": []}, {"pg": "p.11", "out": []}, {"pg": "p.11", "out": [4]}, {"pg": "p.11-12", "out": [4]}, {"pg": "p.12-13", "out": []}, {"pg": "", "out": []}, {"pg": "p.24-27", "out": []}, {"pg": "p.15", "out": [1, 2, 3, 4]}, {"pg": "", "out": []}];
 window.PAGE_MAP["pa-pics-chd"] = [{"pg": "p.8, 11", "out": []}, {"pg": "p.10-11", "out": [2]}, {"pg": "p.10-11, 23", "out": [4]}, {"pg": "p.6, 10-11", "out": [2, 3]}, {"pg": "p.6, 10, 17", "out": [2, 4]}, {"pg": "p.6", "out": [1, 2, 3, 4]}, {"pg": "p.6, 8-9", "out": [0, 1, 2]}];
+
+// Meningitis & encephalitis
+window.PAGE_MAP["pa-tf-men"] = [{"pg": "p.276, 278", "out": []}, {"pg": "p.276-277", "out": []}, {"pg": "p.277, 279", "out": [3]}, {"pg": "p.277", "out": []}, {"pg": "p.277-278", "out": []}, {"pg": "p.278", "out": []}, {"pg": "p.278", "out": []}, {"pg": "p.279", "out": []}, {"pg": "p.279-280", "out": []}, {"pg": "p.277-279", "out": [0, 3]}];
+window.PAGE_MAP["pa-pics-men"] = [{"pg": "p.277-278", "out": [0]}, {"pg": "p.277, 279", "out": [1]}, {"pg": "p.277", "out": [2]}, {"pg": "p.276-278", "out": []}, {"pg": "p.276, 278", "out": []}, {"pg": "p.278", "out": [2, 3, 4]}];
 
 </script>
 <script>
@@ -6130,6 +6417,100 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
         ["Polio can be cured by antibiotics.", false, "No specific treatment; prevention by vaccine."],
       ]),
       explain: "Polio emergence in an IDP camp was a past social-paediatrics essay (cohort-n.1): discuss the medical, psychosocial and economic effects, and the immunisation response." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · Picture test (picture + 5 True/False, negative marking −½) · Meningitis.
+// Real images from Wikimedia Commons, linked live, credit in each caption. The Kernig photograph and the lumbar-puncture photograph are old
+// public-domain historical images; the Haemophilus Gram stain is from a sputum sample (used for the organism's morphology). Statements checked
+// against Paediatrics CS edited.pdf p.276-280.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+const F=n=>"https://commons.wikimedia.org/wiki/Special:FilePath/"+n+"?width=720";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-pics-men",
+  subject: "Paediatrics",
+  group: "Meningitis & encephalitis",
+  type: "pics",
+  title: "Paediatrics Picture test · Meningitis (6 pictures)",
+  negativeMarking: true,
+  secPerQ: 90,
+  questions: [
+    { topic: "Picture: CSF Gram stain", src: "p.277", img: F("Neisseria meningitidis CSF Gram 1000.jpg"),
+      credit: "Gram stain of spinal fluid at 1000x: Neisseria meningitidis grew from this specimen, with gram-negative diplococci among neutrophils. Wikimedia Commons, CC BY-SA 4.0, Microman12345.",
+      stem: "A Gram stain of CSF from a child with fever, purpuric rash and neck stiffness.",
+      items: I([
+        ["The organism is a gram-negative diplococcus, Neisseria meningitidis.", true, "Caption; standard teaching."],
+        ["The CSF would show a marked neutrophil pleocytosis, high protein and a low glucose ratio.", true, "Slide p.277."],
+        ["IV third-generation cephalosporin is the treatment, usually for 5-7 days for this organism.", true, "Slide p.278."],
+        ["Oral rifampicin is given to household and close contacts.", true, "Slide p.278."],
+        ["The commonest cause of meningitis in neonates is Neisseria meningitidis.", false, "Neonates: Group B streptococcus, E. coli and other gram-negatives, Listeria (p.277-278)."],
+      ]),
+      explain: "Meningococcal vaccine is given during epidemics in the 'meningitis belt' of northern Nigeria (p.278). A non-blanching purpuric rash with shock suggests meningococcaemia (Waterhouse-Friderichsen syndrome): urgent antibiotics and fluids." },
+
+    { topic: "Picture: Kernig's sign", src: "p.277", img: F("Kernig's sign cerebrospinal meningitis.jpg"),
+      credit: "Kernig's sign in a case of cerebrospinal meningitis, with hamstring contracture and head retraction (historical plate). Wikimedia Commons, public domain, R. G. Wiener, Harlem Hospital.",
+      stem: "A child is examined supine; the hip is flexed to 90° and the examiner tries to extend the knee.",
+      items: I([
+        ["This is Kernig's sign, a sign of meningeal irritation.", true, "Slide p.277."],
+        ["Brudzinski's sign is flexion of the hips and knees when the neck is flexed passively.", true, "Standard teaching."],
+        ["Meningeal signs are reliably present in infants with meningitis.", false, "Unusual in infants and young children (p.277)."],
+        ["Neck stiffness, photophobia and headache are accompanying features.", true, "Slide p.277."],
+        ["Retraction of the head (opisthotonus) in the comatose child is a late sign.", true, "Slide p.279 (stage III opisthotonus in TBM); standard teaching."],
+      ]),
+      explain: "In infants look for a bulging anterior fontanelle, high-pitched cry, irritability, poor feeding, convulsions (p.277). A high index of suspicion is needed because signs are subtle." },
+
+    { topic: "Picture: lumbar puncture", src: "p.277", img: F("Meningitis - Lumbar puncture.jpg"),
+      credit: "Lumbar puncture being performed, patient lying on his side with the back bowed (historical photograph from the meningitis era). Wikimedia Commons, public domain.",
+      stem: "A child is positioned on his side with the back flexed for a procedure.",
+      items: I([
+        ["The procedure is a lumbar puncture, which is mandatory in the diagnosis of meningitis.", true, "Slide p.277."],
+        ["Raised ICP, thrombocytopenia, coagulopathy, skin infection at the site and imminent cardiorespiratory collapse are contra-indications.", true, "Slide p.277."],
+        ["The needle is inserted at the L3-4 or L4-5 level.", true, "Standard teaching."],
+        ["The CSF glucose is compared with a simultaneous blood glucose.", true, "Slide p.277."],
+        ["Headache and vomiting are not complications.", false, "Post-LP headache and vomiting occur (past paper paed.1254)."],
+      ]),
+      explain: "Past-paper station: 'List contra-indications, complications and the CSF findings in pyogenic meningitis.' Do a CT or clinical assessment of ICP first if there is coma, focal signs or papilloedema." },
+
+    { topic: "Picture: Streptococcus pneumoniae", src: "p.276-278", img: F("Streptococcus pneumoniae.jpg"),
+      credit: "Scanning electron micrograph of Streptococcus pneumoniae. Wikimedia Commons, public domain, CDC / Janice Carr.",
+      stem: "An organism that is a leading cause of childhood bacterial meningitis.",
+      items: I([
+        ["Streptococcus pneumoniae is an encapsulated organism and a leading cause of meningitis in children.", true, "Slide p.276."],
+        ["Children with sickle cell disease and nephrotic syndrome are particularly susceptible.", true, "Slide p.276."],
+        ["Antibiotic treatment is for 10-14 days.", true, "Slide p.278."],
+        ["The conjugate pneumococcal vaccine prevents it.", true, "Slide p.278."],
+        ["Rifampicin prophylaxis for close contacts is recommended.", false, "Only for H. influenzae and meningococcus (p.278)."],
+      ]),
+      explain: "Pneumococcal meningitis has the worst outcome among the common causes: deafness, hemiplegia, hydrocephalus. Dexamethasone is controversial (p.278)." },
+
+    { topic: "Picture: Haemophilus influenzae", src: "p.276, 278", img: F("Haemophilus influenzae Gram.JPG"),
+      credit: "Gram-negative coccobacilli of Haemophilus influenzae in a sputum sample. Wikimedia Commons, CC BY-SA 4.0, Bobjgalindo.",
+      stem: "Small gram-negative coccobacilli on a Gram stain.",
+      items: I([
+        ["Haemophilus influenzae type b was the leading pathogen in the Ibadan series of childhood meningitis.", true, "Slide p.278."],
+        ["The conjugate Hib vaccine has sharply reduced the incidence.", true, "Slide p.276, 278."],
+        ["Treatment is for 7-10 days with IV ceftriaxone or cefotaxime.", true, "Slide p.278."],
+        ["Close contacts receive oral rifampicin prophylaxis.", true, "Slide p.278."],
+        ["It is the commonest cause of neonatal meningitis.", false, "Neonatal meningitis is caused mainly by gram-negative enteric bacilli and Group B streptococcus (p.277-278)."],
+      ]),
+      explain: "The slide's Ibadan data: 80.4% of cases under 5 years, case fatality 26.8%, neurodisability 66%; hearing impairment 25%, hydrocephalus 26.7% (p.278)." },
+
+    { topic: "Picture: hydrocephalus", src: "p.278", img: F("Severe Case of Hydrocephalus.jpg"),
+      credit: "A neonate with severe hydrocephalus and an abnormally enlarged head with visible scalp veins. Wikimedia Commons, CC BY-SA 4.0, Nada.FA.",
+      stem: "An infant with a rapidly enlarging head, a tense bulging fontanelle and sunsetting eyes.",
+      items: I([
+        ["Meningitis is a recognised cause of post-infectious hydrocephalus.", true, "Slide p.278 (hydrocephalus as a complication)."],
+        ["Hydrocephalus occurred in about 27% in the Ibadan series of meningitis.", true, "Slide p.278 (26.7%)."],
+        ["The anterior fontanelle is sunken.", false, "Tense and bulging (past paper paed.169: sunken is false)."],
+        ["Congenital rubella and spina bifida (with Arnold-Chiari malformation) are other causes.", true, "Past paper paed.169; standard teaching."],
+        ["Management includes a ventriculoperitoneal shunt after the infection is controlled.", true, "Standard teaching."],
+      ]),
+      explain: "Signs of raised ICP in infants: bulging fontanelle, splayed sutures, scalp vein distension, sunsetting eyes, irritability, vomiting. Measure the occipitofrontal circumference at every visit." },
   ]
 }]);
 })();
@@ -8380,6 +8761,137 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · True/False (5 statements per stem, negative marking −½) · Meningitis and other intracranial infections.
+// Source: Paediatrics CS edited.pdf p.276-281 (Oyinlade: intracranial infections: pyogenic meningitis p.276-278, tuberculous CNS disease p.279-280,
+// encephalitis p.280). Past papers: 2k17-2k2.522, paed.738 (pyogenic meningitis); 2018.59 and 66 (features); paed.156 (CSF), 167, 173, 179 (CSF stations);
+// paed.720 and 816 (TB meningitis); paed.811 and 842 (commonest cause); paed.832 (1-month-old); paed.1254 and 2k17-2k2.315 (lumbar puncture).
+// Past-paper keys are unverified. The slide's dexamethasone timing and its "Ibadan" figures are quoted as given.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-men",
+  subject: "Paediatrics",
+  group: "Meningitis & encephalitis",
+  type: "tf",
+  title: "Paediatrics T/F · Meningitis and other intracranial infections (10 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "Epidemiology and risk factors", src: "p.276, 278",
+      stem: "Bacterial (pyogenic) meningitis in childhood:",
+      items: I([
+        ["It is the commonest form of meningitis, with peak incidence in infancy and about 95% of cases under 5 years.", true, "Slide p.276."],
+        ["Children with sickle cell disease, nephrotic syndrome, asplenia or splenectomy are at higher risk.", true, "Slide p.276: poor splenic function gives susceptibility to encapsulated organisms."],
+        ["Meningitis is inflammation of the leptomeninges and may be caused by bacteria, viruses, fungi, protozoa or chemicals.", true, "Slide p.276."],
+        ["In an Ibadan series, Haemophilus influenzae was the leading pathogen, with a case fatality of about 27% and neurodisability in about two-thirds of survivors.", true, "Slide p.278 (Lagunju 2008: 26.8% fatality, 66% neurodisability)."],
+        ["Routine vaccination has made meningitis more common in the developed world.", false, "Incidence has declined with Hib and pneumococcal vaccines (p.276)."],
+      ]),
+      explain: "Commonest causes after the neonatal period: S. pneumoniae, H. influenzae type b and N. meningitidis. Neonates: Group B streptococcus, E. coli and other gram-negative bacilli, Listeria (p.278). Past papers (paed.811, 842) asked 'most frequent cause'; the answer in a Hib-vaccinated population is the pneumococcus." },
+
+    { topic: "Clinical features", src: "p.276-277",
+      stem: "Clinical features of meningitis in children:",
+      items: I([
+        ["Non-specific features include fever, lethargy, vomiting, irritability, refusal of feeds, cough and catarrh.", true, "Slide p.276-277."],
+        ["Convulsions occur in about 60-70% of cases.", true, "Slide p.277."],
+        ["A bulging anterior fontanelle, neck pain, photophobia, headache and coma are specific features.", true, "Slide p.277."],
+        ["Signs of meningeal irritation (neck stiffness, Kernig's and Brudzinski's signs) are unusual in infants and young children, so diagnosis needs a high index of suspicion.", true, "Slide p.277."],
+        ["Diarrhoea is a classical feature of meningitis.", false, "It is the usual 'except' option in past papers 2018.59 and 66 (headache, irritability, convulsion and posturing are features)."],
+      ]),
+      explain: "In a 1-month-old (past paper paed.832) the classical features are excessive crying, vomiting and convulsions, not neck rigidity or a positive Kernig sign. Features of raised ICP (p.277): abnormal pupils, vomiting, papilloedema, hypertension, posturing, bradycardia, abnormal respiration." },
+
+    { topic: "Lumbar puncture", src: "p.277; "+S,
+      stem: "Lumbar puncture in suspected meningitis:",
+      items: I([
+        ["It is mandatory for the diagnosis.", true, "Slide p.277."],
+        ["Contra-indications include raised intracranial pressure, thrombocytopenia, coagulopathy, infection of the overlying skin and imminent cardiorespiratory collapse.", true, "Slide p.277."],
+        ["In a child with coma, anisocoria and decorticate posturing an LP should be done at once.", false, "Signs of raised ICP: stabilise, treat empirically and delay the LP (slide case scenario p.279; past paper 2017.15)."],
+        ["Complications include headache, vomiting, introduction of infection and, rarely, coning or nerve root injury.", true, "Past paper paed.1254; standard teaching."],
+        ["Blood glucose should be measured at the same time so the CSF:blood glucose ratio can be calculated.", true, "Slide p.277 (random blood sugar; CSF:BS ratio)."],
+      ]),
+      explain: "Other tests (p.277): PCV, FBC, random blood sugar, blood culture, trans-fontanelle ultrasound. LP is done in the lateral position at L3-4 or L4-5; send for cell count, protein, glucose, Gram stain, culture and, if TB suspected, ZN stain (standard teaching)." },
+
+    { topic: "CSF findings", src: "p.277",
+      stem: "Typical CSF findings:",
+      items: I([
+        ["Pyogenic meningitis: turbid or purulent CSF, markedly raised neutrophil count, high protein and low CSF:blood glucose ratio (below half).", true, "Slide p.277."],
+        ["Viral meningitis: clear CSF, lymphocytic pleocytosis, mildly raised protein, normal glucose ratio and negative Gram stain.", true, "Slide p.277."],
+        ["Tuberculous meningitis: clear or xanthochromic CSF, lymphocytes, high protein and a low glucose.", true, "Slide p.277, 279."],
+        ["Normal CSF has fewer than 5 cells/mm³, protein 10-40 mg/dl and a CSF:blood glucose ratio of about one-half to two-thirds.", true, "Slide p.277."],
+        ["A CSF with glucose 20 mg/dl (blood glucose 80 mg/dl), WBC 10,000/mm³ and 60% neutrophils suggests viral meningitis.", false, "Ratio 0.25 with a neutrophilic pleocytosis = pyogenic or partially treated meningitis (past paper paed.156)."],
+      ]),
+      explain: "Partially treated meningitis: WBC increased with a mixed picture, protein raised, glucose lowered, Gram stain often negative (p.277). In the newborn, up to about 20-30 cells/mm³ and protein up to 150 mg/dl can be normal (past paper paed.165)." },
+
+    { topic: "Antibiotic treatment", src: "p.277-278",
+      stem: "Treatment of bacterial meningitis:",
+      items: I([
+        ["Parenteral (IV) antibiotics are the treatment of choice and the drugs must be given intravenously.", true, "Slide p.277."],
+        ["For neonates, a third-generation cephalosporin (ceftriaxone, cefotaxime or ceftazidime) is combined with an aminoglycoside, and Listeria is treated with ampicillin.", true, "Slide p.277-278."],
+        ["For infants of 3 months or older, a third-generation cephalosporin is preferred; if not available IV crystalline penicillin 0.4 MU/kg/day plus chloramphenicol 100 mg/kg/day.", true, "Slide p.278."],
+        ["Intramuscular penicillin and streptomycin is the drug of choice pending the culture result.", false, "A past-paper option (paed.721); drugs must be given IV (p.277)."],
+        ["Antibiotics are stopped after 3 days of treatment.", false, "Duration depends on the organism: N. meningitidis 5-7 days, H. influenzae 7-10, S. pneumoniae 10-14, gram-negative bacilli and neonatal meningitis 21 days, with at least 5 afebrile days (p.278)."],
+      ]),
+      explain: "Steroids are controversial: dexamethasone 0.15 mg/kg 6-hourly for 48 hours, the first dose given before (or with) the first dose of antibiotic (p.278). Supportive care: ABC, anticonvulsants, NG feeding, mannitol and hyperventilation for raised ICP, strict input-output (p.278)." },
+
+    { topic: "Complications", src: "p.278",
+      stem: "Complications of bacterial meningitis:",
+      items: I([
+        ["Deafness is the commonest complication.", true, "Slide p.278."],
+        ["Subdural effusion is usually seen in infants.", true, "Slide p.278."],
+        ["Hydrocephalus, cerebral abscess, SIADH, cranial nerve palsies, focal deficits and sinus thrombosis are early complications.", true, "Slide p.278."],
+        ["Epilepsy, mental retardation, speech defects, learning disability, cerebral palsy and ataxia are late complications.", true, "Slide p.278. A past paper listed 'learning disability is an early complication': false; 'hearing loss is rare': false."],
+        ["Learning disability is an early complication and hearing loss is rare.", false, "Learning disability is LATE and hearing loss is common (p.278)."],
+      ]),
+      explain: "Ibadan series (p.278): cranial nerve palsies 33%, visual impairment 32%, spastic hemiplegia 29%, hydrocephalus 27%, hearing impairment 25%. Always screen hearing before discharge or soon after." },
+
+    { topic: "Prevention and differential", src: "p.278",
+      stem: "Prevention and differential diagnosis of meningitis:",
+      items: I([
+        ["Hib vaccine, conjugate pneumococcal vaccine and meningococcal vaccine (during epidemics) prevent meningitis.", true, "Slide p.278."],
+        ["Oral rifampicin is given to household and close contacts of patients with H. influenzae or meningococcal meningitis.", true, "Slide p.278."],
+        ["Rifampicin chemoprophylaxis is given to contacts of every child with pneumococcal meningitis.", false, "Only for Hib and meningococcal disease (p.278)."],
+        ["Differential diagnosis includes encephalitis, febrile convulsion, cerebral malaria, Reye syndrome, cerebral abscess, posterior fossa tumour and hypoglycaemia.", true, "Slide p.278."],
+        ["A febrile child in coma with neck stiffness is most likely to have a simple febrile seizure.", false, "Persisting coma excludes a febrile seizure (past paper 2017.61); think meningitis, encephalitis, cerebral malaria."],
+      ]),
+      explain: "Cerebral malaria in Ibadan (past papers paed.689 and others): coma with fever, convulsions, positive parasite; treat with IV artesunate. Meningitis and malaria may coexist: do both tests and treat both." },
+
+    { topic: "Tuberculous meningitis", src: "p.279",
+      stem: "Tuberculous meningitis (TBM):",
+      items: I([
+        ["It occurs 2-6 months after the primary infection, commonly in children from 6 months to 4 years, by haematogenous spread.", true, "Slide p.279."],
+        ["Stage I has non-specific symptoms; stage II has lethargy, nuchal rigidity, seizures, Kernig's sign and cranial nerve palsies; stage III has coma, hemiplegia or paraplegia, decerebrate rigidity and opisthotonus.", true, "Slide p.279."],
+        ["The CSF shows a lymphocytic pleocytosis (10-500 cells), protein often above 1 g/dl and glucose below 40 mg/dl; ZN staining may show AFB.", true, "Slide p.279."],
+        ["Choroidal tubercles and papilloedema may be seen on fundoscopy.", true, "Slide p.279. Past paper paed.720: choroidal tubercles true."],
+        ["TBM is a benign disease with a CSF polymorph pleocytosis.", false, "Mortality is high in stage III, and the CSF is lymphocytic (p.279); both options were wrong in past papers 720 and 816."],
+      ]),
+      explain: "Complications of stage III survivors: blindness, deafness, paraplegia, mental retardation, speech disturbance, cranial nerve palsies, hydrocephalus (p.279). Treatment: anti-TB drugs with corticosteroids (steroids are useful: past paper paed.720); investigations: Mantoux, CXR, CSF (p.279)." },
+
+    { topic: "Tuberculoma and encephalitis", src: "p.279-280",
+      stem: "Other intracranial infections:",
+      items: I([
+        ["A tuberculoma presents as an intracranial space-occupying lesion, usually infratentorial, single or multiple.", true, "Slide p.279."],
+        ["CT shows discrete masses with surrounding oedema.", true, "Slide p.280."],
+        ["Encephalitis is inflammation of the brain parenchyma; the cause is idiopathic in at least half of cases, otherwise viral (mumps, measles, rabies, herpes, EBV).", true, "Slide p.280."],
+        ["In suspected encephalitis antibiotics are withheld until meningitis is excluded.", false, "Start antibiotics until meningitis is successfully excluded (p.280)."],
+        ["Early complications of encephalitis include SIADH, cortical blindness, aspiration pneumonia, respiratory failure and DIC.", true, "Slide p.280."],
+      ]),
+      explain: "Encephalitis treatment (p.280): specific antivirals where available (aciclovir for herpes simplex, outside the slide), mannitol for cerebral oedema, good nursing care. Late sequelae: epilepsy, mental retardation, cerebral palsy, motor deficit, behavioural problems." },
+
+    { topic: "Case scenario: comatose febrile child", src: "p.279",
+      stem: "A 3-year-old boy with 2 days of fever and 6 hours of unconsciousness is febrile, comatose and decorticate:",
+      items: I([
+        ["Immediate priorities are airway, breathing, circulation, blood sugar and IV access.", true, "Standard teaching; slide p.278 supportive therapy."],
+        ["The differential includes bacterial meningitis, cerebral malaria, encephalitis and hypoglycaemia.", true, "Slide p.278."],
+        ["A lumbar puncture should be done immediately for a definitive diagnosis.", false, "Posturing and coma suggest raised ICP, a contra-indication (p.277)."],
+        ["Empirical IV antibiotics and antimalarial treatment may be started before the diagnosis is confirmed.", true, "Standard teaching: do not delay treatment."],
+        ["Mannitol or hyperventilation is used to control raised ICP.", true, "Slide p.278."],
+      ]),
+      explain: "This is the case scenario in the slide (p.279): questions asked are the history (immunisation, ear discharge, sickle cell, malaria), examination (rash, fontanelle, fundus, signs of raised ICP), LP or not, management, and complications." },
+  ]
+}]);
+})();
+
+</script>
+<script>
 // Paediatrics · True/False (5 statements per stem, negative marking −½) · Neonatal jaundice.
 // Source: Paediatrics CS edited.pdf has NO lecture on unconjugated neonatal jaundice (physiological jaundice, phototherapy, exchange transfusion,
 // kernicterus). It DOES cover neonatal cholestasis / conjugated hyperbilirubinaemia p.81-85 and neonatal haemolysis/anaemia p.188-190.
@@ -9238,7 +9750,7 @@ banks.forEach(b=>{const m=PM[b.id]; if(m&&b.questions) b.questions.forEach((q,i)
 const GROUPS=["Menstrual disorders & DUB","Amenorrhoea & PCOS","Abortion","Ectopic pregnancy","Antepartum haemorrhage","Hypertension in pregnancy","Labour & the partograph","Family planning","Infertility","Fibroids & endometriosis","Anaemia in pregnancy","Postpartum haemorrhage & oxytocics"];
 const COMING=["Antenatal care & booking","Gynaecological cancers","Genital infections & STIs","Prolapse & fistulae","Instruments & imaging (picture test)"];
 let curGroup=null;
-const PGROUPS=["Paediatric endocrinology","Infectious diseases","Pulmonology","Rheumatic fever & endocarditis","Neonatal jaundice","Nephrotic syndrome & AGN","Acute diarrhoea & dehydration","Sickle cell disease","Febrile seizures & epilepsy","Congenital heart disease & heart failure"];
+const PGROUPS=["Paediatric endocrinology","Infectious diseases","Pulmonology","Rheumatic fever & endocarditis","Neonatal jaundice","Nephrotic syndrome & AGN","Acute diarrhoea & dehydration","Sickle cell disease","Febrile seizures & epilepsy","Congenital heart disease & heart failure","Meningitis & encephalitis"];
 const PCOMING=["Neonatology","Nutrition & malnutrition","Haemato-oncology","Nephrology","Neurology","Gastroenterology"];
 const TYPE_LABEL={cards:"Flashcards",mcq:"Multiple choice",essay:"Essays",fillgap:"Fill in the gap",tf:"True / False (5 stems each, negative marking)",pics:"Picture test (5 True / False per picture)"};
 const TYPE_ORDER=["cards","mcq","tf","pics","fillgap","essay"];
