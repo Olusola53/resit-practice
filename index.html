@@ -2487,6 +2487,49 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Flashcards · Congenital heart disease and heart failure. Source: Paediatrics CS edited.pdf p.6-13, 24-27; extra:true = beyond the slides
+// (acyanotic shunts and heart failure are standard teaching; the deck's heart failure lecture p.28-34 is image-only).
+(function(){
+const C=(topic,src,q,a,connect,extra)=>Object.assign({topic,src,q,a,connect},extra?{extra:true}:{});
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-cards-chd",
+  subject: "Paediatrics",
+  group: "Congenital heart disease & heart failure",
+  type: "cards",
+  title: "Paediatrics Flashcards · Congenital heart disease and heart failure",
+  cards: [
+    C("Causes","p.6","Causes and associations of congenital heart disease.","Unknown (most); intrauterine infection (rubella: PDA, VSD, PS); drugs (thalidomide, cytotoxics, steroids); X-radiation; prematurity (PDA); chromosomal (Down: AVSD, VSD, ASD; Edward: VSD, ASD; Patau: VSD; Turner: coarctation); maternal diabetes (TGA); familial; birth asphyxia and high altitude (PDA).","Under 5 years think CHD; over 5 years think acquired heart disease."),
+    C("Evaluation","p.6","Symptoms suggestive of heart disease in a child.","Cough, breathlessness, failure to thrive, feeding difficulties, recurrent chest infections, cyanosis, excessive sweating, delayed milestones, swelling (pedal, abdominal, facial), palpitations, convulsions, fainting, stroke.","Ask about pregnancy, drugs, rubella, diabetes, family history."),
+    C("Evaluation","p.6-7","Examination of the cardiovascular system.","General: nutrition, dysmorphic features, mucosal colour, clubbing, oedema, temperature. Pulse rate, rhythm, volume (compare right with left, upper with lower limb). BP with the right cuff (big cuff lowers, small cuff raises). Praecordium: bulge, apex (heaving = LVH), parasternal heave (RVH), thrills. Auscultation: S1 S2, murmurs by timing, intensity, location.","Areas: aortic RUSE, pulmonary LUSE, tricuspid LLSE, mitral apex."),
+    C("Evaluation","p.7-9","Investigations in paediatric cardiology.","Chest X-ray, ECG, echocardiography (M-mode for function, 2D for anatomy, Doppler for pressures, colour for flow direction), arterial blood gas, cardiac catheterisation, plus FBC, electrolytes, blood culture, ASOT, urinalysis, LFT.","Normal CT ratio below 60% under 1 year; below 50% over 5 years."),
+    C("CXR","p.8-9","Chest X-ray shapes and what they suggest.","Boot-shaped: Fallot's tetralogy. Egg-on-side: TGA. Snowman, figure of 8, cottage loaf: TAPVD. Globular: pericardial effusion or EMF. Right-sided aortic arch: Fallot's, pulmonary atresia, truncus. Increased vascular markings: large left-to-right shunt, heart failure. Decreased: Fallot's, pulmonary atresia, severe PS.","Dilatation = volume overload; hypertrophy = pressure overload."),
+    C("Fallot's","p.10","Define tetralogy of Fallot.","Commonest cyanotic CHD worldwide. Four components: RVOT obstruction (infundibular or valvar), right ventricular hypertrophy, VSD, overriding aorta.","Past papers paed.1-9 asked this in 9-12 sittings."),
+    C("Fallot's","p.10","Symptoms and signs of Fallot's tetralogy.","Symptoms: cyanosis, reduced effort tolerance, squatting, failure to thrive, hypercyanotic spells, convulsions, stroke, bleeding diathesis. Signs: small for age, cyanosis, polycythaemia, clubbing, breathlessness, RV heave, systolic thrill LSE, single S2, ESM at LUSE (or PSM at LLSE). Heart failure is rare.","Single S2, no thrill from the VSD because the pressures equalise."),
+    C("Fallot's","p.11","Investigations in Fallot's tetralogy.","FBC: PCV raised, platelets low, iron deficiency; electrolytes: bicarbonate low; gases: pH, pO2 low, pCO2 high. CXR: normal-sized boot-shaped heart, reduced vascular markings, ±right arch. ECG: right axis deviation, RVH, ±RAH. Echo: RVH, VSD, pulmonary obstruction. Cath/angiography.","No improvement on the hyperoxia test."),
+    C("Fallot's","p.11","Medical and surgical management of Fallot's tetralogy.","Propranolol 1 mg/kg/dose 2-4 times a day; treat iron deficiency; plasma exchange for PCV above 60% (not more than 20-25% of blood volume at a time); palliative systemic-to-pulmonary shunt (classical or modified Blalock-Taussig); definitive repair.","Success of shunt: less cyanosis, shunt murmur, fewer symptoms, PCV, gases, vascular markings."),
+    C("Fallot's","p.11","Treatment of a hypercyanotic spell.","Knee-chest position, oxygen, IM or IV propranolol 0.1 mg/kg/dose or IM/IV morphine 0.1 mg/kg/dose, IV sodium bicarbonate 1 mEq/kg/dose; also calm the child, give fluid.","Past papers 2000.40, 2k17-2k2.306, 2017.148."),
+    C("Fallot's","p.11-12","Complications of Fallot's tetralogy.","Chronic hypoxia with growth retardation; hypercyanotic spells; polycythaemia, bleeding diathesis, iron-deficiency anaemia; stroke; cerebral abscess; infective endocarditis.","Fever after dental extraction in a Fallot child = endocarditis."),
+    C("TGA","p.12","Features and treatment of transposition of the great arteries.","AV concordance with VA discordance; needs ASD, VSD or PDA. Cyanosis from birth, breathlessness, cough, chest infections, failure to thrive; loud single S2, ±VSD murmur, heart failure. CXR egg-on-side, cardiomegaly, increased markings; ECG RVH, RAH, RAD. Rashkind septostomy; arterial switch (also Mustard, Blalock-Hanlon).","Past papers 2k17-2k2.370, 569: snowman = false."),
+    C("TA","p.13","Tricuspid atresia.","Less common than Fallot's or TGA; cyanosis or heart failure depending on ventriculo-arterial connection; ECG RAH, superior axis, LVH; echo: absent RA-RV connection, ASD, LV main chamber, rudimentary RV; Fontan operation.","Superior axis is the ECG clue."),
+    C("CCHD","p.13","Differential diagnosis of cyanotic congenital heart disease.","Fallot's tetralogy, TGA, tricuspid atresia, other univentricular hearts, pulmonary atresia with VSD, Eisenmenger syndrome.","Hyperoxia test fails to correct cyanosis.",false),
+    C("Obstructive","p.24-25","Pulmonary stenosis: features and management.","5-8% of CHD; 90% valvar; Noonan, congenital rubella. Mild: asymptomatic; severe: exertional dyspnoea, right ventricular failure; critical neonatal PS: cyanosis. Ejection click, wide split S2 with soft P2, ESM grade 2-5/6 and thrill at ULSB, RV heave; ECG RAD and RVH; CXR post-stenotic dilatation, reduced markings. Balloon valvuloplasty if gradient above 50 mmHg; PGE1 for critical PS; surgery if failed; endocarditis prophylaxis.","Past paper paed.29: pink mucosae and normal nutrition in isolated PS."),
+    C("Obstructive","p.25","Aortic stenosis: features and management.","5% of CHD, M:F 4:1; bicuspid valve commonest; supravalvar with Williams syndrome. Mild: asymptomatic; severe: exertional chest pain, syncope; critical neonatal AS: heart failure with weak pulses. Ejection click, thrill at URSB and carotids, harsh ESM at 2RICS radiating to the neck; LVH on ECG. Balloon valvuloplasty, valvotomy or replacement; exercise restriction; endocarditis prophylaxis.","Critical AS in infants is a surgical emergency."),
+    C("Obstructive","p.26-27","Coarctation of the aorta.","8-10% of CHD, M:F 2:1; 85% have bicuspid aortic valve; Turner syndrome. Neonates: heart failure and renal failure in weeks 2-6, weak pulses, shock; children: upper limb hypertension, headaches, lower limb hypotension, claudication, radiofemoral delay, 4-limb BP difference. Resection with end-to-end anastomosis, subclavian flap or patch; PGE1 in neonates; check re-coarctation; endocarditis prophylaxis.","ECG RVH in infants, LVH in older children."),
+    C("VSD",S,"Ventricular septal defect: clinical picture.","Commonest acyanotic CHD. Pansystolic murmur at the left lower sternal edge (louder in small defects), thrill; large defect: heart failure at 4-8 weeks, failure to thrive, recurrent chest infections, hyperactive praecordium, apical mid-diastolic murmur, loud P2. CXR cardiomegaly and plethora; ECG biventricular hypertrophy. Complications: heart failure, endocarditis, Eisenmenger.","Past papers 2k23.164, 189, 207-208 (grade 4 pansystolic murmur, thrill, VSD).",true),
+    C("PDA",S,"Patent ductus arteriosus: clinical picture.","Preterm babies, rubella, high altitude, asphyxia. Continuous machinery murmur at the left infraclavicular area, bounding pulses, wide pulse pressure with low diastolic pressure, heart failure if large, recurrent chest infections. Indomethacin or ibuprofen in preterm; device or surgery otherwise.","Past papers paed.2, 10, 13; duct-dependent lesions need PGE1.",true),
+    C("ASD",S,"Atrial septal defect.","Often asymptomatic in childhood; ejection systolic murmur at ULSE with a wide fixed split S2; rarely causes endocarditis; recurrent chest infections in large defects; ECG RBBB with right axis (ostium secundum); device or surgical closure electively.","Low risk of endocarditis (see rheumatic fever and endocarditis set).",true),
+    C("Eisenmenger",S,"What is Eisenmenger syndrome?","Long-standing large left-to-right shunt (VSD, PDA, AVSD) causes pulmonary hypertension and reversal of the shunt to right-to-left with cyanosis, clubbing, polycythaemia. Irreversible; closure contraindicated.","On the slide's differential of cyanotic CHD (p.13).",true),
+    C("Heart failure",S,"Causes of heart failure in children in Nigeria.","Neonates: preterm PDA, left-sided obstructive lesions, asphyxia, sepsis, arrhythmia. Infants: large left-to-right shunts (VSD, PDA, AVSD), severe anaemia, myocarditis, pneumonia. Older children: rheumatic heart disease, endomyocardial fibrosis, cardiomyopathy, sickle cell anaemia, malnutrition, tuberculous pericarditis, glomerulonephritis.","Past paper paed.28: RHD, EMF, myocarditis, severe anaemia are causes.",true),
+    C("Heart failure","p.15","Clinical features of heart failure.","Breathlessness, cough, easy fatigability, PND, palpitations, swelling; tachycardia, tachypnoea, active praecordium, raised JVP, gallop, hepatomegaly, crepitations. In infants: sweating and pauses during feeds, failure to thrive, tender hepatomegaly; oedema is late.","Past papers paed.8, 11 and 2k17-2k2.372."),
+    C("Heart failure",S,"Management of congestive cardiac failure in children.","Oxygen, semi-upright position, salt-restricted feeds, small frequent high-calorie feeds; furosemide 1-2 mg/kg/dose, spironolactone; ACE inhibitor (captopril); digoxin; treat cause and precipitants (infection, anaemia, arrhythmia); correct the defect surgically.","Doses vary by unit.",true),
+    C("IE prophylaxis","p.23","Which cardiac patients need endocarditis prophylaxis?","Prosthetic valves, previous IE, unrepaired congenital heart disease (cyanotic lesions), cardiac transplant recipients; also advised in PS, AS and coarctation (p.25, 27).","Link to the rheumatic fever and endocarditis set."),
+  ]
+}]);
+})();
+
+</script>
+<script>
 // Paediatrics · Flashcards · Acute diarrhoea and dehydration. Source: Paediatrics CS edited.pdf p.70-73; extra:true = outside the slide.
 (function(){
 const C=(topic,src,q,a,connect,extra)=>Object.assign({topic,src,q,a,connect},extra?{extra:true}:{});
@@ -2767,6 +2810,173 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
     C("Variants","p.96","Other haemoglobinopathies.","Hb SC: less severe than SS but proliferative sickle retinopathy more common; S-beta-zero thal resembles SS; S-beta-plus mild; S-HPFH very mild.","Paed.508: Hb S+C is associated with SCA in Nigerian children."),
     C("Prevention","p.96","Prevention of sickle cell disease.","Education, genotype testing and genetic counselling (before marriage), prenatal diagnosis, newborn screening where available.","Social paediatrics angle."),
     C("Prognosis","p.96","Life expectancy.","About 50% survive beyond the fifth decade in the United States; no definite figures in Nigeria.","Early deaths are from infection, sequestration and stroke."),
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · Essays · Congenital heart disease and heart failure. Two long essays (leading to a diagnosis; social paediatrics) and four short.
+// Source: Paediatrics CS edited.pdf p.6-13, 24-27; x:true = beyond the slides (acyanotic shunts and heart failure management are standard teaching;
+// the deck's heart failure lecture p.28-34 is image-only). Past papers: paed.1-14, 2000.40, 2k17-2k2.306, 2017.148, 2015.66, 2k23.164, 2021.5.
+(function(){
+const P=(t,x)=>x?{t,x:true}:{t};
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-essay-chd",
+  subject: "Paediatrics",
+  group: "Congenital heart disease & heart failure",
+  type: "essay",
+  title: "Paediatrics Essays · Congenital heart disease and heart failure (2 long, 4 short)",
+  essays: [
+    {
+      kind: "Long essay (20 marks) · leading to a diagnosis", marks: 20, topic: "Tetralogy of Fallot", src: "p.6-12; past papers paed.1-9, 2000.40, 2015.66",
+      prompt: "A 3-year-old boy is brought with bluish discolouration of the lips since infancy. He squats after walking short distances. Yesterday he became deeply blue and limp while crying. He is small for age with clubbing, a single second heart sound and an ejection systolic murmur at the left upper sternal edge. Discuss your diagnosis and management.",
+      tip: "Name tetralogy of Fallot with a hypercyanotic spell, list the four components, justify with the signs, then give the spell management (knee-chest, oxygen, propranolol or morphine, bicarbonate), investigations, long-term plan and complications.",
+      sections: [
+        { h: "Diagnosis and reasoning", pts: [
+          P("Tetralogy of Fallot, the commonest cyanotic CHD worldwide, with a hypercyanotic spell (p.10)."),
+          P("Four components: RVOT obstruction, right ventricular hypertrophy, VSD, overriding aorta (p.10)."),
+          P("Supporting: cyanosis, clubbing, squatting, failure to thrive, single S2, ESM at LUSE, RV heave; heart failure is rare (p.10)."),
+        ]},
+        { h: "Differential diagnosis", pts: [
+          P("TGA, tricuspid atresia, pulmonary atresia with VSD, other univentricular hearts, Eisenmenger syndrome (p.13)."),
+          P("Respiratory causes of cyanosis; seizure or stroke if collapse with convulsion.", true),
+        ]},
+        { h: "Investigations", pts: [
+          P("FBC: PCV raised, platelets low, blood film for iron deficiency; electrolytes with bicarbonate; blood gases (p.11)."),
+          P("Chest X-ray: normal-sized boot-shaped heart, reduced vascular markings, ±right arch (p.11)."),
+          P("ECG: right axis deviation, RVH (p.11). Echocardiography confirms the anatomy; catheterisation and angiography before surgery (p.11)."),
+        ]},
+        { h: "Management of the spell", pts: [
+          P("Knee-chest position, oxygen, calm the child (p.11)."),
+          P("IM or IV propranolol 0.1 mg/kg/dose, or IM or IV morphine 0.1 mg/kg/dose (p.11)."),
+          P("IV sodium bicarbonate 1 mEq/kg/dose for acidosis (p.11)."),
+        ]},
+        { h: "Long-term management", pts: [
+          P("Oral propranolol 1 mg/kg/dose 2-4 times a day to prevent spells (p.11)."),
+          P("Treat iron deficiency; plasma exchange if PCV above 60%, removing not more than 20-25% of blood volume at once (p.11)."),
+          P("Palliative Blalock-Taussig shunt and definitive intracardiac repair (p.11)."),
+          P("Endocarditis prophylaxis and dental hygiene (p.23).", false),
+        ]},
+        { h: "Complications and counselling", pts: [
+          P("Chronic hypoxia and growth retardation, polycythaemia, bleeding diathesis, stroke, cerebral abscess, infective endocarditis (p.11-12)."),
+          P("Teach parents to recognise spells, first aid (knee-chest) and when to come to hospital; nutritional support, immunisation.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Long essay (20 marks) · social paediatrics", marks: 20, topic: "Congenital heart disease: burden, care and family impact", src: "p.6-13; Standard teaching",
+      prompt: "Discuss the problems faced by children with congenital heart disease and their families in Nigeria and how these can be reduced.",
+      tip: "Open with the burden and the late presentation, then barriers to care (cost, no surgery, few centres), impact on child and family, then prevention (rubella immunisation, maternal diabetes control, antenatal care) and policy.",
+      sections: [
+        { h: "Burden and late presentation", pts: [
+          P("Congenital heart disease is a common birth defect; many Nigerian children present late with heart failure, cyanosis or complications (p.6, 10-12)."),
+          P("Many cases are never diagnosed or are diagnosed as chest infection or malnutrition; recurrent infections and failure to thrive are the usual presentation (p.6).", false),
+        ]},
+        { h: "Preventable causes", pts: [
+          P("Rubella infection in pregnancy: rubella vaccination of girls and women (p.6)."),
+          P("Maternal diabetes, drugs (thalidomide, cytotoxics, steroids), X-rays and alcohol: antenatal counselling and control (p.6)."),
+          P("Genetic counselling: CHD is commoner among siblings; chromosomal anomalies (Down syndrome) (p.6)."),
+        ]},
+        { h: "Barriers to care", pts: [
+          P("Few centres with echocardiography and cardiac surgery; long waiting lists; surgery abroad is unaffordable.", true),
+          P("Poverty, out-of-pocket payment, transport, loss of income; belief in spiritual causes; delay in seeking care.", true),
+          P("Shortage of trained staff and equipment; no newborn pulse-oximetry screening.", true),
+        ]},
+        { h: "Impact on the child and family", pts: [
+          P("Chronic illness with poor growth and reduced exercise tolerance (p.10-11)."),
+          P("Complications such as endocarditis, stroke and cerebral abscess (p.12).", false),
+          P("School absence, stigma and isolation; anxiety and guilt in parents; strain on marriage and finances.", true),
+        ]},
+        { h: "Interventions", pts: [
+          P("Early detection: antenatal ultrasound, newborn examination and pulse oximetry, echocardiography for every murmur with symptoms (p.7-9).", true),
+          P("Health education, dental hygiene and endocarditis prophylaxis (p.23)."),
+          P("Medical stabilisation (heart failure drugs, propranolol, iron) while waiting for surgery (p.11).", false),
+          P("Medical missions and visiting surgical teams, health insurance, regional paediatric cardiac centres, support groups.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Hypercyanotic spell", src: "p.11; past papers 2000.40, 2k17-2k2.306, 2017.148, 2016.48",
+      prompt: "Write short notes on hypercyanotic spells.",
+      tip: "Definition, precipitants, features, then management in the order given, and prevention.",
+      sections: [
+        { h: "Definition and mechanism", pts: [
+          P("Sudden episodes of deep cyanosis, breathlessness, irritability and sometimes loss of consciousness or seizure in children with Fallot's tetralogy (p.10)."),
+          P("Precipitated by crying, feeding, defecation, waking, fever or dehydration; spasm of the infundibulum increases right-to-left shunting.", true),
+        ]},
+        { h: "Management", pts: [
+          P("Knee-chest position and oxygen (p.11)."),
+          P("IM or IV propranolol 0.1 mg/kg/dose or morphine 0.1 mg/kg/dose (p.11)."),
+          P("IV sodium bicarbonate 1 mEq/kg/dose (p.11)."),
+          P("Treat dehydration and anaemia; sedation; consider urgent surgery if spells persist.", true),
+        ]},
+        { h: "Prevention", pts: [
+          P("Oral propranolol 1 mg/kg/dose 2-4 times daily (p.11)."),
+          P("Plasma exchange if PCV above 60%; palliative shunt or early repair (p.11)."),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Heart failure in infants", src: "Standard teaching; p.15; past papers paed.8, paed.11, 2k17-2k2.372",
+      prompt: "Write short notes on the clinical features and management of congestive cardiac failure in infants.",
+      tip: "Causes by age, the infant's clinical features (not the adult ones), investigations, then drugs.",
+      sections: [
+        { h: "Causes", pts: [
+          P("Large left-to-right shunts (VSD, PDA, AVSD), severe anaemia, myocarditis, pneumonia, arrhythmia, obstructive lesions (p.24-27).", true),
+          P("In older children: rheumatic heart disease, endomyocardial fibrosis, cardiomyopathy (p.15).", false),
+        ]},
+        { h: "Clinical features", pts: [
+          P("Tachypnoea, tachycardia, sweating and pauses during feeds, failure to thrive, hepatomegaly, gallop, crepitations; oedema is late (p.15).", false),
+        ]},
+        { h: "Investigations", pts: [
+          P("Chest X-ray (cardiomegaly, plethora), ECG, echocardiography, FBC, electrolytes (p.7-9)."),
+        ]},
+        { h: "Management", pts: [
+          P("Oxygen, upright position, nutrition; furosemide 1-2 mg/kg/dose, ACE inhibitor, digoxin; spironolactone.", true),
+          P("Treat the cause: infection, anaemia, arrhythmia; surgery or PA banding for large VSD; PDA closure.", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Ventricular septal defect", src: "Standard teaching; past papers 2k23.164, 207-208",
+      prompt: "A 9-month-old boy has failure to thrive, recurrent chest infections and a pansystolic murmur at the left lower sternal edge. Write short notes on ventricular septal defect.",
+      tip: "Small versus large defect, the murmur, heart failure, X-ray and ECG, complications, management.",
+      sections: [
+        { h: "Clinical features", pts: [
+          P("Commonest acyanotic CHD; associated with Down syndrome, rubella, trisomy 13 and 18 (p.6)."),
+          P("Small VSD: loud pansystolic murmur with thrill at LLSE, asymptomatic, may close spontaneously.", true),
+          P("Large VSD: heart failure at 4-8 weeks, failure to thrive, chest infections, hyperactive praecordium, apical diastolic rumble, loud P2.", true),
+        ]},
+        { h: "Investigations", pts: [
+          P("CXR: cardiomegaly, increased pulmonary vascular markings (p.8-9). ECG: biventricular hypertrophy. Echo confirms the defect and pressures (p.9)."),
+        ]},
+        { h: "Management and complications", pts: [
+          P("Treat heart failure; nutrition; surgery or PA banding for large defects.", true),
+          P("Complications: infective endocarditis, recurrent pneumonia, Eisenmenger syndrome; endocarditis prophylaxis (p.23).", true),
+        ]},
+      ]
+    },
+    {
+      kind: "Short essay (10 marks)", marks: 10, topic: "Evaluation of an infant with a heart murmur", src: "p.6-9",
+      prompt: "Write short notes on the evaluation of a child suspected to have congenital heart disease.",
+      tip: "History, examination (general, pulses, BP, praecordium, auscultation), investigations in order.",
+      sections: [
+        { h: "History", pts: [
+          P("Cough, breathlessness, failure to thrive, feeding difficulties, recurrent chest infections, cyanosis, sweating, delayed milestones (p.6)."),
+          P("Pregnancy: rubella, diabetes, drugs, X-rays; prematurity, asphyxia; family history (p.6)."),
+        ]},
+        { h: "Examination", pts: [
+          P("Nutrition, dysmorphic features, cyanosis, clubbing, oedema, temperature; pulses and BP in all limbs with the correct cuff (p.6-7)."),
+          P("Praecordium: apex, heaves, thrills; heart sounds and murmurs by timing, intensity and location (p.7)."),
+          P("Look for heart failure: respiratory rate, crepitations, heart rate, liver size (p.8)."),
+        ]},
+        { h: "Investigations", pts: [
+          P("Chest X-ray: situs, heart size and shape, arch, pulmonary artery and vascular markings (p.8-9)."),
+          P("ECG, echocardiography (M-mode, 2D, Doppler, colour), blood gases, cardiac catheterisation; FBC, electrolytes, blood culture, ASOT (p.7-9)."),
+        ]},
+      ]
+    },
   ]
 }]);
 })();
@@ -4662,6 +4872,91 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
 
 </script>
 <script>
+// Paediatrics · Single-best-option MCQ · Congenital heart disease and heart failure. Source: Paediatrics CS edited.pdf p.6-13, 24-27;
+// "Standard teaching" = outside the slide (VSD/PDA/ASD and heart failure are not in the deck text).
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-mcq-chd",
+  subject: "Paediatrics",
+  group: "Congenital heart disease & heart failure",
+  type: "mcq",
+  title: "Paediatrics MCQ · Congenital heart disease and heart failure (14 single best option)",
+  negativeMarking: false,
+  questions: [
+    { topic: "Fallot's tetralogy", src: "p.10",
+      stem: "Which is NOT one of the four components of tetralogy of Fallot?",
+      options: ["Right ventricular outflow tract obstruction", "Right ventricular hypertrophy", "Ventricular septal defect", "Overriding aorta", "Patent ductus arteriosus"],
+      answer: 4,
+      explain: "RVOT obstruction, RVH, VSD, overriding aorta (p.10). A PDA is not part of the tetralogy; Fallot with ASD is the 'pentalogy'." },
+    { topic: "Fallot's tetralogy", src: "p.10",
+      stem: "A cyanotic 2-year-old squats after walking. Examination shows clubbing, a single S2 and an ejection systolic murmur at the left upper sternal edge. The diagnosis is:",
+      options: ["Large VSD", "Tetralogy of Fallot", "Transposition of the great arteries", "Patent ductus arteriosus", "Coarctation of the aorta"],
+      answer: 1,
+      explain: "Squatting, cyanosis, clubbing, single S2 and an ESM at the LUSE are the slide's features (p.10)." },
+    { topic: "CXR", src: "p.8, 11",
+      stem: "A chest X-ray shows a boot-shaped heart with reduced pulmonary vascular markings. The diagnosis is:",
+      options: ["Tetralogy of Fallot", "Transposition of the great arteries", "Large VSD", "Total anomalous pulmonary venous drainage", "Pericardial effusion"],
+      answer: 0,
+      explain: "Boot-shaped (coeur en sabot) = Fallot; egg-on-side = TGA; snowman = TAPVD; globular = effusion (p.8)." },
+    { topic: "Hypercyanotic spell", src: "p.11",
+      stem: "The first step in managing a hypercyanotic spell is:",
+      options: ["Intravenous furosemide", "Knee-chest position and oxygen", "Oral antibiotics", "Intravenous digoxin", "Surgery the same day"],
+      answer: 1,
+      explain: "Knee-chest position, oxygen, then IM or IV propranolol 0.1 mg/kg or morphine 0.1 mg/kg, and IV bicarbonate 1 mEq/kg (p.11). Diuretics and digoxin are wrong." },
+    { topic: "Fallot's: PCV", src: "p.11",
+      stem: "A child with Fallot's tetralogy has a PCV of 68%. The appropriate treatment is:",
+      options: ["Plasma exchange (partial exchange transfusion), not removing more than 20-25% of blood volume at a time", "Iron-free diet only", "Oral propranolol alone", "Blood transfusion", "No treatment"],
+      answer: 0,
+      explain: "Plasma exchange for PCV above 60% (p.11), removing not more than 20-25% of blood volume per occasion; give iron if deficient." },
+    { topic: "Complications", src: "p.12",
+      stem: "A 3-year-old with Fallot's tetralogy develops fever, headache and a seizure. The most likely complication is:",
+      options: ["Cerebral abscess", "Rheumatic fever", "Nephrotic syndrome", "Pulmonary embolism", "Coarctation"],
+      answer: 0,
+      explain: "Cerebral abscess and stroke complicate right-to-left shunts (p.12); a hypercyanotic spell is the other possibility with a seizure while crying or feeding (past paper)." },
+    { topic: "TGA", src: "p.12",
+      stem: "Which statement about transposition of the great arteries is correct?",
+      options: ["It presents with cyanosis from birth and is incompatible with life without a communication", "Cyanosis appears after 2 years", "The X-ray shows a boot shape", "Heart failure never occurs", "It is acyanotic"],
+      answer: 0,
+      explain: "AV concordance with VA discordance; needs ASD, VSD or PDA (p.12); egg-on-side silhouette; Rashkind septostomy, arterial switch." },
+    { topic: "Obstructive", src: "p.24-25",
+      stem: "A newborn with critical pulmonary stenosis is cyanosed and tachypnoeic. Initial drug therapy is:",
+      options: ["Indomethacin", "Prostaglandin E1 infusion to reopen the duct", "Propranolol", "Digoxin alone", "Furosemide alone"],
+      answer: 1,
+      explain: "PGE1 reopens the duct, then balloon valvuloplasty or surgery (p.25). Indomethacin closes the duct and would be harmful." },
+    { topic: "Coarctation", src: "p.26",
+      stem: "Which findings suggest coarctation of the aorta in an infant?",
+      options: ["Upper limb hypertension, weak femoral pulses and radiofemoral delay", "Bounding pulses in all limbs", "Lower limb hypertension", "Central cyanosis with clubbing", "A continuous murmur"],
+      answer: 0,
+      explain: "Four-limb BP, radiofemoral delay, upper limb hypertension and lower limb hypotension (p.26); associated with Turner syndrome and bicuspid aortic valve (p.6, 26)." },
+    { topic: "VSD", src: "Standard teaching",
+      stem: "A 9-month-old has a grade 3/6 pansystolic murmur at the left lower sternal edge, failure to thrive and recurrent chest infections. The diagnosis is:",
+      options: ["Patent ductus arteriosus", "Ventricular septal defect", "Atrial septal defect", "Pulmonary stenosis", "Mitral stenosis"],
+      answer: 1,
+      explain: "Past papers 2k23.164 and 189. PDA gives a continuous murmur; ASD an ejection murmur with a fixed split S2; PS an ejection murmur at the upper left sternal edge." },
+    { topic: "PDA", src: "Standard teaching",
+      stem: "Which is a feature of a large patent ductus arteriosus?",
+      options: ["Cyanosis from birth", "Continuous machinery murmur with a wide pulse pressure and bounding pulses", "Single S2 with a soft ejection murmur", "Absent femoral pulses", "Heart failure never occurs"],
+      answer: 1,
+      explain: "Past papers paed.2, 10 and 13. Heart failure occurs with a large ductus; closure with indomethacin (preterm), device or surgery." },
+    { topic: "Heart failure: infant", src: "Standard teaching",
+      stem: "Which finding is a feature of heart failure in a 6-month-old infant?",
+      options: ["Sweating and pauses during feeding with hepatomegaly and tachypnoea", "Bradycardia", "Wide pulse pressure only", "Weight gain", "Absence of hepatomegaly"],
+      answer: 0,
+      explain: "Tachycardia, tachypnoea, sweating on feeding, feeding difficulty, failure to thrive, hepatomegaly, crepitations; pedal oedema is late (past papers paed.8, 11, 2k17-2k2.372)." },
+    { topic: "Heart failure: treatment", src: "Standard teaching",
+      stem: "Initial drug treatment of congestive cardiac failure in an infant with a large VSD includes:",
+      options: ["Furosemide, with an ACE inhibitor and digoxin where indicated", "Propranolol", "Prostaglandin E1", "Indomethacin", "Steroids"],
+      answer: 0,
+      explain: "Diuretic first; ACE inhibitor lowers afterload; digoxin for contractility; treat precipitants (infection, anaemia); plan surgery or PA banding." },
+    { topic: "Eisenmenger", src: "Standard teaching",
+      stem: "In Eisenmenger syndrome:",
+      options: ["Pulmonary vascular resistance rises until the shunt reverses to right-to-left, causing cyanosis; closing the defect is contraindicated", "Cyanosis is relieved by surgery", "Pulmonary blood flow rises", "The shunt is left to right", "It occurs in Fallot's tetralogy"],
+      answer: 0,
+      explain: "Arises with long-standing large left-to-right shunts (VSD, PDA, AVSD); irreversible; avoid pregnancy; listed in the differential of CCHD (p.13)." },
+  ]
+}]);
+
+</script>
+<script>
 // Paediatrics · Single-best-option MCQ · Acute diarrhoea and dehydration. Source: Paediatrics CS edited.pdf p.70-73; "Standard teaching" = outside the slide.
 window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
   id: "pa-mcq-dd",
@@ -5235,6 +5530,115 @@ window.PAGE_MAP["pa-pics-scd"] = [{"pg": "p.94-96", "out": [2, 4]}, {"pg": "p.94
 // Febrile seizures & epilepsy
 window.PAGE_MAP["pa-tf-fs"] = [{"pg": "p.266", "out": []}, {"pg": "p.266", "out": []}, {"pg": "p.266-267", "out": []}, {"pg": "p.267", "out": []}, {"pg": "p.267", "out": [2, 3, 4]}, {"pg": "", "out": []}, {"pg": "p.267, 271", "out": []}, {"pg": "p.267-269", "out": []}, {"pg": "p.271-275", "out": []}];
 window.PAGE_MAP["pa-pics-fs"] = [{"pg": "p.268", "out": []}, {"pg": "p.270", "out": []}, {"pg": "p.267, 270", "out": [2, 3, 4]}, {"pg": "p.267", "out": [1, 2, 3, 4]}, {"pg": "p.272-274", "out": [3]}];
+
+// Congenital heart disease & heart failure
+window.PAGE_MAP["pa-tf-chd"] = [{"pg": "p.6", "out": []}, {"pg": "p.6-7", "out": []}, {"pg": "p.8-9", "out": []}, {"pg": "p.10", "out": []}, {"pg": "p.11", "out": []}, {"pg": "p.11", "out": [4]}, {"pg": "p.11-12", "out": [4]}, {"pg": "p.12-13", "out": []}, {"pg": "", "out": []}, {"pg": "p.24-27", "out": []}, {"pg": "p.15", "out": [1, 2, 3, 4]}, {"pg": "", "out": []}];
+window.PAGE_MAP["pa-pics-chd"] = [{"pg": "p.8, 11", "out": []}, {"pg": "p.10-11", "out": [2]}, {"pg": "p.10-11, 23", "out": [4]}, {"pg": "p.6, 10-11", "out": [2, 3]}, {"pg": "p.6, 10, 17", "out": [2, 4]}, {"pg": "p.6", "out": [1, 2, 3, 4]}, {"pg": "p.6, 8-9", "out": [0, 1, 2]}];
+
+</script>
+<script>
+// Paediatrics · Picture test (picture + 5 True/False, negative marking −½) · Congenital heart disease.
+// Real images from Wikimedia Commons, linked live, credit in each caption: a chest radiograph, a pathology specimen, anatomical illustrations
+// and clinical photographs. Statements checked against Paediatrics CS edited.pdf p.6-13, 24-27; acyanotic lesions and heart failure are standard teaching.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+const F=n=>"https://commons.wikimedia.org/wiki/Special:FilePath/"+n+"?width=720";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-pics-chd",
+  subject: "Paediatrics",
+  group: "Congenital heart disease & heart failure",
+  type: "pics",
+  title: "Paediatrics Picture test · Congenital heart disease (7 pictures)",
+  negativeMarking: true,
+  secPerQ: 90,
+  questions: [
+    { topic: "Picture: boot-shaped heart (chest X-ray)", src: "p.8, 11", img: F("Boot-shaped heart.jpg"),
+      credit: "Chest radiograph of a patient with tetralogy of Fallot described by the uploader as a boot-shaped heart. Wikimedia Commons, CC BY-SA 4.0, Medicalpal.",
+      stem: "A chest X-ray from a 3-year-old with cyanosis and squatting.",
+      items: I([
+        ["The cardiac silhouette is described as boot-shaped (coeur en sabot), characteristic of Fallot's tetralogy.", true, "Slide p.8 and 11."],
+        ["The heart is normal in size with a rounded, upturned apex and a concave pulmonary artery bay.", true, "Slide p.11."],
+        ["Pulmonary vascular markings are decreased and a right-sided aortic arch may be present.", true, "Slide p.8, 11."],
+        ["Pulmonary vascular markings are increased (plethora).", false, "Decreased in Fallot's (p.11); increased in large left-to-right shunts (p.8-9)."],
+        ["An egg-on-side silhouette is the typical finding in this condition.", false, "Egg-on-side = transposition of the great arteries (p.8)."],
+      ]),
+      explain: "Station: (a) name the sign (b) name the condition (c) four components (RVOT obstruction, RVH, VSD, overriding aorta) (d) two complications (e) treatment of a spell. Past papers: paed.1-9 on TOF were asked in 9-12 sittings." },
+
+    { topic: "Picture: Fallot's heart specimen", src: "p.10", img: F("PLC Fallots tetralogy.jpg"),
+      credit: "Photograph of a Fallot's tetralogy heart specimen, University of Cape Town Pathology Learning Centre. Wikimedia Commons, CC BY-SA 4.0, Jurgennizer.",
+      stem: "A heart specimen from a child with cyanotic congenital heart disease.",
+      items: I([
+        ["Tetralogy of Fallot is the commonest cyanotic congenital heart disease worldwide.", true, "Slide p.10."],
+        ["The four defects are RVOT obstruction (infundibular or valvar), right ventricular hypertrophy, VSD and an overriding aorta.", true, "Slide p.10."],
+        ["The degree of cyanosis depends on the severity of the right ventricular outflow obstruction.", true, "Standard teaching: more obstruction means more right-to-left shunt."],
+        ["Definitive treatment is intracardiac repair; palliation is a Blalock-Taussig shunt.", true, "Slide p.11."],
+        ["Heart failure is the commonest presentation.", false, "Heart failure is rare (past paper paed.7)."],
+      ]),
+      explain: "Palliative shunts: classical or modified Blalock-Taussig (subclavian to pulmonary artery). Success is judged by less cyanosis, a shunt murmur, symptoms, PCV, blood gases and pulmonary vascular markings (p.11)." },
+
+    { topic: "Picture: Fallot illustration", src: "p.10", img: F("Tetralogy of Fallot.png"),
+      credit: "Illustration comparing a normal heart with a heart with tetralogy of Fallot. Wikimedia Commons, public domain, Mariana Ruiz (LadyofHats).",
+      stem: "A diagram of a congenital heart defect with the aorta overriding a ventricular septal defect.",
+      items: I([
+        ["Blood is shunted right to left through the VSD, causing cyanosis.", true, "Slide p.10-11."],
+        ["On auscultation there is a single second heart sound and an ejection systolic murmur from the pulmonary stenosis.", true, "Slide p.10."],
+        ["Hypercyanotic spells are treated with knee-chest position, oxygen, propranolol or morphine and bicarbonate.", true, "Slide p.11."],
+        ["Infective endocarditis prophylaxis is not needed in unrepaired cyanotic lesions.", false, "Prophylaxis is indicated for unrepaired CHD (p.23)."],
+        ["Squatting increases systemic vascular resistance and reduces the right-to-left shunt.", true, "Standard teaching: why children squat."],
+      ]),
+      explain: "Why does squatting help? It raises systemic resistance and kinks the femoral vessels, so more blood goes through the lungs. Knee-chest position does the same in the infant." },
+
+    { topic: "Picture: central cyanosis", src: "p.6, 10", img: F("Cyanotic extremities and cyanotic lip discoloration.jpg"),
+      credit: "Cyanotic lips and extremities in a patient. Wikimedia Commons, CC BY-SA 4.0, Göttgens, Baks et al.",
+      stem: "A child with bluish discolouration of the lips and fingers since early infancy.",
+      items: I([
+        ["Central cyanosis (lips and tongue) with clubbing in a child suggests cyanotic congenital heart disease.", true, "Slide p.6, 10."],
+        ["The common cyanotic lesions are Fallot's tetralogy, transposition of the great arteries and tricuspid atresia.", true, "Slide p.10, 13. A past paper (paed.12) offered VSD and ASD as WRONG options."],
+        ["Central cyanosis is present only when haemoglobin is under 5 g/dl.", false, "It needs about 5 g/dl of DEOXYGENATED haemoglobin, so it appears at lower oxygen saturation in polycythaemic babies and later in anaemic ones (standard teaching)."],
+        ["The hyperoxia test (100% oxygen) raises the PaO2 well above 150 mmHg in cyanotic heart disease.", false, "No: failure to rise (PaO2 under 150 mmHg) suggests a cardiac cause."],
+        ["Polycythaemia and iron-deficiency anaemia may complicate chronic hypoxia.", true, "Slide p.11."],
+      ]),
+      explain: "Differential of cyanosis: cardiac (right-to-left shunt), respiratory, CNS depression, methaemoglobinaemia. Peripheral cyanosis (hands and feet only) is common in cold and in shock." },
+
+    { topic: "Picture: digital clubbing", src: "p.6, 12", img: F("Clubbing fingers 2.jpg"),
+      credit: "Digital clubbing. Wikimedia Commons, CC BY-SA 4.0, uploader Wesalius.",
+      stem: "A 5-year-old with congenital heart disease and this sign.",
+      items: I([
+        ["Clubbing is a feature of cyanotic congenital heart disease such as Fallot's tetralogy.", true, "Slide p.6, 10."],
+        ["It is also a feature of infective endocarditis.", true, "Slide p.17 (late manifestation)."],
+        ["It develops after months to years of chronic hypoxia.", true, "Standard teaching."],
+        ["It is expected in simple VSD with a small shunt.", false, "Not in acyanotic lesions."],
+        ["Toe clubbing is the first sign to appear.", false, "Fingers first (a past paper listed toe clubbing among wrong options for sickle cell anaemia)."],
+      ]),
+      explain: "Link to the endocarditis set: a cyanotic child with fever and clubbing and recent dental work has endocarditis until proven otherwise (past papers 2015.66, 2k17-2k2.354)." },
+
+    { topic: "Picture: patent ductus arteriosus", src: S, img: F("Heart patent ductus arteriosus.jpg"),
+      credit: "Anatomic illustration of a heart with patent ductus arteriosus. Wikimedia Commons, CC BY 2.5, Patrick J. Lynch, medical illustrator.",
+      stem: "An illustration of a persistent vessel between the aorta and the pulmonary artery.",
+      items: I([
+        ["PDA is more common in preterm babies and with maternal rubella.", true, "Slide p.6 (rubella, preterm, birth asphyxia, high altitude)."],
+        ["It gives a continuous machinery murmur below the left clavicle.", true, "Past paper paed.13."],
+        ["A large ductus produces bounding pulses and a wide pulse pressure with a low diastolic pressure.", true, "Past paper paed.2 and 13."],
+        ["A large PDA can cause heart failure and recurrent chest infections.", true, "Past paper paed.13 and 2k17-2k2.359."],
+        ["PDA is a benign condition that never causes heart failure.", false, "Past paper paed.10 option 'rarely causes heart failure' is the wrong answer for a large PDA."],
+      ]),
+      explain: "In ductus-dependent lesions (critical PS, critical AS, coarctation, pulmonary atresia) a PDA is life-saving and prostaglandin E1 keeps it open (p.25, 27). In the preterm baby, indomethacin or ibuprofen closes it." },
+
+    { topic: "Picture: ventricular septal defect", src: S, img: F("Ventricular septal defect (schematic drawing).png"),
+      credit: "Schematic drawing of a ventricular septal defect. Wikimedia Commons, public domain.",
+      stem: "A 9-month-old boy with failure to thrive, recurrent chest infections and a loud pansystolic murmur at the left lower sternal edge.",
+      items: I([
+        ["The most likely diagnosis is a ventricular septal defect.", true, "Past papers 2k23.164 and 207-208."],
+        ["A large VSD presents with heart failure in the first 2-3 months as pulmonary vascular resistance falls.", true, "Standard teaching."],
+        ["A palpable thrill and a grade 4 murmur are compatible with a VSD.", true, "Past paper 2k23.207."],
+        ["VSD is associated with Down syndrome, rubella and trisomy 13 and 18.", true, "Slide p.6."],
+        ["Pulmonary vascular markings are reduced on chest X-ray.", false, "Increased (plethora) in a large left-to-right shunt (p.8-9)."],
+      ]),
+      explain: "Complications: heart failure, recurrent pneumonia, infective endocarditis, Eisenmenger syndrome. Small VSDs often close spontaneously. Management: diuretics, ACE inhibitors, nutrition; surgery or PA banding for large defects." },
+  ]
+}]);
+})();
 
 </script>
 <script>
@@ -6112,6 +6516,160 @@ window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
         ["Antibiotics are the treatment for avascular necrosis.", false, "Treat pain, protect weight bearing, orthopaedic referral (standard teaching)."],
       ]),
       explain: "Bone pain in SCD: vaso-occlusive infarct versus osteomyelitis. Fever, localised swelling and positive blood cultures favour infection." },
+  ]
+}]);
+})();
+
+</script>
+<script>
+// Paediatrics · True/False (5 statements per stem, negative marking −½) · Congenital heart disease and heart failure.
+// Source: Paediatrics CS edited.pdf: CVS evaluation p.6-9, right-to-left shunts p.10-13 (Fallot, TGA, tricuspid atresia), obstructive lesions p.24-27
+// (PS, AS, coarctation). The deck has NO text on acyanotic left-to-right shunts (VSD, PDA, ASD) and the heart failure lecture (p.28-34) is image-only,
+// so those stems are standard teaching (marked outside the slide). Chronic CHF features appear on p.15 (RHD page).
+// Past papers: paed.1-14 (TOF, PDA, CCF), 2000.40, 2k17-2k2.306, 2017.148 (hypercyanotic spell), 2k17-2k2.359, 370, 372, 569, 2k23.164, 207-208 (VSD murmur), 2015.66, 2k17-2k2.354, 367 (IE in TOF).
+// Past-paper keys are unverified. Drug doses for heart failure vary between units; confirm against UCH.
+(function(){
+const I=a=>a.map(([t,v,why])=>({t,a:v,why}));
+const S="Standard teaching";
+window.QUESTION_BANKS = (window.QUESTION_BANKS || []).concat([{
+  id: "pa-tf-chd",
+  subject: "Paediatrics",
+  group: "Congenital heart disease & heart failure",
+  type: "tf",
+  title: "Paediatrics T/F · Congenital heart disease and heart failure (12 stems)",
+  negativeMarking: true,
+  questions: [
+    { topic: "Causes and associations of CHD", src: "p.6",
+      stem: "Associations of congenital heart disease:",
+      items: I([
+        ["Rubella infection in pregnancy causes patent ductus arteriosus, VSD and pulmonary stenosis.", true, "Slide p.6."],
+        ["Maternal diabetes mellitus is associated with transposition of the great arteries.", true, "Slide p.6."],
+        ["Down syndrome is associated with atrioventricular septal defect, VSD and ASD.", true, "Slide p.6."],
+        ["Turner syndrome is associated with coarctation of the aorta.", true, "Slide p.6."],
+        ["Prematurity, birth asphyxia and high altitude are associated with an atrial septal defect.", false, "They are associated with PATENT DUCTUS ARTERIOSUS (p.6)."],
+      ]),
+      explain: "Rule of thumb from the slide: age under 5 years think congenital heart disease; over 5 years think acquired (rheumatic) heart disease (p.6). Thalidomide, cytotoxic drugs, steroids and X-irradiation are other teratogens." },
+
+    { topic: "History and examination", src: "p.6-7",
+      stem: "Cardiovascular evaluation of a child:",
+      items: I([
+        ["Cough, breathlessness, failure to thrive, feeding difficulties, recurrent chest infections, excessive sweating and cyanosis are suggestive symptoms.", true, "Slide p.6."],
+        ["A heaving apex suggests left ventricular hypertrophy and a parasternal heave suggests right ventricular hypertrophy.", true, "Slide p.7."],
+        ["Blood pressure should be compared between the arms and legs, and a cuff that is too small gives a falsely high reading.", true, "Slide p.6-7 (compare R versus L, upper versus lower; small cuff raises BP)."],
+        ["A murmur is described by timing, intensity (grade) and location.", true, "Slide p.7."],
+        ["The pulmonary area is at the right upper sternal edge and the aortic area at the left upper sternal edge.", false, "Aortic = right upper sternal edge; pulmonary = left upper sternal edge (p.7)."],
+      ]),
+      explain: "A loud P2 suggests pulmonary hypertension; a soft or absent P2 suggests pulmonary stenosis or atresia. A single S2 occurs in Fallot's tetralogy (p.10)." },
+
+    { topic: "Chest X-ray in cardiac disease", src: "p.8-9",
+      stem: "Chest X-ray in paediatric cardiology:",
+      items: I([
+        ["Normal cardiothoracic ratio is below 60% in infants under 1 year and below 50% over 5 years.", true, "Slide p.8."],
+        ["Boot-shaped heart suggests Fallot's tetralogy; egg-on-side appearance suggests transposition of the great arteries.", true, "Slide p.8."],
+        ["Snowman, figure-of-8 or cottage-loaf shape suggests total anomalous pulmonary venous drainage.", true, "Slide p.8."],
+        ["Increased pulmonary vascular markings occur in large left-to-right shunts and heart failure.", true, "Slide p.8-9."],
+        ["A right-sided aortic arch makes Fallot's tetralogy unlikely.", false, "A right-sided arch SUPPORTS Fallot's tetralogy, pulmonary atresia and truncus arteriosus (p.8)."],
+      ]),
+      explain: "Dilatation of a chamber = volume overload; hypertrophy = pressure overload (p.8). A globular heart suggests pericardial effusion or endomyocardial fibrosis." },
+
+    { topic: "Fallot's tetralogy: features", src: "p.10",
+      stem: "Tetralogy of Fallot:",
+      items: I([
+        ["It is the commonest cyanotic congenital heart disease worldwide.", true, "Slide p.10."],
+        ["The four components are RVOT obstruction, right ventricular hypertrophy, VSD and an overriding aorta.", true, "Slide p.10."],
+        ["Squatting, hypercyanotic spells and poor effort tolerance are typical symptoms.", true, "Slide p.10."],
+        ["On examination there is a single S2 and an ejection systolic murmur at the left upper sternal edge.", true, "Slide p.10."],
+        ["Heart failure is a typical early feature.", false, "Heart failure is RARE in Fallot's tetralogy (the RVOT obstruction protects the lungs) (past paper paed.7)."],
+      ]),
+      explain: "Other signs: small for age, cyanosis, polycythaemia, clubbing, right ventricular heave, systolic thrill at the left sternal edge (p.10). Cyanosis usually appears after the first few months as the RVOT obstruction increases; the lung fields are oligaemic, not plethoric." },
+
+    { topic: "Fallot's tetralogy: investigations", src: "p.11",
+      stem: "Investigations in Fallot's tetralogy:",
+      items: I([
+        ["PCV is raised and platelets may be low; the blood film may show iron deficiency.", true, "Slide p.11."],
+        ["The chest X-ray shows a normal-sized, boot-shaped heart with reduced pulmonary vascular markings.", true, "Slide p.11."],
+        ["The ECG shows right axis deviation and right ventricular hypertrophy.", true, "Slide p.11."],
+        ["Echocardiography shows RVH, VSD and pulmonary obstruction.", true, "Slide p.11."],
+        ["The chest X-ray shows increased pulmonary vascular markings.", false, "Decreased pulmonary vascular markings (p.11); a past paper asked this."],
+      ]),
+      explain: "Blood gases: low pH, low pO2, raised pCO2 and low bicarbonate in a spell (p.11). A good response to the hyperoxia test would exclude a cyanotic lesion, so it is NOT expected in Fallot (past paper)." },
+
+    { topic: "Hypercyanotic spells", src: "p.11",
+      stem: "A 2-year-old with Fallot's tetralogy has a sudden cyanotic spell with fainting while crying. Management includes:",
+      items: I([
+        ["Placing the child in the knee-chest position.", true, "Slide p.11."],
+        ["Giving oxygen.", true, "Slide p.11."],
+        ["IM or IV propranolol 0.1 mg/kg/dose, or morphine 0.1 mg/kg/dose.", true, "Slide p.11."],
+        ["IV sodium bicarbonate 1 mEq/kg/dose.", true, "Slide p.11."],
+        ["Giving diuretics for heart failure.", false, "No: heart failure is not the problem; diuretics worsen dehydration and the spell. Antibiotics are also not part of treating the spell."],
+      ]),
+      explain: "Past paper 2000.40: cardiac position, oxygen, oral propranolol 1 mg/kg/dose and plasma exchange (for PCV above 60%) are appropriate; plasma exchange removes not more than 20-25% of blood volume at a time (p.11)." },
+
+    { topic: "Fallot's tetralogy: complications", src: "p.12; "+S,
+      stem: "Complications of Fallot's tetralogy:",
+      items: I([
+        ["Infective endocarditis, especially after dental procedures.", true, "Slide p.12. Past papers 2015.66 and 2k17-2k2.354, 367."],
+        ["Cerebral abscess and cerebrovascular accident (stroke).", true, "Slide p.12."],
+        ["Polycythaemia with a bleeding diathesis and iron-deficiency anaemia.", true, "Slide p.11-12."],
+        ["Growth retardation from chronic hypoxia.", true, "Slide p.11."],
+        ["Pulmonary hypertension with Eisenmenger syndrome is the usual outcome.", false, "Pulmonary blood flow is reduced in Fallot's; Eisenmenger occurs with large left-to-right shunts (standard teaching)."],
+      ]),
+      explain: "Fever after tooth extraction in a Fallot patient is endocarditis until proven otherwise: three blood cultures, echo, urine microscopy; a Jones-criteria question is not relevant (past paper 2015.66)." },
+
+    { topic: "TGA and tricuspid atresia", src: "p.12-13",
+      stem: "Transposition of the great arteries (TGA) and tricuspid atresia:",
+      items: I([
+        ["TGA is atrioventricular concordance with ventriculo-arterial discordance and is incompatible with life unless there is a communication (ASD, VSD or PDA).", true, "Slide p.12."],
+        ["TGA presents with cyanosis from birth and breathlessness.", true, "Slide p.12. A past paper asked this (true)."],
+        ["The chest X-ray in TGA shows an egg-on-side heart with increased pulmonary vascular markings.", true, "Slide p.12."],
+        ["Rashkind balloon atrial septostomy is a palliative procedure for TGA.", true, "Slide p.12; definitive surgery is the arterial switch operation."],
+        ["The chest X-ray in TGA shows a snowman appearance.", false, "Snowman = supracardiac TAPVD (p.8); TGA = egg-on-side."],
+      ]),
+      explain: "Tricuspid atresia (p.13): less common than Fallot or TGA; ECG shows right atrial hypertrophy, superior (left) axis and LVH; echo shows an absent right AV connection; treatment is the Fontan operation. Maternal diabetes is a recognised association of TGA (p.6)." },
+
+    { topic: "Left-to-right shunts", src: S,
+      stem: "Acyanotic congenital heart disease:",
+      items: I([
+        ["VSD is the commonest congenital heart defect and gives a pansystolic murmur at the left lower sternal edge.", true, "Past papers 2k23.164, 207-208: a 9-month-old with such a murmur likely has a VSD."],
+        ["A large VSD causes heart failure in the first 2-3 months as pulmonary vascular resistance falls.", true, "Recurrent chest infections and failure to thrive are typical."],
+        ["A large PDA gives a continuous machinery murmur, bounding pulses and a wide pulse pressure (low diastolic pressure).", true, "Past paper paed.13; also heart failure in large ductus."],
+        ["ASD typically gives an ejection systolic murmur at the left upper sternal edge with a fixed split second heart sound.", true, "Often asymptomatic in childhood; rarely causes infective endocarditis."],
+        ["Eisenmenger syndrome is reversible by closing the defect.", false, "It is irreversible pulmonary vascular disease with shunt reversal: surgery is contraindicated."],
+      ]),
+      explain: "Heart failure is a feature of a large VSD and a large PDA (past paper 2k17-2k2.359) and not of Fallot's tetralogy or mild pulmonary stenosis. Prophylaxis against endocarditis is advised for unrepaired lesions (p.23)." },
+
+    { topic: "Obstructive lesions", src: "p.24-27",
+      stem: "Obstructive congenital lesions:",
+      items: I([
+        ["Pulmonary stenosis is mostly valvar (about 90%) and is associated with Noonan syndrome and congenital rubella.", true, "Slide p.24."],
+        ["Valvar pulmonary stenosis gives an ejection click and an ejection systolic murmur at the upper left sternal border with a soft P2.", true, "Slide p.24."],
+        ["Balloon valvuloplasty is indicated for valvar pulmonary stenosis with a gradient above 50 mmHg.", true, "Slide p.25."],
+        ["Coarctation of the aorta gives upper-limb hypertension, lower-limb hypotension and radiofemoral delay.", true, "Slide p.26."],
+        ["Coarctation of the aorta is commoner in girls than in boys, and aortic stenosis in girls than in boys.", false, "Aortic stenosis M:F = 4:1 and coarctation M:F = 2:1 (p.25-26)."],
+      ]),
+      explain: "Supravalvar aortic stenosis is associated with Williams syndrome (p.25); 85% of coarctation cases have a bicuspid aortic valve (p.26); endocarditis prophylaxis is advised for PS, AS and coarctation (p.25-27). Critical lesions in the newborn need prostaglandin E1 to keep the duct open (p.25, 27)." },
+
+    { topic: "Heart failure in infants", src: "p.15; "+S,
+      stem: "Heart failure in an infant:",
+      items: I([
+        ["Tachycardia, tachypnoea, sweating during feeds, feeding difficulty with failure to thrive and hepatomegaly are typical features.", true, "Past papers paed.11 and 2k17-2k2.372; p.15 lists breathlessness, cough, easy fatigability and swelling in chronic CHF."],
+        ["Absence of pedal oedema rules out heart failure in an infant.", false, "Oedema is a late sign in infants (past paper paed.8)."],
+        ["Bronchopneumonia is a common precipitating factor.", true, "Chest infection, anaemia and arrhythmia precipitate failure."],
+        ["The commonest cause in the first year of life in Nigeria is congenital heart disease (e.g. large VSD, PDA), with severe anaemia and myocarditis as other causes.", true, "Standard teaching; older children: rheumatic heart disease, endomyocardial fibrosis, cardiomyopathy, severe anaemia."],
+        ["Cyanosis is a defining feature of heart failure in a 6-month-old.", false, "Not a defining feature (past paper 2k17-2k2.372 listed it with true options such as sweating and pauses during feeding)."],
+      ]),
+      explain: "Causes of heart failure (past paper paed.28): rheumatic heart disease, endomyocardial fibrosis, myocarditis, severe anaemia, malnutrition (wet beriberi), pericardial effusion. Neonates: PDA in preterm babies, obstructive left-sided lesions, sepsis." },
+
+    { topic: "Heart failure: treatment", src: S,
+      stem: "Management of congestive cardiac failure in an infant:",
+      items: I([
+        ["Oxygen, a semi-upright position and treatment of the precipitating cause (infection, anaemia, arrhythmia).", true, "Standard teaching."],
+        ["Furosemide 1-2 mg/kg per dose is the diuretic used to relieve congestion.", true, "Standard teaching; spironolactone can be added."],
+        ["ACE inhibitors such as captopril reduce afterload, especially in left-to-right shunts.", true, "Standard teaching."],
+        ["Digoxin may be used for contractility and rate control.", true, "Standard teaching: monitor for toxicity; avoid in active carditis or hypokalaemia."],
+        ["Definitive treatment is always surgery for every case of heart failure.", false, "Treat the cause: surgery or device closure for structural lesions, antibiotics for infection, transfusion for severe anaemia."],
+      ]),
+      explain: "Feeding: small frequent high-calorie feeds, nasogastric if needed, salt restriction. Plan surgery for large VSD or PDA before irreversible pulmonary hypertension develops. Dosages differ between units; use the UCH protocol." },
   ]
 }]);
 })();
@@ -8680,8 +9238,8 @@ banks.forEach(b=>{const m=PM[b.id]; if(m&&b.questions) b.questions.forEach((q,i)
 const GROUPS=["Menstrual disorders & DUB","Amenorrhoea & PCOS","Abortion","Ectopic pregnancy","Antepartum haemorrhage","Hypertension in pregnancy","Labour & the partograph","Family planning","Infertility","Fibroids & endometriosis","Anaemia in pregnancy","Postpartum haemorrhage & oxytocics"];
 const COMING=["Antenatal care & booking","Gynaecological cancers","Genital infections & STIs","Prolapse & fistulae","Instruments & imaging (picture test)"];
 let curGroup=null;
-const PGROUPS=["Paediatric endocrinology","Infectious diseases","Pulmonology","Rheumatic fever & endocarditis","Neonatal jaundice","Nephrotic syndrome & AGN","Acute diarrhoea & dehydration","Sickle cell disease","Febrile seizures & epilepsy"];
-const PCOMING=["Neonatology","Nutrition & malnutrition","Haemato-oncology","Congenital heart disease & heart failure","Nephrology","Neurology","Gastroenterology"];
+const PGROUPS=["Paediatric endocrinology","Infectious diseases","Pulmonology","Rheumatic fever & endocarditis","Neonatal jaundice","Nephrotic syndrome & AGN","Acute diarrhoea & dehydration","Sickle cell disease","Febrile seizures & epilepsy","Congenital heart disease & heart failure"];
+const PCOMING=["Neonatology","Nutrition & malnutrition","Haemato-oncology","Nephrology","Neurology","Gastroenterology"];
 const TYPE_LABEL={cards:"Flashcards",mcq:"Multiple choice",essay:"Essays",fillgap:"Fill in the gap",tf:"True / False (5 stems each, negative marking)",pics:"Picture test (5 True / False per picture)"};
 const TYPE_ORDER=["cards","mcq","tf","pics","fillgap","essay"];
 const countOf=b=>b.type==="cards"?b.cards.length:b.type==="essay"?b.essays.length:b.questions.length;
